@@ -1,0 +1,65 @@
+[
+  {
+    "Id": 0,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  },
+  {
+    "Id": 1,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  },
+  {
+    "Id": 2,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  },
+  {
+    "Id": 3,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  },
+  {
+    "Id": 4,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  },
+  {
+    "Id": 5,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  },
+  {
+    "Id": 6,
+    "Nome": "Produto",
+    "Categoria": "Categoria",
+    "Marca": "Marca",
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "GarantiaMeses": 1
+  }
+]
