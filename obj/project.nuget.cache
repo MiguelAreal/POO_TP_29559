@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JXqkwEdbVOA=",
+  "dgSpecHash": "OBh/Ww7VaTI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Areal\\Documents\\poo_tp_29559\\poo_tp_29559.csproj",
+  "projectFilePath": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\poo_tp_29559.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Areal\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
     "C:\\Users\\Areal\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",

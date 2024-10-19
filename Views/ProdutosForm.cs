@@ -57,5 +57,10 @@ namespace poo_tp_29559
             _controller.AddProduto(novoProduto);
 
         }
+
+        private void btnSearchProduto_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(txtSearchProduto.Text);
+        }
     }
 }

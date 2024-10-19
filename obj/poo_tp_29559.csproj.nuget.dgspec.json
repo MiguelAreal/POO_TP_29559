@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Areal\\Documents\\poo_tp_29559\\poo_tp_29559.csproj": {}
+    "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\poo_tp_29559.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Areal\\Documents\\poo_tp_29559\\poo_tp_29559.csproj": {
+    "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\poo_tp_29559.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Areal\\Documents\\poo_tp_29559\\poo_tp_29559.csproj",
+        "projectUniqueName": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\poo_tp_29559.csproj",
         "projectName": "poo_tp_29559",
-        "projectPath": "C:\\Users\\Areal\\Documents\\poo_tp_29559\\poo_tp_29559.csproj",
+        "projectPath": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\poo_tp_29559.csproj",
         "packagesPath": "C:\\Users\\Areal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Areal\\Documents\\poo_tp_29559\\obj\\",
+        "outputPath": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Areal\\AppData\\Roaming\\NuGet\\NuGet.Config",
