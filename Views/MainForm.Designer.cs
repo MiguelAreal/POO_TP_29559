@@ -46,7 +46,7 @@
             msMainForm.Location = new Point(20, 60);
             msMainForm.Name = "msMainForm";
             msMainForm.RenderMode = ToolStripRenderMode.Professional;
-            msMainForm.Size = new Size(880, 24);
+            msMainForm.Size = new Size(960, 24);
             msMainForm.TabIndex = 0;
             msMainForm.Text = "msMainForm";
             msMainForm.ItemClicked += msMainForm_ItemClicked;
@@ -92,7 +92,7 @@
             panelContainer.Dock = DockStyle.Fill;
             panelContainer.Location = new Point(20, 84);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(880, 466);
+            panelContainer.Size = new Size(960, 546);
             panelContainer.TabIndex = 1;
             panelContainer.Paint += panelContainer_Paint;
             // 
@@ -101,11 +101,11 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            ClientSize = new Size(920, 570);
+            ClientSize = new Size(1000, 650);
             Controls.Add(panelContainer);
             Controls.Add(msMainForm);
             MainMenuStrip = msMainForm;
-            MinimumSize = new Size(920, 570);
+            MinimumSize = new Size(1000, 650);
             Name = "MainForm";
             ShadowType = MetroFormShadowType.Flat;
             Text = "Gestor de Comércio Eletrónico";

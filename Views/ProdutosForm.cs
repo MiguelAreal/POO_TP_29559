@@ -34,22 +34,6 @@ namespace poo_tp_29559
         }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Criar um novo produto a partir dos dados dos controles
-            var novoProduto = new Produto
-            {
-                Nome = "Produto",
-                Categoria = "Categoria",
-                Marca = "Marca",
-                Preco = 0,
-            };
-
-            // Adiciona o novo produto através do controlador
-            _controller.AddProduto(novoProduto);
-
-        }
-
         private void btnSearchProduto_Click(object sender, EventArgs e)
         {
             MessageBox.Show(txtSearchProduto.Text);
@@ -95,6 +79,21 @@ namespace poo_tp_29559
 
             // Chama o controlador para filtrar e mostrar os produtos em tempo real.
             _controller.FiltrarProdutos(textoPesquisa);
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            // Criar um novo produto a partir dos dados dos controles
+            var novoProduto = new Produto
+            {
+                Nome = "Produto",
+                Categoria = "Categoria",
+                Marca = "Marca",
+                Preco = 0,
+            };
+
+            // Adiciona o novo produto através do controlador
+            _controller.AddProduto(novoProduto);
         }
     }
 }

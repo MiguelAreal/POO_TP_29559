@@ -46,3 +46,4 @@ C:\Users\Areal\Documents\GitHub\POO_TP_29559\bin\Debug\net8.0-windows\MetroFrame
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_2.CAD932FC.Up2Date
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.genruntimeconfig.cache
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\obj\Debug\net8.0-windows\ref\poo_tp_29559.dll
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.MarcasForm.resources

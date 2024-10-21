@@ -2,6 +2,7 @@ using MetroFramework.Components;
 using MetroFramework.Forms;
 using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
+using poo_tp_29559.Views;
 
 namespace poo_tp_29559
 {
@@ -46,6 +47,9 @@ namespace poo_tp_29559
                     break;
                 case "Categorias":
                     formFilho = new CategoriasForm();
+                    break;
+                case "Marcas":
+                    formFilho = new MarcasForm();
                     break;
                 default:
                     MessageBox.Show("Opção desconhecida");

@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             dgvProdutos = new DataGridView();
-            button1 = new Button();
+            btnAddProduto = new Button();
             txtSearchProduto = new TextBox();
-            button2 = new Button();
-            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            btnRemProduto = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             SuspendLayout();
             // 
@@ -48,19 +47,19 @@
             dgvProdutos.Name = "dgvProdutos";
             dgvProdutos.RowHeadersVisible = false;
             dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvProdutos.Size = new Size(760, 329);
+            dgvProdutos.Size = new Size(760, 331);
             dgvProdutos.TabIndex = 0;
             dgvProdutos.CellValueChanged += dgvProdutos_CellValueChanged;
             // 
-            // button1
+            // btnAddProduto
             // 
-            button1.Location = new Point(140, 28);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 23);
-            button1.TabIndex = 1;
-            button1.Text = "+";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnAddProduto.Location = new Point(131, 29);
+            btnAddProduto.Name = "btnAddProduto";
+            btnAddProduto.Size = new Size(43, 23);
+            btnAddProduto.TabIndex = 1;
+            btnAddProduto.Text = "+";
+            btnAddProduto.UseVisualStyleBackColor = true;
+            btnAddProduto.Click += button1_Click_1;
             // 
             // txtSearchProduto
             // 
@@ -72,15 +71,15 @@
             txtSearchProduto.TabIndex = 2;
             txtSearchProduto.TextChanged += txtSearchProduto_TextChanged;
             // 
-            // button2
+            // btnRemProduto
             // 
-            button2.Location = new Point(189, 28);
-            button2.Name = "button2";
-            button2.Size = new Size(43, 23);
-            button2.TabIndex = 4;
-            button2.Text = "-";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnRemProduto.Location = new Point(180, 29);
+            btnRemProduto.Name = "btnRemProduto";
+            btnRemProduto.Size = new Size(43, 23);
+            btnRemProduto.TabIndex = 4;
+            btnRemProduto.Text = "-";
+            btnRemProduto.UseVisualStyleBackColor = true;
+            btnRemProduto.Click += button2_Click;
             // 
             // ProdutosForm
             // 
@@ -88,9 +87,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(btnRemProduto);
             Controls.Add(txtSearchProduto);
-            Controls.Add(button1);
+            Controls.Add(btnAddProduto);
             Controls.Add(dgvProdutos);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -107,9 +106,8 @@
         #endregion
 
         private DataGridView dgvProdutos;
-        private Button button1;
+        private Button btnAddProduto;
         private TextBox txtSearchProduto;
-        private Button button2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Button btnRemProduto;
     }
 }

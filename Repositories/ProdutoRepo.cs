@@ -39,7 +39,7 @@ namespace poo_tp_29559.Repositories
             return produtos;
         }
 
-        // Retorna o próximo ID disponível, para auxílio em AddProduto
+        // Retorna o próximo ID disponível, para auxíliar em AddProduto
         private int GetProximoId()
         {
             if (produtos.Count == 0)
@@ -49,7 +49,7 @@ namespace poo_tp_29559.Repositories
             return produtos[^1].Id + 1;
         }
 
-        // Adiciona um novo produto à lista em memória e depois guarda no ficheiro
+        // Adiciona um novo produto à lista e depois guarda no ficheiro
         public void AddProduto(Produto produto)
         {
             produto.Id = GetProximoId();
@@ -57,17 +57,18 @@ namespace poo_tp_29559.Repositories
             GuardarProdutos();
         }
 
-        // Remove um produto à lista em memória e depois guarda no ficheiro
+        // Remove um produto à lista e depois guarda no ficheiro
         public void RemProduto(Produto produto)
         {
             produtos.Remove(produto);
             GuardarProdutos();
         }
 
-        // Altera um produto e depois guarda no ficheiro
+        // Altera um produto e guarda no ficheiro
         public void UpdProduto(Produto produtoAlterado)
         {
-            // Consulta LINQ com Expressão Lambda que encontra o produto original pela ID e substitui as suas propriedades
+            // Consulta LINQ com Expressão Lambda
+            // Encontra o produto original pela ID do mesmo e substitui as suas propriedades
             Produto? produtoOriginal = produtos.FirstOrDefault(p => p.Id == produtoAlterado.Id);
 
             if (produtoOriginal != null)

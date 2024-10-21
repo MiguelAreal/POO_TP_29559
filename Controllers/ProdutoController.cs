@@ -23,14 +23,14 @@ namespace poo_tp_29559.Controllers
             CarregaProdutos();
         }
 
-        // Carrega produtos e exibe na view (no caso, ProdutosForm)
+        // Carrega produtos e exibe na view
         private void CarregaProdutos()
         {
             _produtos = _repository.GetProdutos();
             _view.MostraProdutos(_produtos);
         }
 
-        // Filtra produtos com base no nome
+        // Filtra produtos com base no nome e atualiza a view
         public void FiltrarProdutos(string filtro)
         {
             var produtosFiltrados = _produtos
