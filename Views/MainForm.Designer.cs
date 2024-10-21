@@ -94,17 +94,20 @@
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(880, 466);
             panelContainer.TabIndex = 1;
+            panelContainer.Paint += panelContainer_Paint;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(920, 570);
             Controls.Add(panelContainer);
             Controls.Add(msMainForm);
             MainMenuStrip = msMainForm;
             MinimumSize = new Size(920, 570);
             Name = "MainForm";
+            ShadowType = MetroFormShadowType.Flat;
             Text = "Gestor de Comércio Eletrónico";
             Theme = MetroFramework.MetroThemeStyle.Light;
             Load += Form1_Load;

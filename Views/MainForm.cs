@@ -14,7 +14,7 @@ namespace poo_tp_29559
 
         }
 
-       
+
 
         // Método para abrir formulários dentro do painel
         private void AbrirFormNoPanel(Form formFilho)
@@ -25,7 +25,7 @@ namespace poo_tp_29559
             formFilho.TopLevel = false;
             formFilho.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(formFilho);
-            formFilho.Show(); 
+            formFilho.Show();
         }
 
 
@@ -58,5 +58,9 @@ namespace poo_tp_29559
             }
         }
 
+        private void panelContainer_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,15 +24,27 @@ namespace poo_tp_29559
             _controller = new ProdutoController(this);
         }
 
-        // Atualiza a UI com os dados do modelo
         public void MostraProdutos(List<Produto> produtos)
         {
-            // Limpa o DataGridView antes de adicionar novos dados
-            dgvProdutos.DataSource = null;
-            dgvProdutos.Rows.Clear();
+            // Cria um BindingSource para associar à DGV lista de produtos
+            BindingSource bs = new BindingSource();
+            bs.DataSource = produtos;
+            dgvProdutos.DataSource = bs;
 
-            // Define a fonte de dados como a lista de produtos
-            dgvProdutos.DataSource = produtos;
+
+            // Verifica se a coluna de botão já foi adicionada para evitar duplicação
+            if (dgvProdutos.Columns["btnEliminar"] == null)
+            {
+                // Cria uma coluna de botões
+                DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
+                btnEliminar.Name = "btnEliminar";
+                btnEliminar.HeaderText = " "; // Título da coluna
+                btnEliminar.Text = "Eliminar";
+                btnEliminar.UseColumnTextForButtonValue = true; // Faz com que o texto seja sempre o mesmo
+
+                // Adiciona a coluna ao DataGridView
+                dgvProdutos.Columns.Add(btnEliminar);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,5 +74,6 @@ namespace poo_tp_29559
         {
             MessageBox.Show(txtSearchProduto.Text);
         }
+
     }
 }

@@ -38,11 +38,12 @@
             // 
             // dgvProdutos
             // 
-            dgvProdutos.AllowUserToDeleteRows = false;
             dgvProdutos.AllowUserToResizeRows = false;
+            dgvProdutos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProdutos.BackgroundColor = Color.White;
             dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProdutos.Location = new Point(20, 101);
+            dgvProdutos.Location = new Point(20, 96);
             dgvProdutos.Name = "dgvProdutos";
             dgvProdutos.Size = new Size(760, 329);
             dgvProdutos.TabIndex = 0;
@@ -60,8 +61,9 @@
             // 
             // txtSearchProduto
             // 
-            txtSearchProduto.Location = new Point(20, 72);
+            txtSearchProduto.Location = new Point(20, 67);
             txtSearchProduto.Name = "txtSearchProduto";
+            txtSearchProduto.PlaceholderText = "Procurar...";
             txtSearchProduto.Size = new Size(260, 23);
             txtSearchProduto.TabIndex = 2;
             // 
@@ -72,7 +74,7 @@
             btnSearchProduto.BackgroundImageLayout = ImageLayout.Zoom;
             btnSearchProduto.FlatAppearance.BorderSize = 0;
             btnSearchProduto.FlatStyle = FlatStyle.Flat;
-            btnSearchProduto.Location = new Point(284, 67);
+            btnSearchProduto.Location = new Point(284, 62);
             btnSearchProduto.Name = "btnSearchProduto";
             btnSearchProduto.Size = new Size(32, 33);
             btnSearchProduto.TabIndex = 3;
