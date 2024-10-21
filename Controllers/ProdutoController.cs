@@ -12,6 +12,9 @@ namespace poo_tp_29559.Controllers
     {
         private readonly ProdutosForm _view;
         private readonly ProdutoRepo _repository;
+        
+        // Armazena a lista completa de produtos
+        private List<Produto> _produtos;
 
         public ProdutoController(ProdutosForm view)
         {
@@ -20,18 +23,42 @@ namespace poo_tp_29559.Controllers
             CarregaProdutos();
         }
 
-        // Carrega produtos e exibe na view
+        // Carrega produtos e exibe na view (no caso, ProdutosForm)
         private void CarregaProdutos()
         {
-            var produtos = _repository.GetProdutos();
-            _view.MostraProdutos(produtos);
+            _produtos = _repository.GetProdutos();
+            _view.MostraProdutos(_produtos);
         }
 
-        // Adiciona novo produto
+        // Filtra produtos com base no nome
+        public void FiltrarProdutos(string filtro)
+        {
+            var produtosFiltrados = _produtos
+                .Where(p => !string.IsNullOrEmpty(p.Nome) && p.Nome.ToLower().Contains(filtro.ToLower()))
+                .ToList();
+
+            _view.MostraProdutos(produtosFiltrados);
+        }
+
+        // Adiciona novo produto, e atualiza a view
         public void AddProduto(Produto produto)
         {
             _repository.AddProduto(produto);
-            CarregaProdutos(); // Atualiza a view com a lista de produtos
+            CarregaProdutos();
+        }
+
+        // Remove produto, e atualiza a view
+        public void RemProduto(Produto produto)
+        {
+            _repository.RemProduto(produto);
+            CarregaProdutos();
+        }
+
+        // Altera o produto, e atualiza a view
+        public void UpdProduto(Produto produto)
+        {
+            _repository.UpdProduto(produto);
+            CarregaProdutos();
         }
     }
 

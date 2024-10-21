@@ -31,26 +31,8 @@ namespace poo_tp_29559
             bs.DataSource = produtos;
             dgvProdutos.DataSource = bs;
 
-
-            // Verifica se a coluna de botão já foi adicionada para evitar duplicação
-            if (dgvProdutos.Columns["btnEliminar"] == null)
-            {
-                // Cria uma coluna de botões
-                DataGridViewButtonColumn btnEliminar = new DataGridViewButtonColumn();
-                btnEliminar.Name = "btnEliminar";
-                btnEliminar.HeaderText = " "; // Título da coluna
-                btnEliminar.Text = "Eliminar";
-                btnEliminar.UseColumnTextForButtonValue = true; // Faz com que o texto seja sempre o mesmo
-
-                // Adiciona a coluna ao DataGridView
-                dgvProdutos.Columns.Add(btnEliminar);
-            }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -61,8 +43,6 @@ namespace poo_tp_29559
                 Categoria = "Categoria",
                 Marca = "Marca",
                 Preco = 0,
-                QuantidadeEmStock = 0,
-                GarantiaMeses = 1
             };
 
             // Adiciona o novo produto através do controlador
@@ -75,5 +55,46 @@ namespace poo_tp_29559
             MessageBox.Show(txtSearchProduto.Text);
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // Verifica se há alguma linha selecionada
+            if (dgvProdutos.SelectedRows.Count > 0)
+            {
+                // Obtém o índice
+                int rowIndex = dgvProdutos.SelectedRows[0].Index;
+
+                // Obtém o produto correspondente ao índice selecionado
+                Produto produtoSelecionado = (Produto)dgvProdutos.Rows[rowIndex].DataBoundItem;
+
+                // Remove o produto
+                _controller.RemProduto(produtoSelecionado);
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para remover.");
+            }
+        }
+
+        private void dgvProdutos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica se a linha editada é válida
+            if (e.RowIndex >= 0)
+            {
+                // Obtém o produto editado
+                Produto produtoAlterado = (Produto)dgvProdutos.Rows[e.RowIndex].DataBoundItem;
+
+                // Chama a função no controlador para guardar as alterações
+                _controller.UpdProduto(produtoAlterado);
+            }
+        }
+
+        private void txtSearchProduto_TextChanged(object sender, EventArgs e)
+        {
+            // Obtém o texto que está a ser escrito no TextBox
+            string textoPesquisa = txtSearchProduto.Text;
+
+            // Chama o controlador para filtrar e mostrar os produtos em tempo real.
+            _controller.FiltrarProdutos(textoPesquisa);
+        }
     }
 }

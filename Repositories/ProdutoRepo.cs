@@ -25,7 +25,7 @@ namespace poo_tp_29559.Repositories
             if (File.Exists(filePath))
             {
                 string json = File.ReadAllText(filePath);
-                return JsonSerializer.Deserialize<List<Produto>>(json);
+                return JsonSerializer.Deserialize<List<Produto>>(json)!;
             }
             else
             {
@@ -39,14 +39,14 @@ namespace poo_tp_29559.Repositories
             return produtos;
         }
 
-        // Retorna o próximo ID disponível
+        // Retorna o próximo ID disponível, para auxílio em AddProduto
         private int GetProximoId()
         {
             if (produtos.Count == 0)
             {
                 return 1;
             }
-            return produtos[^1].Id + 1; // Retorna o próximo ID incrementando o último existente
+            return produtos[^1].Id + 1;
         }
 
         // Adiciona um novo produto à lista em memória e depois guarda no ficheiro
@@ -55,6 +55,31 @@ namespace poo_tp_29559.Repositories
             produto.Id = GetProximoId();
             produtos.Add(produto);
             GuardarProdutos();
+        }
+
+        // Remove um produto à lista em memória e depois guarda no ficheiro
+        public void RemProduto(Produto produto)
+        {
+            produtos.Remove(produto);
+            GuardarProdutos();
+        }
+
+        // Altera um produto e depois guarda no ficheiro
+        public void UpdProduto(Produto produtoAlterado)
+        {
+            // Consulta LINQ com Expressão Lambda que encontra o produto original pela ID e substitui as suas propriedades
+            Produto? produtoOriginal = produtos.FirstOrDefault(p => p.Id == produtoAlterado.Id);
+
+            if (produtoOriginal != null)
+            {
+                produtoOriginal.Nome = produtoAlterado.Nome;
+                produtoOriginal.Categoria = produtoAlterado.Categoria;
+                produtoOriginal.Preco = produtoAlterado.Preco;
+                produtoOriginal.QuantidadeEmStock = produtoAlterado.QuantidadeEmStock;
+                produtoOriginal.Marca = produtoAlterado.Marca;
+
+                GuardarProdutos();
+            }
         }
 
         // Guarda a lista de produtos no ficheiro

@@ -31,33 +31,13 @@ namespace poo_tp_29559.Models
         [DisplayName("Meses de Garantia")]
         public int GarantiaMeses { get; set; }
 
-        // Adiciona ao stock existente do produto.
-        public void AdicionarStock(int quantidade)
+        // Construtor
+        public Produto()
         {
-            QuantidadeEmStock += quantidade;
+            // Por defeito, a garantia de um produto é de 3 anos
+            GarantiaMeses = 36;
+            QuantidadeEmStock = 0;
         }
 
-        // Remove de stock a quantidade passada por parâmetro.
-        // Apenas se esta for menor que a quantidade disponível (para não ficar negativo)
-        public void RemoverStock(int quantidade)
-        {
-            if (QuantidadeEmStock >= quantidade)
-                QuantidadeEmStock -= quantidade;
-        }
-
-        // Atualiza os detalhes sobre um produto
-        public void AtualizarDetalhes(string nome, string categoria, string marca, decimal preco)
-        {
-            Nome = nome;
-            Categoria = categoria;
-            Marca = marca;
-            Preco = preco;
-        }
-
-        // Método que calcula o desconto, consoante passado por parâmetro
-        public decimal AplicarDesconto(decimal percentDisconto)
-        {
-            return Preco - (Preco * percentDisconto / 100);
-        }
     }
 }
