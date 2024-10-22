@@ -30,6 +30,8 @@
         {
             txtSearchMarcas = new TextBox();
             dgvMarcas = new DataGridView();
+            btnRemMarca = new Button();
+            btnAddMarca = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvMarcas).BeginInit();
             SuspendLayout();
             // 
@@ -56,17 +58,41 @@
             dgvMarcas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMarcas.Size = new Size(760, 331);
             dgvMarcas.TabIndex = 3;
+            dgvMarcas.CellValueChanged += dgvMarcas_CellValueChanged;
+            // 
+            // btnRemMarca
+            // 
+            btnRemMarca.Location = new Point(163, 28);
+            btnRemMarca.Name = "btnRemMarca";
+            btnRemMarca.Size = new Size(43, 23);
+            btnRemMarca.TabIndex = 6;
+            btnRemMarca.Text = "-";
+            btnRemMarca.UseVisualStyleBackColor = true;
+            btnRemMarca.Click += btnRemMarca_Click;
+            // 
+            // btnAddMarca
+            // 
+            btnAddMarca.Location = new Point(114, 28);
+            btnAddMarca.Name = "btnAddMarca";
+            btnAddMarca.Size = new Size(43, 23);
+            btnAddMarca.TabIndex = 5;
+            btnAddMarca.Text = "+";
+            btnAddMarca.UseVisualStyleBackColor = true;
+            btnAddMarca.Click += btnAddMarca_Click;
             // 
             // MarcasForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnRemMarca);
+            Controls.Add(btnAddMarca);
             Controls.Add(txtSearchMarcas);
             Controls.Add(dgvMarcas);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "MarcasForm";
+            Resizable = false;
             ShadowType = MetroFormShadowType.None;
             Text = "Marcas";
             ((System.ComponentModel.ISupportInitialize)dgvMarcas).EndInit();
@@ -78,5 +104,7 @@
 
         private TextBox txtSearchMarcas;
         private DataGridView dgvMarcas;
+        private Button btnRemMarca;
+        private Button btnAddMarca;
     }
 }

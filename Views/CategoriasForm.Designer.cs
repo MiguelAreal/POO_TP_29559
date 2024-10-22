@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dateTimePicker1 = new DateTimePicker();
             SuspendLayout();
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dateTimePicker1.Location = new Point(328, 190);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 0;
             // 
             // CategoriasForm
             // 
@@ -45,7 +36,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
-            Controls.Add(dateTimePicker1);
             MaximizeBox = false;
             MinimizeBox = false;
             Movable = false;
@@ -56,7 +46,5 @@
         }
 
         #endregion
-
-        private DateTimePicker dateTimePicker1;
     }
 }
