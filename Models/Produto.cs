@@ -28,14 +28,10 @@ namespace poo_tp_29559.Models
         [DisplayName("Stock")]
         public int QuantidadeEmStock { get; set; }
 
-        [DisplayName("Meses de Garantia")]
-        public int GarantiaMeses { get; set; }
 
         // Construtor
         public Produto()
         {
-            // Por defeito, a garantia de um produto é de 3 anos
-            GarantiaMeses = 36;
             QuantidadeEmStock = 0;
         }
 

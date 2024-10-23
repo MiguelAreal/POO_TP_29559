@@ -62,7 +62,7 @@
             btnAddProduto.FlatAppearance.BorderSize = 0;
             btnAddProduto.FlatStyle = FlatStyle.Flat;
             btnAddProduto.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddProduto.ForeColor = Color.Black;
+            btnAddProduto.ForeColor = Color.White;
             btnAddProduto.Location = new Point(726, 50);
             btnAddProduto.Name = "btnAddProduto";
             btnAddProduto.Size = new Size(54, 42);

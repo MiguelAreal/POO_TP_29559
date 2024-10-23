@@ -18,7 +18,7 @@ namespace poo_tp_29559
         public MainForm()
         {
             // Inicializa os componentes do formulário
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         /// <summary>
@@ -44,7 +44,7 @@ namespace poo_tp_29559
         /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         /// <summary>
@@ -80,6 +80,5 @@ namespace poo_tp_29559
                 AbrirFormNoPanel(formFilho);
             }
         }
-
     }
 }

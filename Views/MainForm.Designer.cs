@@ -109,6 +109,7 @@
             ShadowType = MetroFormShadowType.Flat;
             Text = "Gestor de Comércio Eletrónico";
             Theme = MetroFramework.MetroThemeStyle.Light;
+            TopMost = true;
             Load += Form1_Load;
             msMainForm.ResumeLayout(false);
             msMainForm.PerformLayout();

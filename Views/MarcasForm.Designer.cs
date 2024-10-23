@@ -98,6 +98,10 @@
             ((System.ComponentModel.ISupportInitialize)dgvMarcas).EndInit();
             ResumeLayout(false);
             PerformLayout();
+
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true); // Otimiza ainda mais a suavidade
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);  // Evita repaint redundante
+            UpdateStyles();
         }
 
         #endregion

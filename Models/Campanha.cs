@@ -26,7 +26,7 @@ namespace poo_tp_29559.Models
         public DateTime DataFim { get; set; }
 
         // Associa a Campanha a uma Categoria
-        [DisplayName("Categoria")]
+        [DisplayName("Categoria Aplicada")]
         public int CategoriaId { get; set; }
 
 

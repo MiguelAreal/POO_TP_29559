@@ -13,15 +13,17 @@ namespace poo_tp_29559.Views
         private readonly ProdutoController _controller;
         private readonly ProdutosForm _view;
 
+        //Parametro opcional
         public AddProdutoForm(ProdutosForm view)
         {
             InitializeComponent();
+
             _view = view;
             _controller = new ProdutoController(_view);
         }
 
         private void AddProdutoForm_Load(object sender, EventArgs e)
-        {
+        {   
             CarregaMarcas();
         }
 
@@ -30,6 +32,9 @@ namespace poo_tp_29559.Views
             // Instancia o repositório de marcas
             MarcaRepo marcaRepo = new MarcaRepo();
             List<Marca> marcas = marcaRepo.GetAll(); // Obtém todas as marcas
+
+            // Ordena as marcas pelo nome em ordem ascendente
+            marcas = marcas.OrderBy(m => m.Nome).ToList();
 
             // Preenche a ComboBox com os nomes das marcas
             // Nos Produtos, guarda o ID da Marca, não o Nome da Marca
@@ -53,17 +58,18 @@ namespace poo_tp_29559.Views
             {
                 Nome = txtNome.Text,
                 Categoria = cmbCategoria.Text,
-                Marca = Convert.ToInt32(cmbMarca.Text),
+                Marca = cmbMarca.Text,
                 Preco = nudPreco.Value,
-                QuantidadeEmStock = Convert.ToInt32(nudStock.Value),
-                GarantiaMeses = Convert.ToInt32(nudGarantiaMeses.Value)
+                QuantidadeEmStock = Convert.ToInt32(nudStock.Value)
             };
 
             // Adiciona o novo produto através do controlador
             _controller.AddItem(novoProduto);
 
-            // Atualiza a DataGridView no formulário principal
+            // Atualiza a DataGridView no form principal
             _controller.AtualizaProdutos();
+            
+            
 
             this.Close();
         }
@@ -80,7 +86,6 @@ namespace poo_tp_29559.Views
             isValid &= ValidateField(cmbMarca, lblMarca);
             isValid &= ValidateField(nudPreco, lblPreco);
             isValid &= ValidateField(nudStock, lblStock);
-            isValid &= ValidateField(nudGarantiaMeses, lblGarantiaMeses);
 
             return isValid;
         }

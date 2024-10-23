@@ -43,6 +43,10 @@
             ShadowType = MetroFormShadowType.None;
             Text = "Categorias";
             ResumeLayout(false);
+
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true); // Otimiza ainda mais a suavidade
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);  // Evita repaint redundante
+            UpdateStyles();
         }
 
         #endregion
