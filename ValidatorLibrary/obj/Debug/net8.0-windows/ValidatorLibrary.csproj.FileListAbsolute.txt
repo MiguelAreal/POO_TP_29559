@@ -1,0 +1,12 @@
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\bin\Debug\net8.0-windows\ValidatorLibrary.deps.json
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\bin\Debug\net8.0-windows\ValidatorLibrary.dll
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\bin\Debug\net8.0-windows\ValidatorLibrary.pdb
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.AssemblyInfoInputs.cache
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.AssemblyInfo.cs
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.sourcelink.json
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.dll
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\refint\ValidatorLibrary.dll
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ValidatorLibrary.pdb
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\ValidatorLibrary\obj\Debug\net8.0-windows\ref\ValidatorLibrary.dll
