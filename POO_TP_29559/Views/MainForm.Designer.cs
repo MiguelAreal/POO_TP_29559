@@ -107,7 +107,7 @@
             MinimumSize = new Size(1000, 650);
             Name = "MainForm";
             ShadowType = MetroFormShadowType.Flat;
-            Text = "Gestor de Comércio Eletrónico";
+            Text = "Left Click - Gestor de Comércio Eletrónico - ";
             Theme = MetroFramework.MetroThemeStyle.Light;
             TopMost = true;
             Load += Form1_Load;

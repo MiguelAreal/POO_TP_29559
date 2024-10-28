@@ -77,17 +77,17 @@ public abstract class BaseRepo<T> : IRepo<T> where T : class
 
     protected void SaveChanges()
     {
-        string directory = Path.GetDirectoryName(filePath);
+        string? directory = Path.GetDirectoryName(filePath);
         if (!Directory.Exists(directory))
         {
-            Directory.CreateDirectory(directory);
+            Directory.CreateDirectory(directory!);
         }
 
         string json = JsonSerializer.Serialize(items, new JsonSerializerOptions { WriteIndented = true });
         File.WriteAllText(filePath, json);
     }
 
-    private T FindById(int id)
+    private T? FindById(int id)
     {
         return items.FirstOrDefault(item => GetId(item) == id);
     }

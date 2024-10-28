@@ -13,10 +13,10 @@ namespace poo_tp_29559.Models
         [Browsable(false)]
         public int Id { get; set; }
 
-        [DisplayName("Nome de Categoria")]
+        [DisplayName("Nome")]
         public string? Nome { get; set; }
 
-        [DisplayName("Nome de Categoria")]
+        [DisplayName("Descrição")]
         public string? Descricao { get; set; }
 
         [DisplayName("Data de Criação")]
