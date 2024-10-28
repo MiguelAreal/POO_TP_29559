@@ -2,11 +2,14 @@
 Projeto para a Unidade Curricular de Programação Orientada a Objetos.
 
 ## Sobre
-Sistema que permite a gestão de uma loja online, incluindo:
+**LeftClick** - Sistema que permite a gestão de uma loja de comércio eletrónico.
+
+Inclui gestão de:
 - Clientes
 - Produtos
 - Vendas
 - Marcas
 - Descontos
 - Campanhas
+
 
