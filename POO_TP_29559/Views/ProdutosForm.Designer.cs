@@ -69,14 +69,13 @@
             btnAddProduto.Cursor = Cursors.Hand;
             btnAddProduto.FlatAppearance.BorderSize = 0;
             btnAddProduto.FlatStyle = FlatStyle.Flat;
-            btnAddProduto.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddProduto.Font = new Font("Segoe UI", 13F);
             btnAddProduto.ForeColor = Color.White;
-            btnAddProduto.Location = new Point(726, 50);
+            btnAddProduto.Location = new Point(726, 48);
             btnAddProduto.Name = "btnAddProduto";
             btnAddProduto.Size = new Size(54, 42);
             btnAddProduto.TabIndex = 1;
-            btnAddProduto.Text = "+";
-            btnAddProduto.TextAlign = ContentAlignment.TopCenter;
+            btnAddProduto.Text = "➕";
             btnAddProduto.UseVisualStyleBackColor = false;
             btnAddProduto.Click += btnAddProduto_Click;
             btnAddProduto.Enter += btnAddProduto_Enter;
@@ -94,13 +93,21 @@
             // 
             // btnRemProduto
             // 
+            btnRemProduto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRemProduto.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnRemProduto.BackColor = Color.Crimson;
+            btnRemProduto.BackgroundImageLayout = ImageLayout.Zoom;
             btnRemProduto.Cursor = Cursors.Hand;
-            btnRemProduto.Location = new Point(128, 27);
+            btnRemProduto.FlatAppearance.BorderSize = 0;
+            btnRemProduto.FlatStyle = FlatStyle.Flat;
+            btnRemProduto.Font = new Font("Segoe UI", 13F);
+            btnRemProduto.ForeColor = Color.White;
+            btnRemProduto.Location = new Point(659, 48);
             btnRemProduto.Name = "btnRemProduto";
-            btnRemProduto.Size = new Size(43, 23);
-            btnRemProduto.TabIndex = 4;
-            btnRemProduto.Text = "-";
-            btnRemProduto.UseVisualStyleBackColor = true;
+            btnRemProduto.Size = new Size(54, 42);
+            btnRemProduto.TabIndex = 9;
+            btnRemProduto.Text = "❌";
+            btnRemProduto.UseVisualStyleBackColor = false;
             btnRemProduto.Click += btnRemProduto_Click;
             // 
             // ProdutosForm
@@ -109,8 +116,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
-            Controls.Add(dgvProdutos);
             Controls.Add(btnRemProduto);
+            Controls.Add(dgvProdutos);
             Controls.Add(txtSearchProduto);
             Controls.Add(btnAddProduto);
             MaximizeBox = false;

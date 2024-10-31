@@ -29,8 +29,5 @@ namespace poo_tp_29559.Models
         [DisplayName("Categoria Aplicada")]
         public int CategoriaId { get; set; }
 
-
-        //Propriedade de Navegação direta, para ter informações sobre a categoria através da campanha.
-        public virtual Categoria? Categoria { get; set; }
     }
 }

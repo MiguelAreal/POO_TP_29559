@@ -1,13 +1,17 @@
 ﻿using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
+using poo_tp_29559.Repositories;
 using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
 public class MarcaController : BaseController<Marca, MarcasForm>
 {
-    public MarcaController(MarcasForm view) : base(view, "Data/marcas.json")
+    private readonly ProdutoRepo _produtoRepo;
+
+    public MarcaController(MarcasForm view, ProdutoRepo produtoRepo) : base(view, "Data/marcas.json")
     {
+        _produtoRepo = produtoRepo;
         Initialize();
     }
 
@@ -28,7 +32,18 @@ public class MarcaController : BaseController<Marca, MarcasForm>
 
     protected override void RemoveItem(Marca item)
     {
-        _repository.Remove(item);
-        CarregaItens();
+        var produtos = _produtoRepo.GetAll();
+
+        // Check if the brand can be deleted
+        if (item.PodeSerEliminada(produtos))
+        {
+            _repository.Remove(item);
+            CarregaItens();
+        }
+        else
+        {
+            // Handle the case where the brand cannot be deleted
+            MessageBox.Show("Esta marca não pode ser eliminada porque está associada a um ou mais produtos.");
+        }
     }
 }

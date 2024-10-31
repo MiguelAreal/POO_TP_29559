@@ -43,14 +43,5 @@
     "Preco": 0,
     "QuantidadeEmStock": 0,
     "DataAdicao": "31/10/2024 14:36:05"
-  },
-  {
-    "Id": 6,
-    "Nome": "",
-    "CategoriaID": 2,
-    "MarcaID": 1,
-    "Preco": 0,
-    "QuantidadeEmStock": 0,
-    "DataAdicao": "31/10/2024 14:42:02"
   }
 ]

@@ -1,14 +1,8 @@
 ﻿using MetroFramework.Forms;
 using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
+using poo_tp_29559.Repositories; // Add this line for ProdutoRepo
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ValidationLibrary;
 
@@ -23,39 +17,28 @@ namespace poo_tp_29559.Views
         {
             InitializeComponent();
             _view = view;
-            _controller = new MarcaController(_view);
-        }
 
+            _controller = new MarcaController(_view, new ProdutoRepo());
+        }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-
-            Control[] controls = { txtNome, cmbPais};
-            Label[] labels = { lblNome, lblPais};
+            Control[] controls = { txtNome, cmbPais };
+            Label[] labels = { lblNome, lblPais };
             bool allValid = FieldValidator.ValidateFields(controls, labels);
-
-
-            // Valida os campos antes de adicionar o produto
-            if (!allValid)
-            {
-                MessageBox.Show("Preencha todos os campos obrigatórios.");
-                return;
-            }
 
             var novaMarca = new Marca
             {
                 Nome = txtNome.Text,
                 Descricao = txtDescricao.Text,
-                PaisOrigem = cmbPais.Text,
+                PaisOrigem = cmbPais.Text
             };
 
-            // Adiciona o novo produto através do controlador
+            // Add the new brand through the controller
             _controller.AddItem(novaMarca);
 
-            // Atualiza a DataGridView no form principal
+            // Update the DataGridView in the main form
             _controller.CarregaItens();
-
-
 
             this.Close();
         }

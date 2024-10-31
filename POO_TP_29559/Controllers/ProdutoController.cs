@@ -77,21 +77,3 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
 
 
 }
-
-
-// ViewModel for Product with category and brand names
-public class ProdutoViewModel
-{
-    public int Id { get; set; }
-    public string? Nome { get; set; }
-    [DisplayName("Preço")]
-    public decimal Preco { get; set; }
-    [DisplayName("Stock")]
-    public int QuantidadeEmStock { get; set; }
-    [DisplayName("Categoria")]
-    public string? CategoriaNome { get; set; }
-    [DisplayName("Marca")]
-    public string? MarcaNome { get; set; }
-    [DisplayName("Data de Adição")]
-    public string? DataAdicao { get; set; }
-}

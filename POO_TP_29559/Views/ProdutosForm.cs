@@ -16,6 +16,9 @@ namespace poo_tp_29559
     public partial class ProdutosForm : MetroForm
     {
         private readonly ProdutoController _controller; // Controlador associado à interface
+        private List<Categoria> _categorias; // List of categories
+        private List<Marca> _marcas; // List of brands
+
 
         /// <summary>
         /// Construtor da classe <see cref="ProdutosForm"/> que inicializa os componentes e o controlador.
@@ -24,6 +27,45 @@ namespace poo_tp_29559
         {
             InitializeComponent();
             _controller = new ProdutoController(this, new CategoriaRepo(), new MarcaRepo());
+        }
+
+        /*private void LoadCategoriasAndMarcas()
+        {
+            // Load categories and brands from your repository
+            _categorias = new CategoriaRepo().GetAll();
+            _marcas = new MarcaRepo().GetAll();
+            LoadCategoriasAndMarcas();
+
+        }*/
+
+        /// <summary>
+        /// Configura o DataGridView para usar ComboBox para Categoria e Marca.
+        /// </summary>
+        private void SetupDataGridView()
+        {
+            // Clear existing columns
+            dgvProdutos.Columns.Clear();
+
+            var categoriaColumn = new DataGridViewComboBoxColumn
+            {
+                HeaderText = "Categoria",
+                DataSource = _categorias,
+                DisplayMember = "Nome",
+                ValueMember = "Id",
+                DataPropertyName = "CategoriaNome"
+            };
+
+            var marcaColumn = new DataGridViewComboBoxColumn
+            {
+                HeaderText = "Marca",
+                DataSource = _marcas,
+                DisplayMember = "Nome",
+                ValueMember = "Id",
+                DataPropertyName = "MarcaNome"
+            };
+
+            dgvProdutos.Columns.Add(categoriaColumn);
+            dgvProdutos.Columns.Add(marcaColumn);
         }
 
         /// <summary>
@@ -89,7 +131,7 @@ namespace poo_tp_29559
             using (var addProdutoForm = new AddProdutoForm(this))
             {
                 addProdutoForm.ShowDialog();
-               
+
             }
 
             //Recarrega itens após fechar janela de adição de produto.
@@ -105,23 +147,22 @@ namespace poo_tp_29559
         /// </summary>
         private void btnRemProduto_Click(object sender, EventArgs e)
         {
-           
-                if (dgvProdutos.SelectedRows.Count > 0)
-                {
-                    int rowIndex = dgvProdutos.SelectedRows[0].Index; // Get the selected row index
-                    ProdutoViewModel produtoSelecionado = (ProdutoViewModel)dgvProdutos.Rows[rowIndex].DataBoundItem; // Get the selected `ProdutoViewModel`
 
-                    // Use the controller to get the actual `Produto` by ID
-                    var produto = _controller.GetById(produtoSelecionado.Id); // Fetch `Produto` using its ID
+            if (dgvProdutos.SelectedRows.Count > 0)
+            {
+                int rowIndex = dgvProdutos.SelectedRows[0].Index; // Get the selected row index
+                ProdutoViewModel produtoSelecionado = (ProdutoViewModel)dgvProdutos.Rows[rowIndex].DataBoundItem; // Get the selected `ProdutoViewModel`
 
-                    _controller.RemoveProduto(produto); // Call the controller's remove method
-                    _controller.CarregaItens(); // Refresh the list after deletion
-                }
-                else
-                {
-                    MessageBox.Show("Selecione um produto para remover.");
-                }
+                // Use the controller to get the actual `Produto` by ID
+                var produto = _controller.GetById(produtoSelecionado.Id); // Fetch `Produto` using its ID
 
+                _controller.RemoveProduto(produto); // Call the controller's remove method
+                _controller.CarregaItens(); // Refresh the list after deletion
+            }
+            else
+            {
+                MessageBox.Show("Selecione um produto para remover.");
+            }
         }
 
         private void btnAddProduto_Enter(object sender, EventArgs e)
@@ -131,7 +172,7 @@ namespace poo_tp_29559
 
         private void btnAddProduto_Leave(object sender, EventArgs e)
         {
-            btnAddProduto.BackColor = Color.FromArgb(13,170,220);
+            btnAddProduto.BackColor = Color.FromArgb(13, 170, 220);
         }
     }
 }

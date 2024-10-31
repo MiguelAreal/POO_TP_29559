@@ -1,6 +1,7 @@
 ﻿using MetroFramework.Forms;
 using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
+using poo_tp_29559.Repositories;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace poo_tp_29559.Views
         public MarcasForm()
         {
             InitializeComponent();
-            _controller = new MarcaController(this);
+            _controller = new MarcaController(this, new ProdutoRepo());
         }
 
         public void MostraMarcas(List<Marca> marcas)
@@ -51,30 +52,30 @@ namespace poo_tp_29559.Views
             // Mensagem de erro se nenhuma marca estiver selecionada
             catch (IndexOutOfRangeException)
             {
-                
+
                 MessageBox.Show("Selecione uma marca para remover.");
             }
             // Exibe uma mensagem de erro caso ocorra uma exceção diferente
             catch (Exception ex)
             {
-                
+
                 MessageBox.Show($"Erro ao remover a marca: {ex.Message}");
             }
         }
 
         private void dgvMarcas_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        { 
+        {
             // Tenta obter a marca editada com base na linha e coluna alteradas
             try
             {
-               
+
                 Marca marcaAlterada = (Marca)dgvMarcas.Rows[e.RowIndex].DataBoundItem;
                 _controller.UpdateItem(marcaAlterada);
             }
             // Trata o caso em que a linha ou coluna não é válida
             catch (ArgumentOutOfRangeException)
             {
-                
+
                 MessageBox.Show("Selecione uma célula válida para editar.");
             }
             // Trata o caso em que a conversão do valor não é válida
@@ -90,5 +91,7 @@ namespace poo_tp_29559.Views
             var addMarcaForm = new AddMarcaForm(this);
             addMarcaForm.ShowDialog();
         }
+
+        
     }
 }

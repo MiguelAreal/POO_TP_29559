@@ -42,7 +42,7 @@
             // msMainForm
             // 
             msMainForm.BackColor = Color.Transparent;
-            msMainForm.Items.AddRange(new ToolStripItem[] { produtosToolStripMenuItem, clientesToolStripMenuItem, clientesToolStripMenuItem1, marcasToolStripMenuItem, vendasToolStripMenuItem, campanhasToolStripMenuItem });
+            msMainForm.Items.AddRange(new ToolStripItem[] { produtosToolStripMenuItem, clientesToolStripMenuItem, marcasToolStripMenuItem, vendasToolStripMenuItem, clientesToolStripMenuItem1, campanhasToolStripMenuItem });
             msMainForm.Location = new Point(20, 60);
             msMainForm.Name = "msMainForm";
             msMainForm.RenderMode = ToolStripRenderMode.Professional;
