@@ -1,0 +1,14 @@
+[
+  {
+    "Id": 1,
+    "Nome": "a",
+    "Descricao": "a",
+    "DataCriacao": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 2,
+    "Nome": "Ol\u00E1",
+    "Descricao": "Nahh",
+    "DataCriacao": "0001-01-01T00:00:00"
+  }
+]

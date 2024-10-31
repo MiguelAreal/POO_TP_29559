@@ -1,28 +1,34 @@
-﻿using poo_tp_29559.Models;
-using poo_tp_29559.Repositories;
+﻿using poo_tp_29559.Controllers;
+using poo_tp_29559.Models;
 using poo_tp_29559.Views;
-using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
-namespace poo_tp_29559.Controllers
+public class MarcaController : BaseController<Marca, MarcasForm>
 {
-    public class MarcaController : BaseController<Marca, MarcasForm, MarcaRepo>
+    public MarcaController(MarcasForm view) : base(view, "Data/marcas.json")
     {
-        public MarcaController(MarcasForm view) : base(view)
-        {
-        }
+        Initialize();
+    }
 
-        // Método implementado para mostrar as marcas na view
-        protected override void ExibeItensNaView(List<Marca> marcas)
-        {
-            _view.MostraMarcas(marcas);
-        }
+    protected override void ExibeItensNaView(List<Marca> marcas)
+    {
+        _view.MostraMarcas(marcas);
+    }
 
-        // Método específico para filtrar marcas pelo nome
-        public void FiltrarMarcas(string filtro)
-        {
-            // Usa o método da classe BaseController, passando a função de filtro para procurar pelo nome
-            FiltrarItens(filtro, marca => marca.Nome != null && marca.Nome.ToLower().Contains(filtro.ToLower()));
-        }
+    public void FiltrarMarcas(string filtro)
+    {
+        FiltrarItens(filtro, marca => marca.Nome != null && marca.Nome.ToLower().Contains(filtro.ToLower()));
+    }
+
+    public void RemoveMarca(Marca item)
+    {
+        RemoveItem(item);
+    }
+
+    protected override void RemoveItem(Marca item)
+    {
+        _repository.Remove(item);
+        CarregaItens();
     }
 }

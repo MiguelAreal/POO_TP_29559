@@ -23,14 +23,14 @@ namespace poo_tp_29559
         public ProdutosForm()
         {
             InitializeComponent();
-            _controller = new ProdutoController(this);
+            _controller = new ProdutoController(this, new CategoriaRepo(), new MarcaRepo());
         }
 
         /// <summary>
         /// Exibe a lista de produtos na DataGridView.
         /// </summary>
         /// <param name="produtos">A lista de produtos a ser exibida.</param>
-        public void MostraProdutos(List<Produto> produtos)
+        public void MostraProdutos(List<ProdutoViewModel> produtos)
         {
             BindingSource bs = new BindingSource
             {
@@ -38,6 +38,9 @@ namespace poo_tp_29559
             };
             dgvProdutos.DataSource = bs;
             dgvProdutos.Refresh();
+
+            // Hide ID columns
+            dgvProdutos.Columns["Id"].Visible = false;
         }
 
 
@@ -47,7 +50,7 @@ namespace poo_tp_29559
         /// Evento acionado quando o valor de uma célula na DataGridView é alterado.
         /// Atualiza a propriedade do produto correspondente na lista.
         /// </summary>
-        private void dgvProdutos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        /*private void dgvProdutos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -65,7 +68,7 @@ namespace poo_tp_29559
                 // Trata o caso em que a conversão do valor não é válida
                 MessageBox.Show("Erro ao tentar atualizar o produto. Verifique os dados.");
             }
-        }
+        }*/
 
         /// <summary>
         /// Evento acionado quando o texto na caixa de pesquisa é alterado.
@@ -73,8 +76,7 @@ namespace poo_tp_29559
         /// </summary>
         private void txtSearchProduto_TextChanged(object sender, EventArgs e)
         {
-            string textoPesquisa = txtSearchProduto.Text;
-            _controller.FiltrarProdutos(textoPesquisa);
+            _controller.FiltrarProdutos(txtSearchProduto.Text);
         }
 
         /// <summary>
@@ -83,8 +85,16 @@ namespace poo_tp_29559
         /// </summary>
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
-            var addProdutoForm = new AddProdutoForm(this);
-            addProdutoForm.ShowDialog();
+            //Abre form para adicionar novo produto.
+            using (var addProdutoForm = new AddProdutoForm(this))
+            {
+                addProdutoForm.ShowDialog();
+               
+            }
+
+            //Recarrega itens após fechar janela de adição de produto.
+            _controller.CarregaItens();
+
 
         }
 
@@ -95,25 +105,23 @@ namespace poo_tp_29559
         /// </summary>
         private void btnRemProduto_Click(object sender, EventArgs e)
         {
+           
+                if (dgvProdutos.SelectedRows.Count > 0)
+                {
+                    int rowIndex = dgvProdutos.SelectedRows[0].Index; // Get the selected row index
+                    ProdutoViewModel produtoSelecionado = (ProdutoViewModel)dgvProdutos.Rows[rowIndex].DataBoundItem; // Get the selected `ProdutoViewModel`
 
-            // Tenta remover o produto selecionado
-            try
-            {
-                int rowIndex = dgvProdutos.SelectedRows[0].Index; // Obtém o índice da linha selecionada
-                Produto produtoSelecionado = (Produto)dgvProdutos.Rows[rowIndex].DataBoundItem; // Obtém o produto correspondente ao índice selecionado
+                    // Use the controller to get the actual `Produto` by ID
+                    var produto = _controller.GetById(produtoSelecionado.Id); // Fetch `Produto` using its ID
 
-                _controller.RemoveItem(produtoSelecionado); // Remove o produto usando o controlador
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                // Mensagem de erro se nenhum produto estiver selecionado
-                MessageBox.Show("Selecione um produto para remover.");
-            }
-            catch (Exception ex)
-            {
-                // Exibe uma mensagem de erro caso ocorra uma exceção diferente
-                MessageBox.Show($"Erro ao remover o produto: {ex.Message}");
-            }
+                    _controller.RemoveProduto(produto); // Call the controller's remove method
+                    _controller.CarregaItens(); // Refresh the list after deletion
+                }
+                else
+                {
+                    MessageBox.Show("Selecione um produto para remover.");
+                }
+
         }
 
         private void btnAddProduto_Enter(object sender, EventArgs e)

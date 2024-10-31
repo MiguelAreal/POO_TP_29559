@@ -1,5 +1,6 @@
 ﻿using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
+using poo_tp_29559.Repositories.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,18 +11,25 @@ namespace poo_tp_29559.Controllers
     //é centralizada. Os controladores específicos só precisarão implementar a lógica de como exibir
     //os itens na view.
 
-    public abstract class BaseController<T, TView, TRepo> where T : class where TRepo : BaseRepo<T>, new()
+    public abstract class BaseController<T, TView> where T : class, IIdentifiable
     {
         protected readonly TView _view;
-        protected readonly TRepo _repository;
+        protected readonly BaseRepo<T> _repository;
         protected List<T> _items;
 
-        public BaseController(TView view)
+        public BaseController(TView view, string filePath)
         {
             _view = view;
-            _repository = new TRepo();
+            _repository = new BaseRepo<T>(filePath); 
+           
+        }
+
+        // New method to initialize and load items
+        public void Initialize()
+        {
             CarregaItens();
         }
+
 
         // Carrega os itens e exibe na view
         public void CarregaItens()
@@ -40,27 +48,22 @@ namespace poo_tp_29559.Controllers
         // Adiciona novo item e atualiza a view
         public void AddItem(T item)
         {
-            _repository.Add(item);
-            CarregaItens();
-        }
-
-        // Remove item e atualiza a view
-        public void RemoveItem(T item)
-        {
-            _repository.Remove(item);
-            CarregaItens();
+            _repository.Add(item);  
+            CarregaItens();  
         }
 
         // Método para atualizar um produto
         public void UpdateItem(T item)
         {
             if (item == null)
-                throw new ArgumentNullException(nameof(item),  "Item não pode ser nulo.");
+                throw new ArgumentNullException(nameof(item), "Item não pode ser nulo.");
 
             _repository.Update(item);
             CarregaItens(); // Recarrega os itens para atualizar a view
         }
 
+
+        protected abstract void RemoveItem(T item);
         // Método abstrato para exibir os itens na view, implementado pelos controladores específicos
         protected abstract void ExibeItensNaView(List<T> items);
     }

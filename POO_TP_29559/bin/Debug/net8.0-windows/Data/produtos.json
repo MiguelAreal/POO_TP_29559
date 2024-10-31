@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "Id": 1,
+    "Nome": "teclado",
+    "CategoriaID": 1,
+    "MarcaID": 1,
+    "Preco": 20,
+    "QuantidadeEmStock": 50,
+    "DataAdicao": "31/10/2024 14:26:44"
+  },
+  {
+    "Id": 2,
+    "Nome": "rato",
+    "CategoriaID": 1,
+    "MarcaID": 1,
+    "Preco": 19,
+    "QuantidadeEmStock": 100,
+    "DataAdicao": "31/10/2024 14:27:04"
+  },
+  {
+    "Id": 3,
+    "Nome": "fones",
+    "CategoriaID": 1,
+    "MarcaID": 1,
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "DataAdicao": "31/10/2024 14:30:32"
+  },
+  {
+    "Id": 4,
+    "Nome": "monitor",
+    "CategoriaID": 1,
+    "MarcaID": 1,
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "DataAdicao": "31/10/2024 14:34:00"
+  },
+  {
+    "Id": 5,
+    "Nome": "Tapete",
+    "CategoriaID": 1,
+    "MarcaID": 1,
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "DataAdicao": "31/10/2024 14:36:05"
+  },
+  {
+    "Id": 6,
+    "Nome": "",
+    "CategoriaID": 2,
+    "MarcaID": 1,
+    "Preco": 0,
+    "QuantidadeEmStock": 0,
+    "DataAdicao": "31/10/2024 14:42:02"
+  }
+]

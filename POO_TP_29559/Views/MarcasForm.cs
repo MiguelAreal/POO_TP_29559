@@ -26,25 +26,18 @@ namespace poo_tp_29559.Views
 
         public void MostraMarcas(List<Marca> marcas)
         {
-            // Cria um BindingSource para associar à DGV lista de produtos
-            BindingSource bs = new BindingSource();
-            bs.DataSource = marcas;
-            dgvMarcas.DataSource = bs;
-
-        }
-
-        private void btnAddMarca_Click(object sender, EventArgs e)
-        {
-            var novaMarca = new Marca
+            // Cria um BindingSource para associar à DGV lista de marcas
+            // Esconde a coluna ID
+            BindingSource bs = new BindingSource
             {
-                Nome = "Marca",
-                Descricao = "Descricao",
-                PaisOrigem = "Portugal"
+                DataSource = marcas
             };
+            dgvMarcas.DataSource = bs;
+            dgvMarcas.Refresh();
 
-            // Adiciona a nova marca através do controlador
-            _controller.AddItem(novaMarca);
+            dgvMarcas.Columns["Id"].Visible = false;
         }
+
 
         private void btnRemMarca_Click(object sender, EventArgs e)
         {
@@ -53,42 +46,47 @@ namespace poo_tp_29559.Views
             {
                 int rowIndex = dgvMarcas.SelectedRows[0].Index;
                 Marca produtoSelecionado = (Marca)dgvMarcas.Rows[rowIndex].DataBoundItem;
-                _controller.RemoveItem(produtoSelecionado);
+                _controller.RemoveMarca(produtoSelecionado);
             }
+            // Mensagem de erro se nenhuma marca estiver selecionada
             catch (IndexOutOfRangeException)
             {
-                // Mensagem de erro se nenhuma marca estiver selecionada
+                
                 MessageBox.Show("Selecione uma marca para remover.");
             }
+            // Exibe uma mensagem de erro caso ocorra uma exceção diferente
             catch (Exception ex)
             {
-                // Exibe uma mensagem de erro caso ocorra uma exceção diferente
+                
                 MessageBox.Show($"Erro ao remover a marca: {ex.Message}");
             }
         }
 
         private void dgvMarcas_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
+        { 
+            // Tenta obter a marca editada com base na linha e coluna alteradas
             try
             {
-                // Tenta obter a marca editada com base na linha e coluna alteradas
+               
                 Marca marcaAlterada = (Marca)dgvMarcas.Rows[e.RowIndex].DataBoundItem;
                 _controller.UpdateItem(marcaAlterada);
             }
+            // Trata o caso em que a linha ou coluna não é válida
             catch (ArgumentOutOfRangeException)
             {
-                // Trata o caso em que a linha ou coluna não é válida
+                
                 MessageBox.Show("Selecione uma célula válida para editar.");
             }
+            // Trata o caso em que a conversão do valor não é válida
             catch (InvalidCastException)
             {
-                // Trata o caso em que a conversão do valor não é válida
                 MessageBox.Show("Erro ao tentar atualizar o produto. Verifique os dados.");
             }
         }
 
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
+            // Abre form para adicionar nova categoria.
             var addMarcaForm = new AddMarcaForm(this);
             addMarcaForm.ShowDialog();
         }

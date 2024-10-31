@@ -60,7 +60,6 @@
             dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProdutos.Size = new Size(760, 331);
             dgvProdutos.TabIndex = 0;
-            dgvProdutos.CellValueChanged += dgvProdutos_CellValueChanged;
             // 
             // btnAddProduto
             // 
@@ -110,10 +109,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
+            Controls.Add(dgvProdutos);
             Controls.Add(btnRemProduto);
             Controls.Add(txtSearchProduto);
             Controls.Add(btnAddProduto);
-            Controls.Add(dgvProdutos);
             MaximizeBox = false;
             MinimizeBox = false;
             Movable = false;

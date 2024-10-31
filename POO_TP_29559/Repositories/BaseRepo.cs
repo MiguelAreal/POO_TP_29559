@@ -5,7 +5,14 @@ using System.Text.Json;
 using System.Linq;
 using poo_tp_29559.Repositories.Interfaces;
 
-public abstract class BaseRepo<T> : IRepo<T> where T : class
+
+// Interface para ter a certeza que as classes possuem um campo Id
+public interface IIdentifiable
+{
+    int Id { get; set; }
+}
+
+public class BaseRepo<T> : IRepo<T> where T : class, IIdentifiable
 {
     protected readonly string filePath;
     protected List<T> items;
@@ -31,13 +38,14 @@ public abstract class BaseRepo<T> : IRepo<T> where T : class
 
     public List<T> GetAll()
     {
+        items = LoadItems();
         return items;
     }
 
     public virtual void Add(T item)
     {
         if (item == null)
-            throw new ArgumentNullException(nameof(item), "Item cannot be null.");
+            throw new ArgumentNullException(nameof(item), "Item não pode ser null.");
 
         SetId(item);
         items.Add(item);
@@ -46,9 +54,6 @@ public abstract class BaseRepo<T> : IRepo<T> where T : class
 
     public virtual void Remove(T item)
     {
-        if (item == null)
-            throw new ArgumentNullException(nameof(item), "Item cannot be null.");
-
         items.Remove(item);
         SaveChanges();
     }
@@ -58,11 +63,11 @@ public abstract class BaseRepo<T> : IRepo<T> where T : class
         if (itemAlterado == null)
             throw new ArgumentNullException(nameof(itemAlterado), "Item não pode ser null.");
 
-        var originalItem = FindById(GetId(itemAlterado));
+        var index = items.FindIndex(item => item.Id == itemAlterado.Id);
 
-        if (originalItem != null)
+        if (index != -1)
         {
-            UpdateProperties(originalItem, itemAlterado);
+            items[index] = itemAlterado;
             SaveChanges();
         }
         else
@@ -71,9 +76,35 @@ public abstract class BaseRepo<T> : IRepo<T> where T : class
         }
     }
 
-    protected abstract void SetId(T item);
-    protected abstract int GetId(T item);
-    protected abstract void UpdateProperties(T original, T updated);
+    protected int GetId(T item)
+    {
+        return item.Id;
+    }
+
+    protected void SetId(T item)
+    {
+        item.Id = GetProximoId();
+    }
+
+    private int GetProximoId()
+    {
+        if (items.Count == 0)
+        {
+            return 1;
+        }
+        return items.Max(item => item.Id) + 1;
+    }
+
+    /// <summary>
+    /// Devolve um item através do ID.
+    /// </summary>
+    /// <param name="id">O ID do item para pesquisar.</param>
+    /// <returns>O item se encontrado; caso contrário, null.</returns>
+    public virtual T GetById(int? id)
+    {
+        return items.FirstOrDefault(item => item.Id == id);
+    }
+
 
     protected void SaveChanges()
     {
@@ -87,8 +118,4 @@ public abstract class BaseRepo<T> : IRepo<T> where T : class
         File.WriteAllText(filePath, json);
     }
 
-    private T? FindById(int id)
-    {
-        return items.FirstOrDefault(item => GetId(item) == id);
-    }
 }

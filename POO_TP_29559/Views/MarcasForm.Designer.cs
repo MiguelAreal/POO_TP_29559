@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtSearchMarcas = new TextBox();
             dgvMarcas = new DataGridView();
             btnRemMarca = new Button();
-            btnAddProduto = new Button();
+            btnAddMarca = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvMarcas).BeginInit();
             SuspendLayout();
             // 
@@ -52,14 +52,14 @@
             dgvMarcas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvMarcas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvMarcas.BackgroundColor = Color.White;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvMarcas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvMarcas.Location = new Point(20, 96);
             dgvMarcas.MultiSelect = false;
@@ -80,31 +80,31 @@
             btnRemMarca.UseVisualStyleBackColor = true;
             btnRemMarca.Click += btnRemMarca_Click;
             // 
-            // btnAddProduto
+            // btnAddMarca
             // 
-            btnAddProduto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAddProduto.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAddProduto.BackColor = Color.FromArgb(13, 170, 220);
-            btnAddProduto.Cursor = Cursors.Hand;
-            btnAddProduto.FlatAppearance.BorderSize = 0;
-            btnAddProduto.FlatStyle = FlatStyle.Flat;
-            btnAddProduto.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddProduto.ForeColor = Color.White;
-            btnAddProduto.Location = new Point(726, 48);
-            btnAddProduto.Name = "btnAddProduto";
-            btnAddProduto.Size = new Size(54, 42);
-            btnAddProduto.TabIndex = 7;
-            btnAddProduto.Text = "+";
-            btnAddProduto.TextAlign = ContentAlignment.TopCenter;
-            btnAddProduto.UseVisualStyleBackColor = false;
-            btnAddProduto.Click += btnAddProduto_Click;
+            btnAddMarca.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddMarca.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnAddMarca.BackColor = Color.FromArgb(13, 170, 220);
+            btnAddMarca.Cursor = Cursors.Hand;
+            btnAddMarca.FlatAppearance.BorderSize = 0;
+            btnAddMarca.FlatStyle = FlatStyle.Flat;
+            btnAddMarca.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddMarca.ForeColor = Color.White;
+            btnAddMarca.Location = new Point(726, 48);
+            btnAddMarca.Name = "btnAddMarca";
+            btnAddMarca.Size = new Size(54, 42);
+            btnAddMarca.TabIndex = 7;
+            btnAddMarca.Text = "+";
+            btnAddMarca.TextAlign = ContentAlignment.TopCenter;
+            btnAddMarca.UseVisualStyleBackColor = false;
+            btnAddMarca.Click += btnAddProduto_Click;
             // 
             // MarcasForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnAddProduto);
+            Controls.Add(btnAddMarca);
             Controls.Add(btnRemMarca);
             Controls.Add(txtSearchMarcas);
             Controls.Add(dgvMarcas);
@@ -124,6 +124,6 @@
         private TextBox txtSearchMarcas;
         private DataGridView dgvMarcas;
         private Button btnRemMarca;
-        private Button btnAddProduto;
+        private Button btnAddMarca;
     }
 }

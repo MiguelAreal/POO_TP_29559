@@ -2,36 +2,8 @@
   {
     "Id": 1,
     "Nome": "Sony",
-    "Descricao": "make.believe",
-    "DataCriacao": "2024-10-22T16:41:50.1212627+01:00",
-    "PaisOrigem": "Jap\u00E3o"
-  },
-  {
-    "Id": 0,
-    "Nome": "LG",
-    "Descricao": "Life\u0027s Good",
-    "DataCriacao": "2024-10-22T16:48:00",
-    "PaisOrigem": "Coreia do Sul"
-  },
-  {
-    "Id": 0,
-    "Nome": "Razer",
-    "Descricao": "T\u00E1 tudo",
-    "DataCriacao": "2024-10-22T17:54:06.6580754+01:00",
-    "PaisOrigem": "awdawdawd"
-  },
-  {
-    "Id": 1,
-    "Nome": "A",
-    "Descricao": "AWDAWD",
-    "DataCriacao": "2024-10-24T14:16:15.2903827+01:00",
-    "PaisOrigem": "A"
-  },
-  {
-    "Id": 2,
-    "Nome": "ADAWDAWAW",
-    "Descricao": "AWDAWDAWD",
-    "DataCriacao": "2024-10-25T18:21:11.3998753+01:00",
-    "PaisOrigem": "Espanha"
+    "Descricao": "Slogan fixe",
+    "DataCriacao": "2024-10-31T14:42:37.1769906+00:00",
+    "PaisOrigem": "Portugal"
   }
 ]
