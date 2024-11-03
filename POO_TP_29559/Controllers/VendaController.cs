@@ -1,4 +1,7 @@
-﻿using poo_tp_29559.Repositories;
+﻿using poo_tp_29559.Models;
+using poo_tp_29559.Repositories;
+using System.Collections.Generic;
+using System.Linq;
 
 public class VendaController
 {
@@ -11,14 +14,32 @@ public class VendaController
         _clienteRepo = clienteRepo;
     }
 
-    public void CreateVenda(int? clienteID)
+    public List<VendaViewModel> GetVendasWithClientNames()
     {
-        // Busca cliente pelo ID, caso haja
-        Cliente? cliente = _clienteRepo.GetById(clienteID);
+        var vendas = _vendaRepo.GetAll();
+        var vendaViewModels = vendas.Select(v => new VendaViewModel
+        {
+            Id = v.Id,
+            NomeCliente = _clienteRepo.GetById(v.ClienteID)?.Nome,
+            DataVenda = v.DataVenda,
+            PrecoTotal = v.PrecoTotal,
+            MetodoPagamento = v.MetodoPagamento.ToString()
+        }).ToList();
 
-        var novaVenda = new Venda(cliente);
-
+        return vendaViewModels;
     }
 
-    
+    public Venda GetVendaDetails(int vendaId)
+    {
+        return _vendaRepo.GetById(vendaId);
+    }
+}
+
+public class VendaViewModel
+{
+    public int Id { get; set; }
+    public string? NomeCliente { get; set; }
+    public DateTime DataVenda { get; set; }
+    public decimal PrecoTotal { get; set; }
+    public string? MetodoPagamento { get; set; }
 }

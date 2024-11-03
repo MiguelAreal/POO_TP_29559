@@ -72,6 +72,9 @@ namespace poo_tp_29559
                 case "Vendas":
                     formFilho = new VendasForm();
                     break;
+                case "Clientes":
+                    formFilho = new ClientesForm();
+                    break;
                 default:
                     MessageBox.Show("Opção desconhecida");
                     return; // Sai do método
