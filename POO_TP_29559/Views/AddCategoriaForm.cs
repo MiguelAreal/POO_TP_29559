@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using poo_tp_29559.Models;
+using poo_tp_29559.Repositories;
 using ValidationLibrary;
 
 namespace poo_tp_29559.Views
@@ -22,7 +23,7 @@ namespace poo_tp_29559.Views
         {
             InitializeComponent();
             _view = view;
-            _controller = new CategoriaController(_view);
+            _controller = new CategoriaController(_view, new ProdutoRepo());
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

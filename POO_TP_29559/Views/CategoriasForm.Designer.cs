@@ -29,30 +29,31 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            btnAddMarca = new Button();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            btnAddCategoria = new Button();
             txtSearchCategorias = new TextBox();
             dgvCategorias = new DataGridView();
-            btnRemProduto = new Button();
+            btnRemCategoria = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCategorias).BeginInit();
             SuspendLayout();
             // 
-            // btnAddMarca
+            // btnAddCategoria
             // 
-            btnAddMarca.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAddMarca.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAddMarca.BackColor = Color.FromArgb(13, 170, 220);
-            btnAddMarca.Cursor = Cursors.Hand;
-            btnAddMarca.FlatAppearance.BorderSize = 0;
-            btnAddMarca.FlatStyle = FlatStyle.Flat;
-            btnAddMarca.Font = new Font("Segoe UI", 13F);
-            btnAddMarca.ForeColor = Color.White;
-            btnAddMarca.Location = new Point(726, 48);
-            btnAddMarca.Name = "btnAddMarca";
-            btnAddMarca.Size = new Size(54, 42);
-            btnAddMarca.TabIndex = 10;
-            btnAddMarca.Text = "➕";
-            btnAddMarca.UseVisualStyleBackColor = false;
-            btnAddMarca.Click += btnAddMarca_Click;
+            btnAddCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddCategoria.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnAddCategoria.BackColor = Color.FromArgb(13, 170, 220);
+            btnAddCategoria.Cursor = Cursors.Hand;
+            btnAddCategoria.FlatAppearance.BorderSize = 0;
+            btnAddCategoria.FlatStyle = FlatStyle.Flat;
+            btnAddCategoria.Font = new Font("Segoe UI", 13F);
+            btnAddCategoria.ForeColor = Color.White;
+            btnAddCategoria.Location = new Point(726, 48);
+            btnAddCategoria.Name = "btnAddCategoria";
+            btnAddCategoria.Size = new Size(54, 42);
+            btnAddCategoria.TabIndex = 2;
+            btnAddCategoria.Text = "➕";
+            btnAddCategoria.UseVisualStyleBackColor = false;
+            btnAddCategoria.Click += btnAddCategoria_Click;
             // 
             // txtSearchCategorias
             // 
@@ -61,7 +62,7 @@
             txtSearchCategorias.Name = "txtSearchCategorias";
             txtSearchCategorias.PlaceholderText = "Procurar...";
             txtSearchCategorias.Size = new Size(260, 25);
-            txtSearchCategorias.TabIndex = 9;
+            txtSearchCategorias.TabIndex = 0;
             // 
             // dgvCategorias
             // 
@@ -79,31 +80,41 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvCategorias.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvCategorias.DefaultCellStyle = dataGridViewCellStyle2;
             dgvCategorias.Location = new Point(20, 96);
             dgvCategorias.MultiSelect = false;
             dgvCategorias.Name = "dgvCategorias";
             dgvCategorias.RowHeadersVisible = false;
             dgvCategorias.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvCategorias.Size = new Size(760, 331);
-            dgvCategorias.TabIndex = 8;
+            dgvCategorias.TabIndex = 3;
+            dgvCategorias.CellValueChanged += dgvCategorias_CellValueChanged;
             // 
-            // btnRemProduto
+            // btnRemCategoria
             // 
-            btnRemProduto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRemProduto.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnRemProduto.BackColor = Color.Crimson;
-            btnRemProduto.BackgroundImageLayout = ImageLayout.Zoom;
-            btnRemProduto.Cursor = Cursors.Hand;
-            btnRemProduto.FlatAppearance.BorderSize = 0;
-            btnRemProduto.FlatStyle = FlatStyle.Flat;
-            btnRemProduto.Font = new Font("Segoe UI", 13F);
-            btnRemProduto.ForeColor = Color.White;
-            btnRemProduto.Location = new Point(659, 48);
-            btnRemProduto.Name = "btnRemProduto";
-            btnRemProduto.Size = new Size(54, 42);
-            btnRemProduto.TabIndex = 11;
-            btnRemProduto.Text = "❌";
-            btnRemProduto.UseVisualStyleBackColor = false;
+            btnRemCategoria.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRemCategoria.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnRemCategoria.BackColor = Color.Crimson;
+            btnRemCategoria.BackgroundImageLayout = ImageLayout.Zoom;
+            btnRemCategoria.Cursor = Cursors.Hand;
+            btnRemCategoria.FlatAppearance.BorderSize = 0;
+            btnRemCategoria.FlatStyle = FlatStyle.Flat;
+            btnRemCategoria.Font = new Font("Segoe UI", 13F);
+            btnRemCategoria.ForeColor = Color.White;
+            btnRemCategoria.Location = new Point(659, 48);
+            btnRemCategoria.Name = "btnRemCategoria";
+            btnRemCategoria.Size = new Size(54, 42);
+            btnRemCategoria.TabIndex = 1;
+            btnRemCategoria.Text = "❌";
+            btnRemCategoria.UseVisualStyleBackColor = false;
+            btnRemCategoria.Click += btnRemCategoria_Click;
             // 
             // CategoriasForm
             // 
@@ -111,8 +122,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
-            Controls.Add(btnRemProduto);
-            Controls.Add(btnAddMarca);
+            Controls.Add(btnRemCategoria);
+            Controls.Add(btnAddCategoria);
             Controls.Add(txtSearchCategorias);
             Controls.Add(dgvCategorias);
             MaximizeBox = false;
@@ -128,9 +139,9 @@
 
         #endregion
 
-        private Button btnAddMarca;
+        private Button btnAddCategoria;
         private TextBox txtSearchCategorias;
         private DataGridView dgvCategorias;
-        private Button btnRemProduto;
+        private Button btnRemCategoria;
     }
 }

@@ -59,7 +59,7 @@
             dgvProdutos.RowHeadersVisible = false;
             dgvProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvProdutos.Size = new Size(760, 331);
-            dgvProdutos.TabIndex = 0;
+            dgvProdutos.TabIndex = 3;
             // 
             // btnAddProduto
             // 
@@ -74,7 +74,7 @@
             btnAddProduto.Location = new Point(726, 48);
             btnAddProduto.Name = "btnAddProduto";
             btnAddProduto.Size = new Size(54, 42);
-            btnAddProduto.TabIndex = 1;
+            btnAddProduto.TabIndex = 2;
             btnAddProduto.Text = "➕";
             btnAddProduto.UseVisualStyleBackColor = false;
             btnAddProduto.Click += btnAddProduto_Click;
@@ -88,7 +88,7 @@
             txtSearchProduto.Name = "txtSearchProduto";
             txtSearchProduto.PlaceholderText = "Procurar...";
             txtSearchProduto.Size = new Size(260, 25);
-            txtSearchProduto.TabIndex = 2;
+            txtSearchProduto.TabIndex = 0;
             txtSearchProduto.TextChanged += txtSearchProduto_TextChanged;
             // 
             // btnRemProduto
@@ -105,7 +105,7 @@
             btnRemProduto.Location = new Point(659, 48);
             btnRemProduto.Name = "btnRemProduto";
             btnRemProduto.Size = new Size(54, 42);
-            btnRemProduto.TabIndex = 9;
+            btnRemProduto.TabIndex = 1;
             btnRemProduto.Text = "❌";
             btnRemProduto.UseVisualStyleBackColor = false;
             btnRemProduto.Click += btnRemProduto_Click;

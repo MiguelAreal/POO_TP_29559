@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txtSearchMarcas = new TextBox();
             dgvMarcas = new DataGridView();
             btnAddMarca = new Button();
@@ -43,7 +44,7 @@
             txtSearchMarcas.Name = "txtSearchMarcas";
             txtSearchMarcas.PlaceholderText = "Procurar...";
             txtSearchMarcas.Size = new Size(260, 25);
-            txtSearchMarcas.TabIndex = 4;
+            txtSearchMarcas.TabIndex = 0;
             // 
             // dgvMarcas
             // 
@@ -61,6 +62,14 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMarcas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMarcas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvMarcas.DefaultCellStyle = dataGridViewCellStyle2;
             dgvMarcas.Location = new Point(20, 96);
             dgvMarcas.MultiSelect = false;
             dgvMarcas.Name = "dgvMarcas";
@@ -83,7 +92,7 @@
             btnAddMarca.Location = new Point(726, 48);
             btnAddMarca.Name = "btnAddMarca";
             btnAddMarca.Size = new Size(54, 42);
-            btnAddMarca.TabIndex = 7;
+            btnAddMarca.TabIndex = 2;
             btnAddMarca.Text = "➕";
             btnAddMarca.UseVisualStyleBackColor = false;
             btnAddMarca.Click += btnAddProduto_Click;
@@ -102,7 +111,7 @@
             btnRemMarca2.Location = new Point(659, 48);
             btnRemMarca2.Name = "btnRemMarca2";
             btnRemMarca2.Size = new Size(54, 42);
-            btnRemMarca2.TabIndex = 8;
+            btnRemMarca2.TabIndex = 1;
             btnRemMarca2.Text = "❌";
             btnRemMarca2.UseVisualStyleBackColor = false;
             btnRemMarca2.Click += btnRemMarca_Click;

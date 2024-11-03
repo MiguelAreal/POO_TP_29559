@@ -25,6 +25,11 @@ namespace poo_tp_29559.Models
         [DisplayName("Data de Criação")]
         public DateTime DataCriacao { get; set; }
 
+        // Construtor
+        public Categoria()
+        {
+            DataCriacao = DateTime.Now;
+        }
 
         // Método para verificar se a categoria pode ser eliminada
         // Só pode ser eliminada se a categoria não tiver em nenhum produto.

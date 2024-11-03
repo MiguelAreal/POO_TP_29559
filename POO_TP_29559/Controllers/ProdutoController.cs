@@ -49,9 +49,20 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
         _view.MostraProdutos(produtosComNomes);
     }
 
-    public void FiltrarProdutos(string filtro)
+    public void FiltrarProdutos(string filtro, string coluna)
     {
-        FiltrarItens(filtro, produto => produto.Nome != null && produto.Nome.ToLower().Contains(filtro.ToLower()));
+        FiltrarItens(filtro, produto =>
+        {
+            if (string.IsNullOrEmpty(coluna)) return false;
+
+            var prop = produto.GetType().GetProperty(coluna);
+            if (prop != null)
+            {
+                var value = prop.GetValue(produto)?.ToString() ?? string.Empty;
+                return value.Contains(filtro, StringComparison.OrdinalIgnoreCase);
+            }
+            return false;
+        });
     }
 
     public Produto GetById(int id)
@@ -73,6 +84,20 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
 
         _repository.Remove(item);
         CarregaItens();
+    }
+
+    public Dictionary<string, string> GetColumnPropertyMappings()
+    {
+        var mappings = new Dictionary<string, string>();
+
+        foreach (var prop in typeof(ProdutoViewModel).GetProperties())
+        {
+            var displayNameAttr = (DisplayNameAttribute?)Attribute.GetCustomAttribute(prop, typeof(DisplayNameAttribute));
+            string displayName = displayNameAttr != null ? displayNameAttr.DisplayName : prop.Name;
+            mappings[displayName] = prop.Name; // Map DisplayName to PropertyName
+        }
+
+        return mappings;
     }
 
 

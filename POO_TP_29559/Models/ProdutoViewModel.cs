@@ -26,5 +26,6 @@ namespace poo_tp_29559.Models
         public string? MarcaNome { get; set; }
         [DisplayName("Data de Adição")]
         public string? DataAdicao { get; set; }
+
     }
 }

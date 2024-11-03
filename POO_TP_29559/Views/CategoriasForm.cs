@@ -1,15 +1,7 @@
 ﻿using MetroFramework.Forms;
 using poo_tp_29559.Models;
+using poo_tp_29559.Repositories;
 using poo_tp_29559.Views;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace poo_tp_29559
 {
@@ -22,7 +14,7 @@ namespace poo_tp_29559
         {
             InitializeComponent();
 
-            _controller = new CategoriaController(this);
+            _controller = new CategoriaController(this, new ProdutoRepo());
         }
 
 
@@ -41,8 +33,50 @@ namespace poo_tp_29559
         }
 
 
+        private void dgvCategorias_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // Tenta obter a marca editada com base na linha e coluna alteradas
+            try
+            {
 
-        private void btnAddMarca_Click(object sender, EventArgs e)
+                Categoria categoriaAlterada = (Categoria)dgvCategorias.Rows[e.RowIndex].DataBoundItem;
+                _controller.UpdateItem(categoriaAlterada);
+            }
+            // Trata o caso em que a linha ou coluna não é válida
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Selecione uma célula válida para editar.");
+            }
+            // Trata o caso em que a conversão do valor não é válida
+            catch (InvalidCastException)
+            {
+                MessageBox.Show("Erro ao tentar atualizar a categoria. Verifique os dados.");
+            }
+        }
+
+
+        private void btnRemCategoria_Click(object sender, EventArgs e)
+        {
+            // Tenta remover a categoria selecionada, através do índice da linha selecionada
+            try
+            {
+                int rowIndex = dgvCategorias.SelectedRows[0].Index;
+                Categoria categoriaSelecionada = (Categoria)dgvCategorias.Rows[rowIndex].DataBoundItem;
+                _controller.RemoveCategoria(categoriaSelecionada);
+            }
+            // Mensagem de erro se nenhuma categoria estiver selecionada
+            catch (IndexOutOfRangeException)
+            {
+                MessageBox.Show("Selecione uma categoria para remover.");
+            }
+            // Exibe uma mensagem de erro caso ocorra uma exceção diferente
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao remover a categoria: {ex.Message}");
+            }
+        }
+
+        private void btnAddCategoria_Click(object sender, EventArgs e)
         {
 
             // Abre form para adicionar nova categoria.

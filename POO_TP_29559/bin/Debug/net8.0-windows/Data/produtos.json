@@ -27,15 +27,6 @@
     "DataAdicao": "31/10/2024 14:30:32"
   },
   {
-    "Id": 4,
-    "Nome": "monitor",
-    "CategoriaID": 1,
-    "MarcaID": 1,
-    "Preco": 0,
-    "QuantidadeEmStock": 0,
-    "DataAdicao": "31/10/2024 14:34:00"
-  },
-  {
     "Id": 5,
     "Nome": "Tapete",
     "CategoriaID": 1,

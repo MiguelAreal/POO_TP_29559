@@ -5,6 +5,7 @@ using poo_tp_29559.Repositories;
 using poo_tp_29559.Views;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace poo_tp_29559
@@ -16,8 +17,7 @@ namespace poo_tp_29559
     public partial class ProdutosForm : MetroForm
     {
         private readonly ProdutoController _controller; // Controlador associado à interface
-        private List<Categoria> _categorias; // List of categories
-        private List<Marca> _marcas; // List of brands
+        public string _activeColumn;
 
 
         /// <summary>
@@ -29,44 +29,6 @@ namespace poo_tp_29559
             _controller = new ProdutoController(this, new CategoriaRepo(), new MarcaRepo());
         }
 
-        /*private void LoadCategoriasAndMarcas()
-        {
-            // Load categories and brands from your repository
-            _categorias = new CategoriaRepo().GetAll();
-            _marcas = new MarcaRepo().GetAll();
-            LoadCategoriasAndMarcas();
-
-        }*/
-
-        /// <summary>
-        /// Configura o DataGridView para usar ComboBox para Categoria e Marca.
-        /// </summary>
-        private void SetupDataGridView()
-        {
-            // Clear existing columns
-            dgvProdutos.Columns.Clear();
-
-            var categoriaColumn = new DataGridViewComboBoxColumn
-            {
-                HeaderText = "Categoria",
-                DataSource = _categorias,
-                DisplayMember = "Nome",
-                ValueMember = "Id",
-                DataPropertyName = "CategoriaNome"
-            };
-
-            var marcaColumn = new DataGridViewComboBoxColumn
-            {
-                HeaderText = "Marca",
-                DataSource = _marcas,
-                DisplayMember = "Nome",
-                ValueMember = "Id",
-                DataPropertyName = "MarcaNome"
-            };
-
-            dgvProdutos.Columns.Add(categoriaColumn);
-            dgvProdutos.Columns.Add(marcaColumn);
-        }
 
         /// <summary>
         /// Exibe a lista de produtos na DataGridView.
@@ -84,8 +46,6 @@ namespace poo_tp_29559
             // Hide ID columns
             dgvProdutos.Columns["Id"].Visible = false;
         }
-
-
 
 
         /// <summary>
@@ -118,8 +78,14 @@ namespace poo_tp_29559
         /// </summary>
         private void txtSearchProduto_TextChanged(object sender, EventArgs e)
         {
-            _controller.FiltrarProdutos(txtSearchProduto.Text);
+            string activeCollumn = GetActiveCollumn();
+            if (activeCollumn != string.Empty)
+            {
+
+                _controller.FiltrarProdutos(txtSearchProduto.Text, activeCollumn);
+            }
         }
+
 
         /// <summary>
         /// Evento acionado ao clicar no botão para adicionar um novo produto.
@@ -174,5 +140,26 @@ namespace poo_tp_29559
         {
             btnAddProduto.BackColor = Color.FromArgb(13, 170, 220);
         }
+
+        public string GetActiveCollumn()
+        {
+
+            if (dgvProdutos.CurrentCell != null)
+            {
+                string columnHeader = dgvProdutos.Columns[dgvProdutos.CurrentCell.ColumnIndex].HeaderText;
+
+                // Mapeia o displayName ao nome da propriedade real
+                var columnMappings = _controller.GetColumnPropertyMappings();
+                if (columnMappings.TryGetValue(columnHeader, out string propertyName))
+                {
+                    return propertyName;
+                }                
+            }
+
+            return _activeColumn;
+        }
+
+        
     }
 }
+

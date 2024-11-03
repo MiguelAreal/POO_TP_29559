@@ -45,7 +45,7 @@
             btnCancelar.Location = new Point(106, 409);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(102, 44);
-            btnCancelar.TabIndex = 29;
+            btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -56,7 +56,7 @@
             btnConfirmar.Location = new Point(214, 409);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(102, 44);
-            btnConfirmar.TabIndex = 28;
+            btnConfirmar.TabIndex = 4;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += btnConfirmar_Click;
@@ -99,7 +99,7 @@
             cmbPais.Location = new Point(103, 260);
             cmbPais.Name = "cmbPais";
             cmbPais.Size = new Size(202, 25);
-            cmbPais.TabIndex = 20;
+            cmbPais.TabIndex = 2;
             // 
             // txtNome
             // 
@@ -107,7 +107,7 @@
             txtNome.Location = new Point(103, 90);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(202, 25);
-            txtNome.TabIndex = 18;
+            txtNome.TabIndex = 0;
             // 
             // txtDescricao
             // 
@@ -116,7 +116,7 @@
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(202, 107);
-            txtDescricao.TabIndex = 30;
+            txtDescricao.TabIndex = 1;
             // 
             // AddMarcaForm
             // 
