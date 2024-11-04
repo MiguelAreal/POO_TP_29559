@@ -13,16 +13,16 @@ namespace poo_tp_29559.Views
     public partial class AddProdutoForm : MetroForm
     {
         private readonly ProdutoController _controller;
-        private readonly ProdutosForm _view;
+        private readonly ChildForm _view;
 
         // Parâmetro opcional
-        public AddProdutoForm(ProdutosForm view)
+        public AddProdutoForm(ChildForm view)
         {
             InitializeComponent();
             _view = view;
             var categoriaRepo = new CategoriaRepo();
             var marcaRepo = new MarcaRepo();
-            _controller = new ProdutoController(_view, categoriaRepo, marcaRepo);
+            _controller = new ProdutoController(_view);
         }
 
         private void AddProdutoForm_Load(object sender, EventArgs e)

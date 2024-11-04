@@ -11,14 +11,14 @@ namespace poo_tp_29559.Views
     public partial class AddMarcaForm : MetroForm
     {
         private readonly MarcaController _controller;
-        private readonly MarcasForm _view;
+        private readonly ChildForm _view;
 
-        public AddMarcaForm(MarcasForm view)
+        public AddMarcaForm(ChildForm view)
         {
             InitializeComponent();
             _view = view;
 
-            _controller = new MarcaController(_view, new ProdutoRepo());
+            _controller = new MarcaController(_view);
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

@@ -17,13 +17,13 @@ namespace poo_tp_29559.Views
     public partial class AddCategoriaForm : MetroForm
     {
         private readonly CategoriaController _controller;
-        private readonly CategoriasForm _view;
+        private readonly ChildForm _view;
 
-        public AddCategoriaForm(CategoriasForm view)
+        public AddCategoriaForm(ChildForm view)
         {
             InitializeComponent();
             _view = view;
-            _controller = new CategoriaController(_view, new ProdutoRepo());
+            //_controller = new CategoriaController(_view, new ProdutoRepo());
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using MetroFramework.Forms;
 using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;   
 using poo_tp_29559.Views;
+using poo_tp_29559.Repositories.Enumerators;
 
 namespace poo_tp_29559
 {
@@ -61,19 +62,20 @@ namespace poo_tp_29559
             switch (e.ClickedItem?.Text)
             {
                 case "Produtos":
-                    formFilho = new ProdutosForm();
+                    //formFilho = new ProdutosForm();
+                    formFilho = new ChildForm(FormTypes.Produtos);
                     break;
                 case "Categorias":
-                    formFilho = new CategoriasForm();
+                    //formFilho = new CategoriasForm();
+                    formFilho = new ChildForm(FormTypes.Categorias);
                     break;
                 case "Marcas":
-                    formFilho = new MarcasForm();
-                    break;
-                case "Vendas":
-                    formFilho = new VendasForm();
+                    //formFilho = new MarcasForm();
+                    formFilho = new ChildForm(FormTypes.Marcas);
                     break;
                 case "Clientes":
-                    formFilho = new ClientesForm();
+                    //formFilho = new ClientesForm();
+                    formFilho = new ChildForm(FormTypes.Clientes);
                     break;
                 default:
                     MessageBox.Show("Opção desconhecida");

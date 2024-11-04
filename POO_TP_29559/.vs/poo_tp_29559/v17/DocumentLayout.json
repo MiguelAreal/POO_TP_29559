@@ -3,60 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\interfaces\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\interfaces\\irepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\vendarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\vendarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\marcasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\marcasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\categoriasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\categoriasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\categoriasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\categoriasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\clientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\clientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\interfaces\\ientitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:interfaces\\ientitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\clientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\clientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\marcasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\marcasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\marcacontroller.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\marcacontroller.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\produtosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\produtosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addcategoriaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addcategoriaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\produtosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\produtosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\childform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\childform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\enumerators\\formtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\enumerators\\formtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,179 +95,234 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Venda.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Venda.cs",
-              "RelativeDocumentMoniker": "Models\\Venda.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Venda.cs",
-              "RelativeToolTip": "Models\\Venda.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAIAwwCIAAAALAAAAAAAAAA==",
+              "Title": "ChildForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
+              "RelativeDocumentMoniker": "Views\\ChildForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
+              "RelativeToolTip": "Views\\ChildForm.cs",
+              "ViewState": "AgIAAO0AAAAAAAAAAAAAAPUAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T10:37:32.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VendaRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\VendaRepo.cs",
-              "RelativeDocumentMoniker": "Repositories\\VendaRepo.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\VendaRepo.cs",
-              "RelativeToolTip": "Repositories\\VendaRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T10:19:47.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\Interfaces\\IRepo.cs",
-              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IRepo.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\Interfaces\\IRepo.cs",
-              "RelativeToolTip": "Repositories\\Interfaces\\IRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T10:10:30.319Z",
+              "WhenOpened": "2024-11-04T14:25:00.857Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "Controllers\\BaseController.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAADEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T23:00:00.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Marca.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Marca.cs",
+              "RelativeDocumentMoniker": "Models\\Marca.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Marca.cs",
+              "RelativeToolTip": "Models\\Marca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T14:26:35.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChildForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
+              "RelativeDocumentMoniker": "Views\\ChildForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs [Design]",
+              "RelativeToolTip": "Views\\ChildForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T21:51:54.17Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\CategoriaController.cs",
+              "RelativeToolTip": "Controllers\\CategoriaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T14:32:18.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEntityController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Interfaces\\IEntityController.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IEntityController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Interfaces\\IEntityController.cs",
+              "RelativeToolTip": "Interfaces\\IEntityController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T22:06:09.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T21:22:51.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T14:32:46.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MarcaController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\MarcaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MarcaController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\MarcaController.cs",
+              "RelativeToolTip": "Controllers\\MarcaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T13:50:08.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddCategoriaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCategoriaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddCategoriaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCategoriaForm.cs",
+              "RelativeToolTip": "Views\\AddCategoriaForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T21:53:45.128Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
               "RelativeDocumentMoniker": "Views\\MainForm.cs",
               "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
               "RelativeToolTip": "Views\\MainForm.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwE0AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAYwEEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:57:42.539Z",
+              "WhenOpened": "2024-11-04T14:27:09.381Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MarcasForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MarcasForm.cs",
-              "RelativeDocumentMoniker": "Views\\MarcasForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MarcasForm.cs [Design]",
-              "RelativeToolTip": "Views\\MarcasForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T23:03:22.312Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
               "RelativeDocumentMoniker": "Views\\MainForm.cs",
               "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs [Design]",
               "RelativeToolTip": "Views\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:57:41.282Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Controllers\\BaseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:56:40.404Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CategoriasForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\CategoriasForm.cs",
-              "RelativeDocumentMoniker": "Views\\CategoriasForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\CategoriasForm.cs",
-              "RelativeToolTip": "Views\\CategoriasForm.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwFcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:56:30.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoriasForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\CategoriasForm.cs",
-              "RelativeDocumentMoniker": "Views\\CategoriasForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\CategoriasForm.cs [Design]",
-              "RelativeToolTip": "Views\\CategoriasForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:56:29.285Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ClientesForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ClientesForm.cs",
-              "RelativeDocumentMoniker": "Views\\ClientesForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ClientesForm.cs",
-              "RelativeToolTip": "Views\\ClientesForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:56:26.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ClientesForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ClientesForm.cs",
-              "RelativeDocumentMoniker": "Views\\ClientesForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ClientesForm.cs [Design]",
-              "RelativeToolTip": "Views\\ClientesForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:56:25.534Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MarcasForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MarcasForm.cs",
-              "RelativeDocumentMoniker": "Views\\MarcasForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MarcasForm.cs",
-              "RelativeToolTip": "Views\\MarcasForm.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAYwGEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:56:15.709Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T14:27:56.399Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ProdutosForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ProdutosForm.cs",
-              "RelativeDocumentMoniker": "Views\\ProdutosForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ProdutosForm.cs",
-              "RelativeToolTip": "Views\\ProdutosForm.cs",
-              "ViewState": "AgIAAH4AAAAAAAAAAAAYwKUAAAAAAAAAAAAAAA==",
+              "Title": "ChildForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.Designer.cs",
+              "RelativeDocumentMoniker": "Views\\ChildForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.Designer.cs",
+              "RelativeToolTip": "Views\\ChildForm.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAtwBYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T08:55:24.504Z",
+              "WhenOpened": "2024-11-04T20:13:30.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ProdutosForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ProdutosForm.cs",
-              "RelativeDocumentMoniker": "Views\\ProdutosForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ProdutosForm.cs [Design]",
-              "RelativeToolTip": "Views\\ProdutosForm.cs [Design]",
+              "DocumentIndex": 14,
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Produto.cs",
+              "RelativeToolTip": "Models\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T23:02:22.807Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-04T14:26:22.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T16:32:35.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddProdutoForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddProdutoForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
+              "RelativeToolTip": "Views\\AddProdutoForm.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAtwBgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T14:27:32.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Categoria.cs",
+              "RelativeToolTip": "Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T13:46:24.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddMarcaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddMarcaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs",
+              "RelativeToolTip": "Views\\AddMarcaForm.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAtwBQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T14:03:20.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormTypes.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\Enumerators\\FormTypes.cs",
+              "RelativeDocumentMoniker": "Repositories\\Enumerators\\FormTypes.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\Enumerators\\FormTypes.cs",
+              "RelativeToolTip": "Repositories\\Enumerators\\FormTypes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T13:37:31.701Z"
             }
           ]
         }

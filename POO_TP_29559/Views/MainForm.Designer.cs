@@ -31,9 +31,9 @@
             msMainForm = new MenuStrip();
             produtosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
-            clientesToolStripMenuItem1 = new ToolStripMenuItem();
             marcasToolStripMenuItem = new ToolStripMenuItem();
             vendasToolStripMenuItem = new ToolStripMenuItem();
+            clientesToolStripMenuItem1 = new ToolStripMenuItem();
             campanhasToolStripMenuItem = new ToolStripMenuItem();
             panelContainer = new Panel();
             msMainForm.SuspendLayout();
@@ -63,12 +63,6 @@
             clientesToolStripMenuItem.Size = new Size(75, 20);
             clientesToolStripMenuItem.Text = "Categorias";
             // 
-            // clientesToolStripMenuItem1
-            // 
-            clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            clientesToolStripMenuItem1.Size = new Size(61, 20);
-            clientesToolStripMenuItem1.Text = "Clientes";
-            // 
             // marcasToolStripMenuItem
             // 
             marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
@@ -80,6 +74,12 @@
             vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
             vendasToolStripMenuItem.Size = new Size(56, 20);
             vendasToolStripMenuItem.Text = "Vendas";
+            // 
+            // clientesToolStripMenuItem1
+            // 
+            clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
+            clientesToolStripMenuItem1.Size = new Size(61, 20);
+            clientesToolStripMenuItem1.Text = "Clientes";
             // 
             // campanhasToolStripMenuItem
             // 

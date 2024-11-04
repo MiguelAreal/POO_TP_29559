@@ -17,7 +17,7 @@ public class Cliente : IIdentifiable
     public string? Nif { get; set; }
 
     [DisplayName("Data de Criação")]
-    public DateTime DataCriacao { get; set; }
+    public string? DataAdicao { get; set; }
 
     // Se NIF começar com '1', '2' ou '3', É cliente particular. Outrora, é Empresa.
     // Faz diferença no cálculo da garantia associada.
@@ -26,6 +26,6 @@ public class Cliente : IIdentifiable
     // Construtor
     public Cliente()
     {
-        DataCriacao = DateTime.Now;
+        DataAdicao = DateTime.Now.ToString();
     }
 }
