@@ -5,9 +5,11 @@ using poo_tp_29559.Repositories;
 using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
-public class ProdutoController : BaseController<Produto, ChildForm>, IController<Produto>
+public class ProdutoController : BaseController<Produto, ChildForm>, IEntityController
 {
+    private List<ProdutoViewModel> _produtosComNomes; // Hold the list of translated products
 
     public ProdutoController(ChildForm view)
         : base(view, "Data/produtos.json")
@@ -18,7 +20,7 @@ public class ProdutoController : BaseController<Produto, ChildForm>, IController
     protected override void ExibeItensNaView(List<Produto> produtos)
     {
         // Create a temporary list to hold translated products
-        var produtosComNomes = new List<ProdutoViewModel>();
+        _produtosComNomes = new List<ProdutoViewModel>();
 
         foreach (var produto in produtos)
         {
@@ -38,32 +40,11 @@ public class ProdutoController : BaseController<Produto, ChildForm>, IController
                 DataAdicao = produto.DataAdicao
             };
 
-            produtosComNomes.Add(produtoViewModel);
+            _produtosComNomes.Add(produtoViewModel);
         }
 
         // Pass the list of translated products to the view
-        _view.MostraItens(produtosComNomes);
-    }
-
-    public void FiltrarItens(string filtro, string coluna)
-    {
-        FiltrarItens(filtro, produto =>
-        {
-            if (string.IsNullOrEmpty(coluna)) return false;
-
-            var prop = produto.GetType().GetProperty(coluna);
-            if (prop != null)
-            {
-                var value = prop.GetValue(produto)?.ToString() ?? string.Empty;
-                return value.Contains(filtro, StringComparison.OrdinalIgnoreCase);
-            }
-            return false;
-        });
-    }
-
-    public Produto GetById(int id)
-    {
-        return _repository.GetById(id);
+        _view.MostraItens(_produtosComNomes);
     }
 
     protected override void RemoveItem(Produto item)
@@ -71,20 +52,27 @@ public class ProdutoController : BaseController<Produto, ChildForm>, IController
         _repository.Remove(item);
     }
 
-    // Mapeia DisplayName a PropertyName (Traduz)
-    public Dictionary<string, string> GetColumnPropertyMappings()
+    public new void FiltrarItens(string filtro, string coluna)
     {
-        var mappings = new Dictionary<string, string>();
-
-        foreach (var prop in typeof(ProdutoViewModel).GetProperties())
+        if (string.IsNullOrEmpty(coluna) || _produtosComNomes == null)
         {
-            var displayNameAttr = (DisplayNameAttribute?)Attribute.GetCustomAttribute(prop, typeof(DisplayNameAttribute));
-            string displayName = displayNameAttr != null ? displayNameAttr.DisplayName : prop.Name;
-            mappings[displayName] = prop.Name;
+            // Call base if no column is provided or no items to filter
+            return;
         }
 
-        return mappings;
+        // Filter the _produtosComNomes based on the provided filter
+        var itensFiltrados = _produtosComNomes.Where(vm =>
+        {
+            var prop = vm.GetType().GetProperty(coluna);
+            if (prop != null)
+            {
+                var value = prop.GetValue(vm)?.ToString() ?? string.Empty;
+                return value.Contains(filtro, StringComparison.OrdinalIgnoreCase);
+            }
+            return false;
+        }).ToList();
+
+        // Display the filtered list in the view
+        _view.MostraItens(itensFiltrados);
     }
-
-
 }

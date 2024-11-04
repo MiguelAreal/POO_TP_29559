@@ -93,16 +93,16 @@ namespace poo_tp_29559
         /// </summary>
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
-          /*  //Abre form para adicionar novo produto.
-            using (var addProdutoForm = new AddProdutoForm(this))
+           //Abre form para adicionar novo produto.
+           /* using (var addProdutoForm = new AddProdutoForm(this))
             {
                 addProdutoForm.ShowDialog();
 
             }
 
             //Recarrega itens após fechar janela de adição de produto.
-            _controller.CarregaItens();*/
-
+            _controller.CarregaItens();
+           */
 
         }
 
@@ -122,7 +122,7 @@ namespace poo_tp_29559
                 // Use the controller to get the actual `Produto` by ID
                 var produto = _controller.GetById(produtoSelecionado.Id); // Fetch `Produto` using its ID
 
-                _controller.DeleteItem(produto); // Call the controller's remove method
+                //_controller.DeleteItem(produto); // Call the controller's remove method
                 _controller.CarregaItens(); // Refresh the list after deletion
             }
             else

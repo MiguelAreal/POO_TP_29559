@@ -47,9 +47,9 @@
             dgvItens.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 14F);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(9, 171, 219);
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -57,9 +57,9 @@
             dgvItens.Cursor = Cursors.IBeam;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
             dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(9, 171, 219);
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvItens.DefaultCellStyle = dataGridViewCellStyle2;
@@ -70,7 +70,7 @@
             dataGridViewCellStyle3.BackColor = SystemColors.Control;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
             dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(9, 171, 219);
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             dgvItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -78,6 +78,7 @@
             dgvItens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvItens.Size = new Size(760, 331);
             dgvItens.TabIndex = 3;
+            dgvItens.CurrentCellChanged += dgvItens_CurrentCellChanged;
             // 
             // txtSearchItem
             // 
@@ -87,6 +88,7 @@
             txtSearchItem.PlaceholderText = "Procurar...";
             txtSearchItem.Size = new Size(260, 25);
             txtSearchItem.TabIndex = 0;
+            txtSearchItem.TextChanged += txtSearchItem_TextChanged;
             // 
             // btnRemItem
             // 
@@ -106,6 +108,9 @@
             btnRemItem.TabIndex = 1;
             btnRemItem.Text = "🗑️";
             btnRemItem.UseVisualStyleBackColor = false;
+            btnRemItem.Click += btnRemItem_Click;
+            btnRemItem.MouseEnter += btnRemItem_MouseEnter;
+            btnRemItem.MouseLeave += btnRemItem_MouseLeave;
             // 
             // btnAddItem
             // 
@@ -120,11 +125,13 @@
             btnAddItem.ForeColor = Color.Black;
             btnAddItem.Location = new Point(737, 51);
             btnAddItem.Name = "btnAddItem";
-            btnAddItem.Padding = new Padding(2, 0, 0, 0);
-            btnAddItem.Size = new Size(36, 42);
+            btnAddItem.Size = new Size(40, 42);
             btnAddItem.TabIndex = 2;
             btnAddItem.Text = "🆕";
             btnAddItem.UseVisualStyleBackColor = false;
+            btnAddItem.Click += btnAddItem_Click;
+            btnAddItem.MouseEnter += btnAddItem_MouseEnter;
+            btnAddItem.MouseLeave += btnAddItem_MouseLeave;
             // 
             // ChildForm
             // 
@@ -132,10 +139,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
+            Controls.Add(dgvItens);
             Controls.Add(btnAddItem);
             Controls.Add(btnRemItem);
             Controls.Add(txtSearchItem);
-            Controls.Add(dgvItens);
             MaximizeBox = false;
             MinimizeBox = false;
             Movable = false;

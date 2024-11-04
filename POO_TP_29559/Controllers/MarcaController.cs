@@ -6,7 +6,7 @@ using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-public class MarcaController : BaseController<Marca, ChildForm>, IController<Marca>
+public class MarcaController : BaseController<Marca, ChildForm>, IEntityController
 {
     public MarcaController(ChildForm view) : base(view, "Data/marcas.json")
     {
@@ -16,11 +16,6 @@ public class MarcaController : BaseController<Marca, ChildForm>, IController<Mar
     protected override void ExibeItensNaView(List<Marca> marcas)
     {
         _view.MostraItens(marcas);
-    }
-
-    public void FiltrarItem(string filtro)
-    {
-        FiltrarItens(filtro, marca => marca.Nome != null && marca.Nome.ToLower().Contains(filtro.ToLower()));
     }
 
     //Verifica se a marca pode ser eliminada antes de o fazer.

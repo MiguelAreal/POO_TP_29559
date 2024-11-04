@@ -79,9 +79,9 @@ namespace poo_tp_29559
         private void btnAddCategoria_Click(object sender, EventArgs e)
         {
 
-            // Abre form para adicionar nova categoria.
+           /* // Abre form para adicionar nova categoria.
             var addCategoriaForm = new AddCategoriaForm(this);
-            addCategoriaForm.ShowDialog();
+            addCategoriaForm.ShowDialog();*/
         }
     }
 }
