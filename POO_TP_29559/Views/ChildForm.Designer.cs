@@ -78,6 +78,7 @@
             dgvItens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvItens.Size = new Size(760, 331);
             dgvItens.TabIndex = 3;
+            dgvItens.CellValueChanged += dgvItens_CellValueChanged;
             dgvItens.CurrentCellChanged += dgvItens_CurrentCellChanged;
             // 
             // txtSearchItem

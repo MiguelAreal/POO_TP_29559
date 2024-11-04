@@ -13,13 +13,7 @@
     <Compile Update="Views\ChildForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\ClientesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Views\MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Views\MarcasForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

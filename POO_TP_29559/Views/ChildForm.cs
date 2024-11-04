@@ -2,7 +2,7 @@
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories.Enumerators;
 using System;
-using System.Drawing; // Make sure to include this for Color
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace poo_tp_29559.Views
@@ -10,7 +10,7 @@ namespace poo_tp_29559.Views
     public partial class ChildForm : MetroForm
     {
         private readonly IEntityController _controller;
-        private readonly FormTypes _formType; // Private for encapsulation
+        private readonly FormTypes _formType;//Encapsulação
         private string? _activeColumn;
         private int _previousColumnIndex = -1;
 
@@ -31,7 +31,7 @@ namespace poo_tp_29559.Views
                 FormTypes.Categorias => new CategoriaController(this),
                 FormTypes.Marcas => new MarcaController(this),
                 FormTypes.Clientes => new ClienteController(this),
-                _ => throw new ArgumentException("Unknown object type.")
+                _ => throw new ArgumentException("FormType desconhecido.")
             };
         }
 
@@ -86,7 +86,7 @@ namespace poo_tp_29559.Views
                 int currentColumnIndex = dgvItens.Columns[_activeColumn]?.Index ?? -1;
                 dgvItens.CurrentCell = currentColumnIndex >= 0 && currentColumnIndex < dgvItens.Columns.Count
                     ? dgvItens.Rows[0].Cells[currentColumnIndex]
-                    : dgvItens.Rows[0].Cells[0]; // Fallback to the first cell
+                    : dgvItens.Rows[0].Cells[0]; // Fallback para primeira célula
             }
         }
 
@@ -108,7 +108,7 @@ namespace poo_tp_29559.Views
         {
             Form addForm;
 
-            // Determine which form to open based on the current form type
+            //Determina form a abrir
             switch (_formType)
             {
                 case FormTypes.Produtos:
@@ -124,31 +124,31 @@ namespace poo_tp_29559.Views
                     addForm = new AddClienteForm(this);
                     break;*/
                 default:
-                    MessageBox.Show("Unknown form type.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Exit if the form type is unknown
+                    MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
             }
 
-            // Open the form as a dialog
+            // Abre form
             using (addForm)
             {
                 addForm.ShowDialog();
             }
 
-            // Reload items after the add form is closed
+            // Recarrega itens
             _controller.CarregaItens();
         }
 
         private void btnRemItem_Click(object sender, EventArgs e)
         {
-            // Check if any row is selected
+            // Vê se tem alguma linha selecionada
             if (dgvItens.SelectedRows.Count > 0)
             {
                 try
                 {
-                    // Get the selected row index
+                    // Busca índice
                     int rowIndex = dgvItens.SelectedRows[0].Index;
 
-                    // Get the selected item
+                    // Busca item selecionado pelo índice
                     var selectedItem = dgvItens.Rows[rowIndex].DataBoundItem;
 
                     switch (_formType)
@@ -156,49 +156,107 @@ namespace poo_tp_29559.Views
                         case FormTypes.Produtos:
                             if (selectedItem is ProdutoViewModel produtoSelecionado)
                             {
-                                var produto = _controller.GetById(produtoSelecionado.Id); // Fetch the actual Produto
-                                _controller.DeleteItem(produto); // Delete the item
+                                var produto = _controller.GetById(produtoSelecionado.Id);
+                                _controller.DeleteItem(produto);
                             }
                             break;
 
                         case FormTypes.Marcas:
                             if (selectedItem is Marca marcaSelecionada)
                             {
-                                _controller.DeleteItem(marcaSelecionada); // Delete the item
+                                _controller.DeleteItem(marcaSelecionada);
                             }
                             break;
 
                         case FormTypes.Categorias:
                             if (selectedItem is Categoria categoriaSelecionada)
                             {
-                                _controller.DeleteItem(categoriaSelecionada); // Delete the item
+                                _controller.DeleteItem(categoriaSelecionada);
                             }
                             break;
 
                         case FormTypes.Clientes:
                             if (selectedItem is Cliente clienteSelecionado)
                             {
-                                _controller.DeleteItem(clienteSelecionado); // Delete the item
+                                _controller.DeleteItem(clienteSelecionado);
                             }
                             break;
 
                         default:
-                            MessageBox.Show("Unknown form type.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return; // Exit if the form type is unknown
+                            MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
                     }
 
-                    // Refresh the list after deletion
+                    // Recarrega itens após eliminação
                     _controller.CarregaItens();
                 }
                 catch (Exception ex)
                 {
-                    // Display an error message if an exception occurs
-                    MessageBox.Show($"Error while removing item: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Erro enquanto removia item: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select an item to remove.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um item para remover.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dgvItens_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // Tenta obter o item editado com base na linha e coluna alteradas
+            try
+            {
+                // Certifica-se de que a linha e a coluna são válidas
+                if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.RowIndex < dgvItens.Rows.Count)
+                {
+                    var selectedItem = dgvItens.Rows[e.RowIndex].DataBoundItem;
+
+                    // Verifica o tipo de item e faz a conversão
+                    switch (_formType)
+                    {
+                        case FormTypes.Produtos:
+                            if (selectedItem is ProdutoViewModel produto)
+                            {
+                                //_controller.UpdateItem(produto);
+                            }
+                            break;
+
+                        case FormTypes.Marcas:
+                            if (selectedItem is Marca marca)
+                            {
+                                //_controller.UpdateItem(marca); 
+                            }
+                            break;
+
+                        case FormTypes.Categorias:
+                            if (selectedItem is Categoria categoria)
+                            {
+                                //_controller.UpdateItem(categoria);
+                            }
+                            break;
+
+                        case FormTypes.Clientes:
+                            if (selectedItem is Cliente cliente)
+                            {
+                                //_controller.UpdateItem(cliente);
+                            }
+                            break;
+
+                        default:
+                            MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return; 
+                    }
+                }
+            }
+            // Trata o caso em que a linha ou coluna não é válida
+            catch (ArgumentOutOfRangeException)
+            {
+                MessageBox.Show("Selecione uma célula válida para editar.");
+            }
+            // Trata o caso em que a conversão do valor não é válida
+            catch (InvalidCastException)
+            {
+                MessageBox.Show("Erro ao tentar atualizar o item. Verifique os dados.");
             }
         }
     }
