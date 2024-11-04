@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Linq;
-using poo_tp_29559.Repositories.Interfaces;
+using poo_tp_29559.Interfaces;
 
 
 // Interface para ter a certeza que as classes possuem um campo Id

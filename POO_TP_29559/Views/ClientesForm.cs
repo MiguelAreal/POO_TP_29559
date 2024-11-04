@@ -19,7 +19,7 @@ namespace poo_tp_29559.Views
         public ClientesForm()
         {
             InitializeComponent();
-            _controller = new ClienteController(this);
+            //_controller = new ClienteController(this);
         }
 
         public void MostraClientes(List<Cliente> clientes)

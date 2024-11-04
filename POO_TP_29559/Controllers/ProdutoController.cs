@@ -2,20 +2,16 @@
 using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
+using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-public class ProdutoController : BaseController<Produto, ProdutosForm>
+public class ProdutoController : BaseController<Produto, ChildForm>, IController<Produto>
 {
-    private readonly CategoriaRepo _categoriaRepo; // Repository for categories
-    private readonly MarcaRepo _marcaRepo; // Repository for brands
 
-    public ProdutoController(ProdutosForm view, CategoriaRepo categoriaRepo, MarcaRepo marcaRepo)
+    public ProdutoController(ChildForm view)
         : base(view, "Data/produtos.json")
     {
-
-        _categoriaRepo = categoriaRepo;
-        _marcaRepo = marcaRepo;
         Initialize();
     }
 
@@ -27,8 +23,8 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
         foreach (var produto in produtos)
         {
             // Translate IDs to names
-            Categoria? categoria = _categoriaRepo.GetById(produto.CategoriaID);
-            Marca? marca = _marcaRepo.GetById(produto.MarcaID);
+            Categoria? categoria = new CategoriaRepo().GetById(produto.CategoriaID);
+            Marca? marca = new MarcaRepo().GetById(produto.MarcaID);
 
             // Create a view model for the product with names instead of IDs
             var produtoViewModel = new ProdutoViewModel
@@ -46,10 +42,10 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
         }
 
         // Pass the list of translated products to the view
-        _view.MostraProdutos(produtosComNomes);
+        _view.MostraItens(produtosComNomes);
     }
 
-    public void FiltrarProdutos(string filtro, string coluna)
+    public void FiltrarItens(string filtro, string coluna)
     {
         FiltrarItens(filtro, produto =>
         {
@@ -70,22 +66,12 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
         return _repository.GetById(id);
     }
 
-
-
-    public void RemoveProduto(Produto item)
-    {
-        RemoveItem(item);
-    }
-
     protected override void RemoveItem(Produto item)
     {
-       /* if (item == null)
-            throw new ArgumentNullException(nameof(item), "Produto não pode ser nulo.");*/
-
         _repository.Remove(item);
-        CarregaItens();
     }
 
+    // Mapeia DisplayName a PropertyName (Traduz)
     public Dictionary<string, string> GetColumnPropertyMappings()
     {
         var mappings = new Dictionary<string, string>();
@@ -94,7 +80,7 @@ public class ProdutoController : BaseController<Produto, ProdutosForm>
         {
             var displayNameAttr = (DisplayNameAttribute?)Attribute.GetCustomAttribute(prop, typeof(DisplayNameAttribute));
             string displayName = displayNameAttr != null ? displayNameAttr.DisplayName : prop.Name;
-            mappings[displayName] = prop.Name; // Map DisplayName to PropertyName
+            mappings[displayName] = prop.Name;
         }
 
         return mappings;

@@ -26,7 +26,7 @@ namespace poo_tp_29559
         public ProdutosForm()
         {
             InitializeComponent();
-            _controller = new ProdutoController(this, new CategoriaRepo(), new MarcaRepo());
+            //_controller = new ProdutoController(this, new CategoriaRepo(), new MarcaRepo());
         }
 
 
@@ -82,7 +82,7 @@ namespace poo_tp_29559
             if (activeCollumn != string.Empty)
             {
 
-                _controller.FiltrarProdutos(txtSearchProduto.Text, activeCollumn);
+                _controller.FiltrarItens(txtSearchProduto.Text, activeCollumn);
             }
         }
 
@@ -93,7 +93,7 @@ namespace poo_tp_29559
         /// </summary>
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
-            //Abre form para adicionar novo produto.
+          /*  //Abre form para adicionar novo produto.
             using (var addProdutoForm = new AddProdutoForm(this))
             {
                 addProdutoForm.ShowDialog();
@@ -101,7 +101,7 @@ namespace poo_tp_29559
             }
 
             //Recarrega itens após fechar janela de adição de produto.
-            _controller.CarregaItens();
+            _controller.CarregaItens();*/
 
 
         }
@@ -122,7 +122,7 @@ namespace poo_tp_29559
                 // Use the controller to get the actual `Produto` by ID
                 var produto = _controller.GetById(produtoSelecionado.Id); // Fetch `Produto` using its ID
 
-                _controller.RemoveProduto(produto); // Call the controller's remove method
+                _controller.DeleteItem(produto); // Call the controller's remove method
                 _controller.CarregaItens(); // Refresh the list after deletion
             }
             else

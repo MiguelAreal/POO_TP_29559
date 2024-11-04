@@ -22,7 +22,7 @@ namespace poo_tp_29559.Views
         public MarcasForm()
         {
             InitializeComponent();
-            _controller = new MarcaController(this, new ProdutoRepo());
+           // _controller = new MarcaController(this, new ProdutoRepo());
         }
 
         public void MostraMarcas(List<Marca> marcas)
@@ -47,7 +47,7 @@ namespace poo_tp_29559.Views
             {
                 int rowIndex = dgvMarcas.SelectedRows[0].Index;
                 Marca produtoSelecionado = (Marca)dgvMarcas.Rows[rowIndex].DataBoundItem;
-                _controller.RemoveMarca(produtoSelecionado);
+                _controller.DeleteItem(produtoSelecionado);
             }
             // Mensagem de erro se nenhuma marca estiver selecionada
             catch (IndexOutOfRangeException)
@@ -70,7 +70,7 @@ namespace poo_tp_29559.Views
             {
 
                 Marca marcaAlterada = (Marca)dgvMarcas.Rows[e.RowIndex].DataBoundItem;
-                _controller.UpdateItem(marcaAlterada);
+                //_controller.UpdateItem(marcaAlterada);
             }
             // Trata o caso em que a linha ou coluna não é válida
             catch (ArgumentOutOfRangeException)
@@ -88,8 +88,8 @@ namespace poo_tp_29559.Views
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
             // Abre form para adicionar nova categoria.
-            var addMarcaForm = new AddMarcaForm(this);
-            addMarcaForm.ShowDialog();
+            /*var addMarcaForm = new AddMarcaForm(this);
+            addMarcaForm.ShowDialog();*/
         }
 
         

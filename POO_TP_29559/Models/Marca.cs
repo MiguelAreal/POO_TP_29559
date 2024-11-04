@@ -1,4 +1,4 @@
-﻿using poo_tp_29559.Repositories.Interfaces;
+﻿using poo_tp_29559.Interfaces;
 using System.ComponentModel;
 
 public class Marca : IIdentifiable

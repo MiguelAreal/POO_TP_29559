@@ -6,9 +6,9 @@ using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.ComponentModel;
 
-public class ClienteController : BaseController<Cliente, ClientesForm>
+public class ClienteController : BaseController<Cliente, ChildForm>, IController<Cliente>
 {
-    public ClienteController(ClientesForm view)
+    public ClienteController(ChildForm view)
         : base(view, "Data/clientes.json")
     {
         Initialize();
@@ -16,7 +16,7 @@ public class ClienteController : BaseController<Cliente, ClientesForm>
 
     protected override void ExibeItensNaView(List<Cliente> clientes)
     {
-        _view.MostraClientes(clientes);
+        _view.MostraItens(clientes);
     }
 
 
@@ -26,18 +26,9 @@ public class ClienteController : BaseController<Cliente, ClientesForm>
     }
 
 
-    public void RemoveCliente(Cliente item)
-    {
-        RemoveItem(item);
-    }
-
     protected override void RemoveItem(Cliente item)
     {
-       /* if (item == null)
-            throw new ArgumentNullException(nameof(item), "Produto não pode ser nulo.");*/
-
         _repository.Remove(item);
-        CarregaItens();
     }
 
 

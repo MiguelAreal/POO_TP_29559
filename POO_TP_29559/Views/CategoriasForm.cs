@@ -14,7 +14,7 @@ namespace poo_tp_29559
         {
             InitializeComponent();
 
-            _controller = new CategoriaController(this, new ProdutoRepo());
+            //_controller = new CategoriaController(this, new ProdutoRepo());
         }
 
 
@@ -40,7 +40,7 @@ namespace poo_tp_29559
             {
 
                 Categoria categoriaAlterada = (Categoria)dgvCategorias.Rows[e.RowIndex].DataBoundItem;
-                _controller.UpdateItem(categoriaAlterada);
+                //_controller.UpdateItem(categoriaAlterada);
             }
             // Trata o caso em que a linha ou coluna não é válida
             catch (ArgumentOutOfRangeException)
@@ -62,7 +62,7 @@ namespace poo_tp_29559
             {
                 int rowIndex = dgvCategorias.SelectedRows[0].Index;
                 Categoria categoriaSelecionada = (Categoria)dgvCategorias.Rows[rowIndex].DataBoundItem;
-                _controller.RemoveCategoria(categoriaSelecionada);
+                //_controller.RemoveCategoria(categoriaSelecionada);
             }
             // Mensagem de erro se nenhuma categoria estiver selecionada
             catch (IndexOutOfRangeException)

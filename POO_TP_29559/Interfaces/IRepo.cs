@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace poo_tp_29559.Repositories.Interfaces
+namespace poo_tp_29559.Interfaces
 {
     public interface IRepo<T> where T : class
     {
