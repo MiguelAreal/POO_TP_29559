@@ -1,14 +1,9 @@
 ﻿using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
+using poo_tp_29559.Repositories.Enumerators;
 using System.ComponentModel;
 
-// Métodos de pagamento fixos.
-public enum MetodoPagamento
-{
-    Debito,
-    Credito,
-    Numerario
-}
+
 
 public class Venda : IIdentifiable
 {
