@@ -17,13 +17,13 @@ namespace poo_tp_29559.Models
         public string? Nome { get; set; }
 
         [DisplayName("Percentagem de Desconto")]
-        public string? PercentagemDesc { get; set; }
+        public decimal? PercentagemDesc { get; set; }
 
         [DisplayName("Data de Inicio")]
-        public DateTime DataInicio { get; set; }
+        public string? DataInicio { get; set; }
 
         [DisplayName("Data de Fim")]
-        public DateTime DataFim { get; set; }
+        public string? DataFim { get; set; }
 
         // Associa a Campanha a uma Categoria Específica
         [DisplayName("Categoria Aplicada")]

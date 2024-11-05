@@ -3,6 +3,7 @@ using poo_tp_29559.Models;
 using poo_tp_29559.Repositories.Enumerators;
 using System;
 using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
 
 namespace poo_tp_29559.Views
@@ -20,7 +21,32 @@ namespace poo_tp_29559.Views
             _formType = formType;
             _controller = CreateController();
             _controller.Initialize();
+
+            changeSettings(formType);
             Text = _formType.ToString();
+        }
+
+        public void changeSettings(FormTypes formType)
+        {
+            switch (formType)
+            {
+                case FormTypes.Produtos:
+                    break;
+                case FormTypes.Categorias:
+                    break;
+                case FormTypes.Marcas:
+                    break;
+                case FormTypes.Vendas:
+                    btnAddItem.Text = "$";
+                    break;
+                case FormTypes.Clientes:
+                    btnAddItem.Text = "👤";
+                    break;
+                case FormTypes.Campanhas:
+                    break;
+                default:
+                    break;
+            }
         }
 
         private IEntityController CreateController()
@@ -31,6 +57,7 @@ namespace poo_tp_29559.Views
                 FormTypes.Categorias => new CategoriaController(this),
                 FormTypes.Marcas => new MarcaController(this),
                 FormTypes.Clientes => new ClienteController(this),
+                FormTypes.Campanhas => new CampanhaController(this),
                 _ => throw new ArgumentException("FormType desconhecido.")
             };
         }
@@ -120,9 +147,9 @@ namespace poo_tp_29559.Views
                 case FormTypes.Marcas:
                     addForm = new AddMarcaForm(this);
                     break;
-                /*case FormTypes.Clientes:
+                case FormTypes.Clientes:
                     addForm = new AddClienteForm(this);
-                    break;*/
+                    break;
                 default:
                     MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -179,6 +206,12 @@ namespace poo_tp_29559.Views
                             if (selectedItem is Cliente clienteSelecionado)
                             {
                                 _controller.DeleteItem(clienteSelecionado);
+                            }
+                            break;
+                        case FormTypes.Campanhas:
+                            if (selectedItem is Campanha campanhaSelecionada)
+                            {
+                                _controller.DeleteItem(campanhaSelecionada);
                             }
                             break;
 

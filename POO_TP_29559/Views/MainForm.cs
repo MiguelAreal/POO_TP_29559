@@ -62,24 +62,23 @@ namespace poo_tp_29559
             switch (e.ClickedItem?.Text)
             {
                 case "Produtos":
-                    //formFilho = new ProdutosForm();
                     formFilho = new ChildForm(FormTypes.Produtos);
                     break;
                 case "Categorias":
-                    //formFilho = new CategoriasForm();
                     formFilho = new ChildForm(FormTypes.Categorias);
                     break;
                 case "Marcas":
-                    //formFilho = new MarcasForm();
                     formFilho = new ChildForm(FormTypes.Marcas);
                     break;
                 case "Clientes":
-                    //formFilho = new ClientesForm();
                     formFilho = new ChildForm(FormTypes.Clientes);
+                    break;
+                case "Campanhas":
+                    formFilho = new ChildForm(FormTypes.Campanhas);
                     break;
                 default:
                     MessageBox.Show("Opção desconhecida");
-                    return; // Sai do método
+                    return;
             }
 
             // Abre-o no painel

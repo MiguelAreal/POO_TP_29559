@@ -13,7 +13,7 @@ public class Marca : IIdentifiable
     public string? Descricao { get; set; }
 
     [DisplayName("Data de Criação")]
-    public DateTime DataCriacao { get; set; }
+    public string? DataCriacao { get; set; }
 
     [DisplayName("País de Origem")]
     public string? PaisOrigem { get; set; }
@@ -21,7 +21,7 @@ public class Marca : IIdentifiable
     // Construtor
     public Marca()
     {
-        DataCriacao = DateTime.Now;
+        DataCriacao = DateTime.Now.ToString();
     }
 
     // Método para verificar se a marca pode ser eliminada

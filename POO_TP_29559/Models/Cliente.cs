@@ -16,6 +16,9 @@ public class Cliente : IIdentifiable
     [DisplayName("NIF")]
     public string? Nif { get; set; }
 
+    [DisplayName("Data de Nascimento")]
+    public string? DataNasc { get; set; }
+
     [DisplayName("Data de Criação")]
     public string? DataAdicao { get; set; }
 

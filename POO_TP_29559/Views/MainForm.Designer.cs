@@ -36,7 +36,10 @@
             clientesToolStripMenuItem1 = new ToolStripMenuItem();
             campanhasToolStripMenuItem = new ToolStripMenuItem();
             panelContainer = new Panel();
+            picBg = new PictureBox();
             msMainForm.SuspendLayout();
+            panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picBg).BeginInit();
             SuspendLayout();
             // 
             // msMainForm
@@ -89,16 +92,29 @@
             // 
             // panelContainer
             // 
+            panelContainer.BackColor = Color.Transparent;
+            panelContainer.Controls.Add(picBg);
             panelContainer.Dock = DockStyle.Fill;
             panelContainer.Location = new Point(20, 84);
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(960, 546);
             panelContainer.TabIndex = 1;
             // 
+            // picBg
+            // 
+            picBg.BackColor = Color.Transparent;
+            picBg.Image = Properties.Resources.business_handshake__2_;
+            picBg.Location = new Point(324, 143);
+            picBg.Name = "picBg";
+            picBg.Size = new Size(260, 229);
+            picBg.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBg.TabIndex = 0;
+            picBg.TabStop = false;
+            // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleDimensions = new SizeF(96F, 96F);
+            AutoScaleMode = AutoScaleMode.Dpi;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(1000, 650);
             Controls.Add(panelContainer);
@@ -112,6 +128,8 @@
             Load += Form1_Load;
             msMainForm.ResumeLayout(false);
             msMainForm.PerformLayout();
+            panelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picBg).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -126,5 +144,6 @@
         private ToolStripMenuItem vendasToolStripMenuItem;
         private ToolStripMenuItem campanhasToolStripMenuItem;
         private Panel panelContainer;
+        private PictureBox picBg;
     }
 }

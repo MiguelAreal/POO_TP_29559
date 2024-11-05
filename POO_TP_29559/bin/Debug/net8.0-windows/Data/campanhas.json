@@ -1,0 +1,10 @@
+[
+  {
+    "Id": 1,
+    "Nome": "Sony",
+    "PercentagemDesc":50,
+    "DataInicio": "2024-10-31 14:42:37",
+    "DataFim": "2024-11-01 14:42:37",
+    "CategoriaId": 1
+  }
+]

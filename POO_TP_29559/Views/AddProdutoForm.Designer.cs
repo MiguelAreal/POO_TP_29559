@@ -28,39 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtNome = new TextBox();
-            cmbCategoria = new ComboBox();
             cmbMarca = new ComboBox();
             nudPreco = new NumericUpDown();
-            lblNome = new Label();
-            lblCategoria = new Label();
-            lblMarca = new Label();
             lblPreco = new Label();
             lblStock = new Label();
             nudStock = new NumericUpDown();
             btnConfirmar = new Button();
             btnCancelar = new Button();
+            lblNome = new Label();
+            cmbCategoria = new ComboBox();
+            lblCategoria = new Label();
+            txtNome = new TextBox();
+            lblMarca = new Label();
             ((System.ComponentModel.ISupportInitialize)nudPreco).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudStock).BeginInit();
             SuspendLayout();
-            // 
-            // txtNome
-            // 
-            txtNome.Font = new Font("Segoe UI", 10F);
-            txtNome.Location = new Point(102, 90);
-            txtNome.Name = "txtNome";
-            txtNome.Size = new Size(202, 25);
-            txtNome.TabIndex = 0;
-            // 
-            // cmbCategoria
-            // 
-            cmbCategoria.FlatStyle = FlatStyle.System;
-            cmbCategoria.Font = new Font("Segoe UI", 10F);
-            cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(102, 135);
-            cmbCategoria.Name = "cmbCategoria";
-            cmbCategoria.Size = new Size(202, 25);
-            cmbCategoria.TabIndex = 3;
             // 
             // cmbMarca
             // 
@@ -70,7 +52,7 @@
             cmbMarca.Location = new Point(102, 180);
             cmbMarca.Name = "cmbMarca";
             cmbMarca.Size = new Size(202, 25);
-            cmbMarca.TabIndex = 4;
+            cmbMarca.TabIndex = 2;
             // 
             // nudPreco
             // 
@@ -79,38 +61,8 @@
             nudPreco.Location = new Point(102, 225);
             nudPreco.Name = "nudPreco";
             nudPreco.Size = new Size(202, 25);
-            nudPreco.TabIndex = 5;
+            nudPreco.TabIndex = 3;
             nudPreco.ThousandsSeparator = true;
-            // 
-            // lblNome
-            // 
-            lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(51, 94);
-            lblNome.Name = "lblNome";
-            lblNome.Size = new Size(46, 19);
-            lblNome.TabIndex = 8;
-            lblNome.Text = "Nome";
-            // 
-            // lblCategoria
-            // 
-            lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Segoe UI", 10F);
-            lblCategoria.Location = new Point(29, 138);
-            lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(68, 19);
-            lblCategoria.TabIndex = 9;
-            lblCategoria.Text = "Categoria";
-            // 
-            // lblMarca
-            // 
-            lblMarca.AutoSize = true;
-            lblMarca.Font = new Font("Segoe UI", 10F);
-            lblMarca.Location = new Point(50, 183);
-            lblMarca.Name = "lblMarca";
-            lblMarca.Size = new Size(47, 19);
-            lblMarca.TabIndex = 10;
-            lblMarca.Text = "Marca";
             // 
             // lblPreco
             // 
@@ -138,7 +90,7 @@
             nudStock.Location = new Point(102, 270);
             nudStock.Name = "nudStock";
             nudStock.Size = new Size(202, 25);
-            nudStock.TabIndex = 14;
+            nudStock.TabIndex = 4;
             nudStock.ThousandsSeparator = true;
             // 
             // btnConfirmar
@@ -148,7 +100,7 @@
             btnConfirmar.Location = new Point(214, 409);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(102, 44);
-            btnConfirmar.TabIndex = 16;
+            btnConfirmar.TabIndex = 6;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += btnConfirmar_Click;
@@ -160,9 +112,57 @@
             btnCancelar.Location = new Point(106, 409);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(102, 44);
-            btnCancelar.TabIndex = 17;
+            btnCancelar.TabIndex = 5;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // lblNome
+            // 
+            lblNome.AutoSize = true;
+            lblNome.Font = new Font("Segoe UI", 10F);
+            lblNome.Location = new Point(51, 94);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(46, 19);
+            lblNome.TabIndex = 8;
+            lblNome.Text = "Nome";
+            // 
+            // cmbCategoria
+            // 
+            cmbCategoria.FlatStyle = FlatStyle.System;
+            cmbCategoria.Font = new Font("Segoe UI", 10F);
+            cmbCategoria.FormattingEnabled = true;
+            cmbCategoria.Location = new Point(102, 135);
+            cmbCategoria.Name = "cmbCategoria";
+            cmbCategoria.Size = new Size(202, 25);
+            cmbCategoria.TabIndex = 1;
+            // 
+            // lblCategoria
+            // 
+            lblCategoria.AutoSize = true;
+            lblCategoria.Font = new Font("Segoe UI", 10F);
+            lblCategoria.Location = new Point(29, 138);
+            lblCategoria.Name = "lblCategoria";
+            lblCategoria.Size = new Size(68, 19);
+            lblCategoria.TabIndex = 9;
+            lblCategoria.Text = "Categoria";
+            // 
+            // txtNome
+            // 
+            txtNome.Font = new Font("Segoe UI", 10F);
+            txtNome.Location = new Point(102, 90);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(202, 25);
+            txtNome.TabIndex = 0;
+            // 
+            // lblMarca
+            // 
+            lblMarca.AutoSize = true;
+            lblMarca.Font = new Font("Segoe UI", 10F);
+            lblMarca.Location = new Point(50, 183);
+            lblMarca.Name = "lblMarca";
+            lblMarca.Size = new Size(47, 19);
+            lblMarca.TabIndex = 10;
+            lblMarca.Text = "Marca";
             // 
             // AddProdutoForm
             // 
@@ -198,18 +198,17 @@
         }
 
         #endregion
-
-        private TextBox txtNome;
-        private ComboBox cmbCategoria;
         private ComboBox cmbMarca;
         private NumericUpDown nudPreco;
-        private Label lblNome;
-        private Label lblCategoria;
-        private Label lblMarca;
         private Label lblPreco;
         private Label lblStock;
         private NumericUpDown nudStock;
         private Button btnConfirmar;
         private Button btnCancelar;
+        private Label lblNome;
+        private ComboBox cmbCategoria;
+        private Label lblCategoria;
+        private TextBox txtNome;
+        private Label lblMarca;
     }
 }
