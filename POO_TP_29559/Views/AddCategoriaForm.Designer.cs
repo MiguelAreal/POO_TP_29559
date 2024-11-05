@@ -39,10 +39,10 @@
             // txtDescricao
             // 
             txtDescricao.Font = new Font("Segoe UI", 10F);
-            txtDescricao.Location = new Point(103, 135);
+            txtDescricao.Location = new Point(31, 166);
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(202, 107);
+            txtDescricao.Size = new Size(285, 107);
             txtDescricao.TabIndex = 1;
             // 
             // btnCancelar
@@ -72,7 +72,7 @@
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Segoe UI", 10F);
-            lblDescricao.Location = new Point(31, 138);
+            lblDescricao.Location = new Point(31, 144);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(67, 19);
             lblDescricao.TabIndex = 34;
@@ -82,7 +82,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(52, 94);
+            lblNome.Location = new Point(31, 82);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(46, 19);
             lblNome.TabIndex = 33;
@@ -91,10 +91,10 @@
             // txtNome
             // 
             txtNome.Font = new Font("Segoe UI", 10F);
-            txtNome.Location = new Point(103, 90);
+            txtNome.Location = new Point(31, 104);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(202, 25);
-            txtNome.TabIndex = 0;
+            txtNome.Size = new Size(285, 25);
+            txtNome.TabIndex = 31;
             // 
             // AddCategoriaForm
             // 

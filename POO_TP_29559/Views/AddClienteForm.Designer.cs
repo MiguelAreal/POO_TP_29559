@@ -47,18 +47,19 @@
             // 
             btnCancelar.Cursor = Cursors.Hand;
             btnCancelar.Font = new Font("Segoe UI", 11F);
-            btnCancelar.Location = new Point(106, 396);
+            btnCancelar.Location = new Point(106, 411);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(102, 44);
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnConfirmar
             // 
             btnConfirmar.Cursor = Cursors.Hand;
             btnConfirmar.Font = new Font("Segoe UI", 11F);
-            btnConfirmar.Location = new Point(214, 396);
+            btnConfirmar.Location = new Point(214, 411);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(102, 44);
             btnConfirmar.TabIndex = 7;
@@ -70,7 +71,7 @@
             // 
             lblNIF.AutoSize = true;
             lblNIF.Font = new Font("Segoe UI", 10F);
-            lblNIF.Location = new Point(73, 294);
+            lblNIF.Location = new Point(24, 327);
             lblNIF.Name = "lblNIF";
             lblNIF.Size = new Size(30, 19);
             lblNIF.TabIndex = 24;
@@ -80,17 +81,17 @@
             // 
             lblDataNasc.AutoSize = true;
             lblDataNasc.Font = new Font("Segoe UI", 10F);
-            lblDataNasc.Location = new Point(10, 248);
+            lblDataNasc.Location = new Point(24, 268);
             lblDataNasc.Name = "lblDataNasc";
-            lblDataNasc.Size = new Size(93, 19);
+            lblDataNasc.Size = new Size(133, 19);
             lblDataNasc.TabIndex = 23;
-            lblDataNasc.Text = "Data de Nasc.";
+            lblDataNasc.Text = "Data de Nascimento";
             // 
             // lblMorada
             // 
             lblMorada.AutoSize = true;
             lblMorada.Font = new Font("Segoe UI", 10F);
-            lblMorada.Location = new Point(38, 183);
+            lblMorada.Location = new Point(23, 183);
             lblMorada.Name = "lblMorada";
             lblMorada.Size = new Size(65, 19);
             lblMorada.TabIndex = 22;
@@ -100,7 +101,7 @@
             // 
             lblContacto.AutoSize = true;
             lblContacto.Font = new Font("Segoe UI", 10F);
-            lblContacto.Location = new Point(38, 141);
+            lblContacto.Location = new Point(24, 119);
             lblContacto.Name = "lblContacto";
             lblContacto.Size = new Size(65, 19);
             lblContacto.TabIndex = 21;
@@ -110,7 +111,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(57, 96);
+            lblNome.Location = new Point(23, 65);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(46, 19);
             lblNome.TabIndex = 20;
@@ -119,55 +120,55 @@
             // txtNome
             // 
             txtNome.Font = new Font("Segoe UI", 10F);
-            txtNome.Location = new Point(109, 90);
+            txtNome.Location = new Point(23, 87);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(202, 25);
+            txtNome.Size = new Size(293, 25);
             txtNome.TabIndex = 0;
             // 
             // txtContacto
             // 
             txtContacto.Font = new Font("Segoe UI", 10F);
-            txtContacto.Location = new Point(156, 135);
+            txtContacto.Location = new Point(73, 141);
             txtContacto.MaxLength = 9;
             txtContacto.Name = "txtContacto";
-            txtContacto.Size = new Size(155, 25);
+            txtContacto.Size = new Size(243, 25);
             txtContacto.TabIndex = 2;
             // 
             // txtNIF
             // 
             txtNIF.Font = new Font("Segoe UI", 10F);
-            txtNIF.Location = new Point(110, 291);
+            txtNIF.Location = new Point(24, 349);
             txtNIF.MaxLength = 9;
             txtNIF.Name = "txtNIF";
-            txtNIF.Size = new Size(202, 25);
+            txtNIF.Size = new Size(292, 25);
             txtNIF.TabIndex = 5;
             // 
             // dtpNasc
             // 
             dtpNasc.CalendarTitleBackColor = Color.DodgerBlue;
-            dtpNasc.Location = new Point(110, 248);
+            dtpNasc.Location = new Point(24, 290);
             dtpNasc.Name = "dtpNasc";
             dtpNasc.RightToLeft = RightToLeft.No;
             dtpNasc.ShowCheckBox = true;
-            dtpNasc.Size = new Size(203, 23);
+            dtpNasc.Size = new Size(292, 23);
             dtpNasc.TabIndex = 4;
             // 
             // txtMorada
             // 
             txtMorada.Font = new Font("Segoe UI", 10F);
-            txtMorada.Location = new Point(109, 183);
+            txtMorada.Location = new Point(23, 205);
             txtMorada.Multiline = true;
             txtMorada.Name = "txtMorada";
-            txtMorada.Size = new Size(202, 46);
+            txtMorada.Size = new Size(293, 46);
             txtMorada.TabIndex = 3;
             // 
             // txtContacto1
             // 
             txtContacto1.Font = new Font("Segoe UI", 10F);
-            txtContacto1.Location = new Point(109, 135);
+            txtContacto1.Location = new Point(23, 141);
             txtContacto1.MaxLength = 4;
             txtContacto1.Name = "txtContacto1";
-            txtContacto1.Size = new Size(41, 25);
+            txtContacto1.Size = new Size(44, 25);
             txtContacto1.TabIndex = 1;
             txtContacto1.Text = "+351";
             // 
@@ -177,7 +178,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             CancelButton = btnCancelar;
-            ClientSize = new Size(339, 463);
+            ClientSize = new Size(339, 478);
             Controls.Add(txtContacto1);
             Controls.Add(txtMorada);
             Controls.Add(dtpNasc);

@@ -150,6 +150,9 @@ namespace poo_tp_29559.Views
                 case FormTypes.Clientes:
                     addForm = new AddClienteForm(this);
                     break;
+                case FormTypes.Campanhas:
+                    addForm = new AddCampanhaForm(this);
+                    break;
                 default:
                     MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -209,9 +212,10 @@ namespace poo_tp_29559.Views
                             }
                             break;
                         case FormTypes.Campanhas:
-                            if (selectedItem is Campanha campanhaSelecionada)
+                            if (selectedItem is CampanhaViewModel campanhaSelecionada)
                             {
-                                _controller.DeleteItem(campanhaSelecionada);
+                                var campanha = _controller.GetById(campanhaSelecionada.Id);
+                                _controller.DeleteItem(campanha);
                             }
                             break;
 

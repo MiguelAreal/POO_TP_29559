@@ -43,9 +43,7 @@ namespace poo_tp_29559.Views
             {
                 cmbMarca.DataSource = marcas;
                 cmbMarca.DisplayMember = "Nome";
-                cmbMarca.ValueMember = "Id"; // Armazena a referência correta
-                cmbMarca.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cmbMarca.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cmbMarca.ValueMember = "Id";
             }
         }
 
@@ -61,9 +59,7 @@ namespace poo_tp_29559.Views
             {
                 cmbCategoria.DataSource = categorias;
                 cmbCategoria.DisplayMember = "Nome";
-                cmbCategoria.ValueMember = "Id"; // Armazena a referência correta
-                cmbCategoria.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                cmbCategoria.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cmbCategoria.ValueMember = "Id";
             }
         }
 
@@ -89,6 +85,5 @@ namespace poo_tp_29559.Views
             _controller.AddItem(novoProduto);
             this.Close();
         }
-
     }
 }

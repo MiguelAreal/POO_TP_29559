@@ -29,8 +29,8 @@ namespace poo_tp_29559.Views
         {
             bool allValid = false;
 
-            Control[] controls = { txtNome, txtContacto1,txtMorada,txtNIF};
-            Label[] labels = { lblNome, lblContacto,lblMorada,lblNIF };
+            Control[] controls = { txtNome, txtContacto1, txtMorada, txtNIF };
+            Label[] labels = { lblNome, lblContacto, lblMorada, lblNIF };
 
             //Valida campos vazios
             allValid = FieldValidator.ValidateFields(controls, labels);
@@ -49,8 +49,8 @@ namespace poo_tp_29559.Views
                 return;
             }
 
-            
-            
+
+
             var novoCliente = new Cliente
             {
                 Nome = txtNome.Text,
@@ -66,7 +66,12 @@ namespace poo_tp_29559.Views
             _controller.CarregaItens();
 
             this.Close();
-            
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

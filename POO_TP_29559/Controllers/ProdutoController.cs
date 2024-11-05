@@ -51,28 +51,4 @@ public class ProdutoController : BaseController<Produto, ChildForm>, IEntityCont
     {
         _repository.Remove(item);
     }
-
-    public new void FiltrarItens(string filtro, string coluna)
-    {
-        if (string.IsNullOrEmpty(coluna) || _produtosComNomes == null)
-        {
-            // Call base if no column is provided or no items to filter
-            return;
-        }
-
-        // Filter the _produtosComNomes based on the provided filter
-        var itensFiltrados = _produtosComNomes.Where(vm =>
-        {
-            var prop = vm.GetType().GetProperty(coluna);
-            if (prop != null)
-            {
-                var value = prop.GetValue(vm)?.ToString() ?? string.Empty;
-                return value.Contains(filtro, StringComparison.OrdinalIgnoreCase);
-            }
-            return false;
-        }).ToList();
-
-        // Display the filtered list in the view
-        _view.MostraItens(itensFiltrados);
-    }
 }

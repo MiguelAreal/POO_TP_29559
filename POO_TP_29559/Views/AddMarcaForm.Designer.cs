@@ -65,7 +65,7 @@
             // 
             lblPais.AutoSize = true;
             lblPais.Font = new Font("Segoe UI", 10F);
-            lblPais.Location = new Point(65, 263);
+            lblPais.Location = new Point(23, 282);
             lblPais.Name = "lblPais";
             lblPais.Size = new Size(33, 19);
             lblPais.TabIndex = 24;
@@ -75,7 +75,7 @@
             // 
             lblDescricao.AutoSize = true;
             lblDescricao.Font = new Font("Segoe UI", 10F);
-            lblDescricao.Location = new Point(31, 138);
+            lblDescricao.Location = new Point(23, 135);
             lblDescricao.Name = "lblDescricao";
             lblDescricao.Size = new Size(67, 19);
             lblDescricao.TabIndex = 23;
@@ -85,7 +85,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(52, 94);
+            lblNome.Location = new Point(23, 69);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(46, 19);
             lblNome.TabIndex = 22;
@@ -96,27 +96,28 @@
             cmbPais.FlatStyle = FlatStyle.System;
             cmbPais.Font = new Font("Segoe UI", 10F);
             cmbPais.FormattingEnabled = true;
-            cmbPais.Location = new Point(103, 260);
+            cmbPais.Location = new Point(23, 304);
             cmbPais.Name = "cmbPais";
-            cmbPais.Size = new Size(202, 25);
+            cmbPais.Size = new Size(293, 25);
             cmbPais.TabIndex = 2;
             // 
             // txtNome
             // 
             txtNome.Font = new Font("Segoe UI", 10F);
-            txtNome.Location = new Point(103, 90);
+            txtNome.Location = new Point(23, 91);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(202, 25);
+            txtNome.Size = new Size(293, 25);
             txtNome.TabIndex = 0;
             // 
             // txtDescricao
             // 
             txtDescricao.Font = new Font("Segoe UI", 10F);
-            txtDescricao.Location = new Point(103, 135);
+            txtDescricao.Location = new Point(23, 157);
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
-            txtDescricao.Size = new Size(202, 107);
+            txtDescricao.Size = new Size(293, 107);
             txtDescricao.TabIndex = 1;
+            txtDescricao.TextChanged += txtDescricao_TextChanged;
             // 
             // AddMarcaForm
             // 

@@ -46,29 +46,30 @@
             // 
             // cmbMarca
             // 
+            cmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbMarca.FlatStyle = FlatStyle.System;
             cmbMarca.Font = new Font("Segoe UI", 10F);
             cmbMarca.FormattingEnabled = true;
-            cmbMarca.Location = new Point(102, 180);
+            cmbMarca.Location = new Point(23, 213);
             cmbMarca.Name = "cmbMarca";
-            cmbMarca.Size = new Size(202, 25);
-            cmbMarca.TabIndex = 2;
+            cmbMarca.Size = new Size(293, 25);
+            cmbMarca.TabIndex = 4;
             // 
             // nudPreco
             // 
             nudPreco.DecimalPlaces = 2;
             nudPreco.Font = new Font("Segoe UI", 10F);
-            nudPreco.Location = new Point(102, 225);
+            nudPreco.Location = new Point(23, 274);
             nudPreco.Name = "nudPreco";
-            nudPreco.Size = new Size(202, 25);
-            nudPreco.TabIndex = 3;
+            nudPreco.Size = new Size(293, 25);
+            nudPreco.TabIndex = 5;
             nudPreco.ThousandsSeparator = true;
             // 
             // lblPreco
             // 
             lblPreco.AutoSize = true;
             lblPreco.Font = new Font("Segoe UI", 10F);
-            lblPreco.Location = new Point(54, 227);
+            lblPreco.Location = new Point(23, 252);
             lblPreco.Name = "lblPreco";
             lblPreco.Size = new Size(43, 19);
             lblPreco.TabIndex = 11;
@@ -78,7 +79,7 @@
             // 
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Segoe UI", 10F);
-            lblStock.Location = new Point(55, 272);
+            lblStock.Location = new Point(23, 316);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(42, 19);
             lblStock.TabIndex = 12;
@@ -87,10 +88,10 @@
             // nudStock
             // 
             nudStock.Font = new Font("Segoe UI", 10F);
-            nudStock.Location = new Point(102, 270);
+            nudStock.Location = new Point(23, 338);
             nudStock.Name = "nudStock";
-            nudStock.Size = new Size(202, 25);
-            nudStock.TabIndex = 4;
+            nudStock.Size = new Size(293, 25);
+            nudStock.TabIndex = 14;
             nudStock.ThousandsSeparator = true;
             // 
             // btnConfirmar
@@ -120,7 +121,7 @@
             // 
             lblNome.AutoSize = true;
             lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(51, 94);
+            lblNome.Location = new Point(23, 71);
             lblNome.Name = "lblNome";
             lblNome.Size = new Size(46, 19);
             lblNome.TabIndex = 8;
@@ -128,19 +129,20 @@
             // 
             // cmbCategoria
             // 
+            cmbCategoria.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCategoria.FlatStyle = FlatStyle.System;
             cmbCategoria.Font = new Font("Segoe UI", 10F);
             cmbCategoria.FormattingEnabled = true;
-            cmbCategoria.Location = new Point(102, 135);
+            cmbCategoria.Location = new Point(23, 155);
             cmbCategoria.Name = "cmbCategoria";
-            cmbCategoria.Size = new Size(202, 25);
+            cmbCategoria.Size = new Size(293, 25);
             cmbCategoria.TabIndex = 1;
             // 
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.Font = new Font("Segoe UI", 10F);
-            lblCategoria.Location = new Point(29, 138);
+            lblCategoria.Location = new Point(23, 133);
             lblCategoria.Name = "lblCategoria";
             lblCategoria.Size = new Size(68, 19);
             lblCategoria.TabIndex = 9;
@@ -149,16 +151,16 @@
             // txtNome
             // 
             txtNome.Font = new Font("Segoe UI", 10F);
-            txtNome.Location = new Point(102, 90);
+            txtNome.Location = new Point(23, 93);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(202, 25);
+            txtNome.Size = new Size(293, 25);
             txtNome.TabIndex = 0;
             // 
             // lblMarca
             // 
             lblMarca.AutoSize = true;
             lblMarca.Font = new Font("Segoe UI", 10F);
-            lblMarca.Location = new Point(50, 183);
+            lblMarca.Location = new Point(23, 191);
             lblMarca.Name = "lblMarca";
             lblMarca.Size = new Size(47, 19);
             lblMarca.TabIndex = 10;

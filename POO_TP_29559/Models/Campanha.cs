@@ -10,7 +10,6 @@ namespace poo_tp_29559.Models
 {
     public class Campanha : IIdentifiable
     {
-        [Browsable(false)]
         public int Id { get; set; }
 
         [DisplayName("Nome de Campanha")]

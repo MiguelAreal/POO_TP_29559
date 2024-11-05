@@ -40,5 +40,10 @@ namespace poo_tp_29559.Views
 
             this.Close();
         }
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
