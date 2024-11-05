@@ -43,7 +43,7 @@
             txtDescricao.Multiline = true;
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(202, 107);
-            txtDescricao.TabIndex = 38;
+            txtDescricao.TabIndex = 1;
             // 
             // btnCancelar
             // 
@@ -52,7 +52,7 @@
             btnCancelar.Location = new Point(106, 409);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(102, 44);
-            btnCancelar.TabIndex = 37;
+            btnCancelar.TabIndex = 2;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             // 
@@ -63,7 +63,7 @@
             btnConfirmar.Location = new Point(214, 409);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(102, 44);
-            btnConfirmar.TabIndex = 36;
+            btnConfirmar.TabIndex = 3;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += btnConfirmar_Click;
@@ -94,7 +94,7 @@
             txtNome.Location = new Point(103, 90);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(202, 25);
-            txtNome.TabIndex = 31;
+            txtNome.TabIndex = 0;
             // 
             // AddCategoriaForm
             // 

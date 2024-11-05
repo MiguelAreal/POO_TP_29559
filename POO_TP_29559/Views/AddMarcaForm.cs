@@ -34,10 +34,8 @@ namespace poo_tp_29559.Views
                 PaisOrigem = cmbPais.Text
             };
 
-            // Add the new brand through the controller
             _controller.AddItem(novaMarca);
 
-            // Update the DataGridView in the main form
             _controller.CarregaItens();
 
             this.Close();

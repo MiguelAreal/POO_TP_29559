@@ -23,7 +23,7 @@ namespace poo_tp_29559.Views
         {
             InitializeComponent();
             _view = view;
-            //_controller = new CategoriaController(_view, new ProdutoRepo());
+            _controller = new CategoriaController(_view);
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -33,11 +33,9 @@ namespace poo_tp_29559.Views
             Label[] labels = { lblNome };
             bool allValid = FieldValidator.ValidateFields(controls, labels);
 
-
             // Valida os campos antes de adicionar o produto
             if (!allValid)
             {
-                MessageBox.Show("Preencha todos os campos obrigatórios.");
                 return;
             }
 

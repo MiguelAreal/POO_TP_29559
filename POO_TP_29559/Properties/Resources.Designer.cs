@@ -59,5 +59,15 @@ namespace poo_tp_29559.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap business_handshake__2_ {
+            get {
+                object obj = ResourceManager.GetObject("business-handshake (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
