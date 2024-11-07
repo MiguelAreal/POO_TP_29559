@@ -12,40 +12,30 @@ public class Venda : IIdentifiable
 
     [DisplayName("Cliente")]
     public int ClienteID { get; set; } // Cliente associado
+    
+    public List<ItemVenda>? Itens { get; set; } = new List<ItemVenda>();
 
-    [DisplayName("NIF")]
-    public string? Nif { get; set; } // Exibe o NIF do cliente se o cliente estiver associado
+    // Total de unidades de produtos vendidos
+    public int Quantidade => Itens?.Sum(item => item.Unidades) ?? 0;
 
-    [DisplayName("Produtos Vendidos")]
-    public List<ItemVenda>? Produtos { get; set; } // Alterado para uma lista de ItemVenda, uma venda pode ser composta por vários produtos.
+    // Total de valor de produtos vendidos, incluindo a percentagem de desconto de cada produto diferente vendido.
+    public decimal PrecoTotal => Itens?.Sum(item =>
+    (item.PrecoUnitario * item.Unidades) * (1-item.PercentagemDesc/100)
+    ) ?? 0;
 
-    [DisplayName("Quantidade Total de Produtos")]
-    public int Quantidade => Produtos?.Sum(item => item.Quantidade) ?? 0; // Total de unidades de produto vendidos
+    // Data a que a venda foi efetuada
+    public string DataVenda { get; set; }
 
-    [DisplayName("Percentagem Descontada")]
-    public int Percentagem { get; set; }
-
-    [DisplayName("Preço Total")]
-    public decimal PrecoTotal { get; set; }
-
-    [DisplayName("Data da Venda")]
-    public DateTime DataVenda { get; set; }
-
-    [DisplayName("Método de Pagamento")]
+    // Pagamento Utilizado, consoante Enumerador
     public MetodoPagamento? MetodoPagamento { get; set; }
 
-    [DisplayName("Garantia (Meses)")]
-    public int GarantiaMeses { get; set; }
-
     // Construtor
-    public Venda(Cliente? cliente)
+    public Venda()
     {
-        Percentagem = 0;
-        DataVenda = DateTime.Now;
+        DataVenda = DateTime.Now.ToString();
 
-        // Set GarantiaMeses based on the Cliente's IsParticular property
-        GarantiaMeses = cliente?.IsParticular == true ? 36 : 12;
-        Nif = cliente?.Nif;
+        // Por defeito coloca o número de garantia em meses, baseado em saber se o cliente é particular ou não
+        //GarantiaMeses = cliente?.IsParticular == true ? 36 : 12;
     }
 
 }

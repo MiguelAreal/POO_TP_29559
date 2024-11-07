@@ -11,9 +11,5 @@ namespace poo_tp_29559.Repositories
             _clienteRepo = clienteRepo;
         }
 
-        public Cliente? GetClienteByVenda(Venda venda)
-        {
-            return _clienteRepo.GetById(venda.ClienteID);
-        }
     }
 }

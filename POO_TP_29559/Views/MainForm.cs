@@ -76,6 +76,9 @@ namespace poo_tp_29559
                 case "Campanhas":
                     formFilho = new ChildForm(FormTypes.Campanhas);
                     break;
+                case "Vendas":
+                    formFilho = new ChildForm(FormTypes.Vendas);
+                    break;
                 default:
                     MessageBox.Show("Opção desconhecida");
                     return;

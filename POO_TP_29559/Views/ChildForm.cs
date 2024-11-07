@@ -11,7 +11,7 @@ namespace poo_tp_29559.Views
     public partial class ChildForm : MetroForm
     {
         private readonly IEntityController _controller;
-        private readonly FormTypes _formType;//Encapsulação
+        private readonly FormTypes _formType;
         private string? _activeColumn;
         private int _previousColumnIndex = -1;
 
@@ -30,22 +30,12 @@ namespace poo_tp_29559.Views
         {
             switch (formType)
             {
-                case FormTypes.Produtos:
-                    break;
-                case FormTypes.Categorias:
-                    break;
-                case FormTypes.Marcas:
-                    break;
                 case FormTypes.Vendas:
                     btnAddItem.Text = "$";
                     break;
                 case FormTypes.Clientes:
                     btnAddItem.Text = "👤";
-                    break;
-                case FormTypes.Campanhas:
-                    break;
-                default:
-                    break;
+                break;
             }
         }
 
@@ -58,6 +48,7 @@ namespace poo_tp_29559.Views
                 FormTypes.Marcas => new MarcaController(this),
                 FormTypes.Clientes => new ClienteController(this),
                 FormTypes.Campanhas => new CampanhaController(this),
+                FormTypes.Vendas => new VendaController(this),
                 _ => throw new ArgumentException("FormType desconhecido.")
             };
         }
@@ -80,6 +71,7 @@ namespace poo_tp_29559.Views
             // Hide specific columns if they exist
             ToggleColumnVisibility("Id", false);
             ToggleColumnVisibility("IsParticular", false);
+
         }
 
         private void ToggleColumnVisibility(string columnName, bool isVisible)

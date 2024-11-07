@@ -9,16 +9,38 @@ namespace poo_tp_29559.Models
 {
     public class ItemVenda
     {
-        [DisplayName("Produto")]
-        public Produto Produto { get; set; }
+        // Informação do produto na altura da venda
+        public int? ProdutoID { get; set; }                
+        public string? ProdutoNome { get; set; }           
+        public decimal? PrecoUnitario { get; set; }        
 
-        [DisplayName("Quantidade")]
-        public int Quantidade { get; set; }
+        // ID de categoria, nome de categoria no momento da venda
+        public int? CategoriaID { get; set; }              
+        public string? CategoriaNome { get; set; }         
 
-        public ItemVenda(Produto produto, int quantidade)
+        // ID de marca, nome de marca no momento da venda
+        public int? MarcaID { get; set; }                   
+        public string? MarcaNome { get; set; }              
+
+        // Unidades vendidas
+        public int? Unidades { get; set; }
+
+        // Percentagem de desconto dado
+        public int? PercentagemDesc { get;set; }
+
+        // Constructor
+        public ItemVenda(int produtoID, string produtoNome, decimal precoUnitario, int categoriaID,
+                         string categoriaNome, int marcaID, string marcaNome, int unidades)
         {
-            Produto = produto;
-            Quantidade = quantidade;
+            ProdutoID = produtoID;
+            ProdutoNome = produtoNome;
+            PrecoUnitario = precoUnitario;
+            CategoriaID = categoriaID;
+            CategoriaNome = categoriaNome;
+            MarcaID = marcaID;
+            MarcaNome = marcaNome;
+            Unidades = unidades;
         }
     }
+
 }
