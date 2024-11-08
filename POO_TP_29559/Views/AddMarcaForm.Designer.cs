@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMarcaForm));
             btnCancelar = new Button();
             btnConfirmar = new Button();
             lblPais = new Label();
@@ -134,6 +135,7 @@
             Controls.Add(lblNome);
             Controls.Add(cmbPais);
             Controls.Add(txtNome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddMarcaForm";

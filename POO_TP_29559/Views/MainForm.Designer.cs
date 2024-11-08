@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             msMainForm = new MenuStrip();
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
             produtosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
             marcasToolStripMenuItem = new ToolStripMenuItem();
@@ -49,7 +51,7 @@
             msMainForm.Location = new Point(20, 60);
             msMainForm.Name = "msMainForm";
             msMainForm.RenderMode = ToolStripRenderMode.Professional;
-            msMainForm.Size = new Size(960, 24);
+            msMainForm.Size = new Size(1160, 24);
             msMainForm.TabIndex = 0;
             msMainForm.Text = "msMainForm";
             msMainForm.ItemClicked += msMainForm_ItemClicked;
@@ -97,28 +99,31 @@
             panelContainer.Dock = DockStyle.Fill;
             panelContainer.Location = new Point(20, 84);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(960, 546);
+            panelContainer.Size = new Size(1160, 796);
             panelContainer.TabIndex = 1;
             // 
             // picBg
             // 
+            picBg.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             picBg.BackColor = Color.Transparent;
-            picBg.Image = Properties.Resources.business_handshake__2_;
-            picBg.Location = new Point(324, 143);
+            picBg.Image = (Image)resources.GetObject("picBg.Image");
+            picBg.Location = new Point(381, 199);
             picBg.Name = "picBg";
-            picBg.Size = new Size(260, 229);
-            picBg.SizeMode = PictureBoxSizeMode.StretchImage;
+            picBg.Size = new Size(400, 400);
+            picBg.SizeMode = PictureBoxSizeMode.Zoom;
             picBg.TabIndex = 0;
             picBg.TabStop = false;
+            picBg.WaitOnLoad = true;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
-            ClientSize = new Size(1000, 650);
+            ClientSize = new Size(1200, 900);
             Controls.Add(panelContainer);
             Controls.Add(msMainForm);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = msMainForm;
             MinimumSize = new Size(1000, 650);
             Name = "MainForm";

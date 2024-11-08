@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProdutoForm));
             cmbMarca = new ComboBox();
             nudPreco = new NumericUpDown();
             lblPreco = new Label();
@@ -185,6 +186,7 @@
             Controls.Add(cmbMarca);
             Controls.Add(cmbCategoria);
             Controls.Add(txtNome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddProdutoForm";

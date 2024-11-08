@@ -23,9 +23,6 @@ namespace poo_tp_29559.Models
         [DisplayName("Preço Total")]
         public decimal PrecoTotal { get; set; }
 
-        [DisplayName("Desconto Aplicado (%)")]
-        public decimal? PercentagemDesc { get; set; }
-
         [DisplayName("Método de Pagamento")]
         public string? MetodoPagamento { get; set; }
 

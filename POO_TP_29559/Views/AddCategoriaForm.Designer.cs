@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCategoriaForm));
             txtDescricao = new TextBox();
             btnCancelar = new Button();
             btnConfirmar = new Button();
@@ -109,6 +110,7 @@
             Controls.Add(lblDescricao);
             Controls.Add(lblNome);
             Controls.Add(txtNome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddCategoriaForm";

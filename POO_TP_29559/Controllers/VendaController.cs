@@ -28,7 +28,7 @@ public class VendaController : BaseController<Venda, ChildForm>, IEntityControll
             var cliente = _clienteRepo.GetById(venda.ClienteID);
 
             // Calcula meses restantes
-            int mesesRestantes = Math.Max(0, venda.GarantiaMeses - (int)((DateTime.Now - DateTime.Parse(venda.DataVenda)).TotalDays / 30));
+            //int mesesRestantes = Math.Max(0, venda.GarantiaMeses - (int)((DateTime.Now - DateTime.Parse(venda.DataVenda)).TotalDays / 30));
 
             // VendaViewModel para exibição
             var vendaViewModel = new VendaViewModel
@@ -38,10 +38,9 @@ public class VendaController : BaseController<Venda, ChildForm>, IEntityControll
                 NIF = cliente?.Nif,
                 DataVenda = venda.DataVenda,
                 PrecoTotal = venda.PrecoTotal,
-                PercentagemDesc = venda.PercentagemDesc,
                 MetodoPagamento = venda.MetodoPagamento.ToString(),
-                GarantiaMeses = venda.GarantiaMeses,
-                GarantiaRestanteMeses = mesesRestantes
+                GarantiaMeses = 5,//venda.GarantiaMeses,
+                GarantiaRestanteMeses = 5
             };
 
             _vendasViewItems.Add(vendaViewModel);

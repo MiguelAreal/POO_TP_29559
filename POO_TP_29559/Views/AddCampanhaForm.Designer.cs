@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCampanhaForm));
             btnCancelar = new Button();
             btnConfirmar = new Button();
             lblStock = new Label();
@@ -176,6 +177,7 @@
             Controls.Add(lblCategoria);
             Controls.Add(lblNome);
             Controls.Add(txtNome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddCampanhaForm";

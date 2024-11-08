@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddClienteForm));
             btnCancelar = new Button();
             btnConfirmar = new Button();
             lblNIF = new Label();
@@ -192,6 +193,7 @@
             Controls.Add(lblContacto);
             Controls.Add(lblNome);
             Controls.Add(txtNome);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "AddClienteForm";
