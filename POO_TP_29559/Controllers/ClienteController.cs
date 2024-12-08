@@ -24,6 +24,12 @@ public class ClienteController : BaseController<Cliente, ChildForm>, IEntityCont
         _repository.Remove(item);
     }
 
+    protected override void UpdateItem(Cliente item)
+    {
+        _repository.Update(item);
+    }
+
+
     // Implement the GetById method from IEntityController
     public object GetById(int id)
     {

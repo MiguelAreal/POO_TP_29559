@@ -1,10 +1,10 @@
 [
   {
     "Id": 1,
-    "Nome": "Campanha Natalina",
-    "PercentagemDesc": 75,
-    "DataInicio": "14/11/2024 16:12:26",
-    "DataFim": "02/01/2025 16:12:26",
-    "CategoriaId": 2
+    "Nome": "Campanha A",
+    "PercentagemDesc": 100,
+    "DataInicio": "06/12/2024 09:13:24",
+    "DataFim": "06/12/2024 09:13:24",
+    "CategoriaId": 1
   }
 ]

@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCampanhaForm));
             btnCancelar = new Button();
             btnConfirmar = new Button();
-            lblStock = new Label();
-            lblPreco = new Label();
-            lblMarca = new Label();
             lblCategoria = new Label();
+            lblDataFim = new Label();
+            lblDataIni = new Label();
+            lblDesconto = new Label();
             lblNome = new Label();
             txtNome = new TextBox();
             nudPercentagemDesc = new NumericUpDown();
@@ -67,45 +67,45 @@
             btnConfirmar.UseVisualStyleBackColor = true;
             btnConfirmar.Click += btnConfirmar_Click;
             // 
-            // lblStock
-            // 
-            lblStock.AutoSize = true;
-            lblStock.Font = new Font("Segoe UI", 10F);
-            lblStock.Location = new Point(33, 303);
-            lblStock.Name = "lblStock";
-            lblStock.Size = new Size(68, 19);
-            lblStock.TabIndex = 26;
-            lblStock.Text = "Categoria";
-            // 
-            // lblPreco
-            // 
-            lblPreco.AutoSize = true;
-            lblPreco.Font = new Font("Segoe UI", 10F);
-            lblPreco.Location = new Point(32, 244);
-            lblPreco.Name = "lblPreco";
-            lblPreco.Size = new Size(83, 19);
-            lblPreco.TabIndex = 25;
-            lblPreco.Text = "Data de Fim";
-            // 
-            // lblMarca
-            // 
-            lblMarca.AutoSize = true;
-            lblMarca.Font = new Font("Segoe UI", 10F);
-            lblMarca.Location = new Point(33, 187);
-            lblMarca.Name = "lblMarca";
-            lblMarca.Size = new Size(93, 19);
-            lblMarca.TabIndex = 24;
-            lblMarca.Text = "Data de Início";
-            // 
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
             lblCategoria.Font = new Font("Segoe UI", 10F);
-            lblCategoria.Location = new Point(33, 130);
+            lblCategoria.Location = new Point(33, 303);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(90, 19);
-            lblCategoria.TabIndex = 23;
-            lblCategoria.Text = "Desconto (%)";
+            lblCategoria.Size = new Size(123, 19);
+            lblCategoria.TabIndex = 26;
+            lblCategoria.Text = "Categoria Aplicada";
+            // 
+            // lblDataFim
+            // 
+            lblDataFim.AutoSize = true;
+            lblDataFim.Font = new Font("Segoe UI", 10F);
+            lblDataFim.Location = new Point(32, 244);
+            lblDataFim.Name = "lblDataFim";
+            lblDataFim.Size = new Size(83, 19);
+            lblDataFim.TabIndex = 25;
+            lblDataFim.Text = "Data de Fim";
+            // 
+            // lblDataIni
+            // 
+            lblDataIni.AutoSize = true;
+            lblDataIni.Font = new Font("Segoe UI", 10F);
+            lblDataIni.Location = new Point(33, 187);
+            lblDataIni.Name = "lblDataIni";
+            lblDataIni.Size = new Size(93, 19);
+            lblDataIni.TabIndex = 24;
+            lblDataIni.Text = "Data de Início";
+            // 
+            // lblDesconto
+            // 
+            lblDesconto.AutoSize = true;
+            lblDesconto.Font = new Font("Segoe UI", 10F);
+            lblDesconto.Location = new Point(33, 130);
+            lblDesconto.Name = "lblDesconto";
+            lblDesconto.Size = new Size(90, 19);
+            lblDesconto.TabIndex = 23;
+            lblDesconto.Text = "Desconto (%)";
             // 
             // lblNome
             // 
@@ -171,10 +171,10 @@
             Controls.Add(nudPercentagemDesc);
             Controls.Add(btnCancelar);
             Controls.Add(btnConfirmar);
-            Controls.Add(lblStock);
-            Controls.Add(lblPreco);
-            Controls.Add(lblMarca);
             Controls.Add(lblCategoria);
+            Controls.Add(lblDataFim);
+            Controls.Add(lblDataIni);
+            Controls.Add(lblDesconto);
             Controls.Add(lblNome);
             Controls.Add(txtNome);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -193,10 +193,10 @@
 
         private Button btnCancelar;
         private Button btnConfirmar;
-        private Label lblStock;
-        private Label lblPreco;
-        private Label lblMarca;
         private Label lblCategoria;
+        private Label lblDataFim;
+        private Label lblDataIni;
+        private Label lblDesconto;
         private Label lblNome;
         private TextBox txtNome;
         private NumericUpDown nudPercentagemDesc;

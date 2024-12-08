@@ -32,4 +32,9 @@ public class MarcaController : BaseController<Marca, ChildForm>, IEntityControll
             MessageBox.Show("Esta marca não pode ser eliminada porque está associada a um ou mais produtos.");
         }
     }
+
+    protected override void UpdateItem(Marca item)
+    {
+        _repository.Update(item);
+    }
 }

@@ -48,4 +48,9 @@ public class CampanhaController : BaseController<Campanha, ChildForm>, IEntityCo
         _repository.Remove(item);
         
     }
+
+    protected override void UpdateItem(Campanha item)
+    {
+        throw new NotImplementedException();
+    }
 }

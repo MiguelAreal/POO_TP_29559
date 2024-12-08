@@ -18,7 +18,6 @@ public class CategoriaController : BaseController<Categoria, ChildForm>, IEntity
         _view.MostraItens(categorias);
     }
 
-
     protected override void RemoveItem(Categoria item)
     {
         var produtos = new ProdutoRepo().GetAll();
@@ -33,5 +32,9 @@ public class CategoriaController : BaseController<Categoria, ChildForm>, IEntity
         }
     }
 
+    protected override void UpdateItem(Categoria item)
+    {
+        _repository.Remove(item);
+    }
 
 }

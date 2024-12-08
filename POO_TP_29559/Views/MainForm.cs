@@ -30,8 +30,21 @@ namespace poo_tp_29559
         private void AbrirFormNoPanel(Form formFilho)
         {
             // Verifica se já existe um form no painel e remove-o, se necessário
-            if (panelContainer.Controls.Count > 0)
-                panelContainer.Controls[0].Dispose();
+            // Indexado em 1, devido à picture box que já existe no panel.
+
+            if (panelContainer.Controls.Count > 1)
+                panelContainer.Controls[1].Dispose();
+
+            //  Esconde imagem de fundo
+            picBg.Hide();
+
+            // Adiciona um Evento de ao fechar do formulário filho
+            formFilho.FormClosed += (s, args) =>
+            {
+                // Mostra a imagem de fundo novamente
+                picBg.Show();
+            };
+
 
             // Configura as propriedades do form filho e mostra-o
             formFilho.TopLevel = false;
@@ -45,8 +58,8 @@ namespace poo_tp_29559
         /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
+            ToTopMost();
+        }   
 
         /// <summary>
         /// Evento chamado quando um item do menu principal é clicado.
@@ -89,6 +102,20 @@ namespace poo_tp_29559
             {
                 AbrirFormNoPanel(formFilho);
             }
+        }
+
+        /// <summary>
+        /// Coloca a aplicação no primeiro plano, de forma fixa, e após 1 segundo retorna a desativar essa propriedade.
+        /// Tem como propósito ter a certeza que a aplicação não é iniciada por baixo de outras aplicações.
+        /// </summary>
+        private void ToTopMost()
+        {
+            this.TopMost = true;
+
+            Task.Delay(100).ContinueWith(t =>
+            {
+                this.Invoke((MethodInvoker)(() => { this.TopMost = false; }));
+            });
         }
     }
 }

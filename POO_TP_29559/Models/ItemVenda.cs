@@ -18,8 +18,7 @@ namespace poo_tp_29559.Models
         public int? CategoriaID { get; set; }              
         public string? CategoriaNome { get; set; }         
 
-        // ID de marca, nome de marca no momento da venda
-        public int? MarcaID { get; set; }                   
+        // ID de marca, nome de marca no momento da venda   
         public string? MarcaNome { get; set; }              
 
         // Unidades vendidas
@@ -30,14 +29,13 @@ namespace poo_tp_29559.Models
 
         // Constructor
         public ItemVenda(int produtoID, string produtoNome, decimal precoUnitario, int categoriaID,
-                         string categoriaNome, int marcaID, string marcaNome, int unidades)
+                         string categoriaNome, string marcaNome, int unidades)
         {
             ProdutoID = produtoID;
             ProdutoNome = produtoNome;
             PrecoUnitario = precoUnitario;
             CategoriaID = categoriaID;
             CategoriaNome = categoriaNome;
-            MarcaID = marcaID;
             MarcaNome = marcaNome;
             Unidades = unidades;
         }

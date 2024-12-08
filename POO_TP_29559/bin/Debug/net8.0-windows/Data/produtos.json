@@ -25,14 +25,5 @@
     "Preco": 0,
     "QuantidadeEmStock": 0,
     "DataAdicao": "31/10/2024 14:30:32"
-  },
-  {
-    "Id": 5,
-    "Nome": "Tapete",
-    "CategoriaID": 1,
-    "MarcaID": 1,
-    "Preco": 0,
-    "QuantidadeEmStock": 0,
-    "DataAdicao": "31/10/2024 14:36:05"
   }
 ]

@@ -51,4 +51,9 @@ public class ProdutoController : BaseController<Produto, ChildForm>, IEntityCont
     {
         _repository.Remove(item);
     }
+
+    protected override void UpdateItem(Produto item)
+    {
+        throw new NotImplementedException();
+    }
 }

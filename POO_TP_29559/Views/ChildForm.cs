@@ -4,6 +4,7 @@ using poo_tp_29559.Repositories.Enumerators;
 using System;
 using System.Drawing;
 using System.Numerics;
+using System.Runtime.ConstrainedExecution;
 using System.Windows.Forms;
 
 namespace poo_tp_29559.Views
@@ -26,6 +27,7 @@ namespace poo_tp_29559.Views
             Text = _formType.ToString();
         }
 
+        //  Dependendo do form ativo, Altera o ícone de adicionar item.
         public void changeSettings(FormTypes formType)
         {
             switch (formType)
@@ -39,6 +41,7 @@ namespace poo_tp_29559.Views
             }
         }
 
+        // Inicialização de controladores dependendo do tipo de form ativo.
         private IEntityController CreateController()
         {
             return _formType switch
@@ -55,25 +58,26 @@ namespace poo_tp_29559.Views
 
         public void MostraItens(object items)
         {
-            // Store current selected column index
+            //  Guarda index na coluna selecionada
             int currentColumnIndex = dgvItens.CurrentCell?.ColumnIndex ?? -1;
 
-            // Set DataSource and refresh DataGridView
+            // Atribui DataSource e atualiza DataGridView
             dgvItens.DataSource = new BindingSource { DataSource = items };
             dgvItens.Refresh();
 
-            // Restore the selected cell if valid
+            // Restaura a célula selecionada, se for válida.
             if (currentColumnIndex >= 0 && dgvItens.Rows.Count > 0 && currentColumnIndex < dgvItens.Columns.Count)
             {
                 dgvItens.CurrentCell = dgvItens.Rows[0].Cells[currentColumnIndex];
             }
 
-            // Hide specific columns if they exist
+            // Esconde propriedades não relevantes em termos visuais.
             ToggleColumnVisibility("Id", false);
             ToggleColumnVisibility("IsParticular", false);
 
         }
 
+        // Esconde da DataGridView dados não relevantes em termos visuais.
         private void ToggleColumnVisibility(string columnName, bool isVisible)
         {
             if (dgvItens.Columns.Contains(columnName))
@@ -82,22 +86,27 @@ namespace poo_tp_29559.Views
             }
         }
 
+        // Altera a cor de botão passado por parâmetro, para uma cor passada por parâmetro.
         private void ChangeButtonColor(Control button, Color color)
         {
             button.ForeColor = color;
         }
 
+        // Eventos para alterar a cor de botões de adicionar e remover, ao passar o rato por cima.
         private void btnRemItem_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnRemItem, Color.Red);
         private void btnRemItem_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnRemItem, Color.Black);
         private void btnAddItem_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnAddItem, Color.DodgerBlue);
         private void btnAddItem_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnAddItem, Color.Black);
 
+
+        // Evento da caixa de pesquisa, executa função de filtrar itens do controlador relevante.
         private void txtSearchItem_TextChanged(object sender, EventArgs e)
         {
             _controller.FiltrarItens(txtSearchItem.Text, _activeColumn);
             RestoreCurrentCell();
         }
 
+        // Usado para restaurar a célula atual, utilizado após pesquisa para manter integridade de seleção.
         private void RestoreCurrentCell()
         {
             if (dgvItens.Rows.Count > 0)
@@ -108,6 +117,8 @@ namespace poo_tp_29559.Views
                     : dgvItens.Rows[0].Cells[0]; // Fallback para primeira célula
             }
         }
+
+
 
         private void dgvItens_CurrentCellChanged(object sender, EventArgs e)
         {
@@ -123,6 +134,8 @@ namespace poo_tp_29559.Views
             }
         }
 
+
+        // Abre form de abertura de item relevante ao form atual.
         private void btnAddItem_Click(object sender, EventArgs e)
         {
             Form addForm;
@@ -160,6 +173,7 @@ namespace poo_tp_29559.Views
             _controller.CarregaItens();
         }
 
+        // Remove item, consoante linha selecionada e tipo de form atual.
         private void btnRemItem_Click(object sender, EventArgs e)
         {
             // Vê se tem alguma linha selecionada
@@ -169,7 +183,6 @@ namespace poo_tp_29559.Views
                 {
                     // Busca índice
                     int rowIndex = dgvItens.SelectedRows[0].Index;
-
                     // Busca item selecionado pelo índice
                     var selectedItem = dgvItens.Rows[rowIndex].DataBoundItem;
 
@@ -230,6 +243,8 @@ namespace poo_tp_29559.Views
             }
         }
 
+
+        // Para atualizar dados de uma célula.
         private void dgvItens_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             // Tenta obter o item editado com base na linha e coluna alteradas
@@ -244,36 +259,42 @@ namespace poo_tp_29559.Views
                     switch (_formType)
                     {
                         case FormTypes.Produtos:
-                            if (selectedItem is ProdutoViewModel produto)
+                            if (selectedItem is ProdutoViewModel produtoSelecionado)
                             {
                                 //_controller.UpdateItem(produto);
                             }
-                            break;
+                        break;
 
                         case FormTypes.Marcas:
-                            if (selectedItem is Marca marca)
+                            if (selectedItem is Marca marcaSelecionada)
                             {
-                                //_controller.UpdateItem(marca); 
+                                _controller.UpdateItem(marcaSelecionada); 
                             }
-                            break;
+                        break;
 
                         case FormTypes.Categorias:
-                            if (selectedItem is Categoria categoria)
+                            if (selectedItem is Categoria categoriaSelecionada)
                             {
-                                //_controller.UpdateItem(categoria);
+                                _controller.UpdateItem(categoriaSelecionada);
                             }
-                            break;
+                        break;
 
                         case FormTypes.Clientes:
-                            if (selectedItem is Cliente cliente)
+                            if (selectedItem is Cliente clienteSelecionado)
                             {
-                                //_controller.UpdateItem(cliente);
+                                _controller.UpdateItem(clienteSelecionado);
+                            }
+                        break;
+
+                        case FormTypes.Campanhas:
+                            if (selectedItem is Campanha campanhaSelecionada)
+                            {
+                                _controller.UpdateItem(campanhaSelecionada);
                             }
                             break;
-
                         default:
                             MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            return; 
+                        return; 
                     }
                 }
             }

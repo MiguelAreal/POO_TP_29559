@@ -53,4 +53,9 @@ public class VendaController : BaseController<Venda, ChildForm>, IEntityControll
     {
         _repository.Remove(item);
     }
+
+    protected override void UpdateItem(Venda item)
+    {
+        _repository.Remove(item);
+    }
 }

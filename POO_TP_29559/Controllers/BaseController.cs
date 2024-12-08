@@ -66,6 +66,20 @@ namespace poo_tp_29559.Controllers
             }
         }
 
+        // Implementation of UpdateItem directly within the BaseController
+        public void UpdateItem(object item)
+        {
+            if (item is T specificItem)
+            {
+                UpdateItem(specificItem);
+                CarregaItens();
+            }
+            else
+            {
+                throw new InvalidOperationException("Invalid item type for deletion.");
+            }
+        }
+
         public object GetById(int id)
         {
             return _repository.GetById(id);
@@ -89,6 +103,7 @@ namespace poo_tp_29559.Controllers
 
 
         protected abstract void RemoveItem(T item);
+        protected abstract void UpdateItem(T item);
         protected abstract void ExibeItensNaView(List<T> items);
     }
 }

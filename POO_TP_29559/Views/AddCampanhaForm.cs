@@ -27,6 +27,11 @@ namespace poo_tp_29559.Views
             _controller = new CampanhaController(_view);
             var categoriaRepo = new CategoriaRepo();
             CarregaCategorias();
+
+            
+            // Data de início é a data atual
+            // Data de fim é o dia após a data atual.
+            dtpFim.Value = DateTime.Today.AddDays(1);
         }
 
         private void CarregaCategorias()
@@ -47,6 +52,15 @@ namespace poo_tp_29559.Views
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+            Control[] controls = { txtNome, nudPercentagemDesc, dtpIni,dtpFim,cmbCategoria};
+            Label[] labels = { lblNome, lblDesconto,lblDataIni,lblDataFim,lblCategoria};
+            bool allValid = FieldValidator.ValidateFields(controls, labels);
+
+            // Valida os campos antes de adicionar a Campanha
+            if (!allValid)
+            {
+                return;
+            }
 
             var novaCampanha = new Campanha
             {
@@ -65,5 +79,6 @@ namespace poo_tp_29559.Views
 
             this.Close();
         }
-    } 
+
+    }
 }
