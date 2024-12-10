@@ -60,6 +60,7 @@ public class BaseRepo<T> : IRepo<T> where T : class, IIdentifiable
 
     public virtual void Update(T itemAlterado)
     {
+        // Buscar item real através do ID a ser atualizado e altera a partir daí 
         if (itemAlterado == null)
             throw new ArgumentNullException(nameof(itemAlterado), "Item não pode ser null.");
 

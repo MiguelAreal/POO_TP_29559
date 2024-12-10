@@ -118,7 +118,6 @@
             txtDescricao.Name = "txtDescricao";
             txtDescricao.Size = new Size(293, 107);
             txtDescricao.TabIndex = 1;
-            txtDescricao.TextChanged += txtDescricao_TextChanged;
             // 
             // AddMarcaForm
             // 

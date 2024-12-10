@@ -43,3 +43,4 @@ C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windo
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.ChildForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddClienteForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddCampanhaForm.resources
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddVendaForm.resources

@@ -1,29 +1,20 @@
 [
   {
     "Id": 1,
-    "Nome": "teclado",
-    "CategoriaID": 1,
-    "MarcaID": 1,
-    "Preco": 20,
-    "QuantidadeEmStock": 50,
-    "DataAdicao": "31/10/2024 14:26:44"
+    "Nome": "A",
+    "CategoriaID": 2,
+    "MarcaID": 2,
+    "Preco": 15,
+    "QuantidadeEmStock": 100,
+    "DataAdicao": "09/12/2024 09:12:46"
   },
   {
     "Id": 2,
-    "Nome": "rato",
-    "CategoriaID": 1,
-    "MarcaID": 1,
-    "Preco": 19,
+    "Nome": "Monitor Gaming 27\u0027\u0027",
+    "CategoriaID": 3,
+    "MarcaID": 2,
+    "Preco": 100,
     "QuantidadeEmStock": 100,
-    "DataAdicao": "31/10/2024 14:27:04"
-  },
-  {
-    "Id": 3,
-    "Nome": "fones",
-    "CategoriaID": 1,
-    "MarcaID": 1,
-    "Preco": 0,
-    "QuantidadeEmStock": 0,
-    "DataAdicao": "31/10/2024 14:30:32"
+    "DataAdicao": "10/12/2024 14:49:12"
   }
 ]

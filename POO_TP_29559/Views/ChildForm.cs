@@ -152,6 +152,9 @@ namespace poo_tp_29559.Views
                 case FormTypes.Marcas:
                     addForm = new AddMarcaForm(this);
                     break;
+                case FormTypes.Vendas:
+                    addForm = new AddVendaForm(this);
+                    break;
                 case FormTypes.Clientes:
                     addForm = new AddClienteForm(this);
                     break;
@@ -203,6 +206,14 @@ namespace poo_tp_29559.Views
                             }
                             break;
 
+                        case FormTypes.Vendas:
+                            if (selectedItem is Venda vendaSelecionada)
+                            {
+                                MessageBox.Show("Proceder com a devolução?");
+                                //_controller.DeleteItem(marcaSelecionada);
+                            }
+                            break;
+
                         case FormTypes.Categorias:
                             if (selectedItem is Categoria categoriaSelecionada)
                             {
@@ -239,7 +250,7 @@ namespace poo_tp_29559.Views
             }
             else
             {
-                MessageBox.Show("Selecione um item para remover.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um item.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

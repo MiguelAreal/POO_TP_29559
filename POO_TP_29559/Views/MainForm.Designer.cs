@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             msMainForm = new MenuStrip();
-            this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
             produtosToolStripMenuItem = new ToolStripMenuItem();
             clientesToolStripMenuItem = new ToolStripMenuItem();
             marcasToolStripMenuItem = new ToolStripMenuItem();
@@ -39,19 +38,22 @@
             campanhasToolStripMenuItem = new ToolStripMenuItem();
             panelContainer = new Panel();
             picBg = new PictureBox();
+            statusStrip1 = new StatusStrip();
+            github = new ToolStripStatusLabel();
             msMainForm.SuspendLayout();
             panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBg).BeginInit();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // msMainForm
             // 
             msMainForm.BackColor = Color.Transparent;
             msMainForm.Items.AddRange(new ToolStripItem[] { produtosToolStripMenuItem, clientesToolStripMenuItem, marcasToolStripMenuItem, vendasToolStripMenuItem, clientesToolStripMenuItem1, campanhasToolStripMenuItem });
-            msMainForm.Location = new Point(20, 60);
+            msMainForm.Location = new Point(5, 60);
             msMainForm.Name = "msMainForm";
             msMainForm.RenderMode = ToolStripRenderMode.Professional;
-            msMainForm.Size = new Size(1160, 24);
+            msMainForm.Size = new Size(1190, 24);
             msMainForm.TabIndex = 0;
             msMainForm.Text = "msMainForm";
             msMainForm.ItemClicked += msMainForm_ItemClicked;
@@ -97,9 +99,9 @@
             panelContainer.BackColor = Color.Transparent;
             panelContainer.Controls.Add(picBg);
             panelContainer.Dock = DockStyle.Fill;
-            panelContainer.Location = new Point(20, 84);
+            panelContainer.Location = new Point(5, 84);
             panelContainer.Name = "panelContainer";
-            panelContainer.Size = new Size(1160, 796);
+            panelContainer.Size = new Size(1190, 786);
             panelContainer.TabIndex = 1;
             // 
             // picBg
@@ -109,11 +111,35 @@
             picBg.Image = (Image)resources.GetObject("picBg.Image");
             picBg.Location = new Point(381, 199);
             picBg.Name = "picBg";
-            picBg.Size = new Size(400, 400);
+            picBg.Size = new Size(430, 366);
             picBg.SizeMode = PictureBoxSizeMode.Zoom;
             picBg.TabIndex = 0;
             picBg.TabStop = false;
             picBg.WaitOnLoad = true;
+            // 
+            // statusStrip1
+            // 
+            statusStrip1.GripMargin = new Padding(2, 2, 2, 0);
+            statusStrip1.Items.AddRange(new ToolStripItem[] { github });
+            statusStrip1.LayoutStyle = ToolStripLayoutStyle.Flow;
+            statusStrip1.Location = new Point(5, 870);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.RenderMode = ToolStripRenderMode.Professional;
+            statusStrip1.Size = new Size(1190, 25);
+            statusStrip1.SizingGrip = false;
+            statusStrip1.TabIndex = 2;
+            statusStrip1.Text = "statusStrip1";
+            // 
+            // github
+            // 
+            github.Font = new Font("Segoe UI", 11F);
+            github.IsLink = true;
+            github.LinkColor = Color.Black;
+            github.Name = "github";
+            github.Size = new Size(56, 20);
+            github.Text = "GitHub";
+            github.VisitedLinkColor = Color.Black;
+            github.Click += github_Click;
             // 
             // MainForm
             // 
@@ -123,11 +149,14 @@
             ClientSize = new Size(1200, 900);
             Controls.Add(panelContainer);
             Controls.Add(msMainForm);
+            Controls.Add(statusStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = msMainForm;
             MinimumSize = new Size(1000, 650);
             Name = "MainForm";
+            Padding = new Padding(5, 60, 5, 5);
             ShadowType = MetroFormShadowType.Flat;
+            SizeGripStyle = SizeGripStyle.Hide;
             Text = "Left Click - Gestor de Comércio Eletrónico";
             Theme = MetroFramework.MetroThemeStyle.Light;
             Load += Form1_Load;
@@ -135,6 +164,8 @@
             msMainForm.PerformLayout();
             panelContainer.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picBg).EndInit();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -150,5 +181,7 @@
         private ToolStripMenuItem campanhasToolStripMenuItem;
         private Panel panelContainer;
         private PictureBox picBg;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel github;
     }
 }

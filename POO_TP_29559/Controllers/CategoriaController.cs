@@ -34,7 +34,7 @@ public class CategoriaController : BaseController<Categoria, ChildForm>, IEntity
 
     protected override void UpdateItem(Categoria item)
     {
-        _repository.Remove(item);
+        _repository.Update(item);
     }
 
 }

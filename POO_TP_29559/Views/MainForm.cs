@@ -59,7 +59,7 @@ namespace poo_tp_29559
         private void Form1_Load(object sender, EventArgs e)
         {
             ToTopMost();
-        }   
+        }
 
         /// <summary>
         /// Evento chamado quando um item do menu principal é clicado.
@@ -117,5 +117,23 @@ namespace poo_tp_29559
                 this.Invoke((MethodInvoker)(() => { this.TopMost = false; }));
             });
         }
+
+        private void github_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var processStartInfo = new System.Diagnostics.ProcessStartInfo
+                {
+                    FileName = "https://github.com/MiguelAreal/POO_TP_29559",
+                    UseShellExecute = true // Ensures the URL is opened using the default browser
+                };
+                System.Diagnostics.Process.Start(processStartInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

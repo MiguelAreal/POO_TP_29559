@@ -3,32 +3,100 @@
   "WorkspaceRootPath": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\marcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\marcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addvendaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addvendaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addvendaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addvendaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\childform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\interfaces\\ientitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:interfaces\\ientitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\vendarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\vendarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\campanharepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\campanharepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\campanhacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\campanhacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\campanha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\campanha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\enumhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\enumerators\\metodospagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\enumerators\\metodospagamento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\vendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\produtocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addcampanhaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addcampanhaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\marcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\marcacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addcampanhaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,14 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addcampanhaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addcampanhaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addcategoriaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,28 +119,8 @@
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\itemvenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addclienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\produtoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\produtoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\venda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\campanha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\campanha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -99,32 +139,8 @@
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\campanhaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addmarcaform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\models\\vendaviewmodelcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:models\\vendaviewmodelcs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\vendarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\vendarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\baserepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\campanharepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:repositories\\campanharepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|solutionrelative:views\\addprodutoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3CEE446-1F19-4586-AAB8-DFBAB0A0AB4E}|poo_tp_29559.csproj|c:\\users\\areal\\documents\\github\\poo_tp_29559\\poo_tp_29559\\repositories\\categoriarepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -138,67 +154,285 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ChildForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
+              "RelativeDocumentMoniker": "Views\\ChildForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
+              "RelativeToolTip": "Views\\ChildForm.cs",
+              "ViewState": "AgIAALIAAAAAAAAAAAAAAMEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:28:39.246Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddVendaForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddVendaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddVendaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddVendaForm.cs [Design]",
+              "RelativeToolTip": "Views\\AddVendaForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:56:07.978Z",
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MarcaController.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\MarcaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MarcaController.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\MarcaController.cs",
-              "RelativeToolTip": "Controllers\\MarcaController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AddVendaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddVendaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddVendaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddVendaForm.cs",
+              "RelativeToolTip": "Views\\AddVendaForm.cs",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAAAH4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T13:52:05.712Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Controllers\\BaseController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAEsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:11:46.898Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IEntityController.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Interfaces\\IEntityController.cs",
-              "RelativeDocumentMoniker": "Interfaces\\IEntityController.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Interfaces\\IEntityController.cs",
-              "RelativeToolTip": "Interfaces\\IEntityController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:11:02.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChildForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
-              "RelativeDocumentMoniker": "Views\\ChildForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
-              "RelativeToolTip": "Views\\ChildForm.cs",
-              "ViewState": "AgIAAAIBAAAAAAAAAAAqwBwBAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:28:39.246Z",
+              "WhenOpened": "2024-12-09T14:49:09.618Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Campanha.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Campanha.cs",
+              "RelativeDocumentMoniker": "Models\\Campanha.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Campanha.cs",
+              "RelativeToolTip": "Models\\Campanha.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T16:11:35.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VendaRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\VendaRepo.cs",
+              "RelativeDocumentMoniker": "Repositories\\VendaRepo.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\VendaRepo.cs",
+              "RelativeToolTip": "Repositories\\VendaRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:53:07.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CampanhaRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\CampanhaRepo.cs",
+              "RelativeDocumentMoniker": "Repositories\\CampanhaRepo.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\CampanhaRepo.cs",
+              "RelativeToolTip": "Repositories\\CampanhaRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:53:12.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChildForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs",
+              "RelativeDocumentMoniker": "Views\\ChildForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\ChildForm.cs [Design]",
+              "RelativeToolTip": "Views\\ChildForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T10:37:15.376Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Cliente.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABoAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T08:54:24.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CampanhaController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\CampanhaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CampanhaController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\CampanhaController.cs",
+              "RelativeToolTip": "Controllers\\CampanhaController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADkAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T10:25:30.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AddProdutoForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddProdutoForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
+              "RelativeToolTip": "Views\\AddProdutoForm.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:55:18.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddProdutoForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddProdutoForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs [Design]",
+              "RelativeToolTip": "Views\\AddProdutoForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:55:15.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MetodosPagamento.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\Enumerators\\MetodosPagamento.cs",
+              "RelativeDocumentMoniker": "Repositories\\Enumerators\\MetodosPagamento.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\Enumerators\\MetodosPagamento.cs",
+              "RelativeToolTip": "Repositories\\Enumerators\\MetodosPagamento.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T10:10:14.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EnumHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\EnumHelper.cs",
+              "RelativeDocumentMoniker": "Repositories\\EnumHelper.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\EnumHelper.cs",
+              "RelativeToolTip": "Repositories\\EnumHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T10:13:34.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "VendaController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\VendaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\VendaController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\VendaController.cs",
+              "RelativeToolTip": "Controllers\\VendaController.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T09:40:13.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ProdutoController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ProdutoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutoController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ProdutoController.cs",
+              "RelativeToolTip": "Controllers\\ProdutoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T15:05:46.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AddMarcaForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddMarcaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs [Design]",
+              "RelativeToolTip": "Views\\AddMarcaForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T14:55:44.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ItemVenda.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\ItemVenda.cs",
+              "RelativeDocumentMoniker": "Models\\ItemVenda.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\ItemVenda.cs",
+              "RelativeToolTip": "Models\\ItemVenda.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAqwB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T08:52:59.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AddMarcaForm.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddMarcaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs",
+              "RelativeToolTip": "Views\\AddMarcaForm.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAuwCsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T10:44:59.288Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddClienteForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddClienteForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddClienteForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddClienteForm.cs [Design]",
+              "RelativeToolTip": "Views\\AddClienteForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T15:55:10.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddCampanhaForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCampanhaForm.cs",
+              "RelativeDocumentMoniker": "Views\\AddCampanhaForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCampanhaForm.cs [Design]",
+              "RelativeToolTip": "Views\\AddCampanhaForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:16:47.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
+              "RelativeDocumentMoniker": "Views\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs [Design]",
+              "RelativeToolTip": "Views\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T10:44:23.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Venda.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Venda.cs",
+              "RelativeDocumentMoniker": "Models\\Venda.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Venda.cs",
+              "RelativeToolTip": "Models\\Venda.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwCgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T08:52:01.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "ClienteController.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\ClienteController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClienteController.cs",
@@ -206,63 +440,35 @@
               "RelativeToolTip": "Controllers\\ClienteController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T09:40:04.401Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T09:40:04.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoriaController.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\CategoriaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriaController.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\CategoriaController.cs",
-              "RelativeToolTip": "Controllers\\CategoriaController.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACQAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "BaseRepo.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\BaseRepo.cs",
+              "RelativeDocumentMoniker": "Repositories\\BaseRepo.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\BaseRepo.cs",
+              "RelativeToolTip": "Repositories\\BaseRepo.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAuwDYAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T22:20:06.287Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T15:35:35.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VendaController.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\VendaController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VendaController.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\VendaController.cs",
-              "RelativeToolTip": "Controllers\\VendaController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADoAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "MarcaController.cs",
+              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\MarcaController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MarcaController.cs",
+              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Controllers\\MarcaController.cs",
+              "RelativeToolTip": "Controllers\\MarcaController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAACYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T09:40:13.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T13:52:05.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
-              "RelativeDocumentMoniker": "Views\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs [Design]",
-              "RelativeToolTip": "Views\\MainForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T10:05:12.188Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
-              "RelativeDocumentMoniker": "Views\\MainForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\MainForm.cs",
-              "RelativeToolTip": "Views\\MainForm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T10:05:14.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 24,
               "Title": "AddCampanhaForm.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCampanhaForm.cs",
               "RelativeDocumentMoniker": "Views\\AddCampanhaForm.cs",
@@ -270,36 +476,11 @@
               "RelativeToolTip": "Views\\AddCampanhaForm.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAADQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:17:21.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T09:17:21.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ItemVenda.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\ItemVenda.cs",
-              "RelativeDocumentMoniker": "Models\\ItemVenda.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\ItemVenda.cs",
-              "RelativeToolTip": "Models\\ItemVenda.cs",
-              "ViewState": "AgIAAAsAAABgnpmZmRkWwB8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T08:52:59.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AddCampanhaForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCampanhaForm.cs",
-              "RelativeDocumentMoniker": "Views\\AddCampanhaForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCampanhaForm.cs [Design]",
-              "RelativeToolTip": "Views\\AddCampanhaForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:16:47.202Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "AddCategoriaForm.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCategoriaForm.cs",
               "RelativeDocumentMoniker": "Views\\AddCategoriaForm.cs",
@@ -312,19 +493,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "AddCategoriaForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCategoriaForm.cs",
               "RelativeDocumentMoniker": "Views\\AddCategoriaForm.cs",
               "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddCategoriaForm.cs [Design]",
               "RelativeToolTip": "Views\\AddCategoriaForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T16:08:26.937Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-05T16:08:26.937Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 28,
               "Title": "AddClienteForm.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddClienteForm.cs",
               "RelativeDocumentMoniker": "Views\\AddClienteForm.cs",
@@ -332,12 +512,11 @@
               "RelativeToolTip": "Views\\AddClienteForm.cs",
               "ViewState": "AgIAABQAAADA/v////8BwB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-15T21:48:39.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-15T21:48:39.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 29,
               "Title": "ProdutoViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\ProdutoViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ProdutoViewModel.cs",
@@ -349,54 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Venda.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Venda.cs",
-              "RelativeDocumentMoniker": "Models\\Venda.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Venda.cs",
-              "RelativeToolTip": "Models\\Venda.cs",
-              "ViewState": "AgIAAAYAAAAAaGZmZuYswBcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T08:52:01.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Campanha.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Campanha.cs",
-              "RelativeDocumentMoniker": "Models\\Campanha.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Campanha.cs",
-              "RelativeToolTip": "Models\\Campanha.cs",
-              "ViewState": "AgIAAAkAAADAmZmZmRkWwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T16:11:35.08Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAZmZmZmb0vxcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T08:54:24.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AddClienteForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddClienteForm.cs",
-              "RelativeDocumentMoniker": "Views\\AddClienteForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddClienteForm.cs [Design]",
-              "RelativeToolTip": "Views\\AddClienteForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:55:10.723Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "Categoria.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Categoria.cs",
               "RelativeDocumentMoniker": "Models\\Categoria.cs",
@@ -408,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 31,
               "Title": "Marca.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Marca.cs",
               "RelativeDocumentMoniker": "Models\\Marca.cs",
@@ -420,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 33,
               "Title": "CampanhaViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\CampanhaViewModel.cs",
               "RelativeDocumentMoniker": "Models\\CampanhaViewModel.cs",
@@ -432,18 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AddMarcaForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs",
-              "RelativeDocumentMoniker": "Views\\AddMarcaForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddMarcaForm.cs [Design]",
-              "RelativeToolTip": "Views\\AddMarcaForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T09:09:37.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 32,
               "Title": "Produto.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\Produto.cs",
               "RelativeDocumentMoniker": "Models\\Produto.cs",
@@ -455,18 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "AddProdutoForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
-              "RelativeDocumentMoniker": "Views\\AddProdutoForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs [Design]",
-              "RelativeToolTip": "Views\\AddProdutoForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:55:15.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 34,
               "Title": "VendaViewModelcs.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Models\\VendaViewModelcs.cs",
               "RelativeDocumentMoniker": "Models\\VendaViewModelcs.cs",
@@ -478,55 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "VendaRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\VendaRepo.cs",
-              "RelativeDocumentMoniker": "Repositories\\VendaRepo.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\VendaRepo.cs",
-              "RelativeToolTip": "Repositories\\VendaRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:53:07.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BaseRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\BaseRepo.cs",
-              "RelativeDocumentMoniker": "Repositories\\BaseRepo.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\BaseRepo.cs",
-              "RelativeToolTip": "Repositories\\BaseRepo.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAkwB4AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:35:35.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AddProdutoForm.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
-              "RelativeDocumentMoniker": "Views\\AddProdutoForm.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Views\\AddProdutoForm.cs",
-              "RelativeToolTip": "Views\\AddProdutoForm.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:55:18.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CampanhaRepo.cs",
-              "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\CampanhaRepo.cs",
-              "RelativeDocumentMoniker": "Repositories\\CampanhaRepo.cs",
-              "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\CampanhaRepo.cs",
-              "RelativeToolTip": "Repositories\\CampanhaRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:53:12.703Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "CategoriaRepo.cs",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\Repositories\\CategoriaRepo.cs",
               "RelativeDocumentMoniker": "Repositories\\CategoriaRepo.cs",
