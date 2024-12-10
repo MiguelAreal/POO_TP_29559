@@ -61,6 +61,7 @@
             nudPreco.DecimalPlaces = 2;
             nudPreco.Font = new Font("Segoe UI", 10F);
             nudPreco.Location = new Point(23, 274);
+            nudPreco.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             nudPreco.Name = "nudPreco";
             nudPreco.Size = new Size(293, 25);
             nudPreco.TabIndex = 5;
