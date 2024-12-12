@@ -11,20 +11,28 @@ public class Venda : IIdentifiable
     public int Id { get; set; }
 
     [DisplayName("Cliente")]
-    public int ClienteID { get; set; } // Cliente associado
-    
+    public int? ClienteID { get; set; } // Cliente associado, se aplicável
+
+    [DisplayName("NIF")]
+    public int? NIF { get; set; } // NIF associado, se aplicável
+
     public List<ItemVenda>? Itens { get; set; } = new List<ItemVenda>();
 
-    // Total de unidades de produtos vendidos
-    public int Quantidade => Itens?.Sum(item => item.Unidades) ?? 0;
+    // Total de unidades de produtos vendidos (soma de cada produto)
+    public int ItensTotal => Itens?.Sum(item => item.Unidades) ?? 0;
 
-    // Total de valor de produtos vendidos, incluindo a percentagem de desconto de cada produto diferente vendido.
-    public decimal PrecoTotal => Itens?.Sum(item =>
-    (item.PrecoUnitario * item.Unidades) * (1-item.PercentagemDesc/100)
-    ) ?? 0;
+    // Total de valor de produtos vendidos, sem descontos.
+    public decimal TotalBruto { get; set; }
+    
+    // Total de valor de produtos vendidos, com descontos.
+    public decimal TotalLiquido { get; set; }
 
     // Data a que a venda foi efetuada
     public string DataVenda { get; set; }
+
+
+    // Data de fim da garantia, por defeito, 36 meses.
+    public string? FimDataGarantia { get; set; }
 
     // Pagamento Utilizado, consoante Enumerador
     public MetodoPagamento? MetodoPagamento { get; set; }
@@ -33,9 +41,7 @@ public class Venda : IIdentifiable
     public Venda()
     {
         DataVenda = DateTime.Now.ToString();
-
-        // Por defeito coloca o número de garantia em meses, baseado em saber se o cliente é particular ou não
-        //GarantiaMeses = cliente?.IsParticular == true ? 36 : 12;
+        FimDataGarantia = DateTime.Now.AddMonths(36).ToString();
     }
 
 }

@@ -1,6 +1,5 @@
 using MetroFramework.Components;
 using MetroFramework.Forms; 
-using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;   
 using poo_tp_29559.Views;
 using poo_tp_29559.Repositories.Enumerators;
@@ -58,7 +57,7 @@ namespace poo_tp_29559
         /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
-            ToTopMost();
+            
         }
 
         /// <summary>
@@ -102,20 +101,6 @@ namespace poo_tp_29559
             {
                 AbrirFormNoPanel(formFilho);
             }
-        }
-
-        /// <summary>
-        /// Coloca a aplicação no primeiro plano, de forma fixa, e após 1 segundo retorna a desativar essa propriedade.
-        /// Tem como propósito ter a certeza que a aplicação não é iniciada por baixo de outras aplicações.
-        /// </summary>
-        private void ToTopMost()
-        {
-            this.TopMost = true;
-
-            Task.Delay(100).ContinueWith(t =>
-            {
-                this.Invoke((MethodInvoker)(() => { this.TopMost = false; }));
-            });
         }
 
         private void github_Click(object sender, EventArgs e)

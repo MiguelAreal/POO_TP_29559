@@ -1,14 +1,8 @@
 [
   {
-    "Id": 2,
-    "Nome": "Categoria 3",
-    "Descricao": "Categoria 2",
-    "DataCriacao": "2024-11-05T09:16:06.4109405+00:00"
-  },
-  {
-    "Id": 3,
-    "Nome": "Monitores",
-    "Descricao": "Monitores ",
-    "DataCriacao": "2024-12-10T14:48:34.275584+00:00"
+    "Id": 1,
+    "Nome": "Teclados",
+    "Descricao": "Aquilo que escreve",
+    "DataCriacao": "2024-12-12T00:11:28.0245244+00:00"
   }
 ]

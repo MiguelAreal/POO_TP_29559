@@ -7,13 +7,13 @@ public class Produto : IIdentifiable
     public int Id { get; set; }
 
     [DisplayName("Nome do Produto")]
-    public string? Nome { get; set; }
+    public string Nome { get; set; }
 
     [DisplayName("Categoria")]
-    public int? CategoriaID { get; set; }
+    public int CategoriaID { get; set; }
 
     [DisplayName("Marca")]
-    public int? MarcaID { get; set; }
+    public int MarcaID { get; set; }
 
     [DisplayName("Preço")]
     public decimal Preco { get; set; }

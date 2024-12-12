@@ -1,4 +1,4 @@
-﻿using poo_tp_29559.Controllers;
+﻿
 using poo_tp_29559.Interfaces;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
@@ -6,26 +6,24 @@ using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-public class CampanhaController : BaseController<Campanha, ChildForm>, IEntityController
+public class CampanhaController : BaseController<Campanha>, IEntityController
 {
-    private List<CampanhaViewModel>? _campanhasComNomes; 
+    private List<CampanhaViewModel>? _campanhasComNomes;
 
-    public CampanhaController(ChildForm view) : base(view, "Data/campanhas.json")
-    {
-        Initialize();
-    }
+    public CampanhaController() : base("Data/campanhas.json") { }
 
-    protected override void ExibeItensNaView(List<Campanha> campanhas)
+    public override object GetItems()
     {
-        // Create a temporary list to hold translated products
+        List<Campanha> campanhas = _repository.GetAll();
+
         _campanhasComNomes = new List<CampanhaViewModel>();
 
         foreach (var campanha in campanhas)
         {
-            // Translate IDs to names
+            // Traduz IDs para nomes
             Categoria? categoria = new CategoriaRepo().GetById(campanha.CategoriaId);
 
-            // Create a view model for the product with names instead of IDs
+            // Cria view model com campanhas em vez de IDS para visualização
             var campanhaViewModel = new CampanhaViewModel
             {
                 Id = campanha.Id,
@@ -40,7 +38,7 @@ public class CampanhaController : BaseController<Campanha, ChildForm>, IEntityCo
         }
 
         // Pass the list of translated products to the view
-        _view.MostraItens(_campanhasComNomes);
+        return _campanhasComNomes;
     }
 
     protected override void RemoveItem(Campanha item)

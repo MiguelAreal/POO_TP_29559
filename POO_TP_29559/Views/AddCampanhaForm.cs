@@ -17,14 +17,12 @@ namespace poo_tp_29559.Views
     public partial class AddCampanhaForm : MetroForm
     {
         private readonly CampanhaController _controller;
-        private readonly ChildForm _view;
 
-        public AddCampanhaForm(ChildForm view)
+        public AddCampanhaForm()
         {
             InitializeComponent();
 
-            _view = view;
-            _controller = new CampanhaController(_view);
+            _controller = new CampanhaController();
             var categoriaRepo = new CategoriaRepo();
             CarregaCategorias();
 
@@ -72,8 +70,6 @@ namespace poo_tp_29559.Views
             };
 
             _controller.AddItem(novaCampanha);
-
-            _controller.CarregaItens();
 
 
 

@@ -33,8 +33,9 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgvItens = new DataGridView();
             txtSearchItem = new TextBox();
-            btnRemItem = new Button();
-            btnAddItem = new Button();
+            btnSeeVenda = new Label();
+            btnRem = new Label();
+            btnAdd = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvItens).BeginInit();
             SuspendLayout();
             // 
@@ -91,48 +92,56 @@
             txtSearchItem.TabIndex = 0;
             txtSearchItem.TextChanged += txtSearchItem_TextChanged;
             // 
-            // btnRemItem
+            // btnSeeVenda
             // 
-            btnRemItem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRemItem.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnRemItem.BackColor = Color.Transparent;
-            btnRemItem.BackgroundImageLayout = ImageLayout.Zoom;
-            btnRemItem.Cursor = Cursors.Hand;
-            btnRemItem.FlatAppearance.BorderSize = 0;
-            btnRemItem.FlatStyle = FlatStyle.Flat;
-            btnRemItem.Font = new Font("Segoe UI", 20F);
-            btnRemItem.ForeColor = Color.Black;
-            btnRemItem.Location = new Point(691, 51);
-            btnRemItem.Name = "btnRemItem";
-            btnRemItem.Padding = new Padding(2, 0, 0, 0);
-            btnRemItem.Size = new Size(36, 42);
-            btnRemItem.TabIndex = 1;
-            btnRemItem.Text = "🗑️";
-            btnRemItem.UseVisualStyleBackColor = false;
-            btnRemItem.Click += btnRemItem_Click;
-            btnRemItem.MouseEnter += btnRemItem_MouseEnter;
-            btnRemItem.MouseLeave += btnRemItem_MouseLeave;
+            btnSeeVenda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSeeVenda.Cursor = Cursors.Hand;
+            btnSeeVenda.FlatStyle = FlatStyle.Flat;
+            btnSeeVenda.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSeeVenda.Location = new Point(646, 50);
+            btnSeeVenda.Margin = new Padding(0);
+            btnSeeVenda.Name = "btnSeeVenda";
+            btnSeeVenda.Size = new Size(35, 40);
+            btnSeeVenda.TabIndex = 5;
+            btnSeeVenda.Text = "📜";
+            btnSeeVenda.TextAlign = ContentAlignment.MiddleCenter;
+            btnSeeVenda.Visible = false;
+            btnSeeVenda.MouseEnter += btnSeeVenda_MouseEnter;
+            btnSeeVenda.MouseLeave += btnSeeVenda_MouseLeave;
             // 
-            // btnAddItem
+            // btnRem
             // 
-            btnAddItem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnAddItem.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAddItem.BackColor = Color.Transparent;
-            btnAddItem.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAddItem.Cursor = Cursors.Hand;
-            btnAddItem.FlatAppearance.BorderSize = 0;
-            btnAddItem.FlatStyle = FlatStyle.Flat;
-            btnAddItem.Font = new Font("Segoe UI", 20F);
-            btnAddItem.ForeColor = Color.Black;
-            btnAddItem.Location = new Point(737, 51);
-            btnAddItem.Name = "btnAddItem";
-            btnAddItem.Size = new Size(40, 42);
-            btnAddItem.TabIndex = 2;
-            btnAddItem.Text = "🆕";
-            btnAddItem.UseVisualStyleBackColor = false;
-            btnAddItem.Click += btnAddItem_Click;
-            btnAddItem.MouseEnter += btnAddItem_MouseEnter;
-            btnAddItem.MouseLeave += btnAddItem_MouseLeave;
+            btnRem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRem.Cursor = Cursors.Hand;
+            btnRem.FlatStyle = FlatStyle.Flat;
+            btnRem.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRem.Location = new Point(696, 50);
+            btnRem.Margin = new Padding(0);
+            btnRem.Name = "btnRem";
+            btnRem.Size = new Size(35, 40);
+            btnRem.TabIndex = 6;
+            btnRem.Text = "🗑️";
+            btnRem.TextAlign = ContentAlignment.MiddleCenter;
+            btnRem.Click += btnRem_Click;
+            btnRem.MouseEnter += btnRem_MouseEnter;
+            btnRem.MouseLeave += btnRem_MouseLeave;
+            // 
+            // btnAdd
+            // 
+            btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAdd.Cursor = Cursors.Hand;
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAdd.Location = new Point(744, 50);
+            btnAdd.Margin = new Padding(0);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(35, 40);
+            btnAdd.TabIndex = 7;
+            btnAdd.Text = "🆕";
+            btnAdd.TextAlign = ContentAlignment.MiddleCenter;
+            btnAdd.Click += btnAdd_Click;
+            btnAdd.MouseEnter += btnAdd_MouseEnter;
+            btnAdd.MouseLeave += btnAdd_MouseLeave;
             // 
             // ChildForm
             // 
@@ -141,8 +150,9 @@
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
             Controls.Add(dgvItens);
-            Controls.Add(btnAddItem);
-            Controls.Add(btnRemItem);
+            Controls.Add(btnAdd);
+            Controls.Add(btnRem);
+            Controls.Add(btnSeeVenda);
             Controls.Add(txtSearchItem);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -160,7 +170,8 @@
 
         private DataGridView dgvItens;
         private TextBox txtSearchItem;
-        private Button btnRemItem;
-        private Button btnAddItem;
+        private Label btnSeeVenda;
+        private Label btnRem;
+        private Label btnAdd;
     }
 }

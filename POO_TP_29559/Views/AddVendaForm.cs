@@ -13,14 +13,15 @@ namespace poo_tp_29559.Views
     public partial class AddVendaForm : MetroForm
     {
         private readonly VendaController _controller;
-        private readonly ChildForm _view;
         ProdutoRepo produtoRepo = new();
 
 
-        ClienteRepo clienteRepo = new();
-        private List<Cliente> _clientes;
+        UtilizadorRepo clienteRepo = new();
+        private List<Utilizador> _clientes;
+        int mesesGarantia = 36;
+        decimal totalBruto = 0, totalLiquido = 0;
 
-        public AddVendaForm(ChildForm view)
+        public AddVendaForm()
         {
             InitializeComponent();
             CarregaProdutos();
@@ -69,12 +70,12 @@ namespace poo_tp_29559.Views
         // Obter o NIF do cliente selecionado
         private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cliente clienteSelecionado = cmbClientes.SelectedItem as Cliente;
+            Utilizador clienteSelecionado = cmbClientes.SelectedItem as Utilizador;
             getNIF(clienteSelecionado);
         }
 
         // Atualizar o campo de NIF baseado no cliente selecionado
-        private void getNIF(Cliente selectedCliente)
+        private void getNIF(Utilizador selectedCliente)
         {
             if (selectedCliente != null && !string.IsNullOrWhiteSpace(selectedCliente.Nif))
             {
@@ -103,17 +104,18 @@ namespace poo_tp_29559.Views
                 // Faz diferença no cálculo da garantia associada.
                 if (txtNIF.Text.StartsWith("1") || txtNIF.Text.StartsWith("2") || txtNIF.Text.StartsWith("3"))
                 {
-                    txtGarantia.Text = "36 Meses";
+                    mesesGarantia = 36;
                 }
                 else
                 {
-                    txtGarantia.Text = "12 Meses";
+                    mesesGarantia = 12;
                 }
             }
             else
             {
-                txtGarantia.Text = "36 Meses";
+                mesesGarantia = 36;
             }
+            txtGarantia.Text = $"{mesesGarantia} meses";
         }
 
         // Quando um produto é adicionado à venda
@@ -172,7 +174,6 @@ namespace poo_tp_29559.Views
         // Atualizar o total bruto da venda e calcular o total líquido com descontos
         private void AtualizarTotais()
         {
-            decimal totalBruto = 0;
             decimal totalDesconto = 0;
 
             foreach (DataGridViewRow row in dgvFatura.Rows)
@@ -196,7 +197,7 @@ namespace poo_tp_29559.Views
             }
 
             // Calcular o total líquido
-            decimal totalLiquido = totalBruto - totalDesconto;
+            totalLiquido = totalBruto - totalDesconto;
 
             txtTotalBruto.Text = totalBruto.ToString("C");
             txtTotalLiquido.Text = totalLiquido.ToString("C");
@@ -283,10 +284,20 @@ namespace poo_tp_29559.Views
 
         private void txtNIF_Leave(object sender, EventArgs e)
         {
+            // Verificar se o NIF tem exatamente 9 caracteres
             if (txtNIF.Text.Length != 9)
             {
-                MessageBox.Show("A proceder sem NIF. NIF inválido.");
+                MessageBox.Show("O NIF deve ter 9 dígitos.", "NIF inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtNIF.Clear();
+                return;
+            }
+
+            // Tentar converter o texto para um número inteiro (int)
+            if (!int.TryParse(txtNIF.Text, out int nifValue))
+            {
+                MessageBox.Show("O NIF deve conter apenas números.", "NIF inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNIF.Clear();
+                return;
             }
         }
 
@@ -314,6 +325,209 @@ namespace poo_tp_29559.Views
             {
                 AtualizarTotais();
             }
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            // Validação de entrada
+            if (!ValidarVenda())
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios e adicione pelo menos um produto.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Criar a venda
+            Venda venda = CriarVenda();
+
+            try
+            {
+                // Atualizar o stock dos produtos vendidos
+                foreach (var itemVenda in venda.Itens)
+                {
+                    Produto produto = produtoRepo.GetById(itemVenda.ProdutoID);
+                    if (produto != null)
+                    {
+                        // Subtrai a quantidade vendida do stock de cada produto
+                        produto.QuantidadeEmStock -= itemVenda.Unidades;
+
+                        // Atualiza o produto no repositório
+                        produtoRepo.Update(produto);
+                    }
+                }
+
+                // Guarda a venda no repositório
+                VendaRepo vendaRepo = new(new UtilizadorRepo());
+                vendaRepo.Add(venda);
+
+                MessageBox.Show("Venda registada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Limpar formulário após a gravação
+                LimparFormulario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro ao gravar a venda: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+        // Validação da venda antes de gravar
+        // Tem de ter valores na dgvFatura e método de pagamento.
+        private bool ValidarVenda()
+        {
+            if (dgvFatura.Rows.Count == 0)
+                return false;
+
+            if (cmbMetodoPagamento.SelectedIndex < 0)
+                return false;
+
+            return true;
+        }
+
+        // Criar objeto Venda com os dados do formulário
+        private Venda CriarVenda()
+        {
+            Venda venda = new()
+            {
+                ClienteID = (int?)cmbClientes.SelectedValue,
+                NIF = Convert.ToInt32(txtNIF.Text),
+                TotalBruto = totalBruto,
+                TotalLiquido = totalLiquido,
+                DataVenda = DateTime.Now.ToString("dd-MM-yyyy - HH:mm"),
+                FimDataGarantia = DateTime.Now.AddMonths(mesesGarantia).ToString("dd-MM-yyyy"),
+
+                MetodoPagamento = Enum.TryParse(cmbMetodoPagamento.SelectedValue?.ToString(), out MetodoPagamento metodo)
+                  ? metodo
+                  : (MetodoPagamento?)null
+            };
+
+            foreach (DataGridViewRow row in dgvFatura.Rows)
+            {
+                if (row.Cells["IDProduto"].Value != null && row.Cells["Quantidade"].Value != null)
+                {
+                    int produtoID = Convert.ToInt32(row.Cells["IDProduto"].Value);
+                    int quantidade = Convert.ToInt32(row.Cells["Quantidade"].Value);
+
+                    Produto produto = produtoRepo.GetById(produtoID);
+
+                    if (produto != null)
+                    {
+                        ItemVenda itemVenda = new(
+                            produtoID,
+                            produto.Nome,
+                            produto.Preco,
+                            produto.CategoriaID,
+                            ObterNomeCategoria(produto.CategoriaID),
+                            ObterNomeMarca(produto.MarcaID),
+                            quantidade,
+                            (int?)ObterDescontoPorCategoria(produto.CategoriaID) // Adicionado o argumento para percentagemDesc
+
+                        );
+
+
+
+                        venda.Itens.Add(itemVenda);
+                    }
+                }
+            }
+
+            return venda;
+        }
+
+        // Limpar campos do formulário após gravação
+        private void LimparFormulario()
+        {
+            cmbClientes.SelectedIndex = -1;
+            txtNIF.Clear();
+            txtGarantia.Clear();
+            cmbMetodoPagamento.SelectedIndex = -1;
+            dgvFatura.Rows.Clear();
+            txtTotalBruto.Clear();
+            txtTotalLiquido.Clear();
+            listViewCampanhas.Items.Clear();
+        }
+
+        private void btnRemItem_Click_1(object sender, EventArgs e)
+        {
+
+            if (dgvFatura.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um item na fatura para remover.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var row = dgvFatura.SelectedRows[0];
+            dgvFatura.Rows.Remove(row);
+
+            // Recalcular campanhas
+            VerificarCampanhas();
+            AtualizarTotais();
+        }
+
+        private void btnAddProduto_Click_1(object sender, EventArgs e)
+        {
+
+            Produto produtoSelecionado = cmbProdutos.SelectedItem as Produto;
+            if (produtoSelecionado == null)
+            {
+                MessageBox.Show("Selecione um produto antes de adicionar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int quantidadeDesejada = (int)nudQtd.Value;
+
+            // Verificar stock disponível considerando o que já foi adicionado na fatura
+            int quantidadeTotalFatura = dgvFatura.Rows
+                .Cast<DataGridViewRow>()
+                .Where(row => row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
+                .Sum(row => Convert.ToInt32(row.Cells["Quantidade"].Value));
+
+            int quantidadeDisponivel = (produtoSelecionado.QuantidadeEmStock - quantidadeTotalFatura);
+
+            // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0.
+
+            quantidadeDisponivel = quantidadeDisponivel < 0 ? 0 : quantidadeDisponivel;
+
+            if (quantidadeDesejada <= 0 || quantidadeDesejada > quantidadeDisponivel)
+            {
+                MessageBox.Show($"Quantidade inválida ou insuficiente no stock! Disponível: {quantidadeDisponivel}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verificar se o produto já está na fatura e atualizar a quantidade
+            foreach (DataGridViewRow row in dgvFatura.Rows)
+            {
+                if (row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
+                {
+                    int quantidadeAtual = Convert.ToInt32(row.Cells["Quantidade"].Value);
+                    row.Cells["Quantidade"].Value = quantidadeAtual + quantidadeDesejada;
+                    produtoSelecionado.QuantidadeEmStock -= quantidadeDesejada;
+                    AtualizarTotais();
+                    return;
+                }
+            }
+
+            // Adicionar novo produto à fatura
+            dgvFatura.Rows.Add(produtoSelecionado.Id, produtoSelecionado.Nome, ObterNomeCategoria(produtoSelecionado.CategoriaID), ObterNomeMarca(produtoSelecionado.MarcaID), quantidadeDesejada, produtoSelecionado.Preco);
+            AtualizarTotais();
+
+            // Verificar campanhas aplicáveis
+            VerificarCampanhas();
+        }
+
+
+
+        private void btnAddProduto_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnAddProduto, Color.DodgerBlue);
+        private void btnAddProduto_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnAddProduto, Color.Black);
+        private void btnRemItem_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnRemItem, Color.Red);
+        private void btnRemItem_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnRemItem, Color.Black);
+
+
+        // Altera a cor de botão passado por parâmetro, para uma cor passada por parâmetro.
+        private void ChangeButtonColor(Control button, Color color)
+        {
+            button.ForeColor = color;
         }
     }
 }

@@ -17,13 +17,11 @@ namespace poo_tp_29559.Views
     public partial class AddCategoriaForm : MetroForm
     {
         private readonly CategoriaController _controller;
-        private readonly ChildForm _view;
 
-        public AddCategoriaForm(ChildForm view)
+        public AddCategoriaForm()
         {
             InitializeComponent();
-            _view = view;
-            _controller = new CategoriaController(_view);
+            _controller = new CategoriaController();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -47,10 +45,6 @@ namespace poo_tp_29559.Views
 
             // Adiciona o novo produto através do controlador
             _controller.AddItem(novaCategoria);
-
-            // Atualiza a DataGridView no form principal
-            _controller.CarregaItens();
-
 
 
             this.Close();

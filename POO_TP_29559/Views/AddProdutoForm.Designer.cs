@@ -70,20 +70,20 @@
             // lblPreco
             // 
             lblPreco.AutoSize = true;
-            lblPreco.Font = new Font("Segoe UI", 10F);
+            lblPreco.Font = new Font("Montserrat", 10F);
             lblPreco.Location = new Point(23, 252);
             lblPreco.Name = "lblPreco";
-            lblPreco.Size = new Size(43, 19);
+            lblPreco.Size = new Size(50, 20);
             lblPreco.TabIndex = 11;
             lblPreco.Text = "Preço";
             // 
             // lblStock
             // 
             lblStock.AutoSize = true;
-            lblStock.Font = new Font("Segoe UI", 10F);
+            lblStock.Font = new Font("Montserrat", 10F);
             lblStock.Location = new Point(23, 316);
             lblStock.Name = "lblStock";
-            lblStock.Size = new Size(42, 19);
+            lblStock.Size = new Size(49, 20);
             lblStock.TabIndex = 12;
             lblStock.Text = "Stock";
             // 
@@ -122,10 +122,10 @@
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 10F);
+            lblNome.Font = new Font("Montserrat", 10F);
             lblNome.Location = new Point(23, 71);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(46, 19);
+            lblNome.Size = new Size(52, 20);
             lblNome.TabIndex = 8;
             lblNome.Text = "Nome";
             // 
@@ -143,10 +143,10 @@
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Segoe UI", 10F);
+            lblCategoria.Font = new Font("Montserrat", 10F);
             lblCategoria.Location = new Point(23, 133);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(68, 19);
+            lblCategoria.Size = new Size(78, 20);
             lblCategoria.TabIndex = 9;
             lblCategoria.Text = "Categoria";
             // 
@@ -161,10 +161,10 @@
             // lblMarca
             // 
             lblMarca.AutoSize = true;
-            lblMarca.Font = new Font("Segoe UI", 10F);
+            lblMarca.Font = new Font("Montserrat", 10F);
             lblMarca.Location = new Point(23, 191);
             lblMarca.Name = "lblMarca";
-            lblMarca.Size = new Size(47, 19);
+            lblMarca.Size = new Size(52, 20);
             lblMarca.TabIndex = 10;
             lblMarca.Text = "Marca";
             // 

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVendaForm));
             lblProduto = new Label();
             cmbProdutos = new ComboBox();
@@ -42,9 +44,8 @@
             cmbClientes = new ComboBox();
             lblCliente = new Label();
             nudQtd = new NumericUpDown();
-            btnAddProduto = new Button();
             btnAddCliente = new Button();
-            label1 = new Label();
+            lblFatura = new Label();
             cmbMetodoPagamento = new ComboBox();
             label2 = new Label();
             lblNIF = new Label();
@@ -61,9 +62,10 @@
             btnCancelar = new Button();
             btnConfirmar = new Button();
             lblQtd = new Label();
-            btnRemItem = new Button();
             txtGarantia = new TextBox();
             label6 = new Label();
+            btnRemItem = new Label();
+            btnAddProduto = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvFatura).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudQtd).BeginInit();
             SuspendLayout();
@@ -71,10 +73,10 @@
             // lblProduto
             // 
             lblProduto.AutoSize = true;
-            lblProduto.Font = new Font("Segoe UI", 10F);
+            lblProduto.Font = new Font("Montserrat", 10F);
             lblProduto.Location = new Point(23, 66);
             lblProduto.Name = "lblProduto";
-            lblProduto.Size = new Size(59, 19);
+            lblProduto.Size = new Size(67, 20);
             lblProduto.TabIndex = 24;
             lblProduto.Text = "Produto";
             // 
@@ -91,24 +93,42 @@
             // dgvFatura
             // 
             dgvFatura.AllowUserToAddRows = false;
+            dgvFatura.AllowUserToDeleteRows = false;
+            dgvFatura.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvFatura.BackgroundColor = Color.White;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle1.Font = new Font("Montserrat", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Control;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvFatura.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvFatura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFatura.Columns.AddRange(new DataGridViewColumn[] { IDProduto, Produto, Categoria, Marca, Quantidade, PrecoUni });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvFatura.DefaultCellStyle = dataGridViewCellStyle2;
             dgvFatura.GridColor = Color.White;
             dgvFatura.Location = new Point(380, 88);
             dgvFatura.MultiSelect = false;
             dgvFatura.Name = "dgvFatura";
             dgvFatura.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Control;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvFatura.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvFatura.RowHeadersVisible = false;
-            dgvFatura.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dgvFatura.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dgvFatura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFatura.Size = new Size(506, 265);
             dgvFatura.TabIndex = 27;
@@ -154,21 +174,21 @@
             // cmbClientes
             // 
             cmbClientes.FlatStyle = FlatStyle.System;
-            cmbClientes.Font = new Font("Segoe UI", 10F);
+            cmbClientes.Font = new Font("Montserrat", 10F);
             cmbClientes.FormattingEnabled = true;
             cmbClientes.Location = new Point(23, 149);
             cmbClientes.Name = "cmbClientes";
-            cmbClientes.Size = new Size(192, 25);
+            cmbClientes.Size = new Size(192, 26);
             cmbClientes.TabIndex = 29;
             cmbClientes.SelectedIndexChanged += cmbClientes_SelectedIndexChanged;
             // 
             // lblCliente
             // 
             lblCliente.AutoSize = true;
-            lblCliente.Font = new Font("Segoe UI", 10F);
+            lblCliente.Font = new Font("Montserrat", 10F);
             lblCliente.Location = new Point(23, 127);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(51, 19);
+            lblCliente.Size = new Size(58, 20);
             lblCliente.TabIndex = 28;
             lblCliente.Text = "Cliente";
             // 
@@ -183,28 +203,6 @@
             nudQtd.TabIndex = 30;
             nudQtd.ThousandsSeparator = true;
             nudQtd.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
-            // btnAddProduto
-            // 
-            btnAddProduto.Anchor = AnchorStyles.None;
-            btnAddProduto.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAddProduto.BackColor = Color.Transparent;
-            btnAddProduto.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAddProduto.Cursor = Cursors.Hand;
-            btnAddProduto.FlatAppearance.BorderSize = 0;
-            btnAddProduto.FlatStyle = FlatStyle.Flat;
-            btnAddProduto.Font = new Font("Segoe UI", 20F);
-            btnAddProduto.ForeColor = Color.Black;
-            btnAddProduto.Location = new Point(275, 75);
-            btnAddProduto.Margin = new Padding(0);
-            btnAddProduto.Name = "btnAddProduto";
-            btnAddProduto.Size = new Size(37, 42);
-            btnAddProduto.TabIndex = 31;
-            btnAddProduto.Text = "\U0001f6d2";
-            btnAddProduto.TextAlign = ContentAlignment.TopCenter;
-            btnAddProduto.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnAddProduto.UseVisualStyleBackColor = false;
-            btnAddProduto.Click += btnAddProduto_Click;
             // 
             // btnAddCliente
             // 
@@ -227,15 +225,15 @@
             btnAddCliente.TextImageRelation = TextImageRelation.ImageAboveText;
             btnAddCliente.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblFatura
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(380, 65);
-            label1.Name = "label1";
-            label1.Size = new Size(48, 19);
-            label1.TabIndex = 33;
-            label1.Text = "Fatura";
+            lblFatura.AutoSize = true;
+            lblFatura.Font = new Font("Montserrat", 10F);
+            lblFatura.Location = new Point(380, 65);
+            lblFatura.Name = "lblFatura";
+            lblFatura.Size = new Size(54, 20);
+            lblFatura.TabIndex = 33;
+            lblFatura.Text = "Fatura";
             // 
             // cmbMetodoPagamento
             // 
@@ -251,20 +249,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
+            label2.Font = new Font("Montserrat", 10F);
             label2.Location = new Point(23, 260);
             label2.Name = "label2";
-            label2.Size = new Size(151, 19);
+            label2.Size = new Size(171, 20);
             label2.TabIndex = 34;
             label2.Text = "Método de Pagamento";
             // 
             // lblNIF
             // 
             lblNIF.AutoSize = true;
-            lblNIF.Font = new Font("Segoe UI", 10F);
+            lblNIF.Font = new Font("Montserrat", 10F);
             lblNIF.Location = new Point(23, 191);
             lblNIF.Name = "lblNIF";
-            lblNIF.Size = new Size(30, 19);
+            lblNIF.Size = new Size(33, 20);
             lblNIF.TabIndex = 36;
             lblNIF.Text = "NIF";
             // 
@@ -282,10 +280,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
+            label3.Font = new Font("Montserrat", 10F);
             label3.Location = new Point(24, 334);
             label3.Name = "label3";
-            label3.Size = new Size(142, 19);
+            label3.Size = new Size(163, 20);
             label3.TabIndex = 38;
             label3.Text = "Campanhas Aplicadas";
             // 
@@ -295,8 +293,9 @@
             listViewCampanhas.FullRowSelect = true;
             listViewCampanhas.HeaderStyle = ColumnHeaderStyle.None;
             listViewCampanhas.Location = new Point(24, 356);
+            listViewCampanhas.MultiSelect = false;
             listViewCampanhas.Name = "listViewCampanhas";
-            listViewCampanhas.Size = new Size(226, 139);
+            listViewCampanhas.Size = new Size(246, 139);
             listViewCampanhas.TabIndex = 39;
             listViewCampanhas.UseCompatibleStateImageBehavior = false;
             listViewCampanhas.View = View.Details;
@@ -316,6 +315,7 @@
             // 
             // txtTotalBruto
             // 
+            txtTotalBruto.BackColor = Color.White;
             txtTotalBruto.Font = new Font("Segoe UI", 10F);
             txtTotalBruto.Location = new Point(380, 381);
             txtTotalBruto.MaxLength = 9;
@@ -327,25 +327,26 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F);
+            label4.Font = new Font("Montserrat", 10F);
             label4.Location = new Point(377, 359);
             label4.Name = "label4";
-            label4.Size = new Size(79, 19);
+            label4.Size = new Size(91, 20);
             label4.TabIndex = 42;
             label4.Text = "Total Bruto:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F);
+            label5.Font = new Font("Montserrat", 10F);
             label5.Location = new Point(507, 359);
             label5.Name = "label5";
-            label5.Size = new Size(90, 19);
+            label5.Size = new Size(102, 20);
             label5.TabIndex = 44;
             label5.Text = "Total Líquido:";
             // 
             // txtTotalLiquido
             // 
+            txtTotalLiquido.BackColor = Color.White;
             txtTotalLiquido.Font = new Font("Segoe UI", 10F);
             txtTotalLiquido.Location = new Point(510, 381);
             txtTotalLiquido.MaxLength = 9;
@@ -375,39 +376,21 @@
             btnConfirmar.TabIndex = 46;
             btnConfirmar.Text = "Confirmar";
             btnConfirmar.UseVisualStyleBackColor = true;
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // lblQtd
             // 
             lblQtd.AutoSize = true;
-            lblQtd.Font = new Font("Segoe UI", 10F);
+            lblQtd.Font = new Font("Montserrat", 10F);
             lblQtd.Location = new Point(221, 64);
             lblQtd.Name = "lblQtd";
-            lblQtd.Size = new Size(36, 19);
+            lblQtd.Size = new Size(39, 20);
             lblQtd.TabIndex = 47;
             lblQtd.Text = "Qtd.";
             // 
-            // btnRemItem
-            // 
-            btnRemItem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnRemItem.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnRemItem.BackColor = Color.Transparent;
-            btnRemItem.BackgroundImageLayout = ImageLayout.Zoom;
-            btnRemItem.Cursor = Cursors.Hand;
-            btnRemItem.FlatAppearance.BorderSize = 0;
-            btnRemItem.FlatStyle = FlatStyle.Flat;
-            btnRemItem.Font = new Font("Segoe UI", 20F);
-            btnRemItem.ForeColor = Color.Black;
-            btnRemItem.Location = new Point(850, 365);
-            btnRemItem.Name = "btnRemItem";
-            btnRemItem.Padding = new Padding(2, 0, 0, 0);
-            btnRemItem.Size = new Size(36, 42);
-            btnRemItem.TabIndex = 48;
-            btnRemItem.Text = "🗑️";
-            btnRemItem.UseVisualStyleBackColor = false;
-            btnRemItem.Click += btnRemItem_Click;
-            // 
             // txtGarantia
             // 
+            txtGarantia.BackColor = Color.White;
             txtGarantia.Font = new Font("Segoe UI", 10F);
             txtGarantia.Location = new Point(639, 382);
             txtGarantia.MaxLength = 9;
@@ -419,12 +402,46 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10F);
+            label6.Font = new Font("Montserrat", 10F);
             label6.Location = new Point(639, 360);
             label6.Name = "label6";
-            label6.Size = new Size(61, 19);
+            label6.Size = new Size(71, 20);
             label6.TabIndex = 49;
-            label6.Text = "Garantia";
+            label6.Text = "Garantia:";
+            // 
+            // btnRemItem
+            // 
+            btnRemItem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRemItem.Cursor = Cursors.Hand;
+            btnRemItem.FlatStyle = FlatStyle.Flat;
+            btnRemItem.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRemItem.Location = new Point(851, 44);
+            btnRemItem.Margin = new Padding(0);
+            btnRemItem.Name = "btnRemItem";
+            btnRemItem.Size = new Size(35, 40);
+            btnRemItem.TabIndex = 51;
+            btnRemItem.Text = "🗑️";
+            btnRemItem.TextAlign = ContentAlignment.MiddleCenter;
+            btnRemItem.Click += btnRemItem_Click_1;
+            btnRemItem.MouseEnter += btnRemItem_MouseEnter;
+            btnRemItem.MouseLeave += btnRemItem_MouseLeave;
+            // 
+            // btnAddProduto
+            // 
+            btnAddProduto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAddProduto.Cursor = Cursors.Hand;
+            btnAddProduto.FlatStyle = FlatStyle.Flat;
+            btnAddProduto.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddProduto.Location = new Point(280, 77);
+            btnAddProduto.Margin = new Padding(0);
+            btnAddProduto.Name = "btnAddProduto";
+            btnAddProduto.Size = new Size(35, 40);
+            btnAddProduto.TabIndex = 52;
+            btnAddProduto.Text = "\U0001f6d2";
+            btnAddProduto.TextAlign = ContentAlignment.MiddleCenter;
+            btnAddProduto.Click += btnAddProduto_Click_1;
+            btnAddProduto.MouseEnter += btnAddProduto_MouseEnter;
+            btnAddProduto.MouseLeave += btnAddProduto_MouseLeave;
             // 
             // AddVendaForm
             // 
@@ -433,9 +450,10 @@
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             CancelButton = btnCancelar;
             ClientSize = new Size(911, 529);
+            Controls.Add(btnAddProduto);
+            Controls.Add(btnRemItem);
             Controls.Add(txtGarantia);
             Controls.Add(label6);
-            Controls.Add(btnRemItem);
             Controls.Add(lblQtd);
             Controls.Add(btnCancelar);
             Controls.Add(btnConfirmar);
@@ -449,9 +467,8 @@
             Controls.Add(lblNIF);
             Controls.Add(cmbMetodoPagamento);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblFatura);
             Controls.Add(btnAddCliente);
-            Controls.Add(btnAddProduto);
             Controls.Add(nudQtd);
             Controls.Add(cmbClientes);
             Controls.Add(lblCliente);
@@ -478,9 +495,8 @@
         private ComboBox cmbClientes;
         private Label lblCliente;
         private NumericUpDown nudQtd;
-        private Button btnAddProduto;
         private Button btnAddCliente;
-        private Label label1;
+        private Label lblFatura;
         private ComboBox cmbMetodoPagamento;
         private Label label2;
         private Label lblNIF;
@@ -494,7 +510,6 @@
         private Button btnCancelar;
         private Button btnConfirmar;
         private Label lblQtd;
-        private Button btnRemItem;
         private ColumnHeader Nome;
         private ColumnHeader CategoriaAplicada;
         private ColumnHeader Percentagem;
@@ -506,5 +521,7 @@
         private DataGridViewTextBoxColumn Marca;
         private DataGridViewTextBoxColumn Quantidade;
         private DataGridViewTextBoxColumn PrecoUni;
+        private Label btnRemItem;
+        private Label btnAddProduto;
     }
 }

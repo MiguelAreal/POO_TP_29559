@@ -1,12 +1,5 @@
 ﻿using MetroFramework.Forms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ValidationLibrary;
 
@@ -14,64 +7,67 @@ namespace poo_tp_29559.Views
 {
     public partial class AddClienteForm : MetroForm
     {
-        private readonly ClienteController _controller;
-        private readonly ChildForm _view;
+        private readonly UtilizadorController _controller;
 
-        public AddClienteForm(ChildForm view)
+        public AddClienteForm()
         {
             InitializeComponent();
-            _view = view;
-            _controller = new ClienteController(_view);
+            _controller = new UtilizadorController();
             dtpNasc.Checked = false;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            bool allValid = false;
+            bool allValid = true;
 
-            Control[] controls = { txtNome, txtContacto1, txtMorada, txtNIF };
-            Label[] labels = { lblNome, lblContacto, lblMorada, lblNIF };
+            // Validação de campos vazios
+            Control[] controls = { txtNome, txtContactoCodPais, txtMorada };
+            Label[] labels = { lblNome, lblContacto, lblMorada };
+            allValid &= FieldValidator.ValidateFields(controls, labels);
 
-            //Valida campos vazios
-            allValid = FieldValidator.ValidateFields(controls, labels);
+            // Valida número de telefone
+            allValid &= FieldValidator.ValidateNineDigits(txtContacto.Text, lblContacto);
 
-            //Valida número de telefone
-            allValid = FieldValidator.ValidateContact(txtContacto.Text, lblContacto);
+            // Valida NIF
+            allValid &= FieldValidator.ValidateNineDigits(txtNIF.Text, lblNIF);
 
-            //Valida data de nascimento, se registada
+            // Valida data de nascimento, se marcada
             if (dtpNasc.Checked)
             {
-                allValid = FieldValidator.ValidateDate(dtpNasc, lblDataNasc);
+                allValid &= FieldValidator.ValidateDate(dtpNasc, lblDataNasc);
             }
 
+            // Exibe erro e interrompe o fluxo, se inválido
             if (!allValid)
             {
                 return;
             }
 
+            // Garante que o contacto tem país e número, e não apenas um deles.
+            if (string.IsNullOrWhiteSpace(txtContactoCodPais.Text) || string.IsNullOrWhiteSpace(txtContacto.Text))
+            {
+                lblContacto.ForeColor = Color.Red;
+                return;
+            }
 
-
-            var novoCliente = new Cliente
+            var novoCliente = new Utilizador
             {
                 Nome = txtNome.Text,
-                Contacto = txtContacto1.Text + txtContacto.Text,
+                Contacto = txtContactoCodPais.Text + txtContacto.Text,
                 Morada = txtMorada.Text,
-                DataNasc = dtpNasc.Value.ToString(),
+                DataNasc = dtpNasc.Checked ? dtpNasc.Value.ToString("dd-MM-yyyy HH:mm:ss") : null,
                 Nif = txtNIF.Text,
             };
 
-
+            // Adiciona e atualiza itens na view
             _controller.AddItem(novoCliente);
 
-            _controller.CarregaItens();
-
             this.Close();
-
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

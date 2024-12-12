@@ -72,20 +72,20 @@
             // lblDescricao
             // 
             lblDescricao.AutoSize = true;
-            lblDescricao.Font = new Font("Segoe UI", 10F);
-            lblDescricao.Location = new Point(31, 144);
+            lblDescricao.Font = new Font("Montserrat", 10F);
+            lblDescricao.Location = new Point(29, 144);
             lblDescricao.Name = "lblDescricao";
-            lblDescricao.Size = new Size(67, 19);
+            lblDescricao.Size = new Size(79, 20);
             lblDescricao.TabIndex = 34;
             lblDescricao.Text = "Descrição";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(31, 82);
+            lblNome.Font = new Font("Montserrat", 10F);
+            lblNome.Location = new Point(29, 82);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(46, 19);
+            lblNome.Size = new Size(52, 20);
             lblNome.TabIndex = 33;
             lblNome.Text = "Nome";
             // 

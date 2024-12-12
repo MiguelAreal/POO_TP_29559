@@ -40,6 +40,8 @@
             picBg = new PictureBox();
             statusStrip1 = new StatusStrip();
             github = new ToolStripStatusLabel();
+            lblActiveUser = new Label();
+            btnLogout = new Label();
             msMainForm.SuspendLayout();
             panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBg).BeginInit();
@@ -141,12 +143,36 @@
             github.VisitedLinkColor = Color.Black;
             github.Click += github_Click;
             // 
+            // lblActiveUser
+            // 
+            lblActiveUser.AutoSize = true;
+            lblActiveUser.Font = new Font("Montserrat", 9F);
+            lblActiveUser.Location = new Point(860, 33);
+            lblActiveUser.Name = "lblActiveUser";
+            lblActiveUser.Size = new Size(72, 16);
+            lblActiveUser.TabIndex = 3;
+            lblActiveUser.Text = "ActiveUser";
+            lblActiveUser.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // btnLogout
+            // 
+            btnLogout.AutoSize = true;
+            btnLogout.Font = new Font("Montserrat", 20F);
+            btnLogout.Location = new Point(938, 23);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(54, 37);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "👤";
+            btnLogout.TextAlign = ContentAlignment.MiddleRight;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(1000, 800);
+            Controls.Add(btnLogout);
+            Controls.Add(lblActiveUser);
             Controls.Add(panelContainer);
             Controls.Add(msMainForm);
             Controls.Add(statusStrip1);
@@ -183,5 +209,7 @@
         private PictureBox picBg;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel github;
+        private Label lblActiveUser;
+        private Label btnLogout;
     }
 }

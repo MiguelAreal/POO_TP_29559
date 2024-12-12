@@ -1,21 +1,17 @@
 ﻿using poo_tp_29559;
-using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-public class CategoriaController : BaseController<Categoria, ChildForm>, IEntityController
+public class CategoriaController : BaseController<Categoria>, IEntityController
 {
-    public CategoriaController(ChildForm view) : base(view, "Data/categorias.json")
-    {
-        Initialize();
-    }
+    public CategoriaController() : base("Data/categorias.json") { }
 
-    protected override void ExibeItensNaView(List<Categoria> categorias)
+    public override object GetItems()
     {
-        _view.MostraItens(categorias);
+        return _repository.GetAll();
     }
 
     protected override void RemoveItem(Categoria item)

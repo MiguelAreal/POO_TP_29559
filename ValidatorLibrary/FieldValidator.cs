@@ -56,22 +56,29 @@ namespace ValidationLibrary
 
 
         /// <summary>
-        /// Valida uma lista de controles para garantir que cada um contenha apenas números e tenha no máximo 9 caracteres.
+        /// Valida um número de telefone e NIF para garantir que contenha apenas números e tenha exatamente 9 caracteres.
         /// Exibe mensagens de erro nas labels correspondentes em caso de falha na validação.
         /// </summary>
-        /// <param name="phone">String com texto de entrada a ser validado.</param>
+        /// <param name="number">String com texto de entrada a ser validado.</param>
         /// <param name="label">Label para alterar a cor e avisar utilizador.</param>
         /// <returns>Retorna <c>true</c> se for válido; caso contrário, <c>false</c>.</returns>
-        public static bool ValidateContact(string phone, Label label)
+        public static bool ValidateNineDigits(string number, Label label)
         {
-            if (phone.Length != 9 || !phone.All(char.IsDigit))
+            // Verifica se a entrada tem exatamente 9 caracteres e se pode ser convertida para um número inteiro
+            if (number.Length != 9 || !int.TryParse(number, out _))
             {
                 label.ForeColor = Color.Red;
                 return false;
             }
-                
-            return true;
+            else
+            {
+                // Se for válido, pode atualizar a cor da label para indicar sucesso (opcional)
+                label.ForeColor = Color.Black;
+                return true;
+            }
+            
         }
+
 
         /// <summary>
         /// Valida se a data selecionada em um controle <see cref="DateTimePicker"/> não é uma data futura.

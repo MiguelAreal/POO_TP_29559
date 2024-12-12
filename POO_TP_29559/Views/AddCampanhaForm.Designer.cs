@@ -70,50 +70,50 @@
             // lblCategoria
             // 
             lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Segoe UI", 10F);
-            lblCategoria.Location = new Point(33, 303);
+            lblCategoria.Font = new Font("Montserrat", 10F);
+            lblCategoria.Location = new Point(29, 303);
             lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(123, 19);
+            lblCategoria.Size = new Size(142, 20);
             lblCategoria.TabIndex = 26;
             lblCategoria.Text = "Categoria Aplicada";
             // 
             // lblDataFim
             // 
             lblDataFim.AutoSize = true;
-            lblDataFim.Font = new Font("Segoe UI", 10F);
-            lblDataFim.Location = new Point(32, 244);
+            lblDataFim.Font = new Font("Montserrat", 10F);
+            lblDataFim.Location = new Point(29, 244);
             lblDataFim.Name = "lblDataFim";
-            lblDataFim.Size = new Size(83, 19);
+            lblDataFim.Size = new Size(96, 20);
             lblDataFim.TabIndex = 25;
             lblDataFim.Text = "Data de Fim";
             // 
             // lblDataIni
             // 
             lblDataIni.AutoSize = true;
-            lblDataIni.Font = new Font("Segoe UI", 10F);
-            lblDataIni.Location = new Point(33, 187);
+            lblDataIni.Font = new Font("Montserrat", 10F);
+            lblDataIni.Location = new Point(29, 187);
             lblDataIni.Name = "lblDataIni";
-            lblDataIni.Size = new Size(93, 19);
+            lblDataIni.Size = new Size(106, 20);
             lblDataIni.TabIndex = 24;
             lblDataIni.Text = "Data de Início";
             // 
             // lblDesconto
             // 
             lblDesconto.AutoSize = true;
-            lblDesconto.Font = new Font("Segoe UI", 10F);
-            lblDesconto.Location = new Point(33, 130);
+            lblDesconto.Font = new Font("Montserrat", 10F);
+            lblDesconto.Location = new Point(29, 130);
             lblDesconto.Name = "lblDesconto";
-            lblDesconto.Size = new Size(90, 19);
+            lblDesconto.Size = new Size(103, 20);
             lblDesconto.TabIndex = 23;
             lblDesconto.Text = "Desconto (%)";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(32, 74);
+            lblNome.Font = new Font("Montserrat", 10F);
+            lblNome.Location = new Point(29, 74);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(46, 19);
+            lblNome.Size = new Size(52, 20);
             lblNome.TabIndex = 22;
             lblNome.Text = "Nome";
             // 

@@ -28,7 +28,15 @@ public class BaseRepo<T> : IRepo<T> where T : class, IIdentifiable
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
-            return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
+            
+            var options = new JsonSerializerOptions
+            {
+                IncludeFields = true, // Inclui campos (não apenas propriedades) na desserialização
+                PropertyNameCaseInsensitive = true // Permite nomes de propriedades insensíveis a maiúsculas/minúsculas
+            };
+
+            return JsonSerializer.Deserialize<List<T>>(json, options) ?? new List<T>();
+
         }
         else
         {

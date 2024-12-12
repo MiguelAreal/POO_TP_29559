@@ -4,9 +4,9 @@ namespace poo_tp_29559.Repositories
 {
     public class VendaRepo : BaseRepo<Venda>
     {
-        private readonly ClienteRepo _clienteRepo;
+        private readonly UtilizadorRepo _clienteRepo;
 
-        public VendaRepo(ClienteRepo clienteRepo) : base("Data/vendas.json")
+        public VendaRepo(UtilizadorRepo clienteRepo) : base("Data/vendas.json")
         {
             _clienteRepo = clienteRepo;
         }

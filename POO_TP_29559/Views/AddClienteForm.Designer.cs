@@ -41,7 +41,7 @@
             txtNIF = new TextBox();
             dtpNasc = new DateTimePicker();
             txtMorada = new TextBox();
-            txtContacto1 = new TextBox();
+            txtContactoCodPais = new TextBox();
             SuspendLayout();
             // 
             // btnCancelar
@@ -71,50 +71,50 @@
             // lblNIF
             // 
             lblNIF.AutoSize = true;
-            lblNIF.Font = new Font("Segoe UI", 10F);
-            lblNIF.Location = new Point(24, 327);
+            lblNIF.Font = new Font("Montserrat", 10F);
+            lblNIF.Location = new Point(20, 327);
             lblNIF.Name = "lblNIF";
-            lblNIF.Size = new Size(30, 19);
+            lblNIF.Size = new Size(33, 20);
             lblNIF.TabIndex = 24;
             lblNIF.Text = "NIF";
             // 
             // lblDataNasc
             // 
             lblDataNasc.AutoSize = true;
-            lblDataNasc.Font = new Font("Segoe UI", 10F);
-            lblDataNasc.Location = new Point(24, 268);
+            lblDataNasc.Font = new Font("Montserrat", 10F);
+            lblDataNasc.Location = new Point(20, 268);
             lblDataNasc.Name = "lblDataNasc";
-            lblDataNasc.Size = new Size(133, 19);
+            lblDataNasc.Size = new Size(153, 20);
             lblDataNasc.TabIndex = 23;
             lblDataNasc.Text = "Data de Nascimento";
             // 
             // lblMorada
             // 
             lblMorada.AutoSize = true;
-            lblMorada.Font = new Font("Segoe UI", 10F);
-            lblMorada.Location = new Point(23, 183);
+            lblMorada.Font = new Font("Montserrat", 10F);
+            lblMorada.Location = new Point(20, 183);
             lblMorada.Name = "lblMorada";
-            lblMorada.Size = new Size(65, 19);
+            lblMorada.Size = new Size(75, 20);
             lblMorada.TabIndex = 22;
             lblMorada.Text = "Endereço";
             // 
             // lblContacto
             // 
             lblContacto.AutoSize = true;
-            lblContacto.Font = new Font("Segoe UI", 10F);
-            lblContacto.Location = new Point(24, 119);
+            lblContacto.Font = new Font("Montserrat", 10F);
+            lblContacto.Location = new Point(20, 119);
             lblContacto.Name = "lblContacto";
-            lblContacto.Size = new Size(65, 19);
+            lblContacto.Size = new Size(74, 20);
             lblContacto.TabIndex = 21;
             lblContacto.Text = "Contacto";
             // 
             // lblNome
             // 
             lblNome.AutoSize = true;
-            lblNome.Font = new Font("Segoe UI", 10F);
-            lblNome.Location = new Point(23, 65);
+            lblNome.Font = new Font("Montserrat", 10F);
+            lblNome.Location = new Point(20, 65);
             lblNome.Name = "lblNome";
-            lblNome.Size = new Size(46, 19);
+            lblNome.Size = new Size(52, 20);
             lblNome.TabIndex = 20;
             lblNome.Text = "Nome";
             // 
@@ -138,10 +138,10 @@
             // txtNIF
             // 
             txtNIF.Font = new Font("Segoe UI", 10F);
-            txtNIF.Location = new Point(24, 349);
+            txtNIF.Location = new Point(23, 349);
             txtNIF.MaxLength = 9;
             txtNIF.Name = "txtNIF";
-            txtNIF.Size = new Size(292, 25);
+            txtNIF.Size = new Size(293, 25);
             txtNIF.TabIndex = 5;
             // 
             // dtpNasc
@@ -151,7 +151,7 @@
             dtpNasc.Name = "dtpNasc";
             dtpNasc.RightToLeft = RightToLeft.No;
             dtpNasc.ShowCheckBox = true;
-            dtpNasc.Size = new Size(292, 23);
+            dtpNasc.Size = new Size(293, 23);
             dtpNasc.TabIndex = 4;
             // 
             // txtMorada
@@ -163,15 +163,15 @@
             txtMorada.Size = new Size(293, 46);
             txtMorada.TabIndex = 3;
             // 
-            // txtContacto1
+            // txtContactoCodPais
             // 
-            txtContacto1.Font = new Font("Segoe UI", 10F);
-            txtContacto1.Location = new Point(23, 141);
-            txtContacto1.MaxLength = 4;
-            txtContacto1.Name = "txtContacto1";
-            txtContacto1.Size = new Size(44, 25);
-            txtContacto1.TabIndex = 1;
-            txtContacto1.Text = "+351";
+            txtContactoCodPais.Font = new Font("Segoe UI", 10F);
+            txtContactoCodPais.Location = new Point(23, 141);
+            txtContactoCodPais.MaxLength = 4;
+            txtContactoCodPais.Name = "txtContactoCodPais";
+            txtContactoCodPais.Size = new Size(44, 25);
+            txtContactoCodPais.TabIndex = 1;
+            txtContactoCodPais.Text = "+351";
             // 
             // AddClienteForm
             // 
@@ -180,7 +180,7 @@
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             CancelButton = btnCancelar;
             ClientSize = new Size(339, 478);
-            Controls.Add(txtContacto1);
+            Controls.Add(txtContactoCodPais);
             Controls.Add(txtMorada);
             Controls.Add(dtpNasc);
             Controls.Add(txtNIF);
@@ -219,6 +219,6 @@
         private DateTimePicker dtpNasc;
         private TextBox txtMorada;
         private Label lblNIF;
-        private TextBox txtContacto1;
+        private TextBox txtContactoCodPais;
     }
 }

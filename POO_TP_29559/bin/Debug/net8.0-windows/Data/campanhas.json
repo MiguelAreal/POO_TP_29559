@@ -1,26 +1,10 @@
 [
   {
     "Id": 1,
-    "Nome": "Campanha A",
-    "PercentagemDesc": 100,
-    "DataInicio": "06/12/2024 09:13:24",
-    "DataFim": "06/12/2024 09:13:24",
-    "CategoriaId": 1
-  },
-  {
-    "Id": 2,
-    "Nome": "BBB",
+    "Nome": "Natal",
     "PercentagemDesc": 50,
-    "DataInicio": "10/12/2024 10:28:56",
-    "DataFim": "31/12/2024 00:00:00",
-    "CategoriaId": 2
-  },
-  {
-    "Id": 3,
-    "Nome": "Campanha Natalina",
-    "PercentagemDesc": 25,
-    "DataInicio": "10/12/2024 14:48:37",
-    "DataFim": "25/12/2024 00:00:00",
-    "CategoriaId": 3
+    "DataInicio": "12/12/2024 00:18:39",
+    "DataFim": "28/01/2025 00:00:00",
+    "CategoriaId": 1
   }
 ]

@@ -1,21 +1,17 @@
-﻿using poo_tp_29559.Controllers;
-using poo_tp_29559.Interfaces;
+﻿using poo_tp_29559.Interfaces;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-public class MarcaController : BaseController<Marca, ChildForm>, IEntityController
+public class MarcaController : BaseController<Marca>, IEntityController
 {
-    public MarcaController(ChildForm view) : base(view, "Data/marcas.json")
-    {
-        Initialize();
-    }
+    public MarcaController() : base("Data/marcas.json") { }
 
-    protected override void ExibeItensNaView(List<Marca> marcas)
+    public override object GetItems()
     {
-        _view.MostraItens(marcas);
+        return _repository.GetAll();
     }
 
     //Verifica se a marca pode ser eliminada antes de o fazer.

@@ -1,7 +1,6 @@
 ﻿using MetroFramework.Forms;
-using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
-using poo_tp_29559.Repositories; // Add this line for ProdutoRepo
+using poo_tp_29559.Repositories;
 using System;
 using System.Windows.Forms;
 using ValidationLibrary;
@@ -11,14 +10,11 @@ namespace poo_tp_29559.Views
     public partial class AddMarcaForm : MetroForm
     {
         private readonly MarcaController _controller;
-        private readonly ChildForm _view;
 
-        public AddMarcaForm(ChildForm view)
+        public AddMarcaForm()
         {
             InitializeComponent();
-            _view = view;
-
-            _controller = new MarcaController(_view);
+            _controller = new MarcaController();
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -35,8 +31,6 @@ namespace poo_tp_29559.Views
             };
 
             _controller.AddItem(novaMarca);
-
-            _controller.CarregaItens();
 
             this.Close();
         }

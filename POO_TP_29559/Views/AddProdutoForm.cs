@@ -1,7 +1,6 @@
 ﻿using MetroFramework.Forms;
-using poo_tp_29559.Controllers;
 using poo_tp_29559.Models;
-using poo_tp_29559.Repositories; // Certifique-se de que esta linha esteja aqui
+using poo_tp_29559.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,16 +12,14 @@ namespace poo_tp_29559.Views
     public partial class AddProdutoForm : MetroForm
     {
         private readonly ProdutoController _controller;
-        private readonly ChildForm _view;
 
         // Parâmetro opcional
-        public AddProdutoForm(ChildForm view)
+        public AddProdutoForm()
         {
             InitializeComponent();
-            _view = view;
             var categoriaRepo = new CategoriaRepo();
             var marcaRepo = new MarcaRepo();
-            _controller = new ProdutoController(_view);
+            _controller = new ProdutoController();
         }
 
         private void AddProdutoForm_Load(object sender, EventArgs e)
@@ -76,8 +73,8 @@ namespace poo_tp_29559.Views
             var novoProduto = new Produto
             {
                 Nome = txtNome.Text,
-                CategoriaID = categoriaSelecionada?.Id,
-                MarcaID = marcaSelecionada?.Id,
+                CategoriaID = categoriaSelecionada.Id,
+                MarcaID = marcaSelecionada.Id,
                 Preco = nudPreco.Value,
                 QuantidadeEmStock = Convert.ToInt32(nudStock.Value)
             };
