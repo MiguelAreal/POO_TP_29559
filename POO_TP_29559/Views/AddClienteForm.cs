@@ -1,5 +1,6 @@
 ﻿using MetroFramework.Forms;
 using System;
+using System.Diagnostics.Contracts;
 using System.Windows.Forms;
 using ValidationLibrary;
 
@@ -19,6 +20,7 @@ namespace poo_tp_29559.Views
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             bool allValid = true;
+            string contacto;
 
             // Validação de campos vazios
             Control[] controls = { txtNome, txtContactoCodPais, txtMorada };
@@ -27,6 +29,7 @@ namespace poo_tp_29559.Views
 
             // Valida número de telefone
             allValid &= FieldValidator.ValidateNineDigits(txtContacto.Text, lblContacto);
+
 
             // Valida NIF
             allValid &= FieldValidator.ValidateNineDigits(txtNIF.Text, lblNIF);
@@ -50,13 +53,33 @@ namespace poo_tp_29559.Views
                 return;
             }
 
+            contacto = $"{txtContactoCodPais.Text} {txtContacto.Text}";
+
+            //Verificar se NIF já existe
+            if (_controller.VerificarNIFExistente(Convert.ToInt32(txtNIF.Text)))
+            {
+                allValid &= false;
+                MessageBox.Show("Este NIF já está a ser utilizado.");
+            }
+
+            //Verificar se contacto já existe.
+            if (_controller.VerificarContactoExistente(contacto))
+            {
+                allValid &= false;
+                MessageBox.Show("Este contacto já está a ser utilizado.");
+            }
+
+
+
             var novoCliente = new Utilizador
             {
                 Nome = txtNome.Text,
-                Contacto = txtContactoCodPais.Text + txtContacto.Text,
+                Contacto = contacto,
                 Morada = txtMorada.Text,
                 DataNasc = dtpNasc.Checked ? dtpNasc.Value.ToString("dd-MM-yyyy HH:mm:ss") : null,
-                Nif = txtNIF.Text,
+                Nif = Convert.ToInt32(txtNIF),
+                IsAdmin = false,
+                Password = txtNome.Text
             };
 
             // Adiciona e atualiza itens na view

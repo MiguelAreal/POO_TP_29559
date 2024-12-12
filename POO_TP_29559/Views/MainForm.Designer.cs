@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             msMainForm = new MenuStrip();
-            produtosToolStripMenuItem = new ToolStripMenuItem();
-            clientesToolStripMenuItem = new ToolStripMenuItem();
-            marcasToolStripMenuItem = new ToolStripMenuItem();
-            vendasToolStripMenuItem = new ToolStripMenuItem();
-            clientesToolStripMenuItem1 = new ToolStripMenuItem();
-            campanhasToolStripMenuItem = new ToolStripMenuItem();
+            produtosTSMI = new ToolStripMenuItem();
+            categoriasTSMI = new ToolStripMenuItem();
+            marcasTSMI = new ToolStripMenuItem();
+            campanhasTSMI = new ToolStripMenuItem();
+            vendasTSMI = new ToolStripMenuItem();
+            clientesTSMI = new ToolStripMenuItem();
             panelContainer = new Panel();
             picBg = new PictureBox();
             statusStrip1 = new StatusStrip();
             github = new ToolStripStatusLabel();
-            lblActiveUser = new Label();
+            lblUserInfo = new Label();
             btnLogout = new Label();
+            comprarTSMI = new ToolStripMenuItem();
             msMainForm.SuspendLayout();
             panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBg).BeginInit();
@@ -51,7 +52,7 @@
             // msMainForm
             // 
             msMainForm.BackColor = Color.Transparent;
-            msMainForm.Items.AddRange(new ToolStripItem[] { produtosToolStripMenuItem, clientesToolStripMenuItem, marcasToolStripMenuItem, vendasToolStripMenuItem, clientesToolStripMenuItem1, campanhasToolStripMenuItem });
+            msMainForm.Items.AddRange(new ToolStripItem[] { produtosTSMI, categoriasTSMI, marcasTSMI, campanhasTSMI, vendasTSMI, clientesTSMI, comprarTSMI });
             msMainForm.Location = new Point(5, 60);
             msMainForm.Name = "msMainForm";
             msMainForm.RenderMode = ToolStripRenderMode.Professional;
@@ -60,41 +61,41 @@
             msMainForm.Text = "msMainForm";
             msMainForm.ItemClicked += msMainForm_ItemClicked;
             // 
-            // produtosToolStripMenuItem
+            // produtosTSMI
             // 
-            produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            produtosToolStripMenuItem.Size = new Size(67, 20);
-            produtosToolStripMenuItem.Text = "Produtos";
+            produtosTSMI.Name = "produtosTSMI";
+            produtosTSMI.Size = new Size(67, 20);
+            produtosTSMI.Text = "Produtos";
             // 
-            // clientesToolStripMenuItem
+            // categoriasTSMI
             // 
-            clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            clientesToolStripMenuItem.Size = new Size(75, 20);
-            clientesToolStripMenuItem.Text = "Categorias";
+            categoriasTSMI.Name = "categoriasTSMI";
+            categoriasTSMI.Size = new Size(75, 20);
+            categoriasTSMI.Text = "Categorias";
             // 
-            // marcasToolStripMenuItem
+            // marcasTSMI
             // 
-            marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            marcasToolStripMenuItem.Size = new Size(57, 20);
-            marcasToolStripMenuItem.Text = "Marcas";
+            marcasTSMI.Name = "marcasTSMI";
+            marcasTSMI.Size = new Size(57, 20);
+            marcasTSMI.Text = "Marcas";
             // 
-            // vendasToolStripMenuItem
+            // campanhasTSMI
             // 
-            vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
-            vendasToolStripMenuItem.Size = new Size(56, 20);
-            vendasToolStripMenuItem.Text = "Vendas";
+            campanhasTSMI.Name = "campanhasTSMI";
+            campanhasTSMI.Size = new Size(82, 20);
+            campanhasTSMI.Text = "Campanhas";
             // 
-            // clientesToolStripMenuItem1
+            // vendasTSMI
             // 
-            clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
-            clientesToolStripMenuItem1.Size = new Size(61, 20);
-            clientesToolStripMenuItem1.Text = "Clientes";
+            vendasTSMI.Name = "vendasTSMI";
+            vendasTSMI.Size = new Size(56, 20);
+            vendasTSMI.Text = "Vendas";
             // 
-            // campanhasToolStripMenuItem
+            // clientesTSMI
             // 
-            campanhasToolStripMenuItem.Name = "campanhasToolStripMenuItem";
-            campanhasToolStripMenuItem.Size = new Size(82, 20);
-            campanhasToolStripMenuItem.Text = "Campanhas";
+            clientesTSMI.Name = "clientesTSMI";
+            clientesTSMI.Size = new Size(61, 20);
+            clientesTSMI.Text = "Clientes";
             // 
             // panelContainer
             // 
@@ -143,27 +144,32 @@
             github.VisitedLinkColor = Color.Black;
             github.Click += github_Click;
             // 
-            // lblActiveUser
+            // lblUserInfo
             // 
-            lblActiveUser.AutoSize = true;
-            lblActiveUser.Font = new Font("Montserrat", 9F);
-            lblActiveUser.Location = new Point(860, 33);
-            lblActiveUser.Name = "lblActiveUser";
-            lblActiveUser.Size = new Size(72, 16);
-            lblActiveUser.TabIndex = 3;
-            lblActiveUser.Text = "ActiveUser";
-            lblActiveUser.TextAlign = ContentAlignment.MiddleRight;
+            lblUserInfo.Font = new Font("Montserrat", 9F);
+            lblUserInfo.Location = new Point(748, 33);
+            lblUserInfo.Name = "lblUserInfo";
+            lblUserInfo.Size = new Size(192, 40);
+            lblUserInfo.TabIndex = 3;
+            lblUserInfo.Text = "UserInfo";
+            lblUserInfo.TextAlign = ContentAlignment.TopRight;
             // 
             // btnLogout
             // 
             btnLogout.AutoSize = true;
             btnLogout.Font = new Font("Montserrat", 20F);
-            btnLogout.Location = new Point(938, 23);
+            btnLogout.Location = new Point(938, 30);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(54, 37);
             btnLogout.TabIndex = 4;
             btnLogout.Text = "👤";
             btnLogout.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // comprarTSMI
+            // 
+            comprarTSMI.Name = "comprarTSMI";
+            comprarTSMI.Size = new Size(66, 20);
+            comprarTSMI.Text = "Comprar";
             // 
             // MainForm
             // 
@@ -172,7 +178,7 @@
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(1000, 800);
             Controls.Add(btnLogout);
-            Controls.Add(lblActiveUser);
+            Controls.Add(lblUserInfo);
             Controls.Add(panelContainer);
             Controls.Add(msMainForm);
             Controls.Add(statusStrip1);
@@ -199,17 +205,18 @@
         #endregion
 
         private MenuStrip msMainForm;
-        private ToolStripMenuItem produtosToolStripMenuItem;
-        private ToolStripMenuItem clientesToolStripMenuItem;
-        private ToolStripMenuItem clientesToolStripMenuItem1;
-        private ToolStripMenuItem marcasToolStripMenuItem;
-        private ToolStripMenuItem vendasToolStripMenuItem;
-        private ToolStripMenuItem campanhasToolStripMenuItem;
+        private ToolStripMenuItem produtosTSMI;
+        private ToolStripMenuItem categoriasTSMI;
+        private ToolStripMenuItem clientesTSMI;
+        private ToolStripMenuItem marcasTSMI;
+        private ToolStripMenuItem vendasTSMI;
+        private ToolStripMenuItem campanhasTSMI;
         private Panel panelContainer;
         private PictureBox picBg;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel github;
-        private Label lblActiveUser;
+        private Label lblUserInfo;
         private Label btnLogout;
+        private ToolStripMenuItem comprarTSMI;
     }
 }

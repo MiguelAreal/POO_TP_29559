@@ -7,5 +7,14 @@
     "Preco": 20,
     "QuantidadeEmStock": 99,
     "DataAdicao": "12/12/2024 00:11:42"
+  },
+  {
+    "Id": 2,
+    "Nome": "Rato #1",
+    "CategoriaID": 2,
+    "MarcaID": 2,
+    "Preco": 14.99,
+    "QuantidadeEmStock": 85,
+    "DataAdicao": "12/12/2024 14:16:52"
   }
 ]

@@ -33,4 +33,6 @@ public class MarcaController : BaseController<Marca>, IEntityController
     {
         _repository.Update(item);
     }
+
+   
 }

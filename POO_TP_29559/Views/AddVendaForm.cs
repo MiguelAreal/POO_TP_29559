@@ -12,52 +12,61 @@ namespace poo_tp_29559.Views
 {
     public partial class AddVendaForm : MetroForm
     {
-        private readonly VendaController _controller;
+        private readonly VendaController _controllerVenda;
+        private UtilizadorController utilizadorController;
+        private ProdutoController produtoController;
+
         ProdutoRepo produtoRepo = new();
-
-
         UtilizadorRepo clienteRepo = new();
+        CategoriaRepo categoriaRepo = new();
+        MarcaRepo marcaRepo = new();
+
         private List<Utilizador> _clientes;
+        private List<Produto>? _produtos;
+
         int mesesGarantia = 36;
         decimal totalBruto = 0, totalLiquido = 0;
 
         public AddVendaForm()
         {
             InitializeComponent();
+
+            utilizadorController = new UtilizadorController();
+            produtoController = new ProdutoController();
+
+
             CarregaProdutos();
             CarregaClientes();
             CarregaMetodosPagamento();
+
         }
 
-        // Carregar produtos da base de dados
+        // Carrega produtos e ordena-os na combobox.
         private void CarregaProdutos()
         {
-            List<Produto> produtos = produtoRepo.GetAll();
+            _produtos = produtoController.GetRawProdutos();
 
-            produtos = produtos.OrderBy(p => p.Nome).ToList();
-
-            if (produtos != null)
+            if (_produtos != null)
             {
-                cmbProdutos.DataSource = produtos;
+                cmbProdutos.DataSource = _produtos;
                 cmbProdutos.DisplayMember = "Nome";
                 cmbProdutos.ValueMember = "Id";
             }
         }
 
-        // Carregar clientes da base de dados
         private void CarregaClientes()
         {
-            _clientes = clienteRepo.GetAll().OrderBy(c => c.Nome).ToList();
+            _clientes = utilizadorController.GetClientes(); // Chama o controlador para obter apenas os clientes.
 
-            if (_clientes != null)
+            if (_clientes != null && _clientes.Count > 0)
             {
                 cmbClientes.DataSource = _clientes;
                 cmbClientes.DisplayMember = "Nome";
                 cmbClientes.ValueMember = "Id";
-            }
+            }          
         }
 
-        // Carregar métodos de pagamento
+        // Carregar métodos de pagamento, do enumerador
         private void CarregaMetodosPagamento()
         {
             var metodosPagamento = EnumHelper.GetEnumDescriptions<MetodoPagamento>();
@@ -67,63 +76,68 @@ namespace poo_tp_29559.Views
             cmbMetodoPagamento.ValueMember = "Value";
         }
 
-        // Obter o NIF do cliente selecionado
+        // Obter o NIF do cliente selecionado, ao mudar item selecionado na combobox.
         private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Utilizador clienteSelecionado = cmbClientes.SelectedItem as Utilizador;
-            getNIF(clienteSelecionado);
+            Utilizador? clienteSelecionado = cmbClientes.SelectedItem as Utilizador;
+            txtNIF.Text = clienteSelecionado.Nif.ToString();
         }
 
-        // Atualizar o campo de NIF baseado no cliente selecionado
-        private void getNIF(Utilizador selectedCliente)
-        {
-            if (selectedCliente != null && !string.IsNullOrWhiteSpace(selectedCliente.Nif))
-            {
-                txtNIF.Text = selectedCliente.Nif;
-            }
-
-        }
-
-        // Atualiza  CMB Cliente baseado no NIF introduzido
         private void txtNIF_TextChanged(object sender, EventArgs e)
         {
             string enteredNif = txtNIF.Text;
-            if (!string.IsNullOrWhiteSpace(enteredNif))
-            {
-                var clienteCorrespondente = _clientes.FirstOrDefault(c => c.Nif == enteredNif);
-                if (clienteCorrespondente != null)
-                    cmbClientes.SelectedItem = clienteCorrespondente;
-                else
-                    cmbClientes.SelectedIndex = -1;
-            }
 
-            //Sempre que o texto de NIF alterar, calcula garantia de venda
-            if (txtNIF.TextLength == 9)
+            // Verifica se o NIF introduzido não está vazio e se é um número válido
+            if (!string.IsNullOrWhiteSpace(enteredNif) && int.TryParse(enteredNif, out int nifParsed))
             {
-                // Se NIF começar com '1', '2' ou '3', É cliente particular. Outrora, é Empresa.
-                // Faz diferença no cálculo da garantia associada.
-                if (txtNIF.Text.StartsWith("1") || txtNIF.Text.StartsWith("2") || txtNIF.Text.StartsWith("3"))
+                // Verifica se existe algum cliente correspondente com esse NIF
+                
+                var clienteCorrespondente = _clientes.FirstOrDefault(c => c.Nif == nifParsed);
+                if (clienteCorrespondente != null)
                 {
-                    mesesGarantia = 36;
+                    cmbClientes.SelectedItem = clienteCorrespondente;
                 }
                 else
                 {
-                    mesesGarantia = 12;
+                    cmbClientes.SelectedIndex = -1;
                 }
+
+
+                // Sempre que o texto de NIF alterar, calcula a garantia de venda
+                if (enteredNif.Length == 9) // Verifica se o NIF introduzido tem exatamente 9 caracteres
+                {
+                    // Se NIF começar com '1', '2' ou '3', é cliente particular
+                    // Caso contrário, é empresa
+                    if (enteredNif.StartsWith("1") || enteredNif.StartsWith("2") || enteredNif.StartsWith("3"))
+                    {
+                        mesesGarantia = 36; // Garantia de 36 meses para cliente particular
+                    }
+                    else
+                    {
+                        mesesGarantia = 12; // Garantia de 12 meses para empresas
+                    }
+                }
+                else
+                {
+                    mesesGarantia = 36; // Valor padrão de garantia caso o NIF não tenha 9 caracteres
+                }
+
             }
             else
             {
-                mesesGarantia = 36;
+                // Se o NIF não for válido, desmarcar a seleção do cliente
+                cmbClientes.SelectedIndex = -1;
             }
+
+
+            // Atualiza o texto de garantia
             txtGarantia.Text = $"{mesesGarantia} meses";
         }
 
-        // Quando um produto é adicionado à venda
-        // Quando um produto é adicionado à venda
+        // Quando um produto é adicionado à fatura
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
-            Produto produtoSelecionado = cmbProdutos.SelectedItem as Produto;
-            if (produtoSelecionado == null)
+            if (cmbProdutos.SelectedItem is not Produto produtoSelecionado)
             {
                 MessageBox.Show("Selecione um produto antes de adicionar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -131,7 +145,7 @@ namespace poo_tp_29559.Views
 
             int quantidadeDesejada = (int)nudQtd.Value;
 
-            // Verificar stock disponível considerando o que já foi adicionado na fatura
+            // Verificar stock disponível considerando o que já foi adicionado na fatura anteriormente, do mesmo produto
             int quantidadeTotalFatura = dgvFatura.Rows
                 .Cast<DataGridViewRow>()
                 .Where(row => row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
@@ -139,8 +153,7 @@ namespace poo_tp_29559.Views
 
             int quantidadeDisponivel = (produtoSelecionado.QuantidadeEmStock - quantidadeTotalFatura);
 
-            // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0.
-
+            // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0, e não números negativos.
             quantidadeDisponivel = quantidadeDisponivel < 0 ? 0 : quantidadeDisponivel;
 
             if (quantidadeDesejada <= 0 || quantidadeDesejada > quantidadeDisponivel)
@@ -149,7 +162,8 @@ namespace poo_tp_29559.Views
                 return;
             }
 
-            // Verificar se o produto já está na fatura e atualizar a quantidade
+            // Verificar se o produto já está na fatura e atualizar a quantidade na linha
+            // Atualiza totais bruto e liquido.
             foreach (DataGridViewRow row in dgvFatura.Rows)
             {
                 if (row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
@@ -157,7 +171,6 @@ namespace poo_tp_29559.Views
                     int quantidadeAtual = Convert.ToInt32(row.Cells["Quantidade"].Value);
                     row.Cells["Quantidade"].Value = quantidadeAtual + quantidadeDesejada;
                     produtoSelecionado.QuantidadeEmStock -= quantidadeDesejada;
-                    AtualizarTotais();
                     return;
                 }
             }
@@ -266,21 +279,12 @@ namespace poo_tp_29559.Views
         }
 
 
+        // Retorna nome de categoria através do ID
+        private string ObterNomeCategoria(int? categoriaId) { return categoriaRepo.GetById(categoriaId).Nome ?? "Desconhecida"; }
 
-        // Carregar categorias e marcas associadas aos produtos
-        private string ObterNomeCategoria(int? categoriaId)
-        {
-            CategoriaRepo categoriaRepo = new();
-            Categoria categoria = categoriaRepo.GetById(categoriaId);
-            return categoria?.Nome ?? "Desconhecida";
-        }
-
-        private string ObterNomeMarca(int? marcaId)
-        {
-            MarcaRepo marcaRepo = new();
-            Marca marca = marcaRepo.GetById(marcaId);
-            return marca?.Nome ?? "Desconhecida";
-        }
+        // Retorna nome de marca através do ID
+        private string ObterNomeMarca(int? marcaId) { return marcaRepo.GetById(marcaId).Nome ?? "Desconhecida"; }
+       
 
         private void txtNIF_Leave(object sender, EventArgs e)
         {
@@ -361,8 +365,8 @@ namespace poo_tp_29559.Views
 
                 MessageBox.Show("Venda registada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Limpar formulário após a gravação
-                LimparFormulario();
+                // Fechar form após venda
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -435,20 +439,7 @@ namespace poo_tp_29559.Views
             return venda;
         }
 
-        // Limpar campos do formulário após gravação
-        private void LimparFormulario()
-        {
-            cmbClientes.SelectedIndex = -1;
-            txtNIF.Clear();
-            txtGarantia.Clear();
-            cmbMetodoPagamento.SelectedIndex = -1;
-            dgvFatura.Rows.Clear();
-            txtTotalBruto.Clear();
-            txtTotalLiquido.Clear();
-            listViewCampanhas.Items.Clear();
-        }
-
-        private void btnRemItem_Click_1(object sender, EventArgs e)
+       private void btnRemItem_Click_1(object sender, EventArgs e)
         {
 
             if (dgvFatura.SelectedRows.Count == 0)
@@ -486,7 +477,6 @@ namespace poo_tp_29559.Views
             int quantidadeDisponivel = (produtoSelecionado.QuantidadeEmStock - quantidadeTotalFatura);
 
             // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0.
-
             quantidadeDisponivel = quantidadeDisponivel < 0 ? 0 : quantidadeDisponivel;
 
             if (quantidadeDesejada <= 0 || quantidadeDesejada > quantidadeDisponivel)
@@ -518,16 +508,10 @@ namespace poo_tp_29559.Views
 
 
 
-        private void btnAddProduto_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnAddProduto, Color.DodgerBlue);
-        private void btnAddProduto_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnAddProduto, Color.Black);
-        private void btnRemItem_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnRemItem, Color.Red);
-        private void btnRemItem_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnRemItem, Color.Black);
+        private void btnAddProduto_MouseEnter(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.DodgerBlue;
+        private void btnAddProduto_MouseLeave(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.Black;
+        private void btnRemItem_MouseEnter(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Red;
+        private void btnRemItem_MouseLeave(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Black;
 
-
-        // Altera a cor de botão passado por parâmetro, para uma cor passada por parâmetro.
-        private void ChangeButtonColor(Control button, Color color)
-        {
-            button.ForeColor = color;
-        }
     }
 }

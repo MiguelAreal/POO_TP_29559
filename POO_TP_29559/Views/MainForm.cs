@@ -12,13 +12,32 @@ namespace poo_tp_29559
     /// </summary>
     public partial class MainForm : MetroForm
     {
+        private readonly Utilizador _utilizadorLogado;
         /// <summary>
         /// Construtor da classe <see cref="MainForm"/> que inicializa os componentes do form.
         /// </summary>
-        public MainForm()
+        public MainForm(Utilizador utilizadorLogado)
         {
             // Inicializa os componentes do formulário
             InitializeComponent();
+            _utilizadorLogado = utilizadorLogado;
+            string tipoUser = _utilizadorLogado.IsAdmin ? "Administrador" : "Cliente";
+            lblUserInfo.Text = $"{_utilizadorLogado.Nome}\n{tipoUser}";
+
+            // Verifica se o utilizador é admin ou cliente
+            if (!_utilizadorLogado.IsAdmin)
+            {
+                // Esconde os itens de menu que não devem ser acessíveis por um cliente
+                // Vendas e Clientes
+                vendasTSMI.Visible = false;
+                clientesTSMI.Visible = false;
+            }
+            else
+            {   
+                // Esconde os itens de menu que não devem ser acessíveis por um administrador (porque é inútil)
+                // Vendas e Clientes
+                comprarTSMI.Visible = false;
+            }
         }
 
         /// <summary>
@@ -55,6 +74,9 @@ namespace poo_tp_29559
         /// <summary>
         /// Evento chamado quando o formulário é carregado.
         /// </summary>
+        /// <summary>
+        /// Evento chamado quando o formulário é carregado.
+        /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -74,22 +96,22 @@ namespace poo_tp_29559
             switch (e.ClickedItem?.Text)
             {
                 case "Produtos":
-                    formFilho = new ChildForm(FormTypes.Produtos);
+                    formFilho = new ChildForm(FormTypes.Produtos, _utilizadorLogado.IsAdmin);
                     break;
                 case "Categorias":
-                    formFilho = new ChildForm(FormTypes.Categorias);
+                    formFilho = new ChildForm(FormTypes.Categorias, _utilizadorLogado.IsAdmin);
                     break;
                 case "Marcas":
-                    formFilho = new ChildForm(FormTypes.Marcas);
+                    formFilho = new ChildForm(FormTypes.Marcas, _utilizadorLogado.IsAdmin);
                     break;
                 case "Clientes":
-                    formFilho = new ChildForm(FormTypes.Clientes);
+                    formFilho = new ChildForm(FormTypes.Clientes, _utilizadorLogado.IsAdmin);
                     break;
                 case "Campanhas":
-                    formFilho = new ChildForm(FormTypes.Campanhas);
+                    formFilho = new ChildForm(FormTypes.Campanhas, _utilizadorLogado.IsAdmin);
                     break;
                 case "Vendas":
-                    formFilho = new ChildForm(FormTypes.Vendas);
+                    formFilho = new ChildForm(FormTypes.Vendas, _utilizadorLogado.IsAdmin);
                     break;
                 default:
                     MessageBox.Show("Opção desconhecida");

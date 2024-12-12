@@ -17,13 +17,16 @@ namespace poo_tp_29559.Views
     public partial class AddCampanhaForm : MetroForm
     {
         private readonly CampanhaController _controller;
+        private CategoriaController categoriaController;
+        private List<Categoria> _categorias;
 
         public AddCampanhaForm()
         {
             InitializeComponent();
 
             _controller = new CampanhaController();
-            var categoriaRepo = new CategoriaRepo();
+            categoriaController = new CategoriaController();
+
             CarregaCategorias();
 
             
@@ -34,15 +37,12 @@ namespace poo_tp_29559.Views
 
         private void CarregaCategorias()
         {
-            // Use BaseRepo diretamente para carregar marcas
-            CategoriaRepo categoriaRepo = new();
-            List<Categoria> categorias = categoriaRepo.GetAll();
+            _categorias = (List<Categoria>)categoriaController.GetItems();
+            _categorias = _categorias.OrderBy(m => m.Nome).ToList();
 
-            categorias = categorias.OrderBy(m => m.Nome).ToList();
-
-            if (categorias != null)
+            if (_categorias != null)
             {
-                cmbCategoria.DataSource = categorias;
+                cmbCategoria.DataSource = _categorias;
                 cmbCategoria.DisplayMember = "Nome";
                 cmbCategoria.ValueMember = "Id";
             }

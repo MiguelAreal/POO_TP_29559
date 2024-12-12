@@ -37,7 +37,7 @@
             lblTitle = new Label();
             btnSair = new Label();
             panelUser = new Panel();
-            txtUser = new TextBox();
+            txtNIF = new TextBox();
             imgUser = new Label();
             panelPassword = new Panel();
             btnHidePwd = new Label();
@@ -142,23 +142,24 @@
             // panelUser
             // 
             panelUser.BackColor = Color.White;
-            panelUser.Controls.Add(txtUser);
+            panelUser.Controls.Add(txtNIF);
             panelUser.Controls.Add(imgUser);
             panelUser.Location = new Point(249, 135);
             panelUser.Name = "panelUser";
             panelUser.Size = new Size(329, 45);
             panelUser.TabIndex = 6;
             // 
-            // txtUser
+            // txtNIF
             // 
-            txtUser.BorderStyle = BorderStyle.None;
-            txtUser.Font = new Font("Montserrat", 12F);
-            txtUser.ForeColor = Color.FromArgb(9, 171, 219);
-            txtUser.Location = new Point(55, 12);
-            txtUser.Name = "txtUser";
-            txtUser.PlaceholderText = "Utilizador";
-            txtUser.Size = new Size(227, 20);
-            txtUser.TabIndex = 1;
+            txtNIF.BorderStyle = BorderStyle.None;
+            txtNIF.Font = new Font("Montserrat", 12F);
+            txtNIF.ForeColor = Color.FromArgb(9, 171, 219);
+            txtNIF.Location = new Point(55, 12);
+            txtNIF.MaxLength = 9;
+            txtNIF.Name = "txtNIF";
+            txtNIF.PlaceholderText = "NIF";
+            txtNIF.Size = new Size(227, 20);
+            txtNIF.TabIndex = 1;
             // 
             // imgUser
             // 
@@ -296,7 +297,7 @@
         private Label imgPwd;
         private Button btnSubmit;
         private Label lblRegisteAqui;
-        private TextBox txtUser;
+        private TextBox txtNIF;
         private Label btnHidePwd;
         private TextBox txtPassword;
     }

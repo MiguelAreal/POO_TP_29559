@@ -8,15 +8,21 @@ namespace ValidationLibrary
 
         /// <summary>
         /// Valida um conjunto de controlos e altera a cor das labels associadas.
-        /// Verifica se cada controlo tem um texto válido e ajusta a cor da label correspondente para vermelho ou preto.
+        /// Verifica se cada controlo tem um texto válido e ajusta a cor da label correspondente para vermelho ou a cor de sucesso especificada.
         /// </summary>
         /// <param name="controls">Array de controlos a serem validados.</param>
         /// <param name="labels">Array de labels que indicam visualmente o estado de cada campo.</param>
+        /// <param name="successColor">Cor opcional para os campos válidos (por padrão é preto).</param>
         /// <returns>Retorna `true` se todos os controlos forem válidos, caso contrário, `false`.</returns>
         /// <exception cref="ArgumentException">Lançada quando o número de controlos e labels não é o mesmo.</exception>
-        
-        public static bool ValidateFields(Control[] controls, Label[] labels)
+        public static bool ValidateFields(Control[] controls, Label[] labels, Color successColor = default)
         {
+            // Se a cor de sucesso não for fornecida (default), usa a cor preta.
+            if (successColor == default)
+            {
+                successColor = Color.Black;
+            }
+
             if (controls.Length != labels.Length)
             {
                 throw new ArgumentException("Array de Controlos e Labels tem de ter o mesmo número de itens.");
@@ -26,21 +32,21 @@ namespace ValidationLibrary
 
             for (int i = 0; i < controls.Length; i++)
             {
-                isValid &= ValidateField(controls[i], labels[i]);
+                // Passa a cor de sucesso para a função ValidateField
+                isValid &= ValidateField(controls[i], labels[i], successColor);
             }
 
             return isValid;
         }
-
-
 
         /// <summary>
         /// Valida um controlo individual e altera a cor da label associada dependendo do resultado.
         /// </summary>
         /// <param name="control">O controlo a ser validado.</param>
         /// <param name="label">A label associada ao controlo que terá a cor ajustada.</param>
+        /// <param name="successColor">Cor a ser usada para campos válidos (opcional).</param>
         /// <returns>Retorna `true` se o campo for válido (não vazio), caso contrário, `false`.</returns>
-        private static bool ValidateField(Control control, Label label)
+        private static bool ValidateField(Control control, Label label, Color successColor)
         {
             if (string.IsNullOrEmpty(control.Text))
             {
@@ -49,10 +55,11 @@ namespace ValidationLibrary
             }
             else
             {
-                label.ForeColor = Color.Black; // Válido
+                label.ForeColor = successColor; // Válido (usa a cor de sucesso)
                 return true;
             }
         }
+
 
 
         /// <summary>
@@ -62,8 +69,14 @@ namespace ValidationLibrary
         /// <param name="number">String com texto de entrada a ser validado.</param>
         /// <param name="label">Label para alterar a cor e avisar utilizador.</param>
         /// <returns>Retorna <c>true</c> se for válido; caso contrário, <c>false</c>.</returns>
-        public static bool ValidateNineDigits(string number, Label label)
+        public static bool ValidateNineDigits(string number, Label label, Color successColor = default)
         {
+            // Se a cor de sucesso não for fornecida (default), usa a cor preta.
+            if (successColor == default)
+            {
+                successColor = Color.Black;
+            }
+
             // Verifica se a entrada tem exatamente 9 caracteres e se pode ser convertida para um número inteiro
             if (number.Length != 9 || !int.TryParse(number, out _))
             {
@@ -73,7 +86,7 @@ namespace ValidationLibrary
             else
             {
                 // Se for válido, pode atualizar a cor da label para indicar sucesso (opcional)
-                label.ForeColor = Color.Black;
+                label.ForeColor = successColor;
                 return true;
             }
             

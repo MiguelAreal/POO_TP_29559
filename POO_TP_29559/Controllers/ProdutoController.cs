@@ -46,36 +46,6 @@ public class ProdutoController : BaseController<Produto>, IEntityController
         return _produtosComNomes;
     }
 
-    /*protected override void ExibeItensNaView(List<Produto> produtos)
-    {
-        // Create a temporary list to hold translated products
-        _produtosComNomes = new List<ProdutoViewModel>();
-
-        foreach (var produto in produtos)
-        {
-            // Translate IDs to names
-            Categoria? categoria = new CategoriaRepo().GetById(produto.CategoriaID);
-            Marca? marca = new MarcaRepo().GetById(produto.MarcaID);
-
-            // Create a view model for the product with names instead of IDs
-            var produtoViewModel = new ProdutoViewModel
-            {
-                Id = produto.Id,
-                Nome = produto.Nome,
-                Preco = produto.Preco,
-                QuantidadeEmStock = produto.QuantidadeEmStock,
-                CategoriaNome = categoria?.Nome,
-                MarcaNome = marca?.Nome,
-                DataAdicao = produto.DataAdicao
-            };
-
-            _produtosComNomes.Add(produtoViewModel);
-        }
-
-        // Pass the list of translated products to the view
-        _view.MostraItens(_produtosComNomes);
-    }*/
-
     protected override void RemoveItem(Produto item)
     {
         _repository.Remove(item);
@@ -84,5 +54,15 @@ public class ProdutoController : BaseController<Produto>, IEntityController
     protected override void UpdateItem(Produto item)
     {
         throw new NotImplementedException();
+    }
+
+    public List<Produto>? GetRawProdutos()
+    {
+        if (_repository is ProdutoRepo produtoRepo)
+        {
+            var produtos = produtoRepo.GetAll();
+            return produtos.OrderBy(c => c.Nome).ToList();
+        }
+        throw new InvalidOperationException("O repositório atual não suporta a operação GetAll.");
     }
 }

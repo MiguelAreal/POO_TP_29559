@@ -17,19 +17,19 @@ namespace poo_tp_29559.Views
         private int _previousColumnIndex = -1;
         object items;
 
-        public ChildForm(FormTypes formType)
+        public ChildForm(FormTypes formType, bool isAdmin = true)
         {
             InitializeComponent();
             _formType = formType;
             _controller = CreateController();
-            changeSettings(formType);
-            
+            changeSettings(formType, isAdmin); 
+
             MostraItens();
                         
         }
 
         //  Dependendo do form ativo, Altera o ícone de adicionar item.
-        public void changeSettings(FormTypes formType)
+        public void changeSettings(FormTypes formType, bool isAdmin)
         {
             // Por defeito este botão não é visível, ao recarregar mantém-no como invisível.
             btnSeeVenda.Visible = false;
@@ -47,6 +47,14 @@ namespace poo_tp_29559.Views
                     btnAdd.Text = "👤";
                 break;
                 
+            }
+
+            if (!isAdmin)
+            {
+                btnRem.Visible = false;
+                btnSeeVenda.Visible = false;
+                btnAdd.Visible = false;
+                dgvItens.ReadOnly = true;
             }
         }
 
@@ -91,7 +99,6 @@ namespace poo_tp_29559.Views
             // Esconde propriedades não relevantes em termos visuais.
             ToggleColumnVisibility("Id", false);
             ToggleColumnVisibility("IsParticular", false);
-            ToggleColumnVisibility("IsAdmin", false);
             ToggleColumnVisibility("Password", false);
 
         }

@@ -12,14 +12,18 @@ namespace poo_tp_29559.Views
     public partial class AddProdutoForm : MetroForm
     {
         private readonly ProdutoController _controller;
+        private MarcaController marcaController;
+        private CategoriaController categoriaController;
 
-        // Parâmetro opcional
+        private List<Marca> _marcas;
+        private List<Categoria> _categorias;
+
         public AddProdutoForm()
         {
             InitializeComponent();
-            var categoriaRepo = new CategoriaRepo();
-            var marcaRepo = new MarcaRepo();
             _controller = new ProdutoController();
+            marcaController = new MarcaController();
+            categoriaController = new CategoriaController();
         }
 
         private void AddProdutoForm_Load(object sender, EventArgs e)
@@ -28,17 +32,15 @@ namespace poo_tp_29559.Views
             CarregaCategorias();
         }
 
+      
         private void CarregaMarcas()
         {
-            // Use BaseRepo diretamente para carregar marcas
-            MarcaRepo marcaRepo = new();
-            List<Marca> marcas = marcaRepo.GetAll();
+            _marcas = (List<Marca>)marcaController.GetItems();
+            _marcas = _marcas.OrderBy(m => m.Nome).ToList();
 
-            marcas = marcas.OrderBy(m => m.Nome).ToList();
-
-            if (marcas != null)
+            if (_marcas != null)
             {
-                cmbMarca.DataSource = marcas;
+                cmbMarca.DataSource = _marcas;
                 cmbMarca.DisplayMember = "Nome";
                 cmbMarca.ValueMember = "Id";
             }
@@ -46,15 +48,12 @@ namespace poo_tp_29559.Views
 
         private void CarregaCategorias()
         {
-            // Use BaseRepo diretamente para carregar marcas
-            CategoriaRepo categoriaRepo = new();
-            List<Categoria> categorias = categoriaRepo.GetAll();
+            _categorias = (List<Categoria>)categoriaController.GetItems();
+            _categorias = _categorias.OrderBy(m => m.Nome).ToList();
 
-            categorias = categorias.OrderBy(m => m.Nome).ToList();
-
-            if (categorias != null)
+            if (_categorias != null)
             {
-                cmbCategoria.DataSource = categorias;
+                cmbCategoria.DataSource = _categorias;
                 cmbCategoria.DisplayMember = "Nome";
                 cmbCategoria.ValueMember = "Id";
             }

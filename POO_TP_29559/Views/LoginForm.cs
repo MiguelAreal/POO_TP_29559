@@ -1,4 +1,6 @@
-﻿namespace poo_tp_29559.Views
+﻿using ValidationLibrary;
+
+namespace poo_tp_29559.Views
 {
     public partial class LoginForm : Form
     {
@@ -31,21 +33,35 @@
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+            bool allvalid = true;
 
-            string username = txtUser.Text;
+            // Valida o NIF (já tratado pela validação de nove dígitos)
+            allvalid &= FieldValidator.ValidateNineDigits(txtNIF.Text, imgUser, Color.FromArgb(9, 171, 219));
+
+            // Valida outros campos (exemplo com password)
+            allvalid &= FieldValidator.ValidateFields(new Control[] { txtPassword }, new Label[] { imgPwd }, Color.FromArgb(9, 171, 219));
+
+            // Se algum campo não for válido, interrompe
+            if (!allvalid)
+            {
+                return;
+            }
+
+            // Agora, o NIF já foi validado, e não precisamos de convertê-lo
+            int NIF = Convert.ToInt32(txtNIF.Text);  // A conversão aqui é segura, pois a validação anterior já garante que é um número
+
             string password = txtPassword.Text;
 
-            MainForm mainForm = new MainForm();
-            mainForm.Show();
-            this.Hide();
-
-
             // Verifica se o login é válido
-            if (_controller.VerificarLogin(username, password))
+            if (_controller.VerificarLogin(NIF, password))
             {
-                /*MainForm mainForm = new MainForm();
+                // Obtém o utilizador autenticado
+                var utilizadorAtual = _controller.ObterUtilizadorPorNIF(NIF);
+
+                // Passa o utilizador atual para o MainForm
+                MainForm mainForm = new MainForm(utilizadorAtual);
                 mainForm.Show();
-                this.Hide();*/
+                this.Hide();
             }
             else
             {
@@ -53,5 +69,7 @@
                 MessageBox.Show("Utilizador ou palavra-passe inválidos.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

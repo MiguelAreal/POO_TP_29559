@@ -30,7 +30,7 @@
             lblTitle = new Label();
             btnSair = new Label();
             panelUser = new Panel();
-            txtUser = new TextBox();
+            txtNome = new TextBox();
             imgUser = new Label();
             panelPassword = new Panel();
             btnHidePwd = new Label();
@@ -40,14 +40,18 @@
             lblLoginAqui = new Label();
             panel1 = new Panel();
             dtpNasc = new DateTimePicker();
-            label5 = new Label();
+            imgDataNasc = new Label();
             panel2 = new Panel();
             txtNIF = new TextBox();
-            label4 = new Label();
+            imgNIF = new Label();
             panel4 = new Panel();
             txtContacto = new TextBox();
             txtContactoCodPais = new TextBox();
-            label7 = new Label();
+            imgContacto = new Label();
+            panel5 = new Panel();
+            rdbCliente = new RadioButton();
+            rdbAdmin = new RadioButton();
+            imgTipoUser = new Label();
             leftPanel.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -56,6 +60,7 @@
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // leftPanel
@@ -70,9 +75,8 @@
             leftPanel.Location = new Point(0, 0);
             leftPanel.Margin = new Padding(0);
             leftPanel.Name = "leftPanel";
-            leftPanel.Size = new Size(249, 532);
+            leftPanel.Size = new Size(249, 575);
             leftPanel.TabIndex = 0;
-            leftPanel.Paint += leftPanel_Paint;
             // 
             // panel3
             // 
@@ -101,7 +105,7 @@
             label3.Dock = DockStyle.Bottom;
             label3.Font = new Font("Montserrat", 9F);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(0, 500);
+            label3.Location = new Point(0, 543);
             label3.Name = "label3";
             label3.Size = new Size(142, 32);
             label3.TabIndex = 3;
@@ -171,23 +175,23 @@
             // panelUser
             // 
             panelUser.BackColor = Color.White;
-            panelUser.Controls.Add(txtUser);
+            panelUser.Controls.Add(txtNome);
             panelUser.Controls.Add(imgUser);
             panelUser.Location = new Point(249, 86);
             panelUser.Name = "panelUser";
             panelUser.Size = new Size(329, 45);
             panelUser.TabIndex = 6;
             // 
-            // txtUser
+            // txtNome
             // 
-            txtUser.BorderStyle = BorderStyle.None;
-            txtUser.Font = new Font("Montserrat", 12F);
-            txtUser.ForeColor = Color.FromArgb(9, 171, 219);
-            txtUser.Location = new Point(55, 12);
-            txtUser.Name = "txtUser";
-            txtUser.PlaceholderText = "Nome";
-            txtUser.Size = new Size(227, 20);
-            txtUser.TabIndex = 1;
+            txtNome.BorderStyle = BorderStyle.None;
+            txtNome.Font = new Font("Montserrat", 12F);
+            txtNome.ForeColor = Color.FromArgb(9, 171, 219);
+            txtNome.Location = new Point(55, 12);
+            txtNome.Name = "txtNome";
+            txtNome.PlaceholderText = "Nome";
+            txtNome.Size = new Size(227, 20);
+            txtNome.TabIndex = 1;
             // 
             // imgUser
             // 
@@ -257,12 +261,13 @@
             btnSubmit.FlatStyle = FlatStyle.Flat;
             btnSubmit.Font = new Font("Montserrat", 12F);
             btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(342, 434);
+            btnSubmit.Location = new Point(338, 499);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(148, 42);
             btnSubmit.TabIndex = 5;
             btnSubmit.Text = "REGISTAR";
             btnSubmit.UseVisualStyleBackColor = false;
+            btnSubmit.Click += btnSubmit_Click;
             // 
             // lblLoginAqui
             // 
@@ -270,7 +275,7 @@
             lblLoginAqui.Cursor = Cursors.Hand;
             lblLoginAqui.Font = new Font("Montserrat", 9.749999F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblLoginAqui.ForeColor = Color.FromArgb(9, 171, 219);
-            lblLoginAqui.Location = new Point(331, 486);
+            lblLoginAqui.Location = new Point(327, 546);
             lblLoginAqui.Name = "lblLoginAqui";
             lblLoginAqui.Size = new Size(170, 18);
             lblLoginAqui.TabIndex = 6;
@@ -282,7 +287,7 @@
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(dtpNasc);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(imgDataNasc);
             panel1.Location = new Point(248, 226);
             panel1.Name = "panel1";
             panel1.Size = new Size(323, 45);
@@ -300,23 +305,23 @@
             dtpNasc.Size = new Size(228, 24);
             dtpNasc.TabIndex = 5;
             // 
-            // label5
+            // imgDataNasc
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 20F);
-            label5.ForeColor = Color.FromArgb(9, 171, 219);
-            label5.Location = new Point(3, 4);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 37);
-            label5.TabIndex = 1;
-            label5.Text = "📅";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
+            imgDataNasc.AutoSize = true;
+            imgDataNasc.Font = new Font("Segoe UI", 20F);
+            imgDataNasc.ForeColor = Color.FromArgb(9, 171, 219);
+            imgDataNasc.Location = new Point(3, 4);
+            imgDataNasc.Name = "imgDataNasc";
+            imgDataNasc.Size = new Size(54, 37);
+            imgDataNasc.TabIndex = 1;
+            imgDataNasc.Text = "📅";
+            imgDataNasc.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
             panel2.BackColor = Color.White;
             panel2.Controls.Add(txtNIF);
-            panel2.Controls.Add(label4);
+            panel2.Controls.Add(imgNIF);
             panel2.Location = new Point(249, 296);
             panel2.Name = "panel2";
             panel2.Size = new Size(323, 45);
@@ -328,29 +333,30 @@
             txtNIF.Font = new Font("Montserrat", 12F);
             txtNIF.ForeColor = Color.FromArgb(9, 171, 219);
             txtNIF.Location = new Point(54, 13);
+            txtNIF.MaxLength = 9;
             txtNIF.Name = "txtNIF";
             txtNIF.PlaceholderText = "NIF";
             txtNIF.Size = new Size(228, 20);
             txtNIF.TabIndex = 3;
             // 
-            // label4
+            // imgNIF
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 20F);
-            label4.ForeColor = Color.FromArgb(9, 171, 219);
-            label4.Location = new Point(3, -1);
-            label4.Name = "label4";
-            label4.Size = new Size(54, 37);
-            label4.TabIndex = 1;
-            label4.Text = "\U0001faaa";
-            label4.TextAlign = ContentAlignment.TopCenter;
+            imgNIF.AutoSize = true;
+            imgNIF.Font = new Font("Segoe UI", 20F);
+            imgNIF.ForeColor = Color.FromArgb(9, 171, 219);
+            imgNIF.Location = new Point(3, 2);
+            imgNIF.Name = "imgNIF";
+            imgNIF.Size = new Size(54, 37);
+            imgNIF.TabIndex = 1;
+            imgNIF.Text = "\U0001faaa";
+            imgNIF.TextAlign = ContentAlignment.TopCenter;
             // 
             // panel4
             // 
             panel4.BackColor = Color.White;
             panel4.Controls.Add(txtContacto);
             panel4.Controls.Add(txtContactoCodPais);
-            panel4.Controls.Add(label7);
+            panel4.Controls.Add(imgContacto);
             panel4.Location = new Point(249, 368);
             panel4.Name = "panel4";
             panel4.Size = new Size(323, 45);
@@ -362,6 +368,7 @@
             txtContacto.Font = new Font("Montserrat", 12F);
             txtContacto.ForeColor = Color.FromArgb(9, 171, 219);
             txtContacto.Location = new Point(102, 13);
+            txtContacto.MaxLength = 9;
             txtContacto.Name = "txtContacto";
             txtContacto.PlaceholderText = "Contacto";
             txtContacto.Size = new Size(182, 20);
@@ -373,32 +380,82 @@
             txtContactoCodPais.Font = new Font("Montserrat", 12F);
             txtContactoCodPais.ForeColor = Color.FromArgb(9, 171, 219);
             txtContactoCodPais.Location = new Point(54, 13);
+            txtContactoCodPais.MaxLength = 4;
             txtContactoCodPais.Name = "txtContactoCodPais";
             txtContactoCodPais.Size = new Size(42, 20);
             txtContactoCodPais.TabIndex = 4;
             txtContactoCodPais.Text = "+351";
             // 
-            // label7
+            // imgContacto
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 20F);
-            label7.ForeColor = Color.FromArgb(9, 171, 219);
-            label7.Location = new Point(3, 4);
-            label7.Name = "label7";
-            label7.Size = new Size(54, 37);
-            label7.TabIndex = 1;
-            label7.Text = "📞";
-            label7.TextAlign = ContentAlignment.TopCenter;
+            imgContacto.AutoSize = true;
+            imgContacto.Font = new Font("Segoe UI", 20F);
+            imgContacto.ForeColor = Color.FromArgb(9, 171, 219);
+            imgContacto.Location = new Point(3, 4);
+            imgContacto.Name = "imgContacto";
+            imgContacto.Size = new Size(54, 37);
+            imgContacto.TabIndex = 1;
+            imgContacto.Text = "📞";
+            imgContacto.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.White;
+            panel5.Controls.Add(rdbCliente);
+            panel5.Controls.Add(rdbAdmin);
+            panel5.Controls.Add(imgTipoUser);
+            panel5.Location = new Point(249, 436);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(323, 45);
+            panel5.TabIndex = 11;
+            // 
+            // rdbCliente
+            // 
+            rdbCliente.AutoSize = true;
+            rdbCliente.Checked = true;
+            rdbCliente.Font = new Font("Montserrat", 9F);
+            rdbCliente.Location = new Point(196, 14);
+            rdbCliente.Name = "rdbCliente";
+            rdbCliente.Size = new Size(67, 20);
+            rdbCliente.TabIndex = 3;
+            rdbCliente.TabStop = true;
+            rdbCliente.Text = "Cliente";
+            rdbCliente.UseVisualStyleBackColor = true;
+            // 
+            // rdbAdmin
+            // 
+            rdbAdmin.AutoSize = true;
+            rdbAdmin.Font = new Font("Montserrat", 9F);
+            rdbAdmin.Location = new Point(63, 14);
+            rdbAdmin.Name = "rdbAdmin";
+            rdbAdmin.Size = new Size(112, 20);
+            rdbAdmin.TabIndex = 2;
+            rdbAdmin.TabStop = true;
+            rdbAdmin.Text = "Administrador";
+            rdbAdmin.UseVisualStyleBackColor = true;
+            // 
+            // imgTipoUser
+            // 
+            imgTipoUser.AutoSize = true;
+            imgTipoUser.Font = new Font("Segoe UI", 20F);
+            imgTipoUser.ForeColor = Color.FromArgb(9, 171, 219);
+            imgTipoUser.Location = new Point(3, 4);
+            imgTipoUser.Name = "imgTipoUser";
+            imgTipoUser.Size = new Size(54, 37);
+            imgTipoUser.TabIndex = 1;
+            imgTipoUser.Text = "🛡️";
+            imgTipoUser.TextAlign = ContentAlignment.TopCenter;
             // 
             // SignupForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(569, 532);
+            ClientSize = new Size(569, 575);
+            Controls.Add(panel1);
+            Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel2);
-            Controls.Add(panel1);
             Controls.Add(btnSubmit);
             Controls.Add(lblLoginAqui);
             Controls.Add(panelPassword);
@@ -427,6 +484,8 @@
             panel2.PerformLayout();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -446,20 +505,24 @@
         private Label imgPwd;
         private Button btnSubmit;
         private Label lblLoginAqui;
-        private TextBox txtUser;
+        private TextBox txtNome;
         private Label btnHidePwd;
         private TextBox txtPassword;
         private Panel panel1;
-        private Label label5;
+        private Label imgDataNasc;
         private DateTimePicker dtpNasc;
         private Panel panel2;
         private TextBox txtNIF;
-        private Label label4;
+        private Label imgNIF;
         private Panel panel3;
         private Label label6;
         private Panel panel4;
         private TextBox txtContactoCodPais;
-        private Label label7;
+        private Label imgContacto;
         private TextBox txtContacto;
+        private Panel panel5;
+        private RadioButton rdbCliente;
+        private RadioButton rdbAdmin;
+        private Label imgTipoUser;
     }
 }

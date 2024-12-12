@@ -4,5 +4,11 @@
     "Nome": "Teclados",
     "Descricao": "Aquilo que escreve",
     "DataCriacao": "2024-12-12T00:11:28.0245244+00:00"
+  },
+  {
+    "Id": 2,
+    "Nome": "Ratos",
+    "Descricao": "Hhhhhhh",
+    "DataCriacao": "2024-12-12T14:16:33.2345627+00:00"
   }
 ]

@@ -9,13 +9,13 @@ public class Utilizador : IIdentifiable
     public string? Nome { get; set; }
 
     [DisplayName("Contacto")]
-    public string? Contacto { get; set; }
+    public string Contacto { get; set; }
 
     [DisplayName("Morada")]
     public string? Morada { get; set; }
 
     [DisplayName("NIF")]
-    public string? Nif { get; set; }
+    public int Nif { get; set; } // Identificador Único
 
     [DisplayName("Data de Nascimento")]
     public string? DataNasc { get; set; }
@@ -26,19 +26,15 @@ public class Utilizador : IIdentifiable
     [DisplayName("Password")]
     public string? Password { get; set; }
 
-    public bool IsAdmin { get; set; } // Para identificar se o utilizador se é administrador ou cliente
+    [DisplayName("Admin.")]
+    public bool IsAdmin { get; set; } 
 
 
     // Construtor
     public Utilizador()
     {
         DataAdicao = DateTime.Now.ToString();
-        IsAdmin = false; // Define por padrão que o usuário é um cliente
+        IsAdmin = false; // Define por padrão que o utilizador é um cliente
     }
 
-    // Método de verificação de password - Apenas um exemplo simples (para fins de demonstração)
-    public bool VerificarPassword(string password)
-    {
-        return Password == password;
-    }
 }

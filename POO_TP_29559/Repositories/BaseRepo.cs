@@ -114,6 +114,11 @@ public class BaseRepo<T> : IRepo<T> where T : class, IIdentifiable
         return items.FirstOrDefault(item => item.Id == id);
     }
 
+    public virtual T? GetByProperty(Func<T, object> propertySelector, object value)
+    {
+        return items.FirstOrDefault(item => propertySelector(item)?.Equals(value) == true);
+    }
+
 
     protected void SaveChanges()
     {
