@@ -58,11 +58,13 @@ public class ProdutoController : BaseController<Produto>, IEntityController
 
     public List<Produto>? GetRawProdutos()
     {
-        if (_repository is ProdutoRepo produtoRepo)
-        {
-            var produtos = produtoRepo.GetAll();
-            return produtos.OrderBy(c => c.Nome).ToList();
-        }
-        throw new InvalidOperationException("O repositório atual não suporta a operação GetAll.");
+        var produtos = _repository.GetAll();
+        return produtos.OrderBy(c => c.Nome).ToList();
+            
+    }
+
+    public Produto GetById(int? id)
+    {
+        return _repository.GetById(id);
     }
 }

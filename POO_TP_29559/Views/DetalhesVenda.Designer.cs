@@ -46,6 +46,14 @@
             lblGarantiaStatus = new Label();
             btnConfirmar = new Button();
             btnBack = new Label();
+            listViewCampanhas = new ListView();
+            Nome = new ColumnHeader();
+            CategoriaAplicada = new ColumnHeader();
+            Percentagem = new ColumnHeader();
+            lblTotalBruto = new Label();
+            lblTotalLiquido = new Label();
+            lblMesesRestantesGarantia = new Label();
+            lblFatura = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvFatura).BeginInit();
             SuspendLayout();
             // 
@@ -93,11 +101,11 @@
             // 
             lblDescontos.AutoSize = true;
             lblDescontos.Font = new Font("Montserrat", 10F);
-            lblDescontos.Location = new Point(25, 246);
+            lblDescontos.Location = new Point(25, 319);
             lblDescontos.Name = "lblDescontos";
-            lblDescontos.Size = new Size(156, 20);
+            lblDescontos.Size = new Size(167, 20);
             lblDescontos.TabIndex = 4;
-            lblDescontos.Text = "Descontos Aplicados";
+            lblDescontos.Text = "Campanhas Utilizadas:";
             // 
             // dgvFatura
             // 
@@ -124,7 +132,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dgvFatura.DefaultCellStyle = dataGridViewCellStyle2;
             dgvFatura.GridColor = Color.White;
-            dgvFatura.Location = new Point(306, 70);
+            dgvFatura.Location = new Point(262, 70);
             dgvFatura.MultiSelect = false;
             dgvFatura.Name = "dgvFatura";
             dgvFatura.ReadOnly = true;
@@ -139,7 +147,7 @@
             dgvFatura.RowHeadersVisible = false;
             dgvFatura.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dgvFatura.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvFatura.Size = new Size(425, 265);
+            dgvFatura.Size = new Size(469, 209);
             dgvFatura.TabIndex = 28;
             // 
             // IDProduto
@@ -194,7 +202,7 @@
             // 
             btnConfirmar.Cursor = Cursors.Hand;
             btnConfirmar.Font = new Font("Segoe UI", 11F);
-            btnConfirmar.Location = new Point(629, 451);
+            btnConfirmar.Location = new Point(629, 410);
             btnConfirmar.Name = "btnConfirmar";
             btnConfirmar.Size = new Size(102, 44);
             btnConfirmar.TabIndex = 47;
@@ -204,6 +212,7 @@
             // btnBack
             // 
             btnBack.AutoSize = true;
+            btnBack.Cursor = Cursors.Hand;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Montserrat", 20F);
             btnBack.ForeColor = Color.FromArgb(9, 171, 219);
@@ -213,17 +222,92 @@
             btnBack.Size = new Size(54, 37);
             btnBack.TabIndex = 48;
             btnBack.Text = "🔙";
+            btnBack.Click += btnBack_Click;
+            btnBack.MouseEnter += btnBack_MouseEnter;
+            btnBack.MouseLeave += btnBack_MouseLeave;
+            // 
+            // listViewCampanhas
+            // 
+            listViewCampanhas.Columns.AddRange(new ColumnHeader[] { Nome, CategoriaAplicada, Percentagem });
+            listViewCampanhas.FullRowSelect = true;
+            listViewCampanhas.HeaderStyle = ColumnHeaderStyle.None;
+            listViewCampanhas.Location = new Point(25, 342);
+            listViewCampanhas.MultiSelect = false;
+            listViewCampanhas.Name = "listViewCampanhas";
+            listViewCampanhas.Size = new Size(218, 139);
+            listViewCampanhas.TabIndex = 49;
+            listViewCampanhas.UseCompatibleStateImageBehavior = false;
+            listViewCampanhas.View = View.Details;
+            // 
+            // Nome
+            // 
+            Nome.Text = "Campanha";
+            // 
+            // CategoriaAplicada
+            // 
+            CategoriaAplicada.Text = "Categoria";
+            CategoriaAplicada.Width = 80;
+            // 
+            // Percentagem
+            // 
+            Percentagem.Text = "Desconto";
+            // 
+            // lblTotalBruto
+            // 
+            lblTotalBruto.AutoSize = true;
+            lblTotalBruto.Font = new Font("Montserrat", 10F);
+            lblTotalBruto.Location = new Point(262, 282);
+            lblTotalBruto.Name = "lblTotalBruto";
+            lblTotalBruto.Size = new Size(91, 20);
+            lblTotalBruto.TabIndex = 50;
+            lblTotalBruto.Text = "Total Bruto:";
+            // 
+            // lblTotalLiquido
+            // 
+            lblTotalLiquido.AutoSize = true;
+            lblTotalLiquido.Font = new Font("Montserrat", 10F);
+            lblTotalLiquido.Location = new Point(426, 282);
+            lblTotalLiquido.Name = "lblTotalLiquido";
+            lblTotalLiquido.Size = new Size(102, 20);
+            lblTotalLiquido.TabIndex = 51;
+            lblTotalLiquido.Text = "Total Líquido:";
+            // 
+            // lblMesesRestantesGarantia
+            // 
+            lblMesesRestantesGarantia.AutoSize = true;
+            lblMesesRestantesGarantia.Font = new Font("Montserrat", 10F);
+            lblMesesRestantesGarantia.Location = new Point(26, 238);
+            lblMesesRestantesGarantia.Name = "lblMesesRestantesGarantia";
+            lblMesesRestantesGarantia.Size = new Size(144, 20);
+            lblMesesRestantesGarantia.TabIndex = 52;
+            lblMesesRestantesGarantia.Text = "Estado da Garantia:";
+            // 
+            // lblFatura
+            // 
+            lblFatura.AutoSize = true;
+            lblFatura.Font = new Font("Montserrat", 10F);
+            lblFatura.Location = new Point(306, 47);
+            lblFatura.Name = "lblFatura";
+            lblFatura.Size = new Size(57, 20);
+            lblFatura.TabIndex = 53;
+            lblFatura.Text = "Fatura:";
             // 
             // DetalhesVenda
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
+            BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             CancelButton = btnConfirmar;
-            ClientSize = new Size(757, 522);
+            ClientSize = new Size(757, 492);
+            Controls.Add(dgvFatura);
+            Controls.Add(lblFatura);
+            Controls.Add(lblMesesRestantesGarantia);
+            Controls.Add(lblTotalLiquido);
+            Controls.Add(lblTotalBruto);
+            Controls.Add(listViewCampanhas);
             Controls.Add(btnConfirmar);
             Controls.Add(lblGarantia);
             Controls.Add(lblGarantiaStatus);
-            Controls.Add(dgvFatura);
             Controls.Add(lblDescontos);
             Controls.Add(lblNIF);
             Controls.Add(lblCliente);
@@ -232,6 +316,7 @@
             Font = new Font("Montserrat", 10F);
             Name = "DetalhesVenda";
             Padding = new Padding(23, 72, 23, 24);
+            Resizable = false;
             Text = "     Detalhes de Venda";
             ((System.ComponentModel.ISupportInitialize)dgvFatura).EndInit();
             ResumeLayout(false);
@@ -255,5 +340,13 @@
         private Label lblGarantiaStatus;
         private Button btnConfirmar;
         private Label btnBack;
+        private ListView listViewCampanhas;
+        private ColumnHeader Nome;
+        private ColumnHeader CategoriaAplicada;
+        private ColumnHeader Percentagem;
+        private Label lblTotalBruto;
+        private Label lblTotalLiquido;
+        private Label lblMesesRestantesGarantia;
+        private Label lblFatura;
     }
 }

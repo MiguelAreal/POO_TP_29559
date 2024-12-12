@@ -22,10 +22,10 @@ namespace poo_tp_29559.Views
             InitializeComponent();
             _formType = formType;
             _controller = CreateController();
-            changeSettings(formType, isAdmin); 
+            changeSettings(formType, isAdmin);
 
             MostraItens();
-                        
+
         }
 
         //  Dependendo do form ativo, Altera o ícone de adicionar item.
@@ -45,8 +45,8 @@ namespace poo_tp_29559.Views
                     break;
                 case FormTypes.Clientes:
                     btnAdd.Text = "👤";
-                break;
-                
+                    break;
+
             }
 
             if (!isAdmin)
@@ -87,7 +87,7 @@ namespace poo_tp_29559.Views
             // Configurar SortMode para todas as colunas
             foreach (DataGridViewColumn column in dgvItens.Columns)
             {
-                column.SortMode = DataGridViewColumnSortMode.Automatic; 
+                column.SortMode = DataGridViewColumnSortMode.Automatic;
             }
 
             // Restaura a célula selecionada, se for válida.
@@ -344,6 +344,59 @@ namespace poo_tp_29559.Views
 
             // Recarrega itens
             MostraItens();
+        }
+
+        private void ChildForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSeeVenda_Click(object sender, EventArgs e)
+        {
+            // Verifica se há alguma linha selecionada
+            if (dgvItens.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    // Obtém o índice da linha selecionada
+                    int rowIndex = dgvItens.SelectedRows[0].Index;
+
+                    // Obtém o item selecionado pelo índice da linha (que é um VendaViewModel)
+                    var selectedItem = dgvItens.Rows[rowIndex].DataBoundItem;
+
+                    // Verifica se o item selecionado é um VendaViewModel
+                    if (selectedItem is VendaViewModel vendaViewModel)
+                    {
+                        // Busca a venda completa com base no Id da VendaViewModel
+                        Venda venda = (Venda)_controller.GetById(vendaViewModel.Id);
+
+                        // Verifica se o formulário ativo é de Vendas
+                        if (_formType == FormTypes.Vendas)
+                        {
+                            // Passa a venda para o formulário DetalhesVenda
+                            Form consultaForm = new DetalhesVenda(venda);
+
+                            // Abre o formulário
+                            using (consultaForm)
+                            {
+                                consultaForm.ShowDialog();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selecione uma venda válida.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro enquanto consultava venda: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma venda.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
     }

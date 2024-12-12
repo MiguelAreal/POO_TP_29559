@@ -15,11 +15,9 @@ namespace poo_tp_29559.Views
         private readonly VendaController _controllerVenda;
         private UtilizadorController utilizadorController;
         private ProdutoController produtoController;
+        private CategoriaController categoriaController;
+        private MarcaController marcaController;
 
-        ProdutoRepo produtoRepo = new();
-        UtilizadorRepo clienteRepo = new();
-        CategoriaRepo categoriaRepo = new();
-        MarcaRepo marcaRepo = new();
 
         private List<Utilizador> _clientes;
         private List<Produto>? _produtos;
@@ -33,6 +31,8 @@ namespace poo_tp_29559.Views
 
             utilizadorController = new UtilizadorController();
             produtoController = new ProdutoController();
+            categoriaController = new CategoriaController();
+            marcaController = new MarcaController();
 
 
             CarregaProdutos();
@@ -200,7 +200,8 @@ namespace poo_tp_29559.Views
                     totalBruto += quantidade * precoUnitario;
 
                     // Obter categoria do produto pelo ID
-                    Produto produto = produtoRepo.GetById(produtoId);
+                    Produto produto = produtoController.GetById(produtoId);
+
                     if (produto != null)
                     {
                         var desconto = ObterDescontoPorCategoria(produto.CategoriaID);
@@ -249,7 +250,7 @@ namespace poo_tp_29559.Views
                 .Where(idProduto => idProduto != null)
                 .Select(idProduto =>
                 {
-                    Produto produto = produtoRepo.GetById(Convert.ToInt32(idProduto));
+                    Produto produto = produtoController.GetById(Convert.ToInt32(idProduto));
                     return produto?.CategoriaID;
                 })
                 .Where(categoriaId => categoriaId != null)
@@ -280,10 +281,19 @@ namespace poo_tp_29559.Views
 
 
         // Retorna nome de categoria através do ID
-        private string ObterNomeCategoria(int? categoriaId) { return categoriaRepo.GetById(categoriaId).Nome ?? "Desconhecida"; }
+        private string ObterNomeCategoria(int categoriaId)
+        {
+            Categoria categoria = (Categoria)categoriaController.GetById(categoriaId);
+            return categoria.Nome ?? "Desconhecida";
+           
+        }
 
         // Retorna nome de marca através do ID
-        private string ObterNomeMarca(int? marcaId) { return marcaRepo.GetById(marcaId).Nome ?? "Desconhecida"; }
+        private string ObterNomeMarca(int marcaId)
+        {
+            Marca marca = (Marca)marcaController.GetById(marcaId);
+            return marca.Nome ?? "Desconhecida";
+        }
        
 
         private void txtNIF_Leave(object sender, EventArgs e)
@@ -348,14 +358,14 @@ namespace poo_tp_29559.Views
                 // Atualizar o stock dos produtos vendidos
                 foreach (var itemVenda in venda.Itens)
                 {
-                    Produto produto = produtoRepo.GetById(itemVenda.ProdutoID);
+                    Produto produto = produtoController.GetById(itemVenda.ProdutoID);
                     if (produto != null)
                     {
                         // Subtrai a quantidade vendida do stock de cada produto
                         produto.QuantidadeEmStock -= itemVenda.Unidades;
 
                         // Atualiza o produto no repositório
-                        produtoRepo.Update(produto);
+                        produtoController.UpdateItem(produto);
                     }
                 }
 
@@ -413,7 +423,7 @@ namespace poo_tp_29559.Views
                     int produtoID = Convert.ToInt32(row.Cells["IDProduto"].Value);
                     int quantidade = Convert.ToInt32(row.Cells["Quantidade"].Value);
 
-                    Produto produto = produtoRepo.GetById(produtoID);
+                    Produto produto = produtoController.GetById(produtoID);
 
                     if (produto != null)
                     {

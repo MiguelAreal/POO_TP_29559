@@ -54,32 +54,24 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
 
     public Utilizador? ObterUtilizadorPorNIF(int nif)
     {
-        if (_repository is UtilizadorRepo utilizadorRepo)
-        {
-            return utilizadorRepo.ObterPorNIF(nif);
-        }
-        throw new InvalidOperationException("O repositório atual não suporta a operação ObterPorNIF.");
+        return _repository.ObterPorNIF(nif);
     }
 
     public Utilizador? ObterUtilizadorPorContacto(string contacto)
     {
-        if (_repository is UtilizadorRepo utilizadorRepo)
-        {
-            return utilizadorRepo.ObterPorContacto(contacto);
-        }
-        throw new InvalidOperationException("O repositório atual não suporta a operação ObterPorContacto.");
+        return _repository.ObterPorContacto(contacto);
     }
 
     // Obtém todos os clientes não administradores
     public List<Utilizador> GetClientes()
     {
-        if (_repository is UtilizadorRepo utilizadorRepo)
-        {
-            var clientes = utilizadorRepo.GetAllClientes();
-            return clientes.OrderBy(c => c.Nome).ToList();
-        }
-        throw new InvalidOperationException("O repositório atual não suporta a operação GetAllClientes.");
+       var clientes = _repository.GetAllClientes();
+       return clientes.OrderBy(c => c.Nome).ToList();
 
+    }
 
+    public Utilizador GetById(int? clienteID)
+    {
+        return _repository.GetById(clienteID);
     }
 }
