@@ -5,7 +5,7 @@ using System.ComponentModel;
 
 
 
-public class Venda : IIdentifiable
+public class VendaCompra : IIdentifiable
 {
     [Browsable(false)]
     public int Id { get; set; }
@@ -38,7 +38,7 @@ public class Venda : IIdentifiable
     public MetodoPagamento? MetodoPagamento { get; set; }
 
     // Construtor
-    public Venda()
+    public VendaCompra()
     {
         DataVenda = DateTime.Now.ToString();
         FimDataGarantia = DateTime.Now.AddMonths(36).ToString();

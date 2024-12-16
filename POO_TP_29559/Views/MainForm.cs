@@ -30,13 +30,13 @@ namespace poo_tp_29559
                 // Esconde os itens de menu que não devem ser acessíveis por um cliente
                 // Vendas e Clientes
                 vendasTSMI.Visible = false;
-                clientesTSMI.Visible = false;
+                utilizadoresTSMI.Visible = false;
             }
             else
-            {   
+            {
                 // Esconde os itens de menu que não devem ser acessíveis por um administrador (porque é inútil)
                 // Vendas e Clientes
-                comprarTSMI.Visible = false;
+                comprasTSMI.Visible = false;
             }
         }
 
@@ -79,7 +79,7 @@ namespace poo_tp_29559
         /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         /// <summary>
@@ -96,22 +96,25 @@ namespace poo_tp_29559
             switch (e.ClickedItem?.Text)
             {
                 case "Produtos":
-                    formFilho = new ChildForm(FormTypes.Produtos, _utilizadorLogado.IsAdmin);
+                    formFilho = new ChildForm(FormTypes.Produtos, _utilizadorLogado);
                     break;
                 case "Categorias":
-                    formFilho = new ChildForm(FormTypes.Categorias, _utilizadorLogado.IsAdmin);
+                    formFilho = new ChildForm(FormTypes.Categorias, _utilizadorLogado);
                     break;
                 case "Marcas":
-                    formFilho = new ChildForm(FormTypes.Marcas, _utilizadorLogado.IsAdmin);
+                    formFilho = new ChildForm(FormTypes.Marcas, _utilizadorLogado);
                     break;
-                case "Clientes":
-                    formFilho = new ChildForm(FormTypes.Clientes, _utilizadorLogado.IsAdmin);
+                case "Utilizadores":
+                    formFilho = new ChildForm(FormTypes.Utilizadores, _utilizadorLogado);
                     break;
                 case "Campanhas":
-                    formFilho = new ChildForm(FormTypes.Campanhas, _utilizadorLogado.IsAdmin);
+                    formFilho = new ChildForm(FormTypes.Campanhas, _utilizadorLogado);
                     break;
                 case "Vendas":
-                    formFilho = new ChildForm(FormTypes.Vendas, _utilizadorLogado.IsAdmin);
+                    formFilho = new ChildForm(FormTypes.Vendas, _utilizadorLogado);
+                    break;
+                case "Compras":
+                    formFilho = new ChildForm(FormTypes.Compras, _utilizadorLogado);
                     break;
                 default:
                     MessageBox.Show("Opção desconhecida");

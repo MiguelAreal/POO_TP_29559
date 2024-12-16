@@ -53,7 +53,7 @@ public class ProdutoController : BaseController<Produto>, IEntityController
 
     protected override void UpdateItem(Produto item)
     {
-        throw new NotImplementedException();
+        _repository.Update(item);
     }
 
     public List<Produto>? GetRawProdutos()

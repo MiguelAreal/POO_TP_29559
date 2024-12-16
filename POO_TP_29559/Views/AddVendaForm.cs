@@ -12,7 +12,7 @@ namespace poo_tp_29559.Views
 {
     public partial class AddVendaForm : MetroForm
     {
-        private readonly VendaController _controllerVenda;
+        private readonly VendaCompraController _controllerVenda;
         private UtilizadorController utilizadorController;
         private ProdutoController produtoController;
         private CategoriaController categoriaController;
@@ -351,7 +351,7 @@ namespace poo_tp_29559.Views
             }
 
             // Criar a venda
-            Venda venda = CriarVenda();
+            VendaCompra venda = CriarVenda();
 
             try
             {
@@ -370,7 +370,7 @@ namespace poo_tp_29559.Views
                 }
 
                 // Guarda a venda no repositório
-                VendaRepo vendaRepo = new(new UtilizadorRepo());
+                VendaCompraRepo vendaRepo = new(new UtilizadorRepo());
                 vendaRepo.Add(venda);
 
                 MessageBox.Show("Venda registada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -400,9 +400,9 @@ namespace poo_tp_29559.Views
         }
 
         // Criar objeto Venda com os dados do formulário
-        private Venda CriarVenda()
+        private VendaCompra CriarVenda()
         {
-            Venda venda = new()
+            VendaCompra venda = new()
             {
                 ClienteID = (int?)cmbClientes.SelectedValue,
                 NIF = Convert.ToInt32(txtNIF.Text),
@@ -522,6 +522,5 @@ namespace poo_tp_29559.Views
         private void btnAddProduto_MouseLeave(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.Black;
         private void btnRemItem_MouseEnter(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Red;
         private void btnRemItem_MouseLeave(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Black;
-
     }
 }

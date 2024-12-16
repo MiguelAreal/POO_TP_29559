@@ -3,11 +3,8 @@
     protected readonly BaseRepo<T> _repository;
     protected List<T> _items;
 
-    public BaseController(string filePath)
-    {
-        _repository = new BaseRepo<T>(filePath);
-    }
-      
+    public BaseController(string filePath) => _repository = new BaseRepo<T>(filePath);
+
     public void FiltrarItens(string filtro, string coluna)
     {
         var itensFiltrados = _items.Where(model =>
@@ -22,7 +19,6 @@
             }
             return false;
         }).ToList();
-
     }
 
     public void AddItem(T item)

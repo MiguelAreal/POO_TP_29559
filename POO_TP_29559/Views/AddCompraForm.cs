@@ -11,12 +11,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace poo_tp_29559.Views
 {
     public partial class AddCompraForm : MetroForm
     {
-        private readonly VendaController _controllerVenda;
+        private readonly VendaCompraController _controllerVenda;
         private UtilizadorController utilizadorController;
         private ProdutoController produtoController;
         private CategoriaController categoriaController;
@@ -40,6 +41,7 @@ namespace poo_tp_29559.Views
 
             CarregaProdutos();
             CarregaMetodosPagamento();
+            CalculaGarantia(cliente);
 
         }
 
@@ -54,6 +56,31 @@ namespace poo_tp_29559.Views
                 cmbProdutos.DisplayMember = "Nome";
                 cmbProdutos.ValueMember = "Id";
             }
+        }
+
+        private void CalculaGarantia(Utilizador cliente)
+        {
+            string nifString = cliente.Nif.ToString(); // Converte o NIF para string
+
+            if (nifString.Length == 9) // Verifica se o NIF convertido tem exatamente 9 caracteres
+            {
+                // Se o NIF começar com '1', '2' ou '3', é cliente particular
+                // Caso contrário, é empresa
+                if (nifString.StartsWith("1") || nifString.StartsWith("2") || nifString.StartsWith("3"))
+                {
+                    mesesGarantia = 36; // Garantia de 36 meses para cliente particular
+                }
+                else
+                {
+                    mesesGarantia = 12; // Garantia de 12 meses para empresas
+                }
+            }
+            else
+            {
+                mesesGarantia = 36; // Valor padrão de garantia caso o NIF não tenha 9 caracteres
+            }
+            txtGarantia.Text = $"{mesesGarantia} meses";
+
         }
 
 
@@ -266,18 +293,18 @@ namespace poo_tp_29559.Views
             }
 
             // Criar a venda
-            Venda venda = CriarVenda();
+            VendaCompra compra = CriarCompra();
 
             try
             {
                 // Atualizar o stock dos produtos vendidos
-                foreach (var itemVenda in venda.Itens)
+                foreach (var itemCompra in compra.Itens)
                 {
-                    Produto produto = produtoController.GetById(itemVenda.ProdutoID);
+                    Produto produto = produtoController.GetById(itemCompra.ProdutoID);
                     if (produto != null)
                     {
                         // Subtrai a quantidade vendida do stock de cada produto
-                        produto.QuantidadeEmStock -= itemVenda.Unidades;
+                        produto.QuantidadeEmStock -= itemCompra.Unidades;
 
                         // Atualiza o produto no repositório
                         produtoController.UpdateItem(produto);
@@ -285,8 +312,9 @@ namespace poo_tp_29559.Views
                 }
 
                 // Guarda a venda no repositório
-                VendaRepo vendaRepo = new(new UtilizadorRepo());
-                vendaRepo.Add(venda);
+                VendaCompraRepo vendaCompraRepo = new(new UtilizadorRepo());
+
+                vendaCompraRepo.Add(compra);
 
                 MessageBox.Show("Venda registada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -315,9 +343,9 @@ namespace poo_tp_29559.Views
         }
 
         // Criar objeto Venda com os dados do formulário
-        private Venda CriarVenda()
+        private VendaCompra CriarCompra()
         {
-            Venda venda = new()
+            VendaCompra venda = new()
             {
                 ClienteID = _cliente.Id,
                 NIF = _cliente.Nif,

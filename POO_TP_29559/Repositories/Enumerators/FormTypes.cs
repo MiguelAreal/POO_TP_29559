@@ -12,7 +12,8 @@ namespace poo_tp_29559.Repositories.Enumerators
         Categorias,
         Marcas,
         Vendas,
-        Clientes,
-        Campanhas
+        Utilizadores,
+        Campanhas,
+        Compras
     }
 }

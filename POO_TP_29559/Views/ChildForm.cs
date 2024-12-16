@@ -13,18 +13,21 @@ namespace poo_tp_29559.Views
     {
         private readonly IEntityController _controller;
         private readonly FormTypes _formType;
+        private readonly Utilizador _utilizadorLogado;
         private string? _activeColumn;
         private int _previousColumnIndex = -1;
-        object items;
+        private BindingSource _bindingSource;  // Persistente BindingSource
+        private object items;
 
-        public ChildForm(FormTypes formType, bool isAdmin = true)
+        public ChildForm(FormTypes formType, Utilizador utilizadorLogado)
         {
             InitializeComponent();
             _formType = formType;
             _controller = CreateController();
-            changeSettings(formType, isAdmin);
-
-            MostraItens();
+            _utilizadorLogado = utilizadorLogado;
+            _bindingSource = new BindingSource(); // Inicializa o BindingSource
+            changeSettings(formType, _utilizadorLogado.IsAdmin);
+            MostraItens(); // Mostra os itens inicialmente
 
         }
 
@@ -36,19 +39,8 @@ namespace poo_tp_29559.Views
 
             // Título do form
             Text = _formType.ToString();
-            switch (formType)
-            {
-                case FormTypes.Vendas:
-                    btnAdd.Text = "$";
-                    btnSeeVenda.Visible = true;
-                    dgvItens.ReadOnly = true;
-                    break;
-                case FormTypes.Clientes:
-                    btnAdd.Text = "👤";
-                    break;
 
-            }
-
+            // Se não for Administrador, por norma esconde botões
             if (!isAdmin)
             {
                 btnRem.Visible = false;
@@ -56,6 +48,29 @@ namespace poo_tp_29559.Views
                 btnAdd.Visible = false;
                 dgvItens.ReadOnly = true;
             }
+
+
+            switch (formType)
+            {
+                case FormTypes.Vendas:
+                    btnAdd.Text = "🛒";
+                    btnSeeVenda.Visible = true;
+                    dgvItens.ReadOnly = true;
+                break;
+                case FormTypes.Compras:
+                    btnAdd.Text = "🛒";
+                    btnRem.Visible = true;
+                    btnSeeVenda.Visible = true;
+                    btnAdd.Visible = true;
+                    dgvItens.ReadOnly = true;
+                break;
+                case FormTypes.Utilizadores:
+                    btnAdd.Text = "👤";
+                break;
+
+            }
+
+            
         }
 
         // Inicialização de controladores dependendo do tipo de form ativo.
@@ -66,23 +81,23 @@ namespace poo_tp_29559.Views
                 FormTypes.Produtos => new ProdutoController(),
                 FormTypes.Categorias => new CategoriaController(),
                 FormTypes.Marcas => new MarcaController(),
-                FormTypes.Clientes => new UtilizadorController(),
+                FormTypes.Utilizadores => new UtilizadorController(),
                 FormTypes.Campanhas => new CampanhaController(),
-                FormTypes.Vendas => new VendaController(),
+                FormTypes.Vendas => new VendaCompraController(),
+                FormTypes.Compras => new VendaCompraController(),
                 _ => throw new ArgumentException("FormType desconhecido.")
             };
         }
 
         public void MostraItens()
         {
-            items = _controller.GetItems();
+            items = _controller.GetItems(); // Obtém os dados
 
-            //  Guarda index na coluna selecionada
-            int currentColumnIndex = dgvItens.CurrentCell?.ColumnIndex ?? -1;
+            // Atualiza o BindingSource e DataGridView
+            _bindingSource.DataSource = items;
+            dgvItens.DataSource = _bindingSource; // Vincula o BindingSource diretamente
 
-            // Atribui DataSource e atualiza DataGridView
-            dgvItens.DataSource = new BindingSource { DataSource = items };
-            dgvItens.Refresh();
+            dgvItens.Refresh(); // Atualiza a exibição da DataGridView
 
             // Configurar SortMode para todas as colunas
             foreach (DataGridViewColumn column in dgvItens.Columns)
@@ -90,17 +105,10 @@ namespace poo_tp_29559.Views
                 column.SortMode = DataGridViewColumnSortMode.Automatic;
             }
 
-            // Restaura a célula selecionada, se for válida.
-            if (currentColumnIndex >= 0 && dgvItens.Rows.Count > 0 && currentColumnIndex < dgvItens.Columns.Count)
-            {
-                dgvItens.CurrentCell = dgvItens.Rows[0].Cells[currentColumnIndex];
-            }
-
             // Esconde propriedades não relevantes em termos visuais.
             ToggleColumnVisibility("Id", false);
             ToggleColumnVisibility("IsParticular", false);
             ToggleColumnVisibility("Password", false);
-
         }
 
         // Esconde da DataGridView dados não relevantes em termos visuais.
@@ -127,14 +135,27 @@ namespace poo_tp_29559.Views
         private void btnSeeVenda_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnSeeVenda, Color.Black);
 
 
-        // Evento da caixa de pesquisa, executa função de filtrar itens do controlador relevante.
+        // Método para filtrar os itens diretamente no BindingSource
         private void txtSearchItem_TextChanged(object sender, EventArgs e)
         {
-            _controller.FiltrarItens(txtSearchItem.Text, _activeColumn);
-            RestoreCurrentCell();
+            // Cria a expressão de filtro com base na coluna ativa e no texto de pesquisa
+            if (!string.IsNullOrEmpty(txtSearchItem.Text) && !string.IsNullOrEmpty(_activeColumn))
+            {
+                // Adapta a expressão de filtro dependendo da coluna ativa
+                _bindingSource.Filter = $"{_activeColumn} LIKE '*{txtSearchItem.Text}*'"; // No Windows Forms, o '*' funciona como coringa para LIKE
+            }
+            else
+            {
+                // Se o filtro for vazio, remove qualquer filtro anterior
+                _bindingSource.RemoveFilter();
+            }
+
+            // Atualiza a exibição da DataGridView
+            dgvItens.Refresh(); // Atualiza a exibição da DataGridView
+            RestoreCurrentCell(); // Restaura a célula ativa após a pesquisa
         }
 
-        // Usado para restaurar a célula atual, utilizado após pesquisa para manter integridade de seleção.
+        // Usado para restaurar a célula atual, após pesquisa ou alteração de itens
         private void RestoreCurrentCell()
         {
             if (dgvItens.Rows.Count > 0)
@@ -142,7 +163,7 @@ namespace poo_tp_29559.Views
                 int currentColumnIndex = dgvItens.Columns[_activeColumn]?.Index ?? -1;
                 dgvItens.CurrentCell = currentColumnIndex >= 0 && currentColumnIndex < dgvItens.Columns.Count
                     ? dgvItens.Rows[0].Cells[currentColumnIndex]
-                    : dgvItens.Rows[0].Cells[0]; // Fallback para primeira célula
+                    : dgvItens.Rows[0].Cells[0]; // Fallback para a primeira célula
             }
         }
 
@@ -198,10 +219,10 @@ namespace poo_tp_29559.Views
                             }
                             break;
 
-                        case FormTypes.Clientes:
-                            if (selectedItem is Utilizador clienteSelecionado)
+                        case FormTypes.Utilizadores:
+                            if (selectedItem is Utilizador utilizadorSelecionado)
                             {
-                                _controller.UpdateItem(clienteSelecionado);
+                                _controller.UpdateItem(utilizadorSelecionado);
                             }
                             break;
 
@@ -210,11 +231,12 @@ namespace poo_tp_29559.Views
                             {
                                 _controller.UpdateItem(campanhaSelecionada);
                             }
-                            break;
+                        break;
                         default:
                             MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                     }
+                    MostraItens();
                 }
             }
             // Trata o caso em que a linha ou coluna não é válida
@@ -249,20 +271,34 @@ namespace poo_tp_29559.Views
                                 var produto = _controller.GetById(produtoSelecionado.Id);
                                 _controller.DeleteItem(produto);
                             }
-                            break;
+                        break;
 
                         case FormTypes.Marcas:
                             if (selectedItem is Marca marcaSelecionada)
                             {
                                 _controller.DeleteItem(marcaSelecionada);
                             }
-                            break;
+                        break;
 
                         case FormTypes.Vendas:
-                            if (selectedItem is Venda vendaSelecionada)
+                        case FormTypes.Compras:
+                            if (selectedItem is VendaCompraViewModel vendaCompraSelecionada)
                             {
-                                MessageBox.Show("Proceder com a devolução?");
-                                //_controller.DeleteItem(marcaSelecionada);
+                                var vendaCompra = _controller.GetById(vendaCompraSelecionada.Id);
+
+                                // Emitir aviso para confirmação de devolução
+                                var result = MessageBox.Show(
+                                    "Deseja proceder à devolução antes de apagar esta venda/compra?",
+                                    "Confirmar Devolução",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Question
+                                );
+
+                                if (result == DialogResult.Yes)
+                                {
+                                    _controller.DeleteItem(vendaCompra);
+                                    MessageBox.Show("Item devolvido com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
                             break;
 
@@ -273,10 +309,10 @@ namespace poo_tp_29559.Views
                             }
                             break;
 
-                        case FormTypes.Clientes:
-                            if (selectedItem is Utilizador clienteSelecionado)
+                        case FormTypes.Utilizadores:
+                            if (selectedItem is Utilizador utilizadorSelecionado)
                             {
-                                _controller.DeleteItem(clienteSelecionado);
+                                _controller.DeleteItem(utilizadorSelecionado);
                             }
                             break;
                         case FormTypes.Campanhas:
@@ -285,7 +321,7 @@ namespace poo_tp_29559.Views
                                 var campanha = _controller.GetById(campanhaSelecionada.Id);
                                 _controller.DeleteItem(campanha);
                             }
-                            break;
+                        break;
 
                         default:
                             MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -325,7 +361,10 @@ namespace poo_tp_29559.Views
                 case FormTypes.Vendas:
                     addForm = new AddVendaForm();
                     break;
-                case FormTypes.Clientes:
+                case FormTypes.Compras:
+                    addForm = new AddCompraForm(_utilizadorLogado);
+                    break;
+                case FormTypes.Utilizadores:
                     addForm = new AddClienteForm();
                     break;
                 case FormTypes.Campanhas:
@@ -365,22 +404,30 @@ namespace poo_tp_29559.Views
                     var selectedItem = dgvItens.Rows[rowIndex].DataBoundItem;
 
                     // Verifica se o item selecionado é um VendaViewModel
-                    if (selectedItem is VendaViewModel vendaViewModel)
+                    if (selectedItem is VendaCompraViewModel vendaViewModel)
                     {
                         // Busca a venda completa com base no Id da VendaViewModel
-                        Venda venda = (Venda)_controller.GetById(vendaViewModel.Id);
-
+                        VendaCompra venda = (VendaCompra)_controller.GetById(vendaViewModel.Id);
+                        string titulo;
                         // Verifica se o formulário ativo é de Vendas
                         if (_formType == FormTypes.Vendas)
                         {
-                            // Passa a venda para o formulário DetalhesVenda
-                            Form consultaForm = new DetalhesVenda(venda);
+                            titulo = "Detalhes de Venda";
+                        }
+                        else if (_formType == FormTypes.Compras)
+                        {
+                            titulo = "Detalhes de Compra";
+                        }
+                        else
+                        {
+                            return;
+                        }
 
-                            // Abre o formulário
-                            using (consultaForm)
-                            {
-                                consultaForm.ShowDialog();
-                            }
+                        // Abre o formulário
+                        Form consultaForm = new DetalhesVendaCompra(titulo, venda);
+                        using (consultaForm)
+                        {
+                           consultaForm.ShowDialog();
                         }
                     }
                     else

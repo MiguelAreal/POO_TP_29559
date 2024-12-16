@@ -35,14 +35,14 @@
             marcasTSMI = new ToolStripMenuItem();
             campanhasTSMI = new ToolStripMenuItem();
             vendasTSMI = new ToolStripMenuItem();
-            clientesTSMI = new ToolStripMenuItem();
+            utilizadoresTSMI = new ToolStripMenuItem();
+            comprasTSMI = new ToolStripMenuItem();
             panelContainer = new Panel();
             picBg = new PictureBox();
             statusStrip1 = new StatusStrip();
             github = new ToolStripStatusLabel();
             lblUserInfo = new Label();
             btnLogout = new Label();
-            comprarTSMI = new ToolStripMenuItem();
             msMainForm.SuspendLayout();
             panelContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picBg).BeginInit();
@@ -52,7 +52,7 @@
             // msMainForm
             // 
             msMainForm.BackColor = Color.Transparent;
-            msMainForm.Items.AddRange(new ToolStripItem[] { produtosTSMI, categoriasTSMI, marcasTSMI, campanhasTSMI, vendasTSMI, clientesTSMI, comprarTSMI });
+            msMainForm.Items.AddRange(new ToolStripItem[] { produtosTSMI, categoriasTSMI, marcasTSMI, campanhasTSMI, vendasTSMI, utilizadoresTSMI, comprasTSMI });
             msMainForm.Location = new Point(5, 60);
             msMainForm.Name = "msMainForm";
             msMainForm.RenderMode = ToolStripRenderMode.Professional;
@@ -91,11 +91,17 @@
             vendasTSMI.Size = new Size(56, 20);
             vendasTSMI.Text = "Vendas";
             // 
-            // clientesTSMI
+            // utilizadoresTSMI
             // 
-            clientesTSMI.Name = "clientesTSMI";
-            clientesTSMI.Size = new Size(61, 20);
-            clientesTSMI.Text = "Clientes";
+            utilizadoresTSMI.Name = "utilizadoresTSMI";
+            utilizadoresTSMI.Size = new Size(80, 20);
+            utilizadoresTSMI.Text = "Utilizadores";
+            // 
+            // comprasTSMI
+            // 
+            comprasTSMI.Name = "comprasTSMI";
+            comprasTSMI.Size = new Size(67, 20);
+            comprasTSMI.Text = "Compras";
             // 
             // panelContainer
             // 
@@ -165,12 +171,6 @@
             btnLogout.Text = "👤";
             btnLogout.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // comprarTSMI
-            // 
-            comprarTSMI.Name = "comprarTSMI";
-            comprarTSMI.Size = new Size(66, 20);
-            comprarTSMI.Text = "Comprar";
-            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
@@ -207,7 +207,7 @@
         private MenuStrip msMainForm;
         private ToolStripMenuItem produtosTSMI;
         private ToolStripMenuItem categoriasTSMI;
-        private ToolStripMenuItem clientesTSMI;
+        private ToolStripMenuItem utilizadoresTSMI;
         private ToolStripMenuItem marcasTSMI;
         private ToolStripMenuItem vendasTSMI;
         private ToolStripMenuItem campanhasTSMI;
@@ -217,6 +217,6 @@
         private ToolStripStatusLabel github;
         private Label lblUserInfo;
         private Label btnLogout;
-        private ToolStripMenuItem comprarTSMI;
+        private ToolStripMenuItem comprasTSMI;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace poo_tp_29559.Views
 {
-    partial class DetalhesVenda
+    partial class DetalhesVendaCompra
     {
         /// <summary>
         /// Required designer variable.

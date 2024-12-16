@@ -7,14 +7,17 @@ using poo_tp_29559.Models;
 
 namespace poo_tp_29559.Views
 {
-    public partial class DetalhesVenda : MetroForm
+    public partial class DetalhesVendaCompra : MetroForm
     {
         private UtilizadorController utilizadorController;
 
-        public DetalhesVenda(Venda venda)
+        public DetalhesVendaCompra(string titulo,VendaCompra venda)
         {
             InitializeComponent();
             utilizadorController = new UtilizadorController();
+
+            //Atribui Título
+            this.Text = titulo;
             string nomeCliente;
 
             Utilizador utilizadorVenda = utilizadorController.GetById(venda.ClienteID);
@@ -58,7 +61,7 @@ namespace poo_tp_29559.Views
                 }
             }
         }
-        public void CalculaMesesRestantesGarantia(Venda venda)
+        public void CalculaMesesRestantesGarantia(VendaCompra venda)
         {
             // Calcula meses restantes da garantia
             if (DateTime.TryParse(venda.FimDataGarantia, out var garantiaData))

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace poo_tp_29559.Models
 {
-    public class VendaViewModel
+    public class VendaCompraViewModel
     {
         public int Id { get; set; }
 
@@ -25,9 +25,6 @@ namespace poo_tp_29559.Models
 
         [DisplayName("Método de Pagamento")]
         public string? MetodoPagamento { get; set; }
-
-        [DisplayName("Meses Restantes de Garantia")]
-        public int GarantiaRestanteMeses { get; set; }
     }
 
 }

@@ -81,3 +81,8 @@ C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windo
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.SignupForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddCompraForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\Resources\Data\paises.json
+C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\Resources\Data\paises.json
+C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddCompraForm.resources
+C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.LoginForm.resources
+C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.SignupForm.resources
+C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.DetalhesVendaCompra.resources
