@@ -14,7 +14,7 @@ public class CategoriaController : BaseController<Categoria>, IEntityController
         return _repository.GetAll();
     }
 
-    protected override void RemoveItem(Categoria item)
+    public override void RemoveItem(Categoria item)
     {
         var produtos = new ProdutoRepo().GetAll();
 
@@ -28,9 +28,5 @@ public class CategoriaController : BaseController<Categoria>, IEntityController
         }
     }
 
-    protected override void UpdateItem(Categoria item)
-    {
-        _repository.Update(item);
-    }
 
 }

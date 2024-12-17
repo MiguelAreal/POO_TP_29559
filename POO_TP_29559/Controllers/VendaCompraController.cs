@@ -21,7 +21,7 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
         foreach (var venda in vendas)
         {
             // Busca cliente por ID
-            Utilizador? cliente = new UtilizadorController().GetById(venda.ClienteID);
+            Utilizador? cliente = (Utilizador?)new UtilizadorController().GetById(venda.ClienteID);
 
             // VendaViewModel para exibição
             var vendaCompraViewModel = new VendaCompraViewModel
@@ -41,7 +41,7 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
 
     }
 
-    protected override void RemoveItem(VendaCompra item)
+    public override void RemoveItem(VendaCompra item)
     {
         ProdutoController produtoController;
         produtoController = new ProdutoController();
@@ -51,14 +51,14 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
             if (DateTime.Now <= dataFimGarantia)
             {
                 // Itera pelos itens da venda
-                foreach (var itemVenda in item.Itens)
+                foreach (ItemVenda itemVenda in item.Itens)
                 {
                     // Busca o produto correspondente no repositório
-                    var produto = produtoController.GetById(itemVenda.ProdutoID);
+                    Produto produto = (Produto)produtoController.GetById(itemVenda.ProdutoID);
 
                     if (produto != null)
                     {
-                        // Atualiza o estoque do produto, devolvendo as unidades compradas
+                        // Atualiza o stock do produto, devolvendo as unidades compradas
                         produto.QuantidadeEmStock += itemVenda.Unidades;
 
                         // Salva as alterações no repositório de produtos
@@ -72,13 +72,10 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
             throw new InvalidOperationException("A data de fim da garantia é inválida.");
         }
 
-        // Remove a venda após atualizar o estoque
+        // Remove a venda após atualizar o stock
         _repository.Remove(item);
     }
 
 
-    protected override void UpdateItem(VendaCompra item)
-    {
-        _repository.Update(item);
-    }
+
 }

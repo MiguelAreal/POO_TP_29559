@@ -11,7 +11,7 @@ namespace poo_tp_29559.Models
     public class ItemVenda
     {
         // Informação do produto na altura da venda
-        public int? ProdutoID { get; set; }                
+        public int ProdutoID { get; set; }                
         public string ProdutoNome { get; set; }           
         public decimal PrecoUnitario { get; set; }        
 
@@ -29,7 +29,7 @@ namespace poo_tp_29559.Models
         public int? PercentagemDesc { get;set; }
 
         [JsonConstructor]
-        public ItemVenda(int? produtoID, string produtoNome, decimal precoUnitario, int categoriaID,
+        public ItemVenda(int produtoID, string produtoNome, decimal precoUnitario, int categoriaID,
                  string categoriaNome, string marcaNome, int unidades, int? percentagemDesc)
         {
             ProdutoID = produtoID;

@@ -11,10 +11,10 @@ public class VendaCompra : IIdentifiable
     public int Id { get; set; }
 
     [DisplayName("Cliente")]
-    public int? ClienteID { get; set; } // Cliente associado, se aplicável
+    public int ClienteID { get; set; } // Cliente associado, se aplicável
 
     [DisplayName("NIF")]
-    public int? NIF { get; set; } // NIF associado, se aplicável
+    public int NIF { get; set; } // NIF associado, se aplicável
 
     public List<ItemVenda>? Itens { get; set; } = new List<ItemVenda>();
 

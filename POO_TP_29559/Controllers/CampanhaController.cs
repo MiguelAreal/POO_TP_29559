@@ -41,17 +41,5 @@ public class CampanhaController : BaseController<Campanha>, IEntityController
         return _campanhasComNomes;
     }
 
-    protected override void RemoveItem(Campanha item)
-    {
-        _repository.Remove(item);
-        
-    }
-
-    protected override void UpdateItem(Campanha item)
-    {
-        throw new NotImplementedException();
-    }
-
-
     
 }

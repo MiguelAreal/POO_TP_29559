@@ -46,25 +46,11 @@ public class ProdutoController : BaseController<Produto>, IEntityController
         return _produtosComNomes;
     }
 
-    protected override void RemoveItem(Produto item)
-    {
-        _repository.Remove(item);
-    }
-
-    protected override void UpdateItem(Produto item)
-    {
-        _repository.Update(item);
-    }
-
+    // Lista de Produtos diretamente do modelo, e não do View Model
     public List<Produto>? GetRawProdutos()
     {
         var produtos = _repository.GetAll();
         return produtos.OrderBy(c => c.Nome).ToList();
             
-    }
-
-    public Produto GetById(int? id)
-    {
-        return _repository.GetById(id);
     }
 }

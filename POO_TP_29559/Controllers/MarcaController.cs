@@ -8,14 +8,9 @@ using System.Windows.Forms;
 public class MarcaController : BaseController<Marca>, IEntityController
 {
     public MarcaController() : base("Data/marcas.json") { }
-
-    public override object GetItems()
-    {
-        return _repository.GetAll();
-    }
-
+    
     //Verifica se a marca pode ser eliminada antes de o fazer.
-    protected override void RemoveItem(Marca item)
+    public override void RemoveItem(Marca item)
     {
         var produtos = new ProdutoRepo().GetAll();
 
@@ -28,11 +23,5 @@ public class MarcaController : BaseController<Marca>, IEntityController
             MessageBox.Show("Esta marca não pode ser eliminada porque está associada a um ou mais produtos.");
         }
     }
-
-    protected override void UpdateItem(Marca item)
-    {
-        _repository.Update(item);
-    }
-
    
 }

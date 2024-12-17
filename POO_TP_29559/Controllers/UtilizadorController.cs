@@ -13,25 +13,6 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
         _repository = new UtilizadorRepo();
     }
 
-    public override object GetItems()
-    {
-        return _repository.GetAll();
-    }
-
-    protected override void RemoveItem(Utilizador item)
-    {
-        _repository.Remove(item);
-    }
-
-    protected override void UpdateItem(Utilizador item)
-    {
-        _repository.Update(item);
-    }
-
-    public new object GetById(int id)
-    {
-        return _repository.GetById(id);
-    }
 
     public bool VerificarLogin(int nif, string password)
     {
@@ -68,10 +49,5 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
        var clientes = _repository.GetAllClientes();
        return clientes.OrderBy(c => c.Nome).ToList();
 
-    }
-
-    public Utilizador GetById(int? clienteID)
-    {
-        return _repository.GetById(clienteID);
     }
 }
