@@ -191,7 +191,6 @@
             SizeGripStyle = SizeGripStyle.Show;
             Text = "Left Click - Gestor de Comércio Eletrónico";
             Theme = MetroFramework.MetroThemeStyle.Light;
-            Load += Form1_Load;
             msMainForm.ResumeLayout(false);
             msMainForm.PerformLayout();
             panelContainer.ResumeLayout(false);

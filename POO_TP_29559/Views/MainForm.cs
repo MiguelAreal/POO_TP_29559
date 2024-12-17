@@ -1,133 +1,169 @@
-using MetroFramework.Components;
-using MetroFramework.Forms; 
-using poo_tp_29559.Models;   
+/**
+ * @file MainForm.cs
+ * @brief Formulário principal da aplicação.
+ *
+ * Este formulário atua como a interface central da aplicação, permitindo
+ * navegação entre os vários formulários filhos e controlando o acesso 
+ * baseado no tipo de utilizador (Administrador ou Cliente).
+ * Utiliza a biblioteca MetroFramework para um design moderno.
+ * 
+ * @author Miguel Areal
+ * @date 12/2024
+ */
+
+using MetroFramework.Forms;
 using poo_tp_29559.Views;
 using poo_tp_29559.Repositories.Enumerators;
 
 namespace poo_tp_29559
 {
-    /// <summary>
-    /// Classe principal do formulário da aplicação, que herda de <see cref="MetroForm"/>.
-    /// Este form serve como o ponto de entrada da aplicação e gere a navegação entre outros forms.
-    /// </summary>
+    /**
+     * @class MainForm
+     * @brief Formulário principal da aplicação.
+     * 
+     * Gere a interface principal, exibindo sub-formulários conforme as opções
+     * selecionadas no menu. Implementa lógica para restringir o acesso de acordo
+     * com as permissões do utilizador.
+     */
     public partial class MainForm : MetroForm
     {
         private readonly Utilizador _utilizadorLogado;
-        /// <summary>
-        /// Construtor da classe <see cref="MainForm"/> que inicializa os componentes do form.
-        /// </summary>
+
+        /**
+         * @brief Construtor do `MainForm`.
+         * 
+         * Inicializa os componentes do formulário, configura o estado inicial dos menus
+         * e exibe as informações do utilizador atualmente autenticado.
+         * 
+         * @param utilizadorLogado O utilizador atualmente autenticado.
+         */
         public MainForm(Utilizador utilizadorLogado)
         {
-            // Inicializa os componentes do formulário
             InitializeComponent();
             _utilizadorLogado = utilizadorLogado;
+
+            // Configura informações visíveis do utilizador autenticado
             string tipoUser = _utilizadorLogado.IsAdmin ? "Administrador" : "Cliente";
             lblUserInfo.Text = $"{_utilizadorLogado.Nome}\n{tipoUser}";
 
-            // Verifica se o utilizador é admin ou cliente
-            if (!_utilizadorLogado.IsAdmin)
+            // Configura visibilidade dos menus com base no tipo de utilizador
+            ConfigurarMenus();
+        }
+
+        /**
+         * @brief Configura os menus conforme as permissões do utilizador.
+         * 
+         * Esconde os menus "Vendas" e "Utilizadores" para clientes
+         * e esconde "Compras" para administradores.
+         */
+        private void ConfigurarMenus()
+        {
+            if (_utilizadorLogado.IsAdmin)
             {
-                // Esconde os itens de menu que não devem ser acessíveis por um cliente
-                // Vendas e Clientes
-                vendasTSMI.Visible = false;
-                utilizadoresTSMI.Visible = false;
+                comprasTSMI.Visible = false; 
             }
             else
             {
-                // Esconde os itens de menu que não devem ser acessíveis por um administrador (porque é inútil)
-                // Vendas e Clientes
-                comprasTSMI.Visible = false;
+                vendasTSMI.Visible = false;
+                utilizadoresTSMI.Visible = false;
             }
         }
 
-        /// <summary>
-        /// Método que abre um form dentro do painel central específico.
-        /// Se um form já estiver aberto, ele é removido antes de abrir o novo.
-        /// </summary>
-        /// <param name="formFilho">O formulário filho a ser aberto no painel.</param>
+        /**
+         * @brief Abre um formulário filho dentro do painel central.
+         * 
+         * Remove qualquer formulário existente no painel e exibe o novo formulário.
+         * 
+         * @param formFilho O formulário filho a ser exibido.
+         */
         private void AbrirFormNoPanel(Form formFilho)
         {
-            // Verifica se já existe um form no painel e remove-o, se necessário
-            // Indexado em 1, devido à picture box que já existe no panel.
-
+            // Remove formulário existente no painel, se houver
             if (panelContainer.Controls.Count > 1)
                 panelContainer.Controls[1].Dispose();
 
-            //  Esconde imagem de fundo
+            // Esconde a imagem de fundo
             picBg.Hide();
 
-            // Adiciona um Evento de ao fechar do formulário filho
-            formFilho.FormClosed += (s, args) =>
-            {
-                // Mostra a imagem de fundo novamente
-                picBg.Show();
-            };
+            // Configura evento ao fechar o formulário, para voltar a mostrar a imagem de fundo.
+            formFilho.FormClosed += (s, args) => picBg.Show();
 
-
-            // Configura as propriedades do form filho e mostra-o
+            // Configura e exibe o formulário filho
             formFilho.TopLevel = false;
             formFilho.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(formFilho);
             formFilho.Show();
         }
 
-        /// <summary>
-        /// Evento chamado quando o formulário é carregado.
-        /// </summary>
-        /// <summary>
-        /// Evento chamado quando o formulário é carregado.
-        /// </summary>
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        /// <summary>
-        /// Evento chamado quando um item do menu principal é clicado.
-        /// Abre o formulário correspondente ao item clicado.
-        /// </summary>
-        /// <param name="sender">O objeto que gerou o evento.</param>
-        /// <param name="e">Os dados do evento.</param>
+        /**
+         * @brief Gere o clique nos itens do menu principal.
+         * 
+         * Instancia o formulário correspondente ao item do menu selecionado
+         * e o exibe no painel central.
+         * 
+         * @param sender Objeto que disparou o evento.
+         * @param e Dados do evento.
+         */
         private void msMainForm_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Form? formFilho = null; // Declara o formFilho fora do switch
+            Form? formFilho = null;
 
-            // Verifica qual item do menu foi clicado e instancia o form correspondente
+            // Determina o formulário a abrir com base no item selecionado
             switch (e.ClickedItem?.Text)
             {
                 case "Produtos":
-                    formFilho = new ChildForm(FormTypes.Produtos, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Produtos);
                     break;
                 case "Categorias":
-                    formFilho = new ChildForm(FormTypes.Categorias, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Categorias);
                     break;
                 case "Marcas":
-                    formFilho = new ChildForm(FormTypes.Marcas, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Marcas);
                     break;
                 case "Utilizadores":
-                    formFilho = new ChildForm(FormTypes.Utilizadores, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Utilizadores);
                     break;
                 case "Campanhas":
-                    formFilho = new ChildForm(FormTypes.Campanhas, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Campanhas);
                     break;
                 case "Vendas":
-                    formFilho = new ChildForm(FormTypes.Vendas, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Vendas);
                     break;
                 case "Compras":
-                    formFilho = new ChildForm(FormTypes.Compras, _utilizadorLogado);
+                    formFilho = CriarFormulario(FormTypes.Compras);
                     break;
                 default:
-                    MessageBox.Show("Opção desconhecida");
+                    MessageBox.Show("Opção desconhecida.");
                     return;
             }
 
-            // Abre-o no painel
+            // Abre o formulário, se válido
             if (formFilho != null)
             {
                 AbrirFormNoPanel(formFilho);
             }
         }
 
+        /**
+         * @brief Cria um formulário filho com base no tipo especificado.
+         * 
+         * @param tipoForm O tipo do formulário a ser criado.
+         * @return Uma instância do formulário filho.
+         */
+        private Form CriarFormulario(FormTypes tipoForm)
+        {
+            return new ChildForm(tipoForm, _utilizadorLogado);
+        }
+
+        /**
+         * @brief Evento associado ao clique no ícone do GitHub.
+         * 
+         * Abre o repositório no Github no navegador predefinido.
+         * 
+         * @param sender Objeto que disparou o evento.
+         * @param e Dados do evento.
+         */
         private void github_Click(object sender, EventArgs e)
         {
             try
@@ -135,15 +171,14 @@ namespace poo_tp_29559
                 var processStartInfo = new System.Diagnostics.ProcessStartInfo
                 {
                     FileName = "https://github.com/MiguelAreal/POO_TP_29559",
-                    UseShellExecute = true // Ensures the URL is opened using the default browser
+                    UseShellExecute = true
                 };
                 System.Diagnostics.Process.Start(processStartInfo);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
     }
 }

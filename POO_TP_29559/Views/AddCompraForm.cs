@@ -161,7 +161,7 @@ namespace poo_tp_29559.Views
                     totalBruto += quantidade * precoUnitario;
 
                     // Obter categoria do produto pelo ID
-                    Produto produto = produtoController.GetById(produtoId);
+                    Produto produto = (Produto)produtoController.GetById(produtoId);
 
                     if (produto != null)
                     {
@@ -211,7 +211,7 @@ namespace poo_tp_29559.Views
                 .Where(idProduto => idProduto != null)
                 .Select(idProduto =>
                 {
-                    Produto produto = produtoController.GetById(Convert.ToInt32(idProduto));
+                    Produto produto = (Produto)produtoController.GetById(Convert.ToInt32(idProduto));
                     return produto?.CategoriaID;
                 })
                 .Where(categoriaId => categoriaId != null)
@@ -300,7 +300,7 @@ namespace poo_tp_29559.Views
                 // Atualizar o stock dos produtos vendidos
                 foreach (var itemCompra in compra.Itens)
                 {
-                    Produto produto = produtoController.GetById(itemCompra.ProdutoID);
+                    Produto produto = (Produto)produtoController.GetById(itemCompra.ProdutoID);
                     if (produto != null)
                     {
                         // Subtrai a quantidade vendida do stock de cada produto
@@ -366,7 +366,7 @@ namespace poo_tp_29559.Views
                     int produtoID = Convert.ToInt32(row.Cells["IDProduto"].Value);
                     int quantidade = Convert.ToInt32(row.Cells["Quantidade"].Value);
 
-                    Produto produto = produtoController.GetById(produtoID);
+                    Produto produto = (Produto)produtoController.GetById(produtoID);
 
                     if (produto != null)
                     {

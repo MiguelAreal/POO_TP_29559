@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             dgvItens = new DataGridView();
             txtSearchItem = new TextBox();
-            btnSeeVenda = new Label();
+            btnSeeMovimento = new Label();
             btnRem = new Label();
             btnAdd = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvItens).BeginInit();
@@ -46,35 +46,35 @@
             dgvItens.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvItens.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvItens.BackgroundColor = Color.White;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(9, 171, 219);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            dgvItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             dgvItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvItens.Cursor = Cursors.IBeam;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(9, 171, 219);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvItens.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = SystemColors.Window;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            dgvItens.DefaultCellStyle = dataGridViewCellStyle8;
             dgvItens.Location = new Point(17, 96);
             dgvItens.MultiSelect = false;
             dgvItens.Name = "dgvItens";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(9, 171, 219);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = SystemColors.Control;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            dgvItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dgvItens.RowHeadersVisible = false;
             dgvItens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvItens.Size = new Size(760, 331);
@@ -92,23 +92,23 @@
             txtSearchItem.TabIndex = 0;
             txtSearchItem.TextChanged += txtSearchItem_TextChanged;
             // 
-            // btnSeeVenda
+            // btnSeeMovimento
             // 
-            btnSeeVenda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSeeVenda.Cursor = Cursors.Hand;
-            btnSeeVenda.FlatStyle = FlatStyle.Flat;
-            btnSeeVenda.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnSeeVenda.Location = new Point(646, 50);
-            btnSeeVenda.Margin = new Padding(0);
-            btnSeeVenda.Name = "btnSeeVenda";
-            btnSeeVenda.Size = new Size(35, 40);
-            btnSeeVenda.TabIndex = 5;
-            btnSeeVenda.Text = "📜";
-            btnSeeVenda.TextAlign = ContentAlignment.MiddleCenter;
-            btnSeeVenda.Visible = false;
-            btnSeeVenda.Click += btnSeeVenda_Click;
-            btnSeeVenda.MouseEnter += btnSeeVenda_MouseEnter;
-            btnSeeVenda.MouseLeave += btnSeeVenda_MouseLeave;
+            btnSeeMovimento.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSeeMovimento.Cursor = Cursors.Hand;
+            btnSeeMovimento.FlatStyle = FlatStyle.Flat;
+            btnSeeMovimento.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSeeMovimento.Location = new Point(646, 50);
+            btnSeeMovimento.Margin = new Padding(0);
+            btnSeeMovimento.Name = "btnSeeMovimento";
+            btnSeeMovimento.Size = new Size(35, 40);
+            btnSeeMovimento.TabIndex = 5;
+            btnSeeMovimento.Text = "📜";
+            btnSeeMovimento.TextAlign = ContentAlignment.MiddleCenter;
+            btnSeeMovimento.Visible = false;
+            btnSeeMovimento.Click += btnSeeMovimento_Click;
+            btnSeeMovimento.MouseEnter += btnSeeVenda_MouseEnter;
+            btnSeeMovimento.MouseLeave += btnSeeVenda_MouseLeave;
             // 
             // btnRem
             // 
@@ -153,7 +153,7 @@
             Controls.Add(dgvItens);
             Controls.Add(btnAdd);
             Controls.Add(btnRem);
-            Controls.Add(btnSeeVenda);
+            Controls.Add(btnSeeMovimento);
             Controls.Add(txtSearchItem);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -162,7 +162,6 @@
             Resizable = false;
             ShadowType = MetroFormShadowType.None;
             Text = "ChildForm";
-            Load += ChildForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvItens).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -172,7 +171,7 @@
 
         private DataGridView dgvItens;
         private TextBox txtSearchItem;
-        private Label btnSeeVenda;
+        private Label btnSeeMovimento;
         private Label btnRem;
         private Label btnAdd;
     }

@@ -54,7 +54,6 @@
             btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
             // 
             // btnConfirmar
             // 
@@ -147,6 +146,7 @@
             // dtpNasc
             // 
             dtpNasc.CalendarTitleBackColor = Color.DodgerBlue;
+            dtpNasc.Checked = false;
             dtpNasc.Location = new Point(24, 290);
             dtpNasc.Name = "dtpNasc";
             dtpNasc.RightToLeft = RightToLeft.No;
