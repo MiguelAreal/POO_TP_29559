@@ -17,7 +17,7 @@ namespace poo_tp_29559.Views
             utilizadorController = new UtilizadorController();
 
             //Atribui Título
-            this.Text = titulo;
+            this.Text = "     "+titulo;
             string nomeCliente;
 
             Utilizador utilizadorVenda = utilizadorController.GetById(venda.ClienteID);

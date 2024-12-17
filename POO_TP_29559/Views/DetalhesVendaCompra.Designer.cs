@@ -53,7 +53,6 @@
             lblTotalBruto = new Label();
             lblTotalLiquido = new Label();
             lblMesesRestantesGarantia = new Label();
-            lblFatura = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvFatura).BeginInit();
             SuspendLayout();
             // 
@@ -276,23 +275,13 @@
             // 
             lblMesesRestantesGarantia.AutoSize = true;
             lblMesesRestantesGarantia.Font = new Font("Montserrat", 10F);
-            lblMesesRestantesGarantia.Location = new Point(26, 238);
+            lblMesesRestantesGarantia.Location = new Point(26, 229);
             lblMesesRestantesGarantia.Name = "lblMesesRestantesGarantia";
             lblMesesRestantesGarantia.Size = new Size(144, 20);
             lblMesesRestantesGarantia.TabIndex = 52;
             lblMesesRestantesGarantia.Text = "Estado da Garantia:";
             // 
-            // lblFatura
-            // 
-            lblFatura.AutoSize = true;
-            lblFatura.Font = new Font("Montserrat", 10F);
-            lblFatura.Location = new Point(306, 47);
-            lblFatura.Name = "lblFatura";
-            lblFatura.Size = new Size(57, 20);
-            lblFatura.TabIndex = 53;
-            lblFatura.Text = "Fatura:";
-            // 
-            // DetalhesVenda
+            // DetalhesVendaCompra
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
@@ -300,7 +289,6 @@
             CancelButton = btnConfirmar;
             ClientSize = new Size(757, 492);
             Controls.Add(dgvFatura);
-            Controls.Add(lblFatura);
             Controls.Add(lblMesesRestantesGarantia);
             Controls.Add(lblTotalLiquido);
             Controls.Add(lblTotalBruto);
@@ -314,7 +302,7 @@
             Controls.Add(lblDataVenda);
             Controls.Add(btnBack);
             Font = new Font("Montserrat", 10F);
-            Name = "DetalhesVenda";
+            Name = "DetalhesVendaCompra";
             Padding = new Padding(23, 72, 23, 24);
             Resizable = false;
             Text = "     Detalhes de Venda";
@@ -347,6 +335,5 @@
         private Label lblTotalBruto;
         private Label lblTotalLiquido;
         private Label lblMesesRestantesGarantia;
-        private Label lblFatura;
     }
 }
