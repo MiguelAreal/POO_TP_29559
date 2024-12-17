@@ -5,9 +5,9 @@ Projeto para a Unidade Curricular de Programação Orientada a Objetos.
 **LeftClick** - Sistema que permite a gestão de uma loja de comércio eletrónico.
 
 Inclui gestão de:
-- Clientes
+- Utilizadores
 - Produtos
-- Vendas
+- Vendas / Compras
 - Marcas
 - Descontos
 - Campanhas
