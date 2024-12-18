@@ -76,6 +76,40 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
         _repository.Remove(item);
     }
 
+    /**
+    * @brief Calcula a garantia da compra
+    * 
+    * Este método cálcula a garantia de uma compra, tendo em conta o NIF do cliente a efetuar a compra.
+    * Se o NIF começar com 1,2 ou 3, é cliente particular, outrora é uma empresa. Diferirá no cálculo de meses associado.
+    * Atualiza visualmente.
+    * 
+    * @param cliente Objeto do tipo Utilizador que representa o utilizador autenticado.
+    */
+    public int CalculaGarantia(Utilizador cliente)
+    {
+        string nifString = cliente.Nif.ToString();
+        
+
+        if (nifString.Length == 9)
+        {
+            // Se o NIF começar com '1', '2' ou '3', é cliente particular
+            // Caso contrário, é empresa
+            if (nifString.StartsWith("1") || nifString.StartsWith("2") || nifString.StartsWith("3"))
+            {
+                return 36; // Garantia de 36 meses para cliente particular
+            }
+            else
+            {
+                return 12; // Garantia de 12 meses para empresas
+            }
+        }
+        else
+        {
+            return 36; // Valor predefinido de garantia caso o NIF não tenha 9 caracteres
+        }
+        
+    }
+
 
 
 }

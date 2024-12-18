@@ -1,4 +1,16 @@
-﻿using MetroFramework.Forms;
+﻿/**
+ * @file AddCompraForm.cs
+ * @brief Formulário para adicionar um novo cliente.
+ *
+ * Implementação do formulário para adicionar uma compra no sistema. 
+ * Este ficheiro contém a lógica associada ao formulário de adição de compras, incluindo o cálculo de garantia,
+ * carregamento de produtos, métodos de pagamento, e gestão da fatura de compra.
+ * 
+ * @author Miguel Areal
+ * @date 12/2024
+ */
+
+using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories.Enumerators;
 using poo_tp_29559.Repositories;
@@ -15,20 +27,32 @@ using System.Xml.Serialization;
 
 namespace poo_tp_29559.Views
 {
+    /**
+      * @class AddCompraForm
+      * @brief Formulário para a criação de uma compra, por um cliente.
+      * 
+      * Este formulário serve para adicionar uma nova compra ao sistema.
+      * O utilizador cliente deve preencher vários campos, como produtos, quantidades e método de pagamento.
+      * Além disso, o sistema valida os campos para garantir que os dados inseridos sejam válidos.
+      */
     public partial class AddCompraForm : MetroForm
     {
-        private readonly VendaCompraController _controllerVenda;
-        private UtilizadorController utilizadorController;
-        private ProdutoController produtoController;
-        private CategoriaController categoriaController;
-        private MarcaController marcaController;
+        private readonly VendaCompraController _controllerVenda; /**< Controlador de vendas e compras */
+        private UtilizadorController utilizadorController; /**< Controlador de utilizadores */
+        private ProdutoController produtoController; /**< Controlador de produtos */
+        private CategoriaController categoriaController; /**< Controlador de categorias */
+        private MarcaController marcaController; /**< Controlador de marcas */
 
-        private readonly Utilizador _cliente;
-        private List<Produto>? _produtos;
+        private readonly Utilizador _cliente; /**< Cliente associado à compra */
+        private List<Produto>? _produtos; /**< Lista de produtos disponíveis */
 
-        int mesesGarantia = 36;
-        decimal totalBruto = 0, totalLiquido = 0;
+        int mesesGarantia = 36; /**< Garantia predefinida em meses */
+        decimal totalBruto = 0, totalLiquido = 0; /**< Totais brutos e líquidos da compra */
 
+        /**
+        * @brief Construtor da classe AddCompraForm.
+        * @param cliente O utilizador cliente associado à compra, à partida será sempre o utilizador autenticado.
+        */
         public AddCompraForm(Utilizador cliente)
         {
             InitializeComponent();
@@ -45,7 +69,13 @@ namespace poo_tp_29559.Views
 
         }
 
-        // Carrega produtos e ordena-os na combobox.
+        /**
+        * @brief Carrega os produtos disponíveis na combo box.
+        * 
+        * Este método busca todos os produtos através do controlador de produtos, mapeia o nome e ID e exibe-os no 
+        * combo box para que o utilizador possa selecionar uma.
+        * 
+        */
         private void CarregaProdutos()
         {
             _produtos = produtoController.GetRawProdutos();
@@ -58,33 +88,25 @@ namespace poo_tp_29559.Views
             }
         }
 
+        /**
+        * @brief Atribui meses de garantia calculados pelo controlador.
+        * 
+        * @param cliente Objeto do tipo Utilizador que representa o utilizador autenticado.
+        */
         private void CalculaGarantia(Utilizador cliente)
         {
-            string nifString = cliente.Nif.ToString(); // Converte o NIF para string
-
-            if (nifString.Length == 9) // Verifica se o NIF convertido tem exatamente 9 caracteres
-            {
-                // Se o NIF começar com '1', '2' ou '3', é cliente particular
-                // Caso contrário, é empresa
-                if (nifString.StartsWith("1") || nifString.StartsWith("2") || nifString.StartsWith("3"))
-                {
-                    mesesGarantia = 36; // Garantia de 36 meses para cliente particular
-                }
-                else
-                {
-                    mesesGarantia = 12; // Garantia de 12 meses para empresas
-                }
-            }
-            else
-            {
-                mesesGarantia = 36; // Valor padrão de garantia caso o NIF não tenha 9 caracteres
-            }
+            mesesGarantia = _controllerVenda.CalculaGarantia(cliente);
             txtGarantia.Text = $"{mesesGarantia} meses";
 
         }
 
-
-        // Carregar métodos de pagamento, do enumerador
+        /**
+        * @brief Carrega os Métodos de Pagamento
+        * 
+        * Este método carrega e mapeia os métodos de pagamento disponíveis para a execução da compra num combobox, 
+        * para o utilizador escolher.
+        * Tem os dados provenienetes da classe EnumHelper.
+        */
         private void CarregaMetodosPagamento()
         {
             var metodosPagamento = EnumHelper.GetEnumDescriptions<MetodoPagamento>();
@@ -94,8 +116,18 @@ namespace poo_tp_29559.Views
             cmbMetodoPagamento.ValueMember = "Value";
         }
 
-        
-        // Quando um produto é adicionado à fatura
+        /**
+        * @brief Adiciona um produto à DataGridView de representação de fatura final.
+        * 
+        * Este método adiciona o produto selecionado na combobox de produtos à fatura final, face a quantidade escolhida 
+        * na NumericUpDown de quantidade.
+        * Inclui verificações de stock, e se o produto já se encontra na fatura, para apenas adicionar quantidade.
+        * Verifica então totais monetários e campanhas aplicáveis.
+        * 
+        * 
+        * @param sender Objeto que disparou o evento.
+        * @param e Dados do evento.
+        */
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
             if (cmbProdutos.SelectedItem is not Produto produtoSelecionado)
@@ -145,7 +177,14 @@ namespace poo_tp_29559.Views
         }
 
 
-        // Atualizar o total bruto da venda e calcular o total líquido com descontos
+        /**
+       * @brief Atualiza o total bruto e líquido da compra.
+       * 
+       * Este método cálcula o total bruto, fazendo a soma do produto da quantidade pelo preço unitário para todos os produtos na DataGridView.
+       * Cálculo de total líquido é dado pela subtração do total bruto pelos descontos encontrados para as categorias a que os produtos pertecem.
+       * 
+       * 
+       */
         private void AtualizarTotais()
         {
             decimal totalDesconto = 0;
@@ -180,7 +219,12 @@ namespace poo_tp_29559.Views
 
 
 
-        // Obter o desconto aplicável à categoria de um produto
+       /**
+       * @brief Obtém desconto aplicável por categoria
+       * 
+       * Este método verifica se existe alguma campanha válida dado o identificador da categoria
+       * @param categoriaId Identificador da categoria a pesquisar.
+       */
         private decimal ObterDescontoPorCategoria(int? categoriaId)
         {
             CampanhaRepo campanhaRepo = new();
@@ -198,7 +242,10 @@ namespace poo_tp_29559.Views
         }
 
 
-        // Verificar campanhas baseadas nos dados na dgvFatura
+       /**
+       * @brief Verifica campanhas aplicáveis aos produtos na DataGridView e exibe ao utilizador.
+       * 
+       */
         private void VerificarCampanhas()
         {
             CampanhaRepo campanhaRepo = new();
@@ -274,7 +321,7 @@ namespace poo_tp_29559.Views
         }
 
 
-
+      
         private void dgvFatura_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dgvFatura.Columns["Quantidade"].Index)
@@ -409,58 +456,7 @@ namespace poo_tp_29559.Views
             AtualizarTotais();
         }
 
-        private void btnAddProduto_Click_1(object sender, EventArgs e)
-        {
-
-            Produto produtoSelecionado = cmbProdutos.SelectedItem as Produto;
-            if (produtoSelecionado == null)
-            {
-                MessageBox.Show("Selecione um produto antes de adicionar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int quantidadeDesejada = (int)nudQtd.Value;
-
-            // Verificar stock disponível considerando o que já foi adicionado na fatura
-            int quantidadeTotalFatura = dgvFatura.Rows
-                .Cast<DataGridViewRow>()
-                .Where(row => row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
-                .Sum(row => Convert.ToInt32(row.Cells["Quantidade"].Value));
-
-            int quantidadeDisponivel = (produtoSelecionado.QuantidadeEmStock - quantidadeTotalFatura);
-
-            // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0.
-            quantidadeDisponivel = quantidadeDisponivel < 0 ? 0 : quantidadeDisponivel;
-
-            if (quantidadeDesejada <= 0 || quantidadeDesejada > quantidadeDisponivel)
-            {
-                MessageBox.Show($"Quantidade inválida ou insuficiente no stock! Disponível: {quantidadeDisponivel}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Verificar se o produto já está na fatura e atualizar a quantidade
-            foreach (DataGridViewRow row in dgvFatura.Rows)
-            {
-                if (row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
-                {
-                    int quantidadeAtual = Convert.ToInt32(row.Cells["Quantidade"].Value);
-                    row.Cells["Quantidade"].Value = quantidadeAtual + quantidadeDesejada;
-                    produtoSelecionado.QuantidadeEmStock -= quantidadeDesejada;
-                    AtualizarTotais();
-                    return;
-                }
-            }
-
-            // Adicionar novo produto à fatura
-            dgvFatura.Rows.Add(produtoSelecionado.Id, produtoSelecionado.Nome, ObterNomeCategoria(produtoSelecionado.CategoriaID), ObterNomeMarca(produtoSelecionado.MarcaID), quantidadeDesejada, produtoSelecionado.Preco);
-            AtualizarTotais();
-
-            // Verificar campanhas aplicáveis
-            VerificarCampanhas();
-        }
-
-
-
+        
         private void btnAddProduto_MouseEnter(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.DodgerBlue;
         private void btnAddProduto_MouseLeave(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.Black;
         private void btnRemItem_MouseEnter(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Red;

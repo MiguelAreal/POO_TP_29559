@@ -20,7 +20,7 @@ namespace poo_tp_29559.Views
             this.Text = "     "+titulo;
             string nomeCliente;
 
-            Utilizador utilizadorVenda = utilizadorController.GetById(venda.ClienteID);
+            Utilizador utilizadorVenda = (Utilizador)utilizadorController.GetById(venda.ClienteID);
 
             nomeCliente = utilizadorVenda.Nome ?? "Desconhecido";
 
