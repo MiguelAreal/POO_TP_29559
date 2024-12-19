@@ -16,7 +16,7 @@
     <Compile Update="Views\AddMarcaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Views\AddProdutoForm.cs">
+    <Compile Update="Views\AddUpdProdutoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\AddVendaForm.cs">

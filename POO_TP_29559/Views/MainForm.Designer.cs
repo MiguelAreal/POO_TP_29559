@@ -152,6 +152,7 @@
             // 
             // lblUserInfo
             // 
+            lblUserInfo.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblUserInfo.Font = new Font("Montserrat", 9F);
             lblUserInfo.Location = new Point(748, 33);
             lblUserInfo.Name = "lblUserInfo";
@@ -162,6 +163,7 @@
             // 
             // btnLogout
             // 
+            btnLogout.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnLogout.AutoSize = true;
             btnLogout.Font = new Font("Montserrat", 20F);
             btnLogout.Location = new Point(938, 30);

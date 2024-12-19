@@ -17,11 +17,11 @@ using System.Linq;
  * @class BaseController
  * @brief Classe base abstrata para a gestão de entidades genéricas.
  * 
- * A classe `BaseController` implementa funcionalidades base para controlo de itens genéricos
- * de um tipo `T`, onde `T` é uma classe que implementa a interface `IIdentifiable`.
+ * A classe BaseController implementa funcionalidades base para controlo de itens genéricos
+ * de um tipo T, onde T é uma classe que implementa a interface IIdentifiable.
  * Oferece métodos comuns para filtrar, adicionar, apagar e atualizar itens.
  * 
- * @tparam T Tipo genérico que deve ser uma classe e implementar a interface `IIdentifiable`.
+ * @tparam T Tipo genérico que deve ser uma classe e implementar a interface IIdentifiable.
  */
 public abstract class BaseController<T> where T : class, IIdentifiable
 {
@@ -32,7 +32,7 @@ public abstract class BaseController<T> where T : class, IIdentifiable
     protected List<T> _items;
 
     /**
-     * @brief Construtor da classe `BaseController`.
+     * @brief Construtor da classe BaseController.
      * 
      * Inicializa o repositório com base no caminho de ficheiro fornecido.
      * 
@@ -40,30 +40,6 @@ public abstract class BaseController<T> where T : class, IIdentifiable
      */
     public BaseController(string filePath) => _repository = new BaseRepo<T>(filePath);
 
-    /**
-     * @brief Filtra os itens da lista com base em uma coluna e um filtro fornecido.
-     * 
-     * Percorre os itens e filtra-os com base no valor da propriedade especificada
-     * que contém uma substring correspondente ao filtro.
-     * 
-     * @param filtro Texto utilizado como filtro.
-     * @param coluna Nome da coluna (propriedade) que será verificada.
-     */
-    public void FiltrarItens(string filtro, string coluna)
-    {
-        var itensFiltrados = _items.Where(model =>
-        {
-            if (string.IsNullOrEmpty(coluna)) return false;
-
-            var prop = model.GetType().GetProperty(coluna);
-            if (prop != null)
-            {
-                var value = prop.GetValue(model)?.ToString() ?? string.Empty;
-                return value.Contains(filtro, StringComparison.OrdinalIgnoreCase);
-            }
-            return false;
-        }).ToList();
-    }
 
     /**
      * @brief Adiciona um novo item ao repositório.
@@ -78,47 +54,6 @@ public abstract class BaseController<T> where T : class, IIdentifiable
         GetItems();
     }
 
-    /**
-     * @brief Apaga um item do repositório.
-     * 
-     * Tenta remover o item fornecido do repositório. Se o tipo for inválido, lança uma exceção.
-     * 
-     * @param item O item a ser removido.
-     * @throw InvalidOperationException Se o tipo do item for inválido.
-     */
-    public void DeleteItem(object item)
-    {
-        if (item is T specificItem)
-        {
-            RemoveItem(specificItem);
-            GetItems();
-        }
-        else
-        {
-            throw new InvalidOperationException("Tipo de item inválido para remoção.");
-        }
-    }
-
-    /**
-     * @brief Atualiza um item no repositório.
-     * 
-     * Tenta atualizar o item fornecido no repositório. Se o tipo for inválido, lança uma exceção.
-     * 
-     * @param item O item a ser atualizado.
-     * @throw InvalidOperationException Se o tipo do item for inválido.
-     */
-    public void UpdateItem(object item)
-    {
-        if (item is T specificItem)
-        {
-            UpdateItem(specificItem);
-            GetItems();
-        }
-        else
-        {
-            throw new InvalidOperationException("Tipo de item inválido para remoção.");
-        }
-    }
 
     /**
      * @brief Obtém um item pelo seu identificador.
@@ -128,7 +63,7 @@ public abstract class BaseController<T> where T : class, IIdentifiable
      * @param id Identificador único do item a ser obtido.
      * @return O item correspondente ao identificador, ou null se não existir.
      */
-    public object GetById(int id)
+    public object GetById(int? id)
     {
         return _repository.GetById(id);
     }
@@ -141,9 +76,12 @@ public abstract class BaseController<T> where T : class, IIdentifiable
      * 
      * @param item O item a ser removido.
      */
-    public virtual void RemoveItem(T item)
+    public virtual void RemoveItem(object item)
     {
-        _repository.Remove(item);
+        if (item is T specificItem)
+        {
+            _repository.Remove(specificItem);
+        }
     }
 
     /**
@@ -154,11 +92,16 @@ public abstract class BaseController<T> where T : class, IIdentifiable
      * 
      * @param item O item a ser atualizado.
      */
-    public virtual void UpdateItem(T item)
+    public virtual void UpdateItem(object item)
     {
-        _repository.Update(item);
+        if (item is T specificItem)
+        {
+            _repository.Update(specificItem);
+        }
+
+       
     }
-    
+
 
     /**
      * @brief Obtém todos os itens do repositório.
@@ -166,9 +109,10 @@ public abstract class BaseController<T> where T : class, IIdentifiable
      * Método virtual que pode ser re-implementado pelas classes derivadas
      * para obter a lista de itens atuais.
      * 
-     * @return Uma lista de objetos do tipo `T`.
+     * @return Uma lista de objetos do tipo T.
      */
-    public virtual object GetItems() {
-        return _repository.GetAll();
+    public virtual List<object> GetItems()
+    {
+        return _repository.GetAll().Cast<object>().ToList(); // Default implementation
     }
 }

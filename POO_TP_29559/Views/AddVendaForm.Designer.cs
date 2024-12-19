@@ -44,7 +44,6 @@
             cmbClientes = new ComboBox();
             lblCliente = new Label();
             nudQtd = new NumericUpDown();
-            btnAddCliente = new Button();
             lblFatura = new Label();
             cmbMetodoPagamento = new ComboBox();
             label2 = new Label();
@@ -203,27 +202,6 @@
             nudQtd.TabIndex = 30;
             nudQtd.ThousandsSeparator = true;
             nudQtd.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            // 
-            // btnAddCliente
-            // 
-            btnAddCliente.Anchor = AnchorStyles.None;
-            btnAddCliente.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            btnAddCliente.BackColor = Color.Transparent;
-            btnAddCliente.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAddCliente.Cursor = Cursors.Hand;
-            btnAddCliente.FlatAppearance.BorderSize = 0;
-            btnAddCliente.FlatStyle = FlatStyle.Flat;
-            btnAddCliente.Font = new Font("Segoe UI", 20F);
-            btnAddCliente.ForeColor = Color.Black;
-            btnAddCliente.Location = new Point(220, 138);
-            btnAddCliente.Margin = new Padding(0);
-            btnAddCliente.Name = "btnAddCliente";
-            btnAddCliente.Size = new Size(37, 42);
-            btnAddCliente.TabIndex = 32;
-            btnAddCliente.Text = "🆕";
-            btnAddCliente.TextAlign = ContentAlignment.TopCenter;
-            btnAddCliente.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnAddCliente.UseVisualStyleBackColor = false;
             // 
             // lblFatura
             // 
@@ -431,13 +409,13 @@
             btnAddProduto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAddProduto.Cursor = Cursors.Hand;
             btnAddProduto.FlatStyle = FlatStyle.Flat;
-            btnAddProduto.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAddProduto.Location = new Point(280, 77);
+            btnAddProduto.Font = new Font("Segoe UI", 18F);
+            btnAddProduto.Location = new Point(272, 80);
             btnAddProduto.Margin = new Padding(0);
             btnAddProduto.Name = "btnAddProduto";
-            btnAddProduto.Size = new Size(35, 40);
+            btnAddProduto.Size = new Size(33, 35);
             btnAddProduto.TabIndex = 52;
-            btnAddProduto.Text = "\U0001f6d2";
+            btnAddProduto.Text = "➕";
             btnAddProduto.TextAlign = ContentAlignment.MiddleCenter;
             btnAddProduto.Click += btnAddProduto_Click_1;
             btnAddProduto.MouseEnter += btnAddProduto_MouseEnter;
@@ -468,7 +446,6 @@
             Controls.Add(cmbMetodoPagamento);
             Controls.Add(label2);
             Controls.Add(lblFatura);
-            Controls.Add(btnAddCliente);
             Controls.Add(nudQtd);
             Controls.Add(cmbClientes);
             Controls.Add(lblCliente);
@@ -495,7 +472,6 @@
         private ComboBox cmbClientes;
         private Label lblCliente;
         private NumericUpDown nudQtd;
-        private Button btnAddCliente;
         private Label lblFatura;
         private ComboBox cmbMetodoPagamento;
         private Label label2;

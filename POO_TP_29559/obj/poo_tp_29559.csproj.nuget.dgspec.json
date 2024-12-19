@@ -46,6 +46,10 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[3.6.4, )"
+            },
             "MetroFramework": {
               "target": "Package",
               "version": "[1.2.0.3, )"

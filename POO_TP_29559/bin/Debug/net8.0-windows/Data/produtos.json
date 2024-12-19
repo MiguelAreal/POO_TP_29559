@@ -2,19 +2,19 @@
   {
     "Id": 1,
     "Nome": "Teclado #1",
-    "CategoriaID": 1,
+    "CategoriaID": 2,
     "MarcaID": 1,
     "Preco": 20,
-    "QuantidadeEmStock": 100,
-    "DataAdicao": "12/12/2024 00:11:42"
+    "QuantidadeEmStock": 80,
+    "DataAdicao": "19/12/2024 22:08:21"
   },
   {
     "Id": 2,
     "Nome": "Rato #1",
-    "CategoriaID": 2,
+    "CategoriaID": 1,
     "MarcaID": 2,
     "Preco": 14.99,
-    "QuantidadeEmStock": 85,
-    "DataAdicao": "12/12/2024 14:16:52"
+    "QuantidadeEmStock": 84,
+    "DataAdicao": "19/12/2024 23:41:18"
   }
 ]

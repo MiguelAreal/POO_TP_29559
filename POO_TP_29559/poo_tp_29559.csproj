@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <PackageReference Include="MetroFramework" Version="1.2.0.3" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.6.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,10 +44,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Tests\" />
   </ItemGroup>
 
 </Project>

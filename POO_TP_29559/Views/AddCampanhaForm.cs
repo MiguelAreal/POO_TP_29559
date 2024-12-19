@@ -62,7 +62,7 @@ namespace poo_tp_29559.Views
          */
         private void CarregaCategorias()
         {
-            _categorias = (List<Categoria>)categoriaController.GetItems();  /**< Obtém a lista de categorias do controlador. */
+            _categorias = categoriaController.GetItems().Cast<Categoria>().ToList();  /**< Obtém a lista de categorias do controlador. */
             _categorias = _categorias.OrderBy(m => m.Nome).ToList();  /**< Ordena as categorias por nome. */
 
             if (_categorias != null)

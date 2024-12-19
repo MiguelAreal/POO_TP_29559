@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "cqzQL5+Lf6k=",
+  "dgSpecHash": "wNZBS54a/IY=",
   "success": true,
   "projectFilePath": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\POO_TP_29559\\poo_tp_29559.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Areal\\.nuget\\packages\\metroframework\\1.2.0.3\\metroframework.1.2.0.3.nupkg.sha512",
     "C:\\Users\\Areal\\.nuget\\packages\\metroframework.design\\1.2.0.3\\metroframework.design.1.2.0.3.nupkg.sha512",
     "C:\\Users\\Areal\\.nuget\\packages\\metroframework.fonts\\1.2.0.3\\metroframework.fonts.1.2.0.3.nupkg.sha512",
-    "C:\\Users\\Areal\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512"
+    "C:\\Users\\Areal\\.nuget\\packages\\metroframework.runtime\\1.2.0.3\\metroframework.runtime.1.2.0.3.nupkg.sha512",
+    "C:\\Users\\Areal\\.nuget\\packages\\mstest.testframework\\3.6.4\\mstest.testframework.3.6.4.nupkg.sha512"
   ],
   "logs": [
     {

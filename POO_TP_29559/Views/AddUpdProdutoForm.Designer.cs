@@ -1,6 +1,6 @@
 ﻿namespace poo_tp_29559.Views
 {
-    partial class AddProdutoForm
+    partial class AddUpdProdutoForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProdutoForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddUpdProdutoForm));
             cmbMarca = new ComboBox();
             nudPreco = new NumericUpDown();
             lblPreco = new Label();

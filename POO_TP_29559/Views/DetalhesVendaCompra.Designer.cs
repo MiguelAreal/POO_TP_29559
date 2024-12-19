@@ -221,7 +221,6 @@
             btnBack.Size = new Size(54, 37);
             btnBack.TabIndex = 48;
             btnBack.Text = "🔙";
-            btnBack.Click += btnBack_Click;
             btnBack.MouseEnter += btnBack_MouseEnter;
             btnBack.MouseLeave += btnBack_MouseLeave;
             // 

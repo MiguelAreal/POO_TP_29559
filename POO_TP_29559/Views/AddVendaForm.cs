@@ -63,6 +63,7 @@ namespace poo_tp_29559.Views
                 cmbClientes.DataSource = _clientes;
                 cmbClientes.DisplayMember = "Nome";
                 cmbClientes.ValueMember = "Id";
+                cmbClientes.SelectedIndex = 0;
             }          
         }
 
@@ -76,12 +77,18 @@ namespace poo_tp_29559.Views
             cmbMetodoPagamento.ValueMember = "Value";
         }
 
-        // Obter o NIF do cliente selecionado, ao mudar item selecionado na combobox.
         private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Verifica se há um cliente selecionado
             Utilizador? clienteSelecionado = cmbClientes.SelectedItem as Utilizador;
-            txtNIF.Text = clienteSelecionado.Nif.ToString();
+
+            if (clienteSelecionado != null)
+            {
+                // Se o cliente for válido, atribui o NIF ao campo txtNIF
+                txtNIF.Text = clienteSelecionado.Nif.ToString();
+            }
         }
+
 
         private void txtNIF_TextChanged(object sender, EventArgs e)
         {
@@ -95,7 +102,7 @@ namespace poo_tp_29559.Views
                 var clienteCorrespondente = _clientes.FirstOrDefault(c => c.Nif == nifParsed);
                 if (clienteCorrespondente != null)
                 {
-                    cmbClientes.SelectedItem = clienteCorrespondente;
+                    cmbClientes.SelectedItem = clienteCorrespondente; 
                 }
                 else
                 {
@@ -200,7 +207,7 @@ namespace poo_tp_29559.Views
                     totalBruto += quantidade * precoUnitario;
 
                     // Obter categoria do produto pelo ID
-                    Produto produto = produtoController.GetById(produtoId);
+                    Produto produto = (Produto)produtoController.GetById(produtoId);
 
                     if (produto != null)
                     {
@@ -250,7 +257,7 @@ namespace poo_tp_29559.Views
                 .Where(idProduto => idProduto != null)
                 .Select(idProduto =>
                 {
-                    Produto produto = produtoController.GetById(Convert.ToInt32(idProduto));
+                    Produto produto = (Produto)produtoController.GetById(Convert.ToInt32(idProduto));
                     return produto?.CategoriaID;
                 })
                 .Where(categoriaId => categoriaId != null)
@@ -358,7 +365,7 @@ namespace poo_tp_29559.Views
                 // Atualizar o stock dos produtos vendidos
                 foreach (var itemVenda in venda.Itens)
                 {
-                    Produto produto = produtoController.GetById(itemVenda.ProdutoID);
+                    Produto produto = (Produto)produtoController.GetById(itemVenda.ProdutoID);
                     if (produto != null)
                     {
                         // Subtrai a quantidade vendida do stock de cada produto
@@ -370,7 +377,7 @@ namespace poo_tp_29559.Views
                 }
 
                 // Guarda a venda no repositório
-                VendaCompraRepo vendaRepo = new(new UtilizadorRepo());
+                VendaCompraRepo vendaRepo = new();
                 vendaRepo.Add(venda);
 
                 MessageBox.Show("Venda registada com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -404,7 +411,7 @@ namespace poo_tp_29559.Views
         {
             VendaCompra venda = new()
             {
-                ClienteID = (int?)cmbClientes.SelectedValue,
+                ClienteID = (int)cmbClientes.SelectedValue,
                 NIF = Convert.ToInt32(txtNIF.Text),
                 TotalBruto = totalBruto,
                 TotalLiquido = totalLiquido,
@@ -423,7 +430,7 @@ namespace poo_tp_29559.Views
                     int produtoID = Convert.ToInt32(row.Cells["IDProduto"].Value);
                     int quantidade = Convert.ToInt32(row.Cells["Quantidade"].Value);
 
-                    Produto produto = produtoController.GetById(produtoID);
+                    Produto produto = (Produto)produtoController.GetById(produtoID);
 
                     if (produto != null)
                     {

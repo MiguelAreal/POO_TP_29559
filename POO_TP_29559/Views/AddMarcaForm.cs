@@ -55,7 +55,7 @@ namespace poo_tp_29559.Views
         private void CarregaPaises()
         {
             List<string> paises = _controller.CarregaPaises();
-            // Verifica se o arquivo de países existe
+            // Verifica se o ficheiro de países existe
             if (paises != null)
             {
                 // Configura a ComboBox para exibir os países

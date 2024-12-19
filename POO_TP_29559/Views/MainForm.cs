@@ -107,6 +107,13 @@ namespace poo_tp_29559
          */
         private void msMainForm_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            // Reset nas cores de todos os itens.
+            for (int i = 0; i < msMainForm.Items.Count; i++)
+            {
+                msMainForm.Items[i].ForeColor = Color.Black;
+                msMainForm.Items[i].BackColor = Color.Transparent;
+            }
+
             Form? formFilho = null;
 
             // Determina o formulário a abrir com base no item selecionado
@@ -137,6 +144,10 @@ namespace poo_tp_29559
                     MessageBox.Show("Opção desconhecida.");
                     return;
             }
+
+            // Muda a cor do item selecionado.
+            e.ClickedItem.ForeColor = Color.White;
+            e.ClickedItem.BackColor = Color.FromArgb(9,171,219);
 
             // Abre o formulário, se válido
             if (formFilho != null)

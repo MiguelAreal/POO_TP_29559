@@ -359,7 +359,7 @@ namespace poo_tp_29559.Views
                 }
 
                 // Guarda a venda no repositório
-                VendaCompraRepo vendaCompraRepo = new(new UtilizadorRepo());
+                VendaCompraRepo vendaCompraRepo = new();
 
                 vendaCompraRepo.Add(compra);
 
