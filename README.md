@@ -10,6 +10,7 @@ Miguel Areal - Nº29559 - a29559@alunos.ipca.pt
 ## Sobre
 **LeftClick** é uma aplicação desenvolvida com .NET Windows Forms para gerir de forma eficiente uma loja online de comércio eletrónico. Projetada como parte da unidade curricular de Programação Orientada a Objetos, a aplicação utiliza conceitos modernos de POO, como herança, interfaces, e encapsulamento, para garantir uma estrutura modular, escalável e de fácil manutenção.
 
+## Funcionalidades
 O sistema permite a gestão de diversos elementos relacionados com uma loja online:
 
  - **Gestão de Utilizadores**
