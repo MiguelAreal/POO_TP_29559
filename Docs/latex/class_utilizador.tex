@@ -1,0 +1,265 @@
+\doxysection{Referência à classe Utilizador}
+\label{class_utilizador}\index{Utilizador@{Utilizador}}
+
+
+Representa um utilizador no sistema.  
+
+
+Diagrama de heranças da classe Utilizador\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_utilizador}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Utilizador} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Utilizador}{p. }{class_utilizador}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único do utilizador. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Nome do utilizador. \end{DoxyCompactList}\item 
+\textbf{ string} \textbf{ Contacto}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Contacto do utilizador. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Morada}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Morada do utilizador. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Nif}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Número de Identificação Fiscal (NIF). \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Data\+Nasc}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de nascimento do utilizador. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Data\+Adicao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de criação do utilizador. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Password}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Palavra-\/passe do utilizador. \end{DoxyCompactList}\item 
+\textbf{ bool} \textbf{ Is\+Admin}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Indicador de administrador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um utilizador no sistema. 
+
+A classe {\ttfamily \doxyref{Utilizador}{p. }{class_utilizador}} armazena informações pessoais de um cliente ou administrador, incluindo o nome, contacto, morada, NIF, data de nascimento, e outras propriedades associadas ao utilizador. Esta classe é usada para gerir as informações de um utilizador no sistema.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 17} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_utilizador_a496ef834a10d75aa45032433423dcb7a} 
+\index{Utilizador@{Utilizador}!Utilizador@{Utilizador}}
+\index{Utilizador@{Utilizador}!Utilizador@{Utilizador}}
+\doxysubsubsection{Utilizador()}
+{\footnotesize\ttfamily Utilizador.\+Utilizador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily \doxyref{Utilizador}{p. }{class_utilizador}}. 
+
+Este construtor inicializa a data de adição com a data e hora atuais e define a propriedade {\ttfamily Is\+Admin} como {\ttfamily false} por padrão, indicando que o utilizador é um cliente comum. 
+
+Definido na linha \textbf{ 99} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ DataAdicao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ IsAdmin\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das propriedades}
+\label{class_utilizador_a5584d5ad67c483904df1ab86975bab32} 
+\index{Utilizador@{Utilizador}!Contacto@{Contacto}}
+\index{Contacto@{Contacto}!Utilizador@{Utilizador}}
+\doxysubsubsection{Contacto}
+{\footnotesize\ttfamily \textbf{ string} Utilizador.\+Contacto\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Contacto do utilizador. 
+
+Este campo armazena o número de contacto do utilizador. 
+
+Definido na linha \textbf{ 40} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_a684b9683065e97cf77a6fe1e712ef794} 
+\index{Utilizador@{Utilizador}!DataAdicao@{DataAdicao}}
+\index{DataAdicao@{DataAdicao}!Utilizador@{Utilizador}}
+\doxysubsubsection{DataAdicao}
+{\footnotesize\ttfamily \textbf{ string}? Utilizador.\+Data\+Adicao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de criação do utilizador. 
+
+Este campo armazena a data de criação do utilizador no sistema, representada como uma string. 
+
+Definido na linha \textbf{ 72} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_a60accb230b5165e5c683e33b0c36e4e6} 
+\index{Utilizador@{Utilizador}!DataNasc@{DataNasc}}
+\index{DataNasc@{DataNasc}!Utilizador@{Utilizador}}
+\doxysubsubsection{DataNasc}
+{\footnotesize\ttfamily \textbf{ string}? Utilizador.\+Data\+Nasc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de nascimento do utilizador. 
+
+Este campo armazena a data de nascimento do utilizador, representada como uma string. 
+
+Definido na linha \textbf{ 64} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_a2e229214fdbe214d83af47590d6edb8a} 
+\index{Utilizador@{Utilizador}!Id@{Id}}
+\index{Id@{Id}!Utilizador@{Utilizador}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily \textbf{ int} Utilizador.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único do utilizador. 
+
+Este campo armazena o identificador único do utilizador. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 24} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_a2563458c10f703b98a6ec1e7ee3eb711} 
+\index{Utilizador@{Utilizador}!IsAdmin@{IsAdmin}}
+\index{IsAdmin@{IsAdmin}!Utilizador@{Utilizador}}
+\doxysubsubsection{IsAdmin}
+{\footnotesize\ttfamily \textbf{ bool} Utilizador.\+Is\+Admin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicador de administrador. 
+
+Este campo indica se o utilizador tem permissões de administrador. A propriedade é do tipo booleano, onde {\ttfamily true} significa que o utilizador é um administrador, e {\ttfamily false} significa que é um cliente. 
+
+Definido na linha \textbf{ 91} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_a7ef1840900c3a890dd35207104faaa64} 
+\index{Utilizador@{Utilizador}!Morada@{Morada}}
+\index{Morada@{Morada}!Utilizador@{Utilizador}}
+\doxysubsubsection{Morada}
+{\footnotesize\ttfamily \textbf{ string}? Utilizador.\+Morada\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Morada do utilizador. 
+
+Este campo armazena a morada do utilizador. 
+
+Definido na linha \textbf{ 48} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_ade2b39cdd3c0985cf6e26bd0ad7d4c07} 
+\index{Utilizador@{Utilizador}!Nif@{Nif}}
+\index{Nif@{Nif}!Utilizador@{Utilizador}}
+\doxysubsubsection{Nif}
+{\footnotesize\ttfamily \textbf{ int} Utilizador.\+Nif\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Número de Identificação Fiscal (NIF). 
+
+Este campo armazena o NIF (número de identificação fiscal) do utilizador. É o identificador único do utilizador. 
+
+Definido na linha \textbf{ 56} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00056\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_ac941ba61ffc9e6446aa6e069875ad1af} 
+\index{Utilizador@{Utilizador}!Nome@{Nome}}
+\index{Nome@{Nome}!Utilizador@{Utilizador}}
+\doxysubsubsection{Nome}
+{\footnotesize\ttfamily \textbf{ string}? Utilizador.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nome do utilizador. 
+
+Este campo armazena o nome do utilizador (cliente). 
+
+Definido na linha \textbf{ 32} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_utilizador_a4f451483ff806803a9309d51e9ff1de6} 
+\index{Utilizador@{Utilizador}!Password@{Password}}
+\index{Password@{Password}!Utilizador@{Utilizador}}
+\doxysubsubsection{Password}
+{\footnotesize\ttfamily \textbf{ string}? Utilizador.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Palavra-\/passe do utilizador. 
+
+Este campo armazena a palavra-\/passe do utilizador. 
+
+Definido na linha \textbf{ 81} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00081\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Utilizador.\+cs}\end{DoxyCompactItemize}

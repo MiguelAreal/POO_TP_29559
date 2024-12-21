@@ -1,5 +1,5 @@
 ﻿/**
- * @file VendaCompraRepo.cs
+ * @class VendaCompraRepo.cs
  * @brief Repositório especializado na manipulação de vendas e compras.
  * 
  * A classe `VendaCompraRepo` é uma especialização da classe base `BaseRepo<VendaCompra>`,

@@ -1,0 +1,110 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Categoria\+Form}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form}\index{poo\_tp\_29559.Views.AddUpdCategoriaForm@{poo\_tp\_29559.Views.AddUpdCategoriaForm}}
+
+
+Formulário para a criação ou atualização de uma categoria.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Categoria\+Form\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Add\+Upd\+Categoria\+Form} (\textbf{ int}? \textbf{ categoria\+Id}=\textbf{ null})
+\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Add\+Upd\+Categoria\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Formulário para a criação ou atualização de uma categoria. 
+
+Este formulário serve para criar uma nova categoria ou atualizar uma existente no sistema. O utilizador preenche o nome e a descrição da categoria. 
+
+Definido na linha \textbf{ 30} do ficheiro \textbf{ Add\+Upd\+Categoria\+Form.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form_a037e99d4d2e7a6726ba2bc71ee5a0bf9} 
+\index{poo\_tp\_29559.Views.AddUpdCategoriaForm@{poo\_tp\_29559.Views.AddUpdCategoriaForm}!AddUpdCategoriaForm@{AddUpdCategoriaForm}}
+\index{AddUpdCategoriaForm@{AddUpdCategoriaForm}!poo\_tp\_29559.Views.AddUpdCategoriaForm@{poo\_tp\_29559.Views.AddUpdCategoriaForm}}
+\doxysubsubsection{AddUpdCategoriaForm()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Categoria\+Form.\+Add\+Upd\+Categoria\+Form (\begin{DoxyParamCaption}\item[{\textbf{ int}?}]{categoria\+Id = {\ttfamily \textbf{ null}} }\end{DoxyParamCaption})}
+
+
+
+Construtor do {\ttfamily Add\+Upd\+Categoria\+Form}. 
+
+Inicializa o controlador de categorias, que será utilizado para manipular as categorias. Se um ID for fornecido, carrega os dados da categoria para edição.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em categoria\+Id} & ID opcional da categoria. Se fornecido, o formulário será usado para atualizar a categoria correspondente. \\
+\hline
+\end{DoxyParams}
+$<$ Inicializa o controlador de categorias.
+
+Definido na linha \textbf{ 44} do ficheiro \textbf{ Add\+Upd\+Categoria\+Form.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ CategoriaController();\ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \_categoriaId\ =\ categoriaId;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ um\ ID\ válido\ for\ fornecido,\ carrega\ os\ dados\ da\ categoria}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_categoriaId.HasValue)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LoadCategoriaData();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form_a947654b4fabe519718f469ef31a4a6e1} 
+\index{poo\_tp\_29559.Views.AddUpdCategoriaForm@{poo\_tp\_29559.Views.AddUpdCategoriaForm}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddUpdCategoriaForm@{poo\_tp\_29559.Views.AddUpdCategoriaForm}}
+\doxysubsubsection{Dispose()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Categoria\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Add\+Upd\+Categoria\+Form.\+Designer.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Categoria\+Form.\+cs}\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Categoria\+Form.\+Designer.\+cs}\end{DoxyCompactItemize}

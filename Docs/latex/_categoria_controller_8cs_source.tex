@@ -1,0 +1,36 @@
+\doxysection{Categoria\+Controller.\+cs}
+\label{_categoria_controller_8cs_source}\index{POO\_TP\_29559/Controllers/CategoriaController.cs@{POO\_TP\_29559/Controllers/CategoriaController.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }poo\_tp\_29559.Views;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Windows.Forms;}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CategoriaController\ :\ BaseController<Categoria>,\ IEntityController}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}\ CategoriaController()\ :\ base(\textcolor{stringliteral}{"{}Data/categorias.json"{}})\ \{\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ RemoveItem(\textcolor{keywordtype}{object}\ item)}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ Categoria\ specificItem)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ produtos\ =\ \textcolor{keyword}{new}\ ProdutoRepo().GetAll();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (specificItem.PodeSerEliminada(produtos))}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Esta\ categoria\ não\ pode\ ser\ eliminada\ porque\ está\ associada\ a\ um\ ou\ mais\ produtos."{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}

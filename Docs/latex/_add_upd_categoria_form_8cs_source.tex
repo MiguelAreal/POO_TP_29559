@@ -1,0 +1,124 @@
+\doxysection{Add\+Upd\+Categoria\+Form.\+cs}
+\label{_add_upd_categoria_form_8cs_source}\index{POO\_TP\_29559/Views/AddUpdCategoriaForm.cs@{POO\_TP\_29559/Views/AddUpdCategoriaForm.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }System.Text.RegularExpressions;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }System.Windows.Forms;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }MetroFramework.Forms;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }ValidationLibrary;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }AddUpdCategoriaForm\ :\ MetroForm}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ CategoriaController\ \_controller;\ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{int}?\ \_categoriaId;\ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ Categoria\ categoria;}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AddUpdCategoriaForm(\textcolor{keywordtype}{int}?\ categoriaId\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ CategoriaController();\ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \_categoriaId\ =\ categoriaId;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ um\ ID\ válido\ for\ fornecido,\ carrega\ os\ dados\ da\ categoria}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_categoriaId.HasValue)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LoadCategoriaData();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ LoadCategoriaData()}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ a\ categoria\ pelo\ ID}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ categoria\ =\ (Categoria)\_controller.GetById(\_categoriaId.Value);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (categoria\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Categoria\ não\ encontrada."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preenche\ os\ campos\ do\ formulário\ com\ os\ dados\ da\ categoria}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Text\ =\ categoria.Nome;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.Text\ =\ categoria.Descricao;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Text\ =\ \$\textcolor{stringliteral}{"{}Editar\ Categoria:\ \{categoria.Nome\}"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Erro\ ao\ carregar\ a\ categoria:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnConfirmar\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Array\ de\ controles\ a\ serem\ validados}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ Control[]\ controls\ =\ \{\ txtNome\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Array\ de\ labels\ correspondentes\ aos\ controles}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ Label[]\ labels\ =\ \{\ lblNome\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Valida\ os\ campos\ utilizando\ a\ biblioteca\ de\ validação}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ allValid\ =\ FieldValidator.ValidateFields(controls,\ labels);}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ algum\ campo\ for\ inválido,\ interrompe\ o\ processo}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!allValid)}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criação\ ou\ atualização\ da\ categoria}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_categoriaId.HasValue)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualiza\ a\ categoria\ existente}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (categoria\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ categoria.Nome\ =\ txtNome.Text;\ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ categoria.Descricao\ =\ txtDescricao.Text;\ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_controller.UpdateItem(categoria);\ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Categoria\ atualizada\ com\ sucesso."{}},\ \textcolor{stringliteral}{"{}Sucesso"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Information);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Erro\ ao\ atualizar\ a\ categoria:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ uma\ nova\ categoria}}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ novaCategoria\ =\ \textcolor{keyword}{new}\ Categoria}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ txtNome.Text,\ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Descricao\ =\ txtDescricao.Text,\ \ }
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_controller.AddItem(novaCategoria);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Categoria\ adicionada\ com\ sucesso."{}},\ \textcolor{stringliteral}{"{}Sucesso"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Information);}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Erro\ ao\ adicionar\ a\ categoria:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fecha\ o\ formulário\ após\ a\ operação}}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00158\ \ \ \ \ \}}
+\DoxyCodeLine{00159\ \}}
+
+\end{DoxyCode}

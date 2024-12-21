@@ -1,0 +1,547 @@
+\doxysection{Signup\+Form.\+Designer.\+cs}
+\label{_signup_form_8_designer_8cs_source}\index{POO\_TP\_29559/Views/SignupForm.Designer.cs@{POO\_TP\_29559/Views/SignupForm.Designer.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00002\ \{}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{keyword}{partial\ class\ }SignupForm}
+\DoxyCodeLine{00004\ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ System.ComponentModel.IContainer\ components\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Dispose(\textcolor{keywordtype}{bool}\ disposing)}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ InitializeComponent()}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick\ =\ \textcolor{keyword}{new}\ PictureBox();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit\ =\ \textcolor{keyword}{new}\ Button();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc\ =\ \textcolor{keyword}{new}\ DateTimePicker();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente\ =\ \textcolor{keyword}{new}\ RadioButton();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin\ =\ \textcolor{keyword}{new}\ RadioButton();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada\ =\ \textcolor{keyword}{new}\ Panel();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.SuspendLayout();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)imgLeftClick).BeginInit();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.SuspendLayout();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.SuspendLayout();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.SuspendLayout();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.SuspendLayout();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.SuspendLayout();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.SuspendLayout();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.SuspendLayout();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ SuspendLayout();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ leftPanel}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.BackColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Controls.Add(labelRodape);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Controls.Add(lblSubtitulo);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Controls.Add(labelTitulo);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Controls.Add(imgLeftClick);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Dock\ =\ DockStyle.Left;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Location\ =\ \textcolor{keyword}{new}\ Point(0,\ 0);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Margin\ =\ \textcolor{keyword}{new}\ Padding(0);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Name\ =\ \textcolor{stringliteral}{"{}leftPanel"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.Size\ =\ \textcolor{keyword}{new}\ Size(249,\ 675);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.TabIndex\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ labelRodape}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.Dock\ =\ DockStyle.Bottom;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 9F);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.ForeColor\ =\ Color.White;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.Location\ =\ \textcolor{keyword}{new}\ Point(0,\ 643);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.Name\ =\ \textcolor{stringliteral}{"{}labelRodape"{}};}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.Size\ =\ \textcolor{keyword}{new}\ Size(142,\ 32);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.TabIndex\ =\ 3;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.Text\ =\ \textcolor{stringliteral}{"{}Desenvolvido\ por\(\backslash\)r\(\backslash\)nMiguel\ Areal\ -\/\ Nº29559"{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ labelRodape.TextAlign\ =\ ContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblSubtitulo}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 14F);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.ForeColor\ =\ Color.White;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.Location\ =\ \textcolor{keyword}{new}\ Point(44,\ 343);}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.Name\ =\ \textcolor{stringliteral}{"{}lblSubtitulo"{}};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.Size\ =\ \textcolor{keyword}{new}\ Size(202,\ 52);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.TabIndex\ =\ 2;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.Text\ =\ \textcolor{stringliteral}{"{}Gestor\ de\ Comércio\(\backslash\)r\(\backslash\)nEletrónico"{}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ lblSubtitulo.TextAlign\ =\ ContentAlignment.MiddleRight;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ labelTitulo}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 14F);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.ForeColor\ =\ Color.White;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.Location\ =\ \textcolor{keyword}{new}\ Point(28,\ 312);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.Name\ =\ \textcolor{stringliteral}{"{}labelTitulo"{}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.Size\ =\ \textcolor{keyword}{new}\ Size(218,\ 26);}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.TabIndex\ =\ 1;}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.Text\ =\ \textcolor{stringliteral}{"{}Bem\ vindo\ à\ LeftClick"{}};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ labelTitulo.TextAlign\ =\ ContentAlignment.MiddleRight;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgLeftClick}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.Image\ =\ Properties.Resources.leftclick\_logo;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.Location\ =\ \textcolor{keyword}{new}\ Point(65,\ 27);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.Name\ =\ \textcolor{stringliteral}{"{}imgLeftClick"{}};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.Size\ =\ \textcolor{keyword}{new}\ Size(115,\ 122);}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.SizeMode\ =\ PictureBoxSizeMode.StretchImage;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.TabIndex\ =\ 0;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ imgLeftClick.TabStop\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblTitle}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 14F);}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.Location\ =\ \textcolor{keyword}{new}\ Point(264,\ 42);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.Name\ =\ \textcolor{stringliteral}{"{}lblTitle"{}};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.Size\ =\ \textcolor{keyword}{new}\ Size(197,\ 26);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.TabIndex\ =\ 4;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.Text\ =\ \textcolor{stringliteral}{"{}Registe\ a\ sua\ conta"{}};}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ lblTitle.TextAlign\ =\ ContentAlignment.MiddleRight;}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnSair}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 14.25F,\ FontStyle.Bold,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Location\ =\ \textcolor{keyword}{new}\ Point(533,\ 9);}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Name\ =\ \textcolor{stringliteral}{"{}btnSair"{}};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Size\ =\ \textcolor{keyword}{new}\ Size(26,\ 26);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.TabIndex\ =\ 5;}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Text\ =\ \textcolor{stringliteral}{"{}X"{}};}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.TextAlign\ =\ ContentAlignment.MiddleRight;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ btnSair.Click\ +=\ btnSair\_Click;}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelUser}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.Controls.Add(txtNome);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.Controls.Add(imgUser);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 86);}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.Name\ =\ \textcolor{stringliteral}{"{}panelUser"{}};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.Size\ =\ \textcolor{keyword}{new}\ Size(329,\ 45);}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.TabIndex\ =\ 6;}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtNome}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.BorderStyle\ =\ BorderStyle.None;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Location\ =\ \textcolor{keyword}{new}\ Point(55,\ 12);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Name\ =\ \textcolor{stringliteral}{"{}txtNome"{}};}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.PlaceholderText\ =\ \textcolor{stringliteral}{"{}Nome"{}};}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Size\ =\ \textcolor{keyword}{new}\ Size(227,\ 20);}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.TabIndex\ =\ 1;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgUser}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 4);}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.Name\ =\ \textcolor{stringliteral}{"{}imgUser"{}};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.TabIndex\ =\ 0;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.Text\ =\ \textcolor{stringliteral}{"{}👤"{}};}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ imgUser.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelPassword}}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.Controls.Add(btnHidePwd);}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.Controls.Add(txtPassword);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.Controls.Add(imgPwd);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 156);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.Name\ =\ \textcolor{stringliteral}{"{}panelPassword"{}};}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.Size\ =\ \textcolor{keyword}{new}\ Size(323,\ 45);}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.TabIndex\ =\ 7;}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnHidePwd}}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 15F);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Location\ =\ \textcolor{keyword}{new}\ Point(278,\ 9);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Name\ =\ \textcolor{stringliteral}{"{}btnHidePwd"{}};}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Size\ =\ \textcolor{keyword}{new}\ Size(39,\ 28);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.TabIndex\ =\ 3;}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Text\ =\ \textcolor{stringliteral}{"{}👁️"{}};}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ btnHidePwd.Click\ +=\ btnHidePwd\_Click;}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtPassword}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.BorderStyle\ =\ BorderStyle.None;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.Location\ =\ \textcolor{keyword}{new}\ Point(54,\ 13);}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.Name\ =\ \textcolor{stringliteral}{"{}txtPassword"{}};}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.PlaceholderText\ =\ \textcolor{stringliteral}{"{}Palavra-\/passe"{}};}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.Size\ =\ \textcolor{keyword}{new}\ Size(227,\ 20);}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.TabIndex\ =\ 2;}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ txtPassword.UseSystemPasswordChar\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgPwd}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 4);}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.Name\ =\ \textcolor{stringliteral}{"{}imgPwd"{}};}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.TabIndex\ =\ 1;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.Text\ =\ \textcolor{stringliteral}{"{}🔑"{}};}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ imgPwd.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnSubmit}}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.BackColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.FlatAppearance.BorderSize\ =\ 0;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.FlatStyle\ =\ FlatStyle.Flat;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.ForeColor\ =\ Color.White;}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Location\ =\ \textcolor{keyword}{new}\ Point(338,\ 591);}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Name\ =\ \textcolor{stringliteral}{"{}btnSubmit"{}};}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Size\ =\ \textcolor{keyword}{new}\ Size(148,\ 42);}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.TabIndex\ =\ 5;}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Text\ =\ \textcolor{stringliteral}{"{}REGISTAR"{}};}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.UseVisualStyleBackColor\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ btnSubmit.Click\ +=\ btnSubmit\_Click;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblLoginAqui}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 9.749999F,\ FontStyle.Underline,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Location\ =\ \textcolor{keyword}{new}\ Point(327,\ 638);}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Name\ =\ \textcolor{stringliteral}{"{}lblLoginAqui"{}};}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Size\ =\ \textcolor{keyword}{new}\ Size(170,\ 18);}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.TabIndex\ =\ 6;}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Text\ =\ \textcolor{stringliteral}{"{}Já\ tem\ conta?\ Entre\ aqui"{}};}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.TextAlign\ =\ ContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ lblLoginAqui.Click\ +=\ lblLoginAqui\_Click;}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelDN}}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.Controls.Add(dtpNasc);}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.Controls.Add(imgDataNasc);}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 226);}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.Name\ =\ \textcolor{stringliteral}{"{}panelDN"{}};}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.Size\ =\ \textcolor{keyword}{new}\ Size(323,\ 45);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.TabIndex\ =\ 8;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dtpNasc}}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.CalendarFont\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.CalendarTitleBackColor\ =\ Color.DodgerBlue;}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Location\ =\ \textcolor{keyword}{new}\ Point(55,\ 12);}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Name\ =\ \textcolor{stringliteral}{"{}dtpNasc"{}};}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.RightToLeft\ =\ RightToLeft.No;}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.ShowCheckBox\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Size\ =\ \textcolor{keyword}{new}\ Size(228,\ 24);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.TabIndex\ =\ 5;}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgDataNasc}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 4);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.Name\ =\ \textcolor{stringliteral}{"{}imgDataNasc"{}};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.TabIndex\ =\ 1;}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.Text\ =\ \textcolor{stringliteral}{"{}📅"{}};}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ imgDataNasc.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelNif}}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.Controls.Add(txtNIF);}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.Controls.Add(imgNIF);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 296);}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.Name\ =\ \textcolor{stringliteral}{"{}panelNif"{}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.Size\ =\ \textcolor{keyword}{new}\ Size(323,\ 45);}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.TabIndex\ =\ 9;}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtNIF}}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.BorderStyle\ =\ BorderStyle.None;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Location\ =\ \textcolor{keyword}{new}\ Point(54,\ 13);}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.MaxLength\ =\ 9;}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Name\ =\ \textcolor{stringliteral}{"{}txtNIF"{}};}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.PlaceholderText\ =\ \textcolor{stringliteral}{"{}NIF"{}};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Size\ =\ \textcolor{keyword}{new}\ Size(228,\ 20);}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.TabIndex\ =\ 3;}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgNIF}}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 2);}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.Name\ =\ \textcolor{stringliteral}{"{}imgNIF"{}};}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.TabIndex\ =\ 1;}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.Text\ =\ \textcolor{stringliteral}{"{}\(\backslash\)U0001faaa"{}};}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ imgNIF.TextAlign\ =\ ContentAlignment.TopCenter;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelContacto}}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.Controls.Add(txtContacto);}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.Controls.Add(txtContactoCodPais);}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.Controls.Add(imgContacto);}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 368);}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.Name\ =\ \textcolor{stringliteral}{"{}panelContacto"{}};}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.Size\ =\ \textcolor{keyword}{new}\ Size(323,\ 45);}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.TabIndex\ =\ 10;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtContacto}}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.BorderStyle\ =\ BorderStyle.None;}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.Location\ =\ \textcolor{keyword}{new}\ Point(102,\ 13);}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.MaxLength\ =\ 9;}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.Name\ =\ \textcolor{stringliteral}{"{}txtContacto"{}};}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.PlaceholderText\ =\ \textcolor{stringliteral}{"{}Contacto"{}};}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.Size\ =\ \textcolor{keyword}{new}\ Size(182,\ 20);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.TabIndex\ =\ 5;}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtContactoCodPais}}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.BorderStyle\ =\ BorderStyle.None;}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Location\ =\ \textcolor{keyword}{new}\ Point(54,\ 13);}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.MaxLength\ =\ 4;}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Name\ =\ \textcolor{stringliteral}{"{}txtContactoCodPais"{}};}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Size\ =\ \textcolor{keyword}{new}\ Size(42,\ 20);}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.TabIndex\ =\ 4;}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Text\ =\ \textcolor{stringliteral}{"{}+351"{}};}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgContacto}}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 4);}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.Name\ =\ \textcolor{stringliteral}{"{}imgContacto"{}};}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.TabIndex\ =\ 1;}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.Text\ =\ \textcolor{stringliteral}{"{}📞"{}};}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ imgContacto.TextAlign\ =\ ContentAlignment.TopCenter;}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelTipoUser}}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.Controls.Add(rdbCliente);}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.Controls.Add(rdbAdmin);}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.Controls.Add(imgTipoUser);}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 530);}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.Name\ =\ \textcolor{stringliteral}{"{}panelTipoUser"{}};}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.Size\ =\ \textcolor{keyword}{new}\ Size(323,\ 45);}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.TabIndex\ =\ 11;}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rdbCliente}}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.Checked\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 9F);}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.Location\ =\ \textcolor{keyword}{new}\ Point(196,\ 15);}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.Name\ =\ \textcolor{stringliteral}{"{}rdbCliente"{}};}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.Size\ =\ \textcolor{keyword}{new}\ Size(67,\ 20);}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.TabIndex\ =\ 3;}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.TabStop\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.Text\ =\ \textcolor{stringliteral}{"{}Cliente"{}};}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ rdbCliente.UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ rdbAdmin}}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 9F);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.Location\ =\ \textcolor{keyword}{new}\ Point(63,\ 15);}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.Name\ =\ \textcolor{stringliteral}{"{}rdbAdmin"{}};}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.Size\ =\ \textcolor{keyword}{new}\ Size(112,\ 20);}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.TabIndex\ =\ 2;}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.TabStop\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.Text\ =\ \textcolor{stringliteral}{"{}Administrador"{}};}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ rdbAdmin.UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00416\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ imgTipoUser}}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 6);}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.Name\ =\ \textcolor{stringliteral}{"{}imgTipoUser"{}};}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.TabIndex\ =\ 1;}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.Text\ =\ \textcolor{stringliteral}{"{}🛡️"{}};}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ imgTipoUser.TextAlign\ =\ ContentAlignment.TopCenter;}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ panelMorada}}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.Controls.Add(txtMorada);}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.Controls.Add(lblMorada);}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.Location\ =\ \textcolor{keyword}{new}\ Point(250,\ 440);}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.Name\ =\ \textcolor{stringliteral}{"{}panelMorada"{}};}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.Size\ =\ \textcolor{keyword}{new}\ Size(323,\ 77);}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.TabIndex\ =\ 11;}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtMorada}}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.BorderStyle\ =\ BorderStyle.None;}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 12F);}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Location\ =\ \textcolor{keyword}{new}\ Point(56,\ 13);}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.MaxLength\ =\ 150;}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Multiline\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Name\ =\ \textcolor{stringliteral}{"{}txtMorada"{}};}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.PlaceholderText\ =\ \textcolor{stringliteral}{"{}Morada"{}};}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Size\ =\ \textcolor{keyword}{new}\ Size(228,\ 52);}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.TabIndex\ =\ 5;}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblMorada}}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 20F);}
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.ForeColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.Location\ =\ \textcolor{keyword}{new}\ Point(4,\ 21);}
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.Name\ =\ \textcolor{stringliteral}{"{}lblMorada"{}};}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 37);}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.TabIndex\ =\ 1;}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.Text\ =\ \textcolor{stringliteral}{"{}🏠"{}};}
+\DoxyCodeLine{00461\ \ \ \ \ \ \ \ \ \ \ \ \ lblMorada.TextAlign\ =\ ContentAlignment.TopCenter;}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ SignupForm}}
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00465\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleDimensions\ =\ \textcolor{keyword}{new}\ SizeF(96F,\ 96F);}
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleMode\ =\ AutoScaleMode.Dpi;}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ BackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ ClientSize\ =\ \textcolor{keyword}{new}\ Size(569,\ 675);}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelMorada);}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelDN);}
+\DoxyCodeLine{00471\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelTipoUser);}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelContacto);}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelNif);}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnSubmit);}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblLoginAqui);}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelPassword);}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(panelUser);}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnSair);}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblTitle);}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(leftPanel);}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ FormBorderStyle\ =\ FormBorderStyle.None;}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00483\ \ \ \ \ \ \ \ \ \ \ \ \ MinimizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}SignupForm"{}};}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ StartPosition\ =\ FormStartPosition.CenterScreen;}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ TopMost\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ \ \ \ \ leftPanel.PerformLayout();}
+\DoxyCodeLine{00489\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)imgLeftClick).EndInit();}
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \ \ \ \ panelUser.PerformLayout();}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \ \ \ \ panelPassword.PerformLayout();}
+\DoxyCodeLine{00494\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00495\ \ \ \ \ \ \ \ \ \ \ \ \ panelDN.PerformLayout();}
+\DoxyCodeLine{00496\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00497\ \ \ \ \ \ \ \ \ \ \ \ \ panelNif.PerformLayout();}
+\DoxyCodeLine{00498\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00499\ \ \ \ \ \ \ \ \ \ \ \ \ panelContacto.PerformLayout();}
+\DoxyCodeLine{00500\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00501\ \ \ \ \ \ \ \ \ \ \ \ \ panelTipoUser.PerformLayout();}
+\DoxyCodeLine{00502\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00503\ \ \ \ \ \ \ \ \ \ \ \ \ panelMorada.PerformLayout();}
+\DoxyCodeLine{00504\ \ \ \ \ \ \ \ \ \ \ \ \ ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00505\ \ \ \ \ \ \ \ \ \ \ \ \ PerformLayout();}
+\DoxyCodeLine{00506\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00507\ }
+\DoxyCodeLine{00508\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00509\ }
+\DoxyCodeLine{00510\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ leftPanel;}
+\DoxyCodeLine{00511\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ PictureBox\ imgLeftClick;}
+\DoxyCodeLine{00512\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ labelTitulo;}
+\DoxyCodeLine{00513\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblSubtitulo;}
+\DoxyCodeLine{00514\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ labelRodape;}
+\DoxyCodeLine{00515\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblTitle;}
+\DoxyCodeLine{00516\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnSair;}
+\DoxyCodeLine{00517\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelUser;}
+\DoxyCodeLine{00518\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelPassword;}
+\DoxyCodeLine{00519\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ imgUser;}
+\DoxyCodeLine{00520\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ imgPwd;}
+\DoxyCodeLine{00521\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button\ btnSubmit;}
+\DoxyCodeLine{00522\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblLoginAqui;}
+\DoxyCodeLine{00523\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtNome;}
+\DoxyCodeLine{00524\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnHidePwd;}
+\DoxyCodeLine{00525\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtPassword;}
+\DoxyCodeLine{00526\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelDN;}
+\DoxyCodeLine{00527\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ imgDataNasc;}
+\DoxyCodeLine{00528\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DateTimePicker\ dtpNasc;}
+\DoxyCodeLine{00529\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelNif;}
+\DoxyCodeLine{00530\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtNIF;}
+\DoxyCodeLine{00531\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ imgNIF;}
+\DoxyCodeLine{00532\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelContacto;}
+\DoxyCodeLine{00533\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtContactoCodPais;}
+\DoxyCodeLine{00534\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ imgContacto;}
+\DoxyCodeLine{00535\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtContacto;}
+\DoxyCodeLine{00536\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelTipoUser;}
+\DoxyCodeLine{00537\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ RadioButton\ rdbCliente;}
+\DoxyCodeLine{00538\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ RadioButton\ rdbAdmin;}
+\DoxyCodeLine{00539\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ imgTipoUser;}
+\DoxyCodeLine{00540\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ label4;}
+\DoxyCodeLine{00541\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Panel\ panelMorada;}
+\DoxyCodeLine{00542\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtMorada;}
+\DoxyCodeLine{00543\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblMorada;}
+\DoxyCodeLine{00544\ \ \ \ \ \}}
+\DoxyCodeLine{00545\ \}}
+
+\end{DoxyCode}

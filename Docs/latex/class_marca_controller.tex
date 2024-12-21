@@ -1,0 +1,203 @@
+\doxysection{Referência à classe Marca\+Controller}
+\label{class_marca_controller}\index{MarcaController@{MarcaController}}
+
+
+Controlador para a gestão de marcas.  
+
+
+Diagrama de heranças da classe Marca\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_marca_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Marca\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Marca\+Controller}{p. }{class_marca_controller}}. \end{DoxyCompactList}\item 
+\textbf{ override} \textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Remove uma marca do repositório. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ string} $>$ \textbf{ Carrega\+Paises} ()
+\begin{DoxyCompactList}\small\item\em Carrega a lista de países a partir de um ficheiro JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Controller$<$ Marca $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Base\+Controller} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Base\+Controller}{p. }{class_base_controller}. Inicializa o repositório com base no caminho de ficheiro fornecido. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Add\+Item} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Adiciona um novo item ao repositório. \end{DoxyCompactList}\item 
+\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atualiza um item específico. Este método pode ser re-\/implementado pelas classes derivadas para definir a lógica de atualização. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string} \textbf{ coluna})
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em uma propriedade e um filtro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ IEntity\+Controller}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Controller$<$ Marca $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ readonly} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$ \textbf{ \+\_\+repository}
+\begin{DoxyCompactList}\small\item\em Referência ao repositório base utilizado para operações nos itens. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ \+\_\+items}
+\begin{DoxyCompactList}\small\item\em Lista local de itens atualmente carregados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controlador para a gestão de marcas. 
+
+A classe {\ttfamily \doxyref{Marca\+Controller}{p. }{class_marca_controller}} implementa a lógica para a gestão das marcas, incluindo operações de leitura, remoção e carregamento de dados externos, como a lista de países. Herda de {\ttfamily \doxyref{Base\+Controller}{p. }{class_base_controller}$<$\doxyref{Marca}{p. }{class_marca}$>$} e implementa a interface {\ttfamily \doxyref{IEntity\+Controller}{p. }{interface_i_entity_controller}}, fornecendo funcionalidades específicas para o trabalho com marcas.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 18} do ficheiro \textbf{ Marca\+Controller.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_marca_controller_a4afc0d1701e7e984e059036331785f9d} 
+\index{MarcaController@{MarcaController}!MarcaController@{MarcaController}}
+\index{MarcaController@{MarcaController}!MarcaController@{MarcaController}}
+\doxysubsubsection{MarcaController()}
+{\footnotesize\ttfamily Marca\+Controller.\+Marca\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily \doxyref{Marca\+Controller}{p. }{class_marca_controller}}. 
+
+Inicializa o controlador com o caminho do ficheiro de dados onde as marcas serão armazenadas. 
+
+Definido na linha \textbf{ 25} do ficheiro \textbf{ Marca\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ :\ base(\textcolor{stringliteral}{"{}Data/marcas.json"{}})\ \{\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{class_marca_controller_ab0e3500e0c15f9307ee007c56b655eb9} 
+\index{MarcaController@{MarcaController}!CarregaPaises@{CarregaPaises}}
+\index{CarregaPaises@{CarregaPaises}!MarcaController@{MarcaController}}
+\doxysubsubsection{CarregaPaises()}
+{\footnotesize\ttfamily \textbf{ List}$<$ \textbf{ string} $>$ Marca\+Controller.\+Carrega\+Paises (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carrega a lista de países a partir de um ficheiro JSON. 
+
+Este método lê um ficheiro JSON contendo uma lista de países e retorna essa lista como uma lista de strings. Caso o ficheiro não exista ou ocorra um erro ao lê-\/lo, retorna uma lista vazia e exibe uma mensagem de erro.
+
+\begin{DoxyReturn}{Retorna}
+Uma lista de strings contendo os nomes dos países. Se houver erro, retorna uma lista vazia. 
+\end{DoxyReturn}
+$<$ Caminho do ficheiro JSON.
+
+Definido na linha \textbf{ 60} do ficheiro \textbf{ Marca\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filePath\ =\ Path.Combine(AppDomain.CurrentDomain.BaseDirectory,\ \textcolor{stringliteral}{"{}Resources"{}},\ \textcolor{stringliteral}{"{}Data"{}},\ \textcolor{stringliteral}{"{}paises.json"{}});\ \ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ ficheiro\ de\ países\ existe}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (File.Exists(filePath))}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lê\ o\ conteúdo\ do\ JSON\ e\ desserializa\ em\ uma\ lista\ de\ strings}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ json\ =\ File.ReadAllText(filePath);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<string>\ paises\ =\ JsonSerializer.Deserialize<List<string>>(json);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (paises\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ paises;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Erro\ ao\ carregar\ países:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}O\ ficheiro\ de\ países\ não\ foi\ encontrado."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_marca_controller_a79ef8ed1bb89022e893161b64c85a33f} 
+\index{MarcaController@{MarcaController}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!MarcaController@{MarcaController}}
+\doxysubsubsection{RemoveItem()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ void} Marca\+Controller.\+Remove\+Item (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove uma marca do repositório. 
+
+Este método sobrepõe o método {\ttfamily Remove\+Item} da classe base e tenta remover a marca fornecida do repositório, mas apenas se a marca não estiver associada a nenhum produto. Caso contrário, é exibida uma mensagem de erro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & A marca a ser removida. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \textbf{ Base\+Controller$<$ Marca $>$} \doxyref{}{p. }{class_base_controller_a8484ff644f75ab6d44e5e902b19e896e}.
+
+
+
+Definido na linha \textbf{ 35} do ficheiro \textbf{ Marca\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ Marca\ specificItem)}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ var\ produtos\ =\ \textcolor{keyword}{new}\ ProdutoRepo().GetAll();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (specificItem.PodeSerEliminada(produtos))}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Esta\ marca\ não\ pode\ ser\ eliminada\ porque\ está\ associada\ a\ um\ ou\ mais\ produtos."{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Controllers/\textbf{ Marca\+Controller.\+cs}\end{DoxyCompactItemize}

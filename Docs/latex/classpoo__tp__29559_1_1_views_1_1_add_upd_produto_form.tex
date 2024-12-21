@@ -1,0 +1,113 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produto\+Form}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_produto_form}\index{poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}}
+
+
+Formulário para a criação de um novo produto.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produto\+Form\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_views_1_1_add_upd_produto_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Add\+Upd\+Produto\+Form} (\textbf{ int}? \textbf{ produto\+Id}=\textbf{ null})
+\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Add\+Upd\+Produto\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Formulário para a criação de um novo produto. 
+
+Este formulário serve para criar ou atualizar um produto ao sistema. O utilizador preenche informações como o nome, a categoria, a marca, o preço e a quantidade em stock do produto. O formulário também carrega as marcas e categorias disponíveis através dos controladores correspondentes. 
+
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_produto_form_a3a444ed4a0122edc88bf4590e79f476c} 
+\index{poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}!AddUpdProdutoForm@{AddUpdProdutoForm}}
+\index{AddUpdProdutoForm@{AddUpdProdutoForm}!poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}}
+\doxysubsubsection{AddUpdProdutoForm()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produto\+Form.\+Add\+Upd\+Produto\+Form (\begin{DoxyParamCaption}\item[{\textbf{ int}?}]{produto\+Id = {\ttfamily \textbf{ null}} }\end{DoxyParamCaption})}
+
+
+
+Construtor do {\ttfamily Add\+Upd\+Produto\+Form}. 
+
+Inicializa os controladores de produtos, marcas e categorias. Aceita um ID de produto para edição (opcional).
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em produto\+Id} & ID do produto a ser editado (ou null para adicionar um novo produto). \\
+\hline
+\end{DoxyParams}
+$<$ Inicializa o controlador de produtos.
+
+$<$ Inicializa o controlador de marcas.
+
+$<$ Inicializa o controlador de categorias.
+
+$<$ Armazena o ID do produto, se fornecido.
+
+Definido na linha \textbf{ 49} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ ProdutoController();\ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();\ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();\ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtoId\ =\ produtoId;\ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_produto_form_a821cf4440cd69b2ce8c470dc9a892a05} 
+\index{poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}}
+\doxysubsubsection{Dispose()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produto\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+Designer.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Produto\+Form.\+cs}\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Produto\+Form.\+Designer.\+cs}\end{DoxyCompactItemize}

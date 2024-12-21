@@ -1,37 +1,27 @@
-﻿/**
- * @file MarcaRepo.cs
- * @brief Repositório especializado na manipulação de marcas.
- * 
- * A classe `MarcaRepo` é uma especialização da classe base `BaseRepo<Marca>`,
- * responsável pela persistência e manipulação de marcas. A classe lida com operações
- * específicas para objetos do tipo `Marca`.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
-
-using poo_tp_29559.Models;
+﻿using poo_tp_29559.Models;
 
 namespace poo_tp_29559.Repositories
 {
-    /**
-     * @class MarcaRepo
-     * @brief Repositório para a manipulação de marcas.
-     * 
-     * A classe `MarcaRepo` herda de `BaseRepo<Marca>` e é especializada na manipulação
-     * de objetos do tipo `Marca`. Ela oferece as funcionalidades básicas de um repositório,
-     * como a adição, remoção, atualização e obtenção de marcas a partir de um ficheiro JSON.
-     * 
-     * @see BaseRepo
-     */
+    /// <summary>
+    /// Repositório para a manipulação de marcas.
+    /// </summary>
+    /// <remarks>
+    /// A classe <c>MarcaRepo</c> herda de <c>BaseRepo&lt;Marca&gt;</c> e é especializada na manipulação
+    /// de objetos do tipo <c>Marca</c>. Ela oferece as funcionalidades básicas de um repositório, como a
+    /// adição, remoção, atualização e obtenção de marcas a partir de um ficheiro JSON.
+    /// </remarks>
+    /// <seealso cref="BaseRepo{Marca}"/>
     public class MarcaRepo : BaseRepo<Marca>
     {
-        /**
-         * @brief Construtor da classe `MarcaRepo`.
-         * 
-         * Inicializa o repositório de marcas com o caminho do ficheiro JSON onde os dados
-         * serão armazenados. O ficheiro pré-definido utilizado é `Data/marcas.json`.
-         */
+        #region Constructor
+        /// <summary>
+        /// Construtor da classe <c>MarcaRepo</c>.
+        /// </summary>
+        /// <remarks>
+        /// Inicializa o repositório de marcas com o caminho do ficheiro JSON onde os dados
+        /// serão armazenados. O ficheiro pré-definido utilizado é <c>Data/marcas.json</c>.
+        /// </remarks>
         public MarcaRepo() : base("Data/marcas.json") { }
+        #endregion
     }
 }

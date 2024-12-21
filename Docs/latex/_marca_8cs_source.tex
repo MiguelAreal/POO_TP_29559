@@ -1,0 +1,35 @@
+\doxysection{Marca.\+cs}
+\label{_marca_8cs_source}\index{POO\_TP\_29559/Models/Marca.cs@{POO\_TP\_29559/Models/Marca.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559.Interfaces;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Marca\ :\ IIdentifiable}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Nome\ da\ Marca"{}})]}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Nome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Descrição"{}})]}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Descricao\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Data\ de\ Criação"{}})]}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DataCriacao\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}País\ de\ Origem"{}})]}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ PaisOrigem\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{public}\ Marca()}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ DataCriacao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ PodeSerEliminada(List<Produto>\ produtos)}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !produtos.Any(p\ =>\ p.MarcaID\ ==\ \textcolor{keyword}{this}.Id);}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,173 @@
+\doxysection{Child\+Form.\+Designer.\+cs}
+\label{_child_form_8_designer_8cs_source}\index{POO\_TP\_29559/Views/ChildForm.Designer.cs@{POO\_TP\_29559/Views/ChildForm.Designer.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00002\ \{}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{keyword}{partial\ class\ }ChildForm}
+\DoxyCodeLine{00004\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ System.ComponentModel.IContainer\ components\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Dispose(\textcolor{keywordtype}{bool}\ disposing)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ InitializeComponent()}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ DataGridViewCellStyle\ dataGridViewCellStyle1\ =\ \textcolor{keyword}{new}\ DataGridViewCellStyle();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ DataGridViewCellStyle\ dataGridViewCellStyle2\ =\ \textcolor{keyword}{new}\ DataGridViewCellStyle();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ DataGridViewCellStyle\ dataGridViewCellStyle3\ =\ \textcolor{keyword}{new}\ DataGridViewCellStyle();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens\ =\ \textcolor{keyword}{new}\ DataGridView();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)dgvItens).BeginInit();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ SuspendLayout();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dgvItens}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.AllowUserToAddRows\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.AllowUserToResizeRows\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Anchor\ =\ AnchorStyles.Top\ |\ AnchorStyles.Bottom\ |\ AnchorStyles.Left\ |\ AnchorStyles.Right;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.AutoSizeColumnsMode\ =\ DataGridViewAutoSizeColumnsMode.Fill;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.AutoSizeRowsMode\ =\ DataGridViewAutoSizeRowsMode.AllCells;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.BackgroundColor\ =\ Color.White;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.Alignment\ =\ DataGridViewContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.BackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 11F);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.ForeColor\ =\ SystemColors.WindowText;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.SelectionBackColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.SelectionForeColor\ =\ SystemColors.HighlightText;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.WrapMode\ =\ DataGridViewTriState.True;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.ColumnHeadersDefaultCellStyle\ =\ dataGridViewCellStyle1;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.ColumnHeadersHeightSizeMode\ =\ DataGridViewColumnHeadersHeightSizeMode.AutoSize;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Cursor\ =\ Cursors.IBeam;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.Alignment\ =\ DataGridViewContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.BackColor\ =\ SystemColors.Window;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.ForeColor\ =\ SystemColors.ControlText;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.SelectionBackColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.SelectionForeColor\ =\ SystemColors.HighlightText;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.WrapMode\ =\ DataGridViewTriState.True;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.DefaultCellStyle\ =\ dataGridViewCellStyle2;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Location\ =\ \textcolor{keyword}{new}\ Point(17,\ 96);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.MultiSelect\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Name\ =\ \textcolor{stringliteral}{"{}dgvItens"{}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.Alignment\ =\ DataGridViewContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.BackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.ForeColor\ =\ SystemColors.WindowText;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.SelectionBackColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.SelectionForeColor\ =\ SystemColors.HighlightText;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.WrapMode\ =\ DataGridViewTriState.True;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.RowHeadersDefaultCellStyle\ =\ dataGridViewCellStyle3;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.RowHeadersVisible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.RowTemplate.Resizable\ =\ DataGridViewTriState.False;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.SelectionMode\ =\ DataGridViewSelectionMode.FullRowSelect;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Size\ =\ \textcolor{keyword}{new}\ Size(760,\ 331);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.TabIndex\ =\ 3;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtSearchItem}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.Location\ =\ \textcolor{keyword}{new}\ Point(17,\ 63);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.Name\ =\ \textcolor{stringliteral}{"{}txtSearchItem"{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.PlaceholderText\ =\ \textcolor{stringliteral}{"{}Procurar..."{}};}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.Size\ =\ \textcolor{keyword}{new}\ Size(260,\ 25);}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.TabIndex\ =\ 0;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ txtSearchItem.TextChanged\ +=\ txtSearchItem\_TextChanged;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnConsultarAtualizar}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Anchor\ =\ AnchorStyles.Top\ |\ AnchorStyles.Right;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.FlatStyle\ =\ FlatStyle.Flat;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 21.75F,\ FontStyle.Regular,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Location\ =\ \textcolor{keyword}{new}\ Point(646,\ 50);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Margin\ =\ \textcolor{keyword}{new}\ Padding(0);}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Name\ =\ \textcolor{stringliteral}{"{}btnConsultarAtualizar"{}};}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Size\ =\ \textcolor{keyword}{new}\ Size(35,\ 40);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.TabIndex\ =\ 5;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Text\ =\ \textcolor{stringliteral}{"{}📝"{}};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Click\ +=\ btnConsultarAtualizar\_Click;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.MouseEnter\ +=\ btnSeeVenda\_MouseEnter;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.MouseLeave\ +=\ btnSeeVenda\_MouseLeave;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnRem}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Anchor\ =\ AnchorStyles.Top\ |\ AnchorStyles.Right;}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.FlatStyle\ =\ FlatStyle.Flat;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 21.75F,\ FontStyle.Regular,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Location\ =\ \textcolor{keyword}{new}\ Point(696,\ 50);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Margin\ =\ \textcolor{keyword}{new}\ Padding(0);}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Name\ =\ \textcolor{stringliteral}{"{}btnRem"{}};}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Size\ =\ \textcolor{keyword}{new}\ Size(35,\ 40);}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.TabIndex\ =\ 6;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Text\ =\ \textcolor{stringliteral}{"{}🗑️"{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Click\ +=\ btnRem\_Click;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.MouseEnter\ +=\ btnRem\_MouseEnter;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.MouseLeave\ +=\ btnRem\_MouseLeave;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnAdd}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Anchor\ =\ AnchorStyles.Top\ |\ AnchorStyles.Right;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.FlatStyle\ =\ FlatStyle.Flat;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 21.75F,\ FontStyle.Regular,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Location\ =\ \textcolor{keyword}{new}\ Point(744,\ 50);}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Margin\ =\ \textcolor{keyword}{new}\ Padding(0);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Name\ =\ \textcolor{stringliteral}{"{}btnAdd"{}};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Size\ =\ \textcolor{keyword}{new}\ Size(35,\ 40);}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.TabIndex\ =\ 7;}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}🆕"{}};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Click\ +=\ btnAdd\_Click;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.MouseEnter\ +=\ btnAdd\_MouseEnter;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.MouseLeave\ +=\ btnAdd\_MouseLeave;}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ChildForm}}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleDimensions\ =\ \textcolor{keyword}{new}\ SizeF(96F,\ 96F);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleMode\ =\ AutoScaleMode.Dpi;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ BorderStyle\ =\ MetroFramework.Drawing.MetroBorderStyle.FixedSingle;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ ClientSize\ =\ \textcolor{keyword}{new}\ Size(800,\ 450);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(dgvItens);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnAdd);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnRem);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnConsultarAtualizar);}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(txtSearchItem);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ MinimizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ Movable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}ChildForm"{}};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ Resizable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ ShadowType\ =\ MetroFormShadowType.None;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ Text\ =\ \textcolor{stringliteral}{"{}ChildForm"{}};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)dgvItens).EndInit();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ PerformLayout();}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridView\ dgvItens;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtSearchItem;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnConsultarAtualizar;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnRem;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnAdd;}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \}}
+
+\end{DoxyCode}

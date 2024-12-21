@@ -1,20 +1,92 @@
 [
   {
     "Id": 1,
-    "Nome": "Teclado #1",
-    "CategoriaID": 2,
-    "MarcaID": 1,
+    "Nome": "Magic Keyboard",
+    "CategoriaID": 1,
+    "MarcaID": 4,
     "Preco": 20,
-    "QuantidadeEmStock": 80,
-    "DataAdicao": "19/12/2024 22:08:21"
+    "QuantidadeEmStock": 79,
+    "DataAdicao": "20/12/2024 12:21:16"
   },
   {
     "Id": 2,
-    "Nome": "Rato #1",
-    "CategoriaID": 1,
-    "MarcaID": 2,
+    "Nome": "Surface Mouse",
+    "CategoriaID": 2,
+    "MarcaID": 5,
     "Preco": 14.99,
     "QuantidadeEmStock": 84,
-    "DataAdicao": "19/12/2024 23:41:18"
+    "DataAdicao": "20/12/2024 12:21:59"
+  },
+  {
+    "Id": 3,
+    "Nome": "Kraken V3",
+    "CategoriaID": 5,
+    "MarcaID": 11,
+    "Preco": 49.99,
+    "QuantidadeEmStock": 50,
+    "DataAdicao": "20/12/2024 12:23:37"
+  },
+  {
+    "Id": 4,
+    "Nome": "Amazon Basics",
+    "CategoriaID": 6,
+    "MarcaID": 10,
+    "Preco": 120,
+    "QuantidadeEmStock": 30,
+    "DataAdicao": "20/12/2024 12:25:29"
+  },
+  {
+    "Id": 5,
+    "Nome": "Monitor 24\u0022",
+    "CategoriaID": 3,
+    "MarcaID": 3,
+    "Preco": 199.99,
+    "QuantidadeEmStock": 25,
+    "DataAdicao": "20/12/2024 12:26:00"
+  },
+  {
+    "Id": 6,
+    "Nome": "Ornata V3",
+    "CategoriaID": 1,
+    "MarcaID": 11,
+    "Preco": 65.99,
+    "QuantidadeEmStock": 60,
+    "DataAdicao": "20/12/2024 12:26:28"
+  },
+  {
+    "Id": 7,
+    "Nome": "Magic Mouse",
+    "CategoriaID": 2,
+    "MarcaID": 4,
+    "Preco": 40,
+    "QuantidadeEmStock": 70,
+    "DataAdicao": "20/12/2024 12:26:59"
+  },
+  {
+    "Id": 8,
+    "Nome": "Webcam 720p",
+    "CategoriaID": 7,
+    "MarcaID": 5,
+    "Preco": 35.99,
+    "QuantidadeEmStock": 40,
+    "DataAdicao": "20/12/2024 12:27:41"
+  },
+  {
+    "Id": 9,
+    "Nome": "Impressora Multifuncional",
+    "CategoriaID": 4,
+    "MarcaID": 6,
+    "Preco": 199.00,
+    "QuantidadeEmStock": 14,
+    "DataAdicao": "20/12/2024 12:27:56"
+  },
+  {
+    "Id": 10,
+    "Nome": "AirPods",
+    "CategoriaID": 8,
+    "MarcaID": 4,
+    "Preco": 89.99,
+    "QuantidadeEmStock": 45,
+    "DataAdicao": "20/12/2024 12:28:09"
   }
 ]

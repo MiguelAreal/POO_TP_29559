@@ -1,0 +1,172 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha}\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+
+
+Representa uma campanha de marketing ou promoção.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_models_1_1_campanha}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único da campanha. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Nome da campanha. \end{DoxyCompactList}\item 
+\textbf{ decimal}? \textbf{ Percentagem\+Desc}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Percentagem de desconto da campanha. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Data\+Inicio}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de início da campanha. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Data\+Fim}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de fim da campanha. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Categoria\+Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador da categoria associada à campanha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa uma campanha de marketing ou promoção. 
+
+A classe {\ttfamily Campanha} armazena informações sobre campanhas promocionais, incluindo o nome, a percentagem de desconto, as datas de início e fim, e a categoria à qual a campanha está associada. Esta classe implementa a interface {\ttfamily \doxyref{IIdentifiable}{p. }{interface_i_identifiable}}, permitindo que cada campanha tenha um identificador único.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 21} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+
+\doxysubsection{Documentação das propriedades}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha_a7b6c3cd9ec47776ba5f1e8d489490ba4} 
+\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}!CategoriaId@{CategoriaId}}
+\index{CategoriaId@{CategoriaId}!poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+\doxysubsubsection{CategoriaId}
+{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha.\+Categoria\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador da categoria associada à campanha. 
+
+Este campo armazena o identificador da categoria à qual a campanha está associada. Cada campanha pode ser aplicada a uma categoria específica de produtos. 
+
+Definido na linha \textbf{ 70} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha_a9ec8032d46818bcd5a60dec9a0ff4df7} 
+\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}!DataFim@{DataFim}}
+\index{DataFim@{DataFim}!poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+\doxysubsubsection{DataFim}
+{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha.\+Data\+Fim\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de fim da campanha. 
+
+Este campo armazena a data de fim da campanha. A data deve ser fornecida como uma string no formato adequado. 
+
+Definido na linha \textbf{ 61} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha_a09d312f3ceb67dee486d021bbbfbc5e0} 
+\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}!DataInicio@{DataInicio}}
+\index{DataInicio@{DataInicio}!poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+\doxysubsubsection{DataInicio}
+{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha.\+Data\+Inicio\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de início da campanha. 
+
+Este campo armazena a data de início da campanha. A data deve ser fornecida como uma string no formato adequado. 
+
+Definido na linha \textbf{ 53} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha_ae156f4392929907bc1e31ff27b531b2f} 
+\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}!Id@{Id}}
+\index{Id@{Id}!poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único da campanha. 
+
+Este campo armazena o identificador único de cada campanha. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 28} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha_ae7d66004cc1110e1f8a1e2341a64be9f} 
+\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}!Nome@{Nome}}
+\index{Nome@{Nome}!poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+\doxysubsubsection{Nome}
+{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nome da campanha. 
+
+Este campo armazena o nome da campanha, que será exibido na interface de utilizador. 
+
+Definido na linha \textbf{ 36} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_campanha_a064e7604a7519062d09877fe27664798} 
+\index{poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}!PercentagemDesc@{PercentagemDesc}}
+\index{PercentagemDesc@{PercentagemDesc}!poo\_tp\_29559.Models.Campanha@{poo\_tp\_29559.Models.Campanha}}
+\doxysubsubsection{PercentagemDesc}
+{\footnotesize\ttfamily \textbf{ decimal}? poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha.\+Percentagem\+Desc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Percentagem de desconto da campanha. 
+
+Este campo armazena a percentagem de desconto oferecida pela campanha. O valor deve ser uma porcentagem, como \doxyref{10.\+00}{p. }{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e} para um desconto de 10\%. 
+
+Definido na linha \textbf{ 45} do ficheiro \textbf{ Campanha.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Campanha.\+cs}\end{DoxyCompactItemize}

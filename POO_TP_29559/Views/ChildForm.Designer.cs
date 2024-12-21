@@ -28,15 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgvItens = new DataGridView();
             txtSearchItem = new TextBox();
             btnConsultarAtualizar = new Label();
             btnRem = new Label();
             btnAdd = new Label();
-            lblPesquisa = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvItens).BeginInit();
             SuspendLayout();
             // 
@@ -46,42 +45,43 @@
             dgvItens.AllowUserToResizeRows = false;
             dgvItens.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvItens.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvItens.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvItens.BackgroundColor = Color.White;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(9, 171, 219);
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvItens.Cursor = Cursors.IBeam;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(9, 171, 219);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dgvItens.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvItens.DefaultCellStyle = dataGridViewCellStyle2;
             dgvItens.Location = new Point(17, 96);
             dgvItens.MultiSelect = false;
             dgvItens.Name = "dgvItens";
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Control;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(9, 171, 219);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dgvItens.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(9, 171, 219);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvItens.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvItens.RowHeadersVisible = false;
+            dgvItens.RowTemplate.Resizable = DataGridViewTriState.False;
             dgvItens.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvItens.Size = new Size(760, 331);
             dgvItens.TabIndex = 3;
-            dgvItens.CellValueChanged += dgvItens_CellValueChanged;
-            dgvItens.CurrentCellChanged += dgvItens_CurrentCellChanged;
             // 
             // txtSearchItem
             // 
@@ -91,6 +91,7 @@
             txtSearchItem.PlaceholderText = "Procurar...";
             txtSearchItem.Size = new Size(260, 25);
             txtSearchItem.TabIndex = 0;
+            txtSearchItem.TextChanged += txtSearchItem_TextChanged;
             // 
             // btnConsultarAtualizar
             // 
@@ -103,9 +104,8 @@
             btnConsultarAtualizar.Name = "btnConsultarAtualizar";
             btnConsultarAtualizar.Size = new Size(35, 40);
             btnConsultarAtualizar.TabIndex = 5;
-            btnConsultarAtualizar.Text = "📜";
+            btnConsultarAtualizar.Text = "📝";
             btnConsultarAtualizar.TextAlign = ContentAlignment.MiddleCenter;
-            btnConsultarAtualizar.Visible = false;
             btnConsultarAtualizar.Click += btnConsultarAtualizar_Click;
             btnConsultarAtualizar.MouseEnter += btnSeeVenda_MouseEnter;
             btnConsultarAtualizar.MouseLeave += btnSeeVenda_MouseLeave;
@@ -144,27 +144,12 @@
             btnAdd.MouseEnter += btnAdd_MouseEnter;
             btnAdd.MouseLeave += btnAdd_MouseLeave;
             // 
-            // lblPesquisa
-            // 
-            lblPesquisa.Cursor = Cursors.Hand;
-            lblPesquisa.FlatStyle = FlatStyle.Flat;
-            lblPesquisa.Font = new Font("Segoe UI", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPesquisa.Location = new Point(280, 55);
-            lblPesquisa.Margin = new Padding(0);
-            lblPesquisa.Name = "lblPesquisa";
-            lblPesquisa.Size = new Size(40, 35);
-            lblPesquisa.TabIndex = 8;
-            lblPesquisa.Text = "🔍";
-            lblPesquisa.TextAlign = ContentAlignment.MiddleCenter;
-            lblPesquisa.Click += lblPesquisa_Click;
-            // 
             // ChildForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             ClientSize = new Size(800, 450);
-            Controls.Add(lblPesquisa);
             Controls.Add(dgvItens);
             Controls.Add(btnAdd);
             Controls.Add(btnRem);
@@ -189,6 +174,5 @@
         private Label btnConsultarAtualizar;
         private Label btnRem;
         private Label btnAdd;
-        private Label lblPesquisa;
     }
 }

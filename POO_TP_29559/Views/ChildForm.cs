@@ -1,19 +1,19 @@
 ﻿/**
  * @file ChildForm.cs
- * @brief Formulário filho da aplicação, utilizado para gerir diferentes tipos de itens (Produtos, Categorias, Marcas, etc.).
- *
- * Este formulário é responsável pela exibição e interação com os itens de cada tipo específico (Produtos, Categorias, Marcas, etc.).
- * Também disponibiliza funcionalidades para adicionar, remover, pesquisar e editar itens através de uma UI intuitiva.
- * O formulário ajusta os comportamentos e botões visíveis dependendo do tipo de utilizador (Administrador ou Cliente) e do tipo de formulário em questão.
- *
- * @author Miguel Areal
- * @date 12/2024
+ * @brief Formulário para consulta de dados base.
+ * 
+ * Este formulário permite consultar Produtos, Categorias, Marcas, Campanhas, Vendas e Compras,
+ * para além de disponibilizar ações para desencadear operações CRUD.
+ * 
+* @author Miguel Areal
+* @date 12/2024
  */
 
 using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories.Enumerators;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Numerics;
@@ -22,25 +22,13 @@ using System.Windows.Forms;
 
 namespace poo_tp_29559.Views
 {
-    /**
-     * @class ChildForm
-     * @brief Formulário filho responsável pela interação com os dados dos itens.
-     * 
-     * Este formulário é usado para exibir, editar, adicionar e remover itens conforme o tipo de formulário ativo (Produtos, Categorias, Marcas, etc.).
-     * Ele possui funcionalidades específicas para manipulação de dados, incluindo a possibilidade de ordenar, filtrar e editar os itens.
-     * O comportamento e a visibilidade de certos botões são alterados dependendo do tipo de utilizador (Administrador ou Cliente).
-     */
     public partial class ChildForm : MetroForm
     {
         private readonly IEntityController _controller;  /**< Controlador responsável pela interação com os dados */
         private readonly FormTypes _formType;  /**< Tipo do formulário atual (Produtos, Categorias, etc.) */
         private readonly Utilizador _utilizadorLogado;  /**< Utilizador atualmente autenticado */
-        private string? _activeColumn;  /**< Nome da coluna ativa para filtros e ordenação */
-        private int _previousColumnIndex = -1;  /**< Índice da coluna anteriormente selecionada */
         private BindingSource _bindingSource;  /**< Fonte de dados ligada ao DataGridView */
-        private object items;  /**< Lista de itens a ser exibida */
-        string ConsultarAtualizarMsg;
-
+        private List<object> _items;  /**< Lista de itens a ser exibida */
 
         /**
         * @brief Construtor do `ChildForm`.
@@ -59,8 +47,8 @@ namespace poo_tp_29559.Views
             _utilizadorLogado = utilizadorLogado;
             _bindingSource = new BindingSource();
             changeSettings(formType, _utilizadorLogado.IsAdmin);
-            MostraItens();
 
+            MostraItens(_controller.GetItems());
         }
 
         /**
@@ -74,7 +62,6 @@ namespace poo_tp_29559.Views
          */
         public void changeSettings(FormTypes formType, bool isAdmin)
         {
-            btnConsultarAtualizar.Visible = false;  /**< Esconde o botão de ver venda por defeito */
             Text = _formType.ToString();  /**< Define o título do formulário com base no tipo */
 
             if (!isAdmin)
@@ -89,34 +76,18 @@ namespace poo_tp_29559.Views
             {
                 case FormTypes.Vendas:
                     btnAdd.Text = "🛒";
-                    btnConsultarAtualizar.Visible = true;
-                    ConsultarAtualizarMsg = "Selecione um movimento.";
-                    dgvItens.ReadOnly = true;
+                    btnConsultarAtualizar.Text = "🧾";
                     break;
                 case FormTypes.Compras:
                     btnAdd.Text = "🛒";
+                    btnConsultarAtualizar.Text = "🧾";
                     btnRem.Visible = true;
-                    btnConsultarAtualizar.Visible = true;
-                    ConsultarAtualizarMsg = "Selecione um movimento.";
                     btnAdd.Visible = true;
-                    dgvItens.ReadOnly = true;
                     break;
                 case FormTypes.Utilizadores:
                     btnAdd.Text = "👤";
                     break;
-                case FormTypes.Produtos:
-                    btnConsultarAtualizar.Visible = true;
-                    btnConsultarAtualizar.Text = "📝";
-                    ConsultarAtualizarMsg = "Selecione um produto.";
-                    dgvItens.ReadOnly = true;
-                    break;
-                case FormTypes.Campanhas:
-                    dgvItens.ReadOnly = true;
-                    break;
-
             }
-
-
         }
 
         /**
@@ -145,10 +116,20 @@ namespace poo_tp_29559.Views
          * @brief Exibe os itens no DataGridView.
          * 
          * Este método busca os dados do controlador, atualiza o BindingSource e exibe os itens no DataGridView.
+         * Se o utilizador autenticado for um cliente, nas compras, exibe apenas as compras do próprio utilizador.
          */
-        public void MostraItens()
+        public void MostraItens(List<object> items)
         {
-            items = _controller.GetItems();
+            if (_formType == FormTypes.Compras)
+            {
+                // Filtra apenas as compras feitas pelo utilizador logado
+                items = items.OfType<VendaCompraViewModel>()
+                             .Where(vc => vc.ClienteID == _utilizadorLogado.Id)
+                             .Cast<object>()
+                             .ToList();
+            }
+
+            _items = items;
             _bindingSource.DataSource = items;
             dgvItens.DataSource = _bindingSource;
             dgvItens.Refresh();
@@ -161,7 +142,6 @@ namespace poo_tp_29559.Views
             // Esconde colunas irrelevantes
             ToggleColumnVisibility("Id", false);
             ToggleColumnVisibility("IsParticular", false);
-            ToggleColumnVisibility("Password", false);
         }
 
         /**
@@ -201,87 +181,6 @@ namespace poo_tp_29559.Views
         private void btnSeeVenda_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnConsultarAtualizar, Color.DodgerBlue);
         private void btnSeeVenda_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnConsultarAtualizar, Color.Black);
 
-
-        /**
-         * @brief Restaura a célula ativa após alteração.
-         * 
-         * Este método restaura a célula ativa após uma alteração no DataGridView,
-         * como uma pesquisa ou modificação de dados, para persistência visual.
-         */
-        private void RestoreCurrentCell()
-        {
-            if (dgvItens.CurrentCell != null)
-            {
-                int currentRowIndex = dgvItens.CurrentCell.RowIndex;
-                int currentColumnIndex = dgvItens.Columns[_activeColumn]?.Index ?? _previousColumnIndex;
-
-                if (currentRowIndex >= 0 && currentColumnIndex >= 0)
-                {
-                    dgvItens.CurrentCell = dgvItens.Rows[currentRowIndex].Cells[currentColumnIndex];
-                }
-            }
-        }
-
-
-        /**
-         * @brief Evento de mudança de célula no DataGridView.
-         * 
-         * Este evento é acionado quando a célula ativa no DataGridView é alterada.
-         * Ele armazena a coluna ativa para filtros.
-         * 
-         * @param sender O objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
-        private void dgvItens_CurrentCellChanged(object sender, EventArgs e)
-        {
-            if (dgvItens.CurrentCell != null)
-            {
-                int currentColumnIndex = dgvItens.CurrentCell.ColumnIndex;
-
-                if (currentColumnIndex != _previousColumnIndex)
-                {
-                    _activeColumn = dgvItens.Columns[currentColumnIndex].Name;
-                    _previousColumnIndex = currentColumnIndex;
-                }
-            }
-        }
-
-
-        /**
-          * @brief Evento de mudança de conteúdo de uma célula no DataGridView.
-          * 
-          * Este evento é acionado quando uma célula tem o seu conteúdo alterado no DataGridView.
-          * O comportamento do evento é dinâmico, depende do tipo de form ativo.
-          * 
-          * @param sender O objeto que disparou o evento.
-          * @param e Dados do evento.
-          */
-        private void dgvItens_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            /**<Tenta obter o item editado com base na linha e coluna alteradas> */
-            try
-            {
-                // Certifica-se de que a linha e a coluna são válidas
-                if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.RowIndex < dgvItens.Rows.Count)
-                {
-                    var selectedItem = dgvItens.Rows[e.RowIndex].DataBoundItem;
-                    _controller.UpdateItem(selectedItem);
-                    MostraItens();
-                }
-            }
-            // Trata o caso em que a linha ou coluna não é válida
-            catch (ArgumentOutOfRangeException)
-            {
-                MessageBox.Show("Selecione uma célula válida para editar.");
-            }
-            // Trata o caso em que a conversão do valor não é válida
-            catch (InvalidCastException)
-            {
-                MessageBox.Show("Erro ao tentar atualizar o item. Verifique os dados.");
-            }
-        }
-
-
         /**
          * @brief Evento de clique no botão de remover.
          * 
@@ -292,14 +191,11 @@ namespace poo_tp_29559.Views
          */
         private void btnRem_Click(object sender, EventArgs e)
         {
-            // Vê se tem alguma linha selecionada
             if (dgvItens.SelectedRows.Count > 0)
             {
                 try
                 {
-                    // Busca índice
                     int rowIndex = dgvItens.SelectedRows[0].Index;
-                    // Busca item selecionado pelo índice
                     var selectedItem = dgvItens.Rows[rowIndex].DataBoundItem;
 
                     switch (_formType)
@@ -324,8 +220,6 @@ namespace poo_tp_29559.Views
                             if (selectedItem is VendaCompraViewModel vendaCompraSelecionada)
                             {
                                 var vendaCompra = _controller.GetById(vendaCompraSelecionada.Id);
-
-                                // Emitir aviso para confirmação de devolução
                                 var result = MessageBox.Show(
                                     "Deseja proceder à devolução antes de apagar esta venda/compra?",
                                     "Confirmar Devolução",
@@ -354,6 +248,7 @@ namespace poo_tp_29559.Views
                                 _controller.RemoveItem(utilizadorSelecionado);
                             }
                             break;
+
                         case FormTypes.Campanhas:
                             if (selectedItem is CampanhaViewModel campanhaSelecionada)
                             {
@@ -367,8 +262,7 @@ namespace poo_tp_29559.Views
                             return;
                     }
 
-                    // Recarrega itens após eliminação
-                    MostraItens();
+                    MostraItens(_controller.GetItems());
                 }
                 catch (Exception ex)
                 {
@@ -377,10 +271,9 @@ namespace poo_tp_29559.Views
             }
             else
             {
-                MessageBox.Show("Selecione um item.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um item.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
 
         /**
         * @brief Evento de clique no botão de adicionar.
@@ -401,10 +294,10 @@ namespace poo_tp_29559.Views
                     addForm = new AddUpdProdutoForm();
                     break;
                 case FormTypes.Categorias:
-                    addForm = new AddCategoriaForm();
+                    addForm = new AddUpdCategoriaForm();
                     break;
                 case FormTypes.Marcas:
-                    addForm = new AddMarcaForm();
+                    addForm = new AddUpdMarcaForm();
                     break;
                 case FormTypes.Vendas:
                     addForm = new AddVendaForm();
@@ -413,86 +306,79 @@ namespace poo_tp_29559.Views
                     addForm = new AddCompraForm(_utilizadorLogado);
                     break;
                 case FormTypes.Utilizadores:
-                    addForm = new AddClienteForm();
+                    addForm = new AddUpdClienteForm();
                     break;
                 case FormTypes.Campanhas:
-                    addForm = new AddCampanhaForm();
+                    addForm = new AddUpdCampanhaForm();
                     break;
                 default:
                     MessageBox.Show("FormType desconhecido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
             }
 
-            // Abre form
             using (addForm)
             {
                 addForm.ShowDialog();
             }
 
-            // Recarrega itens
-            MostraItens();
+            MostraItens(_controller.GetItems());
         }
 
-
         /**
-         * @brief Evento de clique no botão de ver movimento.
-         * 
-         * Este evento é acionado quando o botão de ver movimento é clicado.
-         * Ele abre um formulário com os detalhes do movimento selecionado, se este for válido.
-         * 
-         * @param sender O objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        * @brief Evento de clique no botão de ver movimento.
+        * 
+        * Este evento é acionado quando o botão de ver movimento é clicado.
+        * Ele abre um formulário com os detalhes do movimento selecionado, se este for válido.
+        * 
+        * @param sender O objeto que disparou o evento.
+        * @param e Dados do evento.
+        */
         private void btnConsultarAtualizar_Click(object sender, EventArgs e)
         {
-            // Verifica se há alguma linha selecionada
             if (dgvItens.SelectedRows.Count > 0)
             {
                 try
                 {
-                    // Obtém o índice da linha selecionada
-                    int rowIndex = dgvItens.SelectedRows[0].Index;
+                    var selectedItem = dgvItens.Rows[dgvItens.SelectedRows[0].Index].DataBoundItem;
 
-                    // Obtém o item selecionado pelo índice da linha (que é um VendaViewModel ou ProdutoViewModel)
-                    var selectedItem = dgvItens.Rows[rowIndex].DataBoundItem;
+                    Form form = null;
 
-                    // Verifica se o item selecionado é um VendaViewModel
                     if (selectedItem is VendaCompraViewModel vendaViewModel)
                     {
-                        // Busca a venda completa com base no Id da VendaViewModel
-                        VendaCompra venda = (VendaCompra)_controller.GetById(vendaViewModel.Id);
-                        string titulo;
-                        // Verifica se o formulário ativo é de Vendas
-                        if (_formType == FormTypes.Vendas)
+                        form = new DetalhesVendaCompra(_formType, vendaViewModel.Id);
+                    }
+                    else if (selectedItem is ProdutoViewModel produto)
+                    {
+                        form = new AddUpdProdutoForm(produto.Id);
+                    }
+                    else if (selectedItem is Categoria categoria)
+                    {
+                        form = new AddUpdCategoriaForm(categoria.Id);
+                    }
+                    else if (selectedItem is Marca marca)
+                    {
+                        form = new AddUpdMarcaForm(marca.Id);
+                    }
+                    else if (selectedItem is Utilizador utilizador)
+                    {
+                        if (!utilizador.IsAdmin)
                         {
-                            titulo = "   Detalhes de Venda";
-                        }
-                        else if (_formType == FormTypes.Compras)
-                        {
-                            titulo = "   Detalhes de Compra";
+                            form = new AddUpdClienteForm(utilizador.Id);
                         }
                         else
                         {
-                            return;
+                            MessageBox.Show("Só é possível alterar dados de clientes.");
                         }
+                    }
+                    else if (selectedItem is Campanha campanha)
+                    {
+                        form = new AddUpdCampanhaForm(campanha.Id);
+                    }
 
-                        // Abre o formulário
-                        Form consultaForm = new DetalhesVendaCompra(titulo, venda);
-                        using (consultaForm)
-                        {
-                            consultaForm.ShowDialog();
-                        }
-                    }
-                    else if (selectedItem is Produto produtoModel)
+                    if (form != null)
                     {
-                        int produtoId = (int)dgvItens.CurrentRow.Cells["Id"].Value;
-                        AddUpdProdutoForm form = new AddUpdProdutoForm(produtoId);
                         form.ShowDialog();
-                        MostraItens();  // Atualiza a lista após a edição
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Selecione um item válido. SelectedItem = {selectedItem}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MostraItens(_controller.GetItems());
                     }
                 }
                 catch (Exception ex)
@@ -502,24 +388,77 @@ namespace poo_tp_29559.Views
             }
             else
             {
-                MessageBox.Show(ConsultarAtualizarMsg, "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um item.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
 
         /**
-        * @brief Evento de click de pesquisa de itens.
+        * @brief Evento de alteração de texto no campo de pesquisa.
         * 
-        * Este evento é acionado quando o botão de pesquisa é clicado. Aplica um filtro ao BindingSource
-        * para exibir apenas os itens que correspondem ao texto inserido na pesquisa.
+        * Filtra os itens com base no texto inserido e atualiza a exibição no DataGridView.
         * 
         * @param sender O objeto que disparou o evento.
         * @param e Dados do evento.
         */
-        private void lblPesquisa_Click(object sender, EventArgs e)
+
+        private void txtSearchItem_TextChanged(object sender, EventArgs e)
         {
-            
+            try
+            {
+                // Obter o filtro digitado pelo usuário no campo de pesquisa
+                string filtro = txtSearchItem.Text;
+
+                // Obter o nome da coluna da célula atualmente selecionada
+                string coluna = dgvItens.CurrentCell?.OwningColumn?.Name;
+
+                // Obter os índices da célula atualmente selecionada (coluna e linha)
+                int colunaIndex = dgvItens.CurrentCell?.ColumnIndex ?? -1;  // Verifica se a coluna é válida
+                int rowIndex = dgvItens.CurrentCell?.RowIndex ?? -1;  // Verifica se a linha é válida
+
+                // Se o filtro estiver vazio, mostra todos os itens
+                if (string.IsNullOrEmpty(filtro))
+                {
+                    MostraItens(_controller.GetItems());  // Método para mostrar todos os itens sem aplicar filtro
+                    return;
+                }
+
+                // Filtra os itens com base no filtro e na coluna selecionada
+                List<object> itensFiltrados = _controller.FiltrarItens(_items, filtro, coluna);
+                MostraItens(itensFiltrados);
+
+                // Verifica se há pelo menos uma linha após a filtragem
+                if (itensFiltrados.Count > 0)
+                {
+                    // Caso haja itens filtrados, restaura a célula atual
+                    if (rowIndex >= 0 && rowIndex < itensFiltrados.Count)
+                    {
+                        // Se o rowIndex original estiver dentro do intervalo das linhas filtradas
+                        dgvItens.CurrentCell = dgvItens.Rows[rowIndex].Cells[colunaIndex];
+                    }
+                    else
+                    {
+                        // Se o rowIndex original não existir mais, foca na primeira linha
+                        dgvItens.CurrentCell = dgvItens.Rows[0].Cells[colunaIndex];
+                    }
+                }
+                else
+                {
+                    // Se não houver resultados, desabilita a célula atual
+                    dgvItens.CurrentCell = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                // Se ocorrer um erro durante a filtragem, apenas retorna sem fazer nada
+                // Pode ser interessante registrar o erro para depuração
+                // Console.WriteLine($"Erro ao filtrar itens: {ex.Message}");
+                return;
+            }
         }
+
+
+
 
     }
 }

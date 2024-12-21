@@ -1,0 +1,61 @@
+\doxysection{Utilizador\+Controller.\+cs}
+\label{_utilizador_controller_8cs_source}\index{POO\_TP\_29559/Controllers/UtilizadorController.cs@{POO\_TP\_29559/Controllers/UtilizadorController.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Diagnostics.Contracts;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }UtilizadorController\ :\ BaseController<Utilizador>,\ IEntityController}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{new}\ UtilizadorRepo\ \_repository;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}\ UtilizadorController()\ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \_repository\ =\ \textcolor{keyword}{new}\ UtilizadorRepo();}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ List<object>\ GetItems()}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \_items\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_items.Cast<\textcolor{keywordtype}{object}>().ToList();\ \textcolor{comment}{//\ Default\ implementation}}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ VerificarLogin(\textcolor{keywordtype}{int}\ nif,\ \textcolor{keywordtype}{string}\ password)}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorNIF(nif);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null}\ \&\&\ user.Password\ ==\ password;}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ VerificarNIFExistente(\textcolor{keywordtype}{int}\ nif)}
+\DoxyCodeLine{00061\ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorNIF(nif);\ \textcolor{comment}{//\ Busca\ o\ utilizador\ com\ o\ NIF\ fornecido}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ true\ se\ o\ utilizador\ foi\ encontrado,\ caso\ contrário,\ false}}
+\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ VerificarContactoExistente(\textcolor{keywordtype}{string}\ contacto)}
+\DoxyCodeLine{00075\ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorContacto(contacto);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ true\ se\ o\ utilizador\ foi\ encontrado,\ caso\ contrário,\ false}}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{public}\ Utilizador?\ ObterUtilizadorPorNIF(\textcolor{keywordtype}{int}\ nif)}
+\DoxyCodeLine{00089\ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.ObterPorNIF(nif);}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keyword}{public}\ Utilizador?\ ObterUtilizadorPorContacto(\textcolor{keywordtype}{string}\ contacto)}
+\DoxyCodeLine{00102\ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.ObterPorContacto(contacto);}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{public}\ List<Utilizador>\ GetClientes()}
+\DoxyCodeLine{00114\ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ var\ clientes\ =\ \_repository.GetAllClientes();}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ clientes.OrderBy(c\ =>\ c.Nome).ToList();}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ \}}
+
+\end{DoxyCode}

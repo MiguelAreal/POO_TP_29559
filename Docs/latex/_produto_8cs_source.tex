@@ -1,0 +1,38 @@
+\doxysection{Produto.\+cs}
+\label{_produto_8cs_source}\index{POO\_TP\_29559/Models/Produto.cs@{POO\_TP\_29559/Models/Produto.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }poo\_tp\_29559.Interfaces;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Produto\ :\ IIdentifiable}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00030\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Nome\ do\ Produto"{}})]}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ Nome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Categoria"{}})]}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ CategoriaID\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Marca"{}})]}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ MarcaID\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Preço"{}})]}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{public}\ decimal\ Preco\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00062\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Stock"{}})]}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ QuantidadeEmStock\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Data\ de\ Adição"{}})]}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ DataAdicao\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{public}\ Produto()}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ DataAdicao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ QuantidadeEmStock\ =\ 0;}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+\DoxyCodeLine{00084\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,34 @@
+\doxysection{Enum\+Helper.\+cs}
+\label{_enum_helper_8cs_source}\index{POO\_TP\_29559/Repositories/EnumHelper.cs@{POO\_TP\_29559/Repositories/EnumHelper.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Repositories}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }EnumHelper}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<KeyValuePair<string,\ T>>\ GetEnumDescriptions<T>()\ where\ T\ :\ Enum}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ var\ type\ =\ typeof(T);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Enum.GetValues(type)}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<T>()}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(value\ =>}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ field\ =\ type.GetField(value.ToString());}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ description\ =\ field.GetCustomAttributes(typeof(DescriptionAttribute),\ \textcolor{keyword}{false})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<DescriptionAttribute>()}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .FirstOrDefault()?.Description\ ??\ value.ToString();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ KeyValuePair<string,\ T>(description,\ value);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,223 @@
+\doxysection{Referência à classe Produto}
+\label{class_produto}\index{Produto@{Produto}}
+
+
+Representa um produto no sistema.  
+
+
+Diagrama de heranças da classe Produto\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_produto}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Produto} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Produto}{p. }{class_produto}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único do produto. \end{DoxyCompactList}\item 
+\textbf{ string} \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Nome do produto. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Categoria\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador da categoria a que o produto pertence. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Marca\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador da marca do produto. \end{DoxyCompactList}\item 
+\textbf{ decimal} \textbf{ Preco}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Preço do produto. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Quantidade\+Em\+Stock}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Quantidade em stock do produto. \end{DoxyCompactList}\item 
+\textbf{ string} \textbf{ Data\+Adicao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de adição do produto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um produto no sistema. 
+
+A classe {\ttfamily \doxyref{Produto}{p. }{class_produto}} armazena informações detalhadas sobre um produto, incluindo o nome, a categoria, a marca, o preço, a quantidade em stock e a data de adição. Esta classe é usada para representar os produtos no sistema e permite a gestão das informações associadas a eles.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 16} do ficheiro \textbf{ Produto.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_produto_ab25ac0a2bdb11bda85c6bf5eb1852814} 
+\index{Produto@{Produto}!Produto@{Produto}}
+\index{Produto@{Produto}!Produto@{Produto}}
+\doxysubsubsection{Produto()}
+{\footnotesize\ttfamily Produto.\+Produto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxyref{Produto}{p. }{class_produto}. 
+
+Este construtor inicializa a propriedade {\ttfamily Data\+Adicao} com a data e hora atuais e define o valor inicial de {\ttfamily Quantidade\+Em\+Stock} como 0. 
+
+Definido na linha \textbf{ 79} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ DataAdicao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ QuantidadeEmStock\ =\ 0;}
+\DoxyCodeLine{00083\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das propriedades}
+\label{class_produto_a176eeaf6b99c9bf3c697185344c82fef} 
+\index{Produto@{Produto}!CategoriaID@{CategoriaID}}
+\index{CategoriaID@{CategoriaID}!Produto@{Produto}}
+\doxysubsubsection{CategoriaID}
+{\footnotesize\ttfamily \textbf{ int} Produto.\+Categoria\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador da categoria a que o produto pertence. 
+
+Este campo armazena o identificador da categoria do produto. 
+
+Definido na linha \textbf{ 39} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_produto_ad52dcd9167631dcd2dc303341c117a81} 
+\index{Produto@{Produto}!DataAdicao@{DataAdicao}}
+\index{DataAdicao@{DataAdicao}!Produto@{Produto}}
+\doxysubsubsection{DataAdicao}
+{\footnotesize\ttfamily \textbf{ string} Produto.\+Data\+Adicao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de adição do produto. 
+
+Este campo armazena a data em que o produto foi adicionado ao sistema, representada como uma string. 
+
+Definido na linha \textbf{ 71} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_produto_a859bdb6e26d12a1e1d7f89f25dbfc520} 
+\index{Produto@{Produto}!Id@{Id}}
+\index{Id@{Id}!Produto@{Produto}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily \textbf{ int} Produto.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único do produto. 
+
+Este campo armazena o identificador único do produto. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 23} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_produto_a0214908308461c0b2b749fa1c71b884b} 
+\index{Produto@{Produto}!MarcaID@{MarcaID}}
+\index{MarcaID@{MarcaID}!Produto@{Produto}}
+\doxysubsubsection{MarcaID}
+{\footnotesize\ttfamily \textbf{ int} Produto.\+Marca\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador da marca do produto. 
+
+Este campo armazena o identificador da marca associada ao produto. 
+
+Definido na linha \textbf{ 47} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_produto_a84f4779b46203e80738d735dfe5d84db} 
+\index{Produto@{Produto}!Nome@{Nome}}
+\index{Nome@{Nome}!Produto@{Produto}}
+\doxysubsubsection{Nome}
+{\footnotesize\ttfamily \textbf{ string} Produto.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nome do produto. 
+
+Este campo armazena o nome do produto. 
+
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_produto_a5e8e1add5e4eac3fe833c1ef0b67170f} 
+\index{Produto@{Produto}!Preco@{Preco}}
+\index{Preco@{Preco}!Produto@{Produto}}
+\doxysubsubsection{Preco}
+{\footnotesize\ttfamily \textbf{ decimal} Produto.\+Preco\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Preço do produto. 
+
+Este campo armazena o preço unitário do produto. 
+
+Definido na linha \textbf{ 55} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00055\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_produto_af0b978c3b64bd376bf35b05cf728ea5b} 
+\index{Produto@{Produto}!QuantidadeEmStock@{QuantidadeEmStock}}
+\index{QuantidadeEmStock@{QuantidadeEmStock}!Produto@{Produto}}
+\doxysubsubsection{QuantidadeEmStock}
+{\footnotesize\ttfamily \textbf{ int} Produto.\+Quantidade\+Em\+Stock\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Quantidade em stock do produto. 
+
+Este campo armazena a quantidade disponível do produto em stock. 
+
+Definido na linha \textbf{ 63} do ficheiro \textbf{ Produto.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Produto.\+cs}\end{DoxyCompactItemize}

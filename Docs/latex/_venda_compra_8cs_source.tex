@@ -1,0 +1,41 @@
+\doxysection{Venda\+Compra.\+cs}
+\label{_venda_compra_8cs_source}\index{POO\_TP\_29559/Models/VendaCompra.cs@{POO\_TP\_29559/Models/VendaCompra.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories.Enumerators;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }VendaCompra\ :\ IIdentifiable}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Cliente"{}})]}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}?\ ClienteID\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ Cliente\ associado,\ se\ aplicável}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}NIF"{}})]}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}?\ NIF\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ NIF\ associado,\ se\ aplicável}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{public}\ List<ItemVenda>?\ Itens\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ List<ItemVenda>();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ ItensTotal\ =>\ Itens?.Sum(item\ =>\ item.Unidades)\ ??\ 0;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{public}\ decimal\ TotalBruto\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{public}\ decimal\ TotalLiquido\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ DataVenda\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ FimDataGarantia\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keyword}{public}\ MetodoPagamento?\ MetodoPagamento\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{public}\ VendaCompra()}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ DataVenda\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ FimDataGarantia\ =\ DateTime.Now.AddMonths(36).ToString();}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \}}
+
+\end{DoxyCode}

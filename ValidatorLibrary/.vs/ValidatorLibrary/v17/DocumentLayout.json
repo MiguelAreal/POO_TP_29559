@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "FieldValidator.cs",
               "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\ValidatorLibrary\\FieldValidator.cs",
               "RelativeToolTip": "FieldValidator.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAEYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T09:50:54.224Z",
               "EditorCaption": ""
@@ -44,15 +44,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ValidatorLibrary",
+              "Title": "ValidatorLibrary.csproj",
               "DocumentMoniker": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\ValidatorLibrary\\ValidatorLibrary.csproj",
               "RelativeDocumentMoniker": "ValidatorLibrary.csproj",
               "ToolTip": "C:\\Users\\Areal\\Documents\\GitHub\\POO_TP_29559\\ValidatorLibrary\\ValidatorLibrary.csproj",
               "RelativeToolTip": "ValidatorLibrary.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-12-12T09:50:52.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T09:50:52.323Z"
             }
           ]
         }

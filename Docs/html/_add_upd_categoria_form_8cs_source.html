@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>POO_TP_29559 - LeftClick: Código-Fonte de POO_TP_29559/Views/AddUpdCategoriaForm.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">POO_TP_29559 - LeftClick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_add_upd_categoria_form_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">AddUpdCategoriaForm.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_add_upd_categoria_form_8cs.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using </span>System.Text.RegularExpressions;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span>System.Windows.Forms;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using </span>MetroFramework.Forms;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_models.html">poo_tp_29559.Models</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">using </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_repositories.html">poo_tp_29559.Repositories</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_validation_library.html">ValidationLibrary</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form.html">   30</a></span>    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form.html">AddUpdCategoriaForm</a> : MetroForm</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keyword">private</span> <a class="code hl_class" href="class_base_repo.html">readonly</a> <a class="code hl_class" href="class_categoria_controller.html">CategoriaController</a> _controller;  </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keyword">private</span> <a class="code hl_class" href="class_base_repo.html">readonly</a> <span class="keywordtype">int</span>? _categoriaId;  </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_categoria.html">Categoria</a> categoria;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form.html#a037e99d4d2e7a6726ba2bc71ee5a0bf9">   44</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form.html#a037e99d4d2e7a6726ba2bc71ee5a0bf9">AddUpdCategoriaForm</a>(<span class="keywordtype">int</span>? <a class="code hl_class" href="class_base_repo.html">categoriaId</a> = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            InitializeComponent();</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            _controller = <span class="keyword">new</span> <a class="code hl_class" href="class_categoria_controller.html">CategoriaController</a>();  </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            _categoriaId = <a class="code hl_class" href="class_base_repo.html">categoriaId</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="comment">// Se um ID válido for fornecido, carrega os dados da categoria</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            <span class="keywordflow">if</span> (_categoriaId.HasValue)</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                LoadCategoriaData();</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> LoadCategoriaData()</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="comment">// Busca a categoria pelo ID</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                categoria = (<a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_categoria.html">Categoria</a>)_controller.<a class="code hl_function" href="class_base_repo.html#ae8f317aa779a9fd3875cff23a9ef2d02">GetById</a>(_categoriaId.Value);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <span class="keywordflow">if</span> (categoria == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Categoria não encontrada.&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                    this.<a class="code hl_class" href="class_base_repo.html">Close</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                }</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                <span class="comment">// Preenche os campos do formulário com os dados da categoria</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                txtNome.Text = categoria.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_categoria.html#a4d50634e9fee090158c040b3be9f5254">Nome</a>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                txtDescricao.Text = categoria.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_categoria.html#a551cde91a65cc509642973997cdf7c2e">Descricao</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>                this.Text = <a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;Editar Categoria: {categoria.Nome}&quot;</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            }</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_base_repo.html">Exception</a> <a class="code hl_class" href="class_base_repo.html">ex</a>)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;Erro ao carregar a categoria: {ex.Message}&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                this.<a class="code hl_class" href="class_base_repo.html">Close</a>();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        }</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> btnConfirmar_Click(<span class="keywordtype">object</span> <a class="code hl_class" href="class_base_repo.html">sender</a>, <a class="code hl_class" href="class_base_repo.html">EventArgs</a> <a class="code hl_class" href="class_base_repo.html">e</a>)</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="comment">// Array de controles a serem validados</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <a class="code hl_class" href="class_base_repo.html">Control</a>[] <a class="code hl_class" href="class_base_repo.html">controls</a> = { txtNome };</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="comment">// Array de labels correspondentes aos controles</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_class" href="class_base_repo.html">Label</a>[] <a class="code hl_class" href="class_base_repo.html">labels</a> = { lblNome };</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment">// Valida os campos utilizando a biblioteca de validação</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <span class="keywordtype">bool</span> <a class="code hl_class" href="class_base_repo.html">allValid</a> = FieldValidator.ValidateFields(<a class="code hl_class" href="class_base_repo.html">controls</a>, <a class="code hl_class" href="class_base_repo.html">labels</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="comment">// Se algum campo for inválido, interrompe o processo</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="class_base_repo.html">allValid</a>)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            {</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            }</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <span class="comment">// Criação ou atualização da categoria</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            <span class="keywordflow">if</span> (_categoriaId.HasValue)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            {</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>                <span class="comment">// Atualiza a categoria existente</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>                    <span class="keywordflow">if</span> (categoria != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                    {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                        categoria.Nome = txtNome.Text;  </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                        categoria.Descricao = txtDescricao.Text;  </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                        _controller.UpdateItem(categoria);  </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                        <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Categoria atualizada com sucesso.&quot;</span>, <span class="stringliteral">&quot;Sucesso&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Information);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    }</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                }</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_base_repo.html">Exception</a> <a class="code hl_class" href="class_base_repo.html">ex</a>)</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;Erro ao atualizar a categoria: {ex.Message}&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="comment">// Cria uma nova categoria</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                <a class="code hl_class" href="class_base_repo.html">var</a> <a class="code hl_class" href="class_base_repo.html">novaCategoria</a> = <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_categoria.html">Categoria</a></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                    Nome = txtNome.Text,  </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    Descricao = txtDescricao.Text,  </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                };</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                {</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                    _controller.AddItem(<a class="code hl_class" href="class_base_repo.html">novaCategoria</a>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Categoria adicionada com sucesso.&quot;</span>, <span class="stringliteral">&quot;Sucesso&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Information);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                }</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_base_repo.html">Exception</a> <a class="code hl_class" href="class_base_repo.html">ex</a>)</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;Erro ao adicionar a categoria: {ex.Message}&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="comment">// Fecha o formulário após a operação</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            this.<a class="code hl_class" href="class_base_repo.html">Close</a>();</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
+</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>}</div>
+<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
+<div class="ttc" id="aclass_base_repo_html_ae8f317aa779a9fd3875cff23a9ef2d02"><div class="ttname"><a href="class_base_repo.html#ae8f317aa779a9fd3875cff23a9ef2d02">BaseRepo.GetById</a></div><div class="ttdeci">virtual T GetById(int? id)</div><div class="ttdoc">Obtém um item pelo seu identificador.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00160">BaseRepo.cs:160</a></div></div>
+<div class="ttc" id="aclass_categoria_controller_html"><div class="ttname"><a href="class_categoria_controller.html">CategoriaController</a></div><div class="ttdoc">Controlador para a gestão de categorias.</div><div class="ttdef"><b>Definição</b> <a href="_categoria_controller_8cs_source.html#l00019">CategoriaController.cs:20</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_categoria_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_categoria.html">poo_tp_29559.Models.Categoria</a></div><div class="ttdoc">Representa uma categoria de produtos.</div><div class="ttdef"><b>Definição</b> <a href="_categoria_8cs_source.html#l00024">Categoria.cs:25</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_categoria_html_a4d50634e9fee090158c040b3be9f5254"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_categoria.html#a4d50634e9fee090158c040b3be9f5254">poo_tp_29559.Models.Categoria.Nome</a></div><div class="ttdeci">string? Nome</div><div class="ttdoc">Nome da categoria.</div><div class="ttdef"><b>Definição</b> <a href="_categoria_8cs_source.html#l00040">Categoria.cs:40</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_categoria_html_a551cde91a65cc509642973997cdf7c2e"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_categoria.html#a551cde91a65cc509642973997cdf7c2e">poo_tp_29559.Models.Categoria.Descricao</a></div><div class="ttdeci">string? Descricao</div><div class="ttdoc">Descrição da categoria.</div><div class="ttdef"><b>Definição</b> <a href="_categoria_8cs_source.html#l00049">Categoria.cs:49</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_add_upd_categoria_form_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form.html">poo_tp_29559.Views.AddUpdCategoriaForm</a></div><div class="ttdoc">Formulário para a criação ou atualização de uma categoria.</div><div class="ttdef"><b>Definição</b> <a href="_add_upd_categoria_form_8cs_source.html#l00030">AddUpdCategoriaForm.cs:31</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_add_upd_categoria_form_html_a037e99d4d2e7a6726ba2bc71ee5a0bf9"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_add_upd_categoria_form.html#a037e99d4d2e7a6726ba2bc71ee5a0bf9">poo_tp_29559.Views.AddUpdCategoriaForm.AddUpdCategoriaForm</a></div><div class="ttdeci">AddUpdCategoriaForm(int? categoriaId=null)</div><div class="ttdoc">Construtor do AddUpdCategoriaForm.</div><div class="ttdef"><b>Definição</b> <a href="_add_upd_categoria_form_8cs_source.html#l00044">AddUpdCategoriaForm.cs:44</a></div></div>
+<div class="ttc" id="anamespace_validation_library_html"><div class="ttname"><a href="namespace_validation_library.html">ValidationLibrary</a></div><div class="ttdef"><b>Definição</b> <a href="_field_validator_8cs_source.html#l00004">FieldValidator.cs:5</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_models_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_models.html">poo_tp_29559.Models</a></div><div class="ttdef"><b>Definição</b> <a href="_campanha_8cs_source.html#l00009">Campanha.cs:10</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_repositories_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_repositories.html">poo_tp_29559.Repositories</a></div><div class="ttdef"><b>Definição</b> <a href="_campanha_repo_8cs_source.html#l00015">CampanhaRepo.cs:16</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_views_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div><div class="ttdef"><b>Definição</b> <a href="_add_compra_form_8cs_source.html#l00028">AddCompraForm.cs:29</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3edf705db44814fe15672eecad5d1de0.html">POO_TP_29559</a></li><li class="navelem"><a class="el" href="dir_f6abf4cd68557f6e66f470fcd37ce5f5.html">Views</a></li><li class="navelem"><a class="el" href="_add_upd_categoria_form_8cs.html">AddUpdCategoriaForm.cs</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

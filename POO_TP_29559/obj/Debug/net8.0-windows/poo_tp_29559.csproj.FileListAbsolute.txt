@@ -24,7 +24,6 @@ C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windo
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\ValidatorLibrary.pdb
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.csproj.AssemblyReference.cache
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Properties.Resources.resources
-C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddMarcaForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.MainForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.csproj.GenerateResource.cache
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.GeneratedMSBuildEditorConfig.editorconfig
@@ -38,10 +37,7 @@ C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windo
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.pdb
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.genruntimeconfig.cache
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\ref\poo_tp_29559.dll
-C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddCategoriaForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.ChildForm.resources
-C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddClienteForm.resources
-C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddCampanhaForm.resources
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddVendaForm.resources
 C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\poo_tp_29559.exe
 C:\Users\migue\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\poo_tp_29559.deps.json
@@ -102,3 +98,7 @@ C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windo
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\bin\Debug\net8.0-windows\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddUpdProdutoForm.resources
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddUpdCategoriaForm.resources
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddUpdMarcaForm.resources
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddUpdClienteForm.resources
+C:\Users\Areal\Documents\GitHub\POO_TP_29559\POO_TP_29559\obj\Debug\net8.0-windows\poo_tp_29559.Views.AddUpdCampanhaForm.resources

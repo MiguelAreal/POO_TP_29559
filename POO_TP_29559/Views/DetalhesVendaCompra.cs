@@ -1,9 +1,22 @@
-﻿using MetroFramework.Forms;
+﻿/**
+ * @file DetalhesVendaCompra.cs
+ * @brief Formulário para exibição de detalhes de uma transação de venda ou compra.
+ * 
+ * A classe `DetalhesVendaCompra` representa uma interface gráfica que exibe os detalhes de uma transação, 
+ * incluindo informações sobre o cliente, data da transação, valores, garantia, itens comprados e campanhas aplicadas.
+ * Este formulário é implementado utilizando o MetroFramework.
+ * 
+ * @author Miguel Areal
+ * @date Dezembro, 2024
+ */
+
+using MetroFramework.Forms;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using poo_tp_29559.Models;
+using poo_tp_29559.Repositories.Enumerators;
 
 namespace poo_tp_29559.Views
 {
@@ -11,16 +24,14 @@ namespace poo_tp_29559.Views
      * @class DetalhesVendaCompra
      * @brief Formulário para exibição de detalhes de uma transação de venda ou compra.
      * 
-     * A classe `DetalhesVendaCompra` representa uma interface gráfica que exibe os detalhes de uma transação, 
-     * incluindo informações sobre o cliente, data da transação, valores, garantia, itens comprados e campanhas aplicadas.
-     * Este formulário é implementado utilizando MetroFramework.
-     * 
-     * @author Miguel Areal
-     * @date 12/2024
+     * Esta classe é responsável por exibir informações detalhadas de uma transação de venda ou compra, 
+     * incluindo dados do cliente, valores totais, itens comprados, campanhas aplicadas e status de garantia.
      */
     public partial class DetalhesVendaCompra : MetroForm
     {
         private UtilizadorController utilizadorController;
+        private VendaCompraController _controller;
+        private string nomeCliente;
 
         /**
          * @brief Construtor do formulário `DetalhesVendaCompra`.
@@ -28,18 +39,26 @@ namespace poo_tp_29559.Views
          * Este construtor inicializa o formulário com os dados da venda ou compra especificada, configurando
          * os controles para exibir informações detalhadas ao utilizador.
          * 
-         * @param titulo Título do formulário a ser exibido na interface.
-         * @param venda Instância da classe `VendaCompra` contendo os dados da transação.
+         * @param formType Tipo de formulário (Venda ou Compra).
+         * @param id Identificador da transação de venda ou compra.
          */
-        public DetalhesVendaCompra(string titulo, VendaCompra venda)
+        public DetalhesVendaCompra(FormTypes formType, int id)
         {
             InitializeComponent();
             utilizadorController = new UtilizadorController();
+            _controller = new VendaCompraController();
 
             // Configura o título do formulário
-            this.Text = "     " + titulo;
+            if (formType == FormTypes.Compras)
+            {
+                this.Text = "     " + "Detalhe de Compra";
+            }
+            else
+            {
+                this.Text = "     " + "Detalhe de Venda";
+            }
 
-            string nomeCliente;
+            VendaCompra venda = (VendaCompra)_controller.GetById(id);
             Utilizador utilizadorVenda = new Utilizador();
 
             // Obtém o nome do cliente associado à venda
@@ -77,8 +96,7 @@ namespace poo_tp_29559.Views
             {
                 if (item.PercentagemDesc.HasValue && item.PercentagemDesc > 0)
                 {
-                    var campanhaItem = new ListViewItem(new[]
-                    {
+                    var campanhaItem = new ListViewItem(new[] {
                         item.ProdutoNome,
                         item.CategoriaNome,
                         $"{item.PercentagemDesc}%"
@@ -129,29 +147,42 @@ namespace poo_tp_29559.Views
         }
 
         /**
-        * @brief Evento de cursor a passar por cima do botão de recuar.
-        * 
-        * Altera a cor do botão.
-        * 
+         * @brief Evento de cursor a passar por cima do botão de recuar.
+         * 
+         * Altera a cor do botão para indicar que está selecionável.
+         * 
          * @param sender O objeto que disparou o evento.
          * @param e Dados do evento.
-        */
+         */
         private void btnBack_MouseEnter(object sender, EventArgs e)
         {
             btnBack.ForeColor = Color.DodgerBlue;
         }
 
         /**
-       * @brief Evento de cursor a sair de cima do botão de recuar.
-       * 
-       * Altera a cor do botão.
-       * 
-        * @param sender O objeto que disparou o evento.
-        * @param e Dados do evento.
-       */
+         * @brief Evento de cursor a sair de cima do botão de recuar.
+         * 
+         * Restaura a cor original do botão.
+         * 
+         * @param sender O objeto que disparou o evento.
+         * @param e Dados do evento.
+         */
         private void btnBack_MouseLeave(object sender, EventArgs e)
         {
             btnBack.ForeColor = Color.FromArgb(9, 171, 219);
+        }
+
+        /**
+         * @brief Evento de clique no botão de voltar.
+         * 
+         * Este método fecha o formulário quando o botão de voltar é clicado.
+         * 
+         * @param sender O objeto que disparou o evento.
+         * @param e Dados do evento.
+         */
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

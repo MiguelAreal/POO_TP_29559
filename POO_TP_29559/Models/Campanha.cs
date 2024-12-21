@@ -1,71 +1,65 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace poo_tp_29559.Models
 {
-    /**
-     * @class Campanha
-     * @brief Representa uma campanha de marketing ou promoção.
-     * 
-     * A classe `Campanha` armazena informações sobre campanhas promocionais, incluindo o nome, a percentagem de desconto, as datas de início e fim, e a categoria à qual a campanha está associada. 
-     * Esta classe implementa a interface `IIdentifiable`, permitindo que cada campanha tenha um identificador único.
-     * 
-     * @author Miguel Areal
-     * @date 12/2024
-     */
+    /// <summary>
+    /// Representa uma campanha de marketing ou promoção.
+    /// </summary>
+    /// <remarks>
+    /// A classe <c>Campanha</c> contém informações sobre promoções, como nome, percentagem de desconto, 
+    /// período de vigência e a categoria à qual está vinculada. Implementa a interface <c>IIdentifiable</c>, 
+    /// assegurando que cada campanha possui um identificador único.
+    /// </remarks>
     public class Campanha : IIdentifiable
     {
-        /**
-         * @brief Identificador único da campanha.
-         * 
-         * Este campo armazena o identificador único de cada campanha.
-         */
+        /// <summary>
+        /// Identificador único da campanha.
+        /// </summary>
         public int Id { get; set; }
 
-        /**
-         * @brief Nome da campanha.
-         * 
-         * Este campo armazena o nome da campanha, que será exibido na interface de utilizador.
-         */
+        /// <summary>
+        /// Nome da campanha.
+        /// </summary>
+        /// <remarks>
+        /// Este é o nome descritivo da campanha, exibido na interface do utilizador.
+        /// </remarks>
         [DisplayName("Nome de Campanha")]
         public string? Nome { get; set; }
 
-        /**
-         * @brief Percentagem de desconto da campanha.
-         * 
-         * Este campo armazena a percentagem de desconto oferecida pela campanha. 
-         * O valor deve ser uma porcentagem, como 10.00 para um desconto de 10%.
-         */
+        /// <summary>
+        /// Percentagem de desconto oferecida pela campanha.
+        /// </summary>
+        /// <remarks>
+        /// O valor representa uma percentagem, por exemplo, <c>10.00</c> para 10% de desconto.
+        /// </remarks>
         [DisplayName("Percentagem de Desconto")]
         public decimal? PercentagemDesc { get; set; }
 
-        /**
-         * @brief Data de início da campanha.
-         * 
-         * Este campo armazena a data de início da campanha. A data deve ser fornecida como uma string no formato adequado.
-         */
+        /// <summary>
+        /// Data de início da campanha.
+        /// </summary>
+        /// <remarks>
+        /// Representada como uma string no formato de data esperado pela aplicação.
+        /// </remarks>
         [DisplayName("Data de Inicio")]
         public string? DataInicio { get; set; }
 
-        /**
-         * @brief Data de fim da campanha.
-         * 
-         * Este campo armazena a data de fim da campanha. A data deve ser fornecida como uma string no formato adequado.
-         */
+        /// <summary>
+        /// Data de fim da campanha.
+        /// </summary>
+        /// <remarks>
+        /// Representada como uma string no formato de data esperado pela aplicação.
+        /// </remarks>
         [DisplayName("Data de Fim")]
         public string? DataFim { get; set; }
 
-        /**
-         * @brief Identificador da categoria associada à campanha.
-         * 
-         * Este campo armazena o identificador da categoria à qual a campanha está associada. 
-         * Cada campanha pode ser aplicada a uma categoria específica de produtos.
-         */
+        /// <summary>
+        /// Identificador da categoria associada à campanha.
+        /// </summary>
+        /// <remarks>
+        /// Este campo vincula a campanha a uma categoria específica de produtos ou serviços.
+        /// </remarks>
         [DisplayName("Categoria Aplicada")]
         public int CategoriaId { get; set; }
     }

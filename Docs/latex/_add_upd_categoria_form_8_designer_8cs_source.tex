@@ -1,0 +1,128 @@
+\doxysection{Add\+Upd\+Categoria\+Form.\+Designer.\+cs}
+\label{_add_upd_categoria_form_8_designer_8cs_source}\index{POO\_TP\_29559/Views/AddUpdCategoriaForm.Designer.cs@{POO\_TP\_29559/Views/AddUpdCategoriaForm.Designer.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00002\ \{}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{keyword}{partial\ class\ }AddUpdCategoriaForm}
+\DoxyCodeLine{00004\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ System.ComponentModel.IContainer\ components\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Dispose(\textcolor{keywordtype}{bool}\ disposing)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ InitializeComponent()}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ System.ComponentModel.ComponentResourceManager\ resources\ =\ \textcolor{keyword}{new}\ System.ComponentModel.ComponentResourceManager(typeof(AddUpdCategoriaForm));}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar\ =\ \textcolor{keyword}{new}\ Button();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar\ =\ \textcolor{keyword}{new}\ Button();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ SuspendLayout();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtDescricao}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.Location\ =\ \textcolor{keyword}{new}\ Point(31,\ 166);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.Multiline\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.Name\ =\ \textcolor{stringliteral}{"{}txtDescricao"{}};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.Size\ =\ \textcolor{keyword}{new}\ Size(285,\ 107);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ txtDescricao.TabIndex\ =\ 1;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnCancelar}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 11F);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Location\ =\ \textcolor{keyword}{new}\ Point(106,\ 409);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Name\ =\ \textcolor{stringliteral}{"{}btnCancelar"{}};}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Size\ =\ \textcolor{keyword}{new}\ Size(102,\ 44);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.TabIndex\ =\ 2;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Text\ =\ \textcolor{stringliteral}{"{}Cancelar"{}};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnConfirmar}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 11F);}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Location\ =\ \textcolor{keyword}{new}\ Point(214,\ 409);}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Name\ =\ \textcolor{stringliteral}{"{}btnConfirmar"{}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Size\ =\ \textcolor{keyword}{new}\ Size(102,\ 44);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.TabIndex\ =\ 3;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Text\ =\ \textcolor{stringliteral}{"{}Confirmar"{}};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Click\ +=\ btnConfirmar\_Click;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblDescricao}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.Location\ =\ \textcolor{keyword}{new}\ Point(29,\ 144);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.Name\ =\ \textcolor{stringliteral}{"{}lblDescricao"{}};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.Size\ =\ \textcolor{keyword}{new}\ Size(79,\ 20);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.TabIndex\ =\ 34;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ lblDescricao.Text\ =\ \textcolor{stringliteral}{"{}Descrição"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblNome}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.Location\ =\ \textcolor{keyword}{new}\ Point(29,\ 82);}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.Name\ =\ \textcolor{stringliteral}{"{}lblNome"{}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.Size\ =\ \textcolor{keyword}{new}\ Size(52,\ 20);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.TabIndex\ =\ 33;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ lblNome.Text\ =\ \textcolor{stringliteral}{"{}Nome"{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtNome}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Location\ =\ \textcolor{keyword}{new}\ Point(31,\ 104);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Name\ =\ \textcolor{stringliteral}{"{}txtNome"{}};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Size\ =\ \textcolor{keyword}{new}\ Size(285,\ 25);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.TabIndex\ =\ 31;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ AddCategoriaForm}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleDimensions\ =\ \textcolor{keyword}{new}\ SizeF(96F,\ 96F);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleMode\ =\ AutoScaleMode.Dpi;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ BorderStyle\ =\ MetroFramework.Drawing.MetroBorderStyle.FixedSingle;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ CancelButton\ =\ btnCancelar;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ ClientSize\ =\ \textcolor{keyword}{new}\ Size(339,\ 476);}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(txtDescricao);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnCancelar);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnConfirmar);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblDescricao);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblNome);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(txtNome);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ Icon\ =\ (Icon)resources.GetObject(\textcolor{stringliteral}{"{}\$this.Icon"{}});}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ MinimizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}AddCategoriaForm"{}};}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ Resizable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ Text\ =\ \textcolor{stringliteral}{"{}Adicionar\ Nova\ Categoria"{}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ TopMost\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ PerformLayout();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtDescricao;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button\ btnCancelar;}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button\ btnConfirmar;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblDescricao;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblNome;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtNome;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \}}
+
+\end{DoxyCode}

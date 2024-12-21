@@ -1,0 +1,91 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Produto\+Repo}
+\label{classpoo__tp__29559_1_1_repositories_1_1_produto_repo}\index{poo\_tp\_29559.Repositories.ProdutoRepo@{poo\_tp\_29559.Repositories.ProdutoRepo}}
+
+
+Repositório para a manipulação de produtos.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Produto\+Repo\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_repositories_1_1_produto_repo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Produto\+Repo} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Produto\+Repo}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Repo$<$ Produto $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Base\+Repo} (\textbf{ string} \textbf{ file\+Path})
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Adiciona um item ao repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Remove} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Remove um item do repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Update} (\textbf{ T} \textbf{ item\+Alterado})
+\begin{DoxyCompactList}\small\item\em Atualiza um item no repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ T} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ virtual} ? \textbf{ T} \textbf{ Get\+By\+Property} (\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$ \textbf{ property\+Selector}, \textbf{ object} \textbf{ value})
+\begin{DoxyCompactList}\small\item\em Obtém um item com base em uma propriedade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Membros protegidos herdados de \textbf{ Base\+Repo$<$ Produto $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ void} \textbf{ Save\+Changes} ()
+\begin{DoxyCompactList}\small\item\em guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Set\+Id} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atribui um novo ID ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Repo$<$ Produto $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ readonly} \textbf{ string} \textbf{ file\+Path}
+\begin{DoxyCompactList}\small\item\em Caminho para o ficheiro onde os dados são armazenados. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ items}
+\begin{DoxyCompactList}\small\item\em Lista de itens armazenados no repositório. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Repositório para a manipulação de produtos. 
+
+A classe {\ttfamily Produto\+Repo} herda de {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}$<$\doxyref{Produto}{p. }{class_produto}$>$} e é especializada na manipulação de objetos do tipo {\ttfamily \doxyref{Produto}{p. }{class_produto}}. Ela oferece as funcionalidades básicas de um repositório, como a adição, remoção, atualização e obtenção de produtos a partir de um ficheiro JSON.
+
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{Base\+Repo}{p. }{class_base_repo} 
+\end{DoxySeeAlso}
+
+
+Definido na linha \textbf{ 27} do ficheiro \textbf{ Produto\+Repo.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_repositories_1_1_produto_repo_adde881780a96fd1b44f9eff47132eecd} 
+\index{poo\_tp\_29559.Repositories.ProdutoRepo@{poo\_tp\_29559.Repositories.ProdutoRepo}!ProdutoRepo@{ProdutoRepo}}
+\index{ProdutoRepo@{ProdutoRepo}!poo\_tp\_29559.Repositories.ProdutoRepo@{poo\_tp\_29559.Repositories.ProdutoRepo}}
+\doxysubsubsection{ProdutoRepo()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Repositories.\+Produto\+Repo.\+Produto\+Repo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily Produto\+Repo}. 
+
+Inicializa o repositório de produtos com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily \doxyref{Data/produtos.\+json}{p. }{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e}}. 
+
+Definido na linha \textbf{ 35} do ficheiro \textbf{ Produto\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ :\ base(\textcolor{stringliteral}{"{}Data/produtos.json"{}})\ \{\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Repositories/\textbf{ Produto\+Repo.\+cs}\end{DoxyCompactItemize}

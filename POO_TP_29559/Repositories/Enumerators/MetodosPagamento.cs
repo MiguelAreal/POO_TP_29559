@@ -1,52 +1,40 @@
-﻿
-
-using System.ComponentModel;
-
-/**
- * @file MetodoPagamento.cs
- * @brief Enumeração para os métodos de pagamento disponíveis na aplicação.
- * 
- * Esta enumeração define os métodos de pagamento que os utilizadores podem selecionar
- * na aplicação para realizar transações. Cada valor da enumeração é associado a um 
- * método de pagamento específico.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
+﻿using System.ComponentModel;
 
 namespace poo_tp_29559.Repositories.Enumerators
 {
-    /**
-     * @enum MetodoPagamento
-     * @brief Enumeração que representa os métodos de pagamento na aplicação.
-     * 
-     * A enumeração `MetodoPagamento` define os métodos de pagamento disponíveis
-     * para as transações na aplicação, incluindo pagamentos através de débito,
-     * crédito e numerário.
-     */
+    /// <summary>
+    /// Enumeração que representa os métodos de pagamento na aplicação.
+    /// </summary>
+    /// <remarks>
+    /// A enumeração <c>MetodoPagamento</c> define os métodos de pagamento disponíveis para
+    /// as transações na aplicação, incluindo pagamentos através de débito, crédito e numerário.
+    /// </remarks>
     public enum MetodoPagamento
     {
-        /**
-         * @brief Método de pagamento por débito.
-         * 
-         * Representa o pagamento através de cartão de débito.
-         */
+        /// <summary>
+        /// Método de pagamento por débito.
+        /// </summary>
+        /// <remarks>
+        /// Representa o pagamento através de cartão de débito.
+        /// </remarks>
         [Description("Débito")]
         Debito,
 
-        /**
-         * @brief Método de pagamento por crédito.
-         * 
-         * Representa o pagamento através de cartão de crédito.
-         */
+        /// <summary>
+        /// Método de pagamento por crédito.
+        /// </summary>
+        /// <remarks>
+        /// Representa o pagamento através de cartão de crédito.
+        /// </remarks>
         [Description("Crédito")]
         Credito,
 
-        /**
-         * @brief Método de pagamento por numerário.
-         * 
-         * Representa o pagamento realizado em dinheiro (numerário).
-         */
+        /// <summary>
+        /// Método de pagamento por numerário.
+        /// </summary>
+        /// <remarks>
+        /// Representa o pagamento realizado em dinheiro (numerário).
+        /// </remarks>
         [Description("Numerário")]
         Numerario
     }

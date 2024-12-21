@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['mainform_0',['mainform',['../classpoo__tp__29559_1_1_main_form.html',1,'poo_tp_29559.MainForm'],['../classpoo__tp__29559_1_1_main_form.html#ad4ac752d756bf89828e51f5bd23a5e18',1,'poo_tp_29559.MainForm.MainForm()']]],
+  ['mainform_2ecs_1',['MainForm.cs',['../_main_form_8cs.html',1,'']]],
+  ['mainform_2edesigner_2ecs_2',['MainForm.Designer.cs',['../_main_form_8_designer_8cs.html',1,'']]],
+  ['marca_3',['marca',['../class_marca.html',1,'Marca'],['../class_marca.html#af229e4d47153935166812921357941a2',1,'Marca.Marca()']]],
+  ['marca_2ecs_4',['Marca.cs',['../_marca_8cs.html',1,'']]],
+  ['marcacontroller_5',['marcacontroller',['../class_marca_controller.html',1,'MarcaController'],['../class_marca_controller.html#a4afc0d1701e7e984e059036331785f9d',1,'MarcaController.MarcaController()']]],
+  ['marcacontroller_2ecs_6',['MarcaController.cs',['../_marca_controller_8cs.html',1,'']]],
+  ['marcaid_7',['MarcaID',['../class_produto.html#a0214908308461c0b2b749fa1c71b884b',1,'Produto']]],
+  ['marcanome_8',['marcanome',['../classpoo__tp__29559_1_1_models_1_1_item_venda.html#a093984c7ea195312755e8d4e39d9b5c5',1,'poo_tp_29559.Models.ItemVenda.MarcaNome'],['../classpoo__tp__29559_1_1_models_1_1_produto_view_model.html#a5471fa91a5b215d460fde9b8573a3859',1,'poo_tp_29559.Models.ProdutoViewModel.MarcaNome']]],
+  ['marcarepo_9',['marcarepo',['../classpoo__tp__29559_1_1_repositories_1_1_marca_repo.html',1,'poo_tp_29559.Repositories.MarcaRepo'],['../classpoo__tp__29559_1_1_repositories_1_1_marca_repo.html#a8b6f6da77b596194419c7d8f604bd1fc',1,'poo_tp_29559.Repositories.MarcaRepo.MarcaRepo()']]],
+  ['marcarepo_2ecs_10',['MarcaRepo.cs',['../_marca_repo_8cs.html',1,'']]],
+  ['marcas_11',['Marcas',['../namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9a7b0dbc7ef2e3c5e3d82aca2f7ad64dbf',1,'poo_tp_29559::Repositories::Enumerators']]],
+  ['metodopagamento_12',['metodopagamento',['../class_venda_compra.html#a7e2ead944dd49ab50bb5ff6aa83bb93e',1,'VendaCompra.MetodoPagamento'],['../classpoo__tp__29559_1_1_models_1_1_venda_compra_view_model.html#a33e00ce900584def1f201d462a7ed517',1,'poo_tp_29559.Models.VendaCompraViewModel.MetodoPagamento'],['../namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a6a2fa6ff381b5bd1490e7b3fab4aed32',1,'poo_tp_29559.Repositories.Enumerators.MetodoPagamento']]],
+  ['metodospagamento_2ecs_13',['MetodosPagamento.cs',['../_metodos_pagamento_8cs.html',1,'']]],
+  ['morada_14',['Morada',['../class_utilizador.html#a7ef1840900c3a890dd35207104faaa64',1,'Utilizador']]],
+  ['mostraitens_15',['MostraItens',['../classpoo__tp__29559_1_1_views_1_1_child_form.html#a34106039caae0b973eb3360e7dc8a680',1,'poo_tp_29559::Views::ChildForm']]]
+];

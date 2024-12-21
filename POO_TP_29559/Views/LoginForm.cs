@@ -8,7 +8,6 @@
  * 
  * @author Miguel Areal
  * @date 12/2024
- * @version 1.0
  */
 
 using ValidationLibrary;

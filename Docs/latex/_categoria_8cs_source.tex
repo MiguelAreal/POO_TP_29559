@@ -1,0 +1,41 @@
+\doxysection{Categoria.\+cs}
+\label{_categoria_8cs_source}\index{POO\_TP\_29559/Models/Categoria.cs@{POO\_TP\_29559/Models/Categoria.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559.Interfaces;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Diagnostics;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Models}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Categoria\ :\ IIdentifiable}
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Nome"{}})]}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Nome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Descrição"{}})]}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Descricao\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Data\ de\ Criação"{}})]}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DateTime\ DataCriacao\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Categoria()}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ DataCriacao\ =\ DateTime.Now;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ PodeSerEliminada(List<Produto>\ produtos)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !produtos.Any(p\ =>\ p.CategoriaID\ ==\ \textcolor{keyword}{this}.Id);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}

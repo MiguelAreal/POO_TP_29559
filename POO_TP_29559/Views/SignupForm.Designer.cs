@@ -21,12 +21,10 @@
         private void InitializeComponent()
         {
             leftPanel = new Panel();
-            panel3 = new Panel();
-            label6 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
+            labelRodape = new Label();
+            lblSubtitulo = new Label();
+            labelTitulo = new Label();
+            imgLeftClick = new PictureBox();
             lblTitle = new Label();
             btnSair = new Label();
             panelUser = new Panel();
@@ -38,113 +36,94 @@
             imgPwd = new Label();
             btnSubmit = new Button();
             lblLoginAqui = new Label();
-            panel1 = new Panel();
+            panelDN = new Panel();
             dtpNasc = new DateTimePicker();
             imgDataNasc = new Label();
-            panel2 = new Panel();
+            panelNif = new Panel();
             txtNIF = new TextBox();
             imgNIF = new Label();
-            panel4 = new Panel();
+            panelContacto = new Panel();
             txtContacto = new TextBox();
             txtContactoCodPais = new TextBox();
             imgContacto = new Label();
-            panel5 = new Panel();
+            panelTipoUser = new Panel();
             rdbCliente = new RadioButton();
             rdbAdmin = new RadioButton();
             imgTipoUser = new Label();
+            panelMorada = new Panel();
+            txtMorada = new TextBox();
+            lblMorada = new Label();
             leftPanel.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgLeftClick).BeginInit();
             panelUser.SuspendLayout();
             panelPassword.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
+            panelDN.SuspendLayout();
+            panelNif.SuspendLayout();
+            panelContacto.SuspendLayout();
+            panelTipoUser.SuspendLayout();
+            panelMorada.SuspendLayout();
             SuspendLayout();
             // 
             // leftPanel
             // 
             leftPanel.BackColor = Color.FromArgb(9, 171, 219);
-            leftPanel.Controls.Add(panel3);
-            leftPanel.Controls.Add(label3);
-            leftPanel.Controls.Add(label2);
-            leftPanel.Controls.Add(label1);
-            leftPanel.Controls.Add(pictureBox1);
+            leftPanel.Controls.Add(labelRodape);
+            leftPanel.Controls.Add(lblSubtitulo);
+            leftPanel.Controls.Add(labelTitulo);
+            leftPanel.Controls.Add(imgLeftClick);
             leftPanel.Dock = DockStyle.Left;
             leftPanel.Location = new Point(0, 0);
             leftPanel.Margin = new Padding(0);
             leftPanel.Name = "leftPanel";
-            leftPanel.Size = new Size(249, 575);
+            leftPanel.Size = new Size(249, 675);
             leftPanel.TabIndex = 0;
             // 
-            // panel3
+            // labelRodape
             // 
-            panel3.BackColor = Color.White;
-            panel3.Controls.Add(label6);
-            panel3.Location = new Point(251, 379);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(323, 45);
-            panel3.TabIndex = 10;
+            labelRodape.AutoSize = true;
+            labelRodape.Dock = DockStyle.Bottom;
+            labelRodape.Font = new Font("Montserrat", 9F);
+            labelRodape.ForeColor = Color.White;
+            labelRodape.Location = new Point(0, 643);
+            labelRodape.Name = "labelRodape";
+            labelRodape.Size = new Size(142, 32);
+            labelRodape.TabIndex = 3;
+            labelRodape.Text = "Desenvolvido por\r\nMiguel Areal - Nº29559";
+            labelRodape.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // lblSubtitulo
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 20F);
-            label6.ForeColor = Color.FromArgb(9, 171, 219);
-            label6.Location = new Point(3, -1);
-            label6.Name = "label6";
-            label6.Size = new Size(54, 37);
-            label6.TabIndex = 1;
-            label6.Text = "\U0001faaa";
-            label6.TextAlign = ContentAlignment.TopCenter;
+            lblSubtitulo.AutoSize = true;
+            lblSubtitulo.Font = new Font("Montserrat", 14F);
+            lblSubtitulo.ForeColor = Color.White;
+            lblSubtitulo.Location = new Point(44, 343);
+            lblSubtitulo.Name = "lblSubtitulo";
+            lblSubtitulo.Size = new Size(202, 52);
+            lblSubtitulo.TabIndex = 2;
+            lblSubtitulo.Text = "Gestor de Comércio\r\nEletrónico";
+            lblSubtitulo.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label3
+            // labelTitulo
             // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Bottom;
-            label3.Font = new Font("Montserrat", 9F);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(0, 543);
-            label3.Name = "label3";
-            label3.Size = new Size(142, 32);
-            label3.TabIndex = 3;
-            label3.Text = "Desenvolvido por\r\nMiguel Areal - Nº29559";
-            label3.TextAlign = ContentAlignment.MiddleLeft;
+            labelTitulo.AutoSize = true;
+            labelTitulo.Font = new Font("Montserrat", 14F);
+            labelTitulo.ForeColor = Color.White;
+            labelTitulo.Location = new Point(28, 312);
+            labelTitulo.Name = "labelTitulo";
+            labelTitulo.Size = new Size(218, 26);
+            labelTitulo.TabIndex = 1;
+            labelTitulo.Text = "Bem vindo à LeftClick";
+            labelTitulo.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // label2
+            // imgLeftClick
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Montserrat", 14F);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(44, 207);
-            label2.Name = "label2";
-            label2.Size = new Size(202, 52);
-            label2.TabIndex = 2;
-            label2.Text = "Gestor de Comércio\r\nEletrónico";
-            label2.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Montserrat", 14F);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(28, 176);
-            label1.Name = "label1";
-            label1.Size = new Size(218, 26);
-            label1.TabIndex = 1;
-            label1.Text = "Bem vindo à LeftClick";
-            label1.TextAlign = ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.leftclick_logo;
-            pictureBox1.Location = new Point(65, 27);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(115, 122);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            imgLeftClick.Image = Properties.Resources.leftclick_logo;
+            imgLeftClick.Location = new Point(65, 27);
+            imgLeftClick.Name = "imgLeftClick";
+            imgLeftClick.Size = new Size(115, 122);
+            imgLeftClick.SizeMode = PictureBoxSizeMode.StretchImage;
+            imgLeftClick.TabIndex = 0;
+            imgLeftClick.TabStop = false;
             // 
             // lblTitle
             // 
@@ -177,7 +156,7 @@
             panelUser.BackColor = Color.White;
             panelUser.Controls.Add(txtNome);
             panelUser.Controls.Add(imgUser);
-            panelUser.Location = new Point(249, 86);
+            panelUser.Location = new Point(250, 86);
             panelUser.Name = "panelUser";
             panelUser.Size = new Size(329, 45);
             panelUser.TabIndex = 6;
@@ -211,7 +190,7 @@
             panelPassword.Controls.Add(btnHidePwd);
             panelPassword.Controls.Add(txtPassword);
             panelPassword.Controls.Add(imgPwd);
-            panelPassword.Location = new Point(249, 156);
+            panelPassword.Location = new Point(250, 156);
             panelPassword.Name = "panelPassword";
             panelPassword.Size = new Size(323, 45);
             panelPassword.TabIndex = 7;
@@ -246,7 +225,7 @@
             imgPwd.AutoSize = true;
             imgPwd.Font = new Font("Segoe UI", 20F);
             imgPwd.ForeColor = Color.FromArgb(9, 171, 219);
-            imgPwd.Location = new Point(3, 4);
+            imgPwd.Location = new Point(4, 4);
             imgPwd.Name = "imgPwd";
             imgPwd.Size = new Size(54, 37);
             imgPwd.TabIndex = 1;
@@ -261,7 +240,7 @@
             btnSubmit.FlatStyle = FlatStyle.Flat;
             btnSubmit.Font = new Font("Montserrat", 12F);
             btnSubmit.ForeColor = Color.White;
-            btnSubmit.Location = new Point(338, 499);
+            btnSubmit.Location = new Point(338, 591);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(148, 42);
             btnSubmit.TabIndex = 5;
@@ -275,7 +254,7 @@
             lblLoginAqui.Cursor = Cursors.Hand;
             lblLoginAqui.Font = new Font("Montserrat", 9.749999F, FontStyle.Underline, GraphicsUnit.Point, 0);
             lblLoginAqui.ForeColor = Color.FromArgb(9, 171, 219);
-            lblLoginAqui.Location = new Point(327, 546);
+            lblLoginAqui.Location = new Point(327, 638);
             lblLoginAqui.Name = "lblLoginAqui";
             lblLoginAqui.Size = new Size(170, 18);
             lblLoginAqui.TabIndex = 6;
@@ -283,15 +262,15 @@
             lblLoginAqui.TextAlign = ContentAlignment.MiddleLeft;
             lblLoginAqui.Click += lblLoginAqui_Click;
             // 
-            // panel1
+            // panelDN
             // 
-            panel1.BackColor = Color.White;
-            panel1.Controls.Add(dtpNasc);
-            panel1.Controls.Add(imgDataNasc);
-            panel1.Location = new Point(248, 226);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(323, 45);
-            panel1.TabIndex = 8;
+            panelDN.BackColor = Color.White;
+            panelDN.Controls.Add(dtpNasc);
+            panelDN.Controls.Add(imgDataNasc);
+            panelDN.Location = new Point(250, 226);
+            panelDN.Name = "panelDN";
+            panelDN.Size = new Size(323, 45);
+            panelDN.TabIndex = 8;
             // 
             // dtpNasc
             // 
@@ -310,22 +289,22 @@
             imgDataNasc.AutoSize = true;
             imgDataNasc.Font = new Font("Segoe UI", 20F);
             imgDataNasc.ForeColor = Color.FromArgb(9, 171, 219);
-            imgDataNasc.Location = new Point(3, 4);
+            imgDataNasc.Location = new Point(4, 4);
             imgDataNasc.Name = "imgDataNasc";
             imgDataNasc.Size = new Size(54, 37);
             imgDataNasc.TabIndex = 1;
             imgDataNasc.Text = "📅";
             imgDataNasc.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // panelNif
             // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(txtNIF);
-            panel2.Controls.Add(imgNIF);
-            panel2.Location = new Point(249, 296);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(323, 45);
-            panel2.TabIndex = 9;
+            panelNif.BackColor = Color.White;
+            panelNif.Controls.Add(txtNIF);
+            panelNif.Controls.Add(imgNIF);
+            panelNif.Location = new Point(250, 296);
+            panelNif.Name = "panelNif";
+            panelNif.Size = new Size(323, 45);
+            panelNif.TabIndex = 9;
             // 
             // txtNIF
             // 
@@ -344,23 +323,23 @@
             imgNIF.AutoSize = true;
             imgNIF.Font = new Font("Segoe UI", 20F);
             imgNIF.ForeColor = Color.FromArgb(9, 171, 219);
-            imgNIF.Location = new Point(3, 2);
+            imgNIF.Location = new Point(4, 2);
             imgNIF.Name = "imgNIF";
             imgNIF.Size = new Size(54, 37);
             imgNIF.TabIndex = 1;
             imgNIF.Text = "\U0001faaa";
             imgNIF.TextAlign = ContentAlignment.TopCenter;
             // 
-            // panel4
+            // panelContacto
             // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(txtContacto);
-            panel4.Controls.Add(txtContactoCodPais);
-            panel4.Controls.Add(imgContacto);
-            panel4.Location = new Point(249, 368);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(323, 45);
-            panel4.TabIndex = 10;
+            panelContacto.BackColor = Color.White;
+            panelContacto.Controls.Add(txtContacto);
+            panelContacto.Controls.Add(txtContactoCodPais);
+            panelContacto.Controls.Add(imgContacto);
+            panelContacto.Location = new Point(250, 368);
+            panelContacto.Name = "panelContacto";
+            panelContacto.Size = new Size(323, 45);
+            panelContacto.TabIndex = 10;
             // 
             // txtContacto
             // 
@@ -391,30 +370,30 @@
             imgContacto.AutoSize = true;
             imgContacto.Font = new Font("Segoe UI", 20F);
             imgContacto.ForeColor = Color.FromArgb(9, 171, 219);
-            imgContacto.Location = new Point(3, 4);
+            imgContacto.Location = new Point(4, 4);
             imgContacto.Name = "imgContacto";
             imgContacto.Size = new Size(54, 37);
             imgContacto.TabIndex = 1;
             imgContacto.Text = "📞";
             imgContacto.TextAlign = ContentAlignment.TopCenter;
             // 
-            // panel5
+            // panelTipoUser
             // 
-            panel5.BackColor = Color.White;
-            panel5.Controls.Add(rdbCliente);
-            panel5.Controls.Add(rdbAdmin);
-            panel5.Controls.Add(imgTipoUser);
-            panel5.Location = new Point(249, 436);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(323, 45);
-            panel5.TabIndex = 11;
+            panelTipoUser.BackColor = Color.White;
+            panelTipoUser.Controls.Add(rdbCliente);
+            panelTipoUser.Controls.Add(rdbAdmin);
+            panelTipoUser.Controls.Add(imgTipoUser);
+            panelTipoUser.Location = new Point(250, 530);
+            panelTipoUser.Name = "panelTipoUser";
+            panelTipoUser.Size = new Size(323, 45);
+            panelTipoUser.TabIndex = 11;
             // 
             // rdbCliente
             // 
             rdbCliente.AutoSize = true;
             rdbCliente.Checked = true;
             rdbCliente.Font = new Font("Montserrat", 9F);
-            rdbCliente.Location = new Point(196, 14);
+            rdbCliente.Location = new Point(196, 15);
             rdbCliente.Name = "rdbCliente";
             rdbCliente.Size = new Size(67, 20);
             rdbCliente.TabIndex = 3;
@@ -426,7 +405,7 @@
             // 
             rdbAdmin.AutoSize = true;
             rdbAdmin.Font = new Font("Montserrat", 9F);
-            rdbAdmin.Location = new Point(63, 14);
+            rdbAdmin.Location = new Point(63, 15);
             rdbAdmin.Name = "rdbAdmin";
             rdbAdmin.Size = new Size(112, 20);
             rdbAdmin.TabIndex = 2;
@@ -439,23 +418,59 @@
             imgTipoUser.AutoSize = true;
             imgTipoUser.Font = new Font("Segoe UI", 20F);
             imgTipoUser.ForeColor = Color.FromArgb(9, 171, 219);
-            imgTipoUser.Location = new Point(3, 4);
+            imgTipoUser.Location = new Point(4, 6);
             imgTipoUser.Name = "imgTipoUser";
             imgTipoUser.Size = new Size(54, 37);
             imgTipoUser.TabIndex = 1;
             imgTipoUser.Text = "🛡️";
             imgTipoUser.TextAlign = ContentAlignment.TopCenter;
             // 
+            // panelMorada
+            // 
+            panelMorada.BackColor = Color.White;
+            panelMorada.Controls.Add(txtMorada);
+            panelMorada.Controls.Add(lblMorada);
+            panelMorada.Location = new Point(250, 440);
+            panelMorada.Name = "panelMorada";
+            panelMorada.Size = new Size(323, 77);
+            panelMorada.TabIndex = 11;
+            // 
+            // txtMorada
+            // 
+            txtMorada.BorderStyle = BorderStyle.None;
+            txtMorada.Font = new Font("Montserrat", 12F);
+            txtMorada.ForeColor = Color.FromArgb(9, 171, 219);
+            txtMorada.Location = new Point(56, 13);
+            txtMorada.MaxLength = 150;
+            txtMorada.Multiline = true;
+            txtMorada.Name = "txtMorada";
+            txtMorada.PlaceholderText = "Morada";
+            txtMorada.Size = new Size(228, 52);
+            txtMorada.TabIndex = 5;
+            // 
+            // lblMorada
+            // 
+            lblMorada.AutoSize = true;
+            lblMorada.Font = new Font("Segoe UI", 20F);
+            lblMorada.ForeColor = Color.FromArgb(9, 171, 219);
+            lblMorada.Location = new Point(4, 21);
+            lblMorada.Name = "lblMorada";
+            lblMorada.Size = new Size(54, 37);
+            lblMorada.TabIndex = 1;
+            lblMorada.Text = "🏠";
+            lblMorada.TextAlign = ContentAlignment.TopCenter;
+            // 
             // SignupForm
             // 
             AutoScaleDimensions = new SizeF(96F, 96F);
             AutoScaleMode = AutoScaleMode.Dpi;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(569, 575);
-            Controls.Add(panel1);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel2);
+            ClientSize = new Size(569, 675);
+            Controls.Add(panelMorada);
+            Controls.Add(panelDN);
+            Controls.Add(panelTipoUser);
+            Controls.Add(panelContacto);
+            Controls.Add(panelNif);
             Controls.Add(btnSubmit);
             Controls.Add(lblLoginAqui);
             Controls.Add(panelPassword);
@@ -471,21 +486,21 @@
             TopMost = true;
             leftPanel.ResumeLayout(false);
             leftPanel.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgLeftClick).EndInit();
             panelUser.ResumeLayout(false);
             panelUser.PerformLayout();
             panelPassword.ResumeLayout(false);
             panelPassword.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            panelDN.ResumeLayout(false);
+            panelDN.PerformLayout();
+            panelNif.ResumeLayout(false);
+            panelNif.PerformLayout();
+            panelContacto.ResumeLayout(false);
+            panelContacto.PerformLayout();
+            panelTipoUser.ResumeLayout(false);
+            panelTipoUser.PerformLayout();
+            panelMorada.ResumeLayout(false);
+            panelMorada.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -493,10 +508,10 @@
         #endregion
 
         private Panel leftPanel;
-        private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private PictureBox imgLeftClick;
+        private Label labelTitulo;
+        private Label lblSubtitulo;
+        private Label labelRodape;
         private Label lblTitle;
         private Label btnSair;
         private Panel panelUser;
@@ -508,21 +523,23 @@
         private TextBox txtNome;
         private Label btnHidePwd;
         private TextBox txtPassword;
-        private Panel panel1;
+        private Panel panelDN;
         private Label imgDataNasc;
         private DateTimePicker dtpNasc;
-        private Panel panel2;
+        private Panel panelNif;
         private TextBox txtNIF;
         private Label imgNIF;
-        private Panel panel3;
-        private Label label6;
-        private Panel panel4;
+        private Panel panelContacto;
         private TextBox txtContactoCodPais;
         private Label imgContacto;
         private TextBox txtContacto;
-        private Panel panel5;
+        private Panel panelTipoUser;
         private RadioButton rdbCliente;
         private RadioButton rdbAdmin;
         private Label imgTipoUser;
+        private Label label4;
+        private Panel panelMorada;
+        private TextBox txtMorada;
+        private Label lblMorada;
     }
 }

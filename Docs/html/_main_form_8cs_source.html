@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>POO_TP_29559 - LeftClick: Código-Fonte de POO_TP_29559/Views/MainForm.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">POO_TP_29559 - LeftClick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_main_form_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MainForm.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_main_form_8cs.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using </span>MetroFramework.Forms;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html">poo_tp_29559.Repositories.Enumerators</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepoo__tp__29559.html">poo_tp_29559</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_main_form.html">   28</a></span>    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="classpoo__tp__29559_1_1_main_form.html">MainForm</a> : MetroForm</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">private</span> <a class="code hl_class" href="class_base_repo.html">readonly</a> <a class="code hl_class" href="class_utilizador.html">Utilizador</a> _utilizadorLogado;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_main_form.html#ad4ac752d756bf89828e51f5bd23a5e18">   40</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classpoo__tp__29559_1_1_main_form.html#ad4ac752d756bf89828e51f5bd23a5e18">MainForm</a>(<a class="code hl_class" href="class_utilizador.html">Utilizador</a> <a class="code hl_class" href="class_base_repo.html">utilizadorLogado</a>)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            InitializeComponent();</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            _utilizadorLogado = <a class="code hl_class" href="class_base_repo.html">utilizadorLogado</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment">// Configura informa��es vis�veis do utilizador autenticado</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="class_base_repo.html">tipoUser</a> = _utilizadorLogado.IsAdmin ? <span class="stringliteral">&quot;Administrador&quot;</span> : <span class="stringliteral">&quot;Cliente&quot;</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            lblUserInfo.Text = <a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;{_utilizadorLogado.Nome}\n{tipoUser}&quot;</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="comment">// Configura visibilidade dos menus com base no tipo de utilizador</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            ConfigurarMenus();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> ConfigurarMenus()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">if</span> (_utilizadorLogado.IsAdmin)</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                comprasTSMI.Visible = <span class="keyword">false</span>; </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                vendasTSMI.Visible = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                utilizadoresTSMI.Visible = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            }</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> AbrirFormNoPanel(Form <a class="code hl_class" href="class_base_repo.html">formFilho</a>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="comment">// Remove formul�rio existente no painel, se houver</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (panelContainer.Controls.Count &gt; 1)</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                panelContainer.Controls[1].Dispose();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            <span class="comment">// Esconde a imagem de fundo</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            picBg.Hide();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            <span class="comment">// Configura evento ao fechar o formul�rio, para voltar a mostrar a imagem de fundo.</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            formFilho.FormClosed += (<a class="code hl_class" href="class_base_repo.html">s</a>, <a class="code hl_class" href="class_base_repo.html">args</a>) =&gt; picBg.Show();</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="comment">// Configura e exibe o formul�rio filho</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            formFilho.TopLevel = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            formFilho.Dock = <a class="code hl_class" href="class_base_repo.html">DockStyle</a>.Fill;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            panelContainer.Controls.<a class="code hl_function" href="class_base_repo.html#a91e6165ad8668dceffa53b766d8c30d5">Add</a>(<a class="code hl_class" href="class_base_repo.html">formFilho</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_class" href="class_base_repo.html">formFilho</a>.Show();</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> msMainForm_ItemClicked(<span class="keywordtype">object</span> <a class="code hl_class" href="class_base_repo.html">sender</a>, <a class="code hl_class" href="class_base_repo.html">ToolStripItemClickedEventArgs</a> <a class="code hl_class" href="class_base_repo.html">e</a>)</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <span class="comment">// Reset nas cores de todos os itens.</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_class" href="class_base_repo.html">i</a> = 0; <a class="code hl_class" href="class_base_repo.html">i</a> &lt; msMainForm.Items.Count; <a class="code hl_class" href="class_base_repo.html">i</a>++)</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                msMainForm.Items[<a class="code hl_class" href="class_base_repo.html">i</a>].ForeColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.Black;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                msMainForm.Items[<a class="code hl_class" href="class_base_repo.html">i</a>].BackColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.Transparent;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            Form? <a class="code hl_class" href="class_base_repo.html">formFilho</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="comment">// Determina o formul�rio a abrir com base no item selecionado</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">switch</span> (<a class="code hl_class" href="class_base_repo.html">e</a>.ClickedItem?.Text)</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Produtos&quot;</span>:</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Produtos);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Categorias&quot;</span>:</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Categorias);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Marcas&quot;</span>:</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Marcas);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Utilizadores&quot;</span>:</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Utilizadores);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Campanhas&quot;</span>:</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Campanhas);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Vendas&quot;</span>:</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Vendas);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                <span class="keywordflow">case</span> <span class="stringliteral">&quot;Compras&quot;</span>:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                    <a class="code hl_class" href="class_base_repo.html">formFilho</a> = CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a>.Compras);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Op��o desconhecida.&quot;</span>);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="comment">// Muda a cor do item selecionado.</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            e.ClickedItem.ForeColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.White;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            e.ClickedItem.BackColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.FromArgb(9,171,219);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <span class="comment">// Abre o formul�rio, se v�lido</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">formFilho</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                AbrirFormNoPanel(<a class="code hl_class" href="class_base_repo.html">formFilho</a>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            }</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keyword">private</span> Form CriarFormulario(<a class="code hl_enumeration" href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">FormTypes</a> <a class="code hl_class" href="class_base_repo.html">tipoForm</a>)</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_views_1_1_child_form.html">ChildForm</a>(<a class="code hl_class" href="class_base_repo.html">tipoForm</a>, _utilizadorLogado);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> github_Click(<span class="keywordtype">object</span> <a class="code hl_class" href="class_base_repo.html">sender</a>, <a class="code hl_class" href="class_base_repo.html">EventArgs</a> <a class="code hl_class" href="class_base_repo.html">e</a>)</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>            <span class="keywordflow">try</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            {</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                <a class="code hl_class" href="class_base_repo.html">var</a> <a class="code hl_class" href="class_base_repo.html">processStartInfo</a> = <span class="keyword">new</span> System.Diagnostics.ProcessStartInfo</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>                {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>                    <a class="code hl_class" href="class_base_repo.html">FileName</a> = <span class="stringliteral">&quot;https://github.com/MiguelAreal/POO_TP_29559&quot;</span>,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>                    <a class="code hl_class" href="class_base_repo.html">UseShellExecute</a> = <span class="keyword">true</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>                };</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>                System.Diagnostics.Process.Start(<a class="code hl_class" href="class_base_repo.html">processStartInfo</a>);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            }</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_base_repo.html">Exception</a> <a class="code hl_class" href="class_base_repo.html">ex</a>)</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>                <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;Erro: {ex.Message}&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            }</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>}</div>
+<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
+<div class="ttc" id="aclass_base_repo_html_a91e6165ad8668dceffa53b766d8c30d5"><div class="ttname"><a href="class_base_repo.html#a91e6165ad8668dceffa53b766d8c30d5">BaseRepo.Add</a></div><div class="ttdeci">virtual void Add(T item)</div><div class="ttdoc">Adiciona um item ao repositório.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00102">BaseRepo.cs:102</a></div></div>
+<div class="ttc" id="aclass_utilizador_html"><div class="ttname"><a href="class_utilizador.html">Utilizador</a></div><div class="ttdoc">Representa um utilizador no sistema.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00017">Utilizador.cs:18</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_main_form_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_main_form.html">poo_tp_29559.MainForm</a></div><div class="ttdoc">Formul�rio principal da aplica��o.</div><div class="ttdef"><b>Definição</b> <a href="_main_form_8cs_source.html#l00028">MainForm.cs:29</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_main_form_html_ad4ac752d756bf89828e51f5bd23a5e18"><div class="ttname"><a href="classpoo__tp__29559_1_1_main_form.html#ad4ac752d756bf89828e51f5bd23a5e18">poo_tp_29559.MainForm.MainForm</a></div><div class="ttdeci">MainForm(Utilizador utilizadorLogado)</div><div class="ttdoc">Construtor do MainForm.</div><div class="ttdef"><b>Definição</b> <a href="_main_form_8cs_source.html#l00040">MainForm.cs:40</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_child_form_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_child_form.html">poo_tp_29559.Views.ChildForm</a></div><div class="ttdef"><b>Definição</b> <a href="_child_form_8cs_source.html#l00025">ChildForm.cs:26</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_repositories_1_1_enumerators_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html">poo_tp_29559.Repositories.Enumerators</a></div><div class="ttdef"><b>Definição</b> <a href="_form_types_8cs_source.html#l00013">FormTypes.cs:14</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_repositories_1_1_enumerators_html_a745881812eefa7f25efc5bde066ab1e9"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a745881812eefa7f25efc5bde066ab1e9">poo_tp_29559.Repositories.Enumerators.FormTypes</a></div><div class="ttdeci">FormTypes</div><div class="ttdoc">Enumeração que representa os tipos de formulários na aplicação.</div><div class="ttdef"><b>Definição</b> <a href="_form_types_8cs_source.html#l00024">FormTypes.cs:25</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_views_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div><div class="ttdef"><b>Definição</b> <a href="_add_compra_form_8cs_source.html#l00028">AddCompraForm.cs:29</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_html"><div class="ttname"><a href="namespacepoo__tp__29559.html">poo_tp_29559</a></div><div class="ttdef"><b>Definição</b> <a href="_i_repo_8cs_source.html#l00013">IRepo.cs:14</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3edf705db44814fe15672eecad5d1de0.html">POO_TP_29559</a></li><li class="navelem"><a class="el" href="dir_f6abf4cd68557f6e66f470fcd37ce5f5.html">Views</a></li><li class="navelem"><a class="el" href="_main_form_8cs.html">MainForm.cs</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

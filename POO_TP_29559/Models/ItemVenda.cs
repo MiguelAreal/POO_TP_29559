@@ -8,93 +8,94 @@ using System.Threading.Tasks;
 
 namespace poo_tp_29559.Models
 {
-    /**
-     * @class ItemVenda
-     * @brief Representa um item de venda.
-     * 
-     * A classe `ItemVenda` armazena as informações de um item específico vendido, incluindo o produto, categoria,
-     * marca, preço unitário, unidades vendidas e o desconto aplicado. Esta classe é utilizada para representar
-     * os produtos vendidos em uma transação.
-     * 
-     * @author Miguel Areal
-     * @date 12/2024
-     */
+    /// <summary>
+    /// Representa um item de venda no sistema.
+    /// </summary>
+    /// <remarks>
+    /// A classe <c>ItemVenda</c> armazena as informações de um produto específico vendido, incluindo dados como o nome do produto, 
+    /// categoria, marca, preço unitário, unidades vendidas e o desconto aplicado. 
+    /// Esta classe é usada para representar os produtos vendidos em uma transação.
+    /// </remarks>
     public class ItemVenda
     {
-        /**
-         * @brief Identificador único do produto.
-         * 
-         * Este campo armazena o identificador do produto associado ao item de venda.
-         */
+        /// <summary>
+        /// Identificador único do produto.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena o identificador do produto associado ao item de venda.
+        /// </remarks>
         public int ProdutoID { get; set; }
 
-        /**
-         * @brief Nome do produto.
-         * 
-         * Este campo armazena o nome do produto no momento da venda.
-         */
+        /// <summary>
+        /// Nome do produto.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena o nome do produto no momento da venda.
+        /// </remarks>
         public string ProdutoNome { get; set; }
 
-        /**
-         * @brief Preço unitário do produto.
-         * 
-         * Este campo armazena o preço unitário do produto no momento da venda.
-         */
+        /// <summary>
+        /// Preço unitário do produto.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena o preço unitário do produto no momento da venda.
+        /// </remarks>
         public decimal PrecoUnitario { get; set; }
 
-        /**
-         * @brief Identificador da categoria do produto.
-         * 
-         * Este campo armazena o identificador da categoria associada ao produto no momento da venda.
-         */
+        /// <summary>
+        /// Identificador da categoria do produto.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena o identificador da categoria associada ao produto no momento da venda.
+        /// </remarks>
         public int CategoriaID { get; set; }
 
-        /**
-         * @brief Nome da categoria do produto.
-         * 
-         * Este campo armazena o nome da categoria associada ao produto no momento da venda.
-         */
+        /// <summary>
+        /// Nome da categoria do produto.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena o nome da categoria associada ao produto no momento da venda.
+        /// </remarks>
         public string CategoriaNome { get; set; }
 
-        /**
-         * @brief Nome da marca do produto.
-         * 
-         * Este campo armazena o nome da marca associada ao produto no momento da venda.
-         */
+        /// <summary>
+        /// Nome da marca do produto.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena o nome da marca associada ao produto no momento da venda.
+        /// </remarks>
         public string MarcaNome { get; set; }
 
-        /**
-         * @brief Quantidade de unidades vendidas.
-         * 
-         * Este campo armazena a quantidade de unidades vendidas de um determinado produto.
-         */
+        /// <summary>
+        /// Quantidade de unidades vendidas.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena a quantidade de unidades vendidas de um determinado produto.
+        /// </remarks>
         public int Unidades { get; set; }
 
-        /**
-         * @brief Percentagem de desconto aplicada ao item.
-         * 
-         * Este campo armazena a percentagem de desconto aplicada ao item na venda, se houver. Pode ser nulo.
-         */
+        /// <summary>
+        /// Percentagem de desconto aplicada ao item.
+        /// </summary>
+        /// <remarks>
+        /// Este campo armazena a percentagem de desconto aplicada ao item na venda. Pode ser <c>null</c> caso não haja desconto.
+        /// </remarks>
         public int? PercentagemDesc { get; set; }
 
-        /**
-         * @brief Construtor da classe ItemVenda.
-         * 
-         * Este construtor inicializa os campos da classe `ItemVenda` com os valores fornecidos, representando um item de venda
-         * com todos os detalhes necessários, como produto, categoria, marca, unidades e desconto.
-         * 
-         * @param produtoID Identificador único do produto.
-         * @param produtoNome Nome do produto.
-         * @param precoUnitario Preço unitário do produto.
-         * @param categoriaID Identificador da categoria do produto.
-         * @param categoriaNome Nome da categoria do produto.
-         * @param marcaNome Nome da marca do produto.
-         * @param unidades Quantidade de unidades vendidas.
-         * @param percentagemDesc Percentagem de desconto aplicada ao item, se houver.
-         */
+        /// <summary>
+        /// Construtor da classe <c>ItemVenda</c>.
+        /// </summary>
+        /// <param name="produtoID">Identificador único do produto.</param>
+        /// <param name="produtoNome">Nome do produto.</param>
+        /// <param name="precoUnitario">Preço unitário do produto.</param>
+        /// <param name="categoriaID">Identificador da categoria do produto.</param>
+        /// <param name="categoriaNome">Nome da categoria do produto.</param>
+        /// <param name="marcaNome">Nome da marca do produto.</param>
+        /// <param name="unidades">Quantidade de unidades vendidas.</param>
+        /// <param name="percentagemDesc">Percentagem de desconto aplicada ao item, se houver.</param>
         [JsonConstructor]
         public ItemVenda(int produtoID, string produtoNome, decimal precoUnitario, int categoriaID,
-                 string categoriaNome, string marcaNome, int unidades, int? percentagemDesc)
+                         string categoriaNome, string marcaNome, int unidades, int? percentagemDesc)
         {
             ProdutoID = produtoID;
             ProdutoNome = produtoNome;

@@ -6,5 +6,77 @@
     "DataInicio": "12/12/2024 00:18:39",
     "DataFim": "28/01/2025 00:00:00",
     "CategoriaId": 1
+  },
+  {
+    "Id": 2,
+    "Nome": "Ano Novo",
+    "PercentagemDesc": 30,
+    "DataInicio": "29/12/2024 00:00:00",
+    "DataFim": "02/01/2025 23:59:59",
+    "CategoriaId": 2
+  },
+  {
+    "Id": 3,
+    "Nome": "Black Friday",
+    "PercentagemDesc": 70,
+    "DataInicio": "24/11/2024 00:00:00",
+    "DataFim": "30/11/2024 23:59:59",
+    "CategoriaId": 3
+  },
+  {
+    "Id": 4,
+    "Nome": "Cyber Monday",
+    "PercentagemDesc": 60,
+    "DataInicio": "27/11/2024 00:00:00",
+    "DataFim": "27/11/2024 23:59:59",
+    "CategoriaId": 3
+  },
+  {
+    "Id": 5,
+    "Nome": "Saldos de Verão",
+    "PercentagemDesc": 40,
+    "DataInicio": "01/06/2025 00:00:00",
+    "DataFim": "31/08/2025 23:59:59",
+    "CategoriaId": 4
+  },
+  {
+    "Id": 6,
+    "Nome": "Saldos de Inverno",
+    "PercentagemDesc": 45,
+    "DataInicio": "01/12/2024 00:00:00",
+    "DataFim": "28/02/2025 23:59:59",
+    "CategoriaId": 4
+  },
+  {
+    "Id": 7,
+    "Nome": "Prime Day",
+    "PercentagemDesc": 50,
+    "DataInicio": "10/07/2025 00:00:00",
+    "DataFim": "11/07/2025 23:59:59",
+    "CategoriaId": 5
+  },
+  {
+    "Id": 8,
+    "Nome": "Dia das Mães",
+    "PercentagemDesc": 25,
+    "DataInicio": "01/05/2025 00:00:00",
+    "DataFim": "10/05/2025 23:59:59",
+    "CategoriaId": 2
+  },
+  {
+    "Id": 9,
+    "Nome": "Dia dos Pais",
+    "PercentagemDesc": 20,
+    "DataInicio": "01/08/2025 00:00:00",
+    "DataFim": "09/08/2025 23:59:59",
+    "CategoriaId": 2
+  },
+  {
+    "Id": 10,
+    "Nome": "Dia das Crianças",
+    "PercentagemDesc": 35,
+    "DataInicio": "01/10/2025 00:00:00",
+    "DataFim": "12/10/2025 23:59:59",
+    "CategoriaId": 1
   }
 ]

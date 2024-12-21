@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>POO_TP_29559 - LeftClick: Código-Fonte de POO_TP_29559/Models/CampanhaViewModel.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript" src="darkmode_toggle.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">POO_TP_29559 - LeftClick
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('_campanha_view_model_8cs_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CampanhaViewModel.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_campanha_view_model_8cs.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.ComponentModel;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Linq;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Text;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>System.Threading.Tasks;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_models.html">poo_tp_29559.Models</a></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html">   22</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html">CampanhaViewModel</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#a1dc2c9fd3993530e030f391a555f2659">   30</a></span>        <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#a1dc2c9fd3993530e030f391a555f2659">Id</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#abfa2560ffce22e0307b0dca043cb8cf2">   37</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#abfa2560ffce22e0307b0dca043cb8cf2">Nome</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        [<a class="code hl_class" href="class_base_repo.html">DisplayName</a>(<span class="stringliteral">&quot;Percentagem de Desconto&quot;</span>)]</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#a85fc79790877dcfe25ae08d0c6522ed0">   46</a></span>        <span class="keyword">public</span> <a class="code hl_class" href="class_base_repo.html">decimal</a>? <a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#a85fc79790877dcfe25ae08d0c6522ed0">PercentagemDesc</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        [<a class="code hl_class" href="class_base_repo.html">DisplayName</a>(<span class="stringliteral">&quot;Data de Início&quot;</span>)]</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#accab28f6db545a39c2512abf98eef1f6">   55</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#accab28f6db545a39c2512abf98eef1f6">DataInicio</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        [<a class="code hl_class" href="class_base_repo.html">DisplayName</a>(<span class="stringliteral">&quot;Data de Fim&quot;</span>)]</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#ad118212d68781679884dc96a0f1ccc89">   64</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#ad118212d68781679884dc96a0f1ccc89">DataFim</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        [<a class="code hl_class" href="class_base_repo.html">DisplayName</a>(<span class="stringliteral">&quot;Categoria Aplicada&quot;</span>)]</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#abbcc844c92634b4215a323f55a7a171d">   73</a></span>        <span class="keyword">public</span> <span class="keywordtype">string</span>? <a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#abbcc844c92634b4215a323f55a7a171d">CategoriaNome</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html">poo_tp_29559.Models.CampanhaViewModel</a></div><div class="ttdoc">Representa a visão de uma campanha para o utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00022">CampanhaViewModel.cs:23</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html_a1dc2c9fd3993530e030f391a555f2659"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#a1dc2c9fd3993530e030f391a555f2659">poo_tp_29559.Models.CampanhaViewModel.Id</a></div><div class="ttdeci">int Id</div><div class="ttdoc">Identificador único da campanha.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00030">CampanhaViewModel.cs:30</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html_a85fc79790877dcfe25ae08d0c6522ed0"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#a85fc79790877dcfe25ae08d0c6522ed0">poo_tp_29559.Models.CampanhaViewModel.PercentagemDesc</a></div><div class="ttdeci">decimal? PercentagemDesc</div><div class="ttdoc">Percentagem de desconto da campanha.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00046">CampanhaViewModel.cs:46</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html_abbcc844c92634b4215a323f55a7a171d"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#abbcc844c92634b4215a323f55a7a171d">poo_tp_29559.Models.CampanhaViewModel.CategoriaNome</a></div><div class="ttdeci">string? CategoriaNome</div><div class="ttdoc">Nome da categoria associada à campanha.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00073">CampanhaViewModel.cs:73</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html_abfa2560ffce22e0307b0dca043cb8cf2"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#abfa2560ffce22e0307b0dca043cb8cf2">poo_tp_29559.Models.CampanhaViewModel.Nome</a></div><div class="ttdeci">string? Nome</div><div class="ttdoc">Nome da campanha.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00037">CampanhaViewModel.cs:37</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html_accab28f6db545a39c2512abf98eef1f6"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#accab28f6db545a39c2512abf98eef1f6">poo_tp_29559.Models.CampanhaViewModel.DataInicio</a></div><div class="ttdeci">string? DataInicio</div><div class="ttdoc">Data de início da campanha.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00055">CampanhaViewModel.cs:55</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_campanha_view_model_html_ad118212d68781679884dc96a0f1ccc89"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_campanha_view_model.html#ad118212d68781679884dc96a0f1ccc89">poo_tp_29559.Models.CampanhaViewModel.DataFim</a></div><div class="ttdeci">string? DataFim</div><div class="ttdoc">Data de fim da campanha.</div><div class="ttdef"><b>Definição</b> <a href="_campanha_view_model_8cs_source.html#l00064">CampanhaViewModel.cs:64</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_models_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_models.html">poo_tp_29559.Models</a></div><div class="ttdef"><b>Definição</b> <a href="_campanha_8cs_source.html#l00009">Campanha.cs:10</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_3edf705db44814fe15672eecad5d1de0.html">POO_TP_29559</a></li><li class="navelem"><a class="el" href="dir_6cdb251d8c77ae4f1c7bb4e775b19176.html">Models</a></li><li class="navelem"><a class="el" href="_campanha_view_model_8cs.html">CampanhaViewModel.cs</a></li>
+    <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

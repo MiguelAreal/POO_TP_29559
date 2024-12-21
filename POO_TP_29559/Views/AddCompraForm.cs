@@ -1,5 +1,5 @@
 ﻿/**
- * @file AddCompraForm.cs
+ * @fileAddCompraForm.cs
  * @brief Formulário para adicionar um novo cliente.
  *
  * Implementação do formulário para adicionar uma compra no sistema. 
@@ -57,6 +57,7 @@ namespace poo_tp_29559.Views
         {
             InitializeComponent();
             _cliente = cliente;
+            _controllerVenda = new VendaCompraController();
             utilizadorController = new UtilizadorController();
             produtoController = new ProdutoController();
             categoriaController = new CategoriaController();

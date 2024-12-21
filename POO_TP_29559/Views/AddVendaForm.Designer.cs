@@ -400,7 +400,7 @@
             btnRemItem.TabIndex = 51;
             btnRemItem.Text = "🗑️";
             btnRemItem.TextAlign = ContentAlignment.MiddleCenter;
-            btnRemItem.Click += btnRemItem_Click_1;
+            btnRemItem.Click += btnRemItem_Click;
             btnRemItem.MouseEnter += btnRemItem_MouseEnter;
             btnRemItem.MouseLeave += btnRemItem_MouseLeave;
             // 
@@ -417,7 +417,7 @@
             btnAddProduto.TabIndex = 52;
             btnAddProduto.Text = "➕";
             btnAddProduto.TextAlign = ContentAlignment.MiddleCenter;
-            btnAddProduto.Click += btnAddProduto_Click_1;
+            btnAddProduto.Click += btnAddProduto_Click;
             btnAddProduto.MouseEnter += btnAddProduto_MouseEnter;
             btnAddProduto.MouseLeave += btnAddProduto_MouseLeave;
             // 

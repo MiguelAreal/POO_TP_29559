@@ -1,0 +1,45 @@
+\doxysection{Utilizador.\+cs}
+\label{_utilizador_8cs_source}\index{POO\_TP\_29559/Models/Utilizador.cs@{POO\_TP\_29559/Models/Utilizador.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }Utilizador\ :\ IIdentifiable}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Id\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00031\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Nome\ de\ Cliente"{}})]}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Nome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Contacto"{}})]}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ Contacto\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Morada"{}})]}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Morada\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}NIF"{}})]}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Nif\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Data\ de\ Nascimento"{}})]}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DataNasc\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Data\ de\ Criação"{}})]}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ DataAdicao\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ [Browsable(\textcolor{keyword}{false})]}
+\DoxyCodeLine{00080\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Password"{}})]}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}?\ Password\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00090\ \ \ \ \ [DisplayName(\textcolor{stringliteral}{"{}Admin."{}})]}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsAdmin\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keyword}{public}\ Utilizador()}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ DataAdicao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ IsAdmin\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \}}
+
+\end{DoxyCode}

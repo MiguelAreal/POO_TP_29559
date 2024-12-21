@@ -1,4 +1,14 @@
-﻿using MetroFramework.Forms;
+﻿/**
+ * @file AddVendaForm.cs
+ * @brief Formulário para adicionar vendas.
+ * 
+ * Este formulário permite registar vendas, associar clientes, adicionar produtos à fatura, 
+ * calcular totais (bruto e líquido) e verificar campanhas promocionais aplicáveis.
+ * 
+* @author Miguel Areal
+* @date 12/2024
+ */
+using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using poo_tp_29559.Repositories.Enumerators;
@@ -141,56 +151,7 @@ namespace poo_tp_29559.Views
             txtGarantia.Text = $"{mesesGarantia} meses";
         }
 
-        // Quando um produto é adicionado à fatura
-        private void btnAddProduto_Click(object sender, EventArgs e)
-        {
-            if (cmbProdutos.SelectedItem is not Produto produtoSelecionado)
-            {
-                MessageBox.Show("Selecione um produto antes de adicionar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int quantidadeDesejada = (int)nudQtd.Value;
-
-            // Verificar stock disponível considerando o que já foi adicionado na fatura anteriormente, do mesmo produto
-            int quantidadeTotalFatura = dgvFatura.Rows
-                .Cast<DataGridViewRow>()
-                .Where(row => row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
-                .Sum(row => Convert.ToInt32(row.Cells["Quantidade"].Value));
-
-            int quantidadeDisponivel = (produtoSelecionado.QuantidadeEmStock - quantidadeTotalFatura);
-
-            // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0, e não números negativos.
-            quantidadeDisponivel = quantidadeDisponivel < 0 ? 0 : quantidadeDisponivel;
-
-            if (quantidadeDesejada <= 0 || quantidadeDesejada > quantidadeDisponivel)
-            {
-                MessageBox.Show($"Quantidade inválida ou insuficiente no stock! Disponível: {quantidadeDisponivel}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Verificar se o produto já está na fatura e atualizar a quantidade na linha
-            // Atualiza totais bruto e liquido.
-            foreach (DataGridViewRow row in dgvFatura.Rows)
-            {
-                if (row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
-                {
-                    int quantidadeAtual = Convert.ToInt32(row.Cells["Quantidade"].Value);
-                    row.Cells["Quantidade"].Value = quantidadeAtual + quantidadeDesejada;
-                    produtoSelecionado.QuantidadeEmStock -= quantidadeDesejada;
-                    return;
-                }
-            }
-
-            // Adicionar novo produto à fatura
-            dgvFatura.Rows.Add(produtoSelecionado.Id, produtoSelecionado.Nome, ObterNomeCategoria(produtoSelecionado.CategoriaID), ObterNomeMarca(produtoSelecionado.MarcaID), quantidadeDesejada, produtoSelecionado.Preco);
-            AtualizarTotais();
-
-            // Verificar campanhas aplicáveis
-            VerificarCampanhas();
-        }
-
-
+       
         // Atualizar o total bruto da venda e calcular o total líquido com descontos
         private void AtualizarTotais()
         {
@@ -456,24 +417,7 @@ namespace poo_tp_29559.Views
             return venda;
         }
 
-       private void btnRemItem_Click_1(object sender, EventArgs e)
-        {
-
-            if (dgvFatura.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Selecione um item na fatura para remover.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var row = dgvFatura.SelectedRows[0];
-            dgvFatura.Rows.Remove(row);
-
-            // Recalcular campanhas
-            VerificarCampanhas();
-            AtualizarTotais();
-        }
-
-        private void btnAddProduto_Click_1(object sender, EventArgs e)
+        private void btnAddProduto_Click(object sender, EventArgs e)
         {
 
             Produto produtoSelecionado = cmbProdutos.SelectedItem as Produto;

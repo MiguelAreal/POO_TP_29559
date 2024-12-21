@@ -1,0 +1,147 @@
+\doxysection{Referência à classe Categoria\+Controller}
+\label{class_categoria_controller}\index{CategoriaController@{CategoriaController}}
+
+
+Controlador para a gestão de categorias.  
+
+
+Diagrama de heranças da classe Categoria\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_categoria_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Categoria\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Categoria\+Controller}{p. }{class_categoria_controller}}. \end{DoxyCompactList}\item 
+\textbf{ override} \textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Remove uma categoria do repositório. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Controller$<$ Categoria $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Base\+Controller} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Base\+Controller}{p. }{class_base_controller}. Inicializa o repositório com base no caminho de ficheiro fornecido. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Add\+Item} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Adiciona um novo item ao repositório. \end{DoxyCompactList}\item 
+\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atualiza um item específico. Este método pode ser re-\/implementado pelas classes derivadas para definir a lógica de atualização. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string} \textbf{ coluna})
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em uma propriedade e um filtro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ IEntity\+Controller}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Controller$<$ Categoria $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ readonly} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$ \textbf{ \+\_\+repository}
+\begin{DoxyCompactList}\small\item\em Referência ao repositório base utilizado para operações nos itens. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ \+\_\+items}
+\begin{DoxyCompactList}\small\item\em Lista local de itens atualmente carregados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controlador para a gestão de categorias. 
+
+A classe {\ttfamily \doxyref{Categoria\+Controller}{p. }{class_categoria_controller}} implementa a lógica para a gestão das categorias, incluindo operações de leitura, remoção e verificação de condições para eliminação de categorias associadas a produtos. Herda de {\ttfamily \doxyref{Base\+Controller}{p. }{class_base_controller}$<$Categoria$>$} e implementa a interface {\ttfamily \doxyref{IEntity\+Controller}{p. }{interface_i_entity_controller}}, oferecendo funcionalidades específicas para o trabalho com categorias.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 19} do ficheiro \textbf{ Categoria\+Controller.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_categoria_controller_a1240369e0f1833e3e58916927091a2fa} 
+\index{CategoriaController@{CategoriaController}!CategoriaController@{CategoriaController}}
+\index{CategoriaController@{CategoriaController}!CategoriaController@{CategoriaController}}
+\doxysubsubsection{CategoriaController()}
+{\footnotesize\ttfamily Categoria\+Controller.\+Categoria\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily \doxyref{Categoria\+Controller}{p. }{class_categoria_controller}}. 
+
+Inicializa o controlador com o caminho do ficheiro de dados onde as categorias serão armazenadas. 
+
+Definido na linha \textbf{ 26} do ficheiro \textbf{ Categoria\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ :\ base(\textcolor{stringliteral}{"{}Data/categorias.json"{}})\ \{\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{class_categoria_controller_a70cc902de2fb0d89aeadea3e1c263586} 
+\index{CategoriaController@{CategoriaController}!RemoveItem@{RemoveItem}}
+\index{RemoveItem@{RemoveItem}!CategoriaController@{CategoriaController}}
+\doxysubsubsection{RemoveItem()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ void} Categoria\+Controller.\+Remove\+Item (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove uma categoria do repositório. 
+
+Este método sobrepõe o método {\ttfamily Remove\+Item} da classe base e tenta remover a categoria fornecida do repositório, mas apenas se a categoria não estiver associada a nenhum produto. Caso contrário, é exibida uma mensagem de erro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & A categoria a ser removida. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado de \textbf{ Base\+Controller$<$ Categoria $>$} \doxyref{}{p. }{class_base_controller_a8484ff644f75ab6d44e5e902b19e896e}.
+
+
+
+Definido na linha \textbf{ 36} do ficheiro \textbf{ Categoria\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ Categoria\ specificItem)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ var\ produtos\ =\ \textcolor{keyword}{new}\ ProdutoRepo().GetAll();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (specificItem.PodeSerEliminada(produtos))}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Esta\ categoria\ não\ pode\ ser\ eliminada\ porque\ está\ associada\ a\ um\ ou\ mais\ produtos."{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Controllers/\textbf{ Categoria\+Controller.\+cs}\end{DoxyCompactItemize}

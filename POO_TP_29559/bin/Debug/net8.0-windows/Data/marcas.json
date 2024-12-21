@@ -2,15 +2,78 @@
   {
     "Id": 1,
     "Nome": "Sony",
-    "Descricao": "Goat",
-    "DataCriacao": "12/12/2024 00:11:04",
-    "PaisOrigem": "Jap\u00E3oo"
+    "Descricao": "Tecnologia e inova\u00E7\u00E3o em eletr\u00F3nicos.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Jap\u00E3o"
   },
   {
     "Id": 2,
     "Nome": "Toshiba",
-    "Descricao": "Marca Gira",
-    "DataCriacao": "12/12/2024 14:16:18",
-    "PaisOrigem": "Aquele"
+    "Descricao": "Especializada em eletr\u00F3nicos e sistemas de inform\u00E1tica.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Jap\u00E3o"
+  },
+  {
+    "Id": 3,
+    "Nome": "Samsung",
+    "Descricao": "L\u00EDder global em tecnologia e inova\u00E7\u00E3o em dispositivos m\u00F3veis e eletr\u00F4nicos.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Cor\u00E9ia do Sul"
+  },
+  {
+    "Id": 4,
+    "Nome": "Apple",
+    "Descricao": "Desenvolvedora de dispositivos m\u00F3veis e software, famosa por seus produtos de alto desempenho.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Estados Unidos"
+  },
+  {
+    "Id": 5,
+    "Nome": "Microsoft",
+    "Descricao": "Pioneira em software, desenvolvedora do sistema operacional Windows.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Estados Unidos"
+  },
+  {
+    "Id": 6,
+    "Nome": "LG Electronics",
+    "Descricao": "Especializada em eletr\u00F3nicos e produtos de consumo, como TVs e smartphones.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Cor\u00E9ia do Sul"
+  },
+  {
+    "Id": 7,
+    "Nome": "Dell Technologies",
+    "Descricao": "Fabricante de computadores e fornecedora de solu\u00E7\u00F5es de TI para empresas.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Estados Unidos"
+  },
+  {
+    "Id": 8,
+    "Nome": "Intel",
+    "Descricao": "Fabricante l\u00EDder de semicondutores e processadores para computadores e dispositivos m\u00F3veis.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Estados Unidos"
+  },
+  {
+    "Id": 9,
+    "Nome": "Huawei",
+    "Descricao": "Multinacional chinesa de equipamentos de telecomunica\u00E7\u00F5es e eletr\u00F3nicos.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "China"
+  },
+  {
+    "Id": 10,
+    "Nome": "Amazon",
+    "Descricao": "Plataforma global de e-commerce e servi\u00E7os de nuvem, l\u00EDder no mercado de com\u00E9rcio online.",
+    "DataCriacao": "12/12/2024 09:30:00",
+    "PaisOrigem": "Estados Unidos"
+  },
+  {
+    "Id": 11,
+    "Nome": "Razer",
+    "Descricao": "Marca de produtos \u0027Gamer\u0027",
+    "DataCriacao": "20/12/2024 12:22:45",
+    "PaisOrigem": "Estados Unidos"
   }
 ]

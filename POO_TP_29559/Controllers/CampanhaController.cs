@@ -1,42 +1,33 @@
-﻿using poo_tp_29559.Interfaces;
-using poo_tp_29559.Models;
-using poo_tp_29559.Repositories;
-using poo_tp_29559.Views;
-using System.Collections.Generic;
-using System.Windows.Forms;
+﻿using poo_tp_29559.Models;
 
-/**
- * @class CampanhaController
- * @brief Controlador para a gestão de campanhas.
- * 
- * A classe `CampanhaController` implementa a lógica para a gestão de campanhas, incluindo operações de leitura
- * e manipulação de dados. Herda de `BaseController<Campanha>` e implementa a interface `IEntityController`, 
- * oferecendo funcionalidades específicas para o trabalho com campanhas, incluindo a tradução de identificadores
- * para nomes legíveis na interface de utilizador.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
+using poo_tp_29559.Repositories;
+
+/// <summary>
+/// Controlador para a gestão de campanhas.
+/// Implementa a lógica para a gestão de campanhas, incluindo operações de leitura e manipulação de dados.
+/// Herda de <see cref="BaseController{Campanha}"/> e implementa a interface <see cref="IEntityController"/>.
+/// </summary>
 public class CampanhaController : BaseController<Campanha>, IEntityController
 {
-    /// @brief Lista de campanhas com nomes, usada para exibição na interface gráfica.
+    /// <summary>
+    /// Lista de campanhas com nomes, usada para exibição na interface gráfica.
+    /// </summary>
     private List<CampanhaViewModel>? _campanhasComNomes;
 
-    /**
-     * @brief Construtor da classe `CampanhaController`.
-     * 
-     * Inicializa o controlador com o caminho do ficheiro de dados onde as campanhas serão armazenadas.
-     */
+    /// <summary>
+    /// Construtor da classe <see cref="CampanhaController"/>.
+    /// Inicializa o controlador com o caminho do ficheiro de dados onde as campanhas serão armazenadas.
+    /// </summary>
     public CampanhaController() : base("Data/campanhas.json") { }
 
-    /**
-     * @brief Obtém todas as campanhas, traduzindo os IDs para nomes legíveis.
-     * 
-     * Este método recupera todas as campanhas do repositório e cria uma lista de modelos de visualização
-     * (`CampanhaViewModel`), substituindo os identificadores das categorias pelos seus respectivos nomes.
-     * 
-     * @return Uma lista de objetos `CampanhaViewModel` com as campanhas e os nomes das categorias.
-     */
+    /// <summary>
+    /// Obtém todas as campanhas, traduzindo os IDs para nomes legíveis.
+    /// Recupera todas as campanhas do repositório e cria uma lista de modelos de visualização
+    /// (<see cref="CampanhaViewModel"/>) substituindo os identificadores das categorias pelos seus respectivos nomes.
+    /// </summary>
+    /// <returns>
+    /// Uma lista de objetos <see cref="CampanhaViewModel"/> com as campanhas e os nomes das categorias.
+    /// </returns>
     public override List<object> GetItems()
     {
         List<Campanha> campanhas = _repository.GetAll();

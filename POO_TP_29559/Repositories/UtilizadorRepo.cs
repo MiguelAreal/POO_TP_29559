@@ -1,5 +1,5 @@
 ﻿/**
- * @file UtilizadorRepo.cs
+ * @class UtilizadorRepo.cs
  * @brief Repositório especializado na manipulação de utilizadores.
  * 
  * A classe `UtilizadorRepo` é uma especialização da classe base `BaseRepo<Utilizador>`,

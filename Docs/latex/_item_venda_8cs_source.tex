@@ -1,0 +1,49 @@
+\doxysection{Item\+Venda.\+cs}
+\label{_item_venda_8cs_source}\index{POO\_TP\_29559/Models/ItemVenda.cs@{POO\_TP\_29559/Models/ItemVenda.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System.ComponentModel;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Text.Json.Serialization;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Models}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ItemVenda}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ ProdutoID\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ ProdutoNome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ decimal\ PrecoUnitario\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ CategoriaID\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ CategoriaNome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ MarcaNome\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ Unidades\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}?\ PercentagemDesc\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ [JsonConstructor]}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ ItemVenda(\textcolor{keywordtype}{int}\ produtoID,\ \textcolor{keywordtype}{string}\ produtoNome,\ decimal\ precoUnitario,\ \textcolor{keywordtype}{int}\ categoriaID,}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ categoriaNome,\ \textcolor{keywordtype}{string}\ marcaNome,\ \textcolor{keywordtype}{int}\ unidades,\ \textcolor{keywordtype}{int}?\ percentagemDesc)}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoID\ =\ produtoID;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoNome\ =\ produtoNome;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUnitario\ =\ precoUnitario;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaID\ =\ categoriaID;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoriaNome;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ MarcaNome\ =\ marcaNome;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ Unidades\ =\ unidades;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ PercentagemDesc\ =\ percentagemDesc;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \}}
+\DoxyCodeLine{00109\ \}}
+
+\end{DoxyCode}

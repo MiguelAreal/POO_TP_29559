@@ -1,0 +1,187 @@
+\doxysection{Referência à classe Produto\+Controller}
+\label{class_produto_controller}\index{ProdutoController@{ProdutoController}}
+
+
+Controlador para a gestão de produtos.  
+
+
+Diagrama de heranças da classe Produto\+Controller\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_produto_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Produto\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Produto\+Controller}{p. }{class_produto_controller}}. \end{DoxyCompactList}\item 
+\textbf{ override} \textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os produtos com os IDs traduzidos para nomes. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ Produto} $>$ \textbf{ Get\+Raw\+Produtos} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os produtos diretamente do modelo, sem tradução para nomes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Controller$<$ Produto $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Base\+Controller} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Base\+Controller}{p. }{class_base_controller}. Inicializa o repositório com base no caminho de ficheiro fornecido. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Add\+Item} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Adiciona um novo item ao repositório. \end{DoxyCompactList}\item 
+\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Remove um item específico. Este método pode ser re-\/implementado pelas classes derivadas para definir a lógica de remoção. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atualiza um item específico. Este método pode ser re-\/implementado pelas classes derivadas para definir a lógica de atualização. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string} \textbf{ coluna})
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em uma propriedade e um filtro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros públicos herdados de \textbf{ IEntity\+Controller}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Remove um item. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Outros membros herdados}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Controller$<$ Produto $>$}}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ readonly} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$ \textbf{ \+\_\+repository}
+\begin{DoxyCompactList}\small\item\em Referência ao repositório base utilizado para operações nos itens. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ \+\_\+items}
+\begin{DoxyCompactList}\small\item\em Lista local de itens atualmente carregados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controlador para a gestão de produtos. 
+
+A classe {\ttfamily \doxyref{Produto\+Controller}{p. }{class_produto_controller}} é responsável pela gestão dos produtos, incluindo operações de leitura e tradução dos dados (substituindo IDs por nomes de categorias e marcas). Herda de {\ttfamily \doxyref{Base\+Controller}{p. }{class_base_controller}$<$\doxyref{Produto}{p. }{class_produto}$>$} e implementa a interface {\ttfamily \doxyref{IEntity\+Controller}{p. }{interface_i_entity_controller}}, oferecendo funcionalidades específicas para o trabalho com produtos.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 18} do ficheiro \textbf{ Produto\+Controller.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_produto_controller_aa7f42c21bd28518509bde590cabe8be8} 
+\index{ProdutoController@{ProdutoController}!ProdutoController@{ProdutoController}}
+\index{ProdutoController@{ProdutoController}!ProdutoController@{ProdutoController}}
+\doxysubsubsection{ProdutoController()}
+{\footnotesize\ttfamily Produto\+Controller.\+Produto\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily \doxyref{Produto\+Controller}{p. }{class_produto_controller}}. 
+
+Inicializa o controlador com o caminho do ficheiro de dados onde os produtos são armazenados. 
+
+Definido na linha \textbf{ 27} do ficheiro \textbf{ Produto\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00027\ :\ base(\textcolor{stringliteral}{"{}Data/produtos.json"{}})\ \{\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{class_produto_controller_ae0668b37661ae8b29349495c45d4d656} 
+\index{ProdutoController@{ProdutoController}!GetItems@{GetItems}}
+\index{GetItems@{GetItems}!ProdutoController@{ProdutoController}}
+\doxysubsubsection{GetItems()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ List}$<$ \textbf{ object} $>$ Produto\+Controller.\+Get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtém todos os produtos com os IDs traduzidos para nomes. 
+
+Este método retorna uma lista de produtos em que os IDs de categoria e marca foram substituídos pelos seus respetivos nomes, criando um modelo de visualização com informações mais legíveis para a apresentação.
+
+\begin{DoxyReturn}{Retorna}
+Uma lista de produtos com nomes traduzidos. 
+\end{DoxyReturn}
+
+
+Reimplementado de \textbf{ Base\+Controller$<$ Produto $>$} \doxyref{}{p. }{class_base_controller_ab123bcc53c016d37e86c07a4d7cbe3a4}.
+
+
+
+Definido na linha \textbf{ 36} do ficheiro \textbf{ Produto\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ List<Produto>\ produtos\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ lista\ temporária\ que\ contém\ produtos\ traduzidos}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \_produtosComNomes\ =\ \textcolor{keyword}{new}\ List<ProdutoViewModel>();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ produto\ \textcolor{keywordflow}{in}\ produtos)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Traduz\ IDs\ para\ nomes}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria?\ categoria\ =\ \textcolor{keyword}{new}\ CategoriaRepo().GetById(produto.CategoriaID);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ Marca?\ marca\ =\ \textcolor{keyword}{new}\ MarcaRepo().GetById(produto.MarcaID);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ view\ model\ para\ o\ produto\ com\ nomes\ em\ vez\ de\ IDs\ (marca,\ categoria)}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ var\ produtoViewModel\ =\ \textcolor{keyword}{new}\ ProdutoViewModel}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ produto.Id,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ produto.Nome,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Preco\ =\ produto.Preco,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QuantidadeEmStock\ =\ produto.QuantidadeEmStock,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoria?.Nome,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MarcaNome\ =\ marca?.Nome,}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataAdicao\ =\ produto.DataAdicao}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtosComNomes.Add(produtoViewModel);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Devolve\ lista\ de\ produtos\ traduzidos}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_produtosComNomes.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_produto_controller_a17a50862a86fe478b02de409236eabb9} 
+\index{ProdutoController@{ProdutoController}!GetRawProdutos@{GetRawProdutos}}
+\index{GetRawProdutos@{GetRawProdutos}!ProdutoController@{ProdutoController}}
+\doxysubsubsection{GetRawProdutos()}
+{\footnotesize\ttfamily \textbf{ List}$<$ \textbf{ Produto} $>$ Produto\+Controller.\+Get\+Raw\+Produtos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém todos os produtos diretamente do modelo, sem tradução para nomes. 
+
+Este método retorna uma lista de produtos diretamente do repositório, sem qualquer tradução ou modificação dos dados.
+
+\begin{DoxyReturn}{Retorna}
+Uma lista de produtos ordenados por nome. 
+\end{DoxyReturn}
+
+
+Definido na linha \textbf{ 76} do ficheiro \textbf{ Produto\+Controller.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ var\ produtos\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ produtos.OrderBy(c\ =>\ c.Nome).ToList();}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Controllers/\textbf{ Produto\+Controller.\+cs}\end{DoxyCompactItemize}

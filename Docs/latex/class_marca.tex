@@ -1,0 +1,218 @@
+\doxysection{Referência à classe Marca}
+\label{class_marca}\index{Marca@{Marca}}
+
+
+Representa uma marca.  
+
+
+Diagrama de heranças da classe Marca\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_marca}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Marca} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Marca}{p. }{class_marca}. \end{DoxyCompactList}\item 
+\textbf{ bool} \textbf{ Pode\+Ser\+Eliminada} (\textbf{ List}$<$ \textbf{ Produto} $>$ \textbf{ produtos})
+\begin{DoxyCompactList}\small\item\em Verifica se a marca pode ser eliminada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único da marca. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Nome da marca. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Descricao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Descrição da marca. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Data\+Criacao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de criação da marca. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Pais\+Origem}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em País de origem da marca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa uma marca. 
+
+A classe {\ttfamily \doxyref{Marca}{p. }{class_marca}} armazena as informações de uma marca, incluindo o nome, descrição, data de criação, país de origem e a sua relação com produtos. Esta classe permite gerir as marcas associadas a produtos no sistema.
+
+A classe oferece funcionalidades para verificar se a marca pode ser eliminada, com base na sua associação com produtos vendidos, e permite a definição de uma data de criação automática.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 18} do ficheiro \textbf{ Marca.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_marca_af229e4d47153935166812921357941a2} 
+\index{Marca@{Marca}!Marca@{Marca}}
+\index{Marca@{Marca}!Marca@{Marca}}
+\doxysubsubsection{Marca()}
+{\footnotesize\ttfamily Marca.\+Marca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \doxyref{Marca}{p. }{class_marca}. 
+
+Este construtor inicializa a propriedade {\ttfamily Data\+Criacao} com a data e hora atuais. 
+
+Definido na linha \textbf{ 64} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ DataCriacao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{class_marca_a02322f23dd8128dd811a3dbd80d91f0c} 
+\index{Marca@{Marca}!PodeSerEliminada@{PodeSerEliminada}}
+\index{PodeSerEliminada@{PodeSerEliminada}!Marca@{Marca}}
+\doxysubsubsection{PodeSerEliminada()}
+{\footnotesize\ttfamily \textbf{ bool} Marca.\+Pode\+Ser\+Eliminada (\begin{DoxyParamCaption}\item[{\textbf{ List}$<$ \textbf{ Produto} $>$}]{produtos }\end{DoxyParamCaption})}
+
+
+
+Verifica se a marca pode ser eliminada. 
+
+Este método verifica se a marca pode ser eliminada com base na sua associação a produtos. A marca só pode ser eliminada se não estiver associada a nenhum produto.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em produtos} & Lista de produtos para verificar se algum está associado a esta marca. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna {\ttfamily true} se a marca pode ser eliminada, ou {\ttfamily false} caso contrário. 
+\end{DoxyReturn}
+
+
+Definido na linha \textbf{ 78} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !produtos.Any(p\ =>\ p.MarcaID\ ==\ \textcolor{keyword}{this}.Id);}
+\DoxyCodeLine{00081\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das propriedades}
+\label{class_marca_accc0b3892e3109b5bc6c18eebdb2e809} 
+\index{Marca@{Marca}!DataCriacao@{DataCriacao}}
+\index{DataCriacao@{DataCriacao}!Marca@{Marca}}
+\doxysubsubsection{DataCriacao}
+{\footnotesize\ttfamily \textbf{ string}? Marca.\+Data\+Criacao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de criação da marca. 
+
+Este campo armazena a data de criação da marca, representada como uma string. 
+
+Definido na linha \textbf{ 49} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_marca_aa20f7b6369b88bbe91b69d37034f3963} 
+\index{Marca@{Marca}!Descricao@{Descricao}}
+\index{Descricao@{Descricao}!Marca@{Marca}}
+\doxysubsubsection{Descricao}
+{\footnotesize\ttfamily \textbf{ string}? Marca.\+Descricao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Descrição da marca. 
+
+Este campo armazena uma breve descrição da marca. 
+
+Definido na linha \textbf{ 41} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_marca_ab3221a85b4d93057d7b2e2558622552b} 
+\index{Marca@{Marca}!Id@{Id}}
+\index{Id@{Id}!Marca@{Marca}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily \textbf{ int} Marca.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único da marca. 
+
+Este campo armazena o identificador único da marca. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 25} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_marca_afd8721c8330d7a0e7dde87a1a240fbd3} 
+\index{Marca@{Marca}!Nome@{Nome}}
+\index{Nome@{Nome}!Marca@{Marca}}
+\doxysubsubsection{Nome}
+{\footnotesize\ttfamily \textbf{ string}? Marca.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nome da marca. 
+
+Este campo armazena o nome da marca. 
+
+Definido na linha \textbf{ 33} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_marca_ae1862c9457eef217988553816c7ec2e1} 
+\index{Marca@{Marca}!PaisOrigem@{PaisOrigem}}
+\index{PaisOrigem@{PaisOrigem}!Marca@{Marca}}
+\doxysubsubsection{PaisOrigem}
+{\footnotesize\ttfamily \textbf{ string}? Marca.\+Pais\+Origem\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+País de origem da marca. 
+
+Este campo armazena o país de origem da marca. 
+
+Definido na linha \textbf{ 57} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Marca.\+cs}\end{DoxyCompactItemize}

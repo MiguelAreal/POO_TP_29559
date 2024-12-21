@@ -1,0 +1,116 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Marca\+Form}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_marca_form}\index{poo\_tp\_29559.Views.AddUpdMarcaForm@{poo\_tp\_29559.Views.AddUpdMarcaForm}}
+
+
+Formulário para criar ou atualizar uma marca.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Marca\+Form\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_views_1_1_add_upd_marca_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Add\+Upd\+Marca\+Form} (\textbf{ int}? \textbf{ marca\+Id}=\textbf{ null})
+\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Add\+Upd\+Marca\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Formulário para criar ou atualizar uma marca. 
+
+Este formulário serve para criar ou atualizar uma marca no sistema. O utilizador preenche o nome, a descrição e o país de origem da marca. O formulário inclui validação de campos e carrega os países disponíveis a partir de um ficheiro JSON. 
+
+Definido na linha \textbf{ 30} do ficheiro \textbf{ Add\+Upd\+Marca\+Form.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_marca_form_a1adc22903f414d40e3a9c9437dee9078} 
+\index{poo\_tp\_29559.Views.AddUpdMarcaForm@{poo\_tp\_29559.Views.AddUpdMarcaForm}!AddUpdMarcaForm@{AddUpdMarcaForm}}
+\index{AddUpdMarcaForm@{AddUpdMarcaForm}!poo\_tp\_29559.Views.AddUpdMarcaForm@{poo\_tp\_29559.Views.AddUpdMarcaForm}}
+\doxysubsubsection{AddUpdMarcaForm()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Marca\+Form.\+Add\+Upd\+Marca\+Form (\begin{DoxyParamCaption}\item[{\textbf{ int}?}]{marca\+Id = {\ttfamily \textbf{ null}} }\end{DoxyParamCaption})}
+
+
+
+Construtor do {\ttfamily Add\+Upd\+Marca\+Form}. 
+
+Inicializa o controlador de marcas e carrega a lista de países disponíveis para a seleção no combo box. Se um ID válido for fornecido, carrega os dados da marca para edição.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em marca\+Id} & ID opcional da marca. Se fornecido, o formulário será usado para atualizar a marca correspondente. \\
+\hline
+\end{DoxyParams}
+$<$ Inicializa o controlador de marcas.
+
+$<$ Carrega a lista de países.
+
+$<$ Carrega os dados da marca se um ID for fornecido.
+
+Definido na linha \textbf{ 44} do ficheiro \textbf{ Add\+Upd\+Marca\+Form.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ MarcaController();\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \_marcaId\ =\ marcaId;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaPaises();\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_marcaId.HasValue)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CarregaDadosMarca();\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_marca_form_a296d00ac32106a618f53269b40252bff} 
+\index{poo\_tp\_29559.Views.AddUpdMarcaForm@{poo\_tp\_29559.Views.AddUpdMarcaForm}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddUpdMarcaForm@{poo\_tp\_29559.Views.AddUpdMarcaForm}}
+\doxysubsubsection{Dispose()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Marca\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Add\+Upd\+Marca\+Form.\+Designer.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Marca\+Form.\+cs}\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Marca\+Form.\+Designer.\+cs}\end{DoxyCompactItemize}

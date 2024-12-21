@@ -1,0 +1,111 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Cliente\+Form}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form}\index{poo\_tp\_29559.Views.AddUpdClienteForm@{poo\_tp\_29559.Views.AddUpdClienteForm}}
+
+
+Formulário para a criação ou edição de um cliente.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Cliente\+Form\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Add\+Upd\+Cliente\+Form} (\textbf{ int}? \textbf{ cliente\+Id}=\textbf{ null})
+\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Add\+Upd\+Cliente\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+\begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Formulário para a criação ou edição de um cliente. 
+
+Este formulário serve para adicionar um novo cliente ou editar um cliente existente no sistema. O utilizador deve preencher vários campos, como nome, contacto, NIF, morada e data de nascimento. O sistema valida os campos para garantir que os dados inseridos sejam válidos e que não haja duplicados (como NIF ou contacto). 
+
+Definido na linha \textbf{ 28} do ficheiro \textbf{ Add\+Upd\+Cliente\+Form.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form_a023339a1d08a6ee803a1740e72649f0c} 
+\index{poo\_tp\_29559.Views.AddUpdClienteForm@{poo\_tp\_29559.Views.AddUpdClienteForm}!AddUpdClienteForm@{AddUpdClienteForm}}
+\index{AddUpdClienteForm@{AddUpdClienteForm}!poo\_tp\_29559.Views.AddUpdClienteForm@{poo\_tp\_29559.Views.AddUpdClienteForm}}
+\doxysubsubsection{AddUpdClienteForm()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Cliente\+Form.\+Add\+Upd\+Cliente\+Form (\begin{DoxyParamCaption}\item[{\textbf{ int}?}]{cliente\+Id = {\ttfamily \textbf{ null}} }\end{DoxyParamCaption})}
+
+
+
+Construtor do {\ttfamily Add\+Upd\+Cliente\+Form}. 
+
+Inicializa o controlador de utilizadores, define o estado inicial do formulário e carrega os dados do cliente se um ID válido for fornecido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cliente\+Id} & (Opcional) O ID do cliente a ser editado. \\
+\hline
+\end{DoxyParams}
+$<$ Inicializa o controlador de utilizadores.
+
+$<$ Carrega os dados do cliente para edição.
+
+Definido na linha \textbf{ 41} do ficheiro \textbf{ Add\+Upd\+Cliente\+Form.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ UtilizadorController();\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \_clienteId\ =\ clienteId;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clienteId.HasValue)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CarregarCliente(\_clienteId.Value);\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form_a799e558e580d78ea0a4cc8dac85976a2} 
+\index{poo\_tp\_29559.Views.AddUpdClienteForm@{poo\_tp\_29559.Views.AddUpdClienteForm}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddUpdClienteForm@{poo\_tp\_29559.Views.AddUpdClienteForm}}
+\doxysubsubsection{Dispose()}
+{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Cliente\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Clean up any resources being used. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em disposing} & true if managed resources should be disposed; otherwise, false.\\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Add\+Upd\+Cliente\+Form.\+Designer.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Cliente\+Form.\+cs}\item 
+POO\+\_\+\+TP\+\_\+29559/\+Views/\textbf{ Add\+Upd\+Cliente\+Form.\+Designer.\+cs}\end{DoxyCompactItemize}

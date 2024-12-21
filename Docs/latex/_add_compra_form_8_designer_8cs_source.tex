@@ -1,0 +1,442 @@
+\doxysection{Add\+Compra\+Form.\+Designer.\+cs}
+\label{_add_compra_form_8_designer_8cs_source}\index{POO\_TP\_29559/Views/AddCompraForm.Designer.cs@{POO\_TP\_29559/Views/AddCompraForm.Designer.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00002\ \{}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{keyword}{partial\ class\ }AddCompraForm}
+\DoxyCodeLine{00004\ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ System.ComponentModel.IContainer\ components\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Dispose(\textcolor{keywordtype}{bool}\ disposing)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (disposing\ \&\&\ (components\ !=\ \textcolor{keyword}{null}))}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ components.Dispose();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ base.Dispose(disposing);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Windows\ Form\ Designer\ generated\ code}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ InitializeComponent()}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ DataGridViewCellStyle\ dataGridViewCellStyle1\ =\ \textcolor{keyword}{new}\ DataGridViewCellStyle();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ DataGridViewCellStyle\ dataGridViewCellStyle2\ =\ \textcolor{keyword}{new}\ DataGridViewCellStyle();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ DataGridViewCellStyle\ dataGridViewCellStyle3\ =\ \textcolor{keyword}{new}\ DataGridViewCellStyle();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos\ =\ \textcolor{keyword}{new}\ ComboBox();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura\ =\ \textcolor{keyword}{new}\ DataGridView();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ IDProduto\ =\ \textcolor{keyword}{new}\ DataGridViewTextBoxColumn();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ =\ \textcolor{keyword}{new}\ DataGridViewTextBoxColumn();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria\ =\ \textcolor{keyword}{new}\ DataGridViewTextBoxColumn();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ Marca\ =\ \textcolor{keyword}{new}\ DataGridViewTextBoxColumn();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ Quantidade\ =\ \textcolor{keyword}{new}\ DataGridViewTextBoxColumn();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUni\ =\ \textcolor{keyword}{new}\ DataGridViewTextBoxColumn();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd\ =\ \textcolor{keyword}{new}\ NumericUpDown();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento\ =\ \textcolor{keyword}{new}\ ComboBox();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ label2\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ label3\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas\ =\ \textcolor{keyword}{new}\ ListView();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ \textcolor{keyword}{new}\ ColumnHeader();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaAplicada\ =\ \textcolor{keyword}{new}\ ColumnHeader();}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ Percentagem\ =\ \textcolor{keyword}{new}\ ColumnHeader();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ label4\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ label5\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar\ =\ \textcolor{keyword}{new}\ Button();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar\ =\ \textcolor{keyword}{new}\ Button();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia\ =\ \textcolor{keyword}{new}\ TextBox();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ label6\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto\ =\ \textcolor{keyword}{new}\ Label();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)dgvFatura).BeginInit();}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)nudQtd).BeginInit();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ SuspendLayout();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblProduto}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.Location\ =\ \textcolor{keyword}{new}\ Point(23,\ 66);}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.Name\ =\ \textcolor{stringliteral}{"{}lblProduto"{}};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.Size\ =\ \textcolor{keyword}{new}\ Size(67,\ 20);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.TabIndex\ =\ 24;}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ lblProduto.Text\ =\ \textcolor{stringliteral}{"{}Produto"{}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cmbProdutos}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.FlatStyle\ =\ FlatStyle.System;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.FormattingEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.Location\ =\ \textcolor{keyword}{new}\ Point(23,\ 88);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.Name\ =\ \textcolor{stringliteral}{"{}cmbProdutos"{}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.Size\ =\ \textcolor{keyword}{new}\ Size(192,\ 25);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.TabIndex\ =\ 25;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dgvFatura}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.AllowUserToAddRows\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.AllowUserToDeleteRows\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.AutoSizeColumnsMode\ =\ DataGridViewAutoSizeColumnsMode.Fill;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.BackgroundColor\ =\ Color.White;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.Alignment\ =\ DataGridViewContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.BackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 8.999999F,\ FontStyle.Regular,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.ForeColor\ =\ SystemColors.WindowText;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.SelectionBackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.SelectionForeColor\ =\ SystemColors.HighlightText;}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle1.WrapMode\ =\ DataGridViewTriState.True;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.ColumnHeadersDefaultCellStyle\ =\ dataGridViewCellStyle1;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.ColumnHeadersHeightSizeMode\ =\ DataGridViewColumnHeadersHeightSizeMode.AutoSize;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Columns.AddRange(\textcolor{keyword}{new}\ DataGridViewColumn[]\ \{\ IDProduto,\ Produto,\ Categoria,\ Marca,\ Quantidade,\ PrecoUni\ \});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.Alignment\ =\ DataGridViewContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.BackColor\ =\ SystemColors.Window;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 9F);}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.ForeColor\ =\ SystemColors.ControlText;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.SelectionBackColor\ =\ Color.FromArgb(9,\ 171,\ 219);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.SelectionForeColor\ =\ SystemColors.HighlightText;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle2.WrapMode\ =\ DataGridViewTriState.False;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.DefaultCellStyle\ =\ dataGridViewCellStyle2;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.GridColor\ =\ Color.White;}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Location\ =\ \textcolor{keyword}{new}\ Point(380,\ 88);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.MultiSelect\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Name\ =\ \textcolor{stringliteral}{"{}dgvFatura"{}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.Alignment\ =\ DataGridViewContentAlignment.MiddleLeft;}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.BackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 9F);}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.ForeColor\ =\ SystemColors.WindowText;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.SelectionBackColor\ =\ SystemColors.Control;}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.SelectionForeColor\ =\ SystemColors.HighlightText;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ dataGridViewCellStyle3.WrapMode\ =\ DataGridViewTriState.True;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.RowHeadersDefaultCellStyle\ =\ dataGridViewCellStyle3;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.RowHeadersVisible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.RowHeadersWidthSizeMode\ =\ DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.SelectionMode\ =\ DataGridViewSelectionMode.FullRowSelect;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Size\ =\ \textcolor{keyword}{new}\ Size(506,\ 265);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.TabIndex\ =\ 27;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.CellEndEdit\ +=\ dgvFatura\_CellEndEdit;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IDProduto}}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ IDProduto.HeaderText\ =\ \textcolor{stringliteral}{"{}IDProduto"{}};}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ IDProduto.Name\ =\ \textcolor{stringliteral}{"{}IDProduto"{}};}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ IDProduto.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ IDProduto.Visible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Produto}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ Produto.HeaderText\ =\ \textcolor{stringliteral}{"{}Produto"{}};}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ Produto.Name\ =\ \textcolor{stringliteral}{"{}Produto"{}};}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ Produto.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Categoria}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria.HeaderText\ =\ \textcolor{stringliteral}{"{}Categoria"{}};}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria.Name\ =\ \textcolor{stringliteral}{"{}Categoria"{}};}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Marca}}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ Marca.HeaderText\ =\ \textcolor{stringliteral}{"{}Marca"{}};}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ Marca.Name\ =\ \textcolor{stringliteral}{"{}Marca"{}};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ Marca.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Quantidade}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ Quantidade.HeaderText\ =\ \textcolor{stringliteral}{"{}Quantidade"{}};}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ Quantidade.Name\ =\ \textcolor{stringliteral}{"{}Quantidade"{}};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ Quantidade.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ PrecoUni}}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUni.HeaderText\ =\ \textcolor{stringliteral}{"{}Preço\ Uni."{}};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUni.Name\ =\ \textcolor{stringliteral}{"{}PrecoUni"{}};}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUni.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ nudQtd}}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Location\ =\ \textcolor{keyword}{new}\ Point(221,\ 87);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Maximum\ =\ \textcolor{keyword}{new}\ decimal(\textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[]\ \{\ 999,\ 0,\ 0,\ 0\ \});}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Minimum\ =\ \textcolor{keyword}{new}\ decimal(\textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[]\ \{\ 1,\ 0,\ 0,\ 0\ \});}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Name\ =\ \textcolor{stringliteral}{"{}nudQtd"{}};}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Size\ =\ \textcolor{keyword}{new}\ Size(49,\ 25);}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.TabIndex\ =\ 30;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.ThousandsSeparator\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ nudQtd.Value\ =\ \textcolor{keyword}{new}\ decimal(\textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[]\ \{\ 1,\ 0,\ 0,\ 0\ \});}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblFatura}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.Location\ =\ \textcolor{keyword}{new}\ Point(380,\ 65);}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.Name\ =\ \textcolor{stringliteral}{"{}lblFatura"{}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.Size\ =\ \textcolor{keyword}{new}\ Size(54,\ 20);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.TabIndex\ =\ 33;}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ lblFatura.Text\ =\ \textcolor{stringliteral}{"{}Fatura"{}};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cmbMetodoPagamento}}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.DropDownStyle\ =\ ComboBoxStyle.DropDownList;}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.FlatStyle\ =\ FlatStyle.System;}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.FormattingEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.Location\ =\ \textcolor{keyword}{new}\ Point(22,\ 166);}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.Name\ =\ \textcolor{stringliteral}{"{}cmbMetodoPagamento"{}};}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.Size\ =\ \textcolor{keyword}{new}\ Size(192,\ 25);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.TabIndex\ =\ 35;}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ label2}}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ label2.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ label2.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ label2.Location\ =\ \textcolor{keyword}{new}\ Point(22,\ 144);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ label2.Name\ =\ \textcolor{stringliteral}{"{}label2"{}};}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ label2.Size\ =\ \textcolor{keyword}{new}\ Size(171,\ 20);}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ label2.TabIndex\ =\ 34;}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ label2.Text\ =\ \textcolor{stringliteral}{"{}Método\ de\ Pagamento"{}};}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ label3}}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ label3.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ label3.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ label3.Location\ =\ \textcolor{keyword}{new}\ Point(23,\ 218);}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ label3.Name\ =\ \textcolor{stringliteral}{"{}label3"{}};}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ label3.Size\ =\ \textcolor{keyword}{new}\ Size(163,\ 20);}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ label3.TabIndex\ =\ 38;}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ label3.Text\ =\ \textcolor{stringliteral}{"{}Campanhas\ Aplicadas"{}};}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ listViewCampanhas}}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Columns.AddRange(\textcolor{keyword}{new}\ ColumnHeader[]\ \{\ Nome,\ CategoriaAplicada,\ Percentagem\ \});}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.FullRowSelect\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.HeaderStyle\ =\ ColumnHeaderStyle.None;}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Location\ =\ \textcolor{keyword}{new}\ Point(23,\ 240);}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.MultiSelect\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Name\ =\ \textcolor{stringliteral}{"{}listViewCampanhas"{}};}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Size\ =\ \textcolor{keyword}{new}\ Size(246,\ 139);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.TabIndex\ =\ 39;}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.UseCompatibleStateImageBehavior\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.View\ =\ View.Details;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Nome}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ Nome.Text\ =\ \textcolor{stringliteral}{"{}Campanha"{}};}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ CategoriaAplicada}}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaAplicada.Text\ =\ \textcolor{stringliteral}{"{}Categoria"{}};}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaAplicada.Width\ =\ 80;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Percentagem}}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ Percentagem.Text\ =\ \textcolor{stringliteral}{"{}Desconto"{}};}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtTotalBruto}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.Location\ =\ \textcolor{keyword}{new}\ Point(380,\ 381);}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.MaxLength\ =\ 9;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.Name\ =\ \textcolor{stringliteral}{"{}txtTotalBruto"{}};}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.Size\ =\ \textcolor{keyword}{new}\ Size(100,\ 25);}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.TabIndex\ =\ 41;}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ label4}}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ label4.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ label4.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ label4.Location\ =\ \textcolor{keyword}{new}\ Point(377,\ 359);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ label4.Name\ =\ \textcolor{stringliteral}{"{}label4"{}};}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ label4.Size\ =\ \textcolor{keyword}{new}\ Size(91,\ 20);}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ label4.TabIndex\ =\ 42;}
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ label4.Text\ =\ \textcolor{stringliteral}{"{}Total\ Bruto:"{}};}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ label5}}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ label5.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ label5.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ label5.Location\ =\ \textcolor{keyword}{new}\ Point(507,\ 359);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ label5.Name\ =\ \textcolor{stringliteral}{"{}label5"{}};}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ label5.Size\ =\ \textcolor{keyword}{new}\ Size(102,\ 20);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ label5.TabIndex\ =\ 44;}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ label5.Text\ =\ \textcolor{stringliteral}{"{}Total\ Líquido:"{}};}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtTotalLiquido}}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.Location\ =\ \textcolor{keyword}{new}\ Point(510,\ 381);}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.MaxLength\ =\ 9;}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.Name\ =\ \textcolor{stringliteral}{"{}txtTotalLiquido"{}};}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.Size\ =\ \textcolor{keyword}{new}\ Size(100,\ 25);}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.TabIndex\ =\ 43;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnCancelar}}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 11F);}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Location\ =\ \textcolor{keyword}{new}\ Point(676,\ 422);}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Name\ =\ \textcolor{stringliteral}{"{}btnCancelar"{}};}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Size\ =\ \textcolor{keyword}{new}\ Size(102,\ 50);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.TabIndex\ =\ 45;}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.Text\ =\ \textcolor{stringliteral}{"{}Cancelar"{}};}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ btnCancelar.UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnConfirmar}}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 11F);}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Location\ =\ \textcolor{keyword}{new}\ Point(784,\ 422);}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Name\ =\ \textcolor{stringliteral}{"{}btnConfirmar"{}};}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Size\ =\ \textcolor{keyword}{new}\ Size(102,\ 50);}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.TabIndex\ =\ 46;}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Text\ =\ \textcolor{stringliteral}{"{}Confirmar"{}};}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.UseVisualStyleBackColor\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ btnConfirmar.Click\ +=\ btnConfirmar\_Click;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ lblQtd}}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.Location\ =\ \textcolor{keyword}{new}\ Point(221,\ 64);}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.Name\ =\ \textcolor{stringliteral}{"{}lblQtd"{}};}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.Size\ =\ \textcolor{keyword}{new}\ Size(39,\ 20);}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.TabIndex\ =\ 47;}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ lblQtd.Text\ =\ \textcolor{stringliteral}{"{}Qtd."{}};}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ txtGarantia}}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.BackColor\ =\ Color.White;}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 10F);}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.Location\ =\ \textcolor{keyword}{new}\ Point(639,\ 382);}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.MaxLength\ =\ 9;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.Name\ =\ \textcolor{stringliteral}{"{}txtGarantia"{}};}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.Size\ =\ \textcolor{keyword}{new}\ Size(100,\ 25);}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.TabIndex\ =\ 50;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ label6}}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ label6.AutoSize\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ label6.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Montserrat"{}},\ 10F);}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ label6.Location\ =\ \textcolor{keyword}{new}\ Point(639,\ 360);}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ label6.Name\ =\ \textcolor{stringliteral}{"{}label6"{}};}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ label6.Size\ =\ \textcolor{keyword}{new}\ Size(71,\ 20);}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ label6.TabIndex\ =\ 49;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ label6.Text\ =\ \textcolor{stringliteral}{"{}Garantia:"{}};}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnRemItem}}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Anchor\ =\ AnchorStyles.Top\ |\ AnchorStyles.Right;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.FlatStyle\ =\ FlatStyle.Flat;}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 21.75F,\ FontStyle.Regular,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Location\ =\ \textcolor{keyword}{new}\ Point(851,\ 44);}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Margin\ =\ \textcolor{keyword}{new}\ Padding(0);}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Name\ =\ \textcolor{stringliteral}{"{}btnRemItem"{}};}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Size\ =\ \textcolor{keyword}{new}\ Size(35,\ 40);}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.TabIndex\ =\ 51;}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Text\ =\ \textcolor{stringliteral}{"{}🗑️"{}};}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.Click\ +=\ btnRemItem\_Click\_1;}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.MouseEnter\ +=\ btnRemItem\_MouseEnter;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ btnRemItem.MouseLeave\ +=\ btnRemItem\_MouseLeave;}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ btnAddProduto}}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Anchor\ =\ AnchorStyles.Top\ |\ AnchorStyles.Right;}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Cursor\ =\ Cursors.Hand;}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.FlatStyle\ =\ FlatStyle.Flat;}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Font\ =\ \textcolor{keyword}{new}\ Font(\textcolor{stringliteral}{"{}Segoe\ UI"{}},\ 21.75F,\ FontStyle.Regular,\ GraphicsUnit.Point,\ 0);}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Location\ =\ \textcolor{keyword}{new}\ Point(280,\ 77);}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Margin\ =\ \textcolor{keyword}{new}\ Padding(0);}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Name\ =\ \textcolor{stringliteral}{"{}btnAddProduto"{}};}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Size\ =\ \textcolor{keyword}{new}\ Size(35,\ 40);}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.TabIndex\ =\ 52;}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Text\ =\ \textcolor{stringliteral}{"{}\(\backslash\)U0001f6d2"{}};}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.TextAlign\ =\ ContentAlignment.MiddleCenter;}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.Click\ +=\ btnAddProduto\_Click;}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.MouseEnter\ +=\ btnAddProduto\_MouseEnter;}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ btnAddProduto.MouseLeave\ +=\ btnAddProduto\_MouseLeave;}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ AddCompraForm}}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ }}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleDimensions\ =\ \textcolor{keyword}{new}\ SizeF(96F,\ 96F);}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ AutoScaleMode\ =\ AutoScaleMode.Dpi;}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ BorderStyle\ =\ MetroFramework.Drawing.MetroBorderStyle.FixedSingle;}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ CancelButton\ =\ btnCancelar;}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ ClientSize\ =\ \textcolor{keyword}{new}\ Size(911,\ 492);}
+\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnAddProduto);}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnRemItem);}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(txtGarantia);}
+\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(label6);}
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblQtd);}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnCancelar);}
+\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(btnConfirmar);}
+\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(label5);}
+\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(txtTotalLiquido);}
+\DoxyCodeLine{00393\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(label4);}
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(txtTotalBruto);}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(listViewCampanhas);}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(label3);}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(cmbMetodoPagamento);}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(label2);}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblFatura);}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(nudQtd);}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(dgvFatura);}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(cmbProdutos);}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ Controls.Add(lblProduto);}
+\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ MaximizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ MinimizeBox\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ Name\ =\ \textcolor{stringliteral}{"{}AddCompraForm"{}};}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ Padding\ =\ \textcolor{keyword}{new}\ Padding(0,\ 60,\ 0,\ 0);}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ Text\ =\ \textcolor{stringliteral}{"{}Efetuar\ Compra"{}};}
+\DoxyCodeLine{00409\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)dgvFatura).EndInit();}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ ((System.ComponentModel.ISupportInitialize)nudQtd).EndInit();}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ ResumeLayout(\textcolor{keyword}{false});}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ PerformLayout();}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00414\ }
+\DoxyCodeLine{00415\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblProduto;}
+\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ComboBox\ cmbProdutos;}
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridView\ dgvFatura;}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ NumericUpDown\ nudQtd;}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblFatura;}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ComboBox\ cmbMetodoPagamento;}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ label2;}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ label3;}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ListView\ listViewCampanhas;}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtTotalBruto;}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ label4;}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ label5;}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtTotalLiquido;}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button\ btnCancelar;}
+\DoxyCodeLine{00431\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Button\ btnConfirmar;}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ lblQtd;}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ColumnHeader\ Nome;}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ColumnHeader\ CategoriaAplicada;}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ColumnHeader\ Percentagem;}
+\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TextBox\ txtGarantia;}
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ label6;}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridViewTextBoxColumn\ IDProduto;}
+\DoxyCodeLine{00439\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridViewTextBoxColumn\ Produto;}
+\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridViewTextBoxColumn\ Categoria;}
+\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridViewTextBoxColumn\ Marca;}
+\DoxyCodeLine{00442\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridViewTextBoxColumn\ Quantidade;}
+\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ DataGridViewTextBoxColumn\ PrecoUni;}
+\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnRemItem;}
+\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Label\ btnAddProduto;}
+\DoxyCodeLine{00446\ \ \ \ \ \}}
+\DoxyCodeLine{00447\ \}}
+
+\end{DoxyCode}

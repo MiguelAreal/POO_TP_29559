@@ -1,0 +1,413 @@
+\doxysection{Referência à classe Template Base\+Repo$<$ T $>$}
+\label{class_base_repo}\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+
+
+Repositório genérico para manipulação de dados.  
+
+
+Diagrama de heranças da classe Base\+Repo$<$ T $>$\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_base_repo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Base\+Repo} (\textbf{ string} \textbf{ file\+Path})
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Adiciona um item ao repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Remove} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Remove um item do repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ void} \textbf{ Update} (\textbf{ T} \textbf{ item\+Alterado})
+\begin{DoxyCompactList}\small\item\em Atualiza um item no repositório. \end{DoxyCompactList}\item 
+\textbf{ virtual} \textbf{ T} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
+\textbf{ virtual} ? \textbf{ T} \textbf{ Get\+By\+Property} (\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$ \textbf{ property\+Selector}, \textbf{ object} \textbf{ value})
+\begin{DoxyCompactList}\small\item\em Obtém um item com base em uma propriedade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ void} \textbf{ Save\+Changes} ()
+\begin{DoxyCompactList}\small\item\em guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
+\textbf{ void} \textbf{ Set\+Id} (\textbf{ T} \textbf{ item})
+\begin{DoxyCompactList}\small\item\em Atribui um novo ID ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ readonly} \textbf{ string} \textbf{ file\+Path}
+\begin{DoxyCompactList}\small\item\em Caminho para o ficheiro onde os dados são armazenados. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ items}
+\begin{DoxyCompactList}\small\item\em Lista de itens armazenados no repositório. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Repositório genérico para manipulação de dados. 
+
+A classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}$<$T$>$} implementa um repositório genérico para realizar operações de CRUD (Criar, Ler, Atualizar, Apagar) em itens do tipo {\ttfamily T}. Os itens são carregados e guardados em ficheiros JSON, o que garante persistência entre as execuções da aplicação.
+
+
+\begin{DoxyTemplParams}{Parâmetros de template}
+{\em T} & Tipo genérico representando a entidade armazenada no repositório, que deve implementar a interface {\ttfamily \doxyref{IIdentifiable}{p. }{interface_i_identifiable}}. \\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Restrições do Tipo]\begin{description}
+\item[{\em T} : {\em \textbf{ class}}]\item[{\em T} : {\em \textbf{ IIdentifiable}}]\end{description}
+\end{Desc}
+
+
+Definido na linha \textbf{ 32} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!BaseRepo@{BaseRepo}}
+\index{BaseRepo@{BaseRepo}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{BaseRepo()}
+{\footnotesize\ttfamily \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.\textbf{ Base\+Repo} (\begin{DoxyParamCaption}\item[{\textbf{ string}}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. 
+
+Inicializa o repositório com o caminho do ficheiro onde os dados serão armazenados. Carrega os itens existentes no ficheiro, se houver algum.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Path} & Caminho do ficheiro onde os dados serão guardados. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 45} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00046\ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ this.filePath\ =\ filePath;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ items\ =\ LoadItems();}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{class_base_repo_a91e6165ad8668dceffa53b766d8c30d5} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{Add()}
+{\footnotesize\ttfamily \textbf{ virtual} \textbf{ void} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Add (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adiciona um item ao repositório. 
+
+Adiciona um novo item ao repositório, atribuindo-\/lhe um ID único e persistindo as mudanças no ficheiro JSON.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & O item a ser adicionado ao repositório. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Argument\+Null\+Exception} & Se o item fornecido for {\ttfamily null}. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo$<$ T $>$} \doxyref{}{p. }{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_a7213c637b334c163a3ca47be6e70a59c}.
+
+
+
+Definido na linha \textbf{ 102} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00103\ \ \ \ \ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(item),\ \textcolor{stringliteral}{"{}Item\ não\ pode\ ser\ null."{}});}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ SetId(item);}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ items.Add(item);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ SaveChanges();}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_a68f5e6eeb31a3d21fdfc928f0c4c260a} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!GetAll@{GetAll}}
+\index{GetAll@{GetAll}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{GetAll()}
+{\footnotesize\ttfamily \textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém todos os itens do repositório. 
+
+Carrega os itens e os retorna como uma lista.
+
+\begin{DoxyReturn}{Retorna}
+Uma lista de todos os itens armazenados no repositório. 
+\end{DoxyReturn}
+
+
+Implementa \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo$<$ T $>$} \doxyref{}{p. }{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_a55d5f5b3852ac19173616b30a2c389d0}.
+
+
+
+Definido na linha \textbf{ 87} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ items\ =\ LoadItems();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_ae8f317aa779a9fd3875cff23a9ef2d02} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!GetById@{GetById}}
+\index{GetById@{GetById}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{GetById()}
+{\footnotesize\ttfamily \textbf{ virtual} \textbf{ T} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Get\+By\+Id (\begin{DoxyParamCaption}\item[{\textbf{ int}?}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtém um item pelo seu identificador. 
+
+Retorna o item correspondente ao ID fornecido, ou {\ttfamily null} se não encontrado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador único do item a ser recuperado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O item correspondente ao ID fornecido, ou {\ttfamily null} se não encontrado. 
+\end{DoxyReturn}
+
+
+Definido na linha \textbf{ 160} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00161\ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items.FirstOrDefault(item\ =>\ item.Id\ ==\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00163\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_ae0ff7917b06af4e2e1610e2a6d8d2ed6} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!GetByProperty@{GetByProperty}}
+\index{GetByProperty@{GetByProperty}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{GetByProperty()}
+{\footnotesize\ttfamily \textbf{ virtual} ? \textbf{ T} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Get\+By\+Property (\begin{DoxyParamCaption}\item[{\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$}]{property\+Selector,  }\item[{\textbf{ object}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtém um item com base em uma propriedade. 
+
+Retorna o primeiro item que possui a propriedade especificada com o valor fornecido.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em property\+Selector} & Função que seleciona a propriedade a ser comparada. \\
+\hline
+{\em value} & Valor a ser comparado com a propriedade selecionada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O item correspondente, ou {\ttfamily null} se não encontrado. 
+\end{DoxyReturn}
+
+
+Definido na linha \textbf{ 174} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00175\ \ \ \ \ \{}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items.FirstOrDefault(item\ =>\ propertySelector(item)?.Equals(value)\ ==\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00177\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_a0e50c94ddc430b3a0bc5b2e47b7aab5e} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{Remove()}
+{\footnotesize\ttfamily \textbf{ virtual} \textbf{ void} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Remove (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove um item do repositório. 
+
+Remove o item fornecido do repositório e persiste as mudanças no ficheiro JSON.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & O item a ser removido do repositório. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo$<$ T $>$} \doxyref{}{p. }{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_aecf6b2595902b2822f49d5d55bcd580e}.
+
+
+
+Definido na linha \textbf{ 119} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ items.Remove(item);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ SaveChanges();}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_a7b3f68e76f4a50c72380730959c2ff9a} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!SaveChanges@{SaveChanges}}
+\index{SaveChanges@{SaveChanges}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{SaveChanges()}
+{\footnotesize\ttfamily \textbf{ void} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Save\+Changes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+guarda as mudanças no ficheiro JSON. 
+
+Persiste as alterações realizadas na lista de itens no ficheiro JSON. 
+
+Definido na linha \textbf{ 184} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}?\ directory\ =\ Path.GetDirectoryName(filePath);}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Directory.Exists(directory))}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ Directory.CreateDirectory(directory!);}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ json\ =\ JsonSerializer.Serialize(items,\ \textcolor{keyword}{new}\ JsonSerializerOptions\ \{\ WriteIndented\ =\ \textcolor{keyword}{true}\ \});}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ File.WriteAllText(filePath,\ json);}
+\DoxyCodeLine{00194\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_a21f890c80e4ab76b92e643556166ac8a} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!SetId@{SetId}}
+\index{SetId@{SetId}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{SetId()}
+{\footnotesize\ttfamily \textbf{ void} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Set\+Id (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Atribui um novo ID ao item. 
+
+Define um ID único para o item com base no próximo ID disponível.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item} & O item ao qual será atribuído um ID único. \\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 203} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00204\ \ \ \ \ \{}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ item.Id\ =\ GetProximoId();}
+\DoxyCodeLine{00206\ \ \ \ \ \}}
+
+\end{DoxyCode}
+\label{class_base_repo_a77783a5b906f5e485a114580d99e25c1} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!Update@{Update}}
+\index{Update@{Update}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{Update()}
+{\footnotesize\ttfamily \textbf{ virtual} \textbf{ void} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.Update (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item\+Alterado }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza um item no repositório. 
+
+Atualiza os dados de um item existente no repositório com base no seu ID.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em item\+Alterado} & O item com os dados atualizados. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Excepções}
+{\em Argument\+Null\+Exception} & Se o item fornecido for {\ttfamily null}. \\
+\hline
+{\em Key\+Not\+Found\+Exception} & Se o item não for encontrado no repositório. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implementa \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo$<$ T $>$} \doxyref{}{p. }{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_ae2bd8d28e20c9cc703093ae6c1342f50}.
+
+
+
+Definido na linha \textbf{ 134} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00135\ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (itemAlterado\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ ArgumentNullException(nameof(itemAlterado),\ \textcolor{stringliteral}{"{}Item\ não\ pode\ ser\ null."{}});}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ var\ index\ =\ items.FindIndex(item\ =>\ item.Id\ ==\ itemAlterado.Id);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ !=\ -\/1)}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ items[index]\ =\ itemAlterado;}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ SaveChanges();}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ KeyNotFoundException(\textcolor{stringliteral}{"{}Item\ não\ encontrado."{}});}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação dos dados membro}
+\label{class_base_repo_aa386f4144804c3ef30f8c7331691f061} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!filePath@{filePath}}
+\index{filePath@{filePath}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{filePath}
+{\footnotesize\ttfamily \textbf{ readonly} \textbf{ string} \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.file\+Path\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Caminho para o ficheiro onde os dados são armazenados. 
+
+
+
+Definido na linha \textbf{ 34} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+\label{class_base_repo_a9d056056c43996242ef2dd41520e51c3} 
+\index{BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}!items@{items}}
+\index{items@{items}!BaseRepo$<$ T $>$@{BaseRepo$<$ T $>$}}
+\doxysubsubsection{items}
+{\footnotesize\ttfamily \textbf{ List}$<$\textbf{ T}$>$ \textbf{ Base\+Repo}$<$ \textbf{ T} $>$.items\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Lista de itens armazenados no repositório. 
+
+
+
+Definido na linha \textbf{ 35} do ficheiro \textbf{ Base\+Repo.\+cs}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Repositories/\textbf{ Base\+Repo.\+cs}\end{DoxyCompactItemize}

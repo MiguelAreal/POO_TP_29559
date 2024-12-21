@@ -1,0 +1,27 @@
+var dir_f6abf4cd68557f6e66f470fcd37ce5f5 =
+[
+    [ "AddCompraForm.cs", "_add_compra_form_8cs.html", "_add_compra_form_8cs" ],
+    [ "AddCompraForm.Designer.cs", "_add_compra_form_8_designer_8cs.html", "_add_compra_form_8_designer_8cs" ],
+    [ "AddUpdCampanhaForm.cs", "_add_upd_campanha_form_8cs.html", "_add_upd_campanha_form_8cs" ],
+    [ "AddUpdCampanhaForm.Designer.cs", "_add_upd_campanha_form_8_designer_8cs.html", "_add_upd_campanha_form_8_designer_8cs" ],
+    [ "AddUpdCategoriaForm.cs", "_add_upd_categoria_form_8cs.html", "_add_upd_categoria_form_8cs" ],
+    [ "AddUpdCategoriaForm.Designer.cs", "_add_upd_categoria_form_8_designer_8cs.html", "_add_upd_categoria_form_8_designer_8cs" ],
+    [ "AddUpdClienteForm.cs", "_add_upd_cliente_form_8cs.html", "_add_upd_cliente_form_8cs" ],
+    [ "AddUpdClienteForm.Designer.cs", "_add_upd_cliente_form_8_designer_8cs.html", "_add_upd_cliente_form_8_designer_8cs" ],
+    [ "AddUpdMarcaForm.cs", "_add_upd_marca_form_8cs.html", "_add_upd_marca_form_8cs" ],
+    [ "AddUpdMarcaForm.Designer.cs", "_add_upd_marca_form_8_designer_8cs.html", "_add_upd_marca_form_8_designer_8cs" ],
+    [ "AddUpdProdutoForm.cs", "_add_upd_produto_form_8cs.html", "_add_upd_produto_form_8cs" ],
+    [ "AddUpdProdutoForm.Designer.cs", "_add_upd_produto_form_8_designer_8cs.html", "_add_upd_produto_form_8_designer_8cs" ],
+    [ "AddVendaForm.cs", "_add_venda_form_8cs.html", "_add_venda_form_8cs" ],
+    [ "AddVendaForm.Designer.cs", "_add_venda_form_8_designer_8cs.html", "_add_venda_form_8_designer_8cs" ],
+    [ "ChildForm.cs", "_child_form_8cs.html", "_child_form_8cs" ],
+    [ "ChildForm.Designer.cs", "_child_form_8_designer_8cs.html", "_child_form_8_designer_8cs" ],
+    [ "DetalhesVendaCompra.cs", "_detalhes_venda_compra_8cs.html", "_detalhes_venda_compra_8cs" ],
+    [ "DetalhesVendaCompra.Designer.cs", "_detalhes_venda_compra_8_designer_8cs.html", "_detalhes_venda_compra_8_designer_8cs" ],
+    [ "LoginForm.cs", "_login_form_8cs.html", "_login_form_8cs" ],
+    [ "LoginForm.Designer.cs", "_login_form_8_designer_8cs.html", "_login_form_8_designer_8cs" ],
+    [ "MainForm.cs", "_main_form_8cs.html", "_main_form_8cs" ],
+    [ "MainForm.Designer.cs", "_main_form_8_designer_8cs.html", "_main_form_8_designer_8cs" ],
+    [ "SignupForm.cs", "_signup_form_8cs.html", "_signup_form_8cs" ],
+    [ "SignupForm.Designer.cs", "_signup_form_8_designer_8cs.html", "_signup_form_8_designer_8cs" ]
+];

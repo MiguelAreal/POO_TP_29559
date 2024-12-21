@@ -2,13 +2,61 @@
   {
     "Id": 1,
     "Nome": "Teclados",
-    "Descricao": "Aquilo que escreve",
+    "Descricao": "Usado para interagir com o computador.",
     "DataCriacao": "2024-12-12T00:11:28.0245244+00:00"
   },
   {
     "Id": 2,
     "Nome": "Ratos",
-    "Descricao": "Hhhhhhh",
+    "Descricao": "Dispositivo de entrada que permite controlar o cursor na no ecr\u00E3.",
     "DataCriacao": "2024-12-12T14:16:33.2345627+00:00"
+  },
+  {
+    "Id": 3,
+    "Nome": "Monitores",
+    "Descricao": "Visualizar informa\u00E7\u00F5es geradas pelo computador.",
+    "DataCriacao": "2024-12-13T08:23:44.3456789+00:00"
+  },
+  {
+    "Id": 4,
+    "Nome": "Impressoras",
+    "Descricao": "Equipamento para gerar c\u00F3pias f\u00EDsicas de documentos digitais.",
+    "DataCriacao": "2024-12-13T10:12:50.1234567+00:00"
+  },
+  {
+    "Id": 5,
+    "Nome": "Headsets",
+    "Descricao": "Fones de ouvido com microfone, usados para comunica\u00E7\u00E3o e imers\u00E3o em \u00E1udio.",
+    "DataCriacao": "2024-12-14T11:30:10.9876543+00:00"
+  },
+  {
+    "Id": 6,
+    "Nome": "Cadeiras Ergon\u00F3micas",
+    "Descricao": "Cadeiras projetadas para proporcionar conforto e apoio durante longos per\u00EDodos sentados.",
+    "DataCriacao": "2024-12-14T14:45:25.8765432+00:00"
+  },
+  {
+    "Id": 7,
+    "Nome": "Webcams",
+    "Descricao": "C\u00E2maras usadas para capturar v\u00EDdeo, especialmente para videoconfer\u00EAncias.",
+    "DataCriacao": "2024-12-15T09:55:00.2345678+00:00"
+  },
+  {
+    "Id": 8,
+    "Nome": "Fones de Ouvido",
+    "Descricao": "Dispositivo de \u00E1udio usado para ouvir m\u00FAsica, jogos ou conversas em chamadas.",
+    "DataCriacao": "2024-12-15T16:00:05.3456789+00:00"
+  },
+  {
+    "Id": 9,
+    "Nome": "Caixas de Som",
+    "Descricao": "Equipamentos de \u00E1udio externos que permitem ouvir som com maior qualidade.",
+    "DataCriacao": "2024-12-16T13:10:15.456789+00:00"
+  },
+  {
+    "Id": 10,
+    "Nome": "Mouses Sem Fio",
+    "Descricao": "Ratos de computador sem a necessidade de cabos, conectados via Bluetooth ou outro protocolo.",
+    "DataCriacao": "2024-12-17T10:20:25.5678901+00:00"
   }
 ]

@@ -1,0 +1,281 @@
+\doxysection{Referência à classe Venda\+Compra}
+\label{class_venda_compra}\index{VendaCompra@{VendaCompra}}
+
+
+Representa uma transação de venda ou compra realizada.  
+
+
+Diagrama de heranças da classe Venda\+Compra\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_venda_compra}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Venda\+Compra} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Venda\+Compra}{p. }{class_venda_compra}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único da venda ou compra. \end{DoxyCompactList}\item 
+\textbf{ int}? \textbf{ Cliente\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador do cliente associado à venda ou compra. \end{DoxyCompactList}\item 
+\textbf{ int}? \textbf{ NIF}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Número de Identificação Fiscal (NIF) associado à venda ou compra. \end{DoxyCompactList}\item 
+\textbf{ List}$<$ \textbf{ Item\+Venda} $>$? \textbf{ Itens} = \textbf{ new} \textbf{ List}$<$\textbf{ Item\+Venda}$>$()\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Lista de itens vendidos ou comprados na transação. \end{DoxyCompactList}\item 
+\textbf{ int} \textbf{ Itens\+Total}\hspace{0.3cm}{\ttfamily  [get]}
+\begin{DoxyCompactList}\small\item\em Total de unidades de produtos vendidos ou comprados. \end{DoxyCompactList}\item 
+\textbf{ decimal} \textbf{ Total\+Bruto}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Total bruto da venda ou compra (sem descontos). \end{DoxyCompactList}\item 
+\textbf{ decimal} \textbf{ Total\+Liquido}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Total líquido da venda ou compra (com descontos). \end{DoxyCompactList}\item 
+\textbf{ string} \textbf{ Data\+Venda}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data em que a venda ou compra foi realizada. \end{DoxyCompactList}\item 
+\textbf{ string}? \textbf{ Fim\+Data\+Garantia}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de fim da garantia associada à transação. \end{DoxyCompactList}\item 
+\textbf{ Metodo\+Pagamento}? \textbf{ Metodo\+Pagamento}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Método de pagamento utilizado na transação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa uma transação de venda ou compra realizada. 
+
+A classe {\ttfamily \doxyref{Venda\+Compra}{p. }{class_venda_compra}} armazena informações sobre a transação de compra ou venda de produtos, incluindo o cliente associado, os itens vendidos, o valor total, as datas relevantes, o método de pagamento utilizado, entre outras informações. Esta classe pode ser usada para representar tanto vendas de produtos quanto compras realizadas por um cliente.
+
+\begin{DoxyAuthor}{Autor}
+Miguel Areal 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+12/2024 
+\end{DoxyDate}
+
+
+Definido na linha \textbf{ 18} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{class_venda_compra_a78f1ad708c8474fc45b05d27dd5e42c0} 
+\index{VendaCompra@{VendaCompra}!VendaCompra@{VendaCompra}}
+\index{VendaCompra@{VendaCompra}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{VendaCompra()}
+{\footnotesize\ttfamily Venda\+Compra.\+Venda\+Compra (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily \doxyref{Venda\+Compra}{p. }{class_venda_compra}}. 
+
+Este construtor inicializa a data da venda com a data e hora atuais e define a data de fim da garantia como 36 meses após a data de venda. 
+
+Definido na linha \textbf{ 99} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00100\ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ DataVenda\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ FimDataGarantia\ =\ DateTime.Now.AddMonths(36).ToString();}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das propriedades}
+\label{class_venda_compra_a5c06f7b8a205f949b5b03d74aca7774a} 
+\index{VendaCompra@{VendaCompra}!ClienteID@{ClienteID}}
+\index{ClienteID@{ClienteID}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{ClienteID}
+{\footnotesize\ttfamily \textbf{ int}? Venda\+Compra.\+Cliente\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador do cliente associado à venda ou compra. 
+
+Este campo armazena o identificador único do cliente que realizou a venda ou compra, se aplcável. 
+
+Definido na linha \textbf{ 33} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ Cliente\ associado,\ se\ aplicável}}
+
+\end{DoxyCode}
+\label{class_venda_compra_afe8d4a714ecd41a85e772e892701a01b} 
+\index{VendaCompra@{VendaCompra}!DataVenda@{DataVenda}}
+\index{DataVenda@{DataVenda}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{DataVenda}
+{\footnotesize\ttfamily \textbf{ string} Venda\+Compra.\+Data\+Venda\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data em que a venda ou compra foi realizada. 
+
+Este campo armazena a data e hora em que a transação foi efetuada. 
+
+Definido na linha \textbf{ 77} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00077\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_venda_compra_a90be288177a25898ac4e5fa95614a4d7} 
+\index{VendaCompra@{VendaCompra}!FimDataGarantia@{FimDataGarantia}}
+\index{FimDataGarantia@{FimDataGarantia}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{FimDataGarantia}
+{\footnotesize\ttfamily \textbf{ string}? Venda\+Compra.\+Fim\+Data\+Garantia\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de fim da garantia associada à transação. 
+
+Este campo armazena a data em que a garantia do produto vendido ou comprado termina. O valor é gerado automaticamente para ser 36 meses após a data da venda, se não for especificado. 
+
+Definido na linha \textbf{ 85} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_venda_compra_afd474fbfcbbf2e433aa8f55d161ae101} 
+\index{VendaCompra@{VendaCompra}!Id@{Id}}
+\index{Id@{Id}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily \textbf{ int} Venda\+Compra.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único da venda ou compra. 
+
+Este campo armazena o identificador único da transação. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 25} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_venda_compra_a1f6fd3af0f186152da85c6e0a1d0a498} 
+\index{VendaCompra@{VendaCompra}!Itens@{Itens}}
+\index{Itens@{Itens}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{Itens}
+{\footnotesize\ttfamily \textbf{ List}$<$\textbf{ Item\+Venda}$>$? Venda\+Compra.\+Itens = \textbf{ new} \textbf{ List}$<$\textbf{ Item\+Venda}$>$()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Lista de itens vendidos ou comprados na transação. 
+
+Este campo armazena uma lista de objetos {\ttfamily Item\+Venda}, representando os produtos vendidos ou comprados na transação. 
+
+Definido na linha \textbf{ 48} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}\ List<ItemVenda>();}
+
+\end{DoxyCode}
+\label{class_venda_compra_ad7bf56269edef34424952aaf139dcc38} 
+\index{VendaCompra@{VendaCompra}!ItensTotal@{ItensTotal}}
+\index{ItensTotal@{ItensTotal}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{ItensTotal}
+{\footnotesize\ttfamily \textbf{ int} Venda\+Compra.\+Itens\+Total\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Total de unidades de produtos vendidos ou comprados. 
+
+Este campo calcula a soma de unidades de todos os itens vendidos ou comprados na transação. Ele é calculado automaticamente com base na lista de itens. 
+
+Definido na linha \textbf{ 56} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+\label{class_venda_compra_a7e2ead944dd49ab50bb5ff6aa83bb93e} 
+\index{VendaCompra@{VendaCompra}!MetodoPagamento@{MetodoPagamento}}
+\index{MetodoPagamento@{MetodoPagamento}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{MetodoPagamento}
+{\footnotesize\ttfamily \textbf{ Metodo\+Pagamento}? Venda\+Compra.\+Metodo\+Pagamento\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Método de pagamento utilizado na transação. 
+
+Este campo armazena o método de pagamento escolhido para a transação, com base no enumerador {\ttfamily Metodo\+Pagamento}. 
+
+Definido na linha \textbf{ 92} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_venda_compra_a5c3eaaab209bb5fdf564f9213a2c0b49} 
+\index{VendaCompra@{VendaCompra}!NIF@{NIF}}
+\index{NIF@{NIF}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{NIF}
+{\footnotesize\ttfamily \textbf{ int}? Venda\+Compra.\+NIF\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Número de Identificação Fiscal (NIF) associado à venda ou compra. 
+
+Este campo armazena o NIF do cliente que realizou a transação. 
+
+Definido na linha \textbf{ 41} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \textcolor{comment}{//\ NIF\ associado,\ se\ aplicável}}
+
+\end{DoxyCode}
+\label{class_venda_compra_a7867a0a1c1ded1f1cde2c8a075ba728f} 
+\index{VendaCompra@{VendaCompra}!TotalBruto@{TotalBruto}}
+\index{TotalBruto@{TotalBruto}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{TotalBruto}
+{\footnotesize\ttfamily \textbf{ decimal} Venda\+Compra.\+Total\+Bruto\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total bruto da venda ou compra (sem descontos). 
+
+Este campo armazena o valor total da transação sem considerar qualquer desconto aplicado. 
+
+Definido na linha \textbf{ 63} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{class_venda_compra_a47272bcf8b450c1726c2fccea1aaab5c} 
+\index{VendaCompra@{VendaCompra}!TotalLiquido@{TotalLiquido}}
+\index{TotalLiquido@{TotalLiquido}!VendaCompra@{VendaCompra}}
+\doxysubsubsection{TotalLiquido}
+{\footnotesize\ttfamily \textbf{ decimal} Venda\+Compra.\+Total\+Liquido\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Total líquido da venda ou compra (com descontos). 
+
+Este campo armazena o valor total da transação após os descontos terem sido aplicados. 
+
+Definido na linha \textbf{ 70} do ficheiro \textbf{ Venda\+Compra.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Venda\+Compra.\+cs}\end{DoxyCompactItemize}

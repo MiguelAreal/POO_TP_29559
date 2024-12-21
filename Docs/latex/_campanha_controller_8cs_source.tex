@@ -1,0 +1,49 @@
+\doxysection{Campanha\+Controller.\+cs}
+\label{_campanha_controller_8cs_source}\index{POO\_TP\_29559/Controllers/CampanhaController.cs@{POO\_TP\_29559/Controllers/CampanhaController.cs}}
+\textbf{ Ir para a documentação deste ficheiro.}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }poo\_tp\_29559.Interfaces;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }poo\_tp\_29559.Views;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }System.Windows.Forms;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }CampanhaController\ :\ BaseController<Campanha>,\ IEntityController}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{private}\ List<CampanhaViewModel>?\ \_campanhasComNomes;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{public}\ CampanhaController()\ :\ base(\textcolor{stringliteral}{"{}Data/campanhas.json"{}})\ \{\ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ List<object>\ GetItems()}
+\DoxyCodeLine{00052\ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ List<Campanha>\ campanhas\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \_campanhasComNomes\ =\ \textcolor{keyword}{new}\ List<CampanhaViewModel>();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ campanha\ \textcolor{keywordflow}{in}\ campanhas)}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Traduz\ IDs\ para\ nomes}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria?\ categoria\ =\ \textcolor{keyword}{new}\ CategoriaRepo().GetById(campanha.CategoriaId);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ view\ model\ com\ campanhas\ em\ vez\ de\ IDs\ para\ visualização}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaViewModel\ =\ \textcolor{keyword}{new}\ CampanhaViewModel}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ campanha.Id,}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ campanha.Nome,}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PercentagemDesc\ =\ campanha.PercentagemDesc,}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataInicio\ =\ campanha.DataInicio,}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataFim\ =\ campanha.DataFim,}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoria?.Nome,}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \_campanhasComNomes.Add(campanhaViewModel);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Passa\ a\ lista\ de\ campanhas\ com\ nomes\ para\ a\ vista}}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_campanhasComNomes.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \}}
+
+\end{DoxyCode}

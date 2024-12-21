@@ -2,82 +2,75 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace poo_tp_29559.Models
 {
-    /**
-     * @class Categoria
-     * @brief Representa uma categoria de produtos.
-     * 
-     * A classe `Categoria` é utilizada para armazenar informações relacionadas a uma categoria de produtos no sistema.
-     * Cada categoria possui um identificador único, nome, descrição e data de criação. Além disso, a classe oferece um
-     * método para verificar se a categoria pode ser eliminada, o que é possível apenas caso não esteja associada a 
-     * nenhum produto.
-     * 
-     * @author Miguel Areal
-     * @date 12/2024
-     */
+    /// <summary>
+    /// Representa uma categoria de produtos no sistema.
+    /// </summary>
+    /// <remarks>
+    /// A classe <c>Categoria</c> armazena informações como o nome, descrição e data de criação de uma categoria. 
+    /// Também oferece funcionalidade para verificar se a categoria pode ser eliminada, garantindo que não esteja associada a nenhum produto.
+    /// </remarks>
     public class Categoria : IIdentifiable
     {
-        /**
-         * @brief Identificador único da categoria.
-         * 
-         * Este campo armazena o identificador único de cada categoria, utilizado para referenciar a categoria
-         * no sistema.
-         */
+        /// <summary>
+        /// Identificador único da categoria.
+        /// </summary>
+        /// <remarks>
+        /// Utilizado para referenciar a categoria no sistema.
+        /// </remarks>
         public int Id { get; set; }
 
-        /**
-         * @brief Nome da categoria.
-         * 
-         * Este campo armazena o nome da categoria, que será utilizado para exibir a categoria no sistema.
-         */
+        /// <summary>
+        /// Nome da categoria.
+        /// </summary>
+        /// <remarks>
+        /// Nome que identifica a categoria e é exibido ao utilizador.
+        /// </remarks>
         [DisplayName("Nome")]
         public string? Nome { get; set; }
 
-        /**
-         * @brief Descrição da categoria.
-         * 
-         * Este campo armazena uma descrição mais detalhada sobre a categoria. Pode ser utilizada para fornecer
-         * mais informações sobre os produtos que pertencem a esta categoria.
-         */
+        /// <summary>
+        /// Descrição da categoria.
+        /// </summary>
+        /// <remarks>
+        /// Fornece detalhes adicionais sobre os produtos pertencentes à categoria.
+        /// </remarks>
         [DisplayName("Descrição")]
         public string? Descricao { get; set; }
 
-        /**
-         * @brief Data de criação da categoria.
-         * 
-         * Este campo armazena a data em que a categoria foi criada. O valor é atribuído automaticamente
-         * quando a categoria é instanciada, utilizando a data e hora atuais.
-         */
+        /// <summary>
+        /// Data de criação da categoria.
+        /// </summary>
+        /// <remarks>
+        /// A data é automaticamente atribuída no momento da criação da instância.
+        /// </remarks>
         [DisplayName("Data de Criação")]
         public DateTime DataCriacao { get; set; }
 
-        /**
-         * @brief Construtor da classe Categoria.
-         * 
-         * O construtor da classe inicializa o campo `DataCriacao` com a data e hora atuais, indicando
-         * que a categoria foi criada no momento da sua instância.
-         */
+        /// <summary>
+        /// Inicializa uma nova instância da classe <c>Categoria</c>.
+        /// </summary>
+        /// <remarks>
+        /// A propriedade <c>DataCriacao</c> é automaticamente definida com a data e hora atuais.
+        /// </remarks>
         public Categoria()
         {
             DataCriacao = DateTime.Now;
         }
 
-        /**
-         * @brief Verifica se a categoria pode ser eliminada.
-         * 
-         * Este método verifica se a categoria pode ser eliminada, garantindo que a categoria não esteja associada
-         * a nenhum produto. Caso a categoria esteja associada a algum produto, ela não pode ser eliminada.
-         * 
-         * @param produtos Lista de produtos do sistema.
-         * @return Retorna `true` se a categoria não estiver associada a nenhum produto e, portanto, pode ser eliminada;
-         *         caso contrário, retorna `false`.
-         */
+        /// <summary>
+        /// Verifica se a categoria pode ser eliminada.
+        /// </summary>
+        /// <param name="produtos">Lista de produtos do sistema.</param>
+        /// <returns>
+        /// <c>true</c> se a categoria não estiver associada a nenhum produto, permitindo sua eliminação; 
+        /// caso contrário, <c>false</c>.
+        /// </returns>
+        /// <remarks>
+        /// Este método garante que a eliminação de categorias só ocorra se elas não estiverem associadas a nenhum produto.
+        /// </remarks>
         public bool PodeSerEliminada(List<Produto> produtos)
         {
             return !produtos.Any(p => p.CategoriaID == this.Id);
