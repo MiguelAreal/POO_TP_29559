@@ -2,144 +2,156 @@
 \label{_add_upd_cliente_form_8cs_source}\index{POO\_TP\_29559/Views/AddUpdClienteForm.cs@{POO\_TP\_29559/Views/AddUpdClienteForm.cs}}
 \textbf{ Ir para a documentação deste ficheiro.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }MetroFramework.Forms;}
-\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }System;}
-\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }System.Diagnostics.Contracts;}
-\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }System.Drawing;}
-\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }System.Windows.Forms;}
-\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }ValidationLibrary;}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
-\DoxyCodeLine{00020\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }AddUpdClienteForm\ :\ MetroForm}
-\DoxyCodeLine{00029\ \ \ \ \ \{}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ UtilizadorController\ \_controller;\ }
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{int}?\ \_clienteId;\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ Utilizador\ cliente;}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AddUpdClienteForm(\textcolor{keywordtype}{int}?\ clienteId\ =\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ UtilizadorController();\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \_clienteId\ =\ clienteId;}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clienteId.HasValue)}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CarregarCliente(\_clienteId.Value);\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregarCliente(\textcolor{keywordtype}{int}\ clienteId)}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ cliente\ =\ (Utilizador)\_controller.GetById(clienteId);}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cliente\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Cliente\ não\ encontrado."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }MetroFramework.Forms;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }System.Diagnostics.Contracts;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System.Drawing;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Windows.Forms;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }ValidationLibrary;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }AddUpdClienteForm\ :\ MetroForm}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ UtilizadorController\ \_controller;\ }
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ \textcolor{keywordtype}{int}?\ \_clienteId;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ Utilizador\ cliente;}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Construtors\ and\ Initialization}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AddUpdClienteForm(\textcolor{keywordtype}{int}?\ clienteId\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ UtilizadorController();\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \_clienteId\ =\ clienteId;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clienteId.HasValue)}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CarregarCliente(\_clienteId.Value);\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Loading\ Methods}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregarCliente(\textcolor{keywordtype}{int}\ clienteId)}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ cliente\ =\ (Utilizador)\_controller.GetById(clienteId);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cliente\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Cliente\ não\ encontrado."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Text\ =\ cliente.Nome;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Text\ =\ cliente.Morada;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Text\ =\ cliente.Nif.ToString();}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ chkAdmin.Checked\ =\ cliente.IsAdmin;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(cliente.DataNasc))}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Value\ =\ DateTime.Parse(cliente.DataNasc);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Checked\ =\ \textcolor{keyword}{true};}
 \DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00069\ }
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ txtNome.Text\ =\ cliente.Nome;}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ txtMorada.Text\ =\ cliente.Morada;}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Text\ =\ cliente.Nif.ToString();}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ chkAdmin.Checked\ =\ cliente.IsAdmin;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(cliente.DataNasc))}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Value\ =\ DateTime.Parse(cliente.DataNasc);}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dtpNasc.Checked\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separação\ do\ contacto\ em\ código\ de\ país\ e\ número}}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(cliente.Contacto))}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cliente.Contacto.Contains(\textcolor{stringliteral}{"{}\ "{}}))}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ partes\ =\ cliente.Contacto.Split(\textcolor{charliteral}{'\ '});}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Text\ =\ partes[0];}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.Text\ =\ partes.Length\ >\ 1\ ?\ partes[1]\ :\ \textcolor{keywordtype}{string}.Empty;}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00091\ }
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnConfirmar\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ allValid\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ contacto;}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ de\ campos\ obrigatórios}}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ Control[]\ controls\ =\ \{\ txtNome,\ txtContactoCodPais,\ txtContacto,\ txtMorada\ \};}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ Label[]\ labels\ =\ \{\ lblNome,\ lblContacto,\ lblContacto,\ lblMorada\ \};}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateFields(controls,\ labels);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separação\ do\ contacto\ em\ código\ de\ país\ e\ número}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(cliente.Contacto))}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cliente.Contacto.Contains(\textcolor{stringliteral}{"{}\ "{}}))}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ partes\ =\ cliente.Contacto.Split(\textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtContactoCodPais.Text\ =\ partes[0];}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtContacto.Text\ =\ partes.Length\ >\ 1\ ?\ partes[1]\ :\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Form\ Events}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnConfirmar\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ allValid\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ contacto;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ de\ campos\ obrigatórios}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ Control[]\ controls\ =\ \{\ txtNome,\ txtContactoCodPais,\ txtContacto,\ txtMorada\ \};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ Label[]\ labels\ =\ \{\ lblNome,\ lblContacto,\ lblContacto,\ lblMorada\ \};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateFields(controls,\ labels);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ do\ número\ de\ telefone\ (deve\ ter\ 9\ dígitos)}}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateNineDigits(txtContacto.Text,\ lblContacto);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ do\ NIF\ (deve\ ter\ 9\ dígitos)}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateNineDigits(txtNIF.Text,\ lblNIF);}
 \DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ do\ número\ de\ telefone\ (deve\ ter\ 9\ dígitos)}}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateNineDigits(txtContacto.Text,\ lblContacto);}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ do\ NIF\ (deve\ ter\ 9\ dígitos)}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateNineDigits(txtNIF.Text,\ lblNIF);}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ da\ data\ de\ nascimento,\ se\ selecionada}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dtpNasc.Checked)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateDate(dtpNasc,\ lblDataNasc);}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ da\ data\ de\ nascimento,\ se\ selecionada}}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dtpNasc.Checked)}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ allValid\ \&=\ FieldValidator.ValidateDate(dtpNasc,\ lblDataNasc);}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00122\ }
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!allValid)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!allValid)}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Garante\ que\ o\ contacto\ tem\ o\ código\ de\ país\ e\ número\ preenchidos}}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(txtContactoCodPais.Text)\ ||\ \textcolor{keywordtype}{string}.IsNullOrWhiteSpace(txtContacto.Text))}
 \DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00127\ }
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Garante\ que\ o\ contacto\ tem\ o\ código\ de\ país\ e\ número\ preenchidos}}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(txtContactoCodPais.Text)\ ||\ \textcolor{keywordtype}{string}.IsNullOrWhiteSpace(txtContacto.Text))}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblContacto.ForeColor\ =\ Color.Red;}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00134\ }
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Formata\ o\ contacto\ com\ código\ de\ país\ e\ número}}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ contacto\ =\ \$\textcolor{stringliteral}{"{}\{txtContactoCodPais.Text\}\ \{txtContacto.Text\}"{}};}
-\DoxyCodeLine{00137\ }
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ duplicados\ para\ novos\ clientes}}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_clienteId.HasValue)}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_controller.VerificarNIFExistente(Convert.ToInt32(txtNIF.Text)))}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblContacto.ForeColor\ =\ Color.Red;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Formata\ o\ contacto\ com\ código\ de\ país\ e\ número}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ contacto\ =\ \$\textcolor{stringliteral}{"{}\{txtContactoCodPais.Text\}\ \{txtContacto.Text\}"{}};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ duplicados\ para\ novos\ clientes}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_clienteId.HasValue)}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_controller.VerificarNIFExistente(Convert.ToInt32(txtNIF.Text)))}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Este\ NIF\ já\ está\ a\ ser\ utilizado."{}});}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_controller.VerificarContactoExistente(contacto))}
 \DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Este\ NIF\ já\ está\ a\ ser\ utilizado."{}});}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Este\ contacto\ já\ está\ a\ ser\ utilizado."{}});}
 \DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00146\ }
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_controller.VerificarContactoExistente(contacto))}
-\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Este\ contacto\ já\ está\ a\ ser\ utilizado."{}});}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00153\ }
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criação\ ou\ atualização\ do\ cliente}}
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ cliente\ =\ \textcolor{keyword}{new}\ Utilizador}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ \_clienteId\ ??\ 0,\ }
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ txtNome.Text,}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Contacto\ =\ contacto,}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Morada\ =\ txtMorada.Text,}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataNasc\ =\ dtpNasc.Checked\ ?\ dtpNasc.Value.ToString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy\ HH:mm:ss"{}})\ :\ \textcolor{keyword}{null},}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nif\ =\ Convert.ToInt32(txtNIF.Text),}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsAdmin\ =\ chkAdmin.Checked,}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Password\ =\ txtNome.Text}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00166\ }
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clienteId.HasValue)}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_controller.UpdateItem(cliente);}
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_controller.AddItem(cliente);}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00175\ }
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00178\ \ \ \ \ \}}
-\DoxyCodeLine{00179\ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criação\ ou\ atualização\ do\ cliente}}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ cliente\ =\ \textcolor{keyword}{new}\ Utilizador}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ \_clienteId\ ??\ 0,\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ txtNome.Text,}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Contacto\ =\ contacto,}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Morada\ =\ txtMorada.Text,}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataNasc\ =\ dtpNasc.Checked\ ?\ dtpNasc.Value.ToString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy\ HH:mm:ss"{}})\ :\ \textcolor{keyword}{null},}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nif\ =\ Convert.ToInt32(txtNIF.Text),}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ IsAdmin\ =\ chkAdmin.Checked,}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Password\ =\ txtNome.Text}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clienteId.HasValue)}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_controller.UpdateItem(cliente);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_controller.AddItem(cliente);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00173\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00174\ \ \ \ \ \}}
+\DoxyCodeLine{00175\ \}}
 
 \end{DoxyCode}

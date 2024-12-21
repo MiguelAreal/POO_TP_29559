@@ -53,8 +53,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_add_compra_form_8_designer_8cs.html",
-"classpoo__tp__29559_1_1_models_1_1_campanha.html#a064e7604a7519062d09877fe27664798",
-"namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a6a2fa6ff381b5bd1490e7b3fab4aed32aa1590387cf123baf357b7acd896616e1"
+"classpoo__tp__29559_1_1_models_1_1_marca.html#a223160341cae284a51957f9837d57fd4",
+"dir_fbfd12654baefb7ea71ee44fbf2fefe6.html"
 ];
 
 var SYNCONMSG = 'clique para desativar a sincronização do painel';

@@ -10,49 +10,63 @@
 \DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Linq;}
 \DoxyCodeLine{00007\ \textcolor{keyword}{using\ }System.Windows.Forms;}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ProdutoController\ :\ BaseController<Produto>,\ IEntityController}
-\DoxyCodeLine{00019\ \{}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{private}\ List<ProdutoViewModel>\ \_produtosComNomes;\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}\ ProdutoController()\ :\ base(\textcolor{stringliteral}{"{}Data/produtos.json"{}})\ \{\ \}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ List<object>\ GetItems()}
-\DoxyCodeLine{00037\ \ \ \ \ \{}
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ List<Produto>\ produtos\ =\ \_repository.GetAll();}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ lista\ temporária\ que\ contém\ produtos\ traduzidos}}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \_produtosComNomes\ =\ \textcolor{keyword}{new}\ List<ProdutoViewModel>();}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ produto\ \textcolor{keywordflow}{in}\ produtos)}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Traduz\ IDs\ para\ nomes}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria?\ categoria\ =\ \textcolor{keyword}{new}\ CategoriaRepo().GetById(produto.CategoriaID);}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ Marca?\ marca\ =\ \textcolor{keyword}{new}\ MarcaRepo().GetById(produto.MarcaID);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ view\ model\ para\ o\ produto\ com\ nomes\ em\ vez\ de\ IDs\ (marca,\ categoria)}}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ var\ produtoViewModel\ =\ \textcolor{keyword}{new}\ ProdutoViewModel}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ produto.Id,}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ produto.Nome,}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Preco\ =\ produto.Preco,}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QuantidadeEmStock\ =\ produto.QuantidadeEmStock,}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoria?.Nome,}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MarcaNome\ =\ marca?.Nome,}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataAdicao\ =\ produto.DataAdicao}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtosComNomes.Add(produtoViewModel);}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Devolve\ lista\ de\ produtos\ traduzidos}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_produtosComNomes.Cast<\textcolor{keywordtype}{object}>().ToList();}
-\DoxyCodeLine{00066\ \ \ \ \ \}}
-\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }ProdutoController\ :\ BaseController<Produto>,\ IEntityController}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\ \ \ \ \#region\ Fields}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{private}\ List<ProdutoViewModel>\ \_produtosComNomes;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}\ ProdutoController()\ :\ base(\textcolor{stringliteral}{"{}Data/produtos.json"{}})\ \{\ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \#region\ Get\ Items}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ List<object>\ GetItems()}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ List<Produto>\ produtos\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \_produtosComNomes\ =\ \textcolor{keyword}{new}\ List<ProdutoViewModel>();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ produto\ \textcolor{keywordflow}{in}\ produtos)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Traduz\ IDs\ para\ nomes}}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria?\ categoria\ =\ \textcolor{keyword}{new}\ CategoriaRepo().GetById(produto.CategoriaID);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ Marca?\ marca\ =\ \textcolor{keyword}{new}\ MarcaRepo().GetById(produto.MarcaID);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ um\ modelo\ de\ visualização\ para\ o\ produto}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ var\ produtoViewModel\ =\ \textcolor{keyword}{new}\ ProdutoViewModel}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ produto.Id,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ produto.Nome,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Preco\ =\ produto.Preco,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QuantidadeEmStock\ =\ produto.QuantidadeEmStock,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoria?.Nome,}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MarcaNome\ =\ marca?.Nome,}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataAdicao\ =\ produto.DataAdicao}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtosComNomes.Add(produtoViewModel);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retorna\ a\ lista\ de\ produtos\ traduzidos}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_produtosComNomes.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
 \DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\ \ \ \ \#region\ Get\ Normal\ Products}}
+\DoxyCodeLine{00070\ }
 \DoxyCodeLine{00076\ \ \ \ \ \textcolor{keyword}{public}\ List<Produto>\ GetRawProdutos()}
 \DoxyCodeLine{00077\ \ \ \ \ \{}
 \DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ var\ produtos\ =\ \_repository.GetAll();}
 \DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ produtos.OrderBy(c\ =>\ c.Nome).ToList();}
 \DoxyCodeLine{00080\ \ \ \ \ \}}
-\DoxyCodeLine{00081\ \}}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{00083\ \}}
 
 \end{DoxyCode}

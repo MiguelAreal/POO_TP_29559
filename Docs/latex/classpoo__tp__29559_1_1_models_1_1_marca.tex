@@ -1,0 +1,208 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Models.\+Marca}
+\label{classpoo__tp__29559_1_1_models_1_1_marca}\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+
+
+Representa uma marca no sistema.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Models.\+Marca\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_models_1_1_marca}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Marca} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Marca}. \end{DoxyCompactList}\item 
+bool \textbf{ Pode\+Ser\+Eliminada} (List$<$ \textbf{ Produto} $>$ produtos)
+\begin{DoxyCompactList}\small\item\em Verifica se a marca pode ser eliminada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único da marca. \end{DoxyCompactList}\item 
+string? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Nome da marca. \end{DoxyCompactList}\item 
+string? \textbf{ Descricao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Descrição da marca. \end{DoxyCompactList}\item 
+string? \textbf{ Data\+Criacao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de criação da marca. \end{DoxyCompactList}\item 
+string? \textbf{ Pais\+Origem}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em País de origem da marca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa uma marca no sistema. 
+
+A classe {\ttfamily Marca} armazena informações sobre uma marca, como seu nome, descrição, data de criação, país de origem, e a sua relação com os produtos. Ela oferece funcionalidades para verificar se a marca pode ser eliminada, com base na sua associação com produtos vendidos. 
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Marca.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_a0575fff0320a8427dcf1612aa5d2442a} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!Marca@{Marca}}
+\index{Marca@{Marca}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{Marca()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Marca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily Marca}. 
+
+O construtor inicializa a propriedade {\ttfamily Data\+Criacao} com a data e hora atuais. 
+
+Definido na linha \textbf{ 67} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ DataCriacao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_a223160341cae284a51957f9837d57fd4} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!PodeSerEliminada@{PodeSerEliminada}}
+\index{PodeSerEliminada@{PodeSerEliminada}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{PodeSerEliminada()}
+{\footnotesize\ttfamily bool poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Pode\+Ser\+Eliminada (\begin{DoxyParamCaption}\item[{List$<$ \textbf{ Produto} $>$}]{produtos }\end{DoxyParamCaption})}
+
+
+
+Verifica se a marca pode ser eliminada. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em produtos} & Lista de produtos no sistema.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna {\ttfamily true} se a marca não estiver associada a nenhum produto, e portanto pode ser eliminada; caso contrário, retorna {\ttfamily false}. 
+\end{DoxyReturn}
+
+
+A marca só pode ser eliminada se não estiver associada a nenhum produto. 
+
+Definido na linha \textbf{ 83} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !produtos.Any(p\ =>\ p.MarcaID\ ==\ \textcolor{keyword}{this}.Id);}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das propriedades}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_a3455605ef1dfd7d96db5511aefb7ff38} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!DataCriacao@{DataCriacao}}
+\index{DataCriacao@{DataCriacao}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{DataCriacao}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Data\+Criacao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de criação da marca. 
+
+Este campo armazena a data em que a marca foi criada. A data é atribuída automaticamente com a data e hora atuais quando a marca é instanciada. 
+
+Definido na linha \textbf{ 50} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_a381e8174e814b0ed9eae8a7859bea252} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!Descricao@{Descricao}}
+\index{Descricao@{Descricao}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{Descricao}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Descricao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Descrição da marca. 
+
+Este campo armazena uma breve descrição sobre a marca. 
+
+Definido na linha \textbf{ 40} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_a735b943cb244cb7ae497d3d364bf613e} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!Id@{Id}}
+\index{Id@{Id}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único da marca. 
+
+Este campo armazena o identificador único da marca. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 22} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_ac39a4902f0550059c3e839e7bb888c12} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!Nome@{Nome}}
+\index{Nome@{Nome}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{Nome}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nome da marca. 
+
+Este campo armazena o nome da marca. 
+
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_marca_a3c12d3fb1929e9ebcd8fa43ef0a44de7} 
+\index{poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}!PaisOrigem@{PaisOrigem}}
+\index{PaisOrigem@{PaisOrigem}!poo\_tp\_29559.Models.Marca@{poo\_tp\_29559.Models.Marca}}
+\doxysubsubsection{PaisOrigem}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Marca.\+Pais\+Origem\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+País de origem da marca. 
+
+Este campo armazena o país de origem da marca. 
+
+Definido na linha \textbf{ 59} do ficheiro \textbf{ Marca.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00059\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Marca.\+cs}\end{DoxyCompactItemize}

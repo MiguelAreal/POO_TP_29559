@@ -8,19 +8,19 @@ using System.Windows.Forms;
 using System.IO;
 using System;
 
-
-/// <summary>
-/// Controlador para a gestão de marcas.
-/// Implementa a lógica para a gestão das marcas, incluindo operações de leitura, remoção e carregamento de dados externos, como a lista de países.
-/// Herda de <see cref="BaseController{Marca}"/> e implementa a interface <see cref="IEntityController"/>.
-/// </summary>
 public class MarcaController : BaseController<Marca>, IEntityController
 {
+    #region Constructor
+
     /// <summary>
     /// Construtor da classe <see cref="MarcaController"/>.
     /// Inicializa o controlador com o caminho do ficheiro de dados onde as marcas serão armazenadas.
     /// </summary>
     public MarcaController() : base("Data/marcas.json") { }
+
+    #endregion
+
+    #region Remove Item
 
     /// <summary>
     /// Remove uma marca do repositório.
@@ -45,6 +45,10 @@ public class MarcaController : BaseController<Marca>, IEntityController
             }
         }
     }
+
+    #endregion
+
+    #region Load Countries
 
     /// <summary>
     /// Carrega a lista de países a partir de um ficheiro JSON.
@@ -89,4 +93,6 @@ public class MarcaController : BaseController<Marca>, IEntityController
             return new List<string>();
         }
     }
+
+    #endregion
 }

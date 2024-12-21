@@ -1,14 +1,4 @@
-﻿/**
- * @file AddVendaForm.cs
- * @brief Formulário para adicionar vendas.
- * 
- * Este formulário permite registar vendas, associar clientes, adicionar produtos à fatura, 
- * calcular totais (bruto e líquido) e verificar campanhas promocionais aplicáveis.
- * 
-* @author Miguel Areal
-* @date 12/2024
- */
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using poo_tp_29559.Repositories.Enumerators;
@@ -20,21 +10,31 @@ using System.Windows.Forms;
 
 namespace poo_tp_29559.Views
 {
+    /// <summary>
+    /// Formulário para adicionar vendas.
+    /// Este formulário permite registar vendas, associar clientes, adicionar produtos à fatura, 
+    /// calcular totais (bruto e líquido) e verificar campanhas promocionais aplicáveis.
+    /// </summary>
     public partial class AddVendaForm : MetroForm
     {
+        #region Variables
         private readonly VendaCompraController _controllerVenda;
         private UtilizadorController utilizadorController;
         private ProdutoController produtoController;
         private CategoriaController categoriaController;
         private MarcaController marcaController;
 
-
         private List<Utilizador> _clientes;
         private List<Produto>? _produtos;
 
         int mesesGarantia = 36;
         decimal totalBruto = 0, totalLiquido = 0;
+        #endregion
 
+        #region Constructor and Initialization
+        /// <summary>
+        /// Construtor da classe AddVendaForm. Inicializa os controladores e carrega os dados iniciais.
+        /// </summary>
         public AddVendaForm()
         {
             InitializeComponent();
@@ -44,14 +44,16 @@ namespace poo_tp_29559.Views
             categoriaController = new CategoriaController();
             marcaController = new MarcaController();
 
-
             CarregaProdutos();
             CarregaClientes();
             CarregaMetodosPagamento();
-
         }
+        #endregion
 
-        // Carrega produtos e ordena-os na combobox.
+        #region Loading Methods
+        /// <summary>
+        /// Carrega os produtos e os ordena na combobox.
+        /// </summary>
         private void CarregaProdutos()
         {
             _produtos = produtoController.GetRawProdutos();
@@ -64,6 +66,9 @@ namespace poo_tp_29559.Views
             }
         }
 
+        /// <summary>
+        /// Carrega os clientes na combobox.
+        /// </summary>
         private void CarregaClientes()
         {
             _clientes = utilizadorController.GetClientes(); // Chama o controlador para obter apenas os clientes.
@@ -74,10 +79,12 @@ namespace poo_tp_29559.Views
                 cmbClientes.DisplayMember = "Nome";
                 cmbClientes.ValueMember = "Id";
                 cmbClientes.SelectedIndex = 0;
-            }          
+            }
         }
 
-        // Carregar métodos de pagamento, do enumerador
+        /// <summary>
+        /// Carrega os métodos de pagamento a partir de um enumerador.
+        /// </summary>
         private void CarregaMetodosPagamento()
         {
             var metodosPagamento = EnumHelper.GetEnumDescriptions<MetodoPagamento>();
@@ -86,184 +93,26 @@ namespace poo_tp_29559.Views
             cmbMetodoPagamento.DisplayMember = "Key";
             cmbMetodoPagamento.ValueMember = "Value";
         }
+        #endregion
 
-        private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        #region Form Events
+
+        /// <summary>
+        /// Evento acionado quando se edita uma célula na tabela.
+        /// Atualiza os totais monetários.
+        /// </summary>
+        private void dgvFatura_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica se há um cliente selecionado
-            Utilizador? clienteSelecionado = cmbClientes.SelectedItem as Utilizador;
-
-            if (clienteSelecionado != null)
+            if (e.ColumnIndex == dgvFatura.Columns["Quantidade"].Index)
             {
-                // Se o cliente for válido, atribui o NIF ao campo txtNIF
-                txtNIF.Text = clienteSelecionado.Nif.ToString();
+                AtualizarTotais();
             }
         }
 
-
-        private void txtNIF_TextChanged(object sender, EventArgs e)
-        {
-            string enteredNif = txtNIF.Text;
-
-            // Verifica se o NIF introduzido não está vazio e se é um número válido
-            if (!string.IsNullOrWhiteSpace(enteredNif) && int.TryParse(enteredNif, out int nifParsed))
-            {
-                // Verifica se existe algum cliente correspondente com esse NIF
-                
-                var clienteCorrespondente = _clientes.FirstOrDefault(c => c.Nif == nifParsed);
-                if (clienteCorrespondente != null)
-                {
-                    cmbClientes.SelectedItem = clienteCorrespondente; 
-                }
-                else
-                {
-                    cmbClientes.SelectedIndex = -1;
-                }
-
-
-                // Sempre que o texto de NIF alterar, calcula a garantia de venda
-                if (enteredNif.Length == 9) // Verifica se o NIF introduzido tem exatamente 9 caracteres
-                {
-                    // Se NIF começar com '1', '2' ou '3', é cliente particular
-                    // Caso contrário, é empresa
-                    if (enteredNif.StartsWith("1") || enteredNif.StartsWith("2") || enteredNif.StartsWith("3"))
-                    {
-                        mesesGarantia = 36; // Garantia de 36 meses para cliente particular
-                    }
-                    else
-                    {
-                        mesesGarantia = 12; // Garantia de 12 meses para empresas
-                    }
-                }
-                else
-                {
-                    mesesGarantia = 36; // Valor padrão de garantia caso o NIF não tenha 9 caracteres
-                }
-
-            }
-            else
-            {
-                // Se o NIF não for válido, desmarcar a seleção do cliente
-                cmbClientes.SelectedIndex = -1;
-            }
-
-
-            // Atualiza o texto de garantia
-            txtGarantia.Text = $"{mesesGarantia} meses";
-        }
-
-       
-        // Atualizar o total bruto da venda e calcular o total líquido com descontos
-        private void AtualizarTotais()
-        {
-            decimal totalDesconto = 0;
-
-            foreach (DataGridViewRow row in dgvFatura.Rows)
-            {
-                if (row.Cells["Quantidade"].Value != null && row.Cells["PrecoUni"].Value != null && row.Cells["IDProduto"].Value != null)
-                {
-                    int quantidade = Convert.ToInt32(row.Cells["Quantidade"].Value);
-                    decimal precoUnitario = Convert.ToDecimal(row.Cells["PrecoUni"].Value);
-                    int produtoId = Convert.ToInt32(row.Cells["IDProduto"].Value);
-
-                    totalBruto += quantidade * precoUnitario;
-
-                    // Obter categoria do produto pelo ID
-                    Produto produto = (Produto)produtoController.GetById(produtoId);
-
-                    if (produto != null)
-                    {
-                        var desconto = ObterDescontoPorCategoria(produto.CategoriaID);
-                        totalDesconto += (quantidade * precoUnitario) * (desconto / 100);
-                    }
-                }
-            }
-
-            // Calcular o total líquido
-            totalLiquido = totalBruto - totalDesconto;
-
-            txtTotalBruto.Text = totalBruto.ToString("C");
-            txtTotalLiquido.Text = totalLiquido.ToString("C");
-        }
-
-
-
-        // Obter o desconto aplicável à categoria de um produto
-        private decimal ObterDescontoPorCategoria(int? categoriaId)
-        {
-            CampanhaRepo campanhaRepo = new();
-            var campanhas = campanhaRepo.GetAll();
-
-            // Verificar se existe uma campanha válida para a categoria
-            var campanhaValida = campanhas.FirstOrDefault(c => c.CategoriaId == categoriaId && campanhaRepo.IsCampanhaValida(c));
-
-            if (campanhaValida != null)
-            {
-                return campanhaValida.PercentagemDesc ?? 0;
-            }
-
-            return 0; // Sem desconto
-        }
-
-
-        // Verificar campanhas baseadas nos dados na dgvFatura
-        private void VerificarCampanhas()
-        {
-            CampanhaRepo campanhaRepo = new();
-            List<Campanha> campanhas = campanhaRepo.GetAll();
-
-            // Obter categorias dos produtos na fatura
-            var categoriasNaFatura = dgvFatura.Rows
-                .Cast<DataGridViewRow>()
-                .Select(row => row.Cells["IDProduto"].Value)
-                .Where(idProduto => idProduto != null)
-                .Select(idProduto =>
-                {
-                    Produto produto = (Produto)produtoController.GetById(Convert.ToInt32(idProduto));
-                    return produto?.CategoriaID;
-                })
-                .Where(categoriaId => categoriaId != null)
-                .Distinct()
-                .ToList();
-
-            // Filtrar campanhas aplicáveis
-            var campanhasAplicaveis = campanhas
-                .Where(c => categoriasNaFatura.Contains(c.CategoriaId) && campanhaRepo.IsCampanhaValida(c))
-                .ToList();
-
-            AtualizaListViewCampanhas(campanhasAplicaveis);
-        }
-
-
-        // Atualizar o ListView com as campanhas aplicáveis
-        private void AtualizaListViewCampanhas(List<Campanha> campanhas)
-        {
-            listViewCampanhas.Items.Clear();
-            foreach (var campanha in campanhas)
-            {
-                ListViewItem item = new ListViewItem(campanha.Nome);
-                item.SubItems.Add(ObterNomeCategoria(campanha.CategoriaId));
-                item.SubItems.Add($"{campanha.PercentagemDesc}%");
-                listViewCampanhas.Items.Add(item);
-            }
-        }
-
-
-        // Retorna nome de categoria através do ID
-        private string ObterNomeCategoria(int categoriaId)
-        {
-            Categoria categoria = (Categoria)categoriaController.GetById(categoriaId);
-            return categoria.Nome ?? "Desconhecida";
-           
-        }
-
-        // Retorna nome de marca através do ID
-        private string ObterNomeMarca(int marcaId)
-        {
-            Marca marca = (Marca)marcaController.GetById(marcaId);
-            return marca.Nome ?? "Desconhecida";
-        }
-       
-
+        /// <summary>
+        /// Evento acionado quando o NIF fica sem foco.
+        /// Realiza verificações.
+        /// </summary>
         private void txtNIF_Leave(object sender, EventArgs e)
         {
             // Verificar se o NIF tem exatamente 9 caracteres
@@ -283,6 +132,11 @@ namespace poo_tp_29559.Views
             }
         }
 
+        /// <summary>
+        /// Evento acionado quando botão de remover é clicado
+        /// Remove um item da fatura final.
+        /// </summary>
+        /// 
         private void btnRemItem_Click(object sender, EventArgs e)
         {
             if (dgvFatura.SelectedRows.Count == 0)
@@ -299,16 +153,11 @@ namespace poo_tp_29559.Views
             AtualizarTotais();
         }
 
-
-
-        private void dgvFatura_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dgvFatura.Columns["Quantidade"].Index)
-            {
-                AtualizarTotais();
-            }
-        }
-
+        /// <summary>
+        /// Evento acionado quando botão de confirmar é clicado
+        /// Valida a venda e executa a mesma.
+        /// </summary>
+        /// 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             // Validação de entrada
@@ -353,9 +202,181 @@ namespace poo_tp_29559.Views
 
         }
 
+        /// <summary>
+        /// Evento acionado quando o cliente é selecionado.
+        /// Atualiza o NIF com o valor do cliente selecionado.
+        /// </summary>
+        private void cmbClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Utilizador? clienteSelecionado = cmbClientes.SelectedItem as Utilizador;
 
-        // Validação da venda antes de gravar
-        // Tem de ter valores na dgvFatura e método de pagamento.
+            if (clienteSelecionado != null)
+            {
+                txtNIF.Text = clienteSelecionado.Nif.ToString();
+            }
+        }
+
+        /// <summary>
+        /// Evento acionado quando o texto do NIF é alterado.
+        /// Realiza validação do NIF e ajusta a garantia.
+        /// </summary>
+        private void txtNIF_TextChanged(object sender, EventArgs e)
+        {
+            string enteredNif = txtNIF.Text;
+
+            if (!string.IsNullOrWhiteSpace(enteredNif) && int.TryParse(enteredNif, out int nifParsed))
+            {
+                var clienteCorrespondente = _clientes.FirstOrDefault(c => c.Nif == nifParsed);
+                if (clienteCorrespondente != null)
+                {
+                    cmbClientes.SelectedItem = clienteCorrespondente;
+                }
+                else
+                {
+                    cmbClientes.SelectedIndex = -1;
+                }
+
+                if (enteredNif.Length == 9)
+                {
+                    if (enteredNif.StartsWith("1") || enteredNif.StartsWith("2") || enteredNif.StartsWith("3"))
+                    {
+                        mesesGarantia = 36;
+                    }
+                    else
+                    {
+                        mesesGarantia = 12;
+                    }
+                }
+                else
+                {
+                    mesesGarantia = 36;
+                }
+            }
+            else
+            {
+                cmbClientes.SelectedIndex = -1;
+            }
+
+            txtGarantia.Text = $"{mesesGarantia} meses";
+        }
+
+        /// <summary>
+        /// Atualiza os totais da fatura, incluindo o total bruto e o total líquido.
+        /// </summary>
+        private void AtualizarTotais()
+        {
+            decimal totalDesconto = 0;
+
+            foreach (DataGridViewRow row in dgvFatura.Rows)
+            {
+                if (row.Cells["Quantidade"].Value != null && row.Cells["PrecoUni"].Value != null && row.Cells["IDProduto"].Value != null)
+                {
+                    int quantidade = Convert.ToInt32(row.Cells["Quantidade"].Value);
+                    decimal precoUnitario = Convert.ToDecimal(row.Cells["PrecoUni"].Value);
+                    int produtoId = Convert.ToInt32(row.Cells["IDProduto"].Value);
+
+                    totalBruto += quantidade * precoUnitario;
+
+                    Produto produto = (Produto)produtoController.GetById(produtoId);
+
+                    if (produto != null)
+                    {
+                        var desconto = ObterDescontoPorCategoria(produto.CategoriaID);
+                        totalDesconto += (quantidade * precoUnitario) * (desconto / 100);
+                    }
+                }
+            }
+
+            totalLiquido = totalBruto - totalDesconto;
+
+            txtTotalBruto.Text = totalBruto.ToString("C");
+            txtTotalLiquido.Text = totalLiquido.ToString("C");
+        }
+
+        /// <summary>
+        /// Calcula o desconto aplicável a partir da categoria do produto.
+        /// </summary>
+        private decimal ObterDescontoPorCategoria(int? categoriaId)
+        {
+            CampanhaRepo campanhaRepo = new();
+            var campanhas = campanhaRepo.GetAll();
+
+            var campanhaValida = campanhas.FirstOrDefault(c => c.CategoriaId == categoriaId && campanhaRepo.IsCampanhaValida(c));
+
+            if (campanhaValida != null)
+            {
+                return campanhaValida.PercentagemDesc ?? 0;
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Verifica as campanhas aplicáveis aos produtos na fatura.
+        /// </summary>
+        private void VerificarCampanhas()
+        {
+            CampanhaRepo campanhaRepo = new();
+            List<Campanha> campanhas = campanhaRepo.GetAll();
+
+            var categoriasNaFatura = dgvFatura.Rows
+                .Cast<DataGridViewRow>()
+                .Select(row => row.Cells["IDProduto"].Value)
+                .Where(idProduto => idProduto != null)
+                .Select(idProduto =>
+                {
+                    Produto produto = (Produto)produtoController.GetById(Convert.ToInt32(idProduto));
+                    return produto?.CategoriaID;
+                })
+                .Where(categoriaId => categoriaId != null)
+                .Distinct()
+                .ToList();
+
+            var campanhasAplicaveis = campanhas
+                .Where(c => categoriasNaFatura.Contains(c.CategoriaId) && campanhaRepo.IsCampanhaValida(c))
+                .ToList();
+
+            AtualizaListViewCampanhas(campanhasAplicaveis);
+        }
+
+        /// <summary>
+        /// Atualiza o ListView com as campanhas aplicáveis.
+        /// </summary>
+        private void AtualizaListViewCampanhas(List<Campanha> campanhas)
+        {
+            listViewCampanhas.Items.Clear();
+            foreach (var campanha in campanhas)
+            {
+                ListViewItem item = new ListViewItem(campanha.Nome);
+                item.SubItems.Add(ObterNomeCategoria(campanha.CategoriaId));
+                item.SubItems.Add($"{campanha.PercentagemDesc}%");
+                listViewCampanhas.Items.Add(item);
+            }
+        }
+
+        /// <summary>
+        /// Retorna o nome da categoria a partir do ID.
+        /// </summary>
+        private string ObterNomeCategoria(int categoriaId)
+        {
+            Categoria categoria = (Categoria)categoriaController.GetById(categoriaId);
+            return categoria.Nome ?? "Desconhecida";
+        }
+
+        /// <summary>
+        /// Retorna o nome da marca a partir do ID.
+        /// </summary>
+        private string ObterNomeMarca(int marcaId)
+        {
+            Marca marca = (Marca)marcaController.GetById(marcaId);
+            return marca.Nome ?? "Desconhecida";
+        }
+        #endregion
+
+        #region Validation and Creation
+        /// <summary>
+        /// Valida a venda antes de ser registada.
+        /// </summary>
         private bool ValidarVenda()
         {
             if (dgvFatura.Rows.Count == 0)
@@ -367,7 +388,9 @@ namespace poo_tp_29559.Views
             return true;
         }
 
-        // Criar objeto Venda com os dados do formulário
+        /// <summary>
+        /// Cria o objeto Venda a partir dos dados do formulário.
+        /// </summary>
         private VendaCompra CriarVenda()
         {
             VendaCompra venda = new()
@@ -380,8 +403,8 @@ namespace poo_tp_29559.Views
                 FimDataGarantia = DateTime.Now.AddMonths(mesesGarantia).ToString("dd-MM-yyyy"),
 
                 MetodoPagamento = Enum.TryParse(cmbMetodoPagamento.SelectedValue?.ToString(), out MetodoPagamento metodo)
-                  ? metodo
-                  : (MetodoPagamento?)null
+                    ? metodo
+                    : (MetodoPagamento?)null
             };
 
             foreach (DataGridViewRow row in dgvFatura.Rows)
@@ -403,11 +426,8 @@ namespace poo_tp_29559.Views
                             ObterNomeCategoria(produto.CategoriaID),
                             ObterNomeMarca(produto.MarcaID),
                             quantidade,
-                            (int?)ObterDescontoPorCategoria(produto.CategoriaID) // Adicionado o argumento para percentagemDesc
-
+                            (int?)ObterDescontoPorCategoria(produto.CategoriaID)
                         );
-
-
 
                         venda.Itens.Add(itemVenda);
                     }
@@ -417,9 +437,14 @@ namespace poo_tp_29559.Views
             return venda;
         }
 
+        #endregion
+
+        #region Form Events
+        /// <summary>
+        /// Adiciona um produto à fatura e atualiza o estoque e os totais.
+        /// </summary>
         private void btnAddProduto_Click(object sender, EventArgs e)
         {
-
             Produto produtoSelecionado = cmbProdutos.SelectedItem as Produto;
             if (produtoSelecionado == null)
             {
@@ -429,7 +454,6 @@ namespace poo_tp_29559.Views
 
             int quantidadeDesejada = (int)nudQtd.Value;
 
-            // Verificar stock disponível considerando o que já foi adicionado na fatura
             int quantidadeTotalFatura = dgvFatura.Rows
                 .Cast<DataGridViewRow>()
                 .Where(row => row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
@@ -437,7 +461,6 @@ namespace poo_tp_29559.Views
 
             int quantidadeDisponivel = (produtoSelecionado.QuantidadeEmStock - quantidadeTotalFatura);
 
-            // Operador ternário para se a quantidade disponível for negativa, mostrar apenas 0.
             quantidadeDisponivel = quantidadeDisponivel < 0 ? 0 : quantidadeDisponivel;
 
             if (quantidadeDesejada <= 0 || quantidadeDesejada > quantidadeDisponivel)
@@ -446,7 +469,6 @@ namespace poo_tp_29559.Views
                 return;
             }
 
-            // Verificar se o produto já está na fatura e atualizar a quantidade
             foreach (DataGridViewRow row in dgvFatura.Rows)
             {
                 if (row.Cells["Produto"].Value?.ToString() == produtoSelecionado.Nome)
@@ -459,19 +481,16 @@ namespace poo_tp_29559.Views
                 }
             }
 
-            // Adicionar novo produto à fatura
             dgvFatura.Rows.Add(produtoSelecionado.Id, produtoSelecionado.Nome, ObterNomeCategoria(produtoSelecionado.CategoriaID), ObterNomeMarca(produtoSelecionado.MarcaID), quantidadeDesejada, produtoSelecionado.Preco);
             AtualizarTotais();
-
-            // Verificar campanhas aplicáveis
             VerificarCampanhas();
         }
-
-
+        
 
         private void btnAddProduto_MouseEnter(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.DodgerBlue;
         private void btnAddProduto_MouseLeave(object sender, EventArgs e) => btnAddProduto.ForeColor = Color.Black;
         private void btnRemItem_MouseEnter(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Red;
         private void btnRemItem_MouseLeave(object sender, EventArgs e) => btnRemItem.ForeColor = Color.Black;
+        #endregion
     }
 }

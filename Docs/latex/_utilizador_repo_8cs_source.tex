@@ -2,35 +2,40 @@
 \label{_utilizador_repo_8cs_source}\index{POO\_TP\_29559/Repositories/UtilizadorRepo.cs@{POO\_TP\_29559/Repositories/UtilizadorRepo.cs}}
 \textbf{ Ir para a documentação deste ficheiro.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Repositories}
-\DoxyCodeLine{00017\ \{}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }UtilizadorRepo\ :\ BaseRepo<Utilizador>}
-\DoxyCodeLine{00029\ \ \ \ \ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UtilizadorRepo()\ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}})\ \{\ \}}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Utilizador?\ ObterPorNIF(\textcolor{keywordtype}{int}\ nif)}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Nif,\ nif);}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Utilizador?\ ObterPorContacto(\textcolor{keywordtype}{string}\ contacto)}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contacto))}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ null\ se\ o\ contacto\ for\ inválido}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Contacto,\ contacto);\ \textcolor{comment}{//\ Busca\ o\ utilizador\ com\ o\ contacto\ fornecido}}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00069\ }
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Utilizador>\ GetAllClientes()}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items.Where(u\ =>\ !u.IsAdmin).ToList();}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00081\ \ \ \ \ \}}
-\DoxyCodeLine{00082\ \}}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Repositories}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\ \ \ \ \#region\ Class\ UtilizadorRepo}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }UtilizadorRepo\ :\ BaseRepo<Utilizador>}
+\DoxyCodeLine{00018\ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Constructor}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ UtilizadorRepo()\ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}})\ \{\ \}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Public\ Methods}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Utilizador?\ ObterPorNIF(\textcolor{keywordtype}{int}\ nif)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Nif,\ nif);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Utilizador?\ ObterPorContacto(\textcolor{keywordtype}{string}\ contacto)}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contacto))}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ null\ se\ o\ contacto\ for\ inválido}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Contacto,\ contacto);\ \textcolor{comment}{//\ Busca\ o\ utilizador\ com\ o\ contacto\ fornecido}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<Utilizador>\ GetAllClientes()}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items.Where(u\ =>\ !u.IsAdmin).ToList();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\ \ \ \ \#endregion}}
+\DoxyCodeLine{00077\ \}}
 
 \end{DoxyCode}

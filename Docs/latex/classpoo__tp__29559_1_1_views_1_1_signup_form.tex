@@ -2,7 +2,7 @@
 \label{classpoo__tp__29559_1_1_views_1_1_signup_form}\index{poo\_tp\_29559.Views.SignupForm@{poo\_tp\_29559.Views.SignupForm}}
 
 
-View responsável pelo formulário de registo.  
+Formulário responsável pelo registo de novos utilizadores.  
 
 
 Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Signup\+Form\begin{figure}[H]
@@ -19,16 +19,14 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Signup\+Form\be
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-View responsável pelo formulário de registo. 
+Formulário responsável pelo registo de novos utilizadores. 
 
-A View {\ttfamily Signup\+Form} permite ao utilizador criar uma nova conta, validando todos os campos necessários, como NIF, contacto e data de nascimento. Possui também integração com o controlador de utilizadores para verificar se os dados fornecidos são únicos. 
-
-Definido na linha \textbf{ 29} do ficheiro \textbf{ Signup\+Form.\+cs}.
+Definido na linha \textbf{ 12} do ficheiro \textbf{ Signup\+Form.\+cs}.
 
 
 
@@ -45,14 +43,14 @@ Construtor da classe {\ttfamily Signup\+Form}.
 
 Inicializa os componentes visuais do formulário e configura o controlador. 
 
-Definido na linha \textbf{ 39} do ficheiro \textbf{ Signup\+Form.\+cs}.
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Signup\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ UtilizadorController();}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ UtilizadorController();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -62,7 +60,7 @@ Definido na linha \textbf{ 39} do ficheiro \textbf{ Signup\+Form.\+cs}.
 \index{poo\_tp\_29559.Views.SignupForm@{poo\_tp\_29559.Views.SignupForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.SignupForm@{poo\_tp\_29559.Views.SignupForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Signup\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Signup\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

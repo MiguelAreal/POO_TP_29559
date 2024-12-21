@@ -15,20 +15,20 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Campa
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Add\+Upd\+Campanha\+Form} (\textbf{ int}? \textbf{ campanha\+Id}=\textbf{ null})
-\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Add\+Upd\+Campanha\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construtor do Add\+Upd\+Campanha\+Form. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 Formulário para a criação ou atualização de uma campanha. 
 
-Este formulário serve para criar uma nova campanha ou atualizar uma existente no sistema. O utilizador preenche o nome, a percentagem de desconto, as datas de início e fim, e a categoria associada. 
+Este formulário serve para criar uma nova campanha ou atualizar uma existente no sistema. O utilizador preenche o nome, a percentagem de desconto, as datas de início e fim, e a categoria associada.
 
-Definido na linha \textbf{ 30} do ficheiro \textbf{ Add\+Upd\+Campanha\+Form.\+cs}.
+Definido na linha \textbf{ 18} do ficheiro \textbf{ Add\+Upd\+Campanha\+Form.\+cs}.
 
 
 
@@ -41,39 +41,37 @@ Definido na linha \textbf{ 30} do ficheiro \textbf{ Add\+Upd\+Campanha\+Form.\+c
 
 
 
-Construtor do {\ttfamily Add\+Upd\+Campanha\+Form}. 
-
-Inicializa os controladores e carrega as categorias disponíveis. Se um ID for fornecido, carrega os dados da campanha para edição.
+Construtor do Add\+Upd\+Campanha\+Form. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em campanha\+Id} & ID opcional da campanha. Se fornecido, o formulário será usado para atualizar a campanha correspondente. \\
+{\em campanha\+Id} & ID opcional da campanha. Se fornecido, o formulário será usado para atualizar a campanha correspondente.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 46} do ficheiro \textbf{ Add\+Upd\+Campanha\+Form.\+cs}.
+Definido na linha \textbf{ 32} do ficheiro \textbf{ Add\+Upd\+Campanha\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ CampanhaController();}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \_categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \_campanhaId\ =\ campanhaId;}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaCategorias();}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_campanhaId.HasValue)}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LoadCampanhaData();}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dtpFim.Value\ =\ DateTime.Today.AddDays(1);\ \ \textcolor{comment}{//\ Data\ de\ fim\ padrão}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ CampanhaController();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \_categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \_campanhaId\ =\ campanhaId;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaCategorias();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_campanhaId.HasValue)}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LoadCampanhaData();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dtpFim.Value\ =\ DateTime.Today.AddDays(1);\ \ \textcolor{comment}{//\ Data\ de\ fim\ padrão}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -83,7 +81,7 @@ Definido na linha \textbf{ 46} do ficheiro \textbf{ Add\+Upd\+Campanha\+Form.\+c
 \index{poo\_tp\_29559.Views.AddUpdCampanhaForm@{poo\_tp\_29559.Views.AddUpdCampanhaForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddUpdCampanhaForm@{poo\_tp\_29559.Views.AddUpdCampanhaForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Campanha\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Campanha\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

@@ -104,78 +104,93 @@ $(document).ready(function(){initNavTree('_field_validator_8cs_source.html','');
 <div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="namespace_validation_library.html">    4</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_validation_library.html">ValidationLibrary</a></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>FieldValidator</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateFields(<a class="code hl_class" href="class_base_repo.html">Control</a>[] <a class="code hl_class" href="class_base_repo.html">controls</a>, <a class="code hl_class" href="class_base_repo.html">Label</a>[] <a class="code hl_class" href="class_base_repo.html">labels</a>, <a class="code hl_class" href="class_base_repo.html">Color</a> <a class="code hl_class" href="class_base_repo.html">successColor</a> = <span class="keywordflow">default</span>)</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">successColor</a> == <span class="keywordflow">default</span>)</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>FieldValidator</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">        #region ValidateFields</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateFields(Control[] controls, Label[] labels, Color successColor = <span class="keywordflow">default</span>)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            <span class="keywordflow">if</span> (successColor == <span class="keywordflow">default</span>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                successColor = Color.Black;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            }</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (controls.Length != labels.Length)</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <a class="code hl_class" href="class_base_repo.html">successColor</a> = <a class="code hl_class" href="class_base_repo.html">Color</a>.Black;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> ArgumentException(<span class="stringliteral">&quot;Array de controles e labels deve ter o mesmo número de itens.&quot;</span>);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">controls</a>.Length != <a class="code hl_class" href="class_base_repo.html">labels</a>.Length)</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            {</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                <span class="keywordflow">throw</span> <span class="keyword">new</span> <a class="code hl_class" href="class_base_repo.html">ArgumentException</a>(<span class="stringliteral">&quot;Array de controles e labels deve ter o mesmo número de itens.&quot;</span>);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <span class="keywordtype">bool</span> <a class="code hl_class" href="class_base_repo.html">isValid</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="keywordtype">bool</span> isValid = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; controls.Length; i++)</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                isValid &amp;= ValidateField(controls[i], labels[i], successColor);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_class" href="class_base_repo.html">i</a> = 0; <a class="code hl_class" href="class_base_repo.html">i</a> &lt; <a class="code hl_class" href="class_base_repo.html">controls</a>.Length; <a class="code hl_class" href="class_base_repo.html">i</a>++)</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                <a class="code hl_class" href="class_base_repo.html">isValid</a> &amp;= ValidateField(<a class="code hl_class" href="class_base_repo.html">controls</a>[<a class="code hl_class" href="class_base_repo.html">i</a>], <a class="code hl_class" href="class_base_repo.html">labels</a>[<a class="code hl_class" href="class_base_repo.html">i</a>], <a class="code hl_class" href="class_base_repo.html">successColor</a>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> isValid;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="preprocessor">        #endregion</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> <a class="code hl_class" href="class_base_repo.html">isValid</a>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateField(<a class="code hl_class" href="class_base_repo.html">Control</a> <a class="code hl_class" href="class_base_repo.html">control</a>, <a class="code hl_class" href="class_base_repo.html">Label</a> <a class="code hl_class" href="class_base_repo.html">label</a>, <a class="code hl_class" href="class_base_repo.html">Color</a> <a class="code hl_class" href="class_base_repo.html">successColor</a>)</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.<a class="code hl_class" href="class_base_repo.html">IsNullOrEmpty</a>(<a class="code hl_class" href="class_base_repo.html">control</a>.Text))</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">        #region ValidateField</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateField(Control control, Label label, Color successColor)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrEmpty(control.Text))</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                label.ForeColor = Color.Red;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                label.ForeColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.Red;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                label.ForeColor = successColor;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            }</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                label.ForeColor = <a class="code hl_class" href="class_base_repo.html">successColor</a>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            }</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateNineDigits(<span class="keywordtype">string</span> <a class="code hl_class" href="class_base_repo.html">number</a>, <a class="code hl_class" href="class_base_repo.html">Label</a> <a class="code hl_class" href="class_base_repo.html">label</a>, <a class="code hl_class" href="class_base_repo.html">Color</a> <a class="code hl_class" href="class_base_repo.html">successColor</a> = <span class="keywordflow">default</span>)</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">successColor</a> == <span class="keywordflow">default</span>)</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">        #endregion</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">        #region ValidateNineDigits</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateNineDigits(<span class="keywordtype">string</span> number, Label label, Color successColor = <span class="keywordflow">default</span>)</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            <span class="keywordflow">if</span> (successColor == <span class="keywordflow">default</span>)</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            {</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                successColor = Color.Black;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">if</span> (number.Length != 9 || !<span class="keywordtype">int</span>.TryParse(number, out _))</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                <a class="code hl_class" href="class_base_repo.html">successColor</a> = <a class="code hl_class" href="class_base_repo.html">Color</a>.Black;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">number</a>.Length != 9 || !<span class="keywordtype">int</span>.TryParse(<a class="code hl_class" href="class_base_repo.html">number</a>, <a class="code hl_class" href="class_base_repo.html">out</a> <a class="code hl_class" href="class_base_repo.html">_</a>))</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                label.ForeColor = Color.Red;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            }</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                label.ForeColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.Red;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                label.ForeColor = successColor;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            }</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                label.ForeColor = <a class="code hl_class" href="class_base_repo.html">successColor</a>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            }</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        }</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateDate(<a class="code hl_class" href="class_base_repo.html">DateTimePicker</a> <a class="code hl_class" href="class_base_repo.html">datePicker</a>, <a class="code hl_class" href="class_base_repo.html">Label</a> <a class="code hl_class" href="class_base_repo.html">label</a>)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <a class="code hl_class" href="class_base_repo.html">DateTime</a> <a class="code hl_class" href="class_base_repo.html">selectedDate</a> = <a class="code hl_class" href="class_base_repo.html">datePicker</a>.Value;</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">selectedDate</a> &gt; <a class="code hl_class" href="class_base_repo.html">DateTime</a>.Now)</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                label.ForeColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.Red;</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        }</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    }</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>}</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">        #endregion</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">        #region ValidateDate</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">bool</span> ValidateDate(DateTimePicker datePicker, Label label)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            DateTime selectedDate = datePicker.Value;</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">if</span> (selectedDate &gt; DateTime.Now)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                label.ForeColor = Color.Red;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">        #endregion</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
 </div>
-<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
 <div class="ttc" id="anamespace_validation_library_html"><div class="ttname"><a href="namespace_validation_library.html">ValidationLibrary</a></div><div class="ttdef"><b>Definição</b> <a href="_field_validator_8cs_source.html#l00004">FieldValidator.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

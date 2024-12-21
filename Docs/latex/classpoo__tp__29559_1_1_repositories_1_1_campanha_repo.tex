@@ -18,11 +18,11 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Campanha
 \begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Campanha\+Repo}. \end{DoxyCompactList}\item 
 \textbf{ bool} \textbf{ Is\+Campanha\+Valida} (\textbf{ Campanha} \textbf{ campanha})
 \begin{DoxyCompactList}\small\item\em Verifica se a campanha está dentro do período de validade. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Repo$<$ Campanha $>$}}
+\doxysubsection*{Membros públicos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Campanha $>$}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Base\+Repo} (\textbf{ string} \textbf{ file\+Path})
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. \end{DoxyCompactList}\item 
+\textbf{ Base\+Repo} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Base\+Repo$<$T$>$}. \end{DoxyCompactList}\item 
 \textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
 \begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
 \textbf{ virtual} \textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
@@ -36,14 +36,14 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Campanha
 \textbf{ virtual} ? \textbf{ T} \textbf{ Get\+By\+Property} (\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$ \textbf{ property\+Selector}, \textbf{ object} \textbf{ value})
 \begin{DoxyCompactList}\small\item\em Obtém um item com base em uma propriedade. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \textbf{ Base\+Repo$<$ Campanha $>$}}
+\doxysubsection*{Membros protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Campanha $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ void} \textbf{ Save\+Changes} ()
-\begin{DoxyCompactList}\small\item\em guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
 \textbf{ void} \textbf{ Set\+Id} (\textbf{ T} \textbf{ item})
 \begin{DoxyCompactList}\small\item\em Atribui um novo ID ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Repo$<$ Campanha $>$}}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Campanha $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ readonly} \textbf{ string} \textbf{ file\+Path}
@@ -55,14 +55,16 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Campanha
 \doxysubsection{Descrição detalhada}
 Repositório para a manipulação de campanhas. 
 
-A classe {\ttfamily Campanha\+Repo} herda de {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}$<$Campanha$>$} e é especializada na manipulação de objetos do tipo {\ttfamily Campanha}. Oferece métodos para verificar a validade de uma campanha com base nas suas datas de início e fim.
+A classe {\ttfamily Campanha\+Repo} herda de {\ttfamily Base\+Repo$<$Campanha$>$} e é especializada na manipulação de objetos do tipo {\ttfamily Campanha}. Oferece métodos para verificar a validade de uma campanha com base nas suas datas de início e fim. 
 
 \begin{DoxySeeAlso}{Veja também}
-\doxyref{Base\+Repo}{p. }{class_base_repo} 
+\doxyref{Base\+Repo$<$\+Campanha$>$}{p. }{classpoo__tp__29559_1_1_repositories_1_1_base_repo}
+
+
 \end{DoxySeeAlso}
 
 
-Definido na linha \textbf{ 27} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
+Definido na linha \textbf{ 15} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
 
 
 
@@ -77,13 +79,13 @@ Definido na linha \textbf{ 27} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
 
 Construtor da classe {\ttfamily Campanha\+Repo}. 
 
-Inicializa o repositório de campanhas com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily \doxyref{Data/campanhas.\+json}{p. }{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e}}. 
+Inicializa o repositório de campanhas com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily Data/campanhas.\+json}. 
 
-Definido na linha \textbf{ 35} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
+Definido na linha \textbf{ 25} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00035\ :\ base(\textcolor{stringliteral}{"{}Data/campanhas.json"{}})\ \{\ \}}
+\DoxyCodeLine{00025\ :\ base(\textcolor{stringliteral}{"{}Data/campanhas.json"{}})\ \{\ \}}
 
 \end{DoxyCode}
 
@@ -99,11 +101,11 @@ Definido na linha \textbf{ 35} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
 
 Verifica se a campanha está dentro do período de validade. 
 
-Este método verifica se a campanha fornecida está dentro do intervalo de datas válido (entre a data de início e a data de fim). A validade é determinada com base na data atual do sistema.
+Este método verifica se a campanha fornecida está dentro do intervalo de datas válido (entre a data de início e a data de fim). A validade é determinada com base na data atual do sistema. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em campanha} & A campanha a ser verificada. \\
+{\em campanha} & A campanha a ser verificada.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
@@ -111,23 +113,23 @@ Este método verifica se a campanha fornecida está dentro do intervalo de datas
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 47} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
+Definido na linha \textbf{ 41} do ficheiro \textbf{ Campanha\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ DateTime\ dataAtual\ =\ DateTime.Now;}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Converte\ as\ datas\ para\ DateTime}}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.TryParse(campanha.DataInicio,\ out\ DateTime\ dataInicio)\ \&\&}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DateTime.TryParse(campanha.DataFim,\ out\ DateTime\ dataFim))}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ a\ campanha\ está\ no\ período\ de\ validade}}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dataAtual\ >=\ dataInicio\ \&\&\ dataAtual\ <=\ dataFim;}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Caso\ as\ datas\ não\ sejam\ válidas}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ DateTime\ dataAtual\ =\ DateTime.Now;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Converte\ as\ datas\ para\ DateTime}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.TryParse(campanha.DataInicio,\ out\ DateTime\ dataInicio)\ \&\&}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DateTime.TryParse(campanha.DataFim,\ out\ DateTime\ dataFim))}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ a\ campanha\ está\ no\ período\ de\ validade}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dataAtual\ >=\ dataInicio\ \&\&\ dataAtual\ <=\ dataFim;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Caso\ as\ datas\ não\ sejam\ válidas}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

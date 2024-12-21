@@ -2,7 +2,7 @@
 \label{classpoo__tp__29559_1_1_repositories_1_1_utilizador_repo}\index{poo\_tp\_29559.Repositories.UtilizadorRepo@{poo\_tp\_29559.Repositories.UtilizadorRepo}}
 
 
-Repositório para a manipulação de utilizadores.  
+Repositório especializado na manipulação de utilizadores.  
 
 
 Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Utilizador\+Repo\begin{figure}[H]
@@ -22,11 +22,11 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Utilizad
 \begin{DoxyCompactList}\small\item\em Obtém um utilizador pelo Contacto. \end{DoxyCompactList}\item 
 \textbf{ List}$<$ \textbf{ Utilizador} $>$ \textbf{ Get\+All\+Clientes} ()
 \begin{DoxyCompactList}\small\item\em Obtém todos os utilizadores clientes. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Repo$<$ Utilizador $>$}}
+\doxysubsection*{Membros públicos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Utilizador $>$}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Base\+Repo} (\textbf{ string} \textbf{ file\+Path})
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. \end{DoxyCompactList}\item 
+\textbf{ Base\+Repo} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Base\+Repo$<$T$>$}. \end{DoxyCompactList}\item 
 \textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
 \begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
 \textbf{ virtual} \textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
@@ -40,14 +40,14 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Utilizad
 \textbf{ virtual} ? \textbf{ T} \textbf{ Get\+By\+Property} (\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$ \textbf{ property\+Selector}, \textbf{ object} \textbf{ value})
 \begin{DoxyCompactList}\small\item\em Obtém um item com base em uma propriedade. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \textbf{ Base\+Repo$<$ Utilizador $>$}}
+\doxysubsection*{Membros protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Utilizador $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ void} \textbf{ Save\+Changes} ()
-\begin{DoxyCompactList}\small\item\em guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
 \textbf{ void} \textbf{ Set\+Id} (\textbf{ T} \textbf{ item})
 \begin{DoxyCompactList}\small\item\em Atribui um novo ID ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Repo$<$ Utilizador $>$}}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Utilizador $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ readonly} \textbf{ string} \textbf{ file\+Path}
@@ -57,16 +57,13 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Utilizad
 
 
 \doxysubsection{Descrição detalhada}
-Repositório para a manipulação de utilizadores. 
+Repositório especializado na manipulação de utilizadores. 
 
-A classe {\ttfamily Utilizador\+Repo} herda de {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}$<$\doxyref{Utilizador}{p. }{class_utilizador}$>$} e é especializada na manipulação de objetos do tipo {\ttfamily \doxyref{Utilizador}{p. }{class_utilizador}}. Ela oferece funcionalidades adicionais para procurar utilizadores pelo NIF ou Contacto, bem como obter todos os utilizadores clientes a partir de um ficheiro JSON.
+A classe {\ttfamily Utilizador\+Repo} é uma especialização da classe base {\ttfamily Base\+Repo$<$Utilizador$>$}, responsável pela persistência e manipulação de utilizadores. A classe lida com operações específicas para objetos do tipo {\ttfamily Utilizador}, incluindo a busca por NIF, contacto e a obtenção de todos os utilizadores clientes. 
 
-\begin{DoxySeeAlso}{Veja também}
-\doxyref{Base\+Repo}{p. }{class_base_repo} 
-\end{DoxySeeAlso}
+$<$author$>$Miguel Areal$<$/author$>$ $<$date$>$12/2024$<$/date$>$ 
 
-
-Definido na linha \textbf{ 28} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
+Definido na linha \textbf{ 17} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 
 
@@ -81,13 +78,13 @@ Definido na linha \textbf{ 28} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 Construtor da classe {\ttfamily Utilizador\+Repo}. 
 
-Inicializa o repositório de utilizadores com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily \doxyref{Data/utilizadores.\+json}{p. }{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e}}. 
+Inicializa o repositório de utilizadores com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily Data/utilizadores.\+json}. 
 
-Definido na linha \textbf{ 36} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
+Definido na linha \textbf{ 27} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00036\ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}})\ \{\ \}}
+\DoxyCodeLine{00027\ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}})\ \{\ \}}
 
 \end{DoxyCode}
 
@@ -103,20 +100,20 @@ Definido na linha \textbf{ 36} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 Obtém todos os utilizadores clientes. 
 
-Este método retorna uma lista de todos os utilizadores que não são administradores.
+Este método retorna uma lista de todos os utilizadores que não são administradores. 
 
 \begin{DoxyReturn}{Retorna}
-Uma lista de utilizadores clientes encontrados. 
+Uma lista de utilizadores clientes encontrados.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 77} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
+Definido na linha \textbf{ 70} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items.Where(u\ =>\ !u.IsAdmin).ToList();}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ items.Where(u\ =>\ !u.IsAdmin).ToList();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_repositories_1_1_utilizador_repo_afc78489d8b1bf46846a081a8985599bc} 
@@ -129,30 +126,30 @@ Definido na linha \textbf{ 77} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 Obtém um utilizador pelo Contacto. 
 
-Este método permite buscar um utilizador através do seu Contacto. Caso o Contacto fornecido seja inválido, o método retorna {\ttfamily null}.
+Este método permite buscar um utilizador através do seu Contacto. Caso o Contacto fornecido seja inválido, o método retorna {\ttfamily null}. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em contacto} & O Contacto do utilizador a procurar. \\
+{\em contacto} & O Contacto do utilizador a procurar.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O utilizador se encontrado; caso contrário, null. 
+O utilizador se encontrado; caso contrário, null.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 60} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
+Definido na linha \textbf{ 53} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contacto))}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ null\ se\ o\ contacto\ for\ inválido}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Contacto,\ contacto);\ \textcolor{comment}{//\ Busca\ o\ utilizador\ com\ o\ contacto\ fornecido}}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(contacto))}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ null\ se\ o\ contacto\ for\ inválido}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Contacto,\ contacto);\ \textcolor{comment}{//\ Busca\ o\ utilizador\ com\ o\ contacto\ fornecido}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_repositories_1_1_utilizador_repo_a7e22d7ba146b6b25dc02331995b3662b} 
@@ -165,25 +162,25 @@ Definido na linha \textbf{ 60} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 Obtém um utilizador pelo NIF. 
 
-Este método permite buscar um utilizador através do seu NIF.
+Este método permite buscar um utilizador através do seu NIF. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em nif} & O NIF do utilizador a procurar. \\
+{\em nif} & O NIF do utilizador a procurar.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O utilizador se encontrado; caso contrário, null. 
+O utilizador se encontrado; caso contrário, null.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 46} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
+Definido na linha \textbf{ 39} do ficheiro \textbf{ Utilizador\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Nif,\ nif);}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetByProperty(u\ =>\ u.Nif,\ nif);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

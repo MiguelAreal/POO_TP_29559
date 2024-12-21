@@ -1,15 +1,4 @@
-﻿/**
- * @file ChildForm.cs
- * @brief Formulário para consulta de dados base.
- * 
- * Este formulário permite consultar Produtos, Categorias, Marcas, Campanhas, Vendas e Compras,
- * para além de disponibilizar ações para desencadear operações CRUD.
- * 
-* @author Miguel Areal
-* @date 12/2024
- */
-
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories.Enumerators;
 using System;
@@ -24,21 +13,24 @@ namespace poo_tp_29559.Views
 {
     public partial class ChildForm : MetroForm
     {
+        #region Private Fields
+
         private readonly IEntityController _controller;  /**< Controlador responsável pela interação com os dados */
         private readonly FormTypes _formType;  /**< Tipo do formulário atual (Produtos, Categorias, etc.) */
         private readonly Utilizador _utilizadorLogado;  /**< Utilizador atualmente autenticado */
         private BindingSource _bindingSource;  /**< Fonte de dados ligada ao DataGridView */
         private List<object> _items;  /**< Lista de itens a ser exibida */
 
-        /**
-        * @brief Construtor do `ChildForm`.
-        * 
-        * Inicializa os componentes do formulário, configura o tipo de formulário e o controlador responsável pelos dados,
-        * e exibe os itens na interface.
-        * 
-        * @param formType O tipo do formulário (Produtos, Categorias, etc.).
-        * @param utilizadorLogado O utilizador autenticado.
-        */
+        #endregion
+
+        #region Constructor
+
+        /// <summary>
+        /// Inicializa o formulário, configura o tipo de formulário e o controlador responsável pelos dados,
+        /// e exibe os itens na interface.
+        /// </summary>
+        /// <param name="formType">O tipo do formulário (Produtos, Categorias, etc.).</param>
+        /// <param name="utilizadorLogado">O utilizador autenticado.</param>
         public ChildForm(FormTypes formType, Utilizador utilizadorLogado)
         {
             InitializeComponent();
@@ -51,15 +43,15 @@ namespace poo_tp_29559.Views
             MostraItens(_controller.GetItems());
         }
 
-        /**
-         * @brief Altera as configurações visuais do formulário com base no tipo de formulário e permissões do utilizador.
-         * 
-         * Altera a visibilidade de botões e outras configurações visuais conforme o tipo de formulário e se o utilizador
-         * é um administrador ou cliente.
-         * 
-         * @param formType O tipo do formulário (Produtos, Categorias, etc.).
-         * @param isAdmin Determina se o utilizador é um administrador.
-         */
+        #endregion
+
+        #region Configuration Methods
+
+        /// <summary>
+        /// Altera as configurações visuais do formulário com base no tipo de formulário e permissões do utilizador.
+        /// </summary>
+        /// <param name="formType">O tipo do formulário (Produtos, Categorias, etc.).</param>
+        /// <param name="isAdmin">Determina se o utilizador é um administrador.</param>
         public void changeSettings(FormTypes formType, bool isAdmin)
         {
             Text = _formType.ToString();  /**< Define o título do formulário com base no tipo */
@@ -90,13 +82,10 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Cria o controlador apropriado com base no tipo de formulário.
-         * 
-         * Este método cria e retorna o controlador correspondente ao tipo de formulário atual.
-         * 
-         * @return Um controlador de entidade que gerencia os itens do tipo especificado.
-         */
+        /// <summary>
+        /// Cria o controlador apropriado com base no tipo de formulário.
+        /// </summary>
+        /// <returns>Um controlador de entidade que gerencia os itens do tipo especificado.</returns>
         private IEntityController CreateController()
         {
             return _formType switch
@@ -112,12 +101,14 @@ namespace poo_tp_29559.Views
             };
         }
 
-        /**
-         * @brief Exibe os itens no DataGridView.
-         * 
-         * Este método busca os dados do controlador, atualiza o BindingSource e exibe os itens no DataGridView.
-         * Se o utilizador autenticado for um cliente, nas compras, exibe apenas as compras do próprio utilizador.
-         */
+        #endregion
+
+        #region View Methods
+
+        /// <summary>
+        /// Exibe os itens no DataGridView.
+        /// </summary>
+        /// <param name="items">Lista de itens a ser exibida.</param>
         public void MostraItens(List<object> items)
         {
             if (_formType == FormTypes.Compras)
@@ -144,14 +135,11 @@ namespace poo_tp_29559.Views
             ToggleColumnVisibility("IsParticular", false);
         }
 
-        /**
-        * @brief Altera a visibilidade de uma coluna no DataGridView.
-        * 
-        * Este método esconde ou exibe uma coluna no DataGridView com base no nome da coluna.
-        * 
-        * @param columnName O nome da coluna a ser alterada.
-        * @param isVisible Se a coluna deve ser visível ou não.
-        */
+        /// <summary>
+        /// Altera a visibilidade de uma coluna no DataGridView.
+        /// </summary>
+        /// <param name="columnName">O nome da coluna a ser alterada.</param>
+        /// <param name="isVisible">Se a coluna deve ser visível ou não.</param>
         private void ToggleColumnVisibility(string columnName, bool isVisible)
         {
             if (dgvItens.Columns.Contains(columnName))
@@ -160,35 +148,28 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-        * @brief Altera a cor do texto de um botão.
-        * 
-        * Este método altera a cor do texto de um botão para o valor especificado.
-        * 
-        * @param button O botão cuja cor de texto será alterada.
-        * @param color A nova cor para o texto do botão.
-        */
+        #endregion
+
+        #region Auxiliary Methods
+
+        /// <summary>
+        /// Altera a cor do texto de um botão.
+        /// </summary>
+        /// <param name="button">O botão cuja cor de texto será alterada.</param>
+        /// <param name="color">A nova cor para o texto do botão.</param>
         private void ChangeButtonColor(Control button, Color color)
         {
             button.ForeColor = color;
         }
 
+        #endregion
 
-        private void btnRem_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnRem, Color.Red);
-        private void btnRem_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnRem, Color.Black);
-        private void btnAdd_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnAdd, Color.DodgerBlue);
-        private void btnAdd_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnAdd, Color.Black);
-        private void btnSeeVenda_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnConsultarAtualizar, Color.DodgerBlue);
-        private void btnSeeVenda_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnConsultarAtualizar, Color.Black);
+        #region Form Events
 
-        /**
-         * @brief Evento de clique no botão de remover.
-         * 
-         * Este evento é acionado quando o botão de remover é clicado. Ele exclui o item selecionado no DataGridView e no ficheiro de dados associado. 
-         * 
-         * @param sender O objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        /// <summary>
+        /// Evento de clique no botão de remover.
+        /// Exclui o item selecionado no DataGridView e no ficheiro de dados associado.
+        /// </summary>
         private void btnRem_Click(object sender, EventArgs e)
         {
             if (dgvItens.SelectedRows.Count > 0)
@@ -275,15 +256,10 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-        * @brief Evento de clique no botão de adicionar.
-        * 
-        * Este evento é acionado quando o botão de adicionar é clicado. Ele abre um novo formulário para adicionar um item.
-        * O novo form aberto depende do tipo de formulário a ser utilizado no momento.
-        * 
-        * @param sender O objeto que disparou o evento.
-        * @param e Dados do evento.
-        */
+        /// <summary>
+        /// Evento de clique no botão de adicionar.
+        /// Abre um novo formulário para adicionar um item.
+        /// </summary>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Form addForm;
@@ -324,15 +300,10 @@ namespace poo_tp_29559.Views
             MostraItens(_controller.GetItems());
         }
 
-        /**
-        * @brief Evento de clique no botão de ver movimento.
-        * 
-        * Este evento é acionado quando o botão de ver movimento é clicado.
-        * Ele abre um formulário com os detalhes do movimento selecionado, se este for válido.
-        * 
-        * @param sender O objeto que disparou o evento.
-        * @param e Dados do evento.
-        */
+        /// <summary>
+        /// Evento de clique no botão de ver movimento.
+        /// Abre um formulário com os detalhes do movimento selecionado, se este for válido.
+        /// </summary>
         private void btnConsultarAtualizar_Click(object sender, EventArgs e)
         {
             if (dgvItens.SelectedRows.Count > 0)
@@ -392,16 +363,10 @@ namespace poo_tp_29559.Views
             }
         }
 
-
-        /**
-        * @brief Evento de alteração de texto no campo de pesquisa.
-        * 
-        * Filtra os itens com base no texto inserido e atualiza a exibição no DataGridView.
-        * 
-        * @param sender O objeto que disparou o evento.
-        * @param e Dados do evento.
-        */
-
+        /// <summary>
+        /// Evento de alteração de texto no campo de pesquisa.
+        /// Filtra os itens com base no texto inserido e atualiza a exibição no DataGridView.
+        /// </summary>
         private void txtSearchItem_TextChanged(object sender, EventArgs e)
         {
             try
@@ -452,13 +417,17 @@ namespace poo_tp_29559.Views
             {
                 // Se ocorrer um erro durante a filtragem, apenas retorna sem fazer nada
                 // Pode ser interessante registrar o erro para depuração
-                // Console.WriteLine($"Erro ao filtrar itens: {ex.Message}");
+                // Console.WriteLine($"Erro ao filtrar itens: {ex.Message}"); 
                 return;
             }
         }
 
-
-
-
+        private void btnRem_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnRem, Color.Red);
+        private void btnRem_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnRem, Color.Black);
+        private void btnAdd_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnAdd, Color.DodgerBlue);
+        private void btnAdd_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnAdd, Color.Black);
+        private void btnSeeVenda_MouseEnter(object sender, EventArgs e) => ChangeButtonColor(btnConsultarAtualizar, Color.DodgerBlue);
+        private void btnSeeVenda_MouseLeave(object sender, EventArgs e) => ChangeButtonColor(btnConsultarAtualizar, Color.Black);
+        #endregion
     }
 }

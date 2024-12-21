@@ -353,7 +353,7 @@
             btnRemItem.TabIndex = 51;
             btnRemItem.Text = "🗑️";
             btnRemItem.TextAlign = ContentAlignment.MiddleCenter;
-            btnRemItem.Click += btnRemItem_Click_1;
+            btnRemItem.Click += btnRemItem_Click;
             btnRemItem.MouseEnter += btnRemItem_MouseEnter;
             btnRemItem.MouseLeave += btnRemItem_MouseLeave;
             // 

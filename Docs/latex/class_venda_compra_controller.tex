@@ -1,10 +1,5 @@
 \doxysection{Referência à classe Venda\+Compra\+Controller}
 \label{class_venda_compra_controller}\index{VendaCompraController@{VendaCompraController}}
-
-
-Controlador para a gestão de vendas e compras.  
-
-
 Diagrama de heranças da classe Venda\+Compra\+Controller\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,13 +10,13 @@ Diagrama de heranças da classe Venda\+Compra\+Controller\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Venda\+Compra\+Controller} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Venda\+Compra\+Controller}{p. }{class_venda_compra_controller}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Venda\+Compra\+Controller}{p. }{class_venda_compra_controller}. Inicializa o controlador com o caminho do ficheiro de dados onde as vendas são armazenadas. \end{DoxyCompactList}\item 
 \textbf{ override} \textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
-\begin{DoxyCompactList}\small\item\em Obtém os itens de vendas e compras para exibição. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Obtém os itens de vendas e compras formatados para exibição. \end{DoxyCompactList}\item 
 \textbf{ override} \textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Remove uma venda do sistema. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Remove uma venda do sistema após verificar a garantia e atualizar o estoque. \end{DoxyCompactList}\item 
 \textbf{ int} \textbf{ Calcula\+Garantia} (\textbf{ Utilizador} cliente)
-\begin{DoxyCompactList}\small\item\em Calcula a garantia da compra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calcula o período de garantia da compra com base no tipo de cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros públicos herdados de \textbf{ Base\+Controller$<$ Venda\+Compra $>$}}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,12 +33,12 @@ Diagrama de heranças da classe Venda\+Compra\+Controller\begin{figure}[H]
 \doxysubsection*{Membros públicos herdados de \textbf{ IEntity\+Controller}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
-\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
-\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
-\end{DoxyCompactItemize}
+object \textbf{ Get\+By\+Id} (int? id)
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador único. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um item existente no sistema. \end{DoxyCompactList}\item 
+List$<$ object $>$ \textbf{ Filtrar\+Itens} (List$<$ object $>$ items, string filtro, string? coluna)
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em critérios específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
 \doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Controller$<$ Venda\+Compra $>$}}
 \begin{DoxyCompactItemize}
@@ -55,19 +50,9 @@ Diagrama de heranças da classe Venda\+Compra\+Controller\begin{figure}[H]
 
 
 \doxysubsection{Descrição detalhada}
-Controlador para a gestão de vendas e compras. 
-
-A classe {\ttfamily \doxyref{Venda\+Compra\+Controller}{p. }{class_venda_compra_controller}} é responsável pela gestão das vendas e compras. Ela lida com a exibição das informações de vendas, cálculo de garantias e a remoção de itens de vendas, além de atualizar o stock dos produtos vendidos.
-
-\begin{DoxyAuthor}{Autor}
-Miguel Areal 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Data}
-12/2024 
-\end{DoxyDate}
 
 
-Definido na linha \textbf{ 17} do ficheiro \textbf{ Venda\+Compra\+Controller.\+cs}.
+Definido na linha \textbf{ 8} do ficheiro \textbf{ Venda\+Compra\+Controller.\+cs}.
 
 
 
@@ -80,15 +65,15 @@ Definido na linha \textbf{ 17} do ficheiro \textbf{ Venda\+Compra\+Controller.\+
 
 
 
-Construtor da classe {\ttfamily \doxyref{Venda\+Compra\+Controller}{p. }{class_venda_compra_controller}}. 
+Construtor da classe \doxyref{Venda\+Compra\+Controller}{p. }{class_venda_compra_controller}. Inicializa o controlador com o caminho do ficheiro de dados onde as vendas são armazenadas. 
 
-Inicializa o controlador com o caminho do ficheiro de dados onde as vendas são armazenadas. 
 
-Definido na linha \textbf{ 26} do ficheiro \textbf{ Venda\+Compra\+Controller.\+cs}.
+
+Definido na linha \textbf{ 25} do ficheiro \textbf{ Venda\+Compra\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00026\ :\ base(\textcolor{stringliteral}{"{}Data/vendas.json"{}})\ \{\ \}}
+\DoxyCodeLine{00025\ :\ base(\textcolor{stringliteral}{"{}Data/vendas.json"{}})\ \{\ \}}
 
 \end{DoxyCode}
 
@@ -102,45 +87,41 @@ Definido na linha \textbf{ 26} do ficheiro \textbf{ Venda\+Compra\+Controller.\+
 
 
 
-Calcula a garantia da compra. 
-
-Este método calcula a garantia de uma compra com base no NIF do cliente. Se o NIF começar com 1, 2 ou 3, é um cliente particular; caso contrário, é uma empresa. O cálculo de garantia varia dependendo do tipo de cliente.
+Calcula o período de garantia da compra com base no tipo de cliente. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em cliente} & O objeto {\ttfamily \doxyref{Utilizador}{p. }{class_utilizador}} que representa o cliente a efetuar a compra. \\
+{\em cliente} & O objeto Utilizador representando o cliente.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O número de meses de garantia (36 meses para clientes particulares, 12 meses para empresas). 
+O período de garantia em meses (36 para particulares, 12 para empresas).
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 121} do ficheiro \textbf{ Venda\+Compra\+Controller.\+cs}.
+Definido na linha \textbf{ 115} do ficheiro \textbf{ Venda\+Compra\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00122\ \ \ \ \ \{}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nifString\ =\ cliente.Nif.ToString();}
-\DoxyCodeLine{00124\ }
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nifString.Length\ ==\ 9)}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ o\ NIF\ começar\ com\ '1',\ '2'\ ou\ '3',\ é\ cliente\ particular}}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Caso\ contrário,\ é\ empresa}}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nifString.StartsWith(\textcolor{stringliteral}{"{}1"{}})\ ||\ nifString.StartsWith(\textcolor{stringliteral}{"{}2"{}})\ ||\ nifString.StartsWith(\textcolor{stringliteral}{"{}3"{}}))}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 36;\ \textcolor{comment}{//\ Garantia\ de\ 36\ meses\ para\ cliente\ particular}}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 12;\ \textcolor{comment}{//\ Garantia\ de\ 12\ meses\ para\ empresas}}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 36;\ \textcolor{comment}{//\ Valor\ predefinido\ de\ garantia\ caso\ o\ NIF\ não\ tenha\ 9\ caracteres}}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ nifString\ =\ cliente.Nif.ToString();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nifString.Length\ ==\ 9)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clientes\ particulares\ têm\ NIF\ começando\ com\ '1',\ '2'\ ou\ '3'}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nifString.StartsWith(\textcolor{stringliteral}{"{}1"{}})\ ||\ nifString.StartsWith(\textcolor{stringliteral}{"{}2"{}})\ ||\ nifString.StartsWith(\textcolor{stringliteral}{"{}3"{}}))}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 36;\ \textcolor{comment}{//\ Garantia\ de\ 36\ meses}}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 12;\ \textcolor{comment}{//\ Garantia\ de\ 12\ meses\ para\ empresas}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Garantia\ padrão\ em\ caso\ de\ NIF\ inválido}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 36;}
+\DoxyCodeLine{00134\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_venda_compra_controller_a812cf00477a1fad3bf6bf8d84ac8fb63} 
@@ -151,12 +132,10 @@ Definido na linha \textbf{ 121} do ficheiro \textbf{ Venda\+Compra\+Controller.\
 
 
 
-Obtém os itens de vendas e compras para exibição. 
-
-Este método recupera todas as vendas do repositório, traduz os dados das vendas para um formato de exibição e retorna a lista de itens formatados.
+Obtém os itens de vendas e compras formatados para exibição. 
 
 \begin{DoxyReturn}{Retorna}
-Uma lista de {\ttfamily Venda\+Compra\+View\+Model}, que contém as informações das vendas para exibição. 
+Uma lista de objetos representando as vendas e compras formatadas para exibição.
 \end{DoxyReturn}
 
 
@@ -170,31 +149,30 @@ Definido na linha \textbf{ 35} do ficheiro \textbf{ Venda\+Compra\+Controller.\+
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00036\ \ \ \ \ \{}
 \DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ List<VendaCompra>\ vendas\ =\ \_repository.GetAll();}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \_vendasComprasViewItems\ =\ \textcolor{keyword}{new}\ List<VendaCompraViewModel>();}
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ venda\ \textcolor{keywordflow}{in}\ vendas)}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ cliente\ por\ ID}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ Utilizador?\ cliente\ =\ (Utilizador?)\textcolor{keyword}{new}\ UtilizadorController().GetById(venda.ClienteID);}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criação\ de\ um\ ViewModel\ para\ exibição}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ var\ vendaCompraViewModel\ =\ \textcolor{keyword}{new}\ VendaCompraViewModel}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ venda.Id,}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ClienteNome\ =\ cliente?.Nome,}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ClienteID\ =\ cliente?.Id,}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NIF\ =\ venda.NIF,}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataVenda\ =\ venda.DataVenda,}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TotalLiquido\ =\ venda.TotalLiquido,}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MetodoPagamento\ =\ venda.MetodoPagamento.ToString()}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \_vendasComprasViewItems.Add(vendaCompraViewModel);}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_vendasComprasViewItems.Cast<\textcolor{keywordtype}{object}>().ToList();}
-\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \_vendasComprasViewItems\ =\ \textcolor{keyword}{new}\ List<VendaCompraViewModel>();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ venda\ \textcolor{keywordflow}{in}\ vendas)}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ o\ cliente\ pelo\ ID}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ Utilizador?\ cliente\ =\ (Utilizador?)\textcolor{keyword}{new}\ UtilizadorController().GetById(venda.ClienteID);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criação\ de\ um\ ViewModel\ formatado\ para\ exibição}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ var\ vendaCompraViewModel\ =\ \textcolor{keyword}{new}\ VendaCompraViewModel}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ venda.Id,}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ClienteNome\ =\ cliente?.Nome,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ClienteID\ =\ cliente?.Id,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NIF\ =\ venda.NIF,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataVenda\ =\ venda.DataVenda,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TotalLiquido\ =\ venda.TotalLiquido,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MetodoPagamento\ =\ venda.MetodoPagamento.ToString()}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \_vendasComprasViewItems.Add(vendaCompraViewModel);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_vendasComprasViewItems.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00061\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_venda_compra_controller_adaf95e7c5855fc3d27b14ac29d01ea55} 
@@ -205,18 +183,16 @@ Definido na linha \textbf{ 35} do ficheiro \textbf{ Venda\+Compra\+Controller.\+
 
 
 
-Remove uma venda do sistema. 
-
-Este método remove uma venda do sistema após atualizar o stock dos produtos vendidos, considerando a validade da garantia do produto.
+Remove uma venda do sistema após verificar a garantia e atualizar o estoque. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em item} & O item de venda a ser removido. \\
+{\em item} & O item de venda a ser removido.\\
 \hline
 \end{DoxyParams}
 
 \begin{DoxyExceptions}{Excepções}
-{\em Invalid\+Operation\+Exception} & Se a data de fim de garantia for inválida. \\
+{\em Invalid\+Operation\+Exception} & Se a data de fim da garantia for inválida.\\
 \hline
 \end{DoxyExceptions}
 
@@ -230,44 +206,37 @@ Definido na linha \textbf{ 72} do ficheiro \textbf{ Venda\+Compra\+Controller.\+
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00073\ \ \ \ \ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ ProdutoController\ produtoController;}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ produtoController\ =\ \textcolor{keyword}{new}\ ProdutoController();}
-\DoxyCodeLine{00076\ }
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ VendaCompra\ specificItem)}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ a\ venda\ está\ dentro\ do\ período\ de\ garantia}}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.TryParse(specificItem.FimDataGarantia,\ out\ DateTime\ dataFimGarantia))}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.Now\ <=\ dataFimGarantia)}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Itera\ pelos\ itens\ da\ venda}}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ItemVenda\ itemVenda\ \textcolor{keywordflow}{in}\ specificItem.Itens)}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Busca\ o\ produto\ correspondente\ no\ repositório}}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(itemVenda.ProdutoID);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualiza\ o\ stock\ do\ produto,\ devolvendo\ as\ unidades\ compradas}}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.QuantidadeEmStock\ +=\ itemVenda.Unidades;}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ as\ alterações\ no\ repositório\ de\ produtos}}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoController.UpdateItem(produto);}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\textcolor{stringliteral}{"{}A\ data\ de\ fim\ da\ garantia\ é\ inválida."{}});}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00105\ }
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ a\ venda\ após\ atualizar\ o\ stock}}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00109\ }
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ VendaCompra\ specificItem)}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoController\ produtoController\ =\ \textcolor{keyword}{new}\ ProdutoController();}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ a\ validade\ da\ garantia}}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.TryParse(specificItem.FimDataGarantia,\ out\ DateTime\ dataFimGarantia))}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.Now\ <=\ dataFimGarantia)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (ItemVenda\ itemVenda\ \textcolor{keywordflow}{in}\ specificItem.Itens)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(itemVenda.ProdutoID);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Reverte\ o\ estoque\ com\ base\ nas\ unidades\ vendidas}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.QuantidadeEmStock\ +=\ itemVenda.Unidades;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoController.UpdateItem(produto);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ InvalidOperationException(\textcolor{stringliteral}{"{}A\ data\ de\ fim\ da\ garantia\ é\ inválida."{}});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Remove\ a\ venda\ do\ repositório}}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
 
 \end{DoxyCode}
 

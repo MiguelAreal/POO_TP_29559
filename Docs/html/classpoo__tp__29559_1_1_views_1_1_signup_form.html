@@ -98,7 +98,7 @@ $(document).ready(function(){initNavTree('classpoo__tp__29559_1_1_views_1_1_sign
 </div><!--header-->
 <div class="contents">
 
-<p>View responsável pelo formulário de registo.  
+<p>Formulário responsável pelo registo de novos utilizadores.  
  <a href="classpoo__tp__29559_1_1_views_1_1_signup_form.html#details">Mais...</a></p>
 <div class="dynheader">
 Diagrama de heranças da classe poo_tp_29559.Views.SignupForm</div>
@@ -115,14 +115,13 @@ Membros públicos</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Membros protegidos</h2></td></tr>
-<tr class="memitem:a86e1aef1c3af67cc634302d3e73515a2" id="r_a86e1aef1c3af67cc634302d3e73515a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">override</a> <a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpoo__tp__29559_1_1_views_1_1_signup_form.html#a86e1aef1c3af67cc634302d3e73515a2">Dispose</a> (<a class="el" href="class_base_repo.html">bool</a> <a class="el" href="class_base_repo.html">disposing</a>)</td></tr>
+<tr class="memitem:a86e1aef1c3af67cc634302d3e73515a2" id="r_a86e1aef1c3af67cc634302d3e73515a2"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpoo__tp__29559_1_1_views_1_1_signup_form.html#a86e1aef1c3af67cc634302d3e73515a2">Dispose</a> (bool disposing)</td></tr>
 <tr class="separator:a86e1aef1c3af67cc634302d3e73515a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>View responsável pelo formulário de registo. </p>
-<p>A View <code>SignupForm</code> permite ao utilizador criar uma nova conta, validando todos os campos necessários, como NIF, contacto e data de nascimento. Possui também integração com o controlador de utilizadores para verificar se os dados fornecidos são únicos. </p>
+<div class="textblock"><p>Formulário responsável pelo registo de novos utilizadores. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_signup_form_8cs_source.html#l00029">29</a> do ficheiro <a class="el" href="_signup_form_8cs_source.html">SignupForm.cs</a>.</p>
+<p class="definition">Definido na linha <a class="el" href="_signup_form_8cs_source.html#l00012">12</a> do ficheiro <a class="el" href="_signup_form_8cs_source.html">SignupForm.cs</a>.</p>
 </div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="ad7a72924d95cb376cadc38d737fa8185" name="ad7a72924d95cb376cadc38d737fa8185"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7a72924d95cb376cadc38d737fa8185">&#9670;&#160;</a></span>SignupForm()</h2>
@@ -142,12 +141,12 @@ Membros protegidos</h2></td></tr>
 <p>Construtor da classe <code>SignupForm</code>. </p>
 <p>Inicializa os componentes visuais do formulário e configura o controlador. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_signup_form_8cs_source.html#l00039">39</a> do ficheiro <a class="el" href="_signup_form_8cs_source.html">SignupForm.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   40</span>        {</div>
-<div class="line"><span class="lineno">   41</span>            InitializeComponent();</div>
-<div class="line"><span class="lineno">   42</span>            _controller = <span class="keyword">new</span> <a class="code hl_class" href="class_utilizador_controller.html">UtilizadorController</a>();</div>
-<div class="line"><span class="lineno">   43</span>        }</div>
-<div class="ttc" id="aclass_utilizador_controller_html"><div class="ttname"><a href="class_utilizador_controller.html">UtilizadorController</a></div><div class="ttdoc">Controlador para a gestão dos utilizadores.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_controller_8cs_source.html#l00016">UtilizadorController.cs:17</a></div></div>
+<p class="definition">Definido na linha <a class="el" href="_signup_form_8cs_source.html#l00031">31</a> do ficheiro <a class="el" href="_signup_form_8cs_source.html">SignupForm.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   32</span>        {</div>
+<div class="line"><span class="lineno">   33</span>            InitializeComponent();</div>
+<div class="line"><span class="lineno">   34</span>            _controller = <span class="keyword">new</span> <a class="code hl_class" href="class_utilizador_controller.html">UtilizadorController</a>();</div>
+<div class="line"><span class="lineno">   35</span>        }</div>
+<div class="ttc" id="aclass_utilizador_controller_html"><div class="ttname"><a href="class_utilizador_controller.html">UtilizadorController</a></div><div class="ttdef"><b>Definição</b> <a href="_utilizador_controller_8cs_source.html#l00007">UtilizadorController.cs:8</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -162,9 +161,9 @@ Membros protegidos</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">override</a> <a class="el" href="class_base_repo.html">void</a> poo_tp_29559.Views.SignupForm.Dispose </td>
+          <td class="memname">override void poo_tp_29559.Views.SignupForm.Dispose </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">bool</a>&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>disposing</em></td><td>)</td>
           <td></td>
         </tr>
@@ -178,13 +177,12 @@ Membros protegidos</h2></td></tr>
 
 <p class="definition">Definido na linha <a class="el" href="_signup_form_8_designer_8cs_source.html#l00007">7</a> do ficheiro <a class="el" href="_signup_form_8_designer_8cs_source.html">SignupForm.Designer.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    8</span>        {</div>
-<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">disposing</a> &amp;&amp; (components != <span class="keyword">null</span>))</div>
+<div class="line"><span class="lineno">    9</span>            <span class="keywordflow">if</span> (disposing &amp;&amp; (components != <span class="keyword">null</span>))</div>
 <div class="line"><span class="lineno">   10</span>            {</div>
 <div class="line"><span class="lineno">   11</span>                components.Dispose();</div>
 <div class="line"><span class="lineno">   12</span>            }</div>
-<div class="line"><span class="lineno">   13</span>            <a class="code hl_class" href="class_base_repo.html">base</a>.Dispose(<a class="code hl_class" href="class_base_repo.html">disposing</a>);</div>
+<div class="line"><span class="lineno">   13</span>            base.Dispose(disposing);</div>
 <div class="line"><span class="lineno">   14</span>        }</div>
-<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add_0',['add',['../interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo.html#a7213c637b334c163a3ca47be6e70a59c',1,'poo_tp_29559.Interfaces.IRepo.Add()'],['../class_base_repo.html#a91e6165ad8668dceffa53b766d8c30d5',1,'BaseRepo.Add()']]],
+  ['add_0',['add',['../interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo.html#a7213c637b334c163a3ca47be6e70a59c',1,'poo_tp_29559.Interfaces.IRepo.Add()'],['../classpoo__tp__29559_1_1_repositories_1_1_base_repo.html#ae98f35598c3d32697cc92aa258731b99',1,'poo_tp_29559.Repositories.BaseRepo.Add()']]],
   ['addcompraform_1',['AddCompraForm',['../classpoo__tp__29559_1_1_views_1_1_add_compra_form.html#a319398f7e05cb2040e24fd4a024e1555',1,'poo_tp_29559::Views::AddCompraForm']]],
   ['additem_2',['AddItem',['../class_base_controller.html#a5d9d6b36c91e04aba0ce0e26dfd5a2ac',1,'BaseController']]],
   ['addupdcampanhaform_3',['AddUpdCampanhaForm',['../classpoo__tp__29559_1_1_views_1_1_add_upd_campanha_form.html#ad96a761745490e5406cf1c0d9ba81cb6',1,'poo_tp_29559::Views::AddUpdCampanhaForm']]],

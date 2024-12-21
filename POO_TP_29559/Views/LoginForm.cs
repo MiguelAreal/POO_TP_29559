@@ -1,80 +1,64 @@
-﻿/**
- * @file LoginForm.cs
- * @brief Formulário de Login da aplicação.
- *
- * Esta classe representa o formulário de login da aplicação, responsável
- * por capturar as credenciais do utilizador, validá-las e proceder à autenticação.
- * Também permite aceder ao formulário de registo e alternar a visibilidade da palavra-passe.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
-
-using ValidationLibrary;
+﻿using ValidationLibrary;
 
 namespace poo_tp_29559.Views
 {
-    /**
-     * @class LoginForm
-     * @brief View responsável pelo formulário de login.
-     * 
-     * A View `LoginForm` fornece a interface gráfica para o utilizador introduzir
-     * o NIF e a palavra-passe. Inclui validações de entrada, manipulação de eventos
-     * de botões e integração com o `UtilizadorController` para autenticação.
-     */
+    /// <summary>
+    /// View responsável pelo formulário de login.
+    /// </summary>
     public partial class LoginForm : Form
     {
-        /// @brief Controlador para manipulação dos utilizadores.
+        #region Private Fields
+
+        /// <summary>
+        /// Controlador para manipulação dos utilizadores.
+        /// </summary>
         private UtilizadorController _controller;
 
-        /**
-         * @brief Construtor da classe `LoginForm`.
-         * 
-         * Inicializa os componentes visuais do formulário e instancia o controlador.
-         */
+        #endregion
+
+        #region Constructors
+
+        /// <summary>
+        /// Construtor da classe `LoginForm`.
+        /// </summary>
+        /// <remarks>
+        /// Inicializa os componentes visuais do formulário e instancia o controlador.
+        /// </remarks>
         public LoginForm()
         {
             InitializeComponent();
             _controller = new UtilizadorController();
         }
 
-        /**
-         * @brief Evento para fechar a aplicação.
-         * 
-         * Executado quando o botão "Sair" é clicado.
-         * 
-         * @param sender Objeto que dispara o evento.
-         * @param e Argumentos do evento.
-         */
+        #endregion
+
+        #region Form Events
+
+        /// <summary>
+        /// Evento para fechar a aplicação.
+        /// </summary>
+        /// <param name="sender">Objeto que dispara o evento.</param>
+        /// <param name="e">Argumentos do evento.</param>
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        /**
-         * @brief Alterna a visibilidade da palavra-passe.
-         * 
-         * Este método alterna entre ocultar e mostrar os caracteres da palavra-passe
-         * no campo de texto, alterando a propriedade `UseSystemPasswordChar`.
-         * 
-         * @param sender Objeto que dispara o evento.
-         * @param e Argumentos do evento.
-         */
+        /// <summary>
+        /// Alterna a visibilidade da palavra-passe.
+        /// </summary>
+        /// <param name="sender">Objeto que dispara o evento.</param>
+        /// <param name="e">Argumentos do evento.</param>
         private void btnHidePwd_Click(object sender, EventArgs e)
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
         }
 
-        /**
-         * @brief Abre o formulário de registo.
-         * 
-         * Quando o utilizador clica em "Registe Aqui", o formulário de registo
-         * (`SignupForm`) é instanciado e exibido, enquanto o formulário de login
-         * é ocultado.
-         * 
-         * @param sender Objeto que dispara o evento.
-         * @param e Argumentos do evento.
-         */
+        /// <summary>
+        /// Abre o formulário de registo.
+        /// </summary>
+        /// <param name="sender">Objeto que dispara o evento.</param>
+        /// <param name="e">Argumentos do evento.</param>
         private void lblRegisteAqui_Click(object sender, EventArgs e)
         {
             SignupForm FormRegisto = new SignupForm();
@@ -82,18 +66,11 @@ namespace poo_tp_29559.Views
             this.Hide();
         }
 
-        /**
-         * @brief Valida os campos e realiza o login.
-         * 
-         * Este método valida o NIF e a palavra-passe introduzidos pelo utilizador
-         * usando a biblioteca `ValidationLibrary`. Se os campos forem válidos, 
-         * verifica as credenciais utilizando o `UtilizadorController`.
-         * Em caso de sucesso, abre o `MainForm` e passa o utilizador autenticado.
-         * Caso contrário, exibe uma mensagem de erro.
-         * 
-         * @param sender Objeto que dispara o evento.
-         * @param e Argumentos do evento.
-         */
+        /// <summary>
+        /// Valida os campos e realiza o login.
+        /// </summary>
+        /// <param name="sender">Objeto que dispara o evento.</param>
+        /// <param name="e">Argumentos do evento.</param>
         private void btnSubmit_Click(object sender, EventArgs e)
         {
             bool allvalid = true;
@@ -129,5 +106,7 @@ namespace poo_tp_29559.Views
                 MessageBox.Show("Utilizador ou palavra-passe inválidos.", "Erro de Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
     }
 }

@@ -1,15 +1,4 @@
-﻿/**
- * @file AddCampanhaForm.cs
- * @brief Formulário para adicionar ou atualizar uma campanha.
- *
- * Este formulário permite ao utilizador adicionar uma nova campanha ou atualizar uma existente, dependendo de um ID opcional fornecido.
- * Utiliza o `CampanhaController` para manipular campanhas e o `CategoriaController` para carregar as categorias disponíveis.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
-
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using System;
@@ -21,11 +10,10 @@ using ValidationLibrary;
 namespace poo_tp_29559.Views
 {
     /**
-     * @class AddUpdCampanhaForm
-     * @brief Formulário para a criação ou atualização de uma campanha.
+     * <summary>Formulário para a criação ou atualização de uma campanha.</summary>
      * 
-     * Este formulário serve para criar uma nova campanha ou atualizar uma existente no sistema. O utilizador preenche o nome,
-     * a percentagem de desconto, as datas de início e fim, e a categoria associada.
+     * <remarks>Este formulário serve para criar uma nova campanha ou atualizar uma existente no sistema. O utilizador preenche o nome,
+     * a percentagem de desconto, as datas de início e fim, e a categoria associada.</remarks>
      */
     public partial class AddUpdCampanhaForm : MetroForm
     {
@@ -35,14 +23,12 @@ namespace poo_tp_29559.Views
         private List<Categoria> _categorias;  /**< Lista de categorias disponíveis. */
         private Campanha _campanha;  /**< Instância da campanha em edição, se aplicável. */
 
-        /**
-         * @brief Construtor do `AddUpdCampanhaForm`.
-         * 
-         * Inicializa os controladores e carrega as categorias disponíveis.
-         * Se um ID for fornecido, carrega os dados da campanha para edição.
-         * 
-         * @param campanhaId ID opcional da campanha. Se fornecido, o formulário será usado para atualizar a campanha correspondente.
-         */
+        #region Constructors and Initialization
+
+        /// <summary>
+        /// Construtor do <see cref="AddUpdCampanhaForm"/>.
+        /// </summary>
+        /// <param name="campanhaId">ID opcional da campanha. Se fornecido, o formulário será usado para atualizar a campanha correspondente.</param>
         public AddUpdCampanhaForm(int? campanhaId = null)
         {
             InitializeComponent();
@@ -63,12 +49,17 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega os dados da campanha no formulário.
-         * 
-         * Preenche os campos do formulário com os dados da campanha correspondente ao ID fornecido.
-         * Caso a campanha não seja encontrada, exibe uma mensagem de erro.
-         */
+        #endregion
+
+        #region Loading Methods
+
+        /// <summary>
+        /// Carrega os dados da campanha no formulário.
+        /// </summary>
+        /// <remarks>
+        /// Preenche os campos do formulário com os dados da campanha correspondente ao ID fornecido.
+        /// Caso a campanha não seja encontrada, exibe uma mensagem de erro.
+        /// </remarks>
         private void LoadCampanhaData()
         {
             try
@@ -96,9 +87,9 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega as categorias disponíveis no combo box.
-         */
+        /// <summary>
+        /// Carrega as categorias disponíveis no combo box.
+        /// </summary>
         private void CarregaCategorias()
         {
             _categorias = _categoriaController.GetItems().Cast<Categoria>().ToList();
@@ -112,11 +103,16 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Evento de clique no botão de confirmação.
-         * 
-         * Valida os campos do formulário e cria ou atualiza a campanha no sistema.
-         */
+        #endregion
+
+        #region Form Events
+
+        /// <summary>
+        /// Evento de clique no botão de confirmação.
+        /// </summary>
+        /// <remarks>
+        /// Valida os campos do formulário e cria ou atualiza a campanha no sistema.
+        /// </remarks>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Control[] controls = { txtNome, nudPercentagemDesc, dtpIni, dtpFim, cmbCategoria };
@@ -166,5 +162,7 @@ namespace poo_tp_29559.Views
                 MessageBox.Show($"Erro ao salvar a campanha: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
     }
 }

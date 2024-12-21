@@ -2,49 +2,41 @@
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda}\index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 
 
-Representa um item de venda.  
+Representa um item de venda no sistema.  
 
 
 \doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Item\+Venda} (\textbf{ int} \textbf{ produto\+ID}, \textbf{ string} \textbf{ produto\+Nome}, \textbf{ decimal} \textbf{ preco\+Unitario}, \textbf{ int} \textbf{ categoria\+ID}, \textbf{ string} \textbf{ categoria\+Nome}, \textbf{ string} \textbf{ marca\+Nome}, \textbf{ int} \textbf{ unidades}, \textbf{ int}? \textbf{ percentagem\+Desc})
-\begin{DoxyCompactList}\small\item\em Construtor da classe Item\+Venda. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\textbf{ Item\+Venda} (int produto\+ID, string produto\+Nome, decimal preco\+Unitario, int categoria\+ID, string categoria\+Nome, string marca\+Nome, int unidades, int? percentagem\+Desc)
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Item\+Venda}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Propriedades}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ int} \textbf{ Produto\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Produto\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Identificador único do produto. \end{DoxyCompactList}\item 
-\textbf{ string} \textbf{ Produto\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string \textbf{ Produto\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome do produto. \end{DoxyCompactList}\item 
-\textbf{ decimal} \textbf{ Preco\+Unitario}\hspace{0.3cm}{\ttfamily  [get, set]}
+decimal \textbf{ Preco\+Unitario}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Preço unitário do produto. \end{DoxyCompactList}\item 
-\textbf{ int} \textbf{ Categoria\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Categoria\+ID}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Identificador da categoria do produto. \end{DoxyCompactList}\item 
-\textbf{ string} \textbf{ Categoria\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string \textbf{ Categoria\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome da categoria do produto. \end{DoxyCompactList}\item 
-\textbf{ string} \textbf{ Marca\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string \textbf{ Marca\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome da marca do produto. \end{DoxyCompactList}\item 
-\textbf{ int} \textbf{ Unidades}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Unidades}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Quantidade de unidades vendidas. \end{DoxyCompactList}\item 
-\textbf{ int}? \textbf{ Percentagem\+Desc}\hspace{0.3cm}{\ttfamily  [get, set]}
+int? \textbf{ Percentagem\+Desc}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Percentagem de desconto aplicada ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-Representa um item de venda. 
+Representa um item de venda no sistema. 
 
-A classe {\ttfamily Item\+Venda} armazena as informações de um item específico vendido, incluindo o produto, categoria, marca, preço unitário, unidades vendidas e o desconto aplicado. Esta classe é utilizada para representar os produtos vendidos em uma transação.
+A classe {\ttfamily Item\+Venda} armazena as informações de um produto específico vendido, incluindo dados como o nome do produto, categoria, marca, preço unitário, unidades vendidas e o desconto aplicado. Esta classe é usada para representar os produtos vendidos em uma transação. 
 
-\begin{DoxyAuthor}{Autor}
-Miguel Areal 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Data}
-12/2024 
-\end{DoxyDate}
-
-
-Definido na linha \textbf{ 22} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 19} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 
@@ -53,49 +45,47 @@ Definido na linha \textbf{ 22} do ficheiro \textbf{ Item\+Venda.\+cs}.
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!ItemVenda@{ItemVenda}}
 \index{ItemVenda@{ItemVenda}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{ItemVenda()}
-{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Item\+Venda (\begin{DoxyParamCaption}\item[{\textbf{ int}}]{produto\+ID,  }\item[{\textbf{ string}}]{produto\+Nome,  }\item[{\textbf{ decimal}}]{preco\+Unitario,  }\item[{\textbf{ int}}]{categoria\+ID,  }\item[{\textbf{ string}}]{categoria\+Nome,  }\item[{\textbf{ string}}]{marca\+Nome,  }\item[{\textbf{ int}}]{unidades,  }\item[{\textbf{ int}?}]{percentagem\+Desc }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Item\+Venda (\begin{DoxyParamCaption}\item[{int}]{produto\+ID,  }\item[{string}]{produto\+Nome,  }\item[{decimal}]{preco\+Unitario,  }\item[{int}]{categoria\+ID,  }\item[{string}]{categoria\+Nome,  }\item[{string}]{marca\+Nome,  }\item[{int}]{unidades,  }\item[{int?}]{percentagem\+Desc }\end{DoxyParamCaption})}
 
 
 
-Construtor da classe Item\+Venda. 
-
-Este construtor inicializa os campos da classe {\ttfamily Item\+Venda} com os valores fornecidos, representando um item de venda com todos os detalhes necessários, como produto, categoria, marca, unidades e desconto.
+Construtor da classe {\ttfamily Item\+Venda}. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em produto\+ID} & Identificador único do produto. \\
+{\em produto\+ID} & Identificador único do produto.\\
 \hline
-{\em produto\+Nome} & Nome do produto. \\
+{\em produto\+Nome} & Nome do produto.\\
 \hline
-{\em preco\+Unitario} & Preço unitário do produto. \\
+{\em preco\+Unitario} & Preço unitário do produto.\\
 \hline
-{\em categoria\+ID} & Identificador da categoria do produto. \\
+{\em categoria\+ID} & Identificador da categoria do produto.\\
 \hline
-{\em categoria\+Nome} & Nome da categoria do produto. \\
+{\em categoria\+Nome} & Nome da categoria do produto.\\
 \hline
-{\em marca\+Nome} & Nome da marca do produto. \\
+{\em marca\+Nome} & Nome da marca do produto.\\
 \hline
-{\em unidades} & Quantidade de unidades vendidas. \\
+{\em unidades} & Quantidade de unidades vendidas.\\
 \hline
-{\em percentagem\+Desc} & Percentagem de desconto aplicada ao item, se houver. \\
+{\em percentagem\+Desc} & Percentagem de desconto aplicada ao item, se houver.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 96} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 97} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoID\ =\ produtoID;}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoNome\ =\ produtoNome;}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUnitario\ =\ precoUnitario;}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaID\ =\ categoriaID;}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoriaNome;}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ MarcaNome\ =\ marcaNome;}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ Unidades\ =\ unidades;}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ PercentagemDesc\ =\ percentagemDesc;}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoID\ =\ produtoID;}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ ProdutoNome\ =\ produtoNome;}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ PrecoUnitario\ =\ precoUnitario;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaID\ =\ categoriaID;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoriaNome;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ MarcaNome\ =\ marcaNome;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ Unidades\ =\ unidades;}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ PercentagemDesc\ =\ percentagemDesc;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -105,7 +95,7 @@ Definido na linha \textbf{ 96} do ficheiro \textbf{ Item\+Venda.\+cs}.
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!CategoriaID@{CategoriaID}}
 \index{CategoriaID@{CategoriaID}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{CategoriaID}
-{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Categoria\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Categoria\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -113,18 +103,18 @@ Identificador da categoria do produto.
 
 Este campo armazena o identificador da categoria associada ao produto no momento da venda. 
 
-Definido na linha \textbf{ 50} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 51} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00050\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00051\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda_a250342536e90cf2ec301ecd8cfeaed7d} 
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!CategoriaNome@{CategoriaNome}}
 \index{CategoriaNome@{CategoriaNome}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{CategoriaNome}
-{\footnotesize\ttfamily \textbf{ string} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Categoria\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Categoria\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -132,18 +122,18 @@ Nome da categoria do produto.
 
 Este campo armazena o nome da categoria associada ao produto no momento da venda. 
 
-Definido na linha \textbf{ 57} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 59} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00057\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00059\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda_a093984c7ea195312755e8d4e39d9b5c5} 
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!MarcaNome@{MarcaNome}}
 \index{MarcaNome@{MarcaNome}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{MarcaNome}
-{\footnotesize\ttfamily \textbf{ string} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Marca\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Marca\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -151,37 +141,37 @@ Nome da marca do produto.
 
 Este campo armazena o nome da marca associada ao produto no momento da venda. 
 
-Definido na linha \textbf{ 64} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 67} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00064\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00067\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda_a7f9403d60ac1d7b79d41e0daf1609a65} 
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!PercentagemDesc@{PercentagemDesc}}
 \index{PercentagemDesc@{PercentagemDesc}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{PercentagemDesc}
-{\footnotesize\ttfamily \textbf{ int}? poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Percentagem\+Desc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int? poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Percentagem\+Desc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
 Percentagem de desconto aplicada ao item. 
 
-Este campo armazena a percentagem de desconto aplicada ao item na venda, se houver. Pode ser nulo. 
+Este campo armazena a percentagem de desconto aplicada ao item na venda. Pode ser {\ttfamily null} caso não haja desconto. 
 
-Definido na linha \textbf{ 78} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 83} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00078\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00083\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda_a18d199eb56d13f9b013865f04be5358d} 
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!PrecoUnitario@{PrecoUnitario}}
 \index{PrecoUnitario@{PrecoUnitario}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{PrecoUnitario}
-{\footnotesize\ttfamily \textbf{ decimal} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Preco\+Unitario\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily decimal poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Preco\+Unitario\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -200,7 +190,7 @@ Definido na linha \textbf{ 43} do ficheiro \textbf{ Item\+Venda.\+cs}.
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!ProdutoID@{ProdutoID}}
 \index{ProdutoID@{ProdutoID}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{ProdutoID}
-{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Produto\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Produto\+ID\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -208,18 +198,18 @@ Identificador único do produto.
 
 Este campo armazena o identificador do produto associado ao item de venda. 
 
-Definido na linha \textbf{ 29} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 27} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00027\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda_a4d296856504b4acc5080c08ebf627d0f} 
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!ProdutoNome@{ProdutoNome}}
 \index{ProdutoNome@{ProdutoNome}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{ProdutoNome}
-{\footnotesize\ttfamily \textbf{ string} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Produto\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Produto\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -227,18 +217,18 @@ Nome do produto.
 
 Este campo armazena o nome do produto no momento da venda. 
 
-Definido na linha \textbf{ 36} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 35} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00036\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00035\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_item_venda_a8d7e11042bab4494ef4031d4dda2450c} 
 \index{poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}!Unidades@{Unidades}}
 \index{Unidades@{Unidades}!poo\_tp\_29559.Models.ItemVenda@{poo\_tp\_29559.Models.ItemVenda}}
 \doxysubsubsection{Unidades}
-{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Unidades\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Item\+Venda.\+Unidades\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -246,11 +236,11 @@ Quantidade de unidades vendidas.
 
 Este campo armazena a quantidade de unidades vendidas de um determinado produto. 
 
-Definido na linha \textbf{ 71} do ficheiro \textbf{ Item\+Venda.\+cs}.
+Definido na linha \textbf{ 75} do ficheiro \textbf{ Item\+Venda.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00071\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00075\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 

@@ -2,26 +2,27 @@
 \label{interface_i_identifiable}\index{IIdentifiable@{IIdentifiable}}
 
 
-Interface para garantir que a classe possui um campo {\ttfamily Id}.  
+Interface para garantir que uma classe possui um identificador único.  
 
 
 Diagrama de heranças da classe IIdentifiable\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=0.893142cm]{interface_i_identifiable}
+\includegraphics[height=0.811594cm]{interface_i_identifiable}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Propriedades}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Identificador único do item. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
-Interface para garantir que a classe possui um campo {\ttfamily Id}. 
+Interface para garantir que uma classe possui um identificador único. 
 
-A interface {\ttfamily \doxyref{IIdentifiable}{p. }{interface_i_identifiable}} exige que as classes que a implementem possuam um campo {\ttfamily Id}, que é utilizado para identificar de forma única cada item dentro do sistema. 
+A interface {\ttfamily \doxyref{IIdentifiable}{p. }{interface_i_identifiable}} exige que as classes que a implementem possuam uma propriedade {\ttfamily Id}. ~\newline
+ Essa propriedade é usada para identificar de forma única cada instância dentro do sistema ou coleção. 
 
 Definido na linha \textbf{ 8} do ficheiro \textbf{ IIdentifiable.\+cs}.
 
@@ -32,15 +33,15 @@ Definido na linha \textbf{ 8} do ficheiro \textbf{ IIdentifiable.\+cs}.
 \index{IIdentifiable@{IIdentifiable}!Id@{Id}}
 \index{Id@{Id}!IIdentifiable@{IIdentifiable}}
 \doxysubsubsection{Id}
-{\footnotesize\ttfamily \textbf{ int} IIdentifiable.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int IIdentifiable.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
 Identificador único do item. 
 
-O campo {\ttfamily Id} é utilizado para identificar de forma única cada item numa coleção. Este campo deve ser implementado pelas classes que utilizam esta interface. 
+Deve ser implementado pelas classes que utilizam esta interface para permitir uma identificação única. 
 
-Implementado em \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_campanha_ae156f4392929907bc1e31ff27b531b2f}, \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_categoria_a9cb71979e4f6b167dad1847b31c19939}, \textbf{ Marca} \doxyref{}{p. }{class_marca_ab3221a85b4d93057d7b2e2558622552b}, \textbf{ Produto} \doxyref{}{p. }{class_produto_a859bdb6e26d12a1e1d7f89f25dbfc520}, \textbf{ Utilizador} \doxyref{}{p. }{class_utilizador_a2e229214fdbe214d83af47590d6edb8a} e \textbf{ Venda\+Compra} \doxyref{}{p. }{class_venda_compra_afd474fbfcbbf2e433aa8f55d161ae101}.
+Implementado em \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Campanha} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_campanha_ae156f4392929907bc1e31ff27b531b2f}, \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_categoria_a9cb71979e4f6b167dad1847b31c19939}, \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Marca} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_marca_a735b943cb244cb7ae497d3d364bf613e}, \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Produto} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_produto_a1fedc98116efba20ed241c792ac3f7a0}, \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_utilizador_a4c6ae25a80d443b680399b8fa270db51} e \textbf{ poo\+\_\+tp\+\_\+29559.\+Models.\+Venda\+Compra} \doxyref{}{p. }{classpoo__tp__29559_1_1_models_1_1_venda_compra_a9c9b1773834c70145613369cd7f901a6}.
 
 
 

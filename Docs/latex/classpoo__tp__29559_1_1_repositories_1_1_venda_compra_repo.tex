@@ -2,7 +2,7 @@
 \label{classpoo__tp__29559_1_1_repositories_1_1_venda_compra_repo}\index{poo\_tp\_29559.Repositories.VendaCompraRepo@{poo\_tp\_29559.Repositories.VendaCompraRepo}}
 
 
-Repositório para a manipulação de vendas e compras.  
+Repositório especializado na manipulação de vendas e compras.  
 
 
 Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Venda\+Compra\+Repo\begin{figure}[H]
@@ -16,11 +16,11 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Venda\+C
 \item 
 \textbf{ Venda\+Compra\+Repo} ()
 \begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Venda\+Compra\+Repo}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Repo$<$ Venda\+Compra $>$}}
+\doxysubsection*{Membros públicos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Venda\+Compra $>$}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Base\+Repo} (\textbf{ string} \textbf{ file\+Path})
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. \end{DoxyCompactList}\item 
+\textbf{ Base\+Repo} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Base\+Repo$<$T$>$}. \end{DoxyCompactList}\item 
 \textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
 \begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
 \textbf{ virtual} \textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
@@ -34,14 +34,14 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Venda\+C
 \textbf{ virtual} ? \textbf{ T} \textbf{ Get\+By\+Property} (\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$ \textbf{ property\+Selector}, \textbf{ object} \textbf{ value})
 \begin{DoxyCompactList}\small\item\em Obtém um item com base em uma propriedade. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \textbf{ Base\+Repo$<$ Venda\+Compra $>$}}
+\doxysubsection*{Membros protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Venda\+Compra $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ void} \textbf{ Save\+Changes} ()
-\begin{DoxyCompactList}\small\item\em guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
 \textbf{ void} \textbf{ Set\+Id} (\textbf{ T} \textbf{ item})
 \begin{DoxyCompactList}\small\item\em Atribui um novo ID ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Repo$<$ Venda\+Compra $>$}}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Venda\+Compra $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ readonly} \textbf{ string} \textbf{ file\+Path}
@@ -51,16 +51,13 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Venda\+C
 
 
 \doxysubsection{Descrição detalhada}
-Repositório para a manipulação de vendas e compras. 
+Repositório especializado na manipulação de vendas e compras. 
 
-A classe {\ttfamily Venda\+Compra\+Repo} herda de {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}$<$\doxyref{Venda\+Compra}{p. }{class_venda_compra}$>$} e é especializada na manipulação de objetos do tipo {\ttfamily \doxyref{Venda\+Compra}{p. }{class_venda_compra}}. Ela oferece as funcionalidades básicas de um repositório, como a adição, remoção, atualização e obtenção de vendas e compras a partir de um ficheiro JSON.
+A classe {\ttfamily Venda\+Compra\+Repo} é uma especialização da classe base {\ttfamily Base\+Repo$<$Venda\+Compra$>$}, responsável pela persistência e manipulação de objetos {\ttfamily Venda\+Compra}. A classe lida com operações específicas para vendas e compras, armazenando os dados em um ficheiro JSON. 
 
-\begin{DoxySeeAlso}{Veja também}
-\doxyref{Base\+Repo}{p. }{class_base_repo} 
-\end{DoxySeeAlso}
+$<$author$>$Miguel Areal$<$/author$>$ $<$date$>$12/2024$<$/date$>$ 
 
-
-Definido na linha \textbf{ 27} do ficheiro \textbf{ Venda\+Compra\+Repo.\+cs}.
+Definido na linha \textbf{ 16} do ficheiro \textbf{ Venda\+Compra\+Repo.\+cs}.
 
 
 
@@ -75,13 +72,13 @@ Definido na linha \textbf{ 27} do ficheiro \textbf{ Venda\+Compra\+Repo.\+cs}.
 
 Construtor da classe {\ttfamily Venda\+Compra\+Repo}. 
 
-Inicializa o repositório de vendas e compras com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily \doxyref{Data/vendas.\+json}{p. }{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e}}. 
+Inicializa o repositório de vendas e compras com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily Data/vendas.\+json}. 
 
-Definido na linha \textbf{ 35} do ficheiro \textbf{ Venda\+Compra\+Repo.\+cs}.
+Definido na linha \textbf{ 26} do ficheiro \textbf{ Venda\+Compra\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00035\ :\ base(\textcolor{stringliteral}{"{}Data/vendas.json"{}})\ \{\ \}}
+\DoxyCodeLine{00026\ :\ base(\textcolor{stringliteral}{"{}Data/vendas.json"{}})\ \{\ \}}
 
 \end{DoxyCode}
 

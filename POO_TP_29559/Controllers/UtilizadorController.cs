@@ -4,17 +4,18 @@ using poo_tp_29559.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 
-/// <summary>
-/// Controlador para a gestão dos utilizadores.
-/// Responsável pela gestão de utilizadores, incluindo operações como verificação de login, NIF, e contacto.
-/// Herda de <see cref="BaseController{Utilizador}"/> e implementa a interface <see cref="IEntityController"/>, oferecendo funcionalidades específicas para o trabalho com utilizadores.
-/// </summary>
 public class UtilizadorController : BaseController<Utilizador>, IEntityController
 {
+    #region Fields
+
     /// <summary>
     /// Repositório específico para a gestão de utilizadores.
     /// </summary>
     protected new UtilizadorRepo _repository;
+
+    #endregion
+
+    #region Constructor
 
     /// <summary>
     /// Construtor da classe <see cref="UtilizadorController"/>.
@@ -25,6 +26,10 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
         _repository = new UtilizadorRepo();
     }
 
+    #endregion
+
+    #region Get Items
+
     /// <summary>
     /// Obtém todos os utilizadores armazenados.
     /// </summary>
@@ -34,6 +39,10 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
         _items = _repository.GetAll();
         return _items.Cast<object>().ToList();
     }
+
+    #endregion
+
+    #region Verifications
 
     /// <summary>
     /// Verifica se o login do utilizador é válido com base no NIF e na palavra-passe fornecidos.
@@ -69,6 +78,10 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
         return user != null;
     }
 
+    #endregion
+
+    #region Get Specific User
+
     /// <summary>
     /// Obtém um utilizador específico pelo seu NIF.
     /// </summary>
@@ -89,6 +102,10 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
         return _repository.ObterPorContacto(contacto);
     }
 
+    #endregion
+
+    #region Get Clients
+
     /// <summary>
     /// Obtém todos os utilizadores que são clientes (não administradores), ordenados por nome.
     /// </summary>
@@ -98,4 +115,6 @@ public class UtilizadorController : BaseController<Utilizador>, IEntityControlle
         var clientes = _repository.GetAllClientes();
         return clientes.OrderBy(c => c.Nome).ToList();
     }
+
+    #endregion
 }

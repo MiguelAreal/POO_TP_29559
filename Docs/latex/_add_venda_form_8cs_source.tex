@@ -2,34 +2,35 @@
 \label{_add_venda_form_8cs_source}\index{POO\_TP\_29559/Views/AddVendaForm.cs@{POO\_TP\_29559/Views/AddVendaForm.cs}}
 \textbf{ Ir para a documentação deste ficheiro.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{using\ }MetroFramework.Forms;}
-\DoxyCodeLine{00012\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
-\DoxyCodeLine{00013\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
-\DoxyCodeLine{00014\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories.Enumerators;}
-\DoxyCodeLine{00015\ \textcolor{keyword}{using\ }System;}
-\DoxyCodeLine{00016\ \textcolor{keyword}{using\ }System.Collections.Generic;}
-\DoxyCodeLine{00017\ \textcolor{keyword}{using\ }System.Linq;}
-\DoxyCodeLine{00018\ \textcolor{keyword}{using\ }System.Reflection.Metadata.Ecma335;}
-\DoxyCodeLine{00019\ \textcolor{keyword}{using\ }System.Windows.Forms;}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
-\DoxyCodeLine{00022\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }AddVendaForm\ :\ MetroForm}
-\DoxyCodeLine{00024\ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ VendaCompraController\ \_controllerVenda;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ UtilizadorController\ utilizadorController;}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ProdutoController\ produtoController;}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CategoriaController\ categoriaController;}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ MarcaController\ marcaController;}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Utilizador>\ \_clientes;}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Produto>?\ \_produtos;}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mesesGarantia\ =\ 36;}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ decimal\ totalBruto\ =\ 0,\ totalLiquido\ =\ 0;}
-\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }MetroFramework.Forms;}
+\DoxyCodeLine{00002\ \textcolor{keyword}{using\ }poo\_tp\_29559.Models;}
+\DoxyCodeLine{00003\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories;}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ }poo\_tp\_29559.Repositories.Enumerators;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{00006\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{00008\ \textcolor{keyword}{using\ }System.Reflection.Metadata.Ecma335;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ }System.Windows.Forms;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Views}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }AddVendaForm\ :\ MetroForm}
+\DoxyCodeLine{00019\ \ \ \ \ \{}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Variables}}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ VendaCompraController\ \_controllerVenda;}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ UtilizadorController\ utilizadorController;}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ ProdutoController\ produtoController;}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ CategoriaController\ categoriaController;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ MarcaController\ marcaController;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Utilizador>\ \_clientes;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<Produto>?\ \_produtos;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mesesGarantia\ =\ 36;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ decimal\ totalBruto\ =\ 0,\ totalLiquido\ =\ 0;}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Constructor\ and\ Initialization}}
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AddVendaForm()}
 \DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
@@ -39,436 +40,393 @@
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();}
 \DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaProdutos();}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaClientes();}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaMetodosPagamento();}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Carrega\ produtos\ e\ ordena-\/os\ na\ combobox.}}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregaProdutos()}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtos\ =\ produtoController.GetRawProdutos();}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_produtos\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.DataSource\ =\ \_produtos;}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.DisplayMember\ =\ \textcolor{stringliteral}{"{}Nome"{}};}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.ValueMember\ =\ \textcolor{stringliteral}{"{}Id"{}};}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregaClientes()}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \_clientes\ =\ utilizadorController.GetClientes();\ \textcolor{comment}{//\ Chama\ o\ controlador\ para\ obter\ apenas\ os\ clientes.}}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clientes\ !=\ \textcolor{keyword}{null}\ \&\&\ \_clientes.Count\ >\ 0)}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.DataSource\ =\ \_clientes;}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.DisplayMember\ =\ \textcolor{stringliteral}{"{}Nome"{}};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.ValueMember\ =\ \textcolor{stringliteral}{"{}Id"{}};}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedIndex\ =\ 0;}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Carregar\ métodos\ de\ pagamento,\ do\ enumerador}}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregaMetodosPagamento()}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ var\ metodosPagamento\ =\ EnumHelper.GetEnumDescriptions<MetodoPagamento>();}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaProdutos();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaClientes();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaMetodosPagamento();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Loading\ Methods}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregaProdutos()}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtos\ =\ produtoController.GetRawProdutos();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_produtos\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.DataSource\ =\ \_produtos;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.DisplayMember\ =\ \textcolor{stringliteral}{"{}Nome"{}};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbProdutos.ValueMember\ =\ \textcolor{stringliteral}{"{}Id"{}};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregaClientes()}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \_clientes\ =\ utilizadorController.GetClientes();\ \textcolor{comment}{//\ Chama\ o\ controlador\ para\ obter\ apenas\ os\ clientes.}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_clientes\ !=\ \textcolor{keyword}{null}\ \&\&\ \_clientes.Count\ >\ 0)}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.DataSource\ =\ \_clientes;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.DisplayMember\ =\ \textcolor{stringliteral}{"{}Nome"{}};}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.ValueMember\ =\ \textcolor{stringliteral}{"{}Id"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedIndex\ =\ 0;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00084\ }
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.DataSource\ =\ metodosPagamento;}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.DisplayMember\ =\ \textcolor{stringliteral}{"{}Key"{}};}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.ValueMember\ =\ \textcolor{stringliteral}{"{}Value"{}};}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ cmbClientes\_SelectedIndexChanged(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ há\ um\ cliente\ selecionado}}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ Utilizador?\ clienteSelecionado\ =\ cmbClientes.SelectedItem\ as\ Utilizador;}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clienteSelecionado\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ o\ cliente\ for\ válido,\ atribui\ o\ NIF\ ao\ campo\ txtNIF}}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Text\ =\ clienteSelecionado.Nif.ToString();}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00101\ }
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ txtNIF\_TextChanged(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ enteredNif\ =\ txtNIF.Text;}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ o\ NIF\ introduzido\ não\ está\ vazio\ e\ se\ é\ um\ número\ válido}}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(enteredNif)\ \&\&\ \textcolor{keywordtype}{int}.TryParse(enteredNif,\ out\ \textcolor{keywordtype}{int}\ nifParsed))}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifica\ se\ existe\ algum\ cliente\ correspondente\ com\ esse\ NIF}}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ clienteCorrespondente\ =\ \_clientes.FirstOrDefault(c\ =>\ c.Nif\ ==\ nifParsed);}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clienteCorrespondente\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedItem\ =\ clienteCorrespondente;\ }
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedIndex\ =\ -\/1;}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ }
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sempre\ que\ o\ texto\ de\ NIF\ alterar,\ calcula\ a\ garantia\ de\ venda}}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enteredNif.Length\ ==\ 9)\ \textcolor{comment}{//\ Verifica\ se\ o\ NIF\ introduzido\ tem\ exatamente\ 9\ caracteres}}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ NIF\ começar\ com\ '1',\ '2'\ ou\ '3',\ é\ cliente\ particular}}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Caso\ contrário,\ é\ empresa}}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enteredNif.StartsWith(\textcolor{stringliteral}{"{}1"{}})\ ||\ enteredNif.StartsWith(\textcolor{stringliteral}{"{}2"{}})\ ||\ enteredNif.StartsWith(\textcolor{stringliteral}{"{}3"{}}))}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mesesGarantia\ =\ 36;\ \textcolor{comment}{//\ Garantia\ de\ 36\ meses\ para\ cliente\ particular}}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mesesGarantia\ =\ 12;\ \textcolor{comment}{//\ Garantia\ de\ 12\ meses\ para\ empresas}}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mesesGarantia\ =\ 36;\ \textcolor{comment}{//\ Valor\ padrão\ de\ garantia\ caso\ o\ NIF\ não\ tenha\ 9\ caracteres}}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Se\ o\ NIF\ não\ for\ válido,\ desmarcar\ a\ seleção\ do\ cliente}}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedIndex\ =\ -\/1;}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00148\ }
-\DoxyCodeLine{00149\ }
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualiza\ o\ texto\ de\ garantia}}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.Text\ =\ \$\textcolor{stringliteral}{"{}\{mesesGarantia\}\ meses"{}};}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00153\ }
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualizar\ o\ total\ bruto\ da\ venda\ e\ calcular\ o\ total\ líquido\ com\ descontos}}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AtualizarTotais()}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ decimal\ totalDesconto\ =\ 0;}
-\DoxyCodeLine{00159\ }
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewRow\ row\ \textcolor{keywordflow}{in}\ dgvFatura.Rows)}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value\ !=\ \textcolor{keyword}{null}\ \&\&\ row.Cells[\textcolor{stringliteral}{"{}PrecoUni"{}}].Value\ !=\ \textcolor{keyword}{null}\ \&\&\ row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value);}
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ decimal\ precoUnitario\ =\ Convert.ToDecimal(row.Cells[\textcolor{stringliteral}{"{}PrecoUni"{}}].Value);}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ produtoId\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value);}
-\DoxyCodeLine{00167\ }
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalBruto\ +=\ quantidade\ *\ precoUnitario;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ CarregaMetodosPagamento()}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ var\ metodosPagamento\ =\ EnumHelper.GetEnumDescriptions<MetodoPagamento>();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.DataSource\ =\ metodosPagamento;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.DisplayMember\ =\ \textcolor{stringliteral}{"{}Key"{}};}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ cmbMetodoPagamento.ValueMember\ =\ \textcolor{stringliteral}{"{}Value"{}};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Form\ Events}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ dgvFatura\_CellEndEdit(\textcolor{keywordtype}{object}\ sender,\ DataGridViewCellEventArgs\ e)}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.ColumnIndex\ ==\ dgvFatura.Columns[\textcolor{stringliteral}{"{}Quantidade"{}}].Index)}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ txtNIF\_Leave(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ se\ o\ NIF\ tem\ exatamente\ 9\ caracteres}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (txtNIF.Text.Length\ !=\ 9)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}O\ NIF\ deve\ ter\ 9\ dígitos."{}},\ \textcolor{stringliteral}{"{}NIF\ inválido"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Clear();}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tentar\ converter\ o\ texto\ para\ um\ número\ inteiro\ (int)}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{int}.TryParse(txtNIF.Text,\ out\ \textcolor{keywordtype}{int}\ nifValue))}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}O\ NIF\ deve\ conter\ apenas\ números."{}},\ \textcolor{stringliteral}{"{}NIF\ inválido"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Clear();}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnRemItem\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dgvFatura.SelectedRows.Count\ ==\ 0)}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Selecione\ um\ item\ na\ fatura\ para\ remover."{}},\ \textcolor{stringliteral}{"{}Aviso"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ var\ row\ =\ dgvFatura.SelectedRows[0];}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Rows.Remove(row);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recalcular\ campanhas}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ VerificarCampanhas();}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnConfirmar\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ de\ entrada}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ValidarVenda())}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Por\ favor,\ preencha\ todos\ os\ campos\ obrigatórios\ e\ adicione\ pelo\ menos\ um\ produto."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00169\ }
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obter\ categoria\ do\ produto\ pelo\ ID}}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(produtoId);}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ a\ venda}}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompra\ venda\ =\ CriarVenda();}
 \DoxyCodeLine{00172\ }
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ desconto\ =\ ObterDescontoPorCategoria(produto.CategoriaID);}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalDesconto\ +=\ (quantidade\ *\ precoUnitario)\ *\ (desconto\ /\ 100);}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00180\ }
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcular\ o\ total\ líquido}}
-\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ totalLiquido\ =\ totalBruto\ -\/\ totalDesconto;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualizar\ o\ stock\ dos\ produtos\ vendidos}}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ itemVenda\ \textcolor{keywordflow}{in}\ venda.Itens)}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(itemVenda.ProdutoID);}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Subtrai\ a\ quantidade\ vendida\ do\ stock\ de\ cada\ produto}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.QuantidadeEmStock\ -\/=\ itemVenda.Unidades;}
 \DoxyCodeLine{00183\ }
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.Text\ =\ totalBruto.ToString(\textcolor{stringliteral}{"{}C"{}});}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.Text\ =\ totalLiquido.ToString(\textcolor{stringliteral}{"{}C"{}});}
-\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualiza\ o\ produto\ no\ repositório}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoController.UpdateItem(produto);}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00188\ }
-\DoxyCodeLine{00189\ }
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obter\ o\ desconto\ aplicável\ à\ categoria\ de\ um\ produto}}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ decimal\ ObterDescontoPorCategoria(\textcolor{keywordtype}{int}?\ categoriaId)}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ CampanhaRepo\ campanhaRepo\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhas\ =\ campanhaRepo.GetAll();}
-\DoxyCodeLine{00195\ }
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ se\ existe\ uma\ campanha\ válida\ para\ a\ categoria}}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaValida\ =\ campanhas.FirstOrDefault(c\ =>\ c.CategoriaId\ ==\ categoriaId\ \&\&\ campanhaRepo.IsCampanhaValida(c));}
-\DoxyCodeLine{00198\ }
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (campanhaValida\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ campanhaValida.PercentagemDesc\ ??\ 0;}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00203\ }
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ \textcolor{comment}{//\ Sem\ desconto}}
-\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00206\ }
-\DoxyCodeLine{00207\ }
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ campanhas\ baseadas\ nos\ dados\ na\ dgvFatura}}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ VerificarCampanhas()}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ a\ venda\ no\ repositório}}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompraRepo\ vendaRepo\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vendaRepo.Add(venda);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Venda\ registada\ com\ sucesso!"{}},\ \textcolor{stringliteral}{"{}Sucesso"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Information);}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fechar\ form\ após\ venda}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Ocorreu\ um\ erro\ ao\ gravar\ a\ venda:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00202\ }
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00204\ }
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ cmbClientes\_SelectedIndexChanged(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
 \DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ CampanhaRepo\ campanhaRepo\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ List<Campanha>\ campanhas\ =\ campanhaRepo.GetAll();}
-\DoxyCodeLine{00213\ }
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obter\ categorias\ dos\ produtos\ na\ fatura}}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ var\ categoriasNaFatura\ =\ dgvFatura.Rows}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<DataGridViewRow>()}
-\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(row\ =>\ row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value)}
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(idProduto\ =>\ idProduto\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(idProduto\ =>}
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(Convert.ToInt32(idProduto));}
-\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ produto?.CategoriaID;}
-\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(categoriaId\ =>\ categoriaId\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Distinct()}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Filtrar\ campanhas\ aplicáveis}}
-\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhasAplicaveis\ =\ campanhas}
-\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(c\ =>\ categoriasNaFatura.Contains(c.CategoriaId)\ \&\&\ campanhaRepo.IsCampanhaValida(c))}
-\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
-\DoxyCodeLine{00232\ }
-\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ AtualizaListViewCampanhas(campanhasAplicaveis);}
-\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00235\ }
-\DoxyCodeLine{00236\ }
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualizar\ o\ ListView\ com\ as\ campanhas\ aplicáveis}}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AtualizaListViewCampanhas(List<Campanha>\ campanhas)}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Clear();}
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ campanha\ \textcolor{keywordflow}{in}\ campanhas)}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ListViewItem\ item\ =\ \textcolor{keyword}{new}\ ListViewItem(campanha.Nome);}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.SubItems.Add(ObterNomeCategoria(campanha.CategoriaId));}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.SubItems.Add(\$\textcolor{stringliteral}{"{}\{campanha.PercentagemDesc\}\%"{}});}
-\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Add(item);}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00249\ }
-\DoxyCodeLine{00250\ }
-\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retorna\ nome\ de\ categoria\ através\ do\ ID}}
-\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ ObterNomeCategoria(\textcolor{keywordtype}{int}\ categoriaId)}
-\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria\ categoria\ =\ (Categoria)categoriaController.GetById(categoriaId);}
-\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ categoria.Nome\ ??\ \textcolor{stringliteral}{"{}Desconhecida"{}};}
-\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00258\ }
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retorna\ nome\ de\ marca\ através\ do\ ID}}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ ObterNomeMarca(\textcolor{keywordtype}{int}\ marcaId)}
-\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ Marca\ marca\ =\ (Marca)marcaController.GetById(marcaId);}
-\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ marca.Nome\ ??\ \textcolor{stringliteral}{"{}Desconhecida"{}};}
-\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00265\ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00266\ }
-\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ txtNIF\_Leave(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ se\ o\ NIF\ tem\ exatamente\ 9\ caracteres}}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (txtNIF.Text.Length\ !=\ 9)}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ Utilizador?\ clienteSelecionado\ =\ cmbClientes.SelectedItem\ as\ Utilizador;}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clienteSelecionado\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Text\ =\ clienteSelecionado.Nif.ToString();}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00218\ }
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ txtNIF\_TextChanged(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ enteredNif\ =\ txtNIF.Text;}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrWhiteSpace(enteredNif)\ \&\&\ \textcolor{keywordtype}{int}.TryParse(enteredNif,\ out\ \textcolor{keywordtype}{int}\ nifParsed))}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ clienteCorrespondente\ =\ \_clientes.FirstOrDefault(c\ =>\ c.Nif\ ==\ nifParsed);}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (clienteCorrespondente\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedItem\ =\ clienteCorrespondente;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedIndex\ =\ -\/1;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enteredNif.Length\ ==\ 9)}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (enteredNif.StartsWith(\textcolor{stringliteral}{"{}1"{}})\ ||\ enteredNif.StartsWith(\textcolor{stringliteral}{"{}2"{}})\ ||\ enteredNif.StartsWith(\textcolor{stringliteral}{"{}3"{}}))}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mesesGarantia\ =\ 36;}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mesesGarantia\ =\ 12;}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mesesGarantia\ =\ 36;}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cmbClientes.SelectedIndex\ =\ -\/1;}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ txtGarantia.Text\ =\ \$\textcolor{stringliteral}{"{}\{mesesGarantia\}\ meses"{}};}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00262\ }
+\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AtualizarTotais()}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ decimal\ totalDesconto\ =\ 0;}
+\DoxyCodeLine{00269\ }
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewRow\ row\ \textcolor{keywordflow}{in}\ dgvFatura.Rows)}
 \DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}O\ NIF\ deve\ ter\ 9\ dígitos."{}},\ \textcolor{stringliteral}{"{}NIF\ inválido"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
-\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Clear();}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00276\ }
-\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tentar\ converter\ o\ texto\ para\ um\ número\ inteiro\ (int)}}
-\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{int}.TryParse(txtNIF.Text,\ out\ \textcolor{keywordtype}{int}\ nifValue))}
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}O\ NIF\ deve\ conter\ apenas\ números."{}},\ \textcolor{stringliteral}{"{}NIF\ inválido"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
-\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ txtNIF.Clear();}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00285\ }
-\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnRemItem\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dgvFatura.SelectedRows.Count\ ==\ 0)}
-\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Selecione\ um\ item\ na\ fatura\ para\ remover."{}},\ \textcolor{stringliteral}{"{}Aviso"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
-\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00293\ }
-\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ var\ row\ =\ dgvFatura.SelectedRows[0];}
-\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Rows.Remove(row);}
-\DoxyCodeLine{00296\ }
-\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Recalcular\ campanhas}}
-\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ VerificarCampanhas();}
-\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00301\ }
-\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value\ !=\ \textcolor{keyword}{null}\ \&\&\ row.Cells[\textcolor{stringliteral}{"{}PrecoUni"{}}].Value\ !=\ \textcolor{keyword}{null}\ \&\&\ row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ decimal\ precoUnitario\ =\ Convert.ToDecimal(row.Cells[\textcolor{stringliteral}{"{}PrecoUni"{}}].Value);}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ produtoId\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value);}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalBruto\ +=\ quantidade\ *\ precoUnitario;}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(produtoId);}
+\DoxyCodeLine{00281\ }
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ desconto\ =\ ObterDescontoPorCategoria(produto.CategoriaID);}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ totalDesconto\ +=\ (quantidade\ *\ precoUnitario)\ *\ (desconto\ /\ 100);}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ totalLiquido\ =\ totalBruto\ -\/\ totalDesconto;}
+\DoxyCodeLine{00291\ }
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalBruto.Text\ =\ totalBruto.ToString(\textcolor{stringliteral}{"{}C"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ txtTotalLiquido.Text\ =\ totalLiquido.ToString(\textcolor{stringliteral}{"{}C"{}});}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00295\ }
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ decimal\ ObterDescontoPorCategoria(\textcolor{keywordtype}{int}?\ categoriaId)}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ CampanhaRepo\ campanhaRepo\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhas\ =\ campanhaRepo.GetAll();}
 \DoxyCodeLine{00303\ }
-\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ dgvFatura\_CellEndEdit(\textcolor{keywordtype}{object}\ sender,\ DataGridViewCellEventArgs\ e)}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (e.ColumnIndex\ ==\ dgvFatura.Columns[\textcolor{stringliteral}{"{}Quantidade"{}}].Index)}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaValida\ =\ campanhas.FirstOrDefault(c\ =>\ c.CategoriaId\ ==\ categoriaId\ \&\&\ campanhaRepo.IsCampanhaValida(c));}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (campanhaValida\ !=\ \textcolor{keyword}{null})}
 \DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ campanhaValida.PercentagemDesc\ ??\ 0;}
 \DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00311\ }
-\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnConfirmar\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ de\ entrada}}
-\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!ValidarVenda())}
-\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Por\ favor,\ preencha\ todos\ os\ campos\ obrigatórios\ e\ adicione\ pelo\ menos\ um\ produto."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
-\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00320\ }
-\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ a\ venda}}
-\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompra\ venda\ =\ CriarVenda();}
-\DoxyCodeLine{00323\ }
-\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
-\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualizar\ o\ stock\ dos\ produtos\ vendidos}}
-\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ itemVenda\ \textcolor{keywordflow}{in}\ venda.Itens)}
-\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(itemVenda.ProdutoID);}
-\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Subtrai\ a\ quantidade\ vendida\ do\ stock\ de\ cada\ produto}}
-\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.QuantidadeEmStock\ -\/=\ itemVenda.Unidades;}
+\DoxyCodeLine{00310\ }
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ VerificarCampanhas()}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ CampanhaRepo\ campanhaRepo\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ List<Campanha>\ campanhas\ =\ campanhaRepo.GetAll();}
+\DoxyCodeLine{00321\ }
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ var\ categoriasNaFatura\ =\ dgvFatura.Rows}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<DataGridViewRow>()}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(row\ =>\ row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value)}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(idProduto\ =>\ idProduto\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(idProduto\ =>}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(Convert.ToInt32(idProduto));}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ produto?.CategoriaID;}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \})}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(categoriaId\ =>\ categoriaId\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Distinct()}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
 \DoxyCodeLine{00334\ }
-\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Atualiza\ o\ produto\ no\ repositório}}
-\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoController.UpdateItem(produto);}
-\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00339\ }
-\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Guarda\ a\ venda\ no\ repositório}}
-\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompraRepo\ vendaRepo\ =\ \textcolor{keyword}{new}();}
-\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vendaRepo.Add(venda);}
-\DoxyCodeLine{00343\ }
-\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Venda\ registada\ com\ sucesso!"{}},\ \textcolor{stringliteral}{"{}Sucesso"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Information);}
-\DoxyCodeLine{00345\ }
-\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fechar\ form\ após\ venda}}
-\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
-\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
-\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Ocorreu\ um\ erro\ ao\ gravar\ a\ venda:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
-\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00353\ }
-\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhasAplicaveis\ =\ campanhas}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(c\ =>\ categoriasNaFatura.Contains(c.CategoriaId)\ \&\&\ campanhaRepo.IsCampanhaValida(c))}
+\DoxyCodeLine{00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
+\DoxyCodeLine{00338\ }
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ AtualizaListViewCampanhas(campanhasAplicaveis);}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00341\ }
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ AtualizaListViewCampanhas(List<Campanha>\ campanhas)}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Clear();}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ campanha\ \textcolor{keywordflow}{in}\ campanhas)}
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ListViewItem\ item\ =\ \textcolor{keyword}{new}\ ListViewItem(campanha.Nome);}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.SubItems.Add(ObterNomeCategoria(campanha.CategoriaId));}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.SubItems.Add(\$\textcolor{stringliteral}{"{}\{campanha.PercentagemDesc\}\%"{}});}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Add(item);}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00356\ }
-\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Validação\ da\ venda\ antes\ de\ gravar}}
-\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tem\ de\ ter\ valores\ na\ dgvFatura\ e\ método\ de\ pagamento.}}
-\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ ValidarVenda()}
-\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dgvFatura.Rows.Count\ ==\ 0)}
-\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00363\ }
-\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cmbMetodoPagamento.SelectedIndex\ <\ 0)}
-\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00366\ }
-\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00369\ }
-\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Criar\ objeto\ Venda\ com\ os\ dados\ do\ formulário}}
-\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ VendaCompra\ CriarVenda()}
-\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompra\ venda\ =\ \textcolor{keyword}{new}()}
-\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ClienteID\ =\ (int)cmbClientes.SelectedValue,}
-\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NIF\ =\ Convert.ToInt32(txtNIF.Text),}
-\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TotalBruto\ =\ totalBruto,}
-\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TotalLiquido\ =\ totalLiquido,}
-\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataVenda\ =\ DateTime.Now.ToString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy\ -\/\ HH:mm"{}}),}
-\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FimDataGarantia\ =\ DateTime.Now.AddMonths(mesesGarantia).ToString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy"{}}),}
-\DoxyCodeLine{00381\ }
-\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MetodoPagamento\ =\ Enum.TryParse(cmbMetodoPagamento.SelectedValue?.ToString(),\ out\ MetodoPagamento\ metodo)}
-\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ metodo}
-\DoxyCodeLine{00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (MetodoPagamento?)null}
-\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00386\ }
-\DoxyCodeLine{00387\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewRow\ row\ \textcolor{keywordflow}{in}\ dgvFatura.Rows)}
-\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value\ !=\ \textcolor{keyword}{null}\ \&\&\ row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ produtoID\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value);}
-\DoxyCodeLine{00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value);}
-\DoxyCodeLine{00393\ }
-\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(produtoID);}
-\DoxyCodeLine{00395\ }
-\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ItemVenda\ itemVenda\ =\ \textcolor{keyword}{new}(}
-\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoID,}
-\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.Nome,}
-\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.Preco,}
-\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.CategoriaID,}
-\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObterNomeCategoria(produto.CategoriaID),}
-\DoxyCodeLine{00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObterNomeMarca(produto.MarcaID),}
-\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quantidade,}
-\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int}?)ObterDescontoPorCategoria(produto.CategoriaID)\ \textcolor{comment}{//\ Adicionado\ o\ argumento\ para\ percentagemDesc}}
-\DoxyCodeLine{00407\ }
-\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ ObterNomeCategoria(\textcolor{keywordtype}{int}\ categoriaId)}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria\ categoria\ =\ (Categoria)categoriaController.GetById(categoriaId);}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ categoria.Nome\ ??\ \textcolor{stringliteral}{"{}Desconhecida"{}};}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00365\ }
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ ObterNomeMarca(\textcolor{keywordtype}{int}\ marcaId)}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ \ \ \ \ Marca\ marca\ =\ (Marca)marcaController.GetById(marcaId);}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ marca.Nome\ ??\ \textcolor{stringliteral}{"{}Desconhecida"{}};}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00374\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00375\ }
+\DoxyCodeLine{00376\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Validation\ and\ Creation}}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ ValidarVenda()}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dgvFatura.Rows.Count\ ==\ 0)}
+\DoxyCodeLine{00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00384\ }
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cmbMetodoPagamento.SelectedIndex\ <\ 0)}
+\DoxyCodeLine{00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00387\ }
+\DoxyCodeLine{00388\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00389\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00390\ }
+\DoxyCodeLine{00394\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ VendaCompra\ CriarVenda()}
+\DoxyCodeLine{00395\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00396\ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompra\ venda\ =\ \textcolor{keyword}{new}()}
+\DoxyCodeLine{00397\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ClienteID\ =\ (int)cmbClientes.SelectedValue,}
+\DoxyCodeLine{00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ NIF\ =\ Convert.ToInt32(txtNIF.Text),}
+\DoxyCodeLine{00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TotalBruto\ =\ totalBruto,}
+\DoxyCodeLine{00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TotalLiquido\ =\ totalLiquido,}
+\DoxyCodeLine{00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataVenda\ =\ DateTime.Now.ToString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy\ -\/\ HH:mm"{}}),}
+\DoxyCodeLine{00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ FimDataGarantia\ =\ DateTime.Now.AddMonths(mesesGarantia).ToString(\textcolor{stringliteral}{"{}dd-\/MM-\/yyyy"{}}),}
+\DoxyCodeLine{00404\ }
+\DoxyCodeLine{00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MetodoPagamento\ =\ Enum.TryParse(cmbMetodoPagamento.SelectedValue?.ToString(),\ out\ MetodoPagamento\ metodo)}
+\DoxyCodeLine{00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ metodo}
+\DoxyCodeLine{00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (MetodoPagamento?)null}
+\DoxyCodeLine{00408\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00409\ }
-\DoxyCodeLine{00410\ }
-\DoxyCodeLine{00411\ }
-\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ venda.Itens.Add(itemVenda);}
-\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00410\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewRow\ row\ \textcolor{keywordflow}{in}\ dgvFatura.Rows)}
+\DoxyCodeLine{00411\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value\ !=\ \textcolor{keyword}{null}\ \&\&\ row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ produtoID\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}IDProduto"{}}].Value);}
+\DoxyCodeLine{00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidade\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value);}
 \DoxyCodeLine{00416\ }
-\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ venda;}
-\DoxyCodeLine{00418\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00419\ }
-\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnAddProduto\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
-\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00422\ }
-\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produtoSelecionado\ =\ cmbProdutos.SelectedItem\ as\ Produto;}
-\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produtoSelecionado\ ==\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Selecione\ um\ produto\ antes\ de\ adicionar."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
-\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00429\ }
-\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeDesejada\ =\ (int)nudQtd.Value;}
+\DoxyCodeLine{00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produto\ =\ (Produto)produtoController.GetById(produtoID);}
+\DoxyCodeLine{00418\ }
+\DoxyCodeLine{00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produto\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00420\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ItemVenda\ itemVenda\ =\ \textcolor{keyword}{new}(}
+\DoxyCodeLine{00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoID,}
+\DoxyCodeLine{00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.Nome,}
+\DoxyCodeLine{00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.Preco,}
+\DoxyCodeLine{00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produto.CategoriaID,}
+\DoxyCodeLine{00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObterNomeCategoria(produto.CategoriaID),}
+\DoxyCodeLine{00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ObterNomeMarca(produto.MarcaID),}
+\DoxyCodeLine{00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ quantidade,}
+\DoxyCodeLine{00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int}?)ObterDescontoPorCategoria(produto.CategoriaID)}
+\DoxyCodeLine{00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );}
 \DoxyCodeLine{00431\ }
-\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ stock\ disponível\ considerando\ o\ que\ já\ foi\ adicionado\ na\ fatura}}
-\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeTotalFatura\ =\ dgvFatura.Rows}
-\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<DataGridViewRow>()}
-\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(row\ =>\ row.Cells[\textcolor{stringliteral}{"{}Produto"{}}].Value?.ToString()\ ==\ produtoSelecionado.Nome)}
-\DoxyCodeLine{00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Sum(row\ =>\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value));}
-\DoxyCodeLine{00437\ }
-\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeDisponivel\ =\ (produtoSelecionado.QuantidadeEmStock\ -\/\ quantidadeTotalFatura);}
+\DoxyCodeLine{00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ venda.Itens.Add(itemVenda);}
+\DoxyCodeLine{00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00435\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00436\ }
+\DoxyCodeLine{00437\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ venda;}
+\DoxyCodeLine{00438\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00439\ }
-\DoxyCodeLine{00440\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Operador\ ternário\ para\ se\ a\ quantidade\ disponível\ for\ negativa,\ mostrar\ apenas\ 0.}}
-\DoxyCodeLine{00441\ \ \ \ \ \ \ \ \ \ \ \ \ quantidadeDisponivel\ =\ quantidadeDisponivel\ <\ 0\ ?\ 0\ :\ quantidadeDisponivel;}
-\DoxyCodeLine{00442\ }
-\DoxyCodeLine{00443\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (quantidadeDesejada\ <=\ 0\ ||\ quantidadeDesejada\ >\ quantidadeDisponivel)}
-\DoxyCodeLine{00444\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00445\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Quantidade\ inválida\ ou\ insuficiente\ no\ stock!\ Disponível:\ \{quantidadeDisponivel\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
-\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00448\ }
-\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ se\ o\ produto\ já\ está\ na\ fatura\ e\ atualizar\ a\ quantidade}}
-\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewRow\ row\ \textcolor{keywordflow}{in}\ dgvFatura.Rows)}
-\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row.Cells[\textcolor{stringliteral}{"{}Produto"{}}].Value?.ToString()\ ==\ produtoSelecionado.Nome)}
-\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00454\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeAtual\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value);}
-\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value\ =\ quantidadeAtual\ +\ quantidadeDesejada;}
-\DoxyCodeLine{00456\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoSelecionado.QuantidadeEmStock\ -\/=\ quantidadeDesejada;}
-\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
-\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00440\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00442\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#region\ Form\ Events}}
+\DoxyCodeLine{00446\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnAddProduto\_Click(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)}
+\DoxyCodeLine{00447\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00448\ \ \ \ \ \ \ \ \ \ \ \ \ Produto\ produtoSelecionado\ =\ cmbProdutos.SelectedItem\ as\ Produto;}
+\DoxyCodeLine{00449\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (produtoSelecionado\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00450\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Selecione\ um\ produto\ antes\ de\ adicionar."{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00453\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00454\ }
+\DoxyCodeLine{00455\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeDesejada\ =\ (int)nudQtd.Value;}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00457\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeTotalFatura\ =\ dgvFatura.Rows}
+\DoxyCodeLine{00458\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<DataGridViewRow>()}
+\DoxyCodeLine{00459\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(row\ =>\ row.Cells[\textcolor{stringliteral}{"{}Produto"{}}].Value?.ToString()\ ==\ produtoSelecionado.Nome)}
+\DoxyCodeLine{00460\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Sum(row\ =>\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value));}
 \DoxyCodeLine{00461\ }
-\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Adicionar\ novo\ produto\ à\ fatura}}
-\DoxyCodeLine{00463\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Rows.Add(produtoSelecionado.Id,\ produtoSelecionado.Nome,\ ObterNomeCategoria(produtoSelecionado.CategoriaID),\ ObterNomeMarca(produtoSelecionado.MarcaID),\ quantidadeDesejada,\ produtoSelecionado.Preco);}
-\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
+\DoxyCodeLine{00462\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeDisponivel\ =\ (produtoSelecionado.QuantidadeEmStock\ -\/\ quantidadeTotalFatura);}
+\DoxyCodeLine{00463\ }
+\DoxyCodeLine{00464\ \ \ \ \ \ \ \ \ \ \ \ \ quantidadeDisponivel\ =\ quantidadeDisponivel\ <\ 0\ ?\ 0\ :\ quantidadeDisponivel;}
 \DoxyCodeLine{00465\ }
-\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verificar\ campanhas\ aplicáveis}}
-\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ VerificarCampanhas();}
-\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00469\ }
-\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00466\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (quantidadeDesejada\ <=\ 0\ ||\ quantidadeDesejada\ >\ quantidadeDisponivel)}
+\DoxyCodeLine{00467\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00468\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Quantidade\ inválida\ ou\ insuficiente\ no\ stock!\ Disponível:\ \{quantidadeDisponivel\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Warning);}
+\DoxyCodeLine{00469\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00470\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00471\ }
-\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnAddProduto\_MouseEnter(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnAddProduto.ForeColor\ =\ Color.DodgerBlue;}
-\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnAddProduto\_MouseLeave(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnAddProduto.ForeColor\ =\ Color.Black;}
-\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnRemItem\_MouseEnter(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnRemItem.ForeColor\ =\ Color.Red;}
-\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnRemItem\_MouseLeave(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnRemItem.ForeColor\ =\ Color.Black;}
-\DoxyCodeLine{00476\ \ \ \ \ \}}
-\DoxyCodeLine{00477\ \}}
+\DoxyCodeLine{00472\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewRow\ row\ \textcolor{keywordflow}{in}\ dgvFatura.Rows)}
+\DoxyCodeLine{00473\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00474\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (row.Cells[\textcolor{stringliteral}{"{}Produto"{}}].Value?.ToString()\ ==\ produtoSelecionado.Nome)}
+\DoxyCodeLine{00475\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00476\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ quantidadeAtual\ =\ Convert.ToInt32(row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value);}
+\DoxyCodeLine{00477\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ row.Cells[\textcolor{stringliteral}{"{}Quantidade"{}}].Value\ =\ quantidadeAtual\ +\ quantidadeDesejada;}
+\DoxyCodeLine{00478\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ produtoSelecionado.QuantidadeEmStock\ -\/=\ quantidadeDesejada;}
+\DoxyCodeLine{00479\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
+\DoxyCodeLine{00480\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00481\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00482\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00483\ }
+\DoxyCodeLine{00484\ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Rows.Add(produtoSelecionado.Id,\ produtoSelecionado.Nome,\ ObterNomeCategoria(produtoSelecionado.CategoriaID),\ ObterNomeMarca(produtoSelecionado.MarcaID),\ quantidadeDesejada,\ produtoSelecionado.Preco);}
+\DoxyCodeLine{00485\ \ \ \ \ \ \ \ \ \ \ \ \ AtualizarTotais();}
+\DoxyCodeLine{00486\ \ \ \ \ \ \ \ \ \ \ \ \ VerificarCampanhas();}
+\DoxyCodeLine{00487\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00488\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00489\ }
+\DoxyCodeLine{00490\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnAddProduto\_MouseEnter(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnAddProduto.ForeColor\ =\ Color.DodgerBlue;}
+\DoxyCodeLine{00491\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnAddProduto\_MouseLeave(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnAddProduto.ForeColor\ =\ Color.Black;}
+\DoxyCodeLine{00492\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnRemItem\_MouseEnter(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnRemItem.ForeColor\ =\ Color.Red;}
+\DoxyCodeLine{00493\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ btnRemItem\_MouseLeave(\textcolor{keywordtype}{object}\ sender,\ EventArgs\ e)\ =>\ btnRemItem.ForeColor\ =\ Color.Black;}
+\DoxyCodeLine{00494\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endregion}}
+\DoxyCodeLine{00495\ \ \ \ \ \}}
+\DoxyCodeLine{00496\ \}}
 
 \end{DoxyCode}

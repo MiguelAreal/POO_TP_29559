@@ -1,10 +1,5 @@
 \doxysection{Referência à classe Utilizador\+Controller}
 \label{class_utilizador_controller}\index{UtilizadorController@{UtilizadorController}}
-
-
-Controlador para a gestão dos utilizadores.  
-
-
 Diagrama de heranças da classe Utilizador\+Controller\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,21 +10,21 @@ Diagrama de heranças da classe Utilizador\+Controller\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Utilizador\+Controller} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Utilizador\+Controller}{p. }{class_utilizador_controller}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Utilizador\+Controller}{p. }{class_utilizador_controller}. Inicializa o controlador com o caminho do ficheiro de dados onde os utilizadores são armazenados. \end{DoxyCompactList}\item 
 \textbf{ override} \textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
-\begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Obtém todos os utilizadores armazenados. \end{DoxyCompactList}\item 
 \textbf{ bool} \textbf{ Verificar\+Login} (\textbf{ int} \textbf{ nif}, \textbf{ string} \textbf{ password})
-\begin{DoxyCompactList}\small\item\em Verifica se o login do utilizador é válido. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Verifica se o login do utilizador é válido com base no NIF e na palavra-\/passe fornecidos. \end{DoxyCompactList}\item 
 \textbf{ bool} \textbf{ Verificar\+NIFExistente} (\textbf{ int} \textbf{ nif})
 \begin{DoxyCompactList}\small\item\em Verifica se o NIF fornecido já está registado. \end{DoxyCompactList}\item 
 \textbf{ bool} \textbf{ Verificar\+Contacto\+Existente} (\textbf{ string} \textbf{ contacto})
 \begin{DoxyCompactList}\small\item\em Verifica se o contacto fornecido já está registado. \end{DoxyCompactList}\item 
 \textbf{ Utilizador}? \textbf{ Obter\+Utilizador\+Por\+NIF} (\textbf{ int} \textbf{ nif})
-\begin{DoxyCompactList}\small\item\em Obtém um utilizador pelo NIF. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Obtém um utilizador específico pelo seu NIF. \end{DoxyCompactList}\item 
 \textbf{ Utilizador}? \textbf{ Obter\+Utilizador\+Por\+Contacto} (\textbf{ string} \textbf{ contacto})
-\begin{DoxyCompactList}\small\item\em Obtém um utilizador pelo contacto. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Obtém um utilizador específico pelo seu contacto. \end{DoxyCompactList}\item 
 \textbf{ List}$<$ \textbf{ Utilizador} $>$ \textbf{ Get\+Clientes} ()
-\begin{DoxyCompactList}\small\item\em Obtém todos os utilizadores que são clientes e não administradores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Obtém todos os utilizadores que são clientes (não administradores), ordenados por nome. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros públicos herdados de \textbf{ Base\+Controller$<$ Utilizador $>$}}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,19 +43,19 @@ Diagrama de heranças da classe Utilizador\+Controller\begin{figure}[H]
 \doxysubsection*{Membros públicos herdados de \textbf{ IEntity\+Controller}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
-\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Remove um item. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
-\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
-\end{DoxyCompactItemize}
+object \textbf{ Get\+By\+Id} (int? id)
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador único. \end{DoxyCompactList}\item 
+void \textbf{ Remove\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Remove um item do sistema. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um item existente no sistema. \end{DoxyCompactList}\item 
+List$<$ object $>$ \textbf{ Filtrar\+Itens} (List$<$ object $>$ items, string filtro, string? coluna)
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em critérios específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ new} \textbf{ Utilizador\+Repo} \textbf{ \+\_\+repository}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Repositório específico para a gestão de utilizadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Controller$<$ Utilizador $>$}}
 \begin{DoxyCompactItemize}
 \item 
@@ -71,19 +66,9 @@ Diagrama de heranças da classe Utilizador\+Controller\begin{figure}[H]
 
 
 \doxysubsection{Descrição detalhada}
-Controlador para a gestão dos utilizadores. 
-
-A classe {\ttfamily \doxyref{Utilizador\+Controller}{p. }{class_utilizador_controller}} é responsável pela gestão dos utilizadores, incluindo operações de verificação de login, NIF, e contacto. Herda de {\ttfamily \doxyref{Base\+Controller}{p. }{class_base_controller}$<$\doxyref{Utilizador}{p. }{class_utilizador}$>$} e implementa a interface {\ttfamily \doxyref{IEntity\+Controller}{p. }{interface_i_entity_controller}}, oferecendo funcionalidades específicas para o trabalho com utilizadores.
-
-\begin{DoxyAuthor}{Autor}
-Miguel Areal 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Data}
-12/2024 
-\end{DoxyDate}
 
 
-Definido na linha \textbf{ 16} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 7} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 
@@ -96,18 +81,18 @@ Definido na linha \textbf{ 16} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 
 
 
-Construtor da classe {\ttfamily \doxyref{Utilizador\+Controller}{p. }{class_utilizador_controller}}. 
+Construtor da classe \doxyref{Utilizador\+Controller}{p. }{class_utilizador_controller}. Inicializa o controlador com o caminho do ficheiro de dados onde os utilizadores são armazenados. 
 
-Inicializa o controlador com o caminho do ficheiro de dados onde os utilizadores são armazenados. 
 
-Definido na linha \textbf{ 25} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+
+Definido na linha \textbf{ 24} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}}) }
-\DoxyCodeLine{00026\ \ \ \ \ \{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \_repository\ =\ \textcolor{keyword}{new}\ UtilizadorRepo();}
-\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ base(\textcolor{stringliteral}{"{}Data/utilizadores.json"{}}) }
+\DoxyCodeLine{00025\ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \_repository\ =\ \textcolor{keyword}{new}\ UtilizadorRepo();}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -121,12 +106,10 @@ Definido na linha \textbf{ 25} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 
 
 
-Obtém todos os utilizadores que são clientes e não administradores. 
-
-Este método retorna uma lista de utilizadores que são clientes e não têm privilégios administrativos, ordenados por nome.
+Obtém todos os utilizadores que são clientes (não administradores), ordenados por nome. 
 
 \begin{DoxyReturn}{Retorna}
-Uma lista de utilizadores clientes. 
+Uma lista de utilizadores clientes.
 \end{DoxyReturn}
 
 
@@ -148,10 +131,10 @@ Definido na linha \textbf{ 113} do ficheiro \textbf{ Utilizador\+Controller.\+cs
 
 
 
-Obtém todos os itens do repositório. 
+Obtém todos os utilizadores armazenados. 
 
 \begin{DoxyReturn}{Retorna}
-Uma lista de objetos do tipo T.
+Uma lista de objetos representando os utilizadores armazenados.
 \end{DoxyReturn}
 
 
@@ -159,14 +142,14 @@ Reimplementado de \textbf{ Base\+Controller$<$ Utilizador $>$} \doxyref{}{p. }{c
 
 
 
-Definido na linha \textbf{ 30} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 37} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \ \ \ \ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \_items\ =\ \_repository.GetAll();}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_items.Cast<\textcolor{keywordtype}{object}>().ToList();\ \textcolor{comment}{//\ Default\ implementation}}
-\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \_items\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_items.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_utilizador_controller_a94beb5698eabcc951939c94e206b578f} 
@@ -177,27 +160,25 @@ Definido na linha \textbf{ 30} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 
 
 
-Obtém um utilizador pelo contacto. 
-
-Este método recupera um utilizador específico a partir do seu contacto.
+Obtém um utilizador específico pelo seu contacto. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em contacto} & O contacto do utilizador a ser recuperado. \\
+{\em contacto} & O contacto do utilizador a ser recuperado.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O utilizador correspondente ao contacto fornecido, ou {\ttfamily null} se não encontrado. 
+O utilizador correspondente ao contacto fornecido, ou {\ttfamily null} se não encontrado.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 101} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 100} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00102\ \ \ \ \ \{}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.ObterPorContacto(contacto);}
-\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.ObterPorContacto(contacto);}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_utilizador_controller_a835fd18f551fe7bacb7daf7abf6d0f54} 
@@ -208,27 +189,25 @@ Definido na linha \textbf{ 101} do ficheiro \textbf{ Utilizador\+Controller.\+cs
 
 
 
-Obtém um utilizador pelo NIF. 
-
-Este método recupera um utilizador específico a partir do seu NIF.
+Obtém um utilizador específico pelo seu NIF. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em nif} & O NIF do utilizador a ser recuperado. \\
+{\em nif} & O NIF do utilizador a ser recuperado.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O utilizador correspondente ao NIF fornecido, ou {\ttfamily null} se não encontrado. 
+O utilizador correspondente ao NIF fornecido, ou {\ttfamily null} se não encontrado.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 88} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 90} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00089\ \ \ \ \ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.ObterPorNIF(nif);}
-\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00091\ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.ObterPorNIF(nif);}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_utilizador_controller_acdc4de3772237e534cfc2e8d4d4940c3} 
@@ -241,26 +220,24 @@ Definido na linha \textbf{ 88} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 
 Verifica se o contacto fornecido já está registado. 
 
-Este método verifica se o contacto fornecido já está associado a um utilizador existente no sistema.
-
 
 \begin{DoxyParams}{Parâmetros}
-{\em contacto} & O contacto do utilizador. \\
+{\em contacto} & O contacto do utilizador.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-{\ttfamily true} se o contacto já estiver registado, caso contrário, {\ttfamily false}. 
+{\ttfamily true} se o contacto já estiver registado; caso contrário, {\ttfamily false}.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 74} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 75} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00075\ \ \ \ \ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorContacto(contacto);}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ true\ se\ o\ utilizador\ foi\ encontrado,\ caso\ contrário,\ false}}
-\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorContacto(contacto);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_utilizador_controller_ad93fbdb336c9397b46a0e388e3319022} 
@@ -271,30 +248,28 @@ Definido na linha \textbf{ 74} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 
 
 
-Verifica se o login do utilizador é válido. 
-
-Este método verifica se o NIF e a palavra-\/passe fornecida correspondem a um utilizador existente no sistema.
+Verifica se o login do utilizador é válido com base no NIF e na palavra-\/passe fornecidos. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em nif} & O NIF do utilizador. \\
+{\em nif} & O NIF do utilizador.\\
 \hline
-{\em password} & A palavra-\/passe do utilizador. \\
+{\em password} & A palavra-\/passe do utilizador.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-{\ttfamily true} se o login for válido, caso contrário, {\ttfamily false}. 
+{\ttfamily true} se o login for válido; caso contrário, {\ttfamily false}.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 46} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 53} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00047\ \ \ \ \ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorNIF(nif);}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null}\ \&\&\ user.Password\ ==\ password;}
-\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorNIF(nif);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null}\ \&\&\ user.Password\ ==\ password;}
+\DoxyCodeLine{00057\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_utilizador_controller_aba64db95f436bf90e10671fe799bfbe4} 
@@ -307,26 +282,24 @@ Definido na linha \textbf{ 46} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 
 Verifica se o NIF fornecido já está registado. 
 
-Este método verifica se o NIF já está associado a um utilizador existente no sistema.
-
 
 \begin{DoxyParams}{Parâmetros}
-{\em nif} & O NIF do utilizador. \\
+{\em nif} & O NIF do utilizador.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-{\ttfamily true} se o NIF já estiver registado, caso contrário, {\ttfamily false}. 
+{\ttfamily true} se o NIF já estiver registado; caso contrário, {\ttfamily false}.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 60} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+Definido na linha \textbf{ 64} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00061\ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorNIF(nif);\ \textcolor{comment}{//\ Busca\ o\ utilizador\ com\ o\ NIF\ fornecido}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ Retorna\ true\ se\ o\ utilizador\ foi\ encontrado,\ caso\ contrário,\ false}}
-\DoxyCodeLine{00064\ \ \ \ \ \}}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ var\ user\ =\ ObterUtilizadorPorNIF(nif);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ user\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00068\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -338,9 +311,13 @@ Definido na linha \textbf{ 60} do ficheiro \textbf{ Utilizador\+Controller.\+cs}
 \doxysubsubsection{\_repository}
 {\footnotesize\ttfamily \textbf{ new} \textbf{ Utilizador\+Repo} Utilizador\+Controller.\+\_\+repository\hspace{0.3cm}{\ttfamily [protected]}}
 
-Repositório específico para a gestão de utilizadores 
 
-Definido na linha \textbf{ 18} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
+
+Repositório específico para a gestão de utilizadores. 
+
+
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Utilizador\+Controller.\+cs}.
 
 
 

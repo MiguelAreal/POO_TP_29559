@@ -16,6 +16,7 @@ var namespacepoo__tp__29559_1_1_repositories =
         [ "Numerario", "namespacepoo__tp__29559_1_1_repositories_1_1_enumerators.html#a6a2fa6ff381b5bd1490e7b3fab4aed32aa1590387cf123baf357b7acd896616e1", null ]
       ] ]
     ] ],
+    [ "BaseRepo", "classpoo__tp__29559_1_1_repositories_1_1_base_repo.html", "classpoo__tp__29559_1_1_repositories_1_1_base_repo" ],
     [ "CampanhaRepo", "classpoo__tp__29559_1_1_repositories_1_1_campanha_repo.html", "classpoo__tp__29559_1_1_repositories_1_1_campanha_repo" ],
     [ "CategoriaRepo", "classpoo__tp__29559_1_1_repositories_1_1_categoria_repo.html", "classpoo__tp__29559_1_1_repositories_1_1_categoria_repo" ],
     [ "MarcaRepo", "classpoo__tp__29559_1_1_repositories_1_1_marca_repo.html", "classpoo__tp__29559_1_1_repositories_1_1_marca_repo" ],

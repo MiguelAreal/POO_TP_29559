@@ -1,0 +1,257 @@
+\doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador}\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+
+
+Representa um utilizador no sistema.  
+
+
+Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classpoo__tp__29559_1_1_models_1_1_utilizador}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Utilizador} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Utilizador}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Propriedades}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Identificador único do utilizador. \end{DoxyCompactList}\item 
+string? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Nome do utilizador (cliente). \end{DoxyCompactList}\item 
+string \textbf{ Contacto}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Contacto do utilizador. \end{DoxyCompactList}\item 
+string? \textbf{ Morada}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Morada do utilizador. \end{DoxyCompactList}\item 
+int \textbf{ Nif}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Número de Identificação Fiscal (NIF). \end{DoxyCompactList}\item 
+string? \textbf{ Data\+Nasc}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de nascimento do utilizador. \end{DoxyCompactList}\item 
+string? \textbf{ Data\+Adicao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de criação do utilizador no sistema. \end{DoxyCompactList}\item 
+string? \textbf{ Password}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Palavra-\/passe do utilizador. \end{DoxyCompactList}\item 
+bool \textbf{ Is\+Admin}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Indicador de administrador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
+
+
+\doxysubsection{Descrição detalhada}
+Representa um utilizador no sistema. 
+
+A classe {\ttfamily Utilizador} armazena informações pessoais de um cliente ou administrador, incluindo o nome, contacto, morada, NIF, data de nascimento, e outras propriedades associadas ao utilizador. Esta classe é usada para gerir as informações de um utilizador no sistema. 
+
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+
+\doxysubsection{Documentação dos Construtores \& Destrutor}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a6a6f31bc5e31bdccbddd86524384bc69} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Utilizador@{Utilizador}}
+\index{Utilizador@{Utilizador}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Utilizador()}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Utilizador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe {\ttfamily Utilizador}. 
+
+Este construtor inicializa a data de adição com a data e hora atuais e define a propriedade {\ttfamily Is\+Admin} como {\ttfamily false} por padrão, indicando que o utilizador é um cliente comum. 
+
+Definido na linha \textbf{ 106} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ DataAdicao\ =\ DateTime.Now.ToString();}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ IsAdmin\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das propriedades}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a93876229fa54ddf356261b09276da571} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Contacto@{Contacto}}
+\index{Contacto@{Contacto}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Contacto}
+{\footnotesize\ttfamily string poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Contacto\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Contacto do utilizador. 
+
+Este campo armazena o número de contacto do utilizador. 
+
+Definido na linha \textbf{ 40} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_adb70daa018a46eff33a0d486387105fb} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!DataAdicao@{DataAdicao}}
+\index{DataAdicao@{DataAdicao}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{DataAdicao}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Data\+Adicao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de criação do utilizador no sistema. 
+
+Este campo armazena a data de criação do utilizador no sistema, representada como uma string. 
+
+Definido na linha \textbf{ 76} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00076\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a6cdc664a5171a7932ae00e729ba86bfc} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!DataNasc@{DataNasc}}
+\index{DataNasc@{DataNasc}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{DataNasc}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Data\+Nasc\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Data de nascimento do utilizador. 
+
+Este campo armazena a data de nascimento do utilizador, representada como uma string. 
+
+Definido na linha \textbf{ 67} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00067\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a4c6ae25a80d443b680399b8fa270db51} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Id@{Id}}
+\index{Id@{Id}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Id}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Identificador único do utilizador. 
+
+Este campo armazena o identificador único do utilizador. 
+
+Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
+
+
+
+Definido na linha \textbf{ 22} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a2e4566b85440f4922a6d5029153cf683} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!IsAdmin@{IsAdmin}}
+\index{IsAdmin@{IsAdmin}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{IsAdmin}
+{\footnotesize\ttfamily bool poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Is\+Admin\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indicador de administrador. 
+
+Este campo indica se o utilizador tem permissões de administrador. A propriedade é do tipo booleano, onde {\ttfamily true} significa que o utilizador é um administrador, e {\ttfamily false} significa que é um cliente. 
+
+Definido na linha \textbf{ 97} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00097\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_ab9782f2fd96641000e1802b2d9ee4bc3} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Morada@{Morada}}
+\index{Morada@{Morada}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Morada}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Morada\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Morada do utilizador. 
+
+Este campo armazena a morada do utilizador. 
+
+Definido na linha \textbf{ 49} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a4e1db0d585a3dc3bf9a93acdf75c3912} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Nif@{Nif}}
+\index{Nif@{Nif}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Nif}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Nif\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Número de Identificação Fiscal (NIF). 
+
+Este campo armazena o NIF (número de identificação fiscal) do utilizador. É o identificador único do utilizador. 
+
+Definido na linha \textbf{ 58} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_a037624e39943337dd9173a02ffd8f117} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Nome@{Nome}}
+\index{Nome@{Nome}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Nome}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Nome do utilizador (cliente). 
+
+Este campo armazena o nome do utilizador (cliente). 
+
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+\label{classpoo__tp__29559_1_1_models_1_1_utilizador_aeca364c09541341b92c381952f1a1dbf} 
+\index{poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}!Password@{Password}}
+\index{Password@{Password}!poo\_tp\_29559.Models.Utilizador@{poo\_tp\_29559.Models.Utilizador}}
+\doxysubsubsection{Password}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Utilizador.\+Password\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Palavra-\/passe do utilizador. 
+
+Este campo armazena a palavra-\/passe do utilizador. A propriedade é marcada com {\ttfamily [Browsable(false)]} para garantir que ela não seja exibida na interface de utilizador. 
+
+Definido na linha \textbf{ 87} do ficheiro \textbf{ Utilizador.\+cs}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00087\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para esta classe foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+POO\+\_\+\+TP\+\_\+29559/\+Models/\textbf{ Utilizador.\+cs}\end{DoxyCompactItemize}

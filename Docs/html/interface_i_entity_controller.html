@@ -96,41 +96,48 @@ $(document).ready(function(){initNavTree('interface_i_entity_controller.html',''
   <div class="headertitle"><div class="title">Referência ao interface IEntityController</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface para a definição de operações de controle de entidades genéricas.  
+ <a href="interface_i_entity_controller.html#details">Mais...</a></p>
 <div class="dynheader">
 Diagrama de heranças da classe IEntityController</div>
 <div class="dyncontent">
  <div class="center">
   <img src="interface_i_entity_controller.png" usemap="#IEntityController_map" alt=""/>
   <map id="IEntityController_map" name="IEntityController_map">
-<area href="class_campanha_controller.html" title="Controlador para a gestão de campanhas." alt="CampanhaController" shape="rect" coords="0,56,149,80"/>
-<area href="class_categoria_controller.html" title="Controlador para a gestão de categorias." alt="CategoriaController" shape="rect" coords="159,56,308,80"/>
-<area href="class_marca_controller.html" title="Controlador para a gestão de marcas." alt="MarcaController" shape="rect" coords="318,56,467,80"/>
-<area href="class_produto_controller.html" title="Controlador para a gestão de produtos." alt="ProdutoController" shape="rect" coords="477,56,626,80"/>
-<area href="class_utilizador_controller.html" title="Controlador para a gestão dos utilizadores." alt="UtilizadorController" shape="rect" coords="636,56,785,80"/>
-<area href="class_venda_compra_controller.html" title="Controlador para a gestão de vendas e compras." alt="VendaCompraController" shape="rect" coords="795,56,944,80"/>
+<area href="class_campanha_controller.html" alt="CampanhaController" shape="rect" coords="0,56,149,80"/>
+<area href="class_categoria_controller.html" alt="CategoriaController" shape="rect" coords="159,56,308,80"/>
+<area href="class_marca_controller.html" alt="MarcaController" shape="rect" coords="318,56,467,80"/>
+<area href="class_produto_controller.html" alt="ProdutoController" shape="rect" coords="477,56,626,80"/>
+<area href="class_utilizador_controller.html" alt="UtilizadorController" shape="rect" coords="636,56,785,80"/>
+<area href="class_venda_compra_controller.html" alt="VendaCompraController" shape="rect" coords="795,56,944,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros públicos</h2></td></tr>
-<tr class="memitem:afe8a9ec18b8d7b8d9a7dbe79a394e582" id="r_afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#afe8a9ec18b8d7b8d9a7dbe79a394e582">GetById</a> (<a class="el" href="class_base_repo.html">int</a>? <a class="el" href="class_base_repo.html">id</a>)</td></tr>
-<tr class="memdesc:afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém um item pelo seu identificador.  <br /></td></tr>
+<tr class="memitem:afe8a9ec18b8d7b8d9a7dbe79a394e582" id="r_afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#afe8a9ec18b8d7b8d9a7dbe79a394e582">GetById</a> (int? id)</td></tr>
+<tr class="memdesc:afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém um item pelo seu identificador único.  <br /></td></tr>
 <tr class="separator:afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a524c6dc392d6c20a0dcbc764ecd96105" id="r_a524c6dc392d6c20a0dcbc764ecd96105"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a524c6dc392d6c20a0dcbc764ecd96105">RemoveItem</a> (<a class="el" href="class_base_repo.html">object</a> <a class="el" href="class_base_repo.html">item</a>)</td></tr>
-<tr class="memdesc:a524c6dc392d6c20a0dcbc764ecd96105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um item.  <br /></td></tr>
+<tr class="memitem:a524c6dc392d6c20a0dcbc764ecd96105" id="r_a524c6dc392d6c20a0dcbc764ecd96105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a524c6dc392d6c20a0dcbc764ecd96105">RemoveItem</a> (object item)</td></tr>
+<tr class="memdesc:a524c6dc392d6c20a0dcbc764ecd96105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove um item do sistema.  <br /></td></tr>
 <tr class="separator:a524c6dc392d6c20a0dcbc764ecd96105"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cb17e81a497f5b8caa3e45ece57c86c" id="r_a7cb17e81a497f5b8caa3e45ece57c86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a7cb17e81a497f5b8caa3e45ece57c86c">UpdateItem</a> (<a class="el" href="class_base_repo.html">object</a> <a class="el" href="class_base_repo.html">item</a>)</td></tr>
-<tr class="memdesc:a7cb17e81a497f5b8caa3e45ece57c86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza um item.  <br /></td></tr>
+<tr class="memitem:a7cb17e81a497f5b8caa3e45ece57c86c" id="r_a7cb17e81a497f5b8caa3e45ece57c86c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a7cb17e81a497f5b8caa3e45ece57c86c">UpdateItem</a> (object item)</td></tr>
+<tr class="memdesc:a7cb17e81a497f5b8caa3e45ece57c86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um item existente no sistema.  <br /></td></tr>
 <tr class="separator:a7cb17e81a497f5b8caa3e45ece57c86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9654304d3e6ddaba4f56ecad3b587e24" id="r_a9654304d3e6ddaba4f56ecad3b587e24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a9654304d3e6ddaba4f56ecad3b587e24">GetItems</a> ()</td></tr>
-<tr class="memdesc:a9654304d3e6ddaba4f56ecad3b587e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém todos os itens.  <br /></td></tr>
+<tr class="memitem:a9654304d3e6ddaba4f56ecad3b587e24" id="r_a9654304d3e6ddaba4f56ecad3b587e24"><td class="memItemLeft" align="right" valign="top">List&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a9654304d3e6ddaba4f56ecad3b587e24">GetItems</a> ()</td></tr>
+<tr class="memdesc:a9654304d3e6ddaba4f56ecad3b587e24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém todos os itens armazenados no sistema.  <br /></td></tr>
 <tr class="separator:a9654304d3e6ddaba4f56ecad3b587e24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a654bb8450935e5d81d7eea51541491d0" id="r_a654bb8450935e5d81d7eea51541491d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a654bb8450935e5d81d7eea51541491d0">FiltrarItens</a> (<a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt; items, <a class="el" href="class_base_repo.html">string</a> <a class="el" href="class_base_repo.html">filtro</a>, <a class="el" href="class_base_repo.html">string</a>? <a class="el" href="class_base_repo.html">coluna</a>)</td></tr>
+<tr class="memitem:a654bb8450935e5d81d7eea51541491d0" id="r_a654bb8450935e5d81d7eea51541491d0"><td class="memItemLeft" align="right" valign="top">List&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a654bb8450935e5d81d7eea51541491d0">FiltrarItens</a> (List&lt; object &gt; items, string filtro, string? coluna)</td></tr>
+<tr class="memdesc:a654bb8450935e5d81d7eea51541491d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filtra itens com base em critérios específicos.  <br /></td></tr>
 <tr class="separator:a654bb8450935e5d81d7eea51541491d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock">
-<p class="definition">Definido na linha <a class="el" href="_i_entity_controller_8cs_source.html#l00012">12</a> do ficheiro <a class="el" href="_i_entity_controller_8cs_source.html">IEntityController.cs</a>.</p>
+<div class="textblock"><p>Interface para a definição de operações de controle de entidades genéricas. </p>
+<p>Esta interface define os métodos básicos para a gestão de entidades, como filtrar, obter, atualizar e remover itens. <br  />
+ É genérica e pode ser usada com diferentes tipos de entidades na aplicação. </p>
+
+<p class="definition">Definido na linha <a class="el" href="_i_entity_controller_8cs_source.html#l00008">8</a> do ficheiro <a class="el" href="_i_entity_controller_8cs_source.html">IEntityController.cs</a>.</p>
 </div><h2 class="groupheader">Documentação das funções</h2>
 <a id="a654bb8450935e5d81d7eea51541491d0" name="a654bb8450935e5d81d7eea51541491d0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a654bb8450935e5d81d7eea51541491d0">&#9670;&#160;</a></span>FiltrarItens()</h2>
@@ -139,21 +146,21 @@ Membros públicos</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt; IEntityController.FiltrarItens </td>
+          <td class="memname">List&lt; object &gt; IEntityController.FiltrarItens </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td>
+          <td class="paramtype">List&lt; object &gt;&#160;</td>
           <td class="paramname"><em>items</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">string</a>&#160;</td>
+          <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>filtro</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">string</a>?&#160;</td>
+          <td class="paramtype">string?&#160;</td>
           <td class="paramname"><em>coluna</em>&#160;</td>
         </tr>
         <tr>
@@ -164,6 +171,17 @@ Membros públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Filtra itens com base em critérios específicos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">items</td><td>A lista de itens a ser filtrada.</td></tr>
+    <tr><td class="paramname">filtro</td><td>O valor de filtro usado para realizar a busca.</td></tr>
+    <tr><td class="paramname">coluna</td><td>A coluna ou propriedade opcional pela qual os itens serão filtrados. Pode ser <code>null</code>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Uma lista de itens que correspondem aos critérios de filtro.</dd></dl>
+
 </div>
 </div>
 <a id="afe8a9ec18b8d7b8d9a7dbe79a394e582" name="afe8a9ec18b8d7b8d9a7dbe79a394e582"></a>
@@ -173,24 +191,23 @@ Membros públicos</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">object</a> IEntityController.GetById </td>
+          <td class="memname">object IEntityController.GetById </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">int</a>?&#160;</td>
+          <td class="paramtype">int?&#160;</td>
           <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Obtém um item pelo seu identificador. </p>
-<p>Método responsável por obter um item do tipo genérico com base no seu identificador único.</p>
+<p>Obtém um item pelo seu identificador único. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">id</td><td>Identificador único do item a ser recuperado. </td></tr>
+    <tr><td class="paramname">id</td><td>Identificador único do item a ser recuperado.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>O item correspondente ao identificador fornecido, ou null se não encontrado. </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>O item correspondente ao identificador fornecido, ou <code>null</code> se não encontrado.</dd></dl>
 
 </div>
 </div>
@@ -201,7 +218,7 @@ Membros públicos</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt; IEntityController.GetItems </td>
+          <td class="memname">List&lt; object &gt; IEntityController.GetItems </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -209,9 +226,8 @@ Membros públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Obtém todos os itens. </p>
-<p>Método responsável por obter todos os itens armazenados, retornando-os como uma lista ou coleção.</p>
-<dl class="section return"><dt>Retorna</dt><dd>A lista ou coleção de itens armazenados. </dd></dl>
+<p>Obtém todos os itens armazenados no sistema. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Uma lista de todos os itens armazenados.</dd></dl>
 
 <p>Implementado em <a class="el" href="class_campanha_controller.html#a6e3f0ed815fe58361dbc46da566b4e4b">CampanhaController</a>, <a class="el" href="class_produto_controller.html#ae0668b37661ae8b29349495c45d4d656">ProdutoController</a>, <a class="el" href="class_utilizador_controller.html#a7ae651b742bc8e9504be77d8c4e80951">UtilizadorController</a> e <a class="el" href="class_venda_compra_controller.html#a812cf00477a1fad3bf6bf8d84ac8fb63">VendaCompraController</a>.</p>
 
@@ -224,20 +240,19 @@ Membros públicos</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">void</a> IEntityController.RemoveItem </td>
+          <td class="memname">void IEntityController.RemoveItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">object</a>&#160;</td>
+          <td class="paramtype">object&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Remove um item. </p>
-<p>Método responsável por remover um item do sistema. O item será excluído permanentemente.</p>
+<p>Remove um item do sistema. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">item</td><td>O item a ser removido. </td></tr>
+    <tr><td class="paramname">item</td><td>O item a ser removido. Será excluído permanentemente.</td></tr>
   </table>
   </dd>
 </dl>
@@ -253,20 +268,19 @@ Membros públicos</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">void</a> IEntityController.UpdateItem </td>
+          <td class="memname">void IEntityController.UpdateItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">object</a>&#160;</td>
+          <td class="paramtype">object&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Atualiza um item. </p>
-<p>Método responsável por atualizar os dados de um item existente no sistema. O item será atualizado com as novas informações fornecidas.</p>
+<p>Atualiza os dados de um item existente no sistema. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">item</td><td>O item a ser atualizado. </td></tr>
+    <tr><td class="paramname">item</td><td>O item a ser atualizado com as novas informações fornecidas.</td></tr>
   </table>
   </dd>
 </dl>

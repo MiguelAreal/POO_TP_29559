@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add_0',['add',['../interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo.html#a7213c637b334c163a3ca47be6e70a59c',1,'poo_tp_29559.Interfaces.IRepo.Add()'],['../class_base_repo.html#a91e6165ad8668dceffa53b766d8c30d5',1,'BaseRepo.Add()']]],
+  ['add_0',['add',['../interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo.html#a7213c637b334c163a3ca47be6e70a59c',1,'poo_tp_29559.Interfaces.IRepo.Add()'],['../classpoo__tp__29559_1_1_repositories_1_1_base_repo.html#ae98f35598c3d32697cc92aa258731b99',1,'poo_tp_29559.Repositories.BaseRepo.Add()']]],
   ['addcompraform_1',['addcompraform',['../classpoo__tp__29559_1_1_views_1_1_add_compra_form.html',1,'poo_tp_29559.Views.AddCompraForm'],['../classpoo__tp__29559_1_1_views_1_1_add_compra_form.html#a319398f7e05cb2040e24fd4a024e1555',1,'poo_tp_29559.Views.AddCompraForm.AddCompraForm()']]],
   ['addcompraform_2ecs_2',['AddCompraForm.cs',['../_add_compra_form_8cs.html',1,'']]],
   ['addcompraform_2edesigner_2ecs_3',['AddCompraForm.Designer.cs',['../_add_compra_form_8_designer_8cs.html',1,'']]],

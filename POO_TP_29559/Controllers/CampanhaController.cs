@@ -1,24 +1,28 @@
 ﻿using poo_tp_29559.Models;
-
 using poo_tp_29559.Repositories;
 
-/// <summary>
-/// Controlador para a gestão de campanhas.
-/// Implementa a lógica para a gestão de campanhas, incluindo operações de leitura e manipulação de dados.
-/// Herda de <see cref="BaseController{Campanha}"/> e implementa a interface <see cref="IEntityController"/>.
-/// </summary>
 public class CampanhaController : BaseController<Campanha>, IEntityController
 {
+    #region Fields and Properties
+
     /// <summary>
     /// Lista de campanhas com nomes, usada para exibição na interface gráfica.
     /// </summary>
     private List<CampanhaViewModel>? _campanhasComNomes;
+
+    #endregion
+
+    #region Constructor
 
     /// <summary>
     /// Construtor da classe <see cref="CampanhaController"/>.
     /// Inicializa o controlador com o caminho do ficheiro de dados onde as campanhas serão armazenadas.
     /// </summary>
     public CampanhaController() : base("Data/campanhas.json") { }
+
+    #endregion
+
+    #region Data Retrieval
 
     /// <summary>
     /// Obtém todas as campanhas, traduzindo os IDs para nomes legíveis.
@@ -56,4 +60,6 @@ public class CampanhaController : BaseController<Campanha>, IEntityController
         // Passa a lista de campanhas com nomes para a vista
         return _campanhasComNomes.Cast<object>().ToList();
     }
+
+    #endregion
 }

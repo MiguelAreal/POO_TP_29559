@@ -1,5 +1,10 @@
 \doxysection{Referência à classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Venda\+Form}
 \label{classpoo__tp__29559_1_1_views_1_1_add_venda_form}\index{poo\_tp\_29559.Views.AddVendaForm@{poo\_tp\_29559.Views.AddVendaForm}}
+
+
+Formulário para adicionar vendas. Este formulário permite registar vendas, associar clientes, adicionar produtos à fatura, calcular totais (bruto e líquido) e verificar campanhas promocionais aplicáveis.  
+
+
 Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Venda\+Form\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,18 +15,18 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Venda\+For
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Add\+Venda\+Form} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construtor da classe Add\+Venda\+Form. Inicializa os controladores e carrega os dados iniciais. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
+Formulário para adicionar vendas. Este formulário permite registar vendas, associar clientes, adicionar produtos à fatura, calcular totais (bruto e líquido) e verificar campanhas promocionais aplicáveis. 
 
-
-Definido na linha \textbf{ 23} do ficheiro \textbf{ Add\+Venda\+Form.\+cs}.
+Definido na linha \textbf{ 18} do ficheiro \textbf{ Add\+Venda\+Form.\+cs}.
 
 
 
@@ -31,6 +36,10 @@ Definido na linha \textbf{ 23} do ficheiro \textbf{ Add\+Venda\+Form.\+cs}.
 \index{AddVendaForm@{AddVendaForm}!poo\_tp\_29559.Views.AddVendaForm@{poo\_tp\_29559.Views.AddVendaForm}}
 \doxysubsubsection{AddVendaForm()}
 {\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Venda\+Form.\+Add\+Venda\+Form (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe Add\+Venda\+Form. Inicializa os controladores e carrega os dados iniciais. 
 
 
 
@@ -46,12 +55,10 @@ Definido na linha \textbf{ 38} do ficheiro \textbf{ Add\+Venda\+Form.\+cs}.
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();}
 \DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaProdutos();}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaClientes();}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaMetodosPagamento();}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaProdutos();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaClientes();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaMetodosPagamento();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -61,7 +68,7 @@ Definido na linha \textbf{ 38} do ficheiro \textbf{ Add\+Venda\+Form.\+cs}.
 \index{poo\_tp\_29559.Views.AddVendaForm@{poo\_tp\_29559.Views.AddVendaForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddVendaForm@{poo\_tp\_29559.Views.AddVendaForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Venda\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Venda\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

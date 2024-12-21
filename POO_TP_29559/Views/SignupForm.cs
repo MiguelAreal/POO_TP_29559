@@ -1,15 +1,4 @@
-﻿/**
- * @file SignupForm.cs
- * @brief Formulário de Registo da aplicação.
- *
- * Esta classe representa o formulário de registo, responsável por permitir
- * a criação de novos utilizadores com validações de campos e controlo de duplicações.
- * Integra-se com a lógica de negócio através da classe `UtilizadorController`.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
-
+﻿using poo_tp_29559.Models;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -17,77 +6,62 @@ using ValidationLibrary;
 
 namespace poo_tp_29559.Views
 {
-    /**
-     * @class SignupForm
-     * @brief View responsável pelo formulário de registo.
-     * 
-     * A View `SignupForm` permite ao utilizador criar uma nova conta, validando 
-     * todos os campos necessários, como NIF, contacto e data de nascimento.
-     * Possui também integração com o controlador de utilizadores para verificar
-     * se os dados fornecidos são únicos.
-     */
+    /// <summary>
+    /// Formulário responsável pelo registo de novos utilizadores.
+    /// </summary>
     public partial class SignupForm : Form
     {
-        /// @brief Controlador para manipulação dos utilizadores.
+        #region Private Fields
+
+        /// <summary>
+        /// Controlador para manipulação dos utilizadores.
+        /// </summary>
         private readonly UtilizadorController _controller;
 
-        /**
-         * @brief Construtor da classe `SignupForm`.
-         * 
-         * Inicializa os componentes visuais do formulário e configura o controlador.
-         */
+        #endregion
+
+        #region Construtors
+
+        /// <summary>
+        /// Construtor da classe `SignupForm`.
+        /// </summary>
+        /// <remarks>
+        /// Inicializa os componentes visuais do formulário e configura o controlador.
+        /// </remarks>
         public SignupForm()
         {
             InitializeComponent();
             _controller = new UtilizadorController();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        #endregion
 
-        private void btnHidePwd_Click(object sender, EventArgs e)
-        {
-            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
-        }
+        #region Methods
 
+
+        /// <summary>
+        /// Redireciona para a tela de login.
+        /// </summary>
         private void GoToLogin()
         {
             new LoginForm().Show();
             this.Hide();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if (!ValidarFormulario())
-            {
-                return;
-            }
+      
 
-            var novoUtilizador = new Utilizador
-            {
-                Nome = txtNome.Text,
-                Contacto = ObterContactoCompleto(),
-                Morada = txtMorada.Text,
-                DataNasc = dtpNasc.Checked ? dtpNasc.Value.ToString("dd-MM-yyyy HH:mm:ss") : null,
-                Nif = Convert.ToInt32(txtNIF.Text),
-                Password = txtPassword.Text,
-                IsAdmin = rdbAdmin.Checked
-            };
-
-            _controller.AddItem(novoUtilizador);
-            GoToLogin();
-        }
-
+        /// <summary>
+        /// Valida os campos do formulário.
+        /// </summary>
+        /// <returns>Retorna verdadeiro se o formulário for válido, caso contrário falso.</returns>
         private bool ValidarFormulario()
         {
             var erros = new List<string>(); // Lista para acumular mensagens de erro
 
             // Validar campos obrigatórios
             if (!FieldValidator.ValidateFields(
-                new[] { txtNome, txtPassword, txtContactoCodPais,txtMorada },
-                new[] { imgUser, imgPwd, imgContacto,lblMorada },
+                new[] { txtNome, txtPassword, txtContactoCodPais, txtMorada },
+                new[] { imgUser, imgPwd, imgContacto, lblMorada },
                 Color.FromArgb(9, 171, 219)))
             {
                 erros.Add("Por favor, preencha todos os campos obrigatórios.");
@@ -137,7 +111,10 @@ namespace poo_tp_29559.Views
             return true;
         }
 
-
+        /// <summary>
+        /// Valida se o contacto e o código do país foram corretamente preenchidos.
+        /// </summary>
+        /// <returns>Retorna verdadeiro se o contacto com código de país estiver correto, caso contrário falso.</returns>
         private bool ValidarContactoComCodigo()
         {
             bool valido = !string.IsNullOrWhiteSpace(txtContactoCodPais.Text) && !string.IsNullOrWhiteSpace(txtContacto.Text);
@@ -145,14 +122,73 @@ namespace poo_tp_29559.Views
             return valido;
         }
 
+        /// <summary>
+        /// Obtém o número completo do contacto com código de país.
+        /// </summary>
+        /// <returns>Retorna o número de contacto completo com código de país.</returns>
         private string ObterContactoCompleto()
         {
             return $"{txtContactoCodPais.Text} {txtContacto.Text}";
         }
 
+        #endregion
+        #region Form Events
+        /// <summary>
+        /// Evento disparado ao clicar no link de redirecionamento para o login.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
         private void lblLoginAqui_Click(object sender, EventArgs e)
         {
             GoToLogin();
         }
+
+        /// <summary>
+        /// Evento disparado ao clicar no botão de submissão do formulário.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (!ValidarFormulario())
+            {
+                return;
+            }
+
+            var novoUtilizador = new Utilizador
+            {
+                Nome = txtNome.Text,
+                Contacto = ObterContactoCompleto(),
+                Morada = txtMorada.Text,
+                DataNasc = dtpNasc.Checked ? dtpNasc.Value.ToString("dd-MM-yyyy HH:mm:ss") : null,
+                Nif = Convert.ToInt32(txtNIF.Text),
+                Password = txtPassword.Text,
+                IsAdmin = rdbAdmin.Checked
+            };
+
+            _controller.AddItem(novoUtilizador);
+            GoToLogin();
+        }
+
+        /// <summary>
+        /// Evento disparado ao clicar no botão "Sair".
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Evento disparado ao clicar no ícone de ocultar/mostrar a password.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        private void btnHidePwd_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+        }
+        #endregion
     }
 }

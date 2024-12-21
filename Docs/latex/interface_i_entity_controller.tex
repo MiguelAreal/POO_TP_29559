@@ -1,5 +1,10 @@
 \doxysection{Referência ao interface IEntity\+Controller}
 \label{interface_i_entity_controller}\index{IEntityController@{IEntityController}}
+
+
+Interface para a definição de operações de controle de entidades genéricas.  
+
+
 Diagrama de heranças da classe IEntity\+Controller\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,22 +14,25 @@ Diagrama de heranças da classe IEntity\+Controller\begin{figure}[H]
 \doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
-\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Remove um item. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
-\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
-\begin{DoxyCompactList}\small\item\em Obtém todos os itens. \end{DoxyCompactList}\item 
-\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
-\end{DoxyCompactItemize}
+object \textbf{ Get\+By\+Id} (int? id)
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador único. \end{DoxyCompactList}\item 
+void \textbf{ Remove\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Remove um item do sistema. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um item existente no sistema. \end{DoxyCompactList}\item 
+List$<$ object $>$ \textbf{ Get\+Items} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens armazenados no sistema. \end{DoxyCompactList}\item 
+List$<$ object $>$ \textbf{ Filtrar\+Itens} (List$<$ object $>$ items, string filtro, string? coluna)
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em critérios específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
+Interface para a definição de operações de controle de entidades genéricas. 
 
+Esta interface define os métodos básicos para a gestão de entidades, como filtrar, obter, atualizar e remover itens. ~\newline
+ É genérica e pode ser usada com diferentes tipos de entidades na aplicação. 
 
-Definido na linha \textbf{ 12} do ficheiro \textbf{ IEntity\+Controller.\+cs}.
+Definido na linha \textbf{ 8} do ficheiro \textbf{ IEntity\+Controller.\+cs}.
 
 
 
@@ -33,42 +41,54 @@ Definido na linha \textbf{ 12} do ficheiro \textbf{ IEntity\+Controller.\+cs}.
 \index{IEntityController@{IEntityController}!FiltrarItens@{FiltrarItens}}
 \index{FiltrarItens@{FiltrarItens}!IEntityController@{IEntityController}}
 \doxysubsubsection{FiltrarItens()}
-{\footnotesize\ttfamily \textbf{ List}$<$ \textbf{ object} $>$ IEntity\+Controller.\+Filtrar\+Itens (\begin{DoxyParamCaption}\item[{\textbf{ List}$<$ \textbf{ object} $>$}]{items,  }\item[{\textbf{ string}}]{filtro,  }\item[{\textbf{ string}?}]{coluna }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily List$<$ object $>$ IEntity\+Controller.\+Filtrar\+Itens (\begin{DoxyParamCaption}\item[{List$<$ object $>$}]{items,  }\item[{string}]{filtro,  }\item[{string?}]{coluna }\end{DoxyParamCaption})}
 
+
+
+Filtra itens com base em critérios específicos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em items} & A lista de itens a ser filtrada.\\
+\hline
+{\em filtro} & O valor de filtro usado para realizar a busca.\\
+\hline
+{\em coluna} & A coluna ou propriedade opcional pela qual os itens serão filtrados. Pode ser {\ttfamily null}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Uma lista de itens que correspondem aos critérios de filtro.
+\end{DoxyReturn}
 \label{interface_i_entity_controller_afe8a9ec18b8d7b8d9a7dbe79a394e582} 
 \index{IEntityController@{IEntityController}!GetById@{GetById}}
 \index{GetById@{GetById}!IEntityController@{IEntityController}}
 \doxysubsubsection{GetById()}
-{\footnotesize\ttfamily \textbf{ object} IEntity\+Controller.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{\textbf{ int}?}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily object IEntity\+Controller.\+Get\+By\+Id (\begin{DoxyParamCaption}\item[{int?}]{id }\end{DoxyParamCaption})}
 
 
 
-Obtém um item pelo seu identificador. 
-
-Método responsável por obter um item do tipo genérico com base no seu identificador único.
+Obtém um item pelo seu identificador único. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em id} & Identificador único do item a ser recuperado. \\
+{\em id} & Identificador único do item a ser recuperado.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-O item correspondente ao identificador fornecido, ou null se não encontrado. 
+O item correspondente ao identificador fornecido, ou {\ttfamily null} se não encontrado.
 \end{DoxyReturn}
 \label{interface_i_entity_controller_a9654304d3e6ddaba4f56ecad3b587e24} 
 \index{IEntityController@{IEntityController}!GetItems@{GetItems}}
 \index{GetItems@{GetItems}!IEntityController@{IEntityController}}
 \doxysubsubsection{GetItems()}
-{\footnotesize\ttfamily \textbf{ List}$<$ \textbf{ object} $>$ IEntity\+Controller.\+Get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily List$<$ object $>$ IEntity\+Controller.\+Get\+Items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Obtém todos os itens. 
-
-Método responsável por obter todos os itens armazenados, retornando-\/os como uma lista ou coleção.
+Obtém todos os itens armazenados no sistema. 
 
 \begin{DoxyReturn}{Retorna}
-A lista ou coleção de itens armazenados. 
+Uma lista de todos os itens armazenados.
 \end{DoxyReturn}
 
 
@@ -78,17 +98,15 @@ Implementado em \textbf{ Campanha\+Controller} \doxyref{}{p. }{class_campanha_co
 \index{IEntityController@{IEntityController}!RemoveItem@{RemoveItem}}
 \index{RemoveItem@{RemoveItem}!IEntityController@{IEntityController}}
 \doxysubsubsection{RemoveItem()}
-{\footnotesize\ttfamily \textbf{ void} IEntity\+Controller.\+Remove\+Item (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{item }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void IEntity\+Controller.\+Remove\+Item (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
 
 
 
-Remove um item. 
-
-Método responsável por remover um item do sistema. O item será excluído permanentemente.
+Remove um item do sistema. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em item} & O item a ser removido. \\
+{\em item} & O item a ser removido. Será excluído permanentemente.\\
 \hline
 \end{DoxyParams}
 
@@ -99,17 +117,15 @@ Implementado em \textbf{ Categoria\+Controller} \doxyref{}{p. }{class_categoria_
 \index{IEntityController@{IEntityController}!UpdateItem@{UpdateItem}}
 \index{UpdateItem@{UpdateItem}!IEntityController@{IEntityController}}
 \doxysubsubsection{UpdateItem()}
-{\footnotesize\ttfamily \textbf{ void} IEntity\+Controller.\+Update\+Item (\begin{DoxyParamCaption}\item[{\textbf{ object}}]{item }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void IEntity\+Controller.\+Update\+Item (\begin{DoxyParamCaption}\item[{object}]{item }\end{DoxyParamCaption})}
 
 
 
-Atualiza um item. 
-
-Método responsável por atualizar os dados de um item existente no sistema. O item será atualizado com as novas informações fornecidas.
+Atualiza os dados de um item existente no sistema. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em item} & O item a ser atualizado. \\
+{\em item} & O item a ser atualizado com as novas informações fornecidas.\\
 \hline
 \end{DoxyParams}
 

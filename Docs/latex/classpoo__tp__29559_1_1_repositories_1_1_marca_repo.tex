@@ -16,11 +16,11 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Marca\+R
 \item 
 \textbf{ Marca\+Repo} ()
 \begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Marca\+Repo}. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Membros públicos herdados de \textbf{ Base\+Repo$<$ Marca $>$}}
+\doxysubsection*{Membros públicos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Marca $>$}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Base\+Repo} (\textbf{ string} \textbf{ file\+Path})
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}}. \end{DoxyCompactList}\item 
+\textbf{ Base\+Repo} (\textbf{ string} file\+Path)
+\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily Base\+Repo$<$T$>$}. \end{DoxyCompactList}\item 
 \textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
 \begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
 \textbf{ virtual} \textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
@@ -34,14 +34,14 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Marca\+R
 \textbf{ virtual} ? \textbf{ T} \textbf{ Get\+By\+Property} (\textbf{ Func}$<$ \textbf{ T}, \textbf{ object} $>$ \textbf{ property\+Selector}, \textbf{ object} \textbf{ value})
 \begin{DoxyCompactList}\small\item\em Obtém um item com base em uma propriedade. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
-\doxysubsection*{Membros protegidos herdados de \textbf{ Base\+Repo$<$ Marca $>$}}
+\doxysubsection*{Membros protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Marca $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ void} \textbf{ Save\+Changes} ()
-\begin{DoxyCompactList}\small\item\em guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Guarda as mudanças no ficheiro JSON. \end{DoxyCompactList}\item 
 \textbf{ void} \textbf{ Set\+Id} (\textbf{ T} \textbf{ item})
 \begin{DoxyCompactList}\small\item\em Atribui um novo ID ao item. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Repo$<$ Marca $>$}}
+\doxysubsection*{Atributos Protegidos herdados de \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ Marca $>$}}
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ readonly} \textbf{ string} \textbf{ file\+Path}
@@ -53,14 +53,16 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Repositories.\+Marca\+R
 \doxysubsection{Descrição detalhada}
 Repositório para a manipulação de marcas. 
 
-A classe {\ttfamily Marca\+Repo} herda de {\ttfamily \doxyref{Base\+Repo}{p. }{class_base_repo}$<$\doxyref{Marca}{p. }{class_marca}$>$} e é especializada na manipulação de objetos do tipo {\ttfamily \doxyref{Marca}{p. }{class_marca}}. Ela oferece as funcionalidades básicas de um repositório, como a adição, remoção, atualização e obtenção de marcas a partir de um ficheiro JSON.
+A classe {\ttfamily Marca\+Repo} herda de {\ttfamily Base\+Repo$<$Marca$>$} e é especializada na manipulação de objetos do tipo {\ttfamily Marca}. Ela oferece as funcionalidades básicas de um repositório, como a adição, remoção, atualização e obtenção de marcas a partir de um ficheiro JSON. 
 
 \begin{DoxySeeAlso}{Veja também}
-\doxyref{Base\+Repo}{p. }{class_base_repo} 
+\doxyref{Base\+Repo$<$\+Marca$>$}{p. }{classpoo__tp__29559_1_1_repositories_1_1_base_repo}
+
+
 \end{DoxySeeAlso}
 
 
-Definido na linha \textbf{ 27} do ficheiro \textbf{ Marca\+Repo.\+cs}.
+Definido na linha \textbf{ 15} do ficheiro \textbf{ Marca\+Repo.\+cs}.
 
 
 
@@ -75,13 +77,13 @@ Definido na linha \textbf{ 27} do ficheiro \textbf{ Marca\+Repo.\+cs}.
 
 Construtor da classe {\ttfamily Marca\+Repo}. 
 
-Inicializa o repositório de marcas com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily \doxyref{Data/marcas.\+json}{p. }{class_base_repo_ae1c06249a541ca7999b3d35e611c7c3e}}. 
+Inicializa o repositório de marcas com o caminho do ficheiro JSON onde os dados serão armazenados. O ficheiro pré-\/definido utilizado é {\ttfamily Data/marcas.\+json}. 
 
-Definido na linha \textbf{ 35} do ficheiro \textbf{ Marca\+Repo.\+cs}.
+Definido na linha \textbf{ 25} do ficheiro \textbf{ Marca\+Repo.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00035\ :\ base(\textcolor{stringliteral}{"{}Data/marcas.json"{}})\ \{\ \}}
+\DoxyCodeLine{00025\ :\ base(\textcolor{stringliteral}{"{}Data/marcas.json"{}})\ \{\ \}}
 
 \end{DoxyCode}
 

@@ -2,7 +2,7 @@
 \label{classpoo__tp__29559_1_1_models_1_1_categoria}\index{poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}}
 
 
-Representa uma categoria de produtos.  
+Representa uma categoria de produtos no sistema.  
 
 
 Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria\begin{figure}[H]
@@ -15,37 +15,29 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria\begi
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Categoria} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe Categoria. \end{DoxyCompactList}\item 
-\textbf{ bool} \textbf{ Pode\+Ser\+Eliminada} (\textbf{ List}$<$ \textbf{ Produto} $>$ \textbf{ produtos})
+\begin{DoxyCompactList}\small\item\em Inicializa uma nova instância da classe {\ttfamily Categoria}. \end{DoxyCompactList}\item 
+bool \textbf{ Pode\+Ser\+Eliminada} (List$<$ \textbf{ Produto} $>$ produtos)
 \begin{DoxyCompactList}\small\item\em Verifica se a categoria pode ser eliminada. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Propriedades}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Identificador único da categoria. \end{DoxyCompactList}\item 
-\textbf{ string}? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome da categoria. \end{DoxyCompactList}\item 
-\textbf{ string}? \textbf{ Descricao}\hspace{0.3cm}{\ttfamily  [get, set]}
+string? \textbf{ Descricao}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Descrição da categoria. \end{DoxyCompactList}\item 
-\textbf{ Date\+Time} \textbf{ Data\+Criacao}\hspace{0.3cm}{\ttfamily  [get, set]}
+Date\+Time \textbf{ Data\+Criacao}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Data de criação da categoria. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Propriedades herdados de \textbf{ IIdentifiable}}
 
 
 \doxysubsection{Descrição detalhada}
-Representa uma categoria de produtos. 
+Representa uma categoria de produtos no sistema. 
 
-A classe {\ttfamily Categoria} é utilizada para armazenar informações relacionadas a uma categoria de produtos no sistema. Cada categoria possui um identificador único, nome, descrição e data de criação. Além disso, a classe oferece um método para verificar se a categoria pode ser eliminada, o que é possível apenas caso não esteja associada a nenhum produto.
+A classe {\ttfamily Categoria} armazena informações como o nome, descrição e data de criação de uma categoria. Também oferece funcionalidade para verificar se a categoria pode ser eliminada, garantindo que não esteja associada a nenhum produto. 
 
-\begin{DoxyAuthor}{Autor}
-Miguel Areal 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Data}
-12/2024 
-\end{DoxyDate}
-
-
-Definido na linha \textbf{ 24} do ficheiro \textbf{ Categoria.\+cs}.
+Definido na linha \textbf{ 15} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 
@@ -58,17 +50,17 @@ Definido na linha \textbf{ 24} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 
-Construtor da classe Categoria. 
+Inicializa uma nova instância da classe {\ttfamily Categoria}. 
 
-O construtor da classe inicializa o campo {\ttfamily Data\+Criacao} com a data e hora atuais, indicando que a categoria foi criada no momento da sua instância. 
+A propriedade {\ttfamily Data\+Criacao} é automaticamente definida com a data e hora atuais. 
 
-Definido na linha \textbf{ 66} do ficheiro \textbf{ Categoria.\+cs}.
+Definido na linha \textbf{ 58} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ DataCriacao\ =\ DateTime.Now;}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ DataCriacao\ =\ DateTime.Now;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -78,31 +70,31 @@ Definido na linha \textbf{ 66} do ficheiro \textbf{ Categoria.\+cs}.
 \index{poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}!PodeSerEliminada@{PodeSerEliminada}}
 \index{PodeSerEliminada@{PodeSerEliminada}!poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}}
 \doxysubsubsection{PodeSerEliminada()}
-{\footnotesize\ttfamily \textbf{ bool} poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Pode\+Ser\+Eliminada (\begin{DoxyParamCaption}\item[{\textbf{ List}$<$ \textbf{ Produto} $>$}]{produtos }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Pode\+Ser\+Eliminada (\begin{DoxyParamCaption}\item[{List$<$ \textbf{ Produto} $>$}]{produtos }\end{DoxyParamCaption})}
 
 
 
 Verifica se a categoria pode ser eliminada. 
 
-Este método verifica se a categoria pode ser eliminada, garantindo que a categoria não esteja associada a nenhum produto. Caso a categoria esteja associada a algum produto, ela não pode ser eliminada.
-
 
 \begin{DoxyParams}{Parâmetros}
-{\em produtos} & Lista de produtos do sistema. \\
+{\em produtos} & Lista de produtos do sistema.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-Retorna {\ttfamily true} se a categoria não estiver associada a nenhum produto e, portanto, pode ser eliminada; caso contrário, retorna {\ttfamily false}. 
+{\ttfamily true} se a categoria não estiver associada a nenhum produto, permitindo sua eliminação; caso contrário, {\ttfamily false}. 
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 81} do ficheiro \textbf{ Categoria.\+cs}.
+Este método garante que a eliminação de categorias só ocorra se elas não estiverem associadas a nenhum produto. 
+
+Definido na linha \textbf{ 74} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !produtos.Any(p\ =>\ p.CategoriaID\ ==\ \textcolor{keyword}{this}.Id);}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ !produtos.Any(p\ =>\ p.CategoriaID\ ==\ \textcolor{keyword}{this}.Id);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -112,80 +104,80 @@ Definido na linha \textbf{ 81} do ficheiro \textbf{ Categoria.\+cs}.
 \index{poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}!DataCriacao@{DataCriacao}}
 \index{DataCriacao@{DataCriacao}!poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}}
 \doxysubsubsection{DataCriacao}
-{\footnotesize\ttfamily \textbf{ Date\+Time} poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Data\+Criacao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily Date\+Time poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Data\+Criacao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
 Data de criação da categoria. 
 
-Este campo armazena a data em que a categoria foi criada. O valor é atribuído automaticamente quando a categoria é instanciada, utilizando a data e hora atuais. 
+A data é automaticamente atribuída no momento da criação da instância. 
 
-Definido na linha \textbf{ 58} do ficheiro \textbf{ Categoria.\+cs}.
+Definido na linha \textbf{ 50} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00058\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00050\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_categoria_a551cde91a65cc509642973997cdf7c2e} 
 \index{poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}!Descricao@{Descricao}}
 \index{Descricao@{Descricao}!poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}}
 \doxysubsubsection{Descricao}
-{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Descricao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Descricao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
 Descrição da categoria. 
 
-Este campo armazena uma descrição mais detalhada sobre a categoria. Pode ser utilizada para fornecer mais informações sobre os produtos que pertencem a esta categoria. 
+Fornece detalhes adicionais sobre os produtos pertencentes à categoria. 
 
-Definido na linha \textbf{ 49} do ficheiro \textbf{ Categoria.\+cs}.
+Definido na linha \textbf{ 41} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00049\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00041\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_categoria_a9cb71979e4f6b167dad1847b31c19939} 
 \index{poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}!Id@{Id}}
 \index{Id@{Id}!poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}}
 \doxysubsubsection{Id}
-{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
 Identificador único da categoria. 
 
-Este campo armazena o identificador único de cada categoria, utilizado para referenciar a categoria no sistema. 
+Utilizado para referenciar a categoria no sistema. 
 
 Implementa \textbf{ IIdentifiable} \doxyref{}{p. }{interface_i_identifiable_a53f073549cdc0f3ac470ae794da87ad3}.
 
 
 
-Definido na linha \textbf{ 32} do ficheiro \textbf{ Categoria.\+cs}.
+Definido na linha \textbf{ 23} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00032\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00023\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_categoria_a4d50634e9fee090158c040b3be9f5254} 
 \index{poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}!Nome@{Nome}}
 \index{Nome@{Nome}!poo\_tp\_29559.Models.Categoria@{poo\_tp\_29559.Models.Categoria}}
 \doxysubsubsection{Nome}
-{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Categoria.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
 Nome da categoria. 
 
-Este campo armazena o nome da categoria, que será utilizado para exibir a categoria no sistema. 
+Nome que identifica a categoria e é exibido ao utilizador. 
 
-Definido na linha \textbf{ 40} do ficheiro \textbf{ Categoria.\+cs}.
+Definido na linha \textbf{ 32} do ficheiro \textbf{ Categoria.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00032\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 

@@ -5,19 +5,19 @@ using poo_tp_29559.Views;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-/// <summary>
-/// Controlador para a gestão de categorias.
-/// Implementa a lógica para a gestão das categorias, incluindo operações de leitura,
-/// remoção e verificação de condições para eliminação de categorias associadas a produtos.
-/// Herda de <see cref="BaseController{Categoria}"/> e implementa a interface <see cref="IEntityController"/>.
-/// </summary>
 public class CategoriaController : BaseController<Categoria>, IEntityController
 {
+    #region Constructor
+
     /// <summary>
     /// Construtor da classe <see cref="CategoriaController"/>.
     /// Inicializa o controlador com o caminho do ficheiro de dados onde as categorias serão armazenadas.
     /// </summary>
     public CategoriaController() : base("Data/categorias.json") { }
+
+    #endregion
+
+    #region Remove Item
 
     /// <summary>
     /// Remove uma categoria do repositório.
@@ -42,4 +42,6 @@ public class CategoriaController : BaseController<Categoria>, IEntityController
             }
         }
     }
+
+    #endregion
 }

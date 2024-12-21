@@ -2,6 +2,7 @@
 
 namespace poo_tp_29559.Repositories
 {
+    #region Class CampanhaRepo
     /// <summary>
     /// Repositório para a manipulação de campanhas.
     /// </summary>
@@ -53,4 +54,5 @@ namespace poo_tp_29559.Repositories
         }
         #endregion
     }
+    #endregion
 }

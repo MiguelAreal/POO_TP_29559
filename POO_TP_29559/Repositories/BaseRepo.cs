@@ -7,6 +7,7 @@ using poo_tp_29559.Interfaces;
 
 namespace poo_tp_29559.Repositories
 {
+    #region Class BaseRepo
     /// <summary>
     /// Repositório genérico para manipulação de dados.
     /// </summary>
@@ -226,4 +227,5 @@ namespace poo_tp_29559.Repositories
         }
         #endregion
     }
+    #endregion
 }

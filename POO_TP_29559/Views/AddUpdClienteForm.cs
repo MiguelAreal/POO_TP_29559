@@ -1,15 +1,5 @@
-﻿/**
- * @file AddUpdClienteForm.cs
- * @brief Formulário para adicionar ou atualizar um cliente existente.
- *
- * Este formulário permite ao utilizador adicionar um novo cliente ou atualizar um cliente existente, fornecendo informações como nome, contacto, morada, NIF, data de nascimento e outros.
- * Utiliza o `UtilizadorController` para manipular os dados do cliente, garantindo que não existam duplicados e que os dados sejam válidos.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
-
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
+using poo_tp_29559.Models;
 using System;
 using System.Diagnostics.Contracts;
 using System.Drawing;
@@ -19,11 +9,10 @@ using ValidationLibrary;
 namespace poo_tp_29559.Views
 {
     /**
-     * @class AddUpdClienteForm
-     * @brief Formulário para a criação ou edição de um cliente.
+     * <summary>Formulário para a criação ou edição de um cliente.</summary>
      * 
-     * Este formulário serve para adicionar um novo cliente ou editar um cliente existente no sistema. O utilizador deve preencher vários campos, como nome, contacto, NIF, morada e data de nascimento.
-     * O sistema valida os campos para garantir que os dados inseridos sejam válidos e que não haja duplicados (como NIF ou contacto).
+     * <remarks>Este formulário serve para adicionar um novo cliente ou editar um cliente existente no sistema. O utilizador deve preencher vários campos, como nome, contacto, NIF, morada e data de nascimento.
+     * O sistema valida os campos para garantir que os dados inseridos sejam válidos e que não haja duplicados (como NIF ou contacto).</remarks>
      */
     public partial class AddUpdClienteForm : MetroForm
     {
@@ -31,13 +20,12 @@ namespace poo_tp_29559.Views
         private readonly int? _clienteId; /**< ID do cliente para edição, se aplicável. */
         Utilizador cliente;
 
-        /**
-         * @brief Construtor do `AddUpdClienteForm`.
-         * 
-         * Inicializa o controlador de utilizadores, define o estado inicial do formulário e carrega os dados do cliente se um ID válido for fornecido.
-         * 
-         * @param clienteId (Opcional) O ID do cliente a ser editado.
-         */
+        #region Construtors and Initialization
+
+        /// <summary>
+        /// Construtor do <see cref="AddUpdClienteForm"/>.
+        /// </summary>
+        /// <param name="clienteId">(Opcional) O ID do cliente a ser editado.</param>
         public AddUpdClienteForm(int? clienteId = null)
         {
             InitializeComponent();
@@ -50,13 +38,15 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega os dados do cliente para edição.
-         * 
-         * Obtém os dados do cliente pelo ID e preenche os campos do formulário.
-         * 
-         * @param clienteId ID do cliente a ser carregado.
-         */
+        #endregion
+
+        #region Loading Methods
+
+        /// <summary>
+        /// Carrega os dados do cliente para edição.
+        /// </summary>
+        /// <param name="clienteId">ID do cliente a ser carregado.</param>
+        /// <remarks>Obtém os dados do cliente pelo ID e preenche os campos do formulário.</remarks>
         private void CarregarCliente(int clienteId)
         {
             cliente = (Utilizador)_controller.GetById(clienteId);
@@ -89,15 +79,19 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Evento de clique no botão de confirmação.
-         * 
-         * Este evento é acionado quando o utilizador clica no botão de confirmação para adicionar ou atualizar o cliente.
-         * Valida os campos do formulário e, caso todos os campos sejam válidos, cria ou atualiza o cliente no sistema.
-         * 
-         * @param sender Objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        #endregion
+
+        #region Form Events
+
+        /// <summary>
+        /// Evento de clique no botão de confirmação.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        /// <remarks>
+        /// Este evento é acionado quando o utilizador clica no botão de confirmação para adicionar ou atualizar o cliente.
+        /// Valida os campos do formulário e, caso todos os campos sejam válidos, cria ou atualiza o cliente no sistema.
+        /// </remarks>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             bool allValid = true;
@@ -175,5 +169,7 @@ namespace poo_tp_29559.Views
 
             this.Close();
         }
+
+        #endregion
     }
 }

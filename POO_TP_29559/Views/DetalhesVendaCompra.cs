@@ -1,16 +1,4 @@
-﻿/**
- * @file DetalhesVendaCompra.cs
- * @brief Formulário para exibição de detalhes de uma transação de venda ou compra.
- * 
- * A classe `DetalhesVendaCompra` representa uma interface gráfica que exibe os detalhes de uma transação, 
- * incluindo informações sobre o cliente, data da transação, valores, garantia, itens comprados e campanhas aplicadas.
- * Este formulário é implementado utilizando o MetroFramework.
- * 
- * @author Miguel Areal
- * @date Dezembro, 2024
- */
-
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -20,28 +8,26 @@ using poo_tp_29559.Repositories.Enumerators;
 
 namespace poo_tp_29559.Views
 {
-    /**
-     * @class DetalhesVendaCompra
-     * @brief Formulário para exibição de detalhes de uma transação de venda ou compra.
-     * 
-     * Esta classe é responsável por exibir informações detalhadas de uma transação de venda ou compra, 
-     * incluindo dados do cliente, valores totais, itens comprados, campanhas aplicadas e status de garantia.
-     */
+    /// <summary>
+    /// Formulário para exibição de detalhes de uma transação de venda ou compra.
+    /// </summary>
     public partial class DetalhesVendaCompra : MetroForm
     {
+        #region Private Fields
+
         private UtilizadorController utilizadorController;
         private VendaCompraController _controller;
         private string nomeCliente;
 
-        /**
-         * @brief Construtor do formulário `DetalhesVendaCompra`.
-         * 
-         * Este construtor inicializa o formulário com os dados da venda ou compra especificada, configurando
-         * os controles para exibir informações detalhadas ao utilizador.
-         * 
-         * @param formType Tipo de formulário (Venda ou Compra).
-         * @param id Identificador da transação de venda ou compra.
-         */
+        #endregion
+
+        #region Construtors
+
+        /// <summary>
+        /// Construtor do formulário `DetalhesVendaCompra`.
+        /// </summary>
+        /// <param name="formType">Tipo de formulário (Venda ou Compra).</param>
+        /// <param name="id">Identificador da transação de venda ou compra.</param>
         public DetalhesVendaCompra(FormTypes formType, int id)
         {
             InitializeComponent();
@@ -106,13 +92,14 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Calcula os meses restantes para o fim da garantia.
-         * 
-         * Este método calcula o tempo restante para a expiração da garantia e exibe o estado da garantia no formulário.
-         * 
-         * @param venda Instância da classe `VendaCompra` contendo a data do fim da garantia.
-         */
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Calcula os meses restantes para o fim da garantia.
+        /// </summary>
+        /// <param name="venda">Instância da classe `VendaCompra` contendo a data do fim da garantia.</param>
         public void CalculaMesesRestantesGarantia(VendaCompra venda)
         {
             if (DateTime.TryParse(venda.FimDataGarantia, out var garantiaData))
@@ -146,43 +133,40 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Evento de cursor a passar por cima do botão de recuar.
-         * 
-         * Altera a cor do botão para indicar que está selecionável.
-         * 
-         * @param sender O objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        #endregion
+
+        #region Form Events
+
+        /// <summary>
+        /// Evento de cursor a passar por cima do botão de recuar.
+        /// </summary>
+        /// <param name="sender">O objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
         private void btnBack_MouseEnter(object sender, EventArgs e)
         {
             btnBack.ForeColor = Color.DodgerBlue;
         }
 
-        /**
-         * @brief Evento de cursor a sair de cima do botão de recuar.
-         * 
-         * Restaura a cor original do botão.
-         * 
-         * @param sender O objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        /// <summary>
+        /// Evento de cursor a sair de cima do botão de recuar.
+        /// </summary>
+        /// <param name="sender">O objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
         private void btnBack_MouseLeave(object sender, EventArgs e)
         {
             btnBack.ForeColor = Color.FromArgb(9, 171, 219);
         }
 
-        /**
-         * @brief Evento de clique no botão de voltar.
-         * 
-         * Este método fecha o formulário quando o botão de voltar é clicado.
-         * 
-         * @param sender O objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        /// <summary>
+        /// Evento de clique no botão de voltar.
+        /// </summary>
+        /// <param name="sender">O objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        #endregion
     }
 }

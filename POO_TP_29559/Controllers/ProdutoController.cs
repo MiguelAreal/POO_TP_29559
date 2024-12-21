@@ -6,23 +6,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-/// <summary>
-/// Controlador para a gestão de produtos.
-/// Responsável pela gestão dos produtos, incluindo operações de leitura e tradução dos dados (substituindo IDs por nomes de categorias e marcas).
-/// Herda de <see cref="BaseController{Produto}"/> e implementa a interface <see cref="IEntityController"/>, oferecendo funcionalidades específicas para o trabalho com produtos.
-/// </summary>
 public class ProdutoController : BaseController<Produto>, IEntityController
 {
+    #region Fields
+
     /// <summary>
     /// Lista de produtos com nomes traduzidos para exibição mais legível.
     /// </summary>
     private List<ProdutoViewModel> _produtosComNomes;
+
+    #endregion
+
+    #region Constructor
 
     /// <summary>
     /// Construtor da classe <see cref="ProdutoController"/>.
     /// Inicializa o controlador com o caminho do ficheiro de dados onde os produtos são armazenados.
     /// </summary>
     public ProdutoController() : base("Data/produtos.json") { }
+
+    #endregion
+
+    #region Get Items
 
     /// <summary>
     /// Obtém todos os produtos com os IDs de categoria e marca traduzidos para os respetivos nomes.
@@ -59,6 +64,10 @@ public class ProdutoController : BaseController<Produto>, IEntityController
         return _produtosComNomes.Cast<object>().ToList();
     }
 
+    #endregion
+
+    #region Get Normal Products
+
     /// <summary>
     /// Obtém todos os produtos diretamente do modelo sem tradução para nomes.
     /// Este método retorna uma lista de produtos diretamente do repositório, sem modificação dos dados.
@@ -69,4 +78,6 @@ public class ProdutoController : BaseController<Produto>, IEntityController
         var produtos = _repository.GetAll();
         return produtos.OrderBy(c => c.Nome).ToList();
     }
+
+    #endregion
 }

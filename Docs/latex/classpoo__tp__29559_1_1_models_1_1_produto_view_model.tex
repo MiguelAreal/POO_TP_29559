@@ -8,36 +8,28 @@ Classe que tem como objetivo ser exibida ao utilizador, de produtos.
 \doxysubsubsection*{Propriedades}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ int} \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Id}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Identificador único do produto. \end{DoxyCompactList}\item 
-\textbf{ string}? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string? \textbf{ Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome do produto. \end{DoxyCompactList}\item 
-\textbf{ decimal} \textbf{ Preco}\hspace{0.3cm}{\ttfamily  [get, set]}
+decimal \textbf{ Preco}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Preço do produto. \end{DoxyCompactList}\item 
-\textbf{ int} \textbf{ Quantidade\+Em\+Stock}\hspace{0.3cm}{\ttfamily  [get, set]}
+int \textbf{ Quantidade\+Em\+Stock}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Quantidade disponível em stock do produto. \end{DoxyCompactList}\item 
-\textbf{ string}? \textbf{ Categoria\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string? \textbf{ Categoria\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome da categoria associada ao produto. \end{DoxyCompactList}\item 
-\textbf{ string}? \textbf{ Marca\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
+string? \textbf{ Marca\+Nome}\hspace{0.3cm}{\ttfamily  [get, set]}
 \begin{DoxyCompactList}\small\item\em Nome da marca associada ao produto. \end{DoxyCompactList}\item 
-\textbf{ string}? \textbf{ Data\+Adicao}\hspace{0.3cm}{\ttfamily  [get, set]}
-\begin{DoxyCompactList}\small\item\em Data de adição do produto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+string? \textbf{ Data\+Adicao}\hspace{0.3cm}{\ttfamily  [get, set]}
+\begin{DoxyCompactList}\small\item\em Data de adição do produto ao sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 Classe que tem como objetivo ser exibida ao utilizador, de produtos. 
 
-Através da classe original {\ttfamily \doxyref{Produto}{p. }{class_produto}}, esta é utilizada para exibir ao utilizador os detalhes do produto, incluindo o nome da categoria e da marca associadas ao produto. Esta classe serve como um modelo de visualização, proporcionando uma representação mais amigável para o utilizador com as informações relevantes sobre os produtos disponíveis.
+A classe {\ttfamily Produto\+View\+Model} é utilizada para exibir ao utilizador os detalhes de um produto, incluindo o nome da categoria e da marca associadas ao produto. Esta classe serve como um modelo de visualização, proporcionando uma representação mais amigável para o utilizador com as informações relevantes sobre os produtos disponíveis. 
 
-\begin{DoxyAuthor}{Autor}
-Miguel Areal 
-\end{DoxyAuthor}
-\begin{DoxyDate}{Data}
-12/2024 
-\end{DoxyDate}
-
-
-Definido na linha \textbf{ 22} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 15} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 
@@ -46,7 +38,7 @@ Definido na linha \textbf{ 22} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!CategoriaNome@{CategoriaNome}}
 \index{CategoriaNome@{CategoriaNome}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{CategoriaNome}
-{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Categoria\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Categoria\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -54,22 +46,22 @@ Nome da categoria associada ao produto.
 
 Este campo armazena o nome da categoria à qual o produto pertence. 
 
-Definido na linha \textbf{ 60} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 58} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00060\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00058\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_produto_view_model_ad8327964ae09bdd7f85c26f726c6bac7} 
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!DataAdicao@{DataAdicao}}
 \index{DataAdicao@{DataAdicao}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{DataAdicao}
-{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Data\+Adicao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Data\+Adicao\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
-Data de adição do produto. 
+Data de adição do produto ao sistema. 
 
 Este campo armazena a data em que o produto foi adicionado ao sistema, representada como uma string. 
 
@@ -84,7 +76,7 @@ Definido na linha \textbf{ 76} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!Id@{Id}}
 \index{Id@{Id}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{Id}
-{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Id\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -92,18 +84,18 @@ Identificador único do produto.
 
 Este campo armazena o identificador único do produto. 
 
-Definido na linha \textbf{ 29} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 23} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00029\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00023\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_produto_view_model_a5471fa91a5b215d460fde9b8573a3859} 
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!MarcaNome@{MarcaNome}}
 \index{MarcaNome@{MarcaNome}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{MarcaNome}
-{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Marca\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Marca\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -111,18 +103,18 @@ Nome da marca associada ao produto.
 
 Este campo armazena o nome da marca à qual o produto pertence. 
 
-Definido na linha \textbf{ 68} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 67} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00068\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00067\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_produto_view_model_a74049ebf1b4753b9757ff821e6aa2846} 
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!Nome@{Nome}}
 \index{Nome@{Nome}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{Nome}
-{\footnotesize\ttfamily \textbf{ string}? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily string? poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Nome\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -130,18 +122,18 @@ Nome do produto.
 
 Este campo armazena o nome do produto. 
 
-Definido na linha \textbf{ 36} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00036\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00031\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_produto_view_model_a89ef123e81c10693e7657fb04351c5a6} 
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!Preco@{Preco}}
 \index{Preco@{Preco}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{Preco}
-{\footnotesize\ttfamily \textbf{ decimal} poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Preco\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily decimal poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Preco\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -149,18 +141,18 @@ Preço do produto.
 
 Este campo armazena o preço unitário do produto. 
 
-Definido na linha \textbf{ 44} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 40} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00044\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00040\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_models_1_1_produto_view_model_a32e5d52fc2e9e08cd86fa8621a441b9a} 
 \index{poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}!QuantidadeEmStock@{QuantidadeEmStock}}
 \index{QuantidadeEmStock@{QuantidadeEmStock}!poo\_tp\_29559.Models.ProdutoViewModel@{poo\_tp\_29559.Models.ProdutoViewModel}}
 \doxysubsubsection{QuantidadeEmStock}
-{\footnotesize\ttfamily \textbf{ int} poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Quantidade\+Em\+Stock\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+{\footnotesize\ttfamily int poo\+\_\+tp\+\_\+29559.\+Models.\+Produto\+View\+Model.\+Quantidade\+Em\+Stock\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
 
 
 
@@ -168,11 +160,11 @@ Quantidade disponível em stock do produto.
 
 Este campo armazena a quantidade disponível do produto no stock. 
 
-Definido na linha \textbf{ 52} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
+Definido na linha \textbf{ 49} do ficheiro \textbf{ Produto\+View\+Model.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00052\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{00049\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 
 \end{DoxyCode}
 

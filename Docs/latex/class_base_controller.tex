@@ -1,10 +1,5 @@
 \doxysection{Referência à classe Template Base\+Controller$<$ T $>$}
 \label{class_base_controller}\index{BaseController$<$ T $>$@{BaseController$<$ T $>$}}
-
-
-Classe base abstrata para controlo de entidades genéricas. Implementa operações CRUD (Criar, Ler, Atualizar e Apagar) sobre um repositório genérico.  
-
-
 \doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,20 +27,13 @@ Classe base abstrata para controlo de entidades genéricas. Implementa operaçõ
 
 
 \doxysubsection{Descrição detalhada}
-Classe base abstrata para controlo de entidades genéricas. Implementa operações CRUD (Criar, Ler, Atualizar e Apagar) sobre um repositório genérico. 
-
-
-\begin{DoxyTemplParams}{Parâmetros de template}
-{\em T} & Tipo genérico que deve implementar a interface \doxyref{IIdentifiable}{p. }{interface_i_identifiable}.\\
-\hline
-\end{DoxyTemplParams}
 \begin{Desc}
 \item[Restrições do Tipo]\begin{description}
 \item[{\em T} : {\em \textbf{ class}}]\item[{\em T} : {\em \textbf{ IIdentifiable}}]\end{description}
 \end{Desc}
 
 
-Definido na linha \textbf{ 6} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 3} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 
@@ -85,13 +73,13 @@ Adiciona um novo item ao repositório.
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 29} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 36} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00030\ \ \ \ \ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \_repository.Add(item);}
-\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \_repository.Add(item);}
+\DoxyCodeLine{00039\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_base_controller_a7c8c65a9531f5bc973836ef26548f5b7} 
@@ -118,44 +106,44 @@ Lista de itens filtrados.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 87} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 98} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00088\ \ \ \ \ \{}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifique\ se\ o\ filtro\ e\ a\ coluna\ são\ válidos}}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(filtro)\ ||\ \textcolor{keywordtype}{string}.IsNullOrEmpty(coluna))}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<object>();}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Filtra\ os\ itens\ com\ base\ no\ nome\ da\ propriedade\ (coluna)\ e\ no\ texto\ de\ busca}}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ var\ itensFiltrados\ =\ items.Where(model\ =>}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtém\ a\ propriedade\ correspondente\ à\ coluna}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ prop\ =\ model.GetType().GetProperty(coluna);}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prop\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtém\ o\ valor\ da\ propriedade}}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ value\ =\ prop.GetValue(model)?.ToString()\ ??\ \textcolor{keywordtype}{string}.Empty;}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retorna\ verdadeiro\ se\ o\ valor\ da\ propriedade\ contiver\ o\ filtro\ (de\ forma\ case-\/insensitive)}}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.StartsWith(filtro,\ StringComparison.OrdinalIgnoreCase);}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Caso\ a\ propriedade\ não\ exista,\ retorna\ false}}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToList();}
-\DoxyCodeLine{00112\ }
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ itensFiltrados.Cast<\textcolor{keywordtype}{object}>().ToList();}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Trata\ qualquer\ exceção\ de\ forma\ adequada\ (pode\ ser\ uma\ exceção\ de\ reflexão\ ou\ outro\ erro)}}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Erro\ ao\ aplicar\ filtro:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<object>();\ \textcolor{comment}{//\ Retorna\ uma\ lista\ total\ em\ caso\ de\ erro}}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Verifique\ se\ o\ filtro\ e\ a\ coluna\ são\ válidos}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keywordtype}{string}.IsNullOrEmpty(filtro)\ ||\ \textcolor{keywordtype}{string}.IsNullOrEmpty(coluna))}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<object>();}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Filtra\ os\ itens\ com\ base\ no\ nome\ da\ propriedade\ (coluna)\ e\ no\ texto\ de\ busca}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ var\ itensFiltrados\ =\ items.Where(model\ =>}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtém\ a\ propriedade\ correspondente\ à\ coluna}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ prop\ =\ model.GetType().GetProperty(coluna);}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prop\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtém\ o\ valor\ da\ propriedade}}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ value\ =\ prop.GetValue(model)?.ToString()\ ??\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Retorna\ verdadeiro\ se\ o\ valor\ da\ propriedade\ contiver\ o\ filtro\ (de\ forma\ case-\/insensitive)}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ value.StartsWith(filtro,\ StringComparison.OrdinalIgnoreCase);}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Caso\ a\ propriedade\ não\ exista,\ retorna\ false}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \}).ToList();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ itensFiltrados.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Trata\ qualquer\ exceção\ de\ forma\ adequada\ (pode\ ser\ uma\ exceção\ de\ reflexão\ ou\ outro\ erro)}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}Erro\ ao\ aplicar\ filtro:\ \{ex.Message\}"{}},\ \textcolor{stringliteral}{"{}Erro"{}},\ MessageBoxButtons.OK,\ MessageBoxIcon.Error);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ List<object>();\ \textcolor{comment}{//\ Retorna\ uma\ lista\ total\ em\ caso\ de\ erro}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_base_controller_acedbcf4e7b8972e0bd7e9f2448d7374f} 
@@ -178,13 +166,13 @@ O item correspondente ao identificador, ou null se não existir.
 \end{DoxyReturn}
 
 
-Definido na linha \textbf{ 39} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 46} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.GetById(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_repository.GetById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_base_controller_ab123bcc53c016d37e86c07a4d7cbe3a4} 
@@ -206,14 +194,14 @@ Reimplementado em \textbf{ Campanha\+Controller} \doxyref{}{p. }{class_campanha_
 
 
 
-Definido na linha \textbf{ 74} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 85} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00075\ \ \ \ \ \{}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \_items\ =\ \_repository.GetAll();}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_items.Cast<\textcolor{keywordtype}{object}>().ToList();\ \textcolor{comment}{//\ Default\ implementation}}
-\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \_items\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_items.Cast<\textcolor{keywordtype}{object}>().ToList();\ \textcolor{comment}{//\ Default\ implementation}}
+\DoxyCodeLine{00089\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_base_controller_a8484ff644f75ab6d44e5e902b19e896e} 
@@ -237,16 +225,16 @@ Reimplementado em \textbf{ Categoria\+Controller} \doxyref{}{p. }{class_categori
 
 
 
-Definido na linha \textbf{ 49} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 56} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00050\ \ \ \ \ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ T\ specificItem)}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00055\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ T\ specificItem)}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Remove(specificItem);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{class_base_controller_a77705ea936106897021b3779c6500101} 
@@ -266,16 +254,16 @@ Atualiza um item específico. Este método pode ser re-\/implementado pelas clas
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 62} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 69} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00063\ \ \ \ \ \{}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ T\ specificItem)}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Update(specificItem);}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00068\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item\ is\ T\ specificItem)}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \_repository.Update(specificItem);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -293,7 +281,7 @@ Lista local de itens atualmente carregados.
 
 
 
-Definido na linha \textbf{ 16} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 15} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 \label{class_base_controller_a3ddd6b94752ca22c67a63c9511454f44} 
 \index{BaseController$<$ T $>$@{BaseController$<$ T $>$}!\_repository@{\_repository}}
@@ -307,7 +295,7 @@ Referência ao repositório base utilizado para operações nos itens.
 
 
 
-Definido na linha \textbf{ 11} do ficheiro \textbf{ Base\+Controller.\+cs}.
+Definido na linha \textbf{ 10} do ficheiro \textbf{ Base\+Controller.\+cs}.
 
 
 

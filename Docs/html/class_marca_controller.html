@@ -96,9 +96,6 @@ $(document).ready(function(){initNavTree('class_marca_controller.html',''); init
   <div class="headertitle"><div class="title">Referência à classe MarcaController</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Controlador para a gestão de marcas.  
- <a href="class_marca_controller.html#details">Mais...</a></p>
 <div class="dynheader">
 Diagrama de heranças da classe MarcaController</div>
 <div class="dyncontent">
@@ -106,70 +103,67 @@ Diagrama de heranças da classe MarcaController</div>
   <img src="class_marca_controller.png" usemap="#MarcaController_map" alt=""/>
   <map id="MarcaController_map" name="MarcaController_map">
 <area href="class_base_controller.html" alt="BaseController&lt; Marca &gt;" shape="rect" coords="0,0,157,24"/>
-<area href="interface_i_entity_controller.html" alt="IEntityController" shape="rect" coords="167,0,324,24"/>
+<area href="interface_i_entity_controller.html" title="Interface para a definição de operações de controle de entidades genéricas." alt="IEntityController" shape="rect" coords="167,0,324,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros públicos</h2></td></tr>
 <tr class="memitem:a4afc0d1701e7e984e059036331785f9d" id="r_a4afc0d1701e7e984e059036331785f9d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_marca_controller.html#a4afc0d1701e7e984e059036331785f9d">MarcaController</a> ()</td></tr>
-<tr class="memdesc:a4afc0d1701e7e984e059036331785f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <code><a class="el" href="class_marca_controller.html" title="Controlador para a gestão de marcas.">MarcaController</a></code>.  <br /></td></tr>
+<tr class="memdesc:a4afc0d1701e7e984e059036331785f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_marca_controller.html">MarcaController</a>. Inicializa o controlador com o caminho do ficheiro de dados onde as marcas serão armazenadas.  <br /></td></tr>
 <tr class="separator:a4afc0d1701e7e984e059036331785f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79ef8ed1bb89022e893161b64c85a33f" id="r_a79ef8ed1bb89022e893161b64c85a33f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">override</a> <a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_marca_controller.html#a79ef8ed1bb89022e893161b64c85a33f">RemoveItem</a> (<a class="el" href="class_base_repo.html">object</a> <a class="el" href="class_base_repo.html">item</a>)</td></tr>
-<tr class="memdesc:a79ef8ed1bb89022e893161b64c85a33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove uma marca do repositório.  <br /></td></tr>
+<tr class="memitem:a79ef8ed1bb89022e893161b64c85a33f" id="r_a79ef8ed1bb89022e893161b64c85a33f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">override</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_marca_controller.html#a79ef8ed1bb89022e893161b64c85a33f">RemoveItem</a> (<a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">item</a>)</td></tr>
+<tr class="memdesc:a79ef8ed1bb89022e893161b64c85a33f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove uma marca do repositório. Este método sobrepõe o método <a class="el" href="class_base_controller.html#a8484ff644f75ab6d44e5e902b19e896e" title="Remove um item específico. Este método pode ser re-implementado pelas classes derivadas para definir ...">BaseController&lt;T&gt;.RemoveItem</a> da classe base e tenta remover a marca fornecida do repositório, mas apenas se a marca não estiver associada a nenhum produto. Caso contrário, é exibida uma mensagem de erro.  <br /></td></tr>
 <tr class="separator:a79ef8ed1bb89022e893161b64c85a33f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0e3500e0c15f9307ee007c56b655eb9" id="r_ab0e3500e0c15f9307ee007c56b655eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_marca_controller.html#ab0e3500e0c15f9307ee007c56b655eb9">CarregaPaises</a> ()</td></tr>
-<tr class="memdesc:ab0e3500e0c15f9307ee007c56b655eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega a lista de países a partir de um ficheiro JSON.  <br /></td></tr>
+<tr class="memitem:ab0e3500e0c15f9307ee007c56b655eb9" id="r_ab0e3500e0c15f9307ee007c56b655eb9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">string</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_marca_controller.html#ab0e3500e0c15f9307ee007c56b655eb9">CarregaPaises</a> ()</td></tr>
+<tr class="memdesc:ab0e3500e0c15f9307ee007c56b655eb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega a lista de países a partir de um ficheiro JSON. Lê um ficheiro JSON contendo uma lista de países e retorna essa lista como uma lista de strings. Caso o ficheiro não exista ou ocorra um erro ao lê-lo, retorna uma lista vazia e exibe uma mensagem de erro.  <br /></td></tr>
 <tr class="separator:ab0e3500e0c15f9307ee007c56b655eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_base_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_base_controller')"><img src="closed.png" alt="-"/>&#160;Membros públicos herdados de <a class="el" href="class_base_controller.html">BaseController&lt; Marca &gt;</a></td></tr>
-<tr class="memitem:abe97959e02bdcc789e6c206acdf1d90d inherit pub_methods_class_base_controller" id="r_abe97959e02bdcc789e6c206acdf1d90d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#abe97959e02bdcc789e6c206acdf1d90d">BaseController</a> (<a class="el" href="class_base_repo.html">string</a> filePath)</td></tr>
-<tr class="memdesc:abe97959e02bdcc789e6c206acdf1d90d inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_base_controller.html" title="Classe base abstrata para controlo de entidades genéricas. Implementa operações CRUD (Criar,...">BaseController</a>. Inicializa o repositório com base no caminho de ficheiro fornecido.  <br /></td></tr>
+<tr class="memitem:abe97959e02bdcc789e6c206acdf1d90d inherit pub_methods_class_base_controller" id="r_abe97959e02bdcc789e6c206acdf1d90d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#abe97959e02bdcc789e6c206acdf1d90d">BaseController</a> (<a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">string</a> filePath)</td></tr>
+<tr class="memdesc:abe97959e02bdcc789e6c206acdf1d90d inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da classe <a class="el" href="class_base_controller.html">BaseController</a>. Inicializa o repositório com base no caminho de ficheiro fornecido.  <br /></td></tr>
 <tr class="separator:abe97959e02bdcc789e6c206acdf1d90d inherit pub_methods_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d9d6b36c91e04aba0ce0e26dfd5a2ac inherit pub_methods_class_base_controller" id="r_a5d9d6b36c91e04aba0ce0e26dfd5a2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a5d9d6b36c91e04aba0ce0e26dfd5a2ac">AddItem</a> (<a class="el" href="class_base_repo.html">T</a> <a class="el" href="class_base_repo.html">item</a>)</td></tr>
+<tr class="memitem:a5d9d6b36c91e04aba0ce0e26dfd5a2ac inherit pub_methods_class_base_controller" id="r_a5d9d6b36c91e04aba0ce0e26dfd5a2ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a5d9d6b36c91e04aba0ce0e26dfd5a2ac">AddItem</a> (<a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">T</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">item</a>)</td></tr>
 <tr class="memdesc:a5d9d6b36c91e04aba0ce0e26dfd5a2ac inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um novo item ao repositório.  <br /></td></tr>
 <tr class="separator:a5d9d6b36c91e04aba0ce0e26dfd5a2ac inherit pub_methods_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acedbcf4e7b8972e0bd7e9f2448d7374f inherit pub_methods_class_base_controller" id="r_acedbcf4e7b8972e0bd7e9f2448d7374f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#acedbcf4e7b8972e0bd7e9f2448d7374f">GetById</a> (<a class="el" href="class_base_repo.html">int</a>? <a class="el" href="class_base_repo.html">id</a>)</td></tr>
+<tr class="memitem:acedbcf4e7b8972e0bd7e9f2448d7374f inherit pub_methods_class_base_controller" id="r_acedbcf4e7b8972e0bd7e9f2448d7374f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#acedbcf4e7b8972e0bd7e9f2448d7374f">GetById</a> (<a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">int</a>? <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">id</a>)</td></tr>
 <tr class="memdesc:acedbcf4e7b8972e0bd7e9f2448d7374f inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém um item pelo seu identificador.  <br /></td></tr>
 <tr class="separator:acedbcf4e7b8972e0bd7e9f2448d7374f inherit pub_methods_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77705ea936106897021b3779c6500101 inherit pub_methods_class_base_controller" id="r_a77705ea936106897021b3779c6500101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">virtual</a> <a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a77705ea936106897021b3779c6500101">UpdateItem</a> (<a class="el" href="class_base_repo.html">object</a> <a class="el" href="class_base_repo.html">item</a>)</td></tr>
+<tr class="memitem:a77705ea936106897021b3779c6500101 inherit pub_methods_class_base_controller" id="r_a77705ea936106897021b3779c6500101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">virtual</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a77705ea936106897021b3779c6500101">UpdateItem</a> (<a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">item</a>)</td></tr>
 <tr class="memdesc:a77705ea936106897021b3779c6500101 inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza um item específico. Este método pode ser re-implementado pelas classes derivadas para definir a lógica de atualização.  <br /></td></tr>
 <tr class="separator:a77705ea936106897021b3779c6500101 inherit pub_methods_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab123bcc53c016d37e86c07a4d7cbe3a4 inherit pub_methods_class_base_controller" id="r_ab123bcc53c016d37e86c07a4d7cbe3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">virtual</a> <a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#ab123bcc53c016d37e86c07a4d7cbe3a4">GetItems</a> ()</td></tr>
+<tr class="memitem:ab123bcc53c016d37e86c07a4d7cbe3a4 inherit pub_methods_class_base_controller" id="r_ab123bcc53c016d37e86c07a4d7cbe3a4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">virtual</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#ab123bcc53c016d37e86c07a4d7cbe3a4">GetItems</a> ()</td></tr>
 <tr class="memdesc:ab123bcc53c016d37e86c07a4d7cbe3a4 inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém todos os itens do repositório.  <br /></td></tr>
 <tr class="separator:ab123bcc53c016d37e86c07a4d7cbe3a4 inherit pub_methods_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c8c65a9531f5bc973836ef26548f5b7 inherit pub_methods_class_base_controller" id="r_a7c8c65a9531f5bc973836ef26548f5b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a7c8c65a9531f5bc973836ef26548f5b7">FiltrarItens</a> (<a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt; items, <a class="el" href="class_base_repo.html">string</a> <a class="el" href="class_base_repo.html">filtro</a>, <a class="el" href="class_base_repo.html">string</a> <a class="el" href="class_base_repo.html">coluna</a>)</td></tr>
+<tr class="memitem:a7c8c65a9531f5bc973836ef26548f5b7 inherit pub_methods_class_base_controller" id="r_a7c8c65a9531f5bc973836ef26548f5b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a7c8c65a9531f5bc973836ef26548f5b7">FiltrarItens</a> (<a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a> &gt; items, <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">string</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">filtro</a>, <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">string</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">coluna</a>)</td></tr>
 <tr class="memdesc:a7c8c65a9531f5bc973836ef26548f5b7 inherit pub_methods_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filtra itens com base em uma propriedade e um filtro.  <br /></td></tr>
 <tr class="separator:a7c8c65a9531f5bc973836ef26548f5b7 inherit pub_methods_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_interface_i_entity_controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_i_entity_controller')"><img src="closed.png" alt="-"/>&#160;Membros públicos herdados de <a class="el" href="interface_i_entity_controller.html">IEntityController</a></td></tr>
-<tr class="memitem:afe8a9ec18b8d7b8d9a7dbe79a394e582 inherit pub_methods_interface_i_entity_controller" id="r_afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">object</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#afe8a9ec18b8d7b8d9a7dbe79a394e582">GetById</a> (<a class="el" href="class_base_repo.html">int</a>? <a class="el" href="class_base_repo.html">id</a>)</td></tr>
-<tr class="memdesc:afe8a9ec18b8d7b8d9a7dbe79a394e582 inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém um item pelo seu identificador.  <br /></td></tr>
+<tr class="memitem:afe8a9ec18b8d7b8d9a7dbe79a394e582 inherit pub_methods_interface_i_entity_controller" id="r_afe8a9ec18b8d7b8d9a7dbe79a394e582"><td class="memItemLeft" align="right" valign="top">object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#afe8a9ec18b8d7b8d9a7dbe79a394e582">GetById</a> (int? id)</td></tr>
+<tr class="memdesc:afe8a9ec18b8d7b8d9a7dbe79a394e582 inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém um item pelo seu identificador único.  <br /></td></tr>
 <tr class="separator:afe8a9ec18b8d7b8d9a7dbe79a394e582 inherit pub_methods_interface_i_entity_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cb17e81a497f5b8caa3e45ece57c86c inherit pub_methods_interface_i_entity_controller" id="r_a7cb17e81a497f5b8caa3e45ece57c86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">void</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a7cb17e81a497f5b8caa3e45ece57c86c">UpdateItem</a> (<a class="el" href="class_base_repo.html">object</a> <a class="el" href="class_base_repo.html">item</a>)</td></tr>
-<tr class="memdesc:a7cb17e81a497f5b8caa3e45ece57c86c inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza um item.  <br /></td></tr>
+<tr class="memitem:a7cb17e81a497f5b8caa3e45ece57c86c inherit pub_methods_interface_i_entity_controller" id="r_a7cb17e81a497f5b8caa3e45ece57c86c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a7cb17e81a497f5b8caa3e45ece57c86c">UpdateItem</a> (object item)</td></tr>
+<tr class="memdesc:a7cb17e81a497f5b8caa3e45ece57c86c inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza os dados de um item existente no sistema.  <br /></td></tr>
 <tr class="separator:a7cb17e81a497f5b8caa3e45ece57c86c inherit pub_methods_interface_i_entity_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9654304d3e6ddaba4f56ecad3b587e24 inherit pub_methods_interface_i_entity_controller" id="r_a9654304d3e6ddaba4f56ecad3b587e24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a9654304d3e6ddaba4f56ecad3b587e24">GetItems</a> ()</td></tr>
-<tr class="memdesc:a9654304d3e6ddaba4f56ecad3b587e24 inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém todos os itens.  <br /></td></tr>
+<tr class="memitem:a9654304d3e6ddaba4f56ecad3b587e24 inherit pub_methods_interface_i_entity_controller" id="r_a9654304d3e6ddaba4f56ecad3b587e24"><td class="memItemLeft" align="right" valign="top">List&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a9654304d3e6ddaba4f56ecad3b587e24">GetItems</a> ()</td></tr>
+<tr class="memdesc:a9654304d3e6ddaba4f56ecad3b587e24 inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém todos os itens armazenados no sistema.  <br /></td></tr>
 <tr class="separator:a9654304d3e6ddaba4f56ecad3b587e24 inherit pub_methods_interface_i_entity_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a654bb8450935e5d81d7eea51541491d0 inherit pub_methods_interface_i_entity_controller" id="r_a654bb8450935e5d81d7eea51541491d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a654bb8450935e5d81d7eea51541491d0">FiltrarItens</a> (<a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">object</a> &gt; items, <a class="el" href="class_base_repo.html">string</a> <a class="el" href="class_base_repo.html">filtro</a>, <a class="el" href="class_base_repo.html">string</a>? <a class="el" href="class_base_repo.html">coluna</a>)</td></tr>
+<tr class="memitem:a654bb8450935e5d81d7eea51541491d0 inherit pub_methods_interface_i_entity_controller" id="r_a654bb8450935e5d81d7eea51541491d0"><td class="memItemLeft" align="right" valign="top">List&lt; object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_entity_controller.html#a654bb8450935e5d81d7eea51541491d0">FiltrarItens</a> (List&lt; object &gt; items, string filtro, string? coluna)</td></tr>
+<tr class="memdesc:a654bb8450935e5d81d7eea51541491d0 inherit pub_methods_interface_i_entity_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Filtra itens com base em critérios específicos.  <br /></td></tr>
 <tr class="separator:a654bb8450935e5d81d7eea51541491d0 inherit pub_methods_interface_i_entity_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Outros membros herdados</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_base_controller"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_base_controller')"><img src="closed.png" alt="-"/>&#160;Atributos Protegidos herdados de <a class="el" href="class_base_controller.html">BaseController&lt; Marca &gt;</a></td></tr>
-<tr class="memitem:a3ddd6b94752ca22c67a63c9511454f44 inherit pro_attribs_class_base_controller" id="r_a3ddd6b94752ca22c67a63c9511454f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">readonly</a> <a class="el" href="class_base_repo.html">BaseRepo</a>&lt; <a class="el" href="class_base_repo.html">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a3ddd6b94752ca22c67a63c9511454f44">_repository</a></td></tr>
+<tr class="memitem:a3ddd6b94752ca22c67a63c9511454f44 inherit pro_attribs_class_base_controller" id="r_a3ddd6b94752ca22c67a63c9511454f44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">readonly</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">BaseRepo</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a3ddd6b94752ca22c67a63c9511454f44">_repository</a></td></tr>
 <tr class="memdesc:a3ddd6b94752ca22c67a63c9511454f44 inherit pro_attribs_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Referência ao repositório base utilizado para operações nos itens.  <br /></td></tr>
 <tr class="separator:a3ddd6b94752ca22c67a63c9511454f44 inherit pro_attribs_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347cabe6c5df4e107ffa235e7c3e406e inherit pro_attribs_class_base_controller" id="r_a347cabe6c5df4e107ffa235e7c3e406e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a347cabe6c5df4e107ffa235e7c3e406e">_items</a></td></tr>
+<tr class="memitem:a347cabe6c5df4e107ffa235e7c3e406e inherit pro_attribs_class_base_controller" id="r_a347cabe6c5df4e107ffa235e7c3e406e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">T</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base_controller.html#a347cabe6c5df4e107ffa235e7c3e406e">_items</a></td></tr>
 <tr class="memdesc:a347cabe6c5df4e107ffa235e7c3e406e inherit pro_attribs_class_base_controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista local de itens atualmente carregados.  <br /></td></tr>
 <tr class="separator:a347cabe6c5df4e107ffa235e7c3e406e inherit pro_attribs_class_base_controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>Controlador para a gestão de marcas. </p>
-<p>A classe <code><a class="el" href="class_marca_controller.html" title="Controlador para a gestão de marcas.">MarcaController</a></code> implementa a lógica para a gestão das marcas, incluindo operações de leitura, remoção e carregamento de dados externos, como a lista de países. Herda de <code><a class="el" href="class_base_controller.html" title="Classe base abstrata para controlo de entidades genéricas. Implementa operações CRUD (Criar,...">BaseController</a>&lt;<a class="el" href="class_marca.html" title="Representa uma marca.">Marca</a>&gt;</code> e implementa a interface <code><a class="el" href="interface_i_entity_controller.html">IEntityController</a></code>, fornecendo funcionalidades específicas para o trabalho com marcas.</p>
-<dl class="section author"><dt>Autor</dt><dd>Miguel Areal </dd></dl>
-<dl class="section date"><dt>Data</dt><dd>12/2024 </dd></dl>
-
-<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00018">18</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
+<div class="textblock">
+<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00011">11</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
 </div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
 <a id="a4afc0d1701e7e984e059036331785f9d" name="a4afc0d1701e7e984e059036331785f9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4afc0d1701e7e984e059036331785f9d">&#9670;&#160;</a></span>MarcaController()</h2>
@@ -186,12 +180,11 @@ Outros membros herdados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construtor da classe <code><a class="el" href="class_marca_controller.html" title="Controlador para a gestão de marcas.">MarcaController</a></code>. </p>
-<p>Inicializa o controlador com o caminho do ficheiro de dados onde as marcas serão armazenadas. </p>
+<p>Construtor da classe <a class="el" href="class_marca_controller.html">MarcaController</a>. Inicializa o controlador com o caminho do ficheiro de dados onde as marcas serão armazenadas. </p>
 
-<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00025">25</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>: <a class="code hl_class" href="class_base_repo.html">base</a>(<span class="stringliteral">&quot;Data/marcas.json&quot;</span>) { }</div>
-<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
+<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00019">19</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>: <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">base</a>(<span class="stringliteral">&quot;Data/marcas.json&quot;</span>) { }</div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_repositories_1_1_base_repo_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">poo_tp_29559.Repositories.BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00021">BaseRepo.cs:22</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -203,7 +196,7 @@ Outros membros herdados</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">List</a>&lt; <a class="el" href="class_base_repo.html">string</a> &gt; MarcaController.CarregaPaises </td>
+          <td class="memname"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List</a>&lt; <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">string</a> &gt; MarcaController.CarregaPaises </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -211,45 +204,44 @@ Outros membros herdados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Carrega a lista de países a partir de um ficheiro JSON. </p>
-<p>Este método lê um ficheiro JSON contendo uma lista de países e retorna essa lista como uma lista de strings. Caso o ficheiro não exista ou ocorra um erro ao lê-lo, retorna uma lista vazia e exibe uma mensagem de erro.</p>
+<p>Carrega a lista de países a partir de um ficheiro JSON. Lê um ficheiro JSON contendo uma lista de países e retorna essa lista como uma lista de strings. Caso o ficheiro não exista ou ocorra um erro ao lê-lo, retorna uma lista vazia e exibe uma mensagem de erro. </p>
 <dl class="section return"><dt>Retorna</dt><dd>Uma lista de strings contendo os nomes dos países. Se houver erro, retorna uma lista vazia. </dd></dl>
-<p>&lt; Caminho do ficheiro JSON.</p>
 
-<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00060">60</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>    {</div>
-<div class="line"><span class="lineno">   62</span>        <span class="keywordtype">string</span> filePath = <a class="code hl_class" href="class_base_repo.html">Path</a>.Combine(<a class="code hl_class" href="class_base_repo.html">AppDomain</a>.CurrentDomain.BaseDirectory, <span class="stringliteral">&quot;Resources&quot;</span>, <span class="stringliteral">&quot;Data&quot;</span>, <span class="stringliteral">&quot;paises.json&quot;</span>);  </div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>        <span class="comment">// Verifica se o ficheiro de países existe</span></div>
-<div class="line"><span class="lineno">   65</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">File</a>.Exists(filePath))</div>
-<div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">try</span></div>
-<div class="line"><span class="lineno">   68</span>            {</div>
-<div class="line"><span class="lineno">   69</span>                <span class="comment">// Lê o conteúdo do JSON e desserializa em uma lista de strings</span></div>
-<div class="line"><span class="lineno">   70</span>                <span class="keywordtype">string</span> <a class="code hl_class" href="class_base_repo.html">json</a> = <a class="code hl_class" href="class_base_repo.html">File</a>.ReadAllText(filePath);</div>
-<div class="line"><span class="lineno">   71</span>                <a class="code hl_class" href="class_base_repo.html">List&lt;string&gt;</a> <a class="code hl_class" href="class_base_repo.html">paises</a> = <a class="code hl_class" href="class_base_repo.html">JsonSerializer</a>.Deserialize&lt;<a class="code hl_class" href="class_base_repo.html">List&lt;string&gt;</a>&gt;(<a class="code hl_class" href="class_base_repo.html">json</a>);</div>
-<div class="line"><span class="lineno">   72</span> </div>
-<div class="line"><span class="lineno">   73</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">paises</a> != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">   74</span>                {</div>
-<div class="line"><span class="lineno">   75</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="class_base_repo.html">paises</a>;</div>
-<div class="line"><span class="lineno">   76</span>                }</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   78</span>                {</div>
-<div class="line"><span class="lineno">   79</span>                    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_base_repo.html">List&lt;string&gt;</a>();</div>
-<div class="line"><span class="lineno">   80</span>                }</div>
-<div class="line"><span class="lineno">   81</span>            }</div>
-<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">catch</span> (<a class="code hl_class" href="class_base_repo.html">Exception</a> <a class="code hl_class" href="class_base_repo.html">ex</a>)</div>
-<div class="line"><span class="lineno">   83</span>            {</div>
-<div class="line"><span class="lineno">   84</span>                <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;Erro ao carregar países: {ex.Message}&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
-<div class="line"><span class="lineno">   85</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_base_repo.html">List&lt;string&gt;</a>();</div>
-<div class="line"><span class="lineno">   86</span>            }</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-<div class="line"><span class="lineno">   88</span>        <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   89</span>        {</div>
-<div class="line"><span class="lineno">   90</span>            <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;O ficheiro de países não foi encontrado.&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Warning);</div>
-<div class="line"><span class="lineno">   91</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="class_base_repo.html">List&lt;string&gt;</a>();</div>
-<div class="line"><span class="lineno">   92</span>        }</div>
-<div class="line"><span class="lineno">   93</span>    }</div>
+<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00061">61</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>    {</div>
+<div class="line"><span class="lineno">   63</span>        <span class="comment">// Caminho do ficheiro JSON contendo os países</span></div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordtype">string</span> filePath = <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">Path</a>.Combine(<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">AppDomain</a>.CurrentDomain.BaseDirectory, <span class="stringliteral">&quot;Resources&quot;</span>, <span class="stringliteral">&quot;Data&quot;</span>, <span class="stringliteral">&quot;paises.json&quot;</span>);</div>
+<div class="line"><span class="lineno">   65</span> </div>
+<div class="line"><span class="lineno">   66</span>        <span class="comment">// Verifica se o ficheiro de países existe</span></div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">File</a>.Exists(filePath))</div>
+<div class="line"><span class="lineno">   68</span>        {</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">   70</span>            {</div>
+<div class="line"><span class="lineno">   71</span>                <span class="comment">// Lê o conteúdo do JSON e desserializa em uma lista de strings</span></div>
+<div class="line"><span class="lineno">   72</span>                <span class="keywordtype">string</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">json</a> = <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">File</a>.ReadAllText(filePath);</div>
+<div class="line"><span class="lineno">   73</span>                <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List&lt;string&gt;</a> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">paises</a> = <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">JsonSerializer</a>.Deserialize&lt;<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List&lt;string&gt;</a>&gt;(<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">json</a>);</div>
+<div class="line"><span class="lineno">   74</span> </div>
+<div class="line"><span class="lineno">   75</span>                <span class="keywordflow">if</span> (<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">paises</a> != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">   76</span>                {</div>
+<div class="line"><span class="lineno">   77</span>                    <span class="keywordflow">return</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">paises</a>;</div>
+<div class="line"><span class="lineno">   78</span>                }</div>
+<div class="line"><span class="lineno">   79</span>                <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   80</span>                {</div>
+<div class="line"><span class="lineno">   81</span>                    <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List&lt;string&gt;</a>();</div>
+<div class="line"><span class="lineno">   82</span>                }</div>
+<div class="line"><span class="lineno">   83</span>            }</div>
+<div class="line"><span class="lineno">   84</span>            <span class="keywordflow">catch</span> (<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">Exception</a> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">ex</a>)</div>
+<div class="line"><span class="lineno">   85</span>            {</div>
+<div class="line"><span class="lineno">   86</span>                <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBox</a>.Show(<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">$</a><span class="stringliteral">&quot;Erro ao carregar países: {ex.Message}&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBoxIcon</a>.Error);</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List&lt;string&gt;</a>();</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>        <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   91</span>        {</div>
+<div class="line"><span class="lineno">   92</span>            <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;O ficheiro de países não foi encontrado.&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBoxIcon</a>.Warning);</div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">List&lt;string&gt;</a>();</div>
+<div class="line"><span class="lineno">   94</span>        }</div>
+<div class="line"><span class="lineno">   95</span>    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -263,9 +255,9 @@ Outros membros herdados</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">override</a> <a class="el" href="class_base_repo.html">void</a> MarcaController.RemoveItem </td>
+          <td class="memname"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">override</a> <a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">void</a> MarcaController.RemoveItem </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_base_repo.html">object</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">object</a>&#160;</td>
           <td class="paramname"><em>item</em></td><td>)</td>
           <td></td>
         </tr>
@@ -277,38 +269,37 @@ Outros membros herdados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Remove uma marca do repositório. </p>
-<p>Este método sobrepõe o método <code>RemoveItem</code> da classe base e tenta remover a marca fornecida do repositório, mas apenas se a marca não estiver associada a nenhum produto. Caso contrário, é exibida uma mensagem de erro.</p>
+<p>Remove uma marca do repositório. Este método sobrepõe o método <a class="el" href="class_base_controller.html#a8484ff644f75ab6d44e5e902b19e896e" title="Remove um item específico. Este método pode ser re-implementado pelas classes derivadas para definir ...">BaseController&lt;T&gt;.RemoveItem</a> da classe base e tenta remover a marca fornecida do repositório, mas apenas se a marca não estiver associada a nenhum produto. Caso contrário, é exibida uma mensagem de erro. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">item</td><td>A marca a ser removida. </td></tr>
+    <tr><td class="paramname">item</td><td>A marca a ser removida.</td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Reimplementado de <a class="el" href="class_base_controller.html#a8484ff644f75ab6d44e5e902b19e896e">BaseController&lt; Marca &gt;</a>.</p>
 
-<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00035">35</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   36</span>    {</div>
-<div class="line"><span class="lineno">   37</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">item</a> <a class="code hl_class" href="class_base_repo.html">is</a> <a class="code hl_class" href="class_marca.html">Marca</a> <a class="code hl_class" href="class_base_repo.html">specificItem</a>)</div>
-<div class="line"><span class="lineno">   38</span>        {</div>
-<div class="line"><span class="lineno">   39</span>            <a class="code hl_class" href="class_base_repo.html">var</a> <a class="code hl_class" href="class_base_repo.html">produtos</a> = <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_produto_repo.html">ProdutoRepo</a>().<a class="code hl_function" href="class_base_repo.html#a68f5e6eeb31a3d21fdfc928f0c4c260a">GetAll</a>();</div>
-<div class="line"><span class="lineno">   40</span> </div>
-<div class="line"><span class="lineno">   41</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="class_base_repo.html">specificItem</a>.PodeSerEliminada(<a class="code hl_class" href="class_base_repo.html">produtos</a>))</div>
-<div class="line"><span class="lineno">   42</span>            {</div>
-<div class="line"><span class="lineno">   43</span>                <a class="code hl_variable" href="class_base_controller.html#a3ddd6b94752ca22c67a63c9511454f44">_repository</a>.<a class="code hl_function" href="class_base_repo.html#a0e50c94ddc430b3a0bc5b2e47b7aab5e">Remove</a>(<a class="code hl_class" href="class_base_repo.html">specificItem</a>);</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   46</span>            {</div>
-<div class="line"><span class="lineno">   47</span>                <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Esta marca não pode ser eliminada porque está associada a um ou mais produtos.&quot;</span>);</div>
-<div class="line"><span class="lineno">   48</span>            }</div>
-<div class="line"><span class="lineno">   49</span>        }</div>
-<div class="line"><span class="lineno">   50</span>    }</div>
-<div class="ttc" id="aclass_base_controller_html_a3ddd6b94752ca22c67a63c9511454f44"><div class="ttname"><a href="class_base_controller.html#a3ddd6b94752ca22c67a63c9511454f44">BaseController&lt; Marca &gt;::_repository</a></div><div class="ttdeci">readonly BaseRepo&lt; T &gt; _repository</div><div class="ttdoc">Referência ao repositório base utilizado para operações nos itens.</div><div class="ttdef"><b>Definição</b> <a href="_base_controller_8cs_source.html#l00011">BaseController.cs:11</a></div></div>
-<div class="ttc" id="aclass_base_repo_html_a0e50c94ddc430b3a0bc5b2e47b7aab5e"><div class="ttname"><a href="class_base_repo.html#a0e50c94ddc430b3a0bc5b2e47b7aab5e">BaseRepo.Remove</a></div><div class="ttdeci">virtual void Remove(T item)</div><div class="ttdoc">Remove um item do repositório.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00119">BaseRepo.cs:119</a></div></div>
-<div class="ttc" id="aclass_base_repo_html_a68f5e6eeb31a3d21fdfc928f0c4c260a"><div class="ttname"><a href="class_base_repo.html#a68f5e6eeb31a3d21fdfc928f0c4c260a">BaseRepo.GetAll</a></div><div class="ttdeci">List&lt; T &gt; GetAll()</div><div class="ttdoc">Obtém todos os itens do repositório.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00087">BaseRepo.cs:87</a></div></div>
-<div class="ttc" id="aclass_marca_html"><div class="ttname"><a href="class_marca.html">Marca</a></div><div class="ttdoc">Representa uma marca.</div><div class="ttdef"><b>Definição</b> <a href="_marca_8cs_source.html#l00018">Marca.cs:19</a></div></div>
-<div class="ttc" id="aclasspoo__tp__29559_1_1_repositories_1_1_produto_repo_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_repositories_1_1_produto_repo.html">poo_tp_29559.Repositories.ProdutoRepo</a></div><div class="ttdoc">Repositório para a manipulação de produtos.</div><div class="ttdef"><b>Definição</b> <a href="_produto_repo_8cs_source.html#l00027">ProdutoRepo.cs:28</a></div></div>
+<p class="definition">Definido na linha <a class="el" href="_marca_controller_8cs_source.html#l00032">32</a> do ficheiro <a class="el" href="_marca_controller_8cs_source.html">MarcaController.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   33</span>    {</div>
+<div class="line"><span class="lineno">   34</span>        <span class="keywordflow">if</span> (<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">item</a> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">is</a> <a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_marca.html">Marca</a> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">specificItem</a>)</div>
+<div class="line"><span class="lineno">   35</span>        {</div>
+<div class="line"><span class="lineno">   36</span>            <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">var</a> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">produtos</a> = <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_produto_repo.html">ProdutoRepo</a>().<a class="code hl_function" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html#ab4e67ba9b1886d731de9b896d4594d96">GetAll</a>();</div>
+<div class="line"><span class="lineno">   37</span> </div>
+<div class="line"><span class="lineno">   38</span>            <span class="keywordflow">if</span> (<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">specificItem</a>.PodeSerEliminada(<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">produtos</a>))</div>
+<div class="line"><span class="lineno">   39</span>            {</div>
+<div class="line"><span class="lineno">   40</span>                <a class="code hl_variable" href="class_base_controller.html#a3ddd6b94752ca22c67a63c9511454f44">_repository</a>.<a class="code hl_function" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html#a06cb1a3a80a82cb3c818b6011adbfeda">Remove</a>(<a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">specificItem</a>);</div>
+<div class="line"><span class="lineno">   41</span>            }</div>
+<div class="line"><span class="lineno">   42</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   43</span>            {</div>
+<div class="line"><span class="lineno">   44</span>                <a class="code hl_class" href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Esta marca não pode ser eliminada porque está associada a um ou mais produtos.&quot;</span>);</div>
+<div class="line"><span class="lineno">   45</span>            }</div>
+<div class="line"><span class="lineno">   46</span>        }</div>
+<div class="line"><span class="lineno">   47</span>    }</div>
+<div class="ttc" id="aclass_base_controller_html_a3ddd6b94752ca22c67a63c9511454f44"><div class="ttname"><a href="class_base_controller.html#a3ddd6b94752ca22c67a63c9511454f44">BaseController&lt; Marca &gt;::_repository</a></div><div class="ttdeci">readonly BaseRepo&lt; T &gt; _repository</div><div class="ttdoc">Referência ao repositório base utilizado para operações nos itens.</div><div class="ttdef"><b>Definição</b> <a href="_base_controller_8cs_source.html#l00010">BaseController.cs:10</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_marca_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_marca.html">poo_tp_29559.Models.Marca</a></div><div class="ttdoc">Representa uma marca no sistema.</div><div class="ttdef"><b>Definição</b> <a href="_marca_8cs_source.html#l00014">Marca.cs:15</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_repositories_1_1_base_repo_html_a06cb1a3a80a82cb3c818b6011adbfeda"><div class="ttname"><a href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html#a06cb1a3a80a82cb3c818b6011adbfeda">poo_tp_29559.Repositories.BaseRepo.Remove</a></div><div class="ttdeci">virtual void Remove(T item)</div><div class="ttdoc">Remove um item do repositório.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00169">BaseRepo.cs:169</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_repositories_1_1_base_repo_html_ab4e67ba9b1886d731de9b896d4594d96"><div class="ttname"><a href="classpoo__tp__29559_1_1_repositories_1_1_base_repo.html#ab4e67ba9b1886d731de9b896d4594d96">poo_tp_29559.Repositories.BaseRepo.GetAll</a></div><div class="ttdeci">List&lt; T &gt; GetAll()</div><div class="ttdoc">Obtém todos os itens do repositório.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00137">BaseRepo.cs:137</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_repositories_1_1_produto_repo_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_repositories_1_1_produto_repo.html">poo_tp_29559.Repositories.ProdutoRepo</a></div><div class="ttdoc">Repositório especializado na manipulação de produtos.</div><div class="ttdef"><b>Definição</b> <a href="_produto_repo_8cs_source.html#l00016">ProdutoRepo.cs:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>

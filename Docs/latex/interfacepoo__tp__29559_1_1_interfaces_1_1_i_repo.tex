@@ -14,33 +14,33 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo$<$ T
 \doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ List}$<$ \textbf{ T} $>$ \textbf{ Get\+All} ()
-\begin{DoxyCompactList}\small\item\em Obtém todos os itens do repositório. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Add} (\textbf{ T} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Adiciona um item ao repositório. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Remove} (\textbf{ T} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Remove um item do repositório. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Update} (\textbf{ T} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Atualiza um item no repositório. \end{DoxyCompactList}\end{DoxyCompactItemize}
+List$<$ T $>$ \textbf{ Get\+All} ()
+\begin{DoxyCompactList}\small\item\em Obtém todos os itens armazenados no repositório. \end{DoxyCompactList}\item 
+void \textbf{ Add} (T item)
+\begin{DoxyCompactList}\small\item\em Adiciona um novo item ao repositório. \end{DoxyCompactList}\item 
+void \textbf{ Remove} (T item)
+\begin{DoxyCompactList}\small\item\em Remove um item existente do repositório. \end{DoxyCompactList}\item 
+void \textbf{ Update} (T item)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um item existente no repositório. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 Interface para a definição de operações de um repositório genérico. 
 
-A interface {\ttfamily IRepo$<$T$>$} define os métodos essenciais para a manipulação de dados de um repositório genérico, onde {\ttfamily T} representa o tipo de entidade armazenada. A interface pode ser implementada por repositórios que armazenam dados em diferentes fontes, como base de dados ou ficheiros.
-
 
 \begin{DoxyTemplParams}{Parâmetros de template}
-{\em T} & Tipo genérico que representa a entidade armazenada no repositório. \\
+{\em T} & Tipo genérico que representa a entidade armazenada no repositório. Deve ser uma classe. \\
 \hline
 \end{DoxyTemplParams}
-\begin{Desc}
+
+
+A interface {\ttfamily IRepo$<$T$>$} especifica os métodos essenciais para a manipulação de dados em um repositório genérico. Pode ser implementada por repositórios que interagem com diversas fontes de dados, como bases de dados ou ficheiros. \begin{Desc}
 \item[Restrições do Tipo]\begin{description}
-\item[{\em T} : {\em \textbf{ class}}]\end{description}
+\item[{\em T} : {\em class}]\end{description}
 \end{Desc}
 
 
-Definido na linha \textbf{ 26} do ficheiro \textbf{ IRepo.\+cs}.
+Definido na linha \textbf{ 16} do ficheiro \textbf{ IRepo.\+cs}.
 
 
 
@@ -49,83 +49,75 @@ Definido na linha \textbf{ 26} do ficheiro \textbf{ IRepo.\+cs}.
 \index{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}!Add@{Add}}
 \index{Add@{Add}!poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}}
 \doxysubsubsection{Add()}
-{\footnotesize\ttfamily \textbf{ void} \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ \textbf{ T} $>$.Add (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ T $>$.Add (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})}
 
 
 
-Adiciona um item ao repositório. 
-
-Método para adicionar um novo item ao repositório. O item será guardado no repositório para operações futuras.
+Adiciona um novo item ao repositório. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em item} & O item a ser adicionado ao repositório. \\
+{\em item} & O item a ser adicionado ao repositório.\\
 \hline
 \end{DoxyParams}
 
 
-Implementado em \textbf{ Base\+Repo$<$ T $>$} \doxyref{}{p. }{class_base_repo_a91e6165ad8668dceffa53b766d8c30d5}.
+Implementado em \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ T $>$} \doxyref{}{p. }{classpoo__tp__29559_1_1_repositories_1_1_base_repo_ae98f35598c3d32697cc92aa258731b99}.
 
 \label{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_a55d5f5b3852ac19173616b30a2c389d0} 
 \index{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}!GetAll@{GetAll}}
 \index{GetAll@{GetAll}!poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}}
 \doxysubsubsection{GetAll()}
-{\footnotesize\ttfamily \textbf{ List}$<$ \textbf{ T} $>$ \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ \textbf{ T} $>$.Get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily List$<$ T $>$ \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ T $>$.Get\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Obtém todos os itens do repositório. 
-
-Método responsável por obter todos os itens armazenados no repositório.
+Obtém todos os itens armazenados no repositório. 
 
 \begin{DoxyReturn}{Retorna}
-Uma lista de objetos do tipo {\ttfamily T}, representando todos os itens armazenados. 
+Uma lista contendo todas as entidades do tipo {\itshape T}  armazenadas. 
 \end{DoxyReturn}
 
 
-Implementado em \textbf{ Base\+Repo$<$ T $>$} \doxyref{}{p. }{class_base_repo_a68f5e6eeb31a3d21fdfc928f0c4c260a}.
+Implementado em \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ T $>$} \doxyref{}{p. }{classpoo__tp__29559_1_1_repositories_1_1_base_repo_ab4e67ba9b1886d731de9b896d4594d96}.
 
 \label{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_aecf6b2595902b2822f49d5d55bcd580e} 
 \index{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}!Remove@{Remove}}
 \index{Remove@{Remove}!poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}}
 \doxysubsubsection{Remove()}
-{\footnotesize\ttfamily \textbf{ void} \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ \textbf{ T} $>$.Remove (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ T $>$.Remove (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})}
 
 
 
-Remove um item do repositório. 
-
-Método para remover um item existente do repositório. O item será excluído e não estará mais disponível nas operações subsequentes.
+Remove um item existente do repositório. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em item} & O item a ser removido do repositório. \\
+{\em item} & O item a ser removido do repositório.\\
 \hline
 \end{DoxyParams}
 
 
-Implementado em \textbf{ Base\+Repo$<$ T $>$} \doxyref{}{p. }{class_base_repo_a0e50c94ddc430b3a0bc5b2e47b7aab5e}.
+Implementado em \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ T $>$} \doxyref{}{p. }{classpoo__tp__29559_1_1_repositories_1_1_base_repo_a06cb1a3a80a82cb3c818b6011adbfeda}.
 
 \label{interfacepoo__tp__29559_1_1_interfaces_1_1_i_repo_ae2bd8d28e20c9cc703093ae6c1342f50} 
 \index{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}!Update@{Update}}
 \index{Update@{Update}!poo\_tp\_29559.Interfaces.IRepo$<$ T $>$@{poo\_tp\_29559.Interfaces.IRepo$<$ T $>$}}
 \doxysubsubsection{Update()}
-{\footnotesize\ttfamily \textbf{ void} \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ \textbf{ T} $>$.Update (\begin{DoxyParamCaption}\item[{\textbf{ T}}]{item }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void \textbf{ poo\+\_\+tp\+\_\+29559.\+Interfaces.\+IRepo}$<$ T $>$.Update (\begin{DoxyParamCaption}\item[{T}]{item }\end{DoxyParamCaption})}
 
 
 
-Atualiza um item no repositório. 
-
-Método responsável por atualizar os dados de um item existente no repositório. As alterações no item são persistidas no repositório.
+Atualiza os dados de um item existente no repositório. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em item} & O item com as alterações a serem aplicadas. \\
+{\em item} & O item com os dados atualizados a serem persistidos.\\
 \hline
 \end{DoxyParams}
 
 
-Implementado em \textbf{ Base\+Repo$<$ T $>$} \doxyref{}{p. }{class_base_repo_a77783a5b906f5e485a114580d99e25c1}.
+Implementado em \textbf{ poo\+\_\+tp\+\_\+29559.\+Repositories.\+Base\+Repo$<$ T $>$} \doxyref{}{p. }{classpoo__tp__29559_1_1_repositories_1_1_base_repo_a6f966ebe44889643e83d06c72292ffd7}.
 
 
 

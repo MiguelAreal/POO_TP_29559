@@ -2,6 +2,7 @@
 
 namespace poo_tp_29559.Repositories
 {
+    #region Class MarcaRepo
     /// <summary>
     /// Repositório para a manipulação de marcas.
     /// </summary>
@@ -24,4 +25,5 @@ namespace poo_tp_29559.Repositories
         public MarcaRepo() : base("Data/marcas.json") { }
         #endregion
     }
+    #endregion
 }

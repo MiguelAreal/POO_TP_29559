@@ -5,6 +5,7 @@ using System.Linq;
 
 namespace poo_tp_29559.Repositories
 {
+    #region Class EnumHelper
     /// <summary>
     /// Classe utilitária para manipulação de enums.
     /// </summary>
@@ -45,4 +46,5 @@ namespace poo_tp_29559.Repositories
         }
         #endregion
     }
+    #endregion
 }

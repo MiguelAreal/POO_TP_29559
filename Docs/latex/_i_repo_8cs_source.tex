@@ -2,19 +2,20 @@
 \label{_i_repo_8cs_source}\index{POO\_TP\_29559/Interfaces/IRepo.cs@{POO\_TP\_29559/Interfaces/IRepo.cs}}
 \textbf{ Ir para a documentação deste ficheiro.}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Interfaces}
-\DoxyCodeLine{00014\ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }IRepo<T>\ where\ T\ :\ class}
-\DoxyCodeLine{00027\ \ \ \ \ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ List<T>\ GetAll();}
+\DoxyCodeLine{00001\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }poo\_tp\_29559.Interfaces}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{interface\ }IRepo<T>\ where\ T\ :\ class}
+\DoxyCodeLine{00017\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ List<T>\ GetAll();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Add(T\ item);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Remove(T\ item);}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Add(T\ item);}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Remove(T\ item);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update(T\ item);}
-\DoxyCodeLine{00067\ \ \ \ \ \}}
-\DoxyCodeLine{00068\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ Update(T\ item);}
+\DoxyCodeLine{00043\ \ \ \ \ \}}
+\DoxyCodeLine{00044\ \}}
 
 \end{DoxyCode}

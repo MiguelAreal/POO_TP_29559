@@ -1,15 +1,4 @@
-﻿/** @file AddProdutoForm.cs
-* @brief Formulário para adicionar um novo produto.
-*
-* Este formulário permite ao utilizador adicionar um novo produto ao sistema. Ele solicita informações sobre o nome do produto,
-* a categoria, a marca, o preço e a quantidade em stock. Utiliza o `ProdutoController` para adicionar o produto ao sistema,
-* e os controladores `MarcaController` e `CategoriaController` para carregar as marcas e categorias disponíveis.
-*
-* @author Miguel Areal
-* @date 12/2024
-*/
-
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using System;
@@ -21,12 +10,11 @@ using ValidationLibrary;
 namespace poo_tp_29559.Views
 {
     /**
-     * @class AddUpdProdutoForm
-     * @brief Formulário para a criação de um novo produto.
+     * <summary>Formulário para a criação de um novo produto.</summary>
      * 
-     * Este formulário serve para criar ou atualizar um produto ao sistema. O utilizador preenche informações como o nome,
+     * <remarks>Este formulário serve para criar ou atualizar um produto ao sistema. O utilizador preenche informações como o nome,
      * a categoria, a marca, o preço e a quantidade em stock do produto. O formulário também carrega as marcas e categorias disponíveis
-     * através dos controladores correspondentes.
+     * através dos controladores correspondentes.</remarks>
      */
     public partial class AddUpdProdutoForm : MetroForm
     {
@@ -38,14 +26,12 @@ namespace poo_tp_29559.Views
         private List<Marca> _marcas;  /**< Lista de marcas disponíveis para o produto. */
         private List<Categoria> _categorias;  /**< Lista de categorias disponíveis para o produto. */
 
-        
-        /**
-         * @brief Construtor do `AddUpdProdutoForm`.
-         * 
-         * Inicializa os controladores de produtos, marcas e categorias. Aceita um ID de produto para edição (opcional).
-         * 
-         * @param produtoId ID do produto a ser editado (ou null para adicionar um novo produto).
-         */
+        #region Construtors and Initialization
+
+        /// <summary>
+        /// Construtor do <see cref="AddUpdProdutoForm"/>.
+        /// </summary>
+        /// <param name="produtoId">(Opcional) O ID do produto a ser editado, se fornecido.</param>
         public AddUpdProdutoForm(int? produtoId = null)
         {
             InitializeComponent();
@@ -56,15 +42,19 @@ namespace poo_tp_29559.Views
             _produtoId = produtoId;  /**< Armazena o ID do produto, se fornecido. */
         }
 
-        /**
-        * @brief Evento de carregamento do formulário.
-        * 
-        * Este evento é disparado quando o formulário é carregado. Ele carrega as marcas e categorias disponíveis no sistema.
-        * Caso um ID de produto tenha sido fornecido, carrega os dados do produto para edição.
-        * 
-        * @param sender Objeto que disparou o evento.
-        * @param e Dados do evento.
-        */
+        #endregion
+
+        #region Loading Methods
+
+        /// <summary>
+        /// Evento de carregamento do formulário.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        /// <remarks>
+        /// Este evento é disparado quando o formulário é carregado. Ele carrega as marcas e categorias disponíveis no sistema.
+        /// Caso um ID de produto tenha sido fornecido, carrega os dados do produto para edição.
+        /// </remarks>
         private void AddProdutoForm_Load(object sender, EventArgs e)
         {
             CarregaMarcas();
@@ -76,12 +66,13 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega as marcas disponíveis.
-         * 
-         * Este método busca todas as marcas através do controlador de marcas, ordena-as alfabeticamente e as exibe na `ComboBox`
-         * para que o utilizador possa selecionar uma.
-         */
+        /// <summary>
+        /// Carrega as marcas disponíveis.
+        /// </summary>
+        /// <remarks>
+        /// Este método busca todas as marcas através do controlador de marcas, ordena-as alfabeticamente e as exibe na `ComboBox`
+        /// para que o utilizador possa selecionar uma.
+        /// </remarks>
         private void CarregaMarcas()
         {
             _marcas = marcaController.GetItems().Cast<Marca>().ToList();  // Converte explicitamente para List<Marca>
@@ -95,12 +86,13 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega as categorias disponíveis.
-         * 
-         * Este método busca todas as categorias através do controlador de categorias, ordena-as alfabeticamente e as exibe na 
-         * `ComboBox` para que o utilizador possa selecionar uma.
-         */
+        /// <summary>
+        /// Carrega as categorias disponíveis.
+        /// </summary>
+        /// <remarks>
+        /// Este método busca todas as categorias através do controlador de categorias, ordena-as alfabeticamente e as exibe na 
+        /// `ComboBox` para que o utilizador possa selecionar uma.
+        /// </remarks>
         private void CarregaCategorias()
         {
             _categorias = categoriaController.GetItems().Cast<Categoria>().ToList();  /**< Obtém a lista de categorias do controlador. */
@@ -114,12 +106,13 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-        * @brief Carrega os dados de um produto existente.
-        * 
-        * Este método busca os dados de um produto existente pelo ID e preenche os campos do formulário para edição.
-        * Caso o produto não seja encontrado, exibe uma mensagem de erro e fecha o formulário.
-        */
+        /// <summary>
+        /// Carrega os dados de um produto existente.
+        /// </summary>
+        /// <remarks>
+        /// Este método busca os dados de um produto existente pelo ID e preenche os campos do formulário para edição.
+        /// Caso o produto não seja encontrado, exibe uma mensagem de erro e fecha o formulário.
+        /// </remarks>
         private void CarregaProdutoExistente()
         {
             Produto produto = (Produto)_controller.GetById(_produtoId.Value);
@@ -143,15 +136,19 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-        * @brief Evento de clique no botão de confirmação.
-        * 
-        * Este evento é acionado quando o utilizador clica no botão de confirmação para adicionar ou atualizar um produto.
-        * Valida os campos do formulário e, caso todos os campos sejam válidos, cria ou atualiza o produto no sistema.
-        * 
-        * @param sender Objeto que disparou o evento.
-        * @param e Dados do evento.
-        */
+        #endregion
+
+        #region Form Events
+
+        /// <summary>
+        /// Evento de clique no botão de confirmação.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        /// <remarks>
+        /// Este evento é acionado quando o utilizador clica no botão de confirmação para adicionar ou atualizar um produto.
+        /// Valida os campos do formulário e, caso todos os campos sejam válidos, cria ou atualiza o produto no sistema.
+        /// </remarks>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Control[] controls = { txtNome, cmbCategoria, cmbMarca, nudPreco, nudStock };
@@ -201,5 +198,7 @@ namespace poo_tp_29559.Views
 
             this.Close();
         }
+
+        #endregion
     }
 }

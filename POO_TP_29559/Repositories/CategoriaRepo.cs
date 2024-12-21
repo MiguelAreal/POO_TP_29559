@@ -2,6 +2,7 @@
 
 namespace poo_tp_29559.Repositories
 {
+    #region Class CategoriaRepo
     /// <summary>
     /// Repositório para a manipulação de categorias.
     /// </summary>
@@ -24,4 +25,5 @@ namespace poo_tp_29559.Repositories
         public CategoriaRepo() : base("Data/categorias.json") { }
         #endregion
     }
+    #endregion
 }

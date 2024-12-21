@@ -98,163 +98,174 @@ $(document).ready(function(){initNavTree('_add_upd_cliente_form_8cs_source.html'
   <div class="headertitle"><div class="title">AddUpdClienteForm.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_add_upd_cliente_form_8cs.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using </span>MetroFramework.Forms;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">using </span>System;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">using </span>System.Diagnostics.Contracts;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">using </span>System.Drawing;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">using </span>System.Windows.Forms;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_validation_library.html">ValidationLibrary</a>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
-<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html">   28</a></span>    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html">AddUpdClienteForm</a> : MetroForm</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">private</span> <a class="code hl_class" href="class_base_repo.html">readonly</a> <a class="code hl_class" href="class_utilizador_controller.html">UtilizadorController</a> _controller; </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keyword">private</span> <a class="code hl_class" href="class_base_repo.html">readonly</a> <span class="keywordtype">int</span>? _clienteId; </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_class" href="class_utilizador.html">Utilizador</a> cliente;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html#a023339a1d08a6ee803a1740e72649f0c">   41</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html#a023339a1d08a6ee803a1740e72649f0c">AddUpdClienteForm</a>(<span class="keywordtype">int</span>? <a class="code hl_class" href="class_base_repo.html">clienteId</a> = <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            InitializeComponent();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            _controller = <span class="keyword">new</span> <a class="code hl_class" href="class_utilizador_controller.html">UtilizadorController</a>(); </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            _clienteId = <a class="code hl_class" href="class_base_repo.html">clienteId</a>;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            <span class="keywordflow">if</span> (_clienteId.HasValue)</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                CarregarCliente(_clienteId.Value); </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            }</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<a href="_add_upd_cliente_form_8cs.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>MetroFramework.Forms;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_models.html">poo_tp_29559.Models</a>;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>System.Diagnostics.Contracts;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span>System.Drawing;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>System.Windows.Forms;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_validation_library.html">ValidationLibrary</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html">   17</a></span>    <span class="keyword">public</span> <span class="keyword">partial class </span><a class="code hl_class" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html">AddUpdClienteForm</a> : MetroForm</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">private</span> readonly <a class="code hl_class" href="class_utilizador_controller.html">UtilizadorController</a> _controller; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">private</span> readonly <span class="keywordtype">int</span>? _clienteId; </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html">Utilizador</a> cliente;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">        #region Construtors and Initialization</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html#a023339a1d08a6ee803a1740e72649f0c">   29</a></span>        <span class="keyword">public</span> <a class="code hl_function" href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html#a023339a1d08a6ee803a1740e72649f0c">AddUpdClienteForm</a>(<span class="keywordtype">int</span>? clienteId = <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            InitializeComponent();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            _controller = <span class="keyword">new</span> <a class="code hl_class" href="class_utilizador_controller.html">UtilizadorController</a>(); </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            _clienteId = clienteId;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordflow">if</span> (_clienteId.HasValue)</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                CarregarCliente(_clienteId.Value); </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            }</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        }</div>
 </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> CarregarCliente(<span class="keywordtype">int</span> <a class="code hl_class" href="class_base_repo.html">clienteId</a>)</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            cliente = (<a class="code hl_class" href="class_utilizador.html">Utilizador</a>)_controller.<a class="code hl_function" href="class_base_repo.html#ae8f317aa779a9fd3875cff23a9ef2d02">GetById</a>(<a class="code hl_class" href="class_base_repo.html">clienteId</a>);</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="keywordflow">if</span> (cliente == <span class="keyword">null</span>)</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Cliente não encontrado.&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, <a class="code hl_class" href="class_base_repo.html">MessageBoxButtons</a>.OK, <a class="code hl_class" href="class_base_repo.html">MessageBoxIcon</a>.Error);</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                this.<a class="code hl_class" href="class_base_repo.html">Close</a>();</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">        #endregion</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">        #region Loading Methods</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> CarregarCliente(<span class="keywordtype">int</span> clienteId)</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            cliente = (<a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html">Utilizador</a>)_controller.GetById(clienteId);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">if</span> (cliente == <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                MessageBox.Show(<span class="stringliteral">&quot;Cliente não encontrado.&quot;</span>, <span class="stringliteral">&quot;Erro&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Error);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                this.Close();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            txtNome.Text = cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a037624e39943337dd9173a02ffd8f117">Nome</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            txtMorada.Text = cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#ab9782f2fd96641000e1802b2d9ee4bc3">Morada</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            txtNIF.Text = cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a4e1db0d585a3dc3bf9a93acdf75c3912">Nif</a>.ToString();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            chkAdmin.Checked = cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a2e4566b85440f4922a6d5029153cf683">IsAdmin</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a6cdc664a5171a7932ae00e729ba86bfc">DataNasc</a>))</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                dtpNasc.Value = DateTime.Parse(cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a6cdc664a5171a7932ae00e729ba86bfc">DataNasc</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                dtpNasc.Checked = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            }</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            txtNome.Text = cliente.<a class="code hl_property" href="class_utilizador.html#ac941ba61ffc9e6446aa6e069875ad1af">Nome</a>;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            txtMorada.Text = cliente.<a class="code hl_property" href="class_utilizador.html#a7ef1840900c3a890dd35207104faaa64">Morada</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            txtNIF.Text = cliente.<a class="code hl_property" href="class_utilizador.html#ade2b39cdd3c0985cf6e26bd0ad7d4c07">Nif</a>.ToString();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            chkAdmin.Checked = cliente.<a class="code hl_property" href="class_utilizador.html#a2563458c10f703b98a6ec1e7ee3eb711">IsAdmin</a>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.<a class="code hl_class" href="class_base_repo.html">IsNullOrEmpty</a>(cliente.<a class="code hl_property" href="class_utilizador.html#a60accb230b5165e5c683e33b0c36e4e6">DataNasc</a>))</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                dtpNasc.Value = <a class="code hl_class" href="class_base_repo.html">DateTime</a>.Parse(cliente.<a class="code hl_property" href="class_utilizador.html#a60accb230b5165e5c683e33b0c36e4e6">DataNasc</a>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                dtpNasc.Checked = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="comment">// Separação do contacto em código de país e número</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.<a class="code hl_class" href="class_base_repo.html">IsNullOrEmpty</a>(cliente.<a class="code hl_property" href="class_utilizador.html#a5584d5ad67c483904df1ab86975bab32">Contacto</a>))</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <span class="keywordflow">if</span> (cliente.<a class="code hl_property" href="class_utilizador.html#a5584d5ad67c483904df1ab86975bab32">Contacto</a>.Contains(<span class="stringliteral">&quot; &quot;</span>))</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                    <a class="code hl_class" href="class_base_repo.html">var</a> <a class="code hl_class" href="class_base_repo.html">partes</a> = cliente.<a class="code hl_property" href="class_utilizador.html#a5584d5ad67c483904df1ab86975bab32">Contacto</a>.Split(<span class="charliteral">&#39; &#39;</span>);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                    txtContactoCodPais.Text = <a class="code hl_class" href="class_base_repo.html">partes</a>[0];</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                    txtContacto.Text = partes.Length &gt; 1 ? <a class="code hl_class" href="class_base_repo.html">partes</a>[1] : <span class="keywordtype">string</span>.Empty;</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>                }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            }</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> btnConfirmar_Click(<span class="keywordtype">object</span> <a class="code hl_class" href="class_base_repo.html">sender</a>, <a class="code hl_class" href="class_base_repo.html">EventArgs</a> <a class="code hl_class" href="class_base_repo.html">e</a>)</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        {</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="keywordtype">bool</span> <a class="code hl_class" href="class_base_repo.html">allValid</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="keywordtype">string</span> <a class="code hl_class" href="class_base_repo.html">contacto</a>;</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="comment">// Validação de campos obrigatórios</span></div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_class" href="class_base_repo.html">Control</a>[] <a class="code hl_class" href="class_base_repo.html">controls</a> = { txtNome, txtContactoCodPais, txtContacto, txtMorada };</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <a class="code hl_class" href="class_base_repo.html">Label</a>[] <a class="code hl_class" href="class_base_repo.html">labels</a> = { lblNome, lblContacto, lblContacto, lblMorada };</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <a class="code hl_class" href="class_base_repo.html">allValid</a> &amp;= FieldValidator.ValidateFields(<a class="code hl_class" href="class_base_repo.html">controls</a>, <a class="code hl_class" href="class_base_repo.html">labels</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="comment">// Separação do contacto em código de país e número</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>            <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a93876229fa54ddf356261b09276da571">Contacto</a>))</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                <span class="keywordflow">if</span> (cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a93876229fa54ddf356261b09276da571">Contacto</a>.Contains(<span class="stringliteral">&quot; &quot;</span>))</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>                {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                    var partes = cliente.<a class="code hl_property" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a93876229fa54ddf356261b09276da571">Contacto</a>.Split(<span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                    txtContactoCodPais.Text = partes[0];</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                    txtContacto.Text = partes.Length &gt; 1 ? partes[1] : <span class="keywordtype">string</span>.Empty;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>                }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>            }</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        }</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">        #endregion</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">        #region Form Events</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> btnConfirmar_Click(<span class="keywordtype">object</span> sender, EventArgs e)</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordtype">bool</span> allValid = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            <span class="keywordtype">string</span> contacto;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>            <span class="comment">// Validação de campos obrigatórios</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            Control[] controls = { txtNome, txtContactoCodPais, txtContacto, txtMorada };</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            Label[] labels = { lblNome, lblContacto, lblContacto, lblMorada };</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            allValid &amp;= FieldValidator.ValidateFields(controls, labels);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="comment">// Validação do número de telefone (deve ter 9 dígitos)</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            allValid &amp;= FieldValidator.ValidateNineDigits(txtContacto.Text, lblContacto);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            <span class="comment">// Validação do NIF (deve ter 9 dígitos)</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            allValid &amp;= FieldValidator.ValidateNineDigits(txtNIF.Text, lblNIF);</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="comment">// Validação do número de telefone (deve ter 9 dígitos)</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <a class="code hl_class" href="class_base_repo.html">allValid</a> &amp;= FieldValidator.ValidateNineDigits(txtContacto.Text, lblContacto);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>            <span class="comment">// Validação do NIF (deve ter 9 dígitos)</span></div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            <a class="code hl_class" href="class_base_repo.html">allValid</a> &amp;= FieldValidator.ValidateNineDigits(txtNIF.Text, lblNIF);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="comment">// Validação da data de nascimento, se selecionada</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            <span class="keywordflow">if</span> (dtpNasc.Checked)</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                allValid &amp;= FieldValidator.ValidateDate(dtpNasc, lblDataNasc);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>            }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="comment">// Validação da data de nascimento, se selecionada</span></div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordflow">if</span> (dtpNasc.Checked)</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                <a class="code hl_class" href="class_base_repo.html">allValid</a> &amp;= FieldValidator.ValidateDate(dtpNasc, lblDataNasc);</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">if</span> (!<a class="code hl_class" href="class_base_repo.html">allValid</a>)</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            <span class="keywordflow">if</span> (!allValid)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            }</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="comment">// Garante que o contacto tem o código de país e número preenchidos</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.IsNullOrWhiteSpace(txtContactoCodPais.Text) || <span class="keywordtype">string</span>.IsNullOrWhiteSpace(txtContacto.Text))</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            }</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            <span class="comment">// Garante que o contacto tem o código de país e número preenchidos</span></div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordflow">if</span> (<span class="keywordtype">string</span>.<a class="code hl_class" href="class_base_repo.html">IsNullOrWhiteSpace</a>(txtContactoCodPais.Text) || <span class="keywordtype">string</span>.IsNullOrWhiteSpace(txtContacto.Text))</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            {</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                lblContacto.ForeColor = <a class="code hl_class" href="class_base_repo.html">Color</a>.Red;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            }</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            <span class="comment">// Formata o contacto com código de país e número</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            <a class="code hl_class" href="class_base_repo.html">contacto</a> = <a class="code hl_class" href="class_base_repo.html">$</a><span class="stringliteral">&quot;{txtContactoCodPais.Text} {txtContacto.Text}&quot;</span>;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>            <span class="comment">// Verifica duplicados para novos clientes</span></div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            <span class="keywordflow">if</span> (!_clienteId.HasValue)</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>            {</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordflow">if</span> (_controller.VerificarNIFExistente(<a class="code hl_class" href="class_base_repo.html">Convert</a>.ToInt32(txtNIF.Text)))</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                lblContacto.ForeColor = Color.Red;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            }</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="comment">// Formata o contacto com código de país e número</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            contacto = $<span class="stringliteral">&quot;{txtContactoCodPais.Text} {txtContacto.Text}&quot;</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <span class="comment">// Verifica duplicados para novos clientes</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">if</span> (!_clienteId.HasValue)</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                <span class="keywordflow">if</span> (_controller.VerificarNIFExistente(Convert.ToInt32(txtNIF.Text)))</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>                {</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    MessageBox.Show(<span class="stringliteral">&quot;Este NIF já está a ser utilizado.&quot;</span>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>                }</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                <span class="keywordflow">if</span> (_controller.VerificarContactoExistente(contacto))</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Este NIF já está a ser utilizado.&quot;</span>);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                    MessageBox.Show(<span class="stringliteral">&quot;Este contacto já está a ser utilizado.&quot;</span>);</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                }</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>                <span class="keywordflow">if</span> (_controller.VerificarContactoExistente(<a class="code hl_class" href="class_base_repo.html">contacto</a>))</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>                    <a class="code hl_class" href="class_base_repo.html">MessageBox</a>.Show(<span class="stringliteral">&quot;Este contacto já está a ser utilizado.&quot;</span>);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                }</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            }</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            <span class="comment">// Criação ou atualização do cliente</span></div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            cliente = <span class="keyword">new</span> <a class="code hl_class" href="class_utilizador.html">Utilizador</a></div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            {</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                Id = _clienteId ?? 0, </div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                Nome = txtNome.Text,</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>                Contacto = <a class="code hl_class" href="class_base_repo.html">contacto</a>,</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                Morada = txtMorada.Text,</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                DataNasc = dtpNasc.Checked ? dtpNasc.Value.ToString(<span class="stringliteral">&quot;dd-MM-yyyy HH:mm:ss&quot;</span>) : <span class="keyword">null</span>,</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                Nif = <a class="code hl_class" href="class_base_repo.html">Convert</a>.ToInt32(txtNIF.Text),</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                IsAdmin = chkAdmin.Checked,</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                Password = txtNome.Text</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            };</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            <span class="keywordflow">if</span> (_clienteId.HasValue)</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                _controller.UpdateItem(cliente);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            }</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>            <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                _controller.AddItem(cliente);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            }</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            this.<a class="code hl_class" href="class_base_repo.html">Close</a>();</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        }</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>            <span class="comment">// Criação ou atualização do cliente</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            cliente = <span class="keyword">new</span> <a class="code hl_class" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html">Utilizador</a></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                Id = _clienteId ?? 0, </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>                Nome = txtNome.Text,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                Contacto = contacto,</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                Morada = txtMorada.Text,</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                DataNasc = dtpNasc.Checked ? dtpNasc.Value.ToString(<span class="stringliteral">&quot;dd-MM-yyyy HH:mm:ss&quot;</span>) : <span class="keyword">null</span>,</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                Nif = Convert.ToInt32(txtNIF.Text),</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                IsAdmin = chkAdmin.Checked,</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>                Password = txtNome.Text</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            };</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            <span class="keywordflow">if</span> (_clienteId.HasValue)</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                _controller.UpdateItem(cliente);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            {</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                _controller.AddItem(cliente);</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            }</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            this.Close();</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        }</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="preprocessor">        #endregion</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    }</div>
 </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
-<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
-<div class="ttc" id="aclass_base_repo_html_ae8f317aa779a9fd3875cff23a9ef2d02"><div class="ttname"><a href="class_base_repo.html#ae8f317aa779a9fd3875cff23a9ef2d02">BaseRepo.GetById</a></div><div class="ttdeci">virtual T GetById(int? id)</div><div class="ttdoc">Obtém um item pelo seu identificador.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00160">BaseRepo.cs:160</a></div></div>
-<div class="ttc" id="aclass_utilizador_controller_html"><div class="ttname"><a href="class_utilizador_controller.html">UtilizadorController</a></div><div class="ttdoc">Controlador para a gestão dos utilizadores.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_controller_8cs_source.html#l00016">UtilizadorController.cs:17</a></div></div>
-<div class="ttc" id="aclass_utilizador_html"><div class="ttname"><a href="class_utilizador.html">Utilizador</a></div><div class="ttdoc">Representa um utilizador no sistema.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00017">Utilizador.cs:18</a></div></div>
-<div class="ttc" id="aclass_utilizador_html_a2563458c10f703b98a6ec1e7ee3eb711"><div class="ttname"><a href="class_utilizador.html#a2563458c10f703b98a6ec1e7ee3eb711">Utilizador.IsAdmin</a></div><div class="ttdeci">bool IsAdmin</div><div class="ttdoc">Indicador de administrador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00091">Utilizador.cs:91</a></div></div>
-<div class="ttc" id="aclass_utilizador_html_a5584d5ad67c483904df1ab86975bab32"><div class="ttname"><a href="class_utilizador.html#a5584d5ad67c483904df1ab86975bab32">Utilizador.Contacto</a></div><div class="ttdeci">string Contacto</div><div class="ttdoc">Contacto do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00040">Utilizador.cs:40</a></div></div>
-<div class="ttc" id="aclass_utilizador_html_a60accb230b5165e5c683e33b0c36e4e6"><div class="ttname"><a href="class_utilizador.html#a60accb230b5165e5c683e33b0c36e4e6">Utilizador.DataNasc</a></div><div class="ttdeci">string? DataNasc</div><div class="ttdoc">Data de nascimento do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00064">Utilizador.cs:64</a></div></div>
-<div class="ttc" id="aclass_utilizador_html_a7ef1840900c3a890dd35207104faaa64"><div class="ttname"><a href="class_utilizador.html#a7ef1840900c3a890dd35207104faaa64">Utilizador.Morada</a></div><div class="ttdeci">string? Morada</div><div class="ttdoc">Morada do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00048">Utilizador.cs:48</a></div></div>
-<div class="ttc" id="aclass_utilizador_html_ac941ba61ffc9e6446aa6e069875ad1af"><div class="ttname"><a href="class_utilizador.html#ac941ba61ffc9e6446aa6e069875ad1af">Utilizador.Nome</a></div><div class="ttdeci">string? Nome</div><div class="ttdoc">Nome do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00032">Utilizador.cs:32</a></div></div>
-<div class="ttc" id="aclass_utilizador_html_ade2b39cdd3c0985cf6e26bd0ad7d4c07"><div class="ttname"><a href="class_utilizador.html#ade2b39cdd3c0985cf6e26bd0ad7d4c07">Utilizador.Nif</a></div><div class="ttdeci">int Nif</div><div class="ttdoc">Número de Identificação Fiscal (NIF).</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00056">Utilizador.cs:56</a></div></div>
-<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_add_upd_cliente_form_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html">poo_tp_29559.Views.AddUpdClienteForm</a></div><div class="ttdoc">Formulário para a criação ou edição de um cliente.</div><div class="ttdef"><b>Definição</b> <a href="_add_upd_cliente_form_8cs_source.html#l00028">AddUpdClienteForm.cs:29</a></div></div>
-<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_add_upd_cliente_form_html_a023339a1d08a6ee803a1740e72649f0c"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html#a023339a1d08a6ee803a1740e72649f0c">poo_tp_29559.Views.AddUpdClienteForm.AddUpdClienteForm</a></div><div class="ttdeci">AddUpdClienteForm(int? clienteId=null)</div><div class="ttdoc">Construtor do AddUpdClienteForm.</div><div class="ttdef"><b>Definição</b> <a href="_add_upd_cliente_form_8cs_source.html#l00041">AddUpdClienteForm.cs:41</a></div></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
+<div class="ttc" id="aclass_utilizador_controller_html"><div class="ttname"><a href="class_utilizador_controller.html">UtilizadorController</a></div><div class="ttdef"><b>Definição</b> <a href="_utilizador_controller_8cs_source.html#l00007">UtilizadorController.cs:8</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html">poo_tp_29559.Models.Utilizador</a></div><div class="ttdoc">Representa um utilizador no sistema.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00014">Utilizador.cs:15</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html_a037624e39943337dd9173a02ffd8f117"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a037624e39943337dd9173a02ffd8f117">poo_tp_29559.Models.Utilizador.Nome</a></div><div class="ttdeci">string? Nome</div><div class="ttdoc">Nome do utilizador (cliente).</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00031">Utilizador.cs:31</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html_a2e4566b85440f4922a6d5029153cf683"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a2e4566b85440f4922a6d5029153cf683">poo_tp_29559.Models.Utilizador.IsAdmin</a></div><div class="ttdeci">bool IsAdmin</div><div class="ttdoc">Indicador de administrador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00097">Utilizador.cs:97</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html_a4e1db0d585a3dc3bf9a93acdf75c3912"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a4e1db0d585a3dc3bf9a93acdf75c3912">poo_tp_29559.Models.Utilizador.Nif</a></div><div class="ttdeci">int Nif</div><div class="ttdoc">Número de Identificação Fiscal (NIF).</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00058">Utilizador.cs:58</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html_a6cdc664a5171a7932ae00e729ba86bfc"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a6cdc664a5171a7932ae00e729ba86bfc">poo_tp_29559.Models.Utilizador.DataNasc</a></div><div class="ttdeci">string? DataNasc</div><div class="ttdoc">Data de nascimento do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00067">Utilizador.cs:67</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html_a93876229fa54ddf356261b09276da571"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a93876229fa54ddf356261b09276da571">poo_tp_29559.Models.Utilizador.Contacto</a></div><div class="ttdeci">string Contacto</div><div class="ttdoc">Contacto do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00040">Utilizador.cs:40</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_models_1_1_utilizador_html_ab9782f2fd96641000e1802b2d9ee4bc3"><div class="ttname"><a href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#ab9782f2fd96641000e1802b2d9ee4bc3">poo_tp_29559.Models.Utilizador.Morada</a></div><div class="ttdeci">string? Morada</div><div class="ttdoc">Morada do utilizador.</div><div class="ttdef"><b>Definição</b> <a href="_utilizador_8cs_source.html#l00049">Utilizador.cs:49</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_add_upd_cliente_form_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html">poo_tp_29559.Views.AddUpdClienteForm</a></div><div class="ttdoc">Formulário para a criação ou edição de um cliente.</div><div class="ttdef"><b>Definição</b> <a href="_add_upd_cliente_form_8cs_source.html#l00017">AddUpdClienteForm.cs:18</a></div></div>
+<div class="ttc" id="aclasspoo__tp__29559_1_1_views_1_1_add_upd_cliente_form_html_a023339a1d08a6ee803a1740e72649f0c"><div class="ttname"><a href="classpoo__tp__29559_1_1_views_1_1_add_upd_cliente_form.html#a023339a1d08a6ee803a1740e72649f0c">poo_tp_29559.Views.AddUpdClienteForm.AddUpdClienteForm</a></div><div class="ttdeci">AddUpdClienteForm(int? clienteId=null)</div><div class="ttdoc">Construtor do AddUpdClienteForm.</div><div class="ttdef"><b>Definição</b> <a href="_add_upd_cliente_form_8cs_source.html#l00029">AddUpdClienteForm.cs:29</a></div></div>
 <div class="ttc" id="anamespace_validation_library_html"><div class="ttname"><a href="namespace_validation_library.html">ValidationLibrary</a></div><div class="ttdef"><b>Definição</b> <a href="_field_validator_8cs_source.html#l00004">FieldValidator.cs:5</a></div></div>
-<div class="ttc" id="anamespacepoo__tp__29559_1_1_views_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div><div class="ttdef"><b>Definição</b> <a href="_add_compra_form_8cs_source.html#l00028">AddCompraForm.cs:29</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_models_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_models.html">poo_tp_29559.Models</a></div><div class="ttdef"><b>Definição</b> <a href="_campanha_8cs_source.html#l00004">Campanha.cs:5</a></div></div>
+<div class="ttc" id="anamespacepoo__tp__29559_1_1_views_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_views.html">poo_tp_29559.Views</a></div><div class="ttdef"><b>Definição</b> <a href="_add_compra_form_8cs_source.html#l00016">AddCompraForm.cs:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

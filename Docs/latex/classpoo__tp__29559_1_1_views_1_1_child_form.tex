@@ -9,23 +9,23 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form\beg
 \doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Child\+Form} (\textbf{ Form\+Types} \textbf{ form\+Type}, \textbf{ Utilizador} \textbf{ utilizador\+Logado})
-\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Child\+Form}. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ change\+Settings} (\textbf{ Form\+Types} \textbf{ form\+Type}, \textbf{ bool} \textbf{ is\+Admin})
+\textbf{ Child\+Form} (\textbf{ Form\+Types} form\+Type, \textbf{ Utilizador} utilizador\+Logado)
+\begin{DoxyCompactList}\small\item\em Inicializa o formulário, configura o tipo de formulário e o controlador responsável pelos dados, e exibe os itens na interface. \end{DoxyCompactList}\item 
+void \textbf{ change\+Settings} (\textbf{ Form\+Types} form\+Type, bool is\+Admin)
 \begin{DoxyCompactList}\small\item\em Altera as configurações visuais do formulário com base no tipo de formulário e permissões do utilizador. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Mostra\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items)
+void \textbf{ Mostra\+Itens} (List$<$ object $>$ items)
 \begin{DoxyCompactList}\small\item\em Exibe os itens no Data\+Grid\+View. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 
 
-Definido na linha \textbf{ 25} do ficheiro \textbf{ Child\+Form.\+cs}.
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Child\+Form.\+cs}.
 
 
 
@@ -38,33 +38,31 @@ Definido na linha \textbf{ 25} do ficheiro \textbf{ Child\+Form.\+cs}.
 
 
 
-Construtor do {\ttfamily Child\+Form}. 
-
-Inicializa os componentes do formulário, configura o tipo de formulário e o controlador responsável pelos dados, e exibe os itens na interface.
+Inicializa o formulário, configura o tipo de formulário e o controlador responsável pelos dados, e exibe os itens na interface. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em form\+Type} & O tipo do formulário (Produtos, Categorias, etc.). \\
+{\em form\+Type} & O tipo do formulário (Produtos, Categorias, etc.).\\
 \hline
-{\em utilizador\+Logado} & O utilizador autenticado. \\
+{\em utilizador\+Logado} & O utilizador autenticado.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 42} do ficheiro \textbf{ Child\+Form.\+cs}.
+Definido na linha \textbf{ 34} do ficheiro \textbf{ Child\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \_formType\ =\ formType;}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ CreateController();}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \_utilizadorLogado\ =\ utilizadorLogado;}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \_bindingSource\ =\ \textcolor{keyword}{new}\ BindingSource();}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ changeSettings(formType,\ \_utilizadorLogado.IsAdmin);}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ MostraItens(\_controller.GetItems());}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \_formType\ =\ formType;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ CreateController();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \_utilizadorLogado\ =\ utilizadorLogado;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \_bindingSource\ =\ \textcolor{keyword}{new}\ BindingSource();}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ changeSettings(formType,\ \_utilizadorLogado.IsAdmin);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ MostraItens(\_controller.GetItems());}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -74,62 +72,60 @@ Definido na linha \textbf{ 42} do ficheiro \textbf{ Child\+Form.\+cs}.
 \index{poo\_tp\_29559.Views.ChildForm@{poo\_tp\_29559.Views.ChildForm}!changeSettings@{changeSettings}}
 \index{changeSettings@{changeSettings}!poo\_tp\_29559.Views.ChildForm@{poo\_tp\_29559.Views.ChildForm}}
 \doxysubsubsection{changeSettings()}
-{\footnotesize\ttfamily \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form.\+change\+Settings (\begin{DoxyParamCaption}\item[{\textbf{ Form\+Types}}]{form\+Type,  }\item[{\textbf{ bool}}]{is\+Admin }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form.\+change\+Settings (\begin{DoxyParamCaption}\item[{\textbf{ Form\+Types}}]{form\+Type,  }\item[{bool}]{is\+Admin }\end{DoxyParamCaption})}
 
 
 
 Altera as configurações visuais do formulário com base no tipo de formulário e permissões do utilizador. 
 
-Altera a visibilidade de botões e outras configurações visuais conforme o tipo de formulário e se o utilizador é um administrador ou cliente.
-
 
 \begin{DoxyParams}{Parâmetros}
-{\em form\+Type} & O tipo do formulário (Produtos, Categorias, etc.). \\
+{\em form\+Type} & O tipo do formulário (Produtos, Categorias, etc.).\\
 \hline
-{\em is\+Admin} & Determina se o utilizador é um administrador. \\
+{\em is\+Admin} & Determina se o utilizador é um administrador.\\
 \hline
 \end{DoxyParams}
 $<$ Define o título do formulário com base no tipo
 
-Definido na linha \textbf{ 63} do ficheiro \textbf{ Child\+Form.\+cs}.
+Definido na linha \textbf{ 55} do ficheiro \textbf{ Child\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ Text\ =\ \_formType.ToString();\ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ Text\ =\ \_formType.ToString();\ \ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isAdmin)}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Visible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Visible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Visible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.ReadOnly\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!isAdmin)}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (formType)}
 \DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Visible\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Visible\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Visible\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.ReadOnly\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (formType)}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FormTypes.Vendas:}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}🛒"{}};}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Text\ =\ \textcolor{stringliteral}{"{}🧾"{}};}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FormTypes.Compras:}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}🛒"{}};}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Text\ =\ \textcolor{stringliteral}{"{}🧾"{}};}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Visible\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Visible\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FormTypes.Utilizadores:}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}👤"{}};}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FormTypes.Vendas:}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}🛒"{}};}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Text\ =\ \textcolor{stringliteral}{"{}🧾"{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FormTypes.Compras:}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}🛒"{}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnConsultarAtualizar.Text\ =\ \textcolor{stringliteral}{"{}🧾"{}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnRem.Visible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Visible\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ FormTypes.Utilizadores:}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ btnAdd.Text\ =\ \textcolor{stringliteral}{"{}👤"{}};}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_views_1_1_child_form_acd9a5cbb410c7454c5b4c97913c97bae} 
 \index{poo\_tp\_29559.Views.ChildForm@{poo\_tp\_29559.Views.ChildForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.ChildForm@{poo\_tp\_29559.Views.ChildForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -159,42 +155,47 @@ Definido na linha \textbf{ 14} do ficheiro \textbf{ Child\+Form.\+Designer.\+cs}
 \index{poo\_tp\_29559.Views.ChildForm@{poo\_tp\_29559.Views.ChildForm}!MostraItens@{MostraItens}}
 \index{MostraItens@{MostraItens}!poo\_tp\_29559.Views.ChildForm@{poo\_tp\_29559.Views.ChildForm}}
 \doxysubsubsection{MostraItens()}
-{\footnotesize\ttfamily \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form.\+Mostra\+Itens (\begin{DoxyParamCaption}\item[{\textbf{ List}$<$ \textbf{ object} $>$}]{items }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void poo\+\_\+tp\+\_\+29559.\+Views.\+Child\+Form.\+Mostra\+Itens (\begin{DoxyParamCaption}\item[{List$<$ object $>$}]{items }\end{DoxyParamCaption})}
 
 
 
 Exibe os itens no Data\+Grid\+View. 
 
-Este método busca os dados do controlador, atualiza o Binding\+Source e exibe os itens no Data\+Grid\+View. Se o utilizador autenticado for um cliente, nas compras, exibe apenas as compras do próprio utilizador. 
 
-Definido na linha \textbf{ 121} do ficheiro \textbf{ Child\+Form.\+cs}.
+\begin{DoxyParams}{Parâmetros}
+{\em items} & Lista de itens a ser exibida.\\
+\hline
+\end{DoxyParams}
+
+
+Definido na linha \textbf{ 112} do ficheiro \textbf{ Child\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_formType\ ==\ FormTypes.Compras)}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Filtra\ apenas\ as\ compras\ feitas\ pelo\ utilizador\ logado}}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ items\ =\ items.OfType<VendaCompraViewModel>()}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(vc\ =>\ vc.ClienteID\ ==\ \_utilizadorLogado.Id)}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<\textcolor{keywordtype}{object}>()}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00131\ }
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \_items\ =\ items;}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \_bindingSource.DataSource\ =\ items;}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.DataSource\ =\ \_bindingSource;}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Refresh();}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewColumn\ column\ \textcolor{keywordflow}{in}\ dgvItens.Columns)}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column.SortMode\ =\ DataGridViewColumnSortMode.Automatic;}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Esconde\ colunas\ irrelevantes}}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ ToggleColumnVisibility(\textcolor{stringliteral}{"{}Id"{}},\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ ToggleColumnVisibility(\textcolor{stringliteral}{"{}IsParticular"{}},\ \textcolor{keyword}{false});}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_formType\ ==\ FormTypes.Compras)}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Filtra\ apenas\ as\ compras\ feitas\ pelo\ utilizador\ logado}}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ items\ =\ items.OfType<VendaCompraViewModel>()}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(vc\ =>\ vc.ClienteID\ ==\ \_utilizadorLogado.Id)}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Cast<\textcolor{keywordtype}{object}>()}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToList();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \_items\ =\ items;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \_bindingSource.DataSource\ =\ items;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.DataSource\ =\ \_bindingSource;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ dgvItens.Refresh();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (DataGridViewColumn\ column\ \textcolor{keywordflow}{in}\ dgvItens.Columns)}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ column.SortMode\ =\ DataGridViewColumnSortMode.Automatic;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Esconde\ colunas\ irrelevantes}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ ToggleColumnVisibility(\textcolor{stringliteral}{"{}Id"{}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ ToggleColumnVisibility(\textcolor{stringliteral}{"{}IsParticular"{}},\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 

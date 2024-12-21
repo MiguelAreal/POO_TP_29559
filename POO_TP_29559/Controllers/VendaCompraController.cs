@@ -5,22 +5,28 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-/// <summary>
-/// Controlador para a gestão de vendas e compras.
-/// Gerencia operações como exibição de vendas, cálculo de garantias, remoção de vendas e atualização de estoque dos produtos.
-/// </summary>
 public class VendaCompraController : BaseController<VendaCompra>, IEntityController
 {
+    #region Fields
+
     /// <summary>
     /// Lista de itens de vendas e compras formatados para exibição.
     /// </summary>
     private List<VendaCompraViewModel> _vendasComprasViewItems;
+
+    #endregion
+
+    #region Constructor
 
     /// <summary>
     /// Construtor da classe <see cref="VendaCompraController"/>.
     /// Inicializa o controlador com o caminho do ficheiro de dados onde as vendas são armazenadas.
     /// </summary>
     public VendaCompraController() : base("Data/vendas.json") { }
+
+    #endregion
+
+    #region Get Items
 
     /// <summary>
     /// Obtém os itens de vendas e compras formatados para exibição.
@@ -53,6 +59,10 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
 
         return _vendasComprasViewItems.Cast<object>().ToList();
     }
+
+    #endregion
+
+    #region Remove Item
 
     /// <summary>
     /// Remove uma venda do sistema após verificar a garantia e atualizar o estoque.
@@ -93,6 +103,10 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
         }
     }
 
+    #endregion
+
+    #region Calculate Warranty
+
     /// <summary>
     /// Calcula o período de garantia da compra com base no tipo de cliente.
     /// </summary>
@@ -118,4 +132,6 @@ public class VendaCompraController : BaseController<VendaCompra>, IEntityControl
         // Garantia padrão em caso de NIF inválido
         return 36;
     }
+
+    #endregion
 }

@@ -1,10 +1,5 @@
 \doxysection{Referência à classe Campanha\+Controller}
 \label{class_campanha_controller}\index{CampanhaController@{CampanhaController}}
-
-
-Controlador para a gestão de campanhas.  
-
-
 Diagrama de heranças da classe Campanha\+Controller\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -15,9 +10,9 @@ Diagrama de heranças da classe Campanha\+Controller\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Campanha\+Controller} ()
-\begin{DoxyCompactList}\small\item\em Construtor da classe {\ttfamily \doxyref{Campanha\+Controller}{p. }{class_campanha_controller}}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construtor da classe \doxyref{Campanha\+Controller}{p. }{class_campanha_controller}. Inicializa o controlador com o caminho do ficheiro de dados onde as campanhas serão armazenadas. \end{DoxyCompactList}\item 
 \textbf{ override} \textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Get\+Items} ()
-\begin{DoxyCompactList}\small\item\em Obtém todas as campanhas, traduzindo os IDs para nomes legíveis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Obtém todas as campanhas, traduzindo os IDs para nomes legíveis. Recupera todas as campanhas do repositório e cria uma lista de modelos de visualização (Campanha\+View\+Model) substituindo os identificadores das categorias pelos seus respectivos nomes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros públicos herdados de \textbf{ Base\+Controller$<$ Campanha $>$}}
 \begin{DoxyCompactItemize}
 \item 
@@ -36,14 +31,14 @@ Diagrama de heranças da classe Campanha\+Controller\begin{figure}[H]
 \doxysubsection*{Membros públicos herdados de \textbf{ IEntity\+Controller}}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ object} \textbf{ Get\+By\+Id} (\textbf{ int}? \textbf{ id})
-\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Remove\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Remove um item. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Update\+Item} (\textbf{ object} \textbf{ item})
-\begin{DoxyCompactList}\small\item\em Atualiza um item. \end{DoxyCompactList}\item 
-\textbf{ List}$<$ \textbf{ object} $>$ \textbf{ Filtrar\+Itens} (\textbf{ List}$<$ \textbf{ object} $>$ items, \textbf{ string} \textbf{ filtro}, \textbf{ string}? \textbf{ coluna})
-\end{DoxyCompactItemize}
+object \textbf{ Get\+By\+Id} (int? id)
+\begin{DoxyCompactList}\small\item\em Obtém um item pelo seu identificador único. \end{DoxyCompactList}\item 
+void \textbf{ Remove\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Remove um item do sistema. \end{DoxyCompactList}\item 
+void \textbf{ Update\+Item} (object item)
+\begin{DoxyCompactList}\small\item\em Atualiza os dados de um item existente no sistema. \end{DoxyCompactList}\item 
+List$<$ object $>$ \textbf{ Filtrar\+Itens} (List$<$ object $>$ items, string filtro, string? coluna)
+\begin{DoxyCompactList}\small\item\em Filtra itens com base em critérios específicos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
 \doxysubsection*{Atributos Protegidos herdados de \textbf{ Base\+Controller$<$ Campanha $>$}}
 \begin{DoxyCompactItemize}
@@ -55,11 +50,9 @@ Diagrama de heranças da classe Campanha\+Controller\begin{figure}[H]
 
 
 \doxysubsection{Descrição detalhada}
-Controlador para a gestão de campanhas. 
 
-A classe {\ttfamily \doxyref{Campanha\+Controller}{p. }{class_campanha_controller}} implementa a lógica para a gestão de campanhas, incluindo operações de leitura e manipulação de dados. Herda de {\ttfamily \doxyref{Base\+Controller}{p. }{class_base_controller}$<$Campanha$>$} e implementa a interface {\ttfamily \doxyref{IEntity\+Controller}{p. }{interface_i_entity_controller}}, oferecendo funcionalidades específicas para o trabalho com campanhas, incluindo a tradução de identificadores para nomes legíveis na interface de utilizador. 
 
-Definido na linha \textbf{ 30} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
+Definido na linha \textbf{ 4} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
 
 
 
@@ -72,15 +65,15 @@ Definido na linha \textbf{ 30} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
 
 
 
-Construtor da classe {\ttfamily \doxyref{Campanha\+Controller}{p. }{class_campanha_controller}}. 
+Construtor da classe \doxyref{Campanha\+Controller}{p. }{class_campanha_controller}. Inicializa o controlador com o caminho do ficheiro de dados onde as campanhas serão armazenadas. 
 
-Inicializa o controlador com o caminho do ficheiro de dados onde as campanhas serão armazenadas. 
 
-Definido na linha \textbf{ 41} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
+
+Definido na linha \textbf{ 21} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041\ :\ base(\textcolor{stringliteral}{"{}Data/campanhas.json"{}})\ \{\ \}}
+\DoxyCodeLine{00021\ :\ base(\textcolor{stringliteral}{"{}Data/campanhas.json"{}})\ \{\ \}}
 
 \end{DoxyCode}
 
@@ -94,12 +87,10 @@ Definido na linha \textbf{ 41} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
 
 
 
-Obtém todas as campanhas, traduzindo os IDs para nomes legíveis. 
-
-Este método recupera todas as campanhas do repositório e cria uma lista de modelos de visualização ({\ttfamily Campanha\+View\+Model}), substituindo os identificadores das categorias pelos seus respectivos nomes.
+Obtém todas as campanhas, traduzindo os IDs para nomes legíveis. Recupera todas as campanhas do repositório e cria uma lista de modelos de visualização (Campanha\+View\+Model) substituindo os identificadores das categorias pelos seus respectivos nomes. 
 
 \begin{DoxyReturn}{Retorna}
-Uma lista de objetos {\ttfamily Campanha\+View\+Model} com as campanhas e os nomes das categorias. 
+Uma lista de objetos Campanha\+View\+Model com as campanhas e os nomes das categorias. 
 \end{DoxyReturn}
 
 
@@ -107,37 +98,37 @@ Reimplementado de \textbf{ Base\+Controller$<$ Campanha $>$} \doxyref{}{p. }{cla
 
 
 
-Definido na linha \textbf{ 51} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
+Definido na linha \textbf{ 35} do ficheiro \textbf{ Campanha\+Controller.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00052\ \ \ \ \ \{}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ List<Campanha>\ campanhas\ =\ \_repository.GetAll();}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \_campanhasComNomes\ =\ \textcolor{keyword}{new}\ List<CampanhaViewModel>();}
+\DoxyCodeLine{00036\ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ List<Campanha>\ campanhas\ =\ \_repository.GetAll();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \_campanhasComNomes\ =\ \textcolor{keyword}{new}\ List<CampanhaViewModel>();}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ campanha\ \textcolor{keywordflow}{in}\ campanhas)}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Traduz\ IDs\ para\ nomes}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria?\ categoria\ =\ \textcolor{keyword}{new}\ CategoriaRepo().GetById(campanha.CategoriaId);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ view\ model\ com\ campanhas\ em\ vez\ de\ IDs\ para\ visualização}}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaViewModel\ =\ \textcolor{keyword}{new}\ CampanhaViewModel}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ campanha.Id,}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ campanha.Nome,}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PercentagemDesc\ =\ campanha.PercentagemDesc,}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataInicio\ =\ campanha.DataInicio,}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataFim\ =\ campanha.DataFim,}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoria?.Nome,}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
 \DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ campanha\ \textcolor{keywordflow}{in}\ campanhas)}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Traduz\ IDs\ para\ nomes}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ Categoria?\ categoria\ =\ \textcolor{keyword}{new}\ CategoriaRepo().GetById(campanha.CategoriaId);}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cria\ view\ model\ com\ campanhas\ em\ vez\ de\ IDs\ para\ visualização}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaViewModel\ =\ \textcolor{keyword}{new}\ CampanhaViewModel}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Id\ =\ campanha.Id,}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Nome\ =\ campanha.Nome,}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PercentagemDesc\ =\ campanha.PercentagemDesc,}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataInicio\ =\ campanha.DataInicio,}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DataFim\ =\ campanha.DataFim,}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ CategoriaNome\ =\ categoria?.Nome,}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \_campanhasComNomes.Add(campanhaViewModel);}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Passa\ a\ lista\ de\ campanhas\ com\ nomes\ para\ a\ vista}}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_campanhasComNomes.Cast<\textcolor{keywordtype}{object}>().ToList();}
-\DoxyCodeLine{00078\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \_campanhasComNomes.Add(campanhaViewModel);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Passa\ a\ lista\ de\ campanhas\ com\ nomes\ para\ a\ vista}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_campanhasComNomes.Cast<\textcolor{keywordtype}{object}>().ToList();}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
 
 \end{DoxyCode}
 

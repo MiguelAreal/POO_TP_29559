@@ -15,20 +15,20 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produ
 \begin{DoxyCompactItemize}
 \item 
 \textbf{ Add\+Upd\+Produto\+Form} (\textbf{ int}? \textbf{ produto\+Id}=\textbf{ null})
-\begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Add\+Upd\+Produto\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Construtor do Add\+Upd\+Produto\+Form. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 Formulário para a criação de um novo produto. 
 
-Este formulário serve para criar ou atualizar um produto ao sistema. O utilizador preenche informações como o nome, a categoria, a marca, o preço e a quantidade em stock do produto. O formulário também carrega as marcas e categorias disponíveis através dos controladores correspondentes. 
+Este formulário serve para criar ou atualizar um produto ao sistema. O utilizador preenche informações como o nome, a categoria, a marca, o preço e a quantidade em stock do produto. O formulário também carrega as marcas e categorias disponíveis através dos controladores correspondentes.
 
-Definido na linha \textbf{ 31} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs}.
+Definido na linha \textbf{ 19} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs}.
 
 
 
@@ -41,13 +41,11 @@ Definido na linha \textbf{ 31} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs
 
 
 
-Construtor do {\ttfamily Add\+Upd\+Produto\+Form}. 
-
-Inicializa os controladores de produtos, marcas e categorias. Aceita um ID de produto para edição (opcional).
+Construtor do Add\+Upd\+Produto\+Form. 
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em produto\+Id} & ID do produto a ser editado (ou null para adicionar um novo produto). \\
+{\em produto\+Id} & (Opcional) O ID do produto a ser editado, se fornecido.\\
 \hline
 \end{DoxyParams}
 $<$ Inicializa o controlador de produtos.
@@ -58,18 +56,18 @@ $<$ Inicializa o controlador de categorias.
 
 $<$ Armazena o ID do produto, se fornecido.
 
-Definido na linha \textbf{ 49} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs}.
+Definido na linha \textbf{ 35} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ ProdutoController();\ \ }
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();\ \ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();\ \ }
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtoId\ =\ produtoId;\ \ }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ ProdutoController();\ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();\ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();\ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \_produtoId\ =\ produtoId;\ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -79,7 +77,7 @@ Definido na linha \textbf{ 49} do ficheiro \textbf{ Add\+Upd\+Produto\+Form.\+cs
 \index{poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddUpdProdutoForm@{poo\_tp\_29559.Views.AddUpdProdutoForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produto\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Upd\+Produto\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

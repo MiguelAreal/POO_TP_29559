@@ -19,7 +19,7 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Compra\+Fo
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -28,7 +28,7 @@ Formulário para a criação de uma compra, por um cliente.
 
 Este formulário serve para adicionar uma nova compra ao sistema. O utilizador cliente deve preencher vários campos, como produtos, quantidades e método de pagamento. Além disso, o sistema valida os campos para garantir que os dados inseridos sejam válidos. 
 
-Definido na linha \textbf{ 38} do ficheiro \textbf{ Add\+Compra\+Form.\+cs}.
+Definido na linha \textbf{ 28} do ficheiro \textbf{ Add\+Compra\+Form.\+cs}.
 
 
 
@@ -45,30 +45,28 @@ Construtor da classe Add\+Compra\+Form.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em cliente} & O utilizador cliente associado à compra, à partida será sempre o utilizador autenticado. \\
+{\em cliente} & O utilizador cliente associado à compra, à partida será sempre o utilizador autenticado.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 56} do ficheiro \textbf{ Add\+Compra\+Form.\+cs}.
+Definido na linha \textbf{ 47} do ficheiro \textbf{ Add\+Compra\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \_cliente\ =\ cliente;}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \_controllerVenda\ =\ \textcolor{keyword}{new}\ VendaCompraController();}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ utilizadorController\ =\ \textcolor{keyword}{new}\ UtilizadorController();}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ produtoController\ =\ \textcolor{keyword}{new}\ ProdutoController();}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaProdutos();}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaMetodosPagamento();}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ CalculaGarantia(cliente);}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \_cliente\ =\ cliente;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \_controllerVenda\ =\ \textcolor{keyword}{new}\ VendaCompraController();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ utilizadorController\ =\ \textcolor{keyword}{new}\ UtilizadorController();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ produtoController\ =\ \textcolor{keyword}{new}\ ProdutoController();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ categoriaController\ =\ \textcolor{keyword}{new}\ CategoriaController();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ marcaController\ =\ \textcolor{keyword}{new}\ MarcaController();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaProdutos();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ CarregaMetodosPagamento();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ CalculaGarantia(cliente);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -78,7 +76,7 @@ Definido na linha \textbf{ 56} do ficheiro \textbf{ Add\+Compra\+Form.\+cs}.
 \index{poo\_tp\_29559.Views.AddCompraForm@{poo\_tp\_29559.Views.AddCompraForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.AddCompraForm@{poo\_tp\_29559.Views.AddCompraForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Compra\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Add\+Compra\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

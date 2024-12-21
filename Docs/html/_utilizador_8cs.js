@@ -1,4 +1,4 @@
 var _utilizador_8cs =
 [
-    [ "Utilizador", "class_utilizador.html", "class_utilizador" ]
+    [ "poo_tp_29559.Models.Utilizador", "classpoo__tp__29559_1_1_models_1_1_utilizador.html", "classpoo__tp__29559_1_1_models_1_1_utilizador" ]
 ];

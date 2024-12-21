@@ -14,23 +14,21 @@ Diagrama de heranças da classe poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda
 \doxysubsubsection*{Membros públicos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Detalhes\+Venda\+Compra} (\textbf{ Form\+Types} \textbf{ form\+Type}, \textbf{ int} \textbf{ id})
+\textbf{ Detalhes\+Venda\+Compra} (\textbf{ Form\+Types} form\+Type, int id)
 \begin{DoxyCompactList}\small\item\em Construtor do formulário {\ttfamily Detalhes\+Venda\+Compra}. \end{DoxyCompactList}\item 
-\textbf{ void} \textbf{ Calcula\+Meses\+Restantes\+Garantia} (\textbf{ Venda\+Compra} \textbf{ venda})
+void \textbf{ Calcula\+Meses\+Restantes\+Garantia} (\textbf{ Venda\+Compra} venda)
 \begin{DoxyCompactList}\small\item\em Calcula os meses restantes para o fim da garantia. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
 Formulário para exibição de detalhes de uma transação de venda ou compra. 
 
-Esta classe é responsável por exibir informações detalhadas de uma transação de venda ou compra, incluindo dados do cliente, valores totais, itens comprados, campanhas aplicadas e status de garantia. 
-
-Definido na linha \textbf{ 30} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs}.
+Definido na linha \textbf{ 14} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs}.
 
 
 
@@ -39,89 +37,87 @@ Definido na linha \textbf{ 30} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs
 \index{poo\_tp\_29559.Views.DetalhesVendaCompra@{poo\_tp\_29559.Views.DetalhesVendaCompra}!DetalhesVendaCompra@{DetalhesVendaCompra}}
 \index{DetalhesVendaCompra@{DetalhesVendaCompra}!poo\_tp\_29559.Views.DetalhesVendaCompra@{poo\_tp\_29559.Views.DetalhesVendaCompra}}
 \doxysubsubsection{DetalhesVendaCompra()}
-{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda\+Compra.\+Detalhes\+Venda\+Compra (\begin{DoxyParamCaption}\item[{\textbf{ Form\+Types}}]{form\+Type,  }\item[{\textbf{ int}}]{id }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda\+Compra.\+Detalhes\+Venda\+Compra (\begin{DoxyParamCaption}\item[{\textbf{ Form\+Types}}]{form\+Type,  }\item[{int}]{id }\end{DoxyParamCaption})}
 
 
 
 Construtor do formulário {\ttfamily Detalhes\+Venda\+Compra}. 
 
-Este construtor inicializa o formulário com os dados da venda ou compra especificada, configurando os controles para exibir informações detalhadas ao utilizador.
-
 
 \begin{DoxyParams}{Parâmetros}
-{\em form\+Type} & Tipo de formulário (Venda ou Compra). \\
+{\em form\+Type} & Tipo de formulário (Venda ou Compra).\\
 \hline
-{\em id} & Identificador da transação de venda ou compra. \\
+{\em id} & Identificador da transação de venda ou compra.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 45} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs}.
+Definido na linha \textbf{ 31} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ utilizadorController\ =\ \textcolor{keyword}{new}\ UtilizadorController();}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ VendaCompraController();}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configura\ o\ título\ do\ formulário}}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (formType\ ==\ FormTypes.Compras)}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Text\ =\ \textcolor{stringliteral}{"{}\ \ \ \ \ "{}}\ +\ \textcolor{stringliteral}{"{}Detalhe\ de\ Compra"{}};}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Text\ =\ \textcolor{stringliteral}{"{}\ \ \ \ \ "{}}\ +\ \textcolor{stringliteral}{"{}Detalhe\ de\ Venda"{}};}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompra\ venda\ =\ (VendaCompra)\_controller.GetById(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ Utilizador\ utilizadorVenda\ =\ \textcolor{keyword}{new}\ Utilizador();}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ utilizadorController\ =\ \textcolor{keyword}{new}\ UtilizadorController();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \_controller\ =\ \textcolor{keyword}{new}\ VendaCompraController();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configura\ o\ título\ do\ formulário}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (formType\ ==\ FormTypes.Compras)}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Text\ =\ \textcolor{stringliteral}{"{}\ \ \ \ \ "{}}\ +\ \textcolor{stringliteral}{"{}Detalhe\ de\ Compra"{}};}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Text\ =\ \textcolor{stringliteral}{"{}\ \ \ \ \ "{}}\ +\ \textcolor{stringliteral}{"{}Detalhe\ de\ Venda"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ VendaCompra\ venda\ =\ (VendaCompra)\_controller.GetById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ Utilizador\ utilizadorVenda\ =\ \textcolor{keyword}{new}\ Utilizador();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtém\ o\ nome\ do\ cliente\ associado\ à\ venda}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (venda.ClienteID\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ utilizadorVenda\ =\ (Utilizador)utilizadorController.GetById(venda.ClienteID\ ??\ 0);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ nomeCliente\ =\ utilizadorVenda.Nome\ ??\ \textcolor{stringliteral}{"{}Desconhecido"{}};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preenche\ os\ labels\ com\ os\ dados\ da\ venda}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ lblNIF.Text\ =\ \$\textcolor{stringliteral}{"{}NIF:\ \{venda.NIF\}"{}};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ lblCliente.Text\ =\ \$\textcolor{stringliteral}{"{}Cliente:\ \{nomeCliente\}"{}};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ lblDataVenda.Text\ =\ \$\textcolor{stringliteral}{"{}Data\ da\ Venda:\ \{venda.DataVenda\}"{}};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ lblTotalBruto.Text\ =\ \$\textcolor{stringliteral}{"{}Total\ Bruto:\ \{venda.TotalBruto:C\}"{}};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ lblTotalLiquido.Text\ =\ \$\textcolor{stringliteral}{"{}Total\ Líquido:\ \{venda.TotalLiquido:C\}"{}};}
 \DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtém\ o\ nome\ do\ cliente\ associado\ à\ venda}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (venda.ClienteID\ !=\ \textcolor{keyword}{null})}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ utilizadorVenda\ =\ (Utilizador)utilizadorController.GetById(venda.ClienteID\ ??\ 0);}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ nomeCliente\ =\ utilizadorVenda.Nome\ ??\ \textcolor{stringliteral}{"{}Desconhecido"{}};}
-\DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preenche\ os\ labels\ com\ os\ dados\ da\ venda}}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ lblNIF.Text\ =\ \$\textcolor{stringliteral}{"{}NIF:\ \{venda.NIF\}"{}};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ lblCliente.Text\ =\ \$\textcolor{stringliteral}{"{}Cliente:\ \{nomeCliente\}"{}};}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ lblDataVenda.Text\ =\ \$\textcolor{stringliteral}{"{}Data\ da\ Venda:\ \{venda.DataVenda\}"{}};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ lblTotalBruto.Text\ =\ \$\textcolor{stringliteral}{"{}Total\ Bruto:\ \{venda.TotalBruto:C\}"{}};}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ lblTotalLiquido.Text\ =\ \$\textcolor{stringliteral}{"{}Total\ Líquido:\ \{venda.TotalLiquido:C\}"{}};}
-\DoxyCodeLine{00077\ }
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcula\ os\ meses\ restantes\ da\ garantia}}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ CalculaMesesRestantesGarantia(venda);}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preenche\ a\ lista\ de\ itens\ na\ fatura}}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ venda.Itens)}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Rows.Add(}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.ProdutoID,}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.ProdutoNome,}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.CategoriaNome,}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.MarcaNome,}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.Unidades,}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.PrecoUnitario.ToString(\textcolor{stringliteral}{"{}C"{}}));}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exibe\ campanhas\ aplicadas}}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Clear();}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ venda.Itens)}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item.PercentagemDesc.HasValue\ \&\&\ item.PercentagemDesc\ >\ 0)}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaItem\ =\ \textcolor{keyword}{new}\ ListViewItem(\textcolor{keyword}{new}[]\ \{}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.ProdutoNome,}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.CategoriaNome,}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}\{item.PercentagemDesc\}\%"{}}}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Add(campanhaItem);}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calcula\ os\ meses\ restantes\ da\ garantia}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ CalculaMesesRestantesGarantia(venda);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Preenche\ a\ lista\ de\ itens\ na\ fatura}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ venda.Itens)}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dgvFatura.Rows.Add(}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.ProdutoID,}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.ProdutoNome,}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.CategoriaNome,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.MarcaNome,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.Unidades,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.PrecoUnitario.ToString(\textcolor{stringliteral}{"{}C"{}}));}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Exibe\ campanhas\ aplicadas}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Clear();}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ item\ \textcolor{keywordflow}{in}\ venda.Itens)}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (item.PercentagemDesc.HasValue\ \&\&\ item.PercentagemDesc\ >\ 0)}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ campanhaItem\ =\ \textcolor{keyword}{new}\ ListViewItem(\textcolor{keyword}{new}[]\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.ProdutoNome,}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ item.CategoriaNome,}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}\{item.PercentagemDesc\}\%"{}}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ listViewCampanhas.Items.Add(campanhaItem);}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -131,63 +127,61 @@ Definido na linha \textbf{ 45} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs
 \index{poo\_tp\_29559.Views.DetalhesVendaCompra@{poo\_tp\_29559.Views.DetalhesVendaCompra}!CalculaMesesRestantesGarantia@{CalculaMesesRestantesGarantia}}
 \index{CalculaMesesRestantesGarantia@{CalculaMesesRestantesGarantia}!poo\_tp\_29559.Views.DetalhesVendaCompra@{poo\_tp\_29559.Views.DetalhesVendaCompra}}
 \doxysubsubsection{CalculaMesesRestantesGarantia()}
-{\footnotesize\ttfamily \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda\+Compra.\+Calcula\+Meses\+Restantes\+Garantia (\begin{DoxyParamCaption}\item[{\textbf{ Venda\+Compra}}]{venda }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda\+Compra.\+Calcula\+Meses\+Restantes\+Garantia (\begin{DoxyParamCaption}\item[{\textbf{ Venda\+Compra}}]{venda }\end{DoxyParamCaption})}
 
 
 
 Calcula os meses restantes para o fim da garantia. 
 
-Este método calcula o tempo restante para a expiração da garantia e exibe o estado da garantia no formulário.
-
 
 \begin{DoxyParams}{Parâmetros}
-{\em venda} & Instância da classe {\ttfamily \doxyref{Venda\+Compra}{p. }{class_venda_compra}} contendo a data do fim da garantia. \\
+{\em venda} & Instância da classe {\ttfamily Venda\+Compra} contendo a data do fim da garantia.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 116} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs}.
+Definido na linha \textbf{ 103} do ficheiro \textbf{ Detalhes\+Venda\+Compra.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.TryParse(venda.FimDataGarantia,\ out\ var\ garantiaData))}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ mesesRestantes\ =\ ((garantiaData.Year\ -\/\ DateTime.Now.Year)\ *\ 12)\ +\ garantiaData.Month\ -\/\ DateTime.Now.Month;}
-\DoxyCodeLine{00121\ }
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mesesRestantes\ >\ 0)}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \$\textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nAinda\ tem\ \{mesesRestantes\}\ meses"{}};}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}✅"{}};}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Green;}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mesesRestantes\ ==\ 0)}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nA\ garantia\ termina\ este\ mês"{}};}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}✅"{}};}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Green;}
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \$\textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nTerminou\ há\ \{-\/mesesRestantes\}\ meses"{}};}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}❌"{}};}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Red;}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nData\ inválida"{}};}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}❌"{}};}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Red;}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (DateTime.TryParse(venda.FimDataGarantia,\ out\ var\ garantiaData))}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ mesesRestantes\ =\ ((garantiaData.Year\ -\/\ DateTime.Now.Year)\ *\ 12)\ +\ garantiaData.Month\ -\/\ DateTime.Now.Month;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mesesRestantes\ >\ 0)}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \$\textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nAinda\ tem\ \{mesesRestantes\}\ meses"{}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}✅"{}};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Green;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mesesRestantes\ ==\ 0)}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nA\ garantia\ termina\ este\ mês"{}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}✅"{}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Green;}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \$\textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nTerminou\ há\ \{-\/mesesRestantes\}\ meses"{}};}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}❌"{}};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Red;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblMesesRestantesGarantia.Text\ =\ \textcolor{stringliteral}{"{}Estado\ da\ Garantia:\(\backslash\)nData\ inválida"{}};}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.Text\ =\ \textcolor{stringliteral}{"{}❌"{}};}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lblGarantiaStatus.ForeColor\ =\ Color.Red;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 \label{classpoo__tp__29559_1_1_views_1_1_detalhes_venda_compra_adceb055dea1ee7f031fc57aabf15c26b} 
 \index{poo\_tp\_29559.Views.DetalhesVendaCompra@{poo\_tp\_29559.Views.DetalhesVendaCompra}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.Views.DetalhesVendaCompra@{poo\_tp\_29559.Views.DetalhesVendaCompra}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda\+Compra.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Views.\+Detalhes\+Venda\+Compra.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 

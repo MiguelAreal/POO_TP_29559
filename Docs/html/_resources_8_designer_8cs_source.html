@@ -133,9 +133,9 @@ $(document).ready(function(){initNavTree('_resources_8_designer_8cs_source.html'
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">internal</span> <span class="keyword">static</span> global::System.Resources.ResourceManager ResourceManager {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keyword">get</span> {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">if</span> (<span class="keywordtype">object</span>.<a class="code hl_class" href="class_base_repo.html">ReferenceEquals</a>(resourceMan, <span class="keyword">null</span>)) {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    global::System.Resources.ResourceManager <a class="code hl_class" href="class_base_repo.html">temp</a> = <span class="keyword">new</span> global::System.Resources.ResourceManager(<span class="stringliteral">&quot;poo_tp_29559.Properties.Resources&quot;</span>, <a class="code hl_class" href="class_base_repo.html">typeof</a>(Resources).<a class="code hl_class" href="class_base_repo.html">Assembly</a>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    resourceMan = <a class="code hl_class" href="class_base_repo.html">temp</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">if</span> (<span class="keywordtype">object</span>.ReferenceEquals(resourceMan, <span class="keyword">null</span>)) {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    global::System.Resources.ResourceManager temp = <span class="keyword">new</span> global::System.Resources.ResourceManager(<span class="stringliteral">&quot;poo_tp_29559.Properties.Resources&quot;</span>, typeof(Resources).Assembly);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                    resourceMan = temp;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                }</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                <span class="keywordflow">return</span> resourceMan;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            }</div>
@@ -147,20 +147,19 @@ $(document).ready(function(){initNavTree('_resources_8_designer_8cs_source.html'
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">return</span> resourceCulture;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="keyword">set</span> {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                resourceCulture = <a class="code hl_class" href="class_base_repo.html">value</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                resourceCulture = value;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">internal</span> <span class="keyword">static</span> System.Drawing.Bitmap leftclick_logo {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>            <span class="keyword">get</span> {</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordtype">object</span> <a class="code hl_class" href="class_base_repo.html">obj</a> = ResourceManager.GetObject(<span class="stringliteral">&quot;leftclick_logo&quot;</span>, resourceCulture);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">return</span> ((System.Drawing.Bitmap)(<a class="code hl_class" href="class_base_repo.html">obj</a>));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                <span class="keywordtype">object</span> obj = ResourceManager.GetObject(<span class="stringliteral">&quot;leftclick_logo&quot;</span>, resourceCulture);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                <span class="keywordflow">return</span> ((System.Drawing.Bitmap)(obj));</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
 </div>
-<div class="ttc" id="aclass_base_repo_html"><div class="ttname"><a href="class_base_repo.html">BaseRepo</a></div><div class="ttdoc">Repositório genérico para manipulação de dados.</div><div class="ttdef"><b>Definição</b> <a href="_base_repo_8cs_source.html#l00032">BaseRepo.cs:33</a></div></div>
 <div class="ttc" id="aclasspoo__tp__29559_1_1_properties_1_1_resources_html"><div class="ttname"><a href="classpoo__tp__29559_1_1_properties_1_1_resources.html">poo_tp_29559.Properties.Resources</a></div><div class="ttdef"><b>Definição</b> <a href="_resources_8_designer_8cs_source.html#l00025">Resources.Designer.cs:25</a></div></div>
 <div class="ttc" id="anamespacepoo__tp__29559_1_1_properties_html"><div class="ttname"><a href="namespacepoo__tp__29559_1_1_properties.html">poo_tp_29559.Properties</a></div><div class="ttdef"><b>Definição</b> <a href="_resources_8_designer_8cs_source.html#l00011">Resources.Designer.cs:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

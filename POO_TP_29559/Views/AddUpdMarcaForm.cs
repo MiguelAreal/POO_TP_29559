@@ -1,16 +1,4 @@
-﻿/**
- * @file AddUpdMarcaForm.cs
- * @brief Formulário para adicionar ou atualizar uma marca.
- *
- * Este formulário permite ao utilizador adicionar uma nova marca ou atualizar uma existente no sistema. Ele solicita informações 
- * sobre o nome da marca, a descrição e o país de origem. Utiliza o `MarcaController` para manipular marcas no sistema e carrega 
- * uma lista de países a partir de um ficheiro JSON para que o utilizador possa selecionar o país de origem.
- * 
- * @author Miguel Areal
- * @date 12/2024
- */
-
-using MetroFramework.Forms;
+﻿using MetroFramework.Forms;
 using poo_tp_29559.Models;
 using poo_tp_29559.Repositories;
 using System;
@@ -21,11 +9,10 @@ using ValidationLibrary;
 namespace poo_tp_29559.Views
 {
     /**
-     * @class AddUpdMarcaForm
-     * @brief Formulário para criar ou atualizar uma marca.
+     * <summary>Formulário para criar ou atualizar uma marca.</summary>
      * 
-     * Este formulário serve para criar ou atualizar uma marca no sistema. O utilizador preenche o nome, a descrição e o país 
-     * de origem da marca. O formulário inclui validação de campos e carrega os países disponíveis a partir de um ficheiro JSON.
+     * <remarks>Este formulário serve para criar ou atualizar uma marca no sistema. O utilizador preenche o nome, a descrição e o país 
+     * de origem da marca. O formulário inclui validação de campos e carrega os países disponíveis a partir de um ficheiro JSON.</remarks>
      */
     public partial class AddUpdMarcaForm : MetroForm
     {
@@ -33,18 +20,15 @@ namespace poo_tp_29559.Views
         private readonly int? _marcaId; /**< ID opcional da marca para atualização. */
         Marca marca;
 
-        /**
-         * @brief Construtor do `AddUpdMarcaForm`.
-         * 
-         * Inicializa o controlador de marcas e carrega a lista de países disponíveis para a seleção no combo box.
-         * Se um ID válido for fornecido, carrega os dados da marca para edição.
-         * 
-         * @param marcaId ID opcional da marca. Se fornecido, o formulário será usado para atualizar a marca correspondente.
-         */
+        #region Construtors and Initialization
+
+        /// <summary>
+        /// Construtor do <see cref="AddUpdMarcaForm"/>.
+        /// </summary>
+        /// <param name="marcaId">(Opcional) O ID da marca a ser editada, se fornecido.</param>
         public AddUpdMarcaForm(int? marcaId = null)
         {
             InitializeComponent();
-
             _controller = new MarcaController(); /**< Inicializa o controlador de marcas. */
             _marcaId = marcaId;
 
@@ -56,12 +40,17 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega os dados da marca no formulário.
-         * 
-         * Preenche os campos do formulário com os dados da marca correspondente ao ID fornecido.
-         * Caso a marca não seja encontrada, exibe uma mensagem de erro.
-         */
+        #endregion
+
+        #region Loading Methods
+
+        /// <summary>
+        /// Carrega os dados da marca no formulário.
+        /// </summary>
+        /// <remarks>
+        /// Preenche os campos do formulário com os dados da marca correspondente ao ID fornecido.
+        /// Caso a marca não seja encontrada, exibe uma mensagem de erro.
+        /// </remarks>
         private void CarregaDadosMarca()
         {
             try
@@ -88,11 +77,12 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Carrega a lista de países disponíveis.
-         * 
-         * Preenche o combo box com os países obtidos do controlador e configura o modo de auto-completar.
-         */
+        /// <summary>
+        /// Carrega a lista de países disponíveis para seleção.
+        /// </summary>
+        /// <remarks>
+        /// Preenche o combo box com os países obtidos do controlador e configura o modo de auto-completar.
+        /// </remarks>
         private void CarregaPaises()
         {
             var paises = _controller.CarregaPaises();
@@ -109,15 +99,19 @@ namespace poo_tp_29559.Views
             }
         }
 
-        /**
-         * @brief Evento de clique no botão de confirmação.
-         * 
-         * Este evento é acionado quando o utilizador clica no botão de confirmação para adicionar ou atualizar uma marca.
-         * Valida os campos do formulário e, caso todos os campos sejam válidos, cria ou atualiza a marca no sistema.
-         * 
-         * @param sender Objeto que disparou o evento.
-         * @param e Dados do evento.
-         */
+        #endregion
+
+        #region Form Events
+
+        /// <summary>
+        /// Evento de clique no botão de confirmação.
+        /// </summary>
+        /// <param name="sender">Objeto que disparou o evento.</param>
+        /// <param name="e">Dados do evento.</param>
+        /// <remarks>
+        /// Este evento é acionado quando o utilizador clica no botão de confirmação para adicionar ou atualizar uma marca.
+        /// Valida os campos do formulário e, caso todos os campos sejam válidos, cria ou atualiza a marca no sistema.
+        /// </remarks>
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             // Array de controlos a serem validados
@@ -167,5 +161,7 @@ namespace poo_tp_29559.Views
                 MessageBox.Show($"Erro ao salvar a marca: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
     }
 }

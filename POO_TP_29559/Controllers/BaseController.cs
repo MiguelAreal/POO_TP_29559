@@ -1,10 +1,9 @@
-﻿/// <summary>
-/// Classe base abstrata para controlo de entidades genéricas.
-/// Implementa operações CRUD (Criar, Ler, Atualizar e Apagar) sobre um repositório genérico.
-/// </summary>
-/// <typeparam name="T">Tipo genérico que deve implementar a interface IIdentifiable.</typeparam>
+﻿using poo_tp_29559.Repositories;
+
 public abstract class BaseController<T> where T : class, IIdentifiable
 {
+    #region Fields and Properties
+
     /// <summary>
     /// Referência ao repositório base utilizado para operações nos itens.
     /// </summary>
@@ -15,12 +14,20 @@ public abstract class BaseController<T> where T : class, IIdentifiable
     /// </summary>
     protected List<T> _items;
 
+    #endregion
+
+    #region Constructor
+
     /// <summary>
     /// Construtor da classe BaseController.
     /// Inicializa o repositório com base no caminho de ficheiro fornecido.
     /// </summary>
     /// <param name="filePath">Caminho do ficheiro onde os dados serão armazenados.</param>
     public BaseController(string filePath) => _repository = new BaseRepo<T>(filePath);
+
+    #endregion
+
+    #region CRUD Operations
 
     /// <summary>
     /// Adiciona um novo item ao repositório.
@@ -66,6 +73,10 @@ public abstract class BaseController<T> where T : class, IIdentifiable
             _repository.Update(specificItem);
         }
     }
+
+    #endregion
+
+    #region Data Retrieval and Filtering
 
     /// <summary>
     /// Obtém todos os itens do repositório.
@@ -119,4 +130,6 @@ public abstract class BaseController<T> where T : class, IIdentifiable
             return new List<object>(); // Retorna uma lista total em caso de erro
         }
     }
+
+    #endregion
 }

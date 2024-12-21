@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('interface_i_identifiable.html',''); in
 </div><!--header-->
 <div class="contents">
 
-<p>Interface para garantir que a classe possui um campo <code>Id</code>.  
+<p>Interface para garantir que uma classe possui um identificador único.  
  <a href="interface_i_identifiable.html#details">Mais...</a></p>
 <div class="dynheader">
 Diagrama de heranças da classe IIdentifiable</div>
@@ -105,24 +105,25 @@ Diagrama de heranças da classe IIdentifiable</div>
  <div class="center">
   <img src="interface_i_identifiable.png" usemap="#IIdentifiable_map" alt=""/>
   <map id="IIdentifiable_map" name="IIdentifiable_map">
-<area href="class_marca.html" title="Representa uma marca." alt="Marca" shape="rect" coords="0,56,201,80"/>
-<area href="class_produto.html" title="Representa um produto no sistema." alt="Produto" shape="rect" coords="211,56,412,80"/>
-<area href="class_utilizador.html" title="Representa um utilizador no sistema." alt="Utilizador" shape="rect" coords="422,56,623,80"/>
-<area href="class_venda_compra.html" title="Representa uma transação de venda ou compra realizada." alt="VendaCompra" shape="rect" coords="633,56,834,80"/>
-<area href="classpoo__tp__29559_1_1_models_1_1_campanha.html" title="Representa uma campanha de marketing ou promoção." alt="poo_tp_29559.Models.Campanha" shape="rect" coords="844,56,1045,80"/>
-<area href="classpoo__tp__29559_1_1_models_1_1_categoria.html" title="Representa uma categoria de produtos." alt="poo_tp_29559.Models.Categoria" shape="rect" coords="1055,56,1256,80"/>
+<area href="classpoo__tp__29559_1_1_models_1_1_campanha.html" title="Representa uma campanha de marketing ou promoção." alt="poo_tp_29559.Models.Campanha" shape="rect" coords="0,56,222,80"/>
+<area href="classpoo__tp__29559_1_1_models_1_1_categoria.html" title="Representa uma categoria de produtos no sistema." alt="poo_tp_29559.Models.Categoria" shape="rect" coords="232,56,454,80"/>
+<area href="classpoo__tp__29559_1_1_models_1_1_marca.html" title="Representa uma marca no sistema." alt="poo_tp_29559.Models.Marca" shape="rect" coords="464,56,686,80"/>
+<area href="classpoo__tp__29559_1_1_models_1_1_produto.html" title="Representa um produto no sistema." alt="poo_tp_29559.Models.Produto" shape="rect" coords="696,56,918,80"/>
+<area href="classpoo__tp__29559_1_1_models_1_1_utilizador.html" title="Representa um utilizador no sistema." alt="poo_tp_29559.Models.Utilizador" shape="rect" coords="928,56,1150,80"/>
+<area href="classpoo__tp__29559_1_1_models_1_1_venda_compra.html" title="Representa uma transação de venda ou compra realizada." alt="poo_tp_29559.Models.VendaCompra" shape="rect" coords="1160,56,1382,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="properties" name="properties"></a>
 Propriedades</h2></td></tr>
-<tr class="memitem:a53f073549cdc0f3ac470ae794da87ad3" id="r_a53f073549cdc0f3ac470ae794da87ad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_base_repo.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_identifiable.html#a53f073549cdc0f3ac470ae794da87ad3">Id</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a53f073549cdc0f3ac470ae794da87ad3" id="r_a53f073549cdc0f3ac470ae794da87ad3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_identifiable.html#a53f073549cdc0f3ac470ae794da87ad3">Id</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a53f073549cdc0f3ac470ae794da87ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador único do item.  <br /></td></tr>
 <tr class="separator:a53f073549cdc0f3ac470ae794da87ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
-<div class="textblock"><p>Interface para garantir que a classe possui um campo <code>Id</code>. </p>
-<p>A interface <code><a class="el" href="interface_i_identifiable.html" title="Interface para garantir que a classe possui um campo Id.">IIdentifiable</a></code> exige que as classes que a implementem possuam um campo <code>Id</code>, que é utilizado para identificar de forma única cada item dentro do sistema. </p>
+<div class="textblock"><p>Interface para garantir que uma classe possui um identificador único. </p>
+<p>A interface <code><a class="el" href="interface_i_identifiable.html" title="Interface para garantir que uma classe possui um identificador único.">IIdentifiable</a></code> exige que as classes que a implementem possuam uma propriedade <code>Id</code>. <br  />
+ Essa propriedade é usada para identificar de forma única cada instância dentro do sistema ou coleção. </p>
 
 <p class="definition">Definido na linha <a class="el" href="_i_identifiable_8cs_source.html#l00008">8</a> do ficheiro <a class="el" href="_i_identifiable_8cs_source.html">IIdentifiable.cs</a>.</p>
 </div><h2 class="groupheader">Documentação das propriedades</h2>
@@ -136,7 +137,7 @@ Propriedades</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_base_repo.html">int</a> IIdentifiable.Id</td>
+          <td class="memname">int IIdentifiable.Id</td>
         </tr>
       </table>
   </td>
@@ -147,9 +148,9 @@ Propriedades</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Identificador único do item. </p>
-<p>O campo <code>Id</code> é utilizado para identificar de forma única cada item numa coleção. Este campo deve ser implementado pelas classes que utilizam esta interface. </p>
+<p>Deve ser implementado pelas classes que utilizam esta interface para permitir uma identificação única. </p>
 
-<p>Implementado em <a class="el" href="classpoo__tp__29559_1_1_models_1_1_campanha.html#ae156f4392929907bc1e31ff27b531b2f">poo_tp_29559.Models.Campanha</a>, <a class="el" href="classpoo__tp__29559_1_1_models_1_1_categoria.html#a9cb71979e4f6b167dad1847b31c19939">poo_tp_29559.Models.Categoria</a>, <a class="el" href="class_marca.html#ab3221a85b4d93057d7b2e2558622552b">Marca</a>, <a class="el" href="class_produto.html#a859bdb6e26d12a1e1d7f89f25dbfc520">Produto</a>, <a class="el" href="class_utilizador.html#a2e229214fdbe214d83af47590d6edb8a">Utilizador</a> e <a class="el" href="class_venda_compra.html#afd474fbfcbbf2e433aa8f55d161ae101">VendaCompra</a>.</p>
+<p>Implementado em <a class="el" href="classpoo__tp__29559_1_1_models_1_1_campanha.html#ae156f4392929907bc1e31ff27b531b2f">poo_tp_29559.Models.Campanha</a>, <a class="el" href="classpoo__tp__29559_1_1_models_1_1_categoria.html#a9cb71979e4f6b167dad1847b31c19939">poo_tp_29559.Models.Categoria</a>, <a class="el" href="classpoo__tp__29559_1_1_models_1_1_marca.html#a735b943cb244cb7ae497d3d364bf613e">poo_tp_29559.Models.Marca</a>, <a class="el" href="classpoo__tp__29559_1_1_models_1_1_produto.html#a1fedc98116efba20ed241c792ac3f7a0">poo_tp_29559.Models.Produto</a>, <a class="el" href="classpoo__tp__29559_1_1_models_1_1_utilizador.html#a4c6ae25a80d443b680399b8fa270db51">poo_tp_29559.Models.Utilizador</a> e <a class="el" href="classpoo__tp__29559_1_1_models_1_1_venda_compra.html#a9c9b1773834c70145613369cd7f901a6">poo_tp_29559.Models.VendaCompra</a>.</p>
 
 <p class="definition">Definido na linha <a class="el" href="_i_identifiable_8cs_source.html#l00016">16</a> do ficheiro <a class="el" href="_i_identifiable_8cs_source.html">IIdentifiable.cs</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   16</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>

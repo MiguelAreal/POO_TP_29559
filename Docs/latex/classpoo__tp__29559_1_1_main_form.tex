@@ -14,21 +14,19 @@ Diagrama de heranÃ§as da classe poo\+\_\+tp\+\_\+29559.\+Main\+Form\begin{figure
 \doxysubsubsection*{Membros pÃºblicos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ Main\+Form} (\textbf{ Utilizador} \textbf{ utilizador\+Logado})
+\textbf{ Main\+Form} (\textbf{ Utilizador} utilizador\+Logado)
 \begin{DoxyCompactList}\small\item\em Construtor do {\ttfamily Main\+Form}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
 \item 
-\textbf{ override} \textbf{ void} \textbf{ Dispose} (\textbf{ bool} \textbf{ disposing})
+override void \textbf{ Dispose} (bool disposing)
 \begin{DoxyCompactList}\small\item\em Clean up any resources being used. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{DescriÃ§Ã£o detalhada}
 Formulário principal da aplicação. 
 
-Gere a interface principal, exibindo sub-\/formulários conforme as opções selecionadas no menu. Implementa lógica para restringir o acesso de acordo com as permissões do utilizador. 
-
-Definido na linha \textbf{ 28} do ficheiro \textbf{ Main\+Form.\+cs}.
+Definido na linha \textbf{ 11} do ficheiro \textbf{ Main\+Form.\+cs}.
 
 
 
@@ -43,30 +41,30 @@ Definido na linha \textbf{ 28} do ficheiro \textbf{ Main\+Form.\+cs}.
 
 Construtor do {\ttfamily Main\+Form}. 
 
-Inicializa os componentes do formulário, configura o estado inicial dos menus e exibe as informações do utilizador atualmente autenticado.
-
 
 \begin{DoxyParams}{ParÃ¢metros}
-{\em utilizador\+Logado} & O utilizador atualmente autenticado. \\
+{\em utilizador\+Logado} & O utilizador atualmente autenticado.\\
 \hline
 \end{DoxyParams}
 
 
-Definido na linha \textbf{ 40} do ficheiro \textbf{ Main\+Form.\+cs}.
+Inicializa os componentes do formulário, configura o estado inicial dos menus e exibe as informações do utilizador atualmente autenticado. 
+
+Definido na linha \textbf{ 32} do ficheiro \textbf{ Main\+Form.\+cs}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \_utilizadorLogado\ =\ utilizadorLogado;}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configura\ informações\ visíveis\ do\ utilizador\ autenticado}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tipoUser\ =\ \_utilizadorLogado.IsAdmin\ ?\ \textcolor{stringliteral}{"{}Administrador"{}}\ :\ \textcolor{stringliteral}{"{}Cliente"{}};}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ lblUserInfo.Text\ =\ \$\textcolor{stringliteral}{"{}\{\_utilizadorLogado.Nome\}\(\backslash\)n\{tipoUser\}"{}};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configura\ visibilidade\ dos\ menus\ com\ base\ no\ tipo\ de\ utilizador}}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ ConfigurarMenus();}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \_utilizadorLogado\ =\ utilizadorLogado;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configura\ informações\ visíveis\ do\ utilizador\ autenticado}}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tipoUser\ =\ \_utilizadorLogado.IsAdmin\ ?\ \textcolor{stringliteral}{"{}Administrador"{}}\ :\ \textcolor{stringliteral}{"{}Cliente"{}};}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ lblUserInfo.Text\ =\ \$\textcolor{stringliteral}{"{}\{\_utilizadorLogado.Nome\}\(\backslash\)n\{tipoUser\}"{}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Configura\ visibilidade\ dos\ menus\ com\ base\ no\ tipo\ de\ utilizador}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ ConfigurarMenus();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \}}
 
 \end{DoxyCode}
 
@@ -76,7 +74,7 @@ Definido na linha \textbf{ 40} do ficheiro \textbf{ Main\+Form.\+cs}.
 \index{poo\_tp\_29559.MainForm@{poo\_tp\_29559.MainForm}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!poo\_tp\_29559.MainForm@{poo\_tp\_29559.MainForm}}
 \doxysubsubsection{Dispose()}
-{\footnotesize\ttfamily \textbf{ override} \textbf{ void} poo\+\_\+tp\+\_\+29559.\+Main\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{\textbf{ bool}}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily override void poo\+\_\+tp\+\_\+29559.\+Main\+Form.\+Dispose (\begin{DoxyParamCaption}\item[{bool}]{disposing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
